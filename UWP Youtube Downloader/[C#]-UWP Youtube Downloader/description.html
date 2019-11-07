@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=56C38AA02194F8DF75FBF304FD8BEF19" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=2118F9E22ED5006F07B68F92F44A0CDA" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>UWP Youtube Downloader</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>UWP Youtube Downloader</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Silverlight, Windows Forms, WPF, Microsoft Azure, XAML, .NET Framework, .NET Framework 4.0, Windows Runtime, Windows Phone 8, Windows Store app
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Controls, C#, User Interface, Microsoft Azure, Data Access, XAML, Networking, C# Language Features, Windows Store app, data and storage, universal app
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Phone, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        NuGet Package Manager
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/7/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h2>What is YouTube Downloader?</h2>
+<p>YouTube Downloader is software that allows you to download videos from YouTube and many others and convert them to other video formats for free.<br>
+The program is easy to use, just specify the URL for the video you want to download and click the Ok button!<br>
+You can use YouTube Downloader to download the videos of your choice from home, at the office or in school.<br>
+Download YouTube Downloader now and get started downloading your favorite videos from YouTube.<br>
+Enjoy!</p>
+<p><strong>YouTube</strong>&nbsp;is a global&nbsp;<a title="Video hosting service" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Video_hosting_service">video-sharing</a>&nbsp;<a title="Website" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Website">website</a>&nbsp;headquartered
+ in&nbsp;<a title="San Bruno, California" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/San_Bruno,_California">San Bruno, California</a>, United States.</p>
+<p>The service was created by three former&nbsp;<a title="PayPal" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/PayPal">PayPal</a>&nbsp;employees in February 2005. In November 2006, it was bought by&nbsp;<a title="Google" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Google">Google</a>&nbsp;for
+ US$1.65 billion.<sup id="cite_ref-4" class="reference"><a href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/YouTube#cite_note-4">[4]</a></sup>&nbsp;YouTube now operates as one of Google's&nbsp;<a title="Subsidiary" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Subsidiary">subsidiaries</a>.<sup id="cite_ref-5" class="reference"><a href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/YouTube#cite_note-5">[5]</a></sup>&nbsp;The
+ site allows users to upload, view, rate, share, and comment on videos, and it makes use of&nbsp;<a title="WebM" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/WebM">WebM</a>,&nbsp;<a title="H.264/MPEG-4 AVC" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC">H.264/MPEG-4
+ AVC</a>, and&nbsp;<a title="Adobe Systems" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Adobe_Systems">Adobe</a>&nbsp;<a title="Flash Video" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Flash_Video">Flash Video</a>&nbsp;technology to display a wide variety of&nbsp;<a title="User-generated content" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/User-generated_content">user-generated</a>&nbsp;and&nbsp;<a title="Corporate media" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Corporate_media">corporate
+ media</a>video. Available content includes&nbsp;<a title="Video clip" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Video_clip">video clips</a>, TV clips,&nbsp;<a title="Music video" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Music_video">music videos</a>,&nbsp;<a title="Trailer (promotion)" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Trailer_(promotion)">movie
+ trailers</a>, and other content such as&nbsp;<a title="Video blog" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Video_blog">video blogging</a>, short original videos, and educational videos.</p>
+<p>Most of the content on YouTube has been uploaded by individuals, but media corporations including&nbsp;<a title="CBS" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/CBS">CBS</a>, the&nbsp;<a title="BBC" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/BBC">BBC</a>,&nbsp;<a title="Vevo" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Vevo">Vevo</a>,&nbsp;<a title="Hulu" href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/Hulu">Hulu</a>,
+ and other organizations offer some of their material via YouTube, as part of the YouTube partnership program.<sup id="cite_ref-6" class="reference"><a href="https://code.msdn.microsoft.com/UWP-Youtube-Downloader-773d7e91/https://en.wikipedia.org/wiki/YouTube#cite_note-6">[6]</a></sup>&nbsp;Unregistered users can watch
+ videos, and registered users are permitted to upload an unlimited number of videos and add comments to videos. Videos deemed potentially offensive are available only to registered users affirming themselves to be at least 18 years old.</p>
+<p>&nbsp;</p>
+<h1><img id="157851" src="description/Untitled.png" alt="" width="1207" height="865"></h1>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> &lt;Grid Background=&quot;{ThemeResource ApplicationPageBackgroundThemeBrush}&quot;&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height=&quot;*&quot;&gt;&lt;/RowDefinition&gt;
+            &lt;RowDefinition Height=&quot;2*&quot;&gt;&lt;/RowDefinition&gt;
+        &lt;/Grid.RowDefinitions&gt;
+        &lt;Grid Grid.Row=&quot;0&quot;&gt;
+            &lt;TextBlock Text=&quot;YOUTUBE DOWNLOADER&quot; FontSize=&quot;20&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;0,30,0,0&quot;&gt;&lt;/TextBlock&gt;
+            &lt;AutoSuggestBox x:Name=&quot;SearchBox&quot; Width=&quot;400&quot;
+                            PlaceholderText=&quot;Please input the link of youtube video here&quot;
+                            Margin=&quot;0,80,0,0&quot; TextChanged=&quot;SearchBox_TextChanged&quot;
+                            QueryIcon=&quot;Find&quot; QuerySubmitted=&quot;SearchBox_QuerySubmitted&quot;
+                            &gt;&lt;/AutoSuggestBox&gt;
+        &lt;/Grid&gt;
+
+        &lt;Grid Grid.Row=&quot;1&quot; x:Name=&quot;gridRoot&quot;&gt;
+            &lt;ListView x:Name=&quot;lstDownload&quot; LayoutUpdated=&quot;lstDownload_LayoutUpdated&quot;&gt;
+                &lt;ListView.ItemTemplate&gt;
+                    &lt;DataTemplate&gt;
+                        &lt;Grid&gt;
+                            &lt;Grid.ColumnDefinitions&gt;
+                                &lt;ColumnDefinition Width=&quot;170&quot;&gt;&lt;/ColumnDefinition&gt;
+                                &lt;ColumnDefinition Width=&quot;300&quot;&gt;&lt;/ColumnDefinition&gt;
+                                &lt;ColumnDefinition Width=&quot;*&quot;&gt;&lt;/ColumnDefinition&gt;
+                            &lt;/Grid.ColumnDefinitions&gt;
+
+                            &lt;Grid Grid.Column=&quot;0&quot;&gt;
+                                &lt;Image Source=&quot;{Binding Thumbail}&quot; Width=&quot;100&quot; Height=&quot;80&quot;&gt;&lt;/Image&gt;
+                            &lt;/Grid&gt;
+
+                            &lt;Grid Grid.Column=&quot;1&quot;&gt;
+                                &lt;TextBlock Text=&quot;{Binding Title}&quot; VerticalAlignment=&quot;Center&quot;&gt;&lt;/TextBlock&gt;
+                            &lt;/Grid&gt;
+
+                            &lt;Grid Grid.Column=&quot;2&quot;&gt;
+                                &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+                                    &lt;TextBlock Text=&quot;{Binding Downloaded}&quot; FontSize=&quot;12&quot; Margin=&quot;10,0,0,0&quot;&gt;&lt;/TextBlock&gt;
+                                    &lt;ProgressBar Value=&quot;{Binding Percentage}&quot; Width=&quot;500&quot;&gt;&lt;/ProgressBar&gt;
+                                &lt;/StackPanel&gt;
+                            &lt;/Grid&gt;
+                        &lt;/Grid&gt;
+                    &lt;/DataTemplate&gt;
+                &lt;/ListView.ItemTemplate&gt;
+            &lt;/ListView&gt;
+        &lt;/Grid&gt;
+        
+    &lt;/Grid&gt;</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;&lt;Grid&nbsp;Background=<span class="cs__string">&quot;{ThemeResource&nbsp;ApplicationPageBackgroundThemeBrush}&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.RowDefinitions&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RowDefinition&nbsp;Height=<span class="cs__string">&quot;*&quot;</span>&gt;&lt;/RowDefinition&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RowDefinition&nbsp;Height=<span class="cs__string">&quot;2*&quot;</span>&gt;&lt;/RowDefinition&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.RowDefinitions&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Grid.Row=<span class="cs__string">&quot;0&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Text=<span class="cs__string">&quot;YOUTUBE&nbsp;DOWNLOADER&quot;</span>&nbsp;FontSize=<span class="cs__string">&quot;20&quot;</span>&nbsp;HorizontalAlignment=<span class="cs__string">&quot;Center&quot;</span>&nbsp;Margin=<span class="cs__string">&quot;0,30,0,0&quot;</span>&gt;&lt;/TextBlock&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AutoSuggestBox&nbsp;x:Name=<span class="cs__string">&quot;SearchBox&quot;</span>&nbsp;Width=<span class="cs__string">&quot;400&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlaceholderText=<span class="cs__string">&quot;Please&nbsp;input&nbsp;the&nbsp;link&nbsp;of&nbsp;youtube&nbsp;video&nbsp;here&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Margin=<span class="cs__string">&quot;0,80,0,0&quot;</span>&nbsp;TextChanged=<span class="cs__string">&quot;SearchBox_TextChanged&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QueryIcon=<span class="cs__string">&quot;Find&quot;</span>&nbsp;QuerySubmitted=<span class="cs__string">&quot;SearchBox_QuerySubmitted&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&lt;/AutoSuggestBox&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Grid.Row=<span class="cs__string">&quot;1&quot;</span>&nbsp;x:Name=<span class="cs__string">&quot;gridRoot&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ListView&nbsp;x:Name=<span class="cs__string">&quot;lstDownload&quot;</span>&nbsp;LayoutUpdated=<span class="cs__string">&quot;lstDownload_LayoutUpdated&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ListView.ItemTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.ColumnDefinitions&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ColumnDefinition&nbsp;Width=<span class="cs__string">&quot;170&quot;</span>&gt;&lt;/ColumnDefinition&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ColumnDefinition&nbsp;Width=<span class="cs__string">&quot;300&quot;</span>&gt;&lt;/ColumnDefinition&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ColumnDefinition&nbsp;Width=<span class="cs__string">&quot;*&quot;</span>&gt;&lt;/ColumnDefinition&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.ColumnDefinitions&gt;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Grid.Column=<span class="cs__string">&quot;0&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Image&nbsp;Source=<span class="cs__string">&quot;{Binding&nbsp;Thumbail}&quot;</span>&nbsp;Width=<span class="cs__string">&quot;100&quot;</span>&nbsp;Height=<span class="cs__string">&quot;80&quot;</span>&gt;&lt;/Image&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Grid.Column=<span class="cs__string">&quot;1&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Text=<span class="cs__string">&quot;{Binding&nbsp;Title}&quot;</span>&nbsp;VerticalAlignment=<span class="cs__string">&quot;Center&quot;</span>&gt;&lt;/TextBlock&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Grid.Column=<span class="cs__string">&quot;2&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&nbsp;Orientation=<span class="cs__string">&quot;Horizontal&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Text=<span class="cs__string">&quot;{Binding&nbsp;Downloaded}&quot;</span>&nbsp;FontSize=<span class="cs__string">&quot;12&quot;</span>&nbsp;Margin=<span class="cs__string">&quot;10,0,0,0&quot;</span>&gt;&lt;/TextBlock&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ProgressBar&nbsp;Value=<span class="cs__string">&quot;{Binding&nbsp;Percentage}&quot;</span>&nbsp;Width=<span class="cs__string">&quot;500&quot;</span>&gt;&lt;/ProgressBar&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/StackPanel&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ListView.ItemTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ListView&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;</pre>
+</div>
+</div>
+</div>
+<ul class="redTick">
+<li>You do not appreciate ads and other distractions when you&rsquo;re trying to watch a video.
+</li><li>You have a slow internet connection or you&rsquo;re viewing HD video, which causes buffering delays while streaming video.
+</li><li>You want to make sure you don&rsquo;t lose the video when it&rsquo;s removed or altered by YouTube or by the author.
+</li><li>You&rsquo;re only interested in a specific part of the video and you&rsquo;d like to cut out any parts you don&rsquo;t need.
+</li></ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>

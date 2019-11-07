@@ -1,0 +1,1 @@
+﻿This is used for both C# and VB.NET code samples

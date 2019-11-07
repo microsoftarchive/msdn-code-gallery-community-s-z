@@ -1,0 +1,22 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Set annotation position using Relative Coordinates
+	Chart1.Annotations[0].X = 10;
+	Chart1.Annotations[0].Y = 10;
+	Chart1.Annotations[0].Width = 40;
+	Chart1.Annotations[0].Height= 20;	
+
+	// Or set annotation position using Axis Coordinates
+	Chart1.Annotations[0].IsSizeAlwaysRelative = false;
+	Chart1.Annotations[0].X = 5;
+	Chart1.Annotations[0].Y = 10;
+	Chart1.Annotations[0].Width = 5;
+	Chart1.Annotations[0].Height= 15;
+
+	// Attach the annotation to the X and Y axis
+	Chart1.Annotations[0].AxisX = Chart1.ChartAreas["ChartArea1"].AxisX;
+	Chart1.Annotations[0].AxisY = Chart1.ChartAreas["ChartArea1"].AxisY;
+}

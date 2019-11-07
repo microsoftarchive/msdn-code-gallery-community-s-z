@@ -1,0 +1,92 @@
+﻿<Window x:Class="SkypeIntegration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Converters="clr-namespace:SkypeIntegration.Converters"
+        x:Name="SkypeWindow" Title="MainWindow" Height="450" Width="900" WindowState="Normal">
+    <Window.Resources>
+        <Converters:StatusConverter x:Key="StatusConverter"/>
+        <Converters:NameConverter x:Key="NameConverter"/>
+        <Converters:ProfileImageConverter x:Key="ProfileImageConverter"/>
+        <Converters:GenderConverter x:Key="GenderConverter"/>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Contacts" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <ListBox x:Name="LstSkypeBox" Margin="0,5,0,5" ItemsSource="{Binding Friends}" SelectedItem="{Binding SelectedFriend,Mode=TwoWay}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="250" Height="32" Margin="0,5,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="32"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image  Source="{Binding OnlineStatus,Converter={StaticResource StatusConverter}}" Width="16" Height="16" VerticalAlignment="Top" HorizontalAlignment="Center" Stretch="UniformToFill"/>
+                            <Image Grid.Column="1" Source="{Binding ProfilePicture.ProfilePicturePath,Converter={StaticResource ProfileImageConverter}}" Width="32" Stretch="UniformToFill"/>
+                            <StackPanel Grid.Column="2" Margin="5,0,0,0">
+                                <TextBlock Text="{Binding Converter={StaticResource NameConverter}}" TextTrimming="CharacterEllipsis"></TextBlock>
+                                <TextBlock Text="{Binding MoodText}" TextTrimming="CharacterEllipsis">
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Button Content="Sync Contacts" Command="{Binding SyncCommand}"/>
+            <Grid DataContext="{Binding SelectedFriend}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Margin="44,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" Height="150" Source="{Binding ProfilePicture.ProfilePicturePath,Converter={StaticResource ProfileImageConverter}}"/>
+                <StackPanel Orientation="Vertical" Grid.Column="1" Margin="0,20,0,0">
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                        <TextBlock Text="Name" FontWeight="Bold"></TextBlock>
+                        <TextBlock Margin="10,0,0,0" Text="{Binding Converter={StaticResource NameConverter}}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                        <TextBlock Text="Sex" FontWeight="Bold"></TextBlock>
+                        <TextBlock Margin="10,0,0,0" Text="{Binding Sex,Converter={StaticResource GenderConverter}}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                        <TextBlock Text="Number Of Buddies" FontWeight="Bold"></TextBlock>
+                        <TextBlock Margin="10,0,0,0" Text="{Binding NumberOfAuthBuddies}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                        <TextBlock Text="Mood Message" FontWeight="Bold"></TextBlock>
+                        <TextBlock Margin="10,0,0,0" Text="{Binding MoodText}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                        <TextBlock Text="Birthday" FontWeight="Bold"></TextBlock>
+                        <TextBlock Margin="10,0,0,0" Text="{Binding Birthday}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                        <TextBlock Text="City" FontWeight="Bold"></TextBlock>
+                        <TextBlock Margin="10,0,0,0" Text="{Binding City}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                        <TextBlock Text="Country" FontWeight="Bold"></TextBlock>
+                        <TextBlock Margin="10,0,0,0" Text="{Binding Country}"/>
+                    </StackPanel>
+                    <Button Content="Start Chat" Width="100" Margin="0,5,0,5" Command="{Binding DataContext.ChatCommand,ElementName=SkypeWindow}"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

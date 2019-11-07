@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity
+    type="win32"
+    name="Net4ToNet2Adapter"
+    version="1.0.0.0" />
+  <clrClass
+    clsid="{A6574755-925A-4E41-A01B-B6A0EEF72DF0}"
+    progid="Net4ToNet2Adapter.MyClassAdapter"
+    threadingModel="Both"
+    name="Net4ToNet2Adapter.MyClassAdapter"
+    runtimeVersion="v4.0.30319"
+    />
+</assembly>

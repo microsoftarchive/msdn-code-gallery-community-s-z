@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/b79636be-b088-48b5-8a8d-c21645d26d2fCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Windows Azure AD Access Control (ACS) Code Samples</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Windows Azure AD Access Control (ACS) Code Samples</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows Azure Access Control Service
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Federation, claims-based authentication, Windows Azure Access Control Service, ACS
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/15/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Windows-Azure-AD-Access-0dcde385">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1><strong>Samples Documentation</strong></h1>
+<p>For important instructions about how to set up and run the&nbsp;code samples in this download, see the
+<a href="http://msdn.microsoft.com/en-us/library/gg185965.aspx">ACS Code Samples Index</a>&nbsp;on MSDN.</p>
+<h1><strong>Sample Prerequisites</strong></h1>
+<p>Below are the requirements for setting up and running the ACS code samples in this download.</p>
+<h3><strong>Windows Azure Account Requirements</strong></h3>
+<p>To use ACS, obtain a Windows Azure subscription&nbsp;in the <a href="http://code.msdn.microsoft.com/Windows-Azure-AD-Access-0dcde385/https://windows.azure.com/">
+Windows<br>
+Azure Management Portal</a>. Then, create an&nbsp;Access Control&nbsp;namespace. For instructions, see &quot;How To: Create an Access Control Namepace at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/hh674478.aspx">http://msdn.microsoft.com/en-us/library/hh674478.aspx</a>.</p>
+<h3><strong>Core Requirements</strong></h3>
+<ul>
+<li><strong>Visual Studio 2010 (any edition):</strong> For more information on Visual Studio, see
+<a href="http://www.microsoft.com/visualstudio/en-us/products">http://www.microsoft.com/visualstudio/en-us/products</a>
+</li><li><strong>.NET Framework 4.0</strong> <em>or</em> <strong>.NET Framework 3.5 SP1</strong> with KB's
+<a href="http://support.microsoft.com/kb/976126">976126</a>&nbsp;or <a href="http://support.microsoft.com/kb/976127">
+976127</a>&nbsp;applied </li><li><strong>Windows Identity Foundation Runtime:</strong> For more information, see
+<a href="http://support.microsoft.com/?kbid=974405">http://support.microsoft.com/?kbid=974405</a>
+</li><li><strong>Windows Identity Foundation SDK:</strong> For more information, see <a href="http://www.microsoft.com/downloads/en/details.aspx?familyid=C148B2DF-C7AF-46BB-9162-2C9422208504&amp;displaylang=en">
+http://www.microsoft.com/downloads/en/details.aspx?familyid=C148B2DF-C7AF-46BB-9162-2C9422208504&amp;displaylang=en</a>
+</li></ul>
+<h3><strong>Additional Requirements for ASP.NET MVC 3 Custom Login Page Sample</strong></h3>
+<ul>
+<li><a href="http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=1491" >ASP.NET MVC 3</a>
+</li></ul>
+<h3><strong>Additional Requirements for ASP.NET MVC 4 with Federated Sign-out</strong></h3>
+<ul>
+<li>Visual Studio 2012 (includes ASP.NET&nbsp;MVC 4) </li></ul>
+<h3><strong>Additional Requirements for Windows Phone 7 Sample</strong></h3>
+<ul>
+<li><a href="http://go.microsoft.com/fwlink/?LinkId=185968">Windows Phone Developer Tools RTW</a>
+</li><li><a href="http://go.microsoft.com/fwlink/?LinkId=201842">Silverlight 4 Tools for Visual Studio</a>
+</li><li>Internet Information Services (IIS) with IIS 6 Metabase Compatibility, IIS 6 Configuration Compatibility, and IIS 6 Management Console features enabled
+</li><li>Note: Visual Studio must be started in administrator (&quot;Run as administrator&quot;) mode to run this sample
+</li></ul>
+<h3><strong>Additional Requirements for WCF Federation Authentication With AD FS 2.0 Sample</strong></h3>
+<ul>
+<li>AD FS 2.0 and its requirements.&nbsp;For more information about AD FS 2.0 and its requirements, see
+<a href="http://go.microsoft.com/fwlink/?LinkId=182177">Checklist: Setting Up a Federation Server</a>.
+</li></ul>
+<h1><strong>About Windows Azure AD Access Control</strong></h1>
+<p>Windows Azure Active Directory Access Control (ACS) allows you to integrate single sign on (SSO) and centralized authorization into your web applications. It works with most modern platforms, and integrates with both web and enterprise identity providers.&nbsp;To
+ learn more about ACS, see the ACS documentation on MSDN at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/gg429786.aspx">http://msdn.microsoft.com/en-us/library/gg429786.aspx</a>.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

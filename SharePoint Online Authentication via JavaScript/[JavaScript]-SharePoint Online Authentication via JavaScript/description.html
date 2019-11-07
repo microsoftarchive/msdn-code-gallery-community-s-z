@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:ImageSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/Msdn/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=7C6B75EB2370E5BF527667B884499204" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/f6d9d314-e4ff-443a-9641-6708a57c9a39Combined.css,0:ImageSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/Msdn/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=59AF12CEA39A0C1AEAA6487FF1817969" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SharePoint Online Authentication via JavaScript</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SharePoint Online Authentication via JavaScript</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            jQuery, Javascript, Sharepoint Online, SharePoint Server 2013, Jquery Ajax
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            jQuery, Sharepoint Online
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud, Phone
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">10/22/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/SharePoint-Online-d9fdb136">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>SP Online gives developers the flexibility to interact with SP using a number of mechanisms. There has been a significant investment from the SharePoint product group in the middle tier service layers exposing SharePoint functionality via services which
+ adhere to protocols such as <a href="http://msdn.microsoft.com/en-us/library/office/apps/fp142380.aspx">
+REST </a>and <a href="http://msdn.microsoft.com/en-us/library/office/apps/fp142385.aspx">
+OData</a>. Technologies such as JavaScript over the past decade have become ever so extensible allowing developers to create richer dynamic user interfaces.</p>
+<p>This sample shows how developers can authenticate remotely with SharePoint Online using JavaScript, enabling us to interact with the
+<a href="http://msdn.microsoft.com/en-us/library/office/apps/jj860569.aspx">SharePoint service layer</a>. A compelling scenario where this can be used is within &lsquo;Apps for Office&rsquo; where an App running within Word or Excel can authenticate against
+ SPOnline and use the functionality to update/retrieve information from SharePoint. Note that the STS that is used in this sample may subjectively change in the future release.</p>
+<p>The code sample comprises of the following functionality:</p>
+<h2>The Form</h2>
+<p>The form is a simple HTML form capturing data such as the Username, this would be in the format of
+<a href="http://code.msdn.microsoft.com/SharePoint-Online-d9fdb136/mailto:xyz@tenant.onmicrosoft.com">xyz@tenant.onmicrosoft.com</a>. The password which is used to authenticate against SPOnline and the name of the tenant, this would be the first part of the tenant name such as
+<strong>zyx</strong>.sharepoint.com.</p>
+<p>&nbsp;</p>
+<p><img id="100089" src="description/Form.jpg" alt="" width="319" height="151"></p>
+<h2>SPAuth.js</h2>
+<p>The JavaScript file defines methods which allow us to authenticate against SPOnline and subsequently call the SharePoint RESTful web services to retrieve information from the SharePoint server.</p>
+<p>The <a href="http://code.msdn.microsoft.com/SharePoint-Online-d9fdb136/https://login.microsoftonline.com/extSTS.srf">http://code.msdn.microsoft.com/SharePoint-Online-d9fdb136/https://login.microsoftonline.com/extSTS.srf</a> is the url of the STS server to which we pass through the SOAP envelope containing the username and password as captured in the form. The STS returns
+ back a binary token. Once we successfully receive the token we POST the binary token to the SharePoint url /_forms/default.aspx, this page returns back the FedAuth cookie. We can now use this cookie to make further calls to the SharePoint web services.</p>
+<p>As an example, I have retrieved some values from the SP Web property bag but you can utlise this approach to perform CRUD operations exposed by the RESTful interfaces&nbsp;</p>
+<p><img id="100093" src="description/SPAuth.jpg" alt=""></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

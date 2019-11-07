@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="ScaleOutDemo.CloudApp" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WorkerRole name="InterRoleCommunication.ScaleOutDemo">
+    <Runtime executionContext="elevated"/>
+    <Imports>
+    </Imports>
+    <Endpoints>
+      <InternalEndpoint name="InternalEP" protocol="http" />
+    </Endpoints>
+  </WorkerRole>
+  <WebRole name="InterRoleCommunication.ScaleOutDemo.WebUI">
+    <Runtime executionContext="elevated"/>
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="Endpoint2" endpointName="Endpoint2" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InternalEndpoint name="Endpoint2" protocol="http" />
+    </Endpoints>
+    <Imports>
+    </Imports>
+  </WebRole>
+</ServiceDefinition>

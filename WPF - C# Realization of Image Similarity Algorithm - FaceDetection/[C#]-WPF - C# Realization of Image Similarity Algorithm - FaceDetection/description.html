@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=B30335E7035EFBBFFDD7FB4B4666E541" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=B2C81D548983818CB1F1AFC601FA0CE3" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>WPF - C# Realization of Image Similarity Algorithm - FaceDetection</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>WPF - C# Realization of Image Similarity Algorithm - FaceDetection</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, WPF
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, WPF, Face detection
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/14/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>C # Realization of Image Similarity Algorithm</h1>
+<p><br>
+<span style="color:#8d8d8d; font-family:SimSun">I think this article of content you may find it from google every where, I'd just like to organize those let it looks easy to be read.</span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun"><br>
+</span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun">This example you need to download
+<span style="color:#ff0000">Emgu</span>, then add reference to your pjoject on VisualStudio：</span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun"><span style="background-color:#ffffff; color:#0000ff"><a title="https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://sourceforge.net/projects/emgucv/" href="https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://sourceforge.net/projects/emgucv/">https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://sourceforge.net/projects/emgucv/</a></span></span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun"><span style="background-color:#ffffff; color:#0000ff"><br>
+</span></span></p>
+<h2><a name="Introduction_to_basic_knowledge"></a><span style="color:#0000ff">－Introduction to basic knowledge－</span></h2>
+<p>&nbsp;</p>
+<h3><a name="Color_bar_chart"></a>Color bar chart</h3>
+<p><span style="color:#8d8d8d">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#8d8d8d; font-family:SimSun">Color bar graphs are widely used in many image retrieval systems. They describe the proportions of different colors in the whole
+ image, and do not care about the spatial position of each color, It is impossible to describe an object or an object in the image. The color bar chart is particularly useful for describing images that are difficult to segment automatically.<br>
+<br>
+</span></p>
+<h3><a name="Gray_scale_bar_graph"></a>Gray scale bar graph</h3>
+<p><span style="color:#8d8d8d; font-family:SimSun">&nbsp; The grayscale bar graph is a function of the gray scale, which represents the number of primitives in the image that have each gray level, reflecting the frequency of each grayscale in the image. The
+ abscissa of the gray scale bar graph is the gray level, and the ordinate is the frequency of the gray level, which is the most basic statistical feature of the image.<br>
+<br>
+</span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun">&nbsp; In this paper, the use of gray bars to calculate the image similarity, on the algorithm that is not a word, after all, graphic graphics, just want to achieve a basic algorithm, and then from the most
+ intuitive point of view Look at the effectiveness of this algorithm, that's it.</span><span style="color:#8d8d8d">&nbsp;<br>
+<br>
+</span></p>
+<h3><a name="Algorithm_implementation"></a>Algorithm implementation</h3>
+<p><span style="color:#8d8d8d; font-family:SimSun">The general steps are as follows:</span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun">1, the image is converted to the same size, in order to facilitate the calculation of similar to the long bar chart.</span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun">2, calculate the converted gray scale bar graph.</span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun">3, using XX formula, get the bar graph similarity quantitative measurement.</span></p>
+<p><span style="color:#8d8d8d; font-family:SimSun">4, the output of these do not know useful useless similarity results data.<br>
+<br>
+</span></p>
+<h3><a name="Program_implementation"></a>Program implementation</h3>
+<p><span style="color:#8d8d8d; font-family:SimSun">Step 1, the image is converted to the same size, we temporarily converted into 256 X 256 it.</span><span style="color:#8d8d8d">&nbsp;</span></p>
+<div class="reCodeBlock">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">编辑脚本</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">Public BitmapResize(string imageFile,string newImageFile)
+{
+	img =Image.FromFile(imageFile);
+
+	BitmapimgOutput = new Bitmap(img, 256, 256);
+
+	imgOutput.Save(newImageFile, <a class="libraryLink" href="https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://msdn.microsoft.com/en-US/library/System.Drawing.Imaging.ImageFormat.Jpeg.aspx"  title="Auto generated link to System.Drawing.Imaging.ImageFormat.Jpeg">System.Drawing.Imaging.ImageFormat.Jpeg</a>);
+
+	imgOutput.Dispose();
+
+	return (Bitmap)Image.FromFile(newImageFile);
+
+}</pre>
+<div class="preview">
+<pre class="csharp">Public&nbsp;BitmapResize(<span class="cs__keyword">string</span>&nbsp;imageFile,<span class="cs__keyword">string</span>&nbsp;newImageFile)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;img&nbsp;=Image.FromFile(imageFile);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;BitmapimgOutput&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Bitmap(img,&nbsp;<span class="cs__number">256</span>,&nbsp;<span class="cs__number">256</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;imgOutput.Save(newImageFile,&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://msdn.microsoft.com/en-US/library/System.Drawing.Imaging.ImageFormat.Jpeg.aspx"  title="Auto generated link to System.Drawing.Imaging.ImageFormat.Jpeg">System.Drawing.Imaging.ImageFormat.Jpeg</a>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;imgOutput.Dispose();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;(Bitmap)Image.FromFile(newImageFile);&nbsp;
+&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+</div>
+<p><span style="color:#808080; font-family:NSimSun; font-size:10px">This part of the code is very easy to understand, imageFile for the original image of the full path, newImageFile for the size of the 256x256 after the strong transfer of the path, in order
+ to see you after the conversion of the picture long how, so I saved it to Local, so that there are slightly ugly above the code.</span></p>
+<p><span style="color:#8d8d8d; font-family:NSimSun"><span style="color:#808080">Step 2, calculate the image of the bar chart:</span><br>
+</span></p>
+<div class="reCodeBlock">
+<div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public int[] GetHisogram(Bitmap img,String name)
+{
+	BitmapData data = img.LockBits(new <a class="libraryLink" href="https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://msdn.microsoft.com/en-US/library/System.Drawing.Rectangle.aspx"  title="Auto generated link to System.Drawing.Rectangle">System.Drawing.Rectangle</a>(0, 0, img.Width, img.Height),
+						ImageLockMode.ReadWrite,
+						PixelFormat.Format24bppRgb);
+	int[] histogram = new int[256];
+	unsafe
+	{
+		byte* ptr = (byte*)data.Scan0;
+		int remain = data.Stride - data.Width * 3;
+		for (int i = 0; i &lt; histogram.Length; i&#43;&#43;)
+			histogram[i] = 0;
+		for (int i = 0; i &lt; data.Height; i&#43;&#43;)
+		{
+			for (int j = 0; j &lt; data.Width; j&#43;&#43;)
+			{
+				int mean = ptr[0] &#43; ptr[1] &#43; ptr[2];
+				mean /= 3;
+				histogram[mean]&#43;&#43;;
+				ptr &#43;= 3;
+			}
+			ptr &#43;= remain;
+		}
+	}
+	img.UnlockBits(data);
+	img.Dispose();
+	File.Delete(name);
+	return histogram;
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">int</span>[]&nbsp;GetHisogram(Bitmap&nbsp;img,String&nbsp;name)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;BitmapData&nbsp;data&nbsp;=&nbsp;img.LockBits(<span class="cs__keyword">new</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://code.msdn.microsoft.com/C-Realization-of-Image-a253ad06/https://msdn.microsoft.com/en-US/library/System.Drawing.Rectangle.aspx"  title="Auto generated link to System.Drawing.Rectangle">System.Drawing.Rectangle</a>(<span class="cs__number">0</span>,&nbsp;<span class="cs__number">0</span>,&nbsp;img.Width,&nbsp;img.Height),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ImageLockMode.ReadWrite,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PixelFormat.Format24bppRgb);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>[]&nbsp;histogram&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;<span class="cs__keyword">int</span>[<span class="cs__number">256</span>];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">unsafe</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">byte</span>*&nbsp;ptr&nbsp;=&nbsp;(<span class="cs__keyword">byte</span>*)data.Scan0;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>&nbsp;remain&nbsp;=&nbsp;data.Stride&nbsp;-&nbsp;data.Width&nbsp;*&nbsp;<span class="cs__number">3</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">for</span>&nbsp;(<span class="cs__keyword">int</span>&nbsp;i&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;i&nbsp;&lt;&nbsp;histogram.Length;&nbsp;i&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;histogram[i]&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">for</span>&nbsp;(<span class="cs__keyword">int</span>&nbsp;i&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;i&nbsp;&lt;&nbsp;data.Height;&nbsp;i&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">for</span>&nbsp;(<span class="cs__keyword">int</span>&nbsp;j&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;j&nbsp;&lt;&nbsp;data.Width;&nbsp;j&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>&nbsp;mean&nbsp;=&nbsp;ptr[<span class="cs__number">0</span>]&nbsp;&#43;&nbsp;ptr[<span class="cs__number">1</span>]&nbsp;&#43;&nbsp;ptr[<span class="cs__number">2</span>];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mean&nbsp;/=&nbsp;<span class="cs__number">3</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;histogram[mean]&#43;&#43;;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ptr&nbsp;&#43;=&nbsp;<span class="cs__number">3</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ptr&nbsp;&#43;=&nbsp;remain;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;img.UnlockBits(data);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;img.Dispose();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;File.Delete(name);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;histogram;&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><span style="color:#808080; font-family:SimSun">This is the shaking of the ghosts of the gray scale bar graph calculation method.</span></p>
+<p><span style="color:#808080"><span style="font-family:SimSun">Step 3, calculate the bar graph similarity measure</span><span style="font-family:新細明體,serif">：</span></span></p>
+<p><span style="color:#808080; font-family:SimSun">The formula for this step:</span></p>
+<p><span style="color:#808080"><span style="font-family:SimSun">Sim(G,S)=<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/4760._1657CF50D46B0D5C6C510F5F_.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/157x63/__key/communityserver-wikis-components-files/00-00-00-00-05/4760._1657CF50D46B0D5C6C510F5F_.jpg" alt=""></a></span></span></p>
+<p><span style="color:#808080"><span style="font-family:SimSun"><a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/4760._1657CF50D46B0D5C6C510F5F_.jpg"></a></span><span style="font-family:SimSun">Where
+ G, S is the long bar graph, and N is the number of color space samples.</span></span></p>
+<p><span style="color:#808080"><span style="font-family:SimSun">The implementation code is as follows:</span>&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">编辑脚本</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">// Calculate the absolute value after subtraction
+Private float GetAbs(int firstNum,int secondNum)
+{
+   Float abs = Math.Abs((float)firstNum - (float)secondNum);
+   Float result = Math.Max(firstNum, secondNum);
+   if(result == 0)
+   result = 1;
+   return abs / result;
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;Calculate&nbsp;the&nbsp;absolute&nbsp;value&nbsp;after&nbsp;subtraction</span>&nbsp;
+Private&nbsp;<span class="cs__keyword">float</span>&nbsp;GetAbs(<span class="cs__keyword">int</span>&nbsp;firstNum,<span class="cs__keyword">int</span>&nbsp;secondNum)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;Float&nbsp;abs&nbsp;=&nbsp;Math.Abs((<span class="cs__keyword">float</span>)firstNum&nbsp;-&nbsp;(<span class="cs__keyword">float</span>)secondNum);&nbsp;
+&nbsp;&nbsp;&nbsp;Float&nbsp;result&nbsp;=&nbsp;Math.Max(firstNum,&nbsp;secondNum);&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>(result&nbsp;==&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;<span class="cs__number">1</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;abs&nbsp;/&nbsp;result;&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span style="color:#808080">Final calculation results：</span></div>
+<div class="endscriptcode"><span style="color:#808080"><br>
+</span></div>
+<div class="endscriptcode"></div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">编辑脚本</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">// Final calculation results
+Public floatGetResult(int[] firstNum,int[] scondNum)
+{
+	if(firstNum.Length != scondNum.Length)
+	{
+		Return 0;
+	}
+	else
+	{
+
+		Float result = 0;
+		Int j = firstNum.Length;
+		for(int i = 0; i &lt; j; i&#43;&#43;)
+		{
+			result &#43;= 1 - GetAbs(firstNum[i], scondNum[i]);
+			Console.WriteLine(i &#43;&quot;----&quot;&#43; result);
+		}
+		Return result / j;
+
+	}
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;Final&nbsp;calculation&nbsp;results</span>&nbsp;
+Public&nbsp;floatGetResult(<span class="cs__keyword">int</span>[]&nbsp;firstNum,<span class="cs__keyword">int</span>[]&nbsp;scondNum)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>(firstNum.Length&nbsp;!=&nbsp;scondNum.Length)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Float&nbsp;result&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Int&nbsp;j&nbsp;=&nbsp;firstNum.Length;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">for</span>(<span class="cs__keyword">int</span>&nbsp;i&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;i&nbsp;&lt;&nbsp;j;&nbsp;i&#43;&#43;)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;&#43;=&nbsp;<span class="cs__number">1</span>&nbsp;-&nbsp;GetAbs(firstNum[i],&nbsp;scondNum[i]);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(i&nbsp;&#43;<span class="cs__string">&quot;----&quot;</span>&#43;&nbsp;result);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;result&nbsp;/&nbsp;j;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;</pre>
+</div>
+</div>
+</div>
+<p><span style="color:#808080">It should be noted that this example is placed in the components and image access, you can according to their own preferences to store：</span></p>
+<p><span style="color:#808080"><img id="176964" src="https://i1.code.msdn.s-msft.com/c-realization-of-image-a253ad06/image/file/176964/1/example1.jpg" alt="" width="638" height="321"><br>
+</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

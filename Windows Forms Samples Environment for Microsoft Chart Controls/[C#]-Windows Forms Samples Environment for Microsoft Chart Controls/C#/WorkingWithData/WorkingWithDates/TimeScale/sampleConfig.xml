@@ -1,0 +1,17 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "WorkingWithDates">
+  <Title>Real Time Scale</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Real Time Scale</ShortBlurb> 
+  <SampleControl>TimeScale</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Real Time Data, Working with Dates</Keyword>
+  </Keywords> 
+  </SampleConfig>
+
+</SampleConfigs>

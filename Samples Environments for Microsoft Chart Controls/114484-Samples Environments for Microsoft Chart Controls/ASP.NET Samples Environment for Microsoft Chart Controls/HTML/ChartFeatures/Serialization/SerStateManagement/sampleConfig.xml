@@ -1,0 +1,40 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Serialization">
+	<Title>Advanced State Management</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Advanced State Management</ShortBlurb> 
+	<Content>SerStateManagement.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+	
+	<Keywords>
+		<Keyword>Serialization, State Management</Keyword>
+		<Keyword>State Management</Keyword>
+	</Keywords> 
+	</SampleConfig>
+	
+	<SampleConfig ParentNodeID = "StateManagement" Priority="300">
+	<Title>Advanced State Management</Title>
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Advanced State Management</ShortBlurb> 
+	<Content>SerStateManagement.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>State Management, Advanced</Keyword>
+	</Keywords> 
+
+	</SampleConfig>
+
+</SampleConfigs>

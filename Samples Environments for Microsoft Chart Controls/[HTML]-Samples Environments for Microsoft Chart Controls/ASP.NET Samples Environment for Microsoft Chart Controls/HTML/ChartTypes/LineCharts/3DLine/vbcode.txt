@@ -1,0 +1,30 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Populate series with random data
+   Dim random As New Random()
+   Dim pointIndex As Integer
+   For pointIndex = 0 To 9
+      Chart1.Series("Series1").Points.AddY(random.Next(45, 95))
+      Chart1.Series("Series2").Points.AddY(random.Next(5, 75))
+   Next pointIndex
+   
+   ' Set series chart type
+   Chart1.Series("Series1").ChartType = SeriesChartType.Line
+   Chart1.Series("Series2").ChartType = SeriesChartType.Spline
+   
+   ' Set point labels
+   Chart1.Series("Series1").IsValueShownAsLabel = True
+   Chart1.Series("Series2").IsValueShownAsLabel = True
+   
+   ' Enable X axis margin
+   Chart1.ChartAreas("ChartArea1").AxisX.IsMarginVisible = True
+
+   ' Show data point marker lines for both series
+   Chart1.Series("Series1")("ShowMarkerLines") = "True"
+   Chart1.Series("Series2")("ShowMarkerLines") = "False"
+
+End Sub
+...

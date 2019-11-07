@@ -1,0 +1,20 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Create references to new chart areas.
+    Dim areas() As ChartArea
+    areas(0) = Chart1.ChartAreas("ChartArea1")
+    areas(1) = Chart1.ChartAreas("Chart Area 2")
+    areas(2) = Chart1.ChartAreas("Chart Area 3")
+
+    ' Remove all chart areas from the collection
+    Chart1.ChartAreas.Clear()
+
+    ' Add chart areas to the collection in selected order
+    Chart1.ChartAreas.Add(areas(0))
+    Chart1.ChartAreas.Add(areas(2))
+    Chart1.ChartAreas.Add(areas(1))
+
+End Sub 

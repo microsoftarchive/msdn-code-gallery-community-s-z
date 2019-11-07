@@ -1,0 +1,11 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "myquotes-webpart-client-side-solution",
+    "id": "f1db0b7e-86cc-435c-a71c-71f1225fa956",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/myquotes-webpart.sppkg"
+  }
+}

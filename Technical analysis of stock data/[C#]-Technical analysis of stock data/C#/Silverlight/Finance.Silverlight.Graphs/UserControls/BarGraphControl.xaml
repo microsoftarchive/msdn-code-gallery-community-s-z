@@ -1,0 +1,239 @@
+﻿<UserControl x:Class="Finance.Silverlight.Graphs.UserControls.BarGraphControl"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:local="clr-namespace:Finance.Silverlight.Graphs.UserControls" 
+			 xmlns:viewModels="clr-namespace:Finance.Silverlight.Graphs.ViewModels" 
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:charting="clr-namespace:Microsoft.Windows.Controls.DataVisualization.Charting;assembly=Microsoft.Windows.Controls.DataVisualization"
+			 xmlns:converters="clr-namespace:Finance.Silverlight.Common.Converters;assembly=Finance.Silverlight.Common"
+			 xmlns:behaviors="clr-namespace:Finance.Silverlight.Common.Behaviours;assembly=Finance.Silverlight.Common"
+			 d:DesignWidth="600"
+			 d:DesignHeight="600"
+			 mc:Ignorable="d">
+	<Grid x:Name="LayoutRoot" Background="White" viewModels:BarGraphViewModel.LayoutRootGrid="{Binding ElementName=LayoutRoot}">
+		<Grid.Resources>
+			<converters:BoolToVisibilityConverter FalseValue="Collapsed" x:Key="btvc" />
+			<converters:DoubleToStringConverter x:Key="dtsc"/>
+		</Grid.Resources>
+		<Line 
+			Canvas.ZIndex="2" 
+			Stroke="Red" 
+			Name="verticalLineMain" 
+			X1="{Binding Path=DayMarkerX}"
+			Y1="{Binding Path=DayMarkerY1}" 
+			X2="{Binding Path=DayMarkerX}" 
+			Y2="{Binding Path=DayMarkerY2}" />
+		<Line 
+			Canvas.ZIndex="2" 
+			Stroke="Red" 
+			Name="verticalLineVolume" 
+			X1="{Binding Path=DayMarkerX}" 
+			Y1="{Binding Path=DayMarkerY1V}" 
+			X2="{Binding Path=DayMarkerX}" 
+			Y2="{Binding Path=DayMarkerY2V}" 
+			Visibility="{Binding Path=IsVolumeChartVisibile, Converter={StaticResource btvc}}" />
+
+		<Line 
+			Canvas.ZIndex="2" 
+			Stroke="Red" 
+			Name="verticalLineOscillator" 
+			X1="{Binding Path=DayMarkerX}" 
+			Y1="{Binding Path=DayMarkerY1O}" 
+			X2="{Binding Path=DayMarkerX}" 
+			Y2="{Binding Path=DayMarkerY2O}" 
+			Visibility="{Binding Path=IsOscillatorChartVisibile, Converter={StaticResource btvc}}" />
+
+        <Line 
+			Canvas.ZIndex="2" 
+			Stroke="Red" 
+			Name="verticalLineCCI" 
+			X1="{Binding Path=DayMarkerX}" 
+			Y1="{Binding Path=DayMarkerY1C}" 
+			X2="{Binding Path=DayMarkerX}" 
+			Y2="{Binding Path=DayMarkerY2C}" 
+			Visibility="{Binding Path=IsCCIChartVisibile, Converter={StaticResource btvc}}" />
+
+        <StackPanel Orientation="Vertical" >
+
+			<charting:Chart 
+				Name="chartMain" 
+				BorderBrush="{x:Null}" 
+				BorderThickness="0" 
+				Height="350" 
+				behaviors:MouseMoveBehaviour.MouseMoveCommand="{Binding ChartMainMouseMoveCommand}"
+				viewModels:BarGraphViewModel.ChartMain="{Binding ElementName=chartMain}">
+				<charting:Chart.Series>
+
+					<charting:StockBarSeries
+						Canvas.ZIndex="1"
+						Title="{Binding Path=BarChartTitle, Mode=TwoWay}"
+						ItemsSource="{Binding Path=DailyData}"
+						IndependentValueBinding="{Binding Path=DayAsDouble}"
+						DependentValueBinding="{Binding Path=MaxValue}"
+						OpenValueBinding="{Binding Path=OpenValue}"
+						CloseValueBinding="{Binding Path=CloseValue}"
+						LowValueBinding="{Binding Path=MinValue}"
+						HighValueBinding="{Binding Path=MaxValue}"
+						LegendItemStyle="{StaticResource LegendItemStyle}" />
+
+                </charting:Chart.Series>
+
+				<charting:Chart.Axes>
+					<charting:LinearAxis Orientation="Vertical" ShowGridLines="True" Width="100"/>
+					<charting:LinearAxis Orientation="Horizontal" FontStyle="Italic" CharacterSpacing="10" >
+						<charting:LinearAxis.AxisLabelStyle>
+							<Style TargetType="charting:AxisLabel">
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="charting:AxisLabel">
+                                            <TextBox Text="{Binding Converter={StaticResource dtsc}}" 
+                                                     Width="75" 
+                                                     Height="20" 
+                                                     HorizontalAlignment="Center" 
+                                                     VerticalAlignment="Bottom" 
+                                                     FontSize="10" 
+                                                     BorderThickness="0"
+                                                     IsReadOnly="True"
+                                                     Background="Transparent"/>
+                                        </ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+						</charting:LinearAxis.AxisLabelStyle>
+					</charting:LinearAxis>
+				</charting:Chart.Axes>
+
+			</charting:Chart>
+
+			<charting:Chart 
+				Name="chartVolume" 
+				BorderBrush="{x:Null}" 
+				BorderThickness="0" 
+				Height="200" 
+				Visibility="{Binding Path=IsVolumeChartVisibile, Converter={StaticResource btvc}}"
+				behaviors:MouseMoveBehaviour.MouseMoveCommand="{Binding ChartVolumeMouseMoveCommand}"  
+				viewModels:BarGraphViewModel.ChartVolume="{Binding ElementName=chartVolume}">
+				<charting:Chart.Series>
+
+					<charting:ColumnRangedSeries 
+						Canvas.ZIndex="1"
+						Title="{Binding Path=VolumeChartTitle, Mode=TwoWay}"
+						ItemsSource="{Binding Path=DailyData}"
+						IndependentValueBinding="{Binding Path=DayAsDouble}"
+						DependentValueBinding="{Binding Path=Volume}"
+						LegendItemStyle="{StaticResource LegendItemStyle}"
+					/>
+
+				</charting:Chart.Series>
+				<charting:Chart.Axes>
+					<charting:LinearAxis Orientation="Vertical" ShowGridLines="True" Width="100" />
+					<charting:LinearAxis Orientation="Horizontal" FontStyle="Italic" CharacterSpacing="10" >
+						<charting:LinearAxis.AxisLabelStyle>
+							<Style TargetType="charting:AxisLabel">
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="charting:AxisLabel">
+                                            <TextBox Text="{Binding Converter={StaticResource dtsc}}" 
+                                                     Width="75" 
+                                                     Height="20" 
+                                                     HorizontalAlignment="Center" 
+                                                     VerticalAlignment="Bottom" 
+                                                     FontSize="10" 
+                                                     BorderThickness="0"
+                                                     IsReadOnly="True"
+                                                     Background="Transparent"/>
+                                        </ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+						</charting:LinearAxis.AxisLabelStyle>
+					</charting:LinearAxis>
+				</charting:Chart.Axes>
+
+			</charting:Chart>
+
+			<charting:Chart 
+				Name="chartOscillator" 
+				BorderBrush="{x:Null}" 
+				BorderThickness="0" 
+				Height="200" 
+				Visibility="{Binding Path=IsOscillatorChartVisibile, Converter={StaticResource btvc}}"
+				behaviors:MouseMoveBehaviour.MouseMoveCommand="{Binding ChartOscillatorMouseMoveCommand}"  
+				viewModels:BarGraphViewModel.ChartOscillator="{Binding ElementName=chartOscillator}">
+
+				<charting:Chart.Series>
+
+				</charting:Chart.Series>
+				
+				<charting:Chart.Axes>
+                    <charting:LinearAxis  Orientation="Vertical" ShowGridLines="True" Minimum="{Binding Path=OscillatorMinimum}" Maximum="{Binding Path=OscillatorMaximum}"  Width="100" Location="Left"/>
+					<charting:LinearAxis Orientation="Horizontal" FontStyle="Italic" CharacterSpacing="10" >
+						<charting:LinearAxis.AxisLabelStyle>
+							<Style TargetType="charting:AxisLabel">
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="charting:AxisLabel">
+                                            <TextBox Text="{Binding Converter={StaticResource dtsc}}" 
+                                                     Width="75" 
+                                                     Height="20" 
+                                                     HorizontalAlignment="Center" 
+                                                     VerticalAlignment="Bottom" 
+                                                     FontSize="10" 
+                                                     BorderThickness="0"
+                                                     IsReadOnly="True"
+                                                     Background="Transparent"/>
+                                        </ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+						</charting:LinearAxis.AxisLabelStyle>
+					</charting:LinearAxis>
+				</charting:Chart.Axes>
+
+			</charting:Chart>
+
+            <charting:Chart 
+				Name="chartCCI" 
+				BorderBrush="{x:Null}" 
+				BorderThickness="0" 
+				Height="200" 
+				Visibility="{Binding Path=IsCCIChartVisibile, Converter={StaticResource btvc}}"
+				behaviors:MouseMoveBehaviour.MouseMoveCommand="{Binding ChartCCIMouseMoveCommand}"  
+				viewModels:BarGraphViewModel.ChartCCI="{Binding ElementName=chartCCI}">
+
+                <charting:Chart.Series>
+
+                </charting:Chart.Series>
+
+                <charting:Chart.Axes>
+                    <charting:LinearAxis  Orientation="Vertical" ShowGridLines="True" Width="100" />
+                    <charting:LinearAxis Orientation="Horizontal" FontStyle="Italic" CharacterSpacing="10" >
+                        <charting:LinearAxis.AxisLabelStyle>
+                            <Style TargetType="charting:AxisLabel">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="charting:AxisLabel">
+                                            <TextBox Text="{Binding Converter={StaticResource dtsc}}" 
+                                                     Width="75" 
+                                                     Height="20" 
+                                                     HorizontalAlignment="Center" 
+                                                     VerticalAlignment="Bottom" 
+                                                     FontSize="10" 
+                                                     BorderThickness="0"
+                                                     IsReadOnly="True"
+                                                     Background="Transparent"/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </charting:LinearAxis.AxisLabelStyle>
+                    </charting:LinearAxis>
+                </charting:Chart.Axes>
+
+            </charting:Chart>
+
+        </StackPanel>
+
+	</Grid>
+</UserControl>

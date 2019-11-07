@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_FinanceDataService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_FinanceDataService"
+                contract="FinanceDataService.FinanceDataService" name="CustomBinding_FinanceDataService" />
+        </client>
+    </system.serviceModel>
+</configuration>

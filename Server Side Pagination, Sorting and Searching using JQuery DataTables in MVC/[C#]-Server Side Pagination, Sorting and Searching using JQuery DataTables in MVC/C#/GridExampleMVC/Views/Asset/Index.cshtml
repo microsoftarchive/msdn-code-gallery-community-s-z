@@ -1,0 +1,51 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary list-panel" id="list-panel">
+            <div class="panel-heading list-panel-heading">
+                <h1 class="panel-title list-panel-title">Assets</h1>
+            </div>
+            <div class="panel-body">
+                <table id="assets-data-table" class="table table-striped table-bordered" style="width:100%;">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    
+<script type="text/javascript">
+        var assetListVM;
+        $(function () {
+            assetListVM = {
+                dt: null,
+
+                init: function () {
+                    dt = $('#assets-data-table').DataTable({
+                        "serverSide": true,
+                        "processing": true,
+                        "ajax": {
+                            "url": "@Url.Action("Get","Asset")"
+                        },
+                        "columns": [
+                            { "title": "Bar Code", "data": "BarCode", "searchable": true },
+                            { "title": "Manufacturer", "data": "Manufacturer", "searchable": true },
+                            { "title": "Model", "data": "ModelNumber", "searchable": true },
+                            { "title": "Building", "data": "Building", "searchable": true },
+                            { "title": "Room No", "data": "RoomNo" },
+                            { "title": "Quantity", "data": "Quantity" }
+                        ],
+                        "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]],
+                    });
+                }
+            }
+
+            // initialize the datatables
+            assetListVM.init();
+
+        });
+
+</script>
+    
+ }

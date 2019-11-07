@@ -1,0 +1,46 @@
+﻿@model IMChatApp.Models.Login
+<div class="jumbotron">
+    <h1>SignalR Chat </h1>
+    <p class="lead">Login to enter chat</p>
+    
+    <div class="login-wrap">
+
+
+        @using (Html.BeginForm("Chat", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <h4>Use a local account to log in.</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserNick, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.UserNick, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.UserNick)
+                </div>
+            </div> 
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value=" Enter Chat &raquo;" class="btn btn-primary btn-large " />
+                </div>
+            </div>
+            <p>
+                
+            </p>
+        }
+
+
+
+        @*@Html.BeginForm()
+        {
+        <input type="text" class="form-control" placeholder="User ID" autofocus>
+        <br>
+        @*<input type="button" class="btn btn-block" value="Enter Chat" />*@
+        @*<p><a href="http://asp.net" class="btn btn-primary btn-large">Enter Chat &raquo;</a></p>*@
+        @*<button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+        <hr>
+        </div>
+    }*@
+    </div>
+
+

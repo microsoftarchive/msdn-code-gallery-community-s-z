@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rtde.AspNetCore2.0.Net4.6.1", "Rtde.AspNetCore2.0.Net4.6.1\Rtde.AspNetCore2.0.Net4.6.1.csproj", "{7164F65F-2692-40CF-B1E1-D00225BE1B68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rtde.AspNetCore2.0.NetCore2.0", "Rtde.AspNetCore2.0.NetCore2.0\Rtde.AspNetCore2.0.NetCore2.0.csproj", "{50A62BBB-E088-4257-87DD-983ECADF22EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NETCore.NewSignalR", "ASP.NETCore.NewSignalR", "{D54C3497-AB5A-495D-A8BE-86CD1D04F9F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NETCoreOldSignalR2.2.2", "ASP.NETCoreOldSignalR2.2.2", "{05190D22-705F-44E3-A563-85A1ACAD25AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{5FDD68D1-7F45-4BEE-AE07-0E5F41EC195C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rtde.AspNetCore1.1.Net4.6.1", "Rtde.AspNetCore1.1.Net4.6.1\Rtde.AspNetCore1.1.Net4.6.1.csproj", "{9D62B308-9C4B-45D2-A9DE-91EAE442E6A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7164F65F-2692-40CF-B1E1-D00225BE1B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7164F65F-2692-40CF-B1E1-D00225BE1B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7164F65F-2692-40CF-B1E1-D00225BE1B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7164F65F-2692-40CF-B1E1-D00225BE1B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A62BBB-E088-4257-87DD-983ECADF22EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A62BBB-E088-4257-87DD-983ECADF22EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A62BBB-E088-4257-87DD-983ECADF22EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A62BBB-E088-4257-87DD-983ECADF22EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDD68D1-7F45-4BEE-AE07-0E5F41EC195C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDD68D1-7F45-4BEE-AE07-0E5F41EC195C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDD68D1-7F45-4BEE-AE07-0E5F41EC195C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDD68D1-7F45-4BEE-AE07-0E5F41EC195C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D62B308-9C4B-45D2-A9DE-91EAE442E6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D62B308-9C4B-45D2-A9DE-91EAE442E6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D62B308-9C4B-45D2-A9DE-91EAE442E6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D62B308-9C4B-45D2-A9DE-91EAE442E6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7164F65F-2692-40CF-B1E1-D00225BE1B68} = {D54C3497-AB5A-495D-A8BE-86CD1D04F9F4}
+		{50A62BBB-E088-4257-87DD-983ECADF22EA} = {D54C3497-AB5A-495D-A8BE-86CD1D04F9F4}
+		{9D62B308-9C4B-45D2-A9DE-91EAE442E6A8} = {05190D22-705F-44E3-A563-85A1ACAD25AE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48B54CEF-1E9E-46B4-96FA-7324FCBE913F}
+	EndGlobalSection
+EndGlobal

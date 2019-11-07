@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf_EntityFramework", "wpf_EntityFramework\wpf_EntityFramework.csproj", "{A282940A-5F76-4FF8-9568-8B7D14133259}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{029CBC37-D034-4418-9CD2-9CD64212ED27}"
+	ProjectSection(SolutionItems) = preProject
+		TelephoneNumber.cs = TelephoneNumber.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A282940A-5F76-4FF8-9568-8B7D14133259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A282940A-5F76-4FF8-9568-8B7D14133259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A282940A-5F76-4FF8-9568-8B7D14133259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A282940A-5F76-4FF8-9568-8B7D14133259}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

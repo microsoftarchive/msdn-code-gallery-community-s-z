@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfEfSampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="300" Width="375" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Name="StackPanel1">
+            <Button Height="30" Name="Button1" Width="Auto" HorizontalContentAlignment="Center" Margin="3" Click="Button1_Click">Simple Listbox Binding</Button>
+            <Button Height="30" Name="Button2" Width="Auto" HorizontalContentAlignment="Center" Margin="3" Click="Button2_Click">Simple Data Entry</Button>
+            <Button Height="30" Name="Button3" Width="Auto" HorizontalContentAlignment="Center" Margin="3" Click="Button3_Click">Simple Data Grid</Button>
+            <Button Height="30" Name="Button4" Width="Auto" HorizontalContentAlignment="Center" Margin="3" Click="Button4_Click">Simple Validation</Button>
+            <Button Height="30" Name="Button5" Width="Auto" HorizontalContentAlignment="Center" Margin="3" Click="Button5_Click">Lookup Combobox Binding</Button>
+            <Button Height="30" Name="Button6" Width="Auto" HorizontalContentAlignment="Center" Margin="3" Click="Button6_Click">Master Detail Binding</Button>
+            <Button Height="30" Name="Button7" Width="Auto" HorizontalContentAlignment="Center" Margin="3" Click="Button7_Click">Formatting, Validation and Restricting User Input</Button>
+        </StackPanel>
+    </Grid>
+</Window>

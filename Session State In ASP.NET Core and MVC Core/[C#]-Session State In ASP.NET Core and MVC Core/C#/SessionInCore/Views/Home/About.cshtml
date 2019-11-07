@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "ASP.Net Core !!";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+
+<table class="table table-responsive">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>@ViewBag.Name</td>
+        <td>@ViewBag.Age</td>
+    </tr>
+</table>
+
+<label>Date : @(ViewBag.Date.ToString("dd/MM/yyyy") != "01/01/0001" ? ViewBag.Date.ToString("dd/MM/yyyy") : "")</label>
+

@@ -1,0 +1,7 @@
+Please download binaries using nuget or build it from sources:
+
+About Nuget: 
+http://docs.nuget.org/
+
+Nuget page of Timeline control:
+http://www.nuget.org/packages/Timeline

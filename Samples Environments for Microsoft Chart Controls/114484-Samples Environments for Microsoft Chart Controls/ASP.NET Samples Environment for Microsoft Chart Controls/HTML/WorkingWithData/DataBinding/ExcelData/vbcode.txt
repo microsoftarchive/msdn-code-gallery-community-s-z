@@ -1,0 +1,33 @@
+Imports System.Web.UI.DataVisualization.Charting
+Imports System.Data
+Imports System.Data.OleDb
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' resolve the address to the Excel file
+    Dim fileNameString As String = Me.MapPath(".")
+    fileNameString += "..\..\..\data\ExcelData.xls"
+
+	' Create connection object by using the preceding connection string.
+	Dim sConn As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + 
+		fileNameString + ";Extended Properties=""Excel 8.0;HDR=YES"""
+	Dim myConnection As New OleDbConnection(sConn)
+	myConnection.Open()
+
+	' The code to follow uses a SQL SELECT command to display the data from the worksheet.
+	' Create new OleDbCommand to return data from worksheet.
+	Dim myCommand As New OleDbCommand("Select * From [data1$A1:E25]", myConnection)
+
+	' create a database reader	
+	Dim myReader As OleDbDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection)
+
+	' Populate the chart with data in the file
+	Chart1.DataBindTable(myReader, "HOUR")
+
+	' close the reader and the connection
+	myReader.Close()
+	myConnection.Close()
+
+End Sub 'Page_Load
+...

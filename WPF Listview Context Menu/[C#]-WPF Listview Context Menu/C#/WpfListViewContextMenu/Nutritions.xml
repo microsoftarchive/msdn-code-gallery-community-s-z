@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Nutritions>
+    <Nutrition Group="Carbohydrates" Name="Total carbohydrates" Quantity="27.3"></Nutrition>
+    <Nutrition Group="Carbohydrates" Name="Total disaccharides" Quantity="5.7"></Nutrition>
+    <Nutrition Group="Carbohydrates" Name="Total polysaccharides" Quantity="21.6"></Nutrition>
+    <Nutrition Group="Minerals" Name="Calcium" Quantity="147"></Nutrition>
+    <Nutrition Group="Minerals" Name="Phosphorus " Quantity="150"></Nutrition>
+    <Nutrition Group="Minerals" Name="Potassium " Quantity="201"></Nutrition>
+    <Nutrition Group="Minerals" Name="Copper " Quantity="0.13"></Nutrition>
+    <Nutrition Group="Minerals" Name="Magnesium " Quantity="19"></Nutrition>
+    <Nutrition Group="Minerals" Name="Sodium " Quantity="582"></Nutrition>
+    <Nutrition Group="Minerals" Name="Selenium " Quantity="4"></Nutrition>
+    <Nutrition Group="Minerals" Name="Total iron " Quantity="0.7"></Nutrition>
+    <Nutrition Group="Minerals" Name="Zinc" Quantity="1.07"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Beta-carotene " Quantity="173.8"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Nicotinic " Quantity="1.5"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Total vitamin B6 " Quantity="0.127"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Total vitamin D" Quantity="0.3"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Total vitamin E " Quantity="2.1"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Vitamin B1 " Quantity="0.1"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Vitamin B12 " Quantity="0.59"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Vitamin B2" Quantity="0.16"></Nutrition>
+    <Nutrition Group="Vitamins" Name="Vitamin C" Quantity="10"></Nutrition>
+</Nutritions>

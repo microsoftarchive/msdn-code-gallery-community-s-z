@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=5CF4E24D59324FBE66CF8C9A49A3F942" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=F8E8917DA8158DB3E7C6F07AA1FFC4F3" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Unityで飛行体を操作したい</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Unityで飛行体を操作したい</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Unity
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Unity
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">ja-JP</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/16/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Unity-6bf1e150">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>サンプルプログラムの概要</h1>
+<p>このサンプルプログラムは、Unityを使って飛行物体の3Dモデルをふわふわとした感じを出しながら操作をする方法を示したサンプルプログラムになります。</p>
+<p>サンプルプログラムを実行すると、以下のように飛行物体が浮いている状態ではじまります。ふわふわとした感じのアニメーションをともなった状態で表示されます。</p>
+<p><img id="132574" src="description/無題.png" alt="" width="228" height="177"></p>
+<p>この飛行物体は以下の方法で操作することができます。</p>
+<ul>
+<li>左移動：Aキーか矢印左キー </li><li>右移動：Dキーか矢印右キー </li><li>上移動：Wキーか矢印上キー </li><li>下移動：Sキーか矢印下キー </li><li>前移動：マウスの左クリック </li><li>後移動：マウスの右クリック </li></ul>
+<p>基本的に空中に浮遊している間はふわふわとしたアニメーションをしていて、地面に接地するとアニメーションは停止します。また、前後左右に移動するときは、微妙にそちらの方向に傾いて移動します。</p>
+<h1>サンプルプログラムのポイント</h1>
+<p>このサンプルプログラムのポイントとなる箇所を以下に示します。</p>
+<h2>相対位置による飛行物体のアニメーション</h2>
+<p>飛行物体のオブジェのアニメーションは、親に対する絶対座標になるため、空のオブジェクトを作り、その中に飛行物体を設置してからアニメーションを設定することで相対位置によるアニメーションにしています。アニメーションを確認するには、HierarchyのFlyingObjectのspaceShipを選択してからAnimationウィンドウを確認してください。</p>
+<h2>CharacterControllerを使用しない地面との設置判定</h2>
+<p>このサンプルはCharacterControllerを使用せずにrigidbodyを使用しています。rigidbodyを使った状態で接地しているかどうか判定するために、地面と飛行物体のOnCollisionEnterとOnCollisionExitを使用しています。飛行物体は、親のFlyingObjectにBoxColliderを設定して当たり判定が発生するように設定しています。</p>
+<p>地面にはGroundというLayerを設定して、そのLayerとぶつかったかどうかで地面にいるかどうかを判定しています。該当箇所のコードはFlyngObject.csの以下のようなコードになります。</p>
+<p></p>
+<h2 class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">スクリプトの編集</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public void OnCollisionEnter(Collision collision)
+{
+    var g = (collider.gameObject.layer &amp; (1 &lt;&lt; LayerMask.NameToLayer(&quot;Ground&quot;))) != 0;
+    this.isGrounded = !g;
+}
+
+public void OnCollisionExit(Collision collision)
+{
+    var g = (collider.gameObject.layer &amp; (1 &lt;&lt; LayerMask.NameToLayer(&quot;Ground&quot;))) != 0;
+    this.isGrounded = g;
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;OnCollisionEnter(Collision&nbsp;collision)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;g&nbsp;=&nbsp;(collider.gameObject.layer&nbsp;&amp;&nbsp;(<span class="cs__number">1</span>&nbsp;&lt;&lt;&nbsp;LayerMask.NameToLayer(<span class="cs__string">&quot;Ground&quot;</span>)))&nbsp;!=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.isGrounded&nbsp;=&nbsp;!g;&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;OnCollisionExit(Collision&nbsp;collision)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;g&nbsp;=&nbsp;(collider.gameObject.layer&nbsp;&amp;&nbsp;(<span class="cs__number">1</span>&nbsp;&lt;&lt;&nbsp;LayerMask.NameToLayer(<span class="cs__string">&quot;Ground&quot;</span>)))&nbsp;!=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.isGrounded&nbsp;=&nbsp;g;&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</h2>
+<p></p>
+<h2>&nbsp;進行方向に少し傾ける</h2>
+<p>進行方向に少しオブジェクトを傾ける処理もこの中では追加しています。押されたキーから、rigidbodyのvelocityを計算して、velocityの状態を見て物体のrotationを調整しています。コードはFlyngObject.csの以下のようなコードになります。</p>
+<p></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">スクリプトの編集</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">void Update()
+{
+    var velocity = new Vector3(0, 0, 0);
+    velocity.x &#43;= Input.GetAxis(&quot;Horizontal&quot;);
+    velocity.y &#43;= Input.GetAxis(&quot;Vertical&quot;);
+    if (Input.GetButton(&quot;Fire1&quot;))
+    {
+        velocity.z &#43;= 1.0f;
+    }
+    if (Input.GetButton(&quot;Fire2&quot;))
+    {
+        velocity.z &#43;= -1.0f;
+    }
+
+    this.rigidbody.velocity = velocity * 500 * Time.deltaTime;
+    var originalRotation = this.rigidbody.rotation;
+    var zEular = 0.0f;
+    if (this.rigidbody.velocity.x &gt; 0)
+    {
+        zEular = -5.0f;
+    }
+    else if (this.rigidbody.velocity.x &lt; 0)
+    {
+        zEular = 5.0f;
+    }
+
+    var xEular = 0.0f;
+    if (this.rigidbody.velocity.z &gt; 0)
+    {
+        xEular = 5.0f;
+    }
+    else if (this.rigidbody.velocity.z &lt; 0)
+    {
+        xEular = -5.0f;
+    }
+    var eular = new Vector3(xEular, 0, zEular);
+    this.rigidbody.rotation = Quaternion.Euler(eular);
+
+    this.animator.SetBool(&quot;Flying&quot;, !this.isGrounded);
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">void</span>&nbsp;Update()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;velocity&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Vector3(<span class="cs__number">0</span>,&nbsp;<span class="cs__number">0</span>,&nbsp;<span class="cs__number">0</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;velocity.x&nbsp;&#43;=&nbsp;Input.GetAxis(<span class="cs__string">&quot;Horizontal&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;velocity.y&nbsp;&#43;=&nbsp;Input.GetAxis(<span class="cs__string">&quot;Vertical&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(Input.GetButton(<span class="cs__string">&quot;Fire1&quot;</span>))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;velocity.z&nbsp;&#43;=&nbsp;<span class="cs__number">1</span>.0f;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(Input.GetButton(<span class="cs__string">&quot;Fire2&quot;</span>))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;velocity.z&nbsp;&#43;=&nbsp;-<span class="cs__number">1</span>.0f;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.rigidbody.velocity&nbsp;=&nbsp;velocity&nbsp;*&nbsp;<span class="cs__number">500</span>&nbsp;*&nbsp;Time.deltaTime;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;originalRotation&nbsp;=&nbsp;<span class="cs__keyword">this</span>.rigidbody.rotation;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;zEular&nbsp;=&nbsp;<span class="cs__number">0</span>.0f;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">this</span>.rigidbody.velocity.x&nbsp;&gt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zEular&nbsp;=&nbsp;-<span class="cs__number">5</span>.0f;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">this</span>.rigidbody.velocity.x&nbsp;&lt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zEular&nbsp;=&nbsp;<span class="cs__number">5</span>.0f;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;xEular&nbsp;=&nbsp;<span class="cs__number">0</span>.0f;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">this</span>.rigidbody.velocity.z&nbsp;&gt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xEular&nbsp;=&nbsp;<span class="cs__number">5</span>.0f;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">this</span>.rigidbody.velocity.z&nbsp;&lt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xEular&nbsp;=&nbsp;-<span class="cs__number">5</span>.0f;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;eular&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Vector3(xEular,&nbsp;<span class="cs__number">0</span>,&nbsp;zEular);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.rigidbody.rotation&nbsp;=&nbsp;Quaternion.Euler(eular);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.animator.SetBool(<span class="cs__string">&quot;Flying&quot;</span>,&nbsp;!<span class="cs__keyword">this</span>.isGrounded);&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

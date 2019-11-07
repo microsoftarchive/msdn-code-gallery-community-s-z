@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/b79636be-b088-48b5-8a8d-c21645d26d2fCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>WPF Messagebox</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>WPF Messagebox</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, WPF, XAML, .NET Framework
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Animation, C#, User Interface, WPF, XAML, Language Samples
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/5/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/WPF-Messagebox-4a038c72">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="font-size:small">If you ever used the standard .NET messagebox I'm sure, like me, you found it to be a lacking and cumbersome. My main goal in writing this was simplifying&nbsp;the messagebox'es use, and adding some needed functionality (in
+ my opinion) while keeping it's original API to allow smooth transition from the standard messagebox.</span></p>
+<p style="text-align:justify"><span style="font-size:small">I came about to write this messagebox after twice having to write it in two seperate projects I was a part of. After having to write the same code for the second time, I thought I would upload it so
+ developers (including myself) won't have to fuss with the WPF messagebox again.</span></p>
+<h1><span>Building the Sample</span></h1>
+<p><span style="font-size:small">This sample is written in .Net 4.0, just build and run it.</span></p>
+<p style="text-align:justify"><span style="font-size:small">I wrote it in .Net 4 so I would be able to use default parameter values, to save me writing all the different overloads I needed. It could work with .Net 3.5 if all of these were converted to normal
+ overloads.</span></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p style="text-align:justify"><span style="font-size:small">As I stated in the introduction, in this project, I wanted to both simplify the use of the messagebox and add functionality. To simplify the use of the messagebox, I added multiple Show methods, There
+ are different Show methods for each type of common use.&nbsp;These new Show methods do not allow to customize the messagebox like the old show methods, but are intended to be used as presets. The different methods are:</span></p>
+<ul>
+<li><span style="font-size:small">ShowInformation</span> </li></ul>
+<p><span style="font-size:small"><img id="67857" src="description/info.png" alt="" width="147" height="85"></span></p>
+<ul>
+<li><span style="font-size:small">ShowQuestion</span> </li></ul>
+<p><span style="font-size:small"><img id="67860" src="description/question.png" alt="" width="180" height="115"></span></p>
+<ul>
+<li><span style="font-size:small">ShowWarning</span> </li></ul>
+<p><span style="font-size:small"><img id="67859" src="description/Warning.png" alt="" width="400" height="131"></span></p>
+<ul>
+<li><span style="font-size:small">ShowError</span> </li></ul>
+<p><span style="font-size:small"><img id="67861" src="description/Error.png" alt="" width="147" height="85"></span></p>
+<p><span style="font-size:small">And of course the old Show method.</span></p>
+<p style="text-align:justify"><span style="font-size:small">While the new Show methods can't be customized like the old show methods, they do have some options other than the message. They allow the addition of a cancel button, and a details section, which
+ takes me to my next point.</span></p>
+<p style="text-align:justify"><span style="font-size:small">My other goal in writing this was to add some functionality I thought is missing. The first and most obvious change is that i deleted the title. My experience taught&nbsp;me that a messagebox title
+ is redundant, so I decided to just drop it.</span></p>
+<p style="text-align:justify"><span style="font-size:small">Another significant change is the addition of a details section. This is a section that's added when the details parameter recieves a value. It's main purpose is to allow copying information from the
+ message, which leads me to my last point.</span></p>
+<p style="text-align:justify"><span style="font-size:small">The ShowError message is unique among the others in that it can recieve an exception, and parse it to the messagebox. when an exception is passed to the messagebox, the exception's message would be
+ placed in the message text, while the entire exception's ToString would pass to the details section (only if the project was build in debug). so all you need to do is this:</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">try
+{
+  throw new Exception(&quot;FUUUUUUUUUUUU!!!!!!!&quot;);
+}
+catch (Exception ex)
+{
+  MessageBox.ShowError(ex);
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">try</span>&nbsp;
+{&nbsp;
+&nbsp;&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;Exception(<span class="cs__string">&quot;FUUUUUUUUUUUU!!!!!!!&quot;</span>);&nbsp;
+}&nbsp;
+<span class="cs__keyword">catch</span>&nbsp;(Exception&nbsp;ex)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;MessageBox.ShowError(ex);&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><span style="font-size:small; text-align:justify">I found this to be very useful when trying to interpret&nbsp;and debug exception at the client.</span></div>
+<h1>Credits</h1>
+<p><span style="font-size:small">I can't take all the credits for this project, first of all, the different Show methods were the idea of my team leader, so I'd like to thank him.</span></p>
+<p><span style="font-size:small">Second, I borrowed an idea from this StackOverflow thread:&nbsp;<a href="http://stackoverflow.com/questions/1127647/convert-system-drawing-icon-to-system-media-imagesource">http://stackoverflow.com/questions/1127647/convert-system-drawing-icon-to-system-media-imagesource</a></span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

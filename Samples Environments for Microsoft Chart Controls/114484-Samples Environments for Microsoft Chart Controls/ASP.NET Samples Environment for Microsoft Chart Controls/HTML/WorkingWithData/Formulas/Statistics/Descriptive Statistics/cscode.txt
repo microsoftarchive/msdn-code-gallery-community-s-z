@@ -1,0 +1,13 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+// Calculate Mean
+double mean = chart1.DataManipulator.Statistics.Mean("Series1");
+
+// Calculate Median
+double median = chart1.DataManipulator.Statistics.Median("Series1");
+
+// Calculate Variance, and then Standard Deviation
+double variance = chart1.DataManipulator.Statistics.Variance("Series1",true);
+double stdeviation = Math.Sqrt(variance);
+...

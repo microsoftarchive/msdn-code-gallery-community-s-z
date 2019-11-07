@@ -1,0 +1,21 @@
+Imports System.Web.UI.DataVisualization.Charting.Chart
+...
+
+Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Disable end labels for the X axis
+    Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.IsEndLabelVisible = False
+
+    ' Set X axis labels format
+    Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Format = "D"
+
+    ' Set Y axis labels format
+    Chart1.ChartAreas("ChartArea1").AxisY.LabelStyle.Format = "C0"
+
+    ' Set series point labels format
+    Chart1.Series("Series1").LabelFormat = "P3"
+
+    ' Set series point labels color
+    Chart1.Series("Series1").ForeColor = Color.Navy
+    
+End Sub 'Page_Load

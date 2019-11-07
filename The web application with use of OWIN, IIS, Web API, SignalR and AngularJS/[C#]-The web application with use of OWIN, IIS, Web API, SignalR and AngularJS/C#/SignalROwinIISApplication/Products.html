@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Products page</title>
+    <script src="scripts/jquery-2.1.1.js"></script>
+    <script src="scripts/jquery.signalR-2.0.3.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/application/application.js"></script>
+    <script src="scripts/application/controllers/productscontroller.js"></script>
+    <script src="scripts/Application/services/productsservice.js"></script>
+    <link href="/Content/Styles/ProductsPage.css" rel="stylesheet" />
+</head>
+<body data-ng-app="application" data-ng-controller="productsController">
+    <form id="form1">
+        <div class="tdiv">
+            <span id="webSocketStatusSpan"></span>
+            <table id="ProdTable" class="itable">
+                <tr id="ProdTableHd">
+                    <th>Product Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr data-ng-model="product" data-ng-repeat="product in products"
+                    data-ng-click="tableRowClick(product)"
+                    data-ng-class="{srow: product.id === selectedProduct.id}">
+                    <td>
+                        {{product.id}}
+                    </td>
+                    <td>
+                        {{product.name}}
+                    </td>
+                    <td>
+                        {{product.description}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="ediv">
+            <ul class="elist">
+                <li>
+                    <span>Product Id</span>
+                    <input type="text" data-ng-disabled="!newProductAdded" 
+                           data-ng-model="selectedProduct.id" />
+                </li>
+                <li>
+                    <span>Name</span>
+                    <input type="text" data-ng-model="selectedProduct.name" 
+                           id="ProductNameText" />
+                </li>
+                <li>
+                    <span>Description</span>
+                    <input type="text" data-ng-model="selectedProduct.description" 
+                           id="ProductDescriptionText" />
+                </li>
+            </ul>
+            <input type="button" data-ng-disabled="tableBlocked == true" 
+                   data-ng-click="addNewProduct()" 
+                   value="Add record" />
+            <input type="button" data-ng-disabled="!selectedProduct" 
+                   data-ng-click="saveProduct()"
+                   value="Save record" />
+            <input type="button" data-ng-disabled="selectedProduct == null" 
+                   data-ng-click="deleteProduct()"
+                   value="Delete record" />
+        </div>
+        <br />
+        <div class="mdiv">
+            <ul>
+                <li data-ng-model="message" data-ng-repeat="message in messagesList">
+                    {{message.dateString + ' ' + message.statusString}}
+                </li>
+            </ul>
+        </div>
+    </form>
+    <div data-ng-class="{updprocess: applicationBlocked}"></div>
+</body>
+</html>

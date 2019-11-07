@@ -1,0 +1,19 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(sender As Object, e As System.EventArgs)
+   
+   ' Set series type
+   Chart1.Series("Default").ChartType = SeriesChartType.ThreeLineBreak
+   
+   ' Set the PriceUpColor attribute			
+   Chart1.Series("Default")("PriceUpColor") = "Aquamarine"
+   
+   ' Set the default color attribute			
+   Chart1.Series("Default").Color = Color.Red
+   
+   ' Set the NumberOfLinesInBreak attribute
+   Chart1.Series("Default")("NumberOfLinesInBreak") = "1"
+
+End Sub 'Page_Load 
+...

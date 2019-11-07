@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=62DBC035A4A8AD76676CA11B61CB6C59" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/c51fe777-01f4-402c-a4fb-bec708b61997Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=46CB1877D3C0B7D6D06D21CECE7C9CAB" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Visual Studio Load Testing</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Visual Studio Load Testing</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            load testing
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Performance
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/10/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Getting-started-with-17a52e95">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em><span style="font-size:small">Using Visual Studio Ultimate 2013 and Visual Studio Online, you can perform cloud-based load testing. Check for performance issues on your web site when you expect an increased user load. No need to use resources and set
+ up your own machines to create this load. You can use cloud-based load testing to provide virutal machines that generate the load of many users accesing your web site at the same time.<br>
+</span></em></p>
+<p><em><span style="font-size:small">To create a&nbsp;load test, you'll need to first create a Web Performance test. Web performance tests enable you to generate http requests and responses, test for correctness of the responses, and measure response times
+ and throughput. You'll then use them in a load test to generate load against a web application and measure web application performance.
+<br>
+</span></em></p>
+<p><em><span style="font-size:small">Load testing is traditionally an on-premise activity where you need to setup all the machines that would be used to generate the load. Now, however, you can do the same from cloud with Visual Studio Online.
+</span></em></p>
+<p>&nbsp;</p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em><span style="font-size:small"><em>This is a simple project to get you started on Load Testing. This project is already preconfigured with default Load test settings (SampleLoadTest.loadtest) to allow you to run the load test from the cloud. It comes
+ with a Web performance test (S<em>ample<span style="font-size:small"><em>WebTest.webtest) that
+</em></span></em>you will need to update to point it to your App/website that you want to load test. After you've updated the URL you simply need to open up the SampleLoadTest.loadtest file and initiate the Load test run.</em>&nbsp;</span></em></p>
+<p>&nbsp;</p>
+<p><em><span style="font-size:small">Please note that cloud-based load testing&nbsp;is only available in Visual Studio Ultimate 2013 and you will need to connect to your Visual Studio online account to be able to run the load test from the cloud.<br>
+</span></em></p>
+<p>&nbsp;</p>
+<p><em><span style="font-size:small">If you would like to change the load test parameters, you can follow the excellent guide provided here http://msdn.microsoft.com/en-us/library/ee923685(v=vs.110).aspx</span></em></p>
+<p><em><span style="font-size:small"><br>
+</span></em></p>
+<p><span style="font-size:20px; font-weight:bold">Instructions</span></p>
+<p><span style="font-size:20px"><em><span style="font-size:small"><em>1. Download the sample project &amp; l<span style="font-size:20px"><em><span style="font-size:small"><em>oad up the sample project in VS Ultimate 2013</em></span></em></span></em></span></em></span></p>
+<p><span style="font-size:20px"><em><span style="font-size:small"><em>2. From the Solution Explorer, open SampleWebTest.webtest</em></span></em></span></p>
+<p><span style="font-size:20px"><em><span style="font-size:small"><em>3. Select the URL listed in SampleWebTest.webtest file.
+</em></span></em></span></p>
+<p><span style="font-size:20px"><em><span style="font-size:small"><em>4. Go to the properties list and update the property labelled 'Url' to your app's/website's URL.</em></span></em></span></p>
+<p><span style="font-size:20px"><em><span style="font-size:small"><em>5.From the team explorer, please connect to your Visual Studio Online account.<br>
+</em></span></em></span></p>
+<p><span style="font-size:20px"><em><span style="font-size:small"><em>6. Open the SampleLoadTest.loadtest file. From the 'Load Test' menu, select 'Run' -&gt; 'Selected Test'</em></span></em></span></p>
+<p><span style="font-size:20px"><em><span style="font-size:small"><em>6. The Load test from the cloud will now start and show you graphs of how your application is performing during the load test.<br>
+</em></span></em></span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

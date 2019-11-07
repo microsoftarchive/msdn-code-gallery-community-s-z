@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "PieDoughnutCharts" Priority="100">
+	<Title>Collecting Pie Slices</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Collecting Pie Slices</ShortBlurb> 
+	<Content>PieCollected.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+<Keywords>
+    <Keyword>Pie, Collecting</Keyword>
+    <Keyword>Doughnut, Collecting</Keyword>
+  </Keywords>
+	</SampleConfig>
+	
+</SampleConfigs>

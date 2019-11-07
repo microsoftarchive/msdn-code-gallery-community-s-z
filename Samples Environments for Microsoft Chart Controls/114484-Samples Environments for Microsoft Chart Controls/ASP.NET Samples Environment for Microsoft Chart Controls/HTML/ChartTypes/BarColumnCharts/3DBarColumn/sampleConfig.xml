@@ -1,0 +1,26 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "BarColumnCharts">
+  <Title>3D Bar and Column Charts</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>3D Bar and Column Charts</ShortBlurb> 
+  <Content>BarColumn3D.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Clustered series</Keyword>
+    <Keyword>3D, Clustered</Keyword>
+    <Keyword>3D, Column chart</Keyword>
+    <Keyword>3D, Bar chart</Keyword>
+    <Keyword>Chart type, Column 3D</Keyword>
+    <Keyword>Chart type, Bar 3D</Keyword>
+    <Keyword>Column 3D</Keyword>
+    <Keyword>Bar 3D</Keyword>
+  </Keywords>
+</SampleConfig>
+
+
+</SampleConfigs>

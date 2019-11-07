@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=43E4E0C2242C3228EDB219BFA736ACE7" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=922B9DA2F803C16EA0D078F9C1A4D8AF" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Writing JavaScript Tests Using Jasmine Framework</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Writing JavaScript Tests Using Jasmine Framework</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            jQuery, Javascript, Unit Test, Visual Studio 2015, Jasmine
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            jQuery, Javascript, Unit Testing, Performance, Performance testing
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">10/8/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Writing-JavaScript-Tests-2d1f99e9">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>In this post we will see how we can write unit test cases in&nbsp;<a href="http://sibeeshpassion.com/category/JavaScript/" >JavaScript</a>. Here we are going to use a framework called Jasmine to write and test our unit test cases. Jasmine
+ is a behavior driven development framework to test our JavaScript codes. The interesting things about Jasmine framework are, it doesn&rsquo;t even require a DOM, independent on any framework, clean and easy. Here I will show you how we can create and run our
+ JavaScript tests. I am going to use&nbsp;<a href="http://sibeeshpassion.com/category/visual-studio/" >Visual Studio</a>&nbsp;2015 for the development. I hope you will like this article.</p>
+<p>Background</p>
+<p>As a developer, we all writes JavaScript codes for our client side developments. Am I right? It is more important to check whether the codes we have written works well. So for that we developer usually do unit testing, few developers are doing a manual testing
+ to just check whether the functionality is working or not. But most of the MNC&rsquo;s has set of rules to be followed while developing any functionalities, one of them is writing test cases, once the test cases passes, then only you will be allowed to move
+ your codes to other environments. Here I will show you how we can write client side test cases with the help of a framework called Jasmine.</p>
+<p><span>Setting up the project</span></p>
+<p>To get started, please create an empty project in your Visual Studio.</p>
+<div class="wp-caption x_alignnone" id="attachment_11904"><a href="https://code.msdn.microsoft.com/Writing-JavaScript-Tests-2d1f99e9/description/Empty_Project-e1475921231766.png"><img class="size-full x_wp-image-11904" src="https://code.msdn.microsoft.com/Writing-JavaScript-Tests-2d1f99e9/description/Empty_Project-e1475921231766.png" alt="empty_project" width="650" height="507"></a>
+<p class="wp-caption-text">empty_project</p>
+</div>
+<p>Now, we will install&nbsp;<a href="http://sibeeshpassion.com/category/jquery/" >jQuery</a>,&nbsp;<a href="http://sibeeshpassion.com/category/jquery-ui/" >jQueryUI&nbsp;</a>from Nuget package manager.</p>
+<div class="wp-caption x_alignnone" id="attachment_11905"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Nuget_Package_Manager.png"><img class="size-large x_wp-image-11905" src="description/Nuget_Package_Manager-1024x478.png" alt="nuget_package_manager" width="634" height="296"></a>
+<p class="wp-caption-text">nuget_package_manager</p>
+</div>
+<p>We are all set to start our coding now.</p>
+<p><span>Creating page and needed JS file</span></p>
+<p>Next, we are going to create a page as preceding, with two text boxes and needed references.</p>
+<div>
+<div class="syntaxhighlighter xml" id="highlighter_218826">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Writing JavaScript test cases with Jasmine framework - Sibeesh Passion&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;link href=&quot;Content/themes/base/jquery-ui.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;link href=&quot;Content/themes/base/base.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;Scripts/jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;Scripts/jquery-ui-1.12.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;Scripts/Index.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Start Date: &lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;&quot; id=&quot;dtStartDate&quot; /&gt;
+    End Date: &lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;&quot; id=&quot;dtEndDate&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;!DOCTYPE&nbsp;html&gt;&nbsp;
+&lt;html&gt;&nbsp;
+&lt;head&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Writing&nbsp;JavaScript&nbsp;test&nbsp;cases&nbsp;<span class="js__statement">with</span>&nbsp;Jasmine&nbsp;framework&nbsp;-&nbsp;Sibeesh&nbsp;Passion&lt;/title&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;charset=<span class="js__string">&quot;utf-8&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;href=<span class="js__string">&quot;Content/themes/base/jquery-ui.min.css&quot;</span>&nbsp;rel=<span class="js__string">&quot;stylesheet&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;href=<span class="js__string">&quot;Content/themes/base/base.css&quot;</span>&nbsp;rel=<span class="js__string">&quot;stylesheet&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;Scripts/jquery-3.1.1.min.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;Scripts/jquery-ui-1.12.1.min.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;Scripts/Index.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&lt;/head&gt;&nbsp;
+&lt;body&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Start&nbsp;<span class="js__object">Date</span>:&nbsp;&lt;input&nbsp;type=<span class="js__string">&quot;text&quot;</span>&nbsp;name=<span class="js__string">&quot;name&quot;</span>&nbsp;value=<span class="js__string">&quot;&quot;</span>&nbsp;id=<span class="js__string">&quot;dtStartDate&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;<span class="js__object">Date</span>:&nbsp;&lt;input&nbsp;type=<span class="js__string">&quot;text&quot;</span>&nbsp;name=<span class="js__string">&quot;name&quot;</span>&nbsp;value=<span class="js__string">&quot;&quot;</span>&nbsp;id=<span class="js__string">&quot;dtEndDate&quot;</span>&nbsp;/&gt;&nbsp;
+&lt;/body&gt;&nbsp;
+&lt;/html&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p>Now we can start writing our JavaScript codes in the file&nbsp;<em>Index.js</em>. We will start with a document ready function as preceding.</p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_924732">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">$(function () {
+    $(&quot;#dtStartDate&quot;).datepicker();
+    $(&quot;#dtEndDate&quot;).datepicker();
+    $(&quot;#dtEndDate&quot;).on(&quot;change leave&quot;, function () {       
+    });
+});</pre>
+<div class="preview">
+<pre class="js">$(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;#dtStartDate&quot;</span>).datepicker();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;#dtEndDate&quot;</span>).datepicker();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;#dtEndDate&quot;</span>).on(<span class="js__string">&quot;change&nbsp;leave&quot;</span>,&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+<span class="js__brace">}</span>);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p>Shall we create our validation functions? We will be creating a namespace indexPage and functions. You can see the validations below.</p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_785782">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">var indexPage = {};
+indexPage.validationFunctions = (function () {
+    return {
+        getStartDateSelectedValue: function () {
+            return $(&quot;#dtStartDate&quot;).val();
+        },
+        getEndDateSelectedValue: function () {
+            return $(&quot;#dtEndDate&quot;).val();
+        },
+        isNullValue: function (selVal) {
+            if (selVal.trim() == &quot;&quot;) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        },
+        isNullValueWithUIElements: function () {
+            if (indexPage.validationFunctions.isNullValue(indexPage.validationFunctions.getStartDateSelectedValue())
+            &amp;&amp; indexPage.validationFunctions.isNullValue(indexPage.validationFunctions.getEndDateSelectedValue())) {
+                alert(&quot;The values can't be null!.&quot;);
+            }
+        },
+        isEndDateGreaterStart: function () {
+            var startDate = new Date(indexPage.validationFunctions.getStartDateSelectedValue());
+            var endDate = new Date(indexPage.validationFunctions.getEndDateSelectedValue());
+            if (startDate &lt; endDate) {
+                return true;
+            }
+            else {
+                alert(&quot;End date must be greater than start date!.&quot;)
+                return false;
+            }
+        }
+    }
+}(jQuery));</pre>
+<div class="preview">
+<pre class="js"><span class="js__statement">var</span>&nbsp;indexPage&nbsp;=&nbsp;<span class="js__brace">{</span><span class="js__brace">}</span>;&nbsp;
+indexPage.validationFunctions&nbsp;=&nbsp;(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getStartDateSelectedValue:&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;$(<span class="js__string">&quot;#dtStartDate&quot;</span>).val();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getEndDateSelectedValue:&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;$(<span class="js__string">&quot;#dtEndDate&quot;</span>).val();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isNullValue:&nbsp;<span class="js__operator">function</span>&nbsp;(selVal)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(selVal.trim()&nbsp;==&nbsp;<span class="js__string">&quot;&quot;</span>)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;true;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;false;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isNullValueWithUIElements:&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(indexPage.validationFunctions.isNullValue(indexPage.validationFunctions.getStartDateSelectedValue())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;&nbsp;indexPage.validationFunctions.isNullValue(indexPage.validationFunctions.getEndDateSelectedValue()))&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(<span class="js__string">&quot;The&nbsp;values&nbsp;can't&nbsp;be&nbsp;null!.&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isEndDateGreaterStart:&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;startDate&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;<span class="js__object">Date</span>(indexPage.validationFunctions.getStartDateSelectedValue());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;endDate&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;<span class="js__object">Date</span>(indexPage.validationFunctions.getEndDateSelectedValue());&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(startDate&nbsp;&lt;&nbsp;endDate)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;true;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(<span class="js__string">&quot;End&nbsp;date&nbsp;must&nbsp;be&nbsp;greater&nbsp;than&nbsp;start&nbsp;date!.&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;false;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+<span class="js__brace">}</span>(jQuery));</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<p>Hope you are able t understand the codes written. We are wrote some validations like Null value check, end date greater than start date etc&hellip;</p>
+<p>Now please run your application and check whether the validations are working fine.</p>
+<div class="wp-caption x_alignnone" id="attachment_11906"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Null_validation_check.png"><img class="size-large x_wp-image-11906" src="description/Null_validation_check-1024x319.png" alt="null_validation_check" width="634" height="198"></a>
+<p class="wp-caption-text">null_validation_check</p>
+</div>
+<div class="wp-caption x_alignnone" id="attachment_11907"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Date_validation_check.png"><img class="size-large x_wp-image-11907" src="description/Date_validation_check-1024x319.png" alt="date_validation_check" width="634" height="198"></a>
+<p class="wp-caption-text">date_validation_check</p>
+</div>
+<p>Now, here comes the real part.</p>
+<p><span>Setting up Jasmine Framework</span></p>
+<p>To set Jasmine, we will add a new project to our solution.</p>
+<div class="wp-caption x_alignnone" id="attachment_11908"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Add_new_project.png"><img class="size-large x_wp-image-11908" src="description/Add_new_project-1024x709.png" alt="add_new_project" width="634" height="439"></a>
+<p class="wp-caption-text">add_new_project</p>
+</div>
+<p>Now install Jasmine from Nuget Package manager.</p>
+<div class="wp-caption x_alignnone" id="attachment_11909"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Jasmine_Nuget_Package.png"><img class="size-large x_wp-image-11909" src="description/Jasmine_Nuget_Package-1024x570.png" alt="jasmine_nuget_package" width="634" height="353"></a>
+<p class="wp-caption-text">jasmine_nuget_package</p>
+</div>
+<p>Once you are done, the required files would be added to your project. We will be discussing about Jasmine once everything is set. So no worries.</p>
+<p>Now please add a new HTML file on your Jasmine project, this is the page where we can see the test cases in actions, and add all the references as follows.</p>
+<div>
+<div class="syntaxhighlighter xml" id="highlighter_328025">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">&lt;!DOCTYPE html&gt;
+ 
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;Jasmine Spec Runner - Sibeesh Passion&lt;/title&gt;
+    &lt;link href=&quot;content/jasmine/jasmine.css&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;script src=&quot;http://localhost:12387/Scripts/jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;http://localhost:12387/Scripts/jquery-ui-1.12.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts/jasmine/jasmine.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts/jasmine/jasmine-html.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts/jasmine/console.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts/jasmine/boot.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;scripts/indextests.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;http://localhost:12387/Scripts/Index.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div class="preview">
+<pre class="js">&lt;!DOCTYPE&nbsp;html&gt;&nbsp;
+&nbsp;&nbsp;
+&lt;html&nbsp;lang=<span class="js__string">&quot;en&quot;</span>&nbsp;xmlns=<span class="js__string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;&nbsp;
+&lt;head&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;charset=<span class="js__string">&quot;utf-8&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Jasmine&nbsp;Spec&nbsp;Runner&nbsp;-&nbsp;Sibeesh&nbsp;Passion&lt;/title&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;href=<span class="js__string">&quot;content/jasmine/jasmine.css&quot;</span>&nbsp;rel=<span class="js__string">&quot;stylesheet&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;http://localhost:12387/Scripts/jquery-3.1.1.min.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;http://localhost:12387/Scripts/jquery-ui-1.12.1.min.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;scripts/jasmine/jasmine.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;scripts/jasmine/jasmine-html.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;scripts/jasmine/console.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;scripts/jasmine/boot.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;scripts/indextests.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=<span class="js__string">&quot;http://localhost:12387/Scripts/Index.js&quot;</span>&gt;&lt;/script&gt;&nbsp;
+&lt;/head&gt;&nbsp;
+&lt;body&gt;&nbsp;
+&nbsp;&nbsp;
+&lt;/body&gt;&nbsp;
+&lt;/html&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<blockquote>
+<p>Please do not forget to include the js files where we actually written the validations, jquery, jqueryui (if needed). Here indextests.js is the file where we are going to write the test cases.</p>
+</blockquote>
+<p>Normally this page is called as Spec Runner, Now you may be thinking what is a Spec? Before going further, there are some terms you must be aware of, there are listed below.</p>
+<li>Suites
+<p>A suit is the starting point of a Jasmine test cases, it actually calls the global jasmine function&nbsp;<em>describe</em>. It can have two parameters, a string value which describes the suit, and a function which implements the suit.</p>
+</li><li>Spec
+<p>Like suites, a spec starts with a string which can be the title of the suit and a function where we write the tests. A spec can contain one or more expectation that test the state of our code.</p>
+</li><li>Expectation
+<p>Value of an expectation is either true or false, an expectation starts with the function&nbsp;<em>expect</em>. It takes a value and call the actual one.</p>
+<p>You can always read more&nbsp;<a href="http://jasmine.github.io/2.0/introduction.html" >here</a>. Now please run your SpecRunner.html page. If everything is fine you can see a page as below.</p>
+<div class="wp-caption x_alignnone" id="attachment_11910"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Jasmine_Spec_Runner_Page.png"><img class="size-large x_wp-image-11910" src="description/Jasmine_Spec_Runner_Page-1024x223.png" alt="jasmine_spec_runner_page" width="634" height="138"></a>
+<p class="wp-caption-text">jasmine_spec_runner_page</p>
+</div>
+<p>So are you all set? Shall we go and write our test cases? Please go to your&nbsp;<em>IndexTest.js</em>&nbsp;file and create a suit and spec as preceding.</p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_7431">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">describe(&quot;Includes validations for index page&quot;, function () {
+    var indexPage;
+    beforeEach(function () {
+        indexPage = window.indexPage.validationFunctions;
+    });
+ 
+    it(&quot;Check for null values&quot;, function () {
+        // We are going to pass &quot;&quot; (null) value to the function
+        var retVal = indexPage.isNullValue(&quot;&quot;);
+        expect(retVal).toBeTruthy();
+    });
+ 
+});
+</pre>
+<div class="preview">
+<pre class="js">describe(<span class="js__string">&quot;Includes&nbsp;validations&nbsp;for&nbsp;index&nbsp;page&quot;</span>,&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;indexPage;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;beforeEach(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indexPage&nbsp;=&nbsp;window.indexPage.validationFunctions;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;it(<span class="js__string">&quot;Check&nbsp;for&nbsp;null&nbsp;values&quot;</span>,&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;We&nbsp;are&nbsp;going&nbsp;to&nbsp;pass&nbsp;&quot;&quot;&nbsp;(null)&nbsp;value&nbsp;to&nbsp;the&nbsp;function</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;retVal&nbsp;=&nbsp;indexPage.isNullValue(<span class="js__string">&quot;&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expect(retVal).toBeTruthy();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;
+<span class="js__brace">}</span>);&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+</div>
+<p>Here the expectation is true and we give toBeTruthy(), now lets go and find whether the test is passed or not. Please run the SpecRunner.html page again.</p>
+<div class="wp-caption x_alignnone" id="attachment_11911"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Test_Jasmine_Specs.png"><img class="size-large x_wp-image-11911" src="description/Test_Jasmine_Specs-1024x199.png" alt="test_jasmine_specs" width="634" height="123"></a>
+<p class="wp-caption-text">test_jasmine_specs</p>
+</div>
+<p>Now we will write test case for our function&nbsp;<em>isEndDateGreaterStart</em>, if you have noticed the function<em>isEndDateGreaterStart</em>, you can see that there are dependencies (UI elements). Inside of the function, we are getting the values from
+ the UI elements.</p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_550587">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">var startDate = new Date(indexPage.validationFunctions.getStartDateSelectedValue());
+var endDate = new Date(indexPage.validationFunctions.getEndDateSelectedValue());
+</pre>
+<div class="preview">
+<pre class="js"><span class="js__statement">var</span>&nbsp;startDate&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;<span class="js__object">Date</span>(indexPage.validationFunctions.getStartDateSelectedValue());&nbsp;
+<span class="js__statement">var</span>&nbsp;endDate&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;<span class="js__object">Date</span>(indexPage.validationFunctions.getEndDateSelectedValue());&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+</div>
+<p>So in this case, we need to mock this values. It is known as &lsquo;Spy&rsquo; in Jasmine. We can use a function called<em>SpyOn</em>&nbsp;for this.</p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_925356">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">it(&quot;Spy call for datepicker date validation&quot;, function () {
+    //Start date as 2015-03-25
+    spyOn(indexPage, &quot;getStartDateSelectedValue&quot;).and.returnValue(&quot;2015-03-25&quot;);
+    //End date as 2015-03-24
+    spyOn(indexPage, &quot;getEndDateSelectedValue&quot;).and.returnValue(&quot;2015-03-24&quot;);
+    var retVal = indexPage.isEndDateGreaterStart();
+    expect(retVal).toBeFalsy();
+});
+</pre>
+<div class="preview">
+<pre class="js">it(<span class="js__string">&quot;Spy&nbsp;call&nbsp;for&nbsp;datepicker&nbsp;date&nbsp;validation&quot;</span>,&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Start&nbsp;date&nbsp;as&nbsp;2015-03-25</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;spyOn(indexPage,&nbsp;<span class="js__string">&quot;getStartDateSelectedValue&quot;</span>).and.returnValue(<span class="js__string">&quot;2015-03-25&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//End&nbsp;date&nbsp;as&nbsp;2015-03-24</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;spyOn(indexPage,&nbsp;<span class="js__string">&quot;getEndDateSelectedValue&quot;</span>).and.returnValue(<span class="js__string">&quot;2015-03-24&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;retVal&nbsp;=&nbsp;indexPage.isEndDateGreaterStart();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;expect(retVal).toBeFalsy();&nbsp;
+<span class="js__brace">}</span>);&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+</div>
+<p>Here we are giving start date as 2015-03-25 and end date as 2015-03-24 and we know 2015-03-25 &lt; 2015-03-24 is false, so here we are giving expectation as false (toBeFalsy()). Now you are getting an alert as follows right?<a href="https://code.msdn.microsoft.com/Writing-JavaScript-Tests-2d1f99e9/description/Alert_in_SpyOn_Jasmine-e1475924905278.png"><img class="size-full x_wp-image-11912" src="https://code.msdn.microsoft.com/Writing-JavaScript-Tests-2d1f99e9/description/Alert_in_SpyOn_Jasmine-e1475924905278.png" alt="alert_in_spyon_jasmine" width="766" height="571"></a>alert_in_spyon_jasmine[/caption]</p>
+<p>But in testing framework we don&rsquo;t need any alerts right? To get rid of this, you must create a spy for window.alert function and add it to the&nbsp;<em>beforeEach</em>&nbsp;so that it can be used for each specs. You can do that as follows.</p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_746611">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">window.alert = jasmine.createSpy(&quot;alert&quot;).and.callFake(function () { });
+</pre>
+<div class="preview">
+<pre class="js">window.alert&nbsp;=&nbsp;jasmine.createSpy(<span class="js__string">&quot;alert&quot;</span>).and.callFake(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__brace">}</span>);&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+</div>
+<p>Once after you add this code, alert message won&rsquo;t be thrown. Now please add an another spec with true values (Start date &ndash; 2015-03-25, End date &ndash; 2015-03-26), so that it will return true.</p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_588996">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">it(&quot;Spy call for datepicker date validation toBeTruthy&quot;, function () {
+      //Start date as 2015-03-25
+      spyOn(indexPage, &quot;getStartDateSelectedValue&quot;).and.returnValue(&quot;2015-03-25&quot;);
+      //End date as 2015-03-26
+      spyOn(indexPage, &quot;getEndDateSelectedValue&quot;).and.returnValue(&quot;2015-03-26&quot;);
+      var retVal = indexPage.isEndDateGreaterStart();
+      expect(retVal).toBeTruthy();
+  });
+</pre>
+<div class="preview">
+<pre class="js">it(<span class="js__string">&quot;Spy&nbsp;call&nbsp;for&nbsp;datepicker&nbsp;date&nbsp;validation&nbsp;toBeTruthy&quot;</span>,&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//Start&nbsp;date&nbsp;as&nbsp;2015-03-25</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spyOn(indexPage,&nbsp;<span class="js__string">&quot;getStartDateSelectedValue&quot;</span>).and.returnValue(<span class="js__string">&quot;2015-03-25&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//End&nbsp;date&nbsp;as&nbsp;2015-03-26</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spyOn(indexPage,&nbsp;<span class="js__string">&quot;getEndDateSelectedValue&quot;</span>).and.returnValue(<span class="js__string">&quot;2015-03-26&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;retVal&nbsp;=&nbsp;indexPage.isEndDateGreaterStart();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expect(retVal).toBeTruthy();&nbsp;
+&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+</div>
+<p>Now you can see all of your specs are passed.</p>
+<div class="wp-caption x_alignnone" id="attachment_11913"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Run_all_specs_in_Jasmine.png"><img class="size-large x_wp-image-11913" src="description/Run_all_specs_in_Jasmine-1024x217.png" alt="run_all_specs_in_jasmine" width="634" height="134"></a>
+<p class="wp-caption-text">run_all_specs_in_jasmine</p>
+</div>
+<p>Happy coding!.</p>
+</li>
+</div>
+
+
+    </div>
+</body>
+</html>

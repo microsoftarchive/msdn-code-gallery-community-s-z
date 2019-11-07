@@ -1,0 +1,47 @@
+....
+
+/// <summary>
+/// Handles the CustomizeLegend event of the Chart1 control.
+/// </summary>
+/// <param name="sender">The source of the event.</param>
+/// <param name="e">The <see cref="System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs"/> instance containing the event data.</param>
+protected void Chart1_CustomizeLegend(object sender, CustomizeLegendEventArgs e)
+{
+    // Loop through all default legend items
+    if (e.LegendName == "Default")
+    {
+        foreach (LegendItem item in e.LegendItems)
+        {
+            // Check item series name
+            if (item.SeriesName == SeriesNameList.SelectedItem.Text)
+            {
+                // Remove the shadow effect
+                if (CustomizationList.SelectedItem.Text == "Set Shadow")
+                {
+                    item.ShadowColor = Color.FromArgb(128, 64, 64, 64);
+                    item.ShadowOffset = 2;
+                }
+                // Change item style
+                else if (CustomizationList.SelectedItem.Text == "Set Line Style")
+                {
+                    item.ImageStyle = LegendImageStyle.Line;
+                    item.BorderWidth = 2;
+                    item.BorderColor = Color.Black;
+                }
+                // Change item text
+                else if (CustomizationList.SelectedItem.Text == "Change Text")
+                {
+                    item.Cells[1].Text = "My Name";
+                }
+                // Change item color
+                else if (CustomizationList.SelectedItem.Text == "Change Color")
+                {
+                    item.Color = Color.Green;
+                }
+            }
+        }
+
+    }
+}
+
+....

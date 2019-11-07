@@ -1,0 +1,64 @@
+Imports System.Data.OleDb
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub PopulateData() 
+   ' Prepare data base connection and query strings
+   Dim fileNameString As String = Me.MapPath(".")
+   fileNameString += "..\..\..\..\data\chartdata.mdb"
+   Dim myConnectionString As String = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString
+   Dim mySelectQuery As String = "SELECT * FROM DETAILEDSALES ORDER BY SaleDate"
+   
+   ' Open data base connection
+   Dim myConnection As New OleDbConnection(myConnectionString)
+   Dim myCommand As New OleDbCommand(mySelectQuery, myConnection)
+   myCommand.Connection.Open()
+   
+   ' Create a database reader	
+   Dim myReader As OleDbDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection)
+   
+   ' Data bind to the reader
+   Chart1.Series("Sales").Points.DataBindXY(myReader, "SaleDate", myReader, "Net")
+   
+   ' close the reader and the connection
+   myReader.Close()
+   myConnection.Close()
+   
+   ' Group series data points by interval.
+   Dim formula As String = "AVE, X:CENTER"
+   
+    If GroupingTypeList.SelectedItem.Text = "Week" Then
+        Chart1.DataManipulator.Group(formula, 1, IntervalType.Weeks, _
+            "Sales", "Grouped Sales")
+    Else
+        If GroupingTypeList.SelectedItem.Text = "2 Weeks" Then
+            Chart1.DataManipulator.Group(formula, 2, IntervalType.Weeks, _
+                "Sales", "Grouped Sales")
+        Else
+            If GroupingTypeList.SelectedItem.Text = "Month" Then
+                Chart1.DataManipulator.Group(formula, 1, IntervalType.Months, _
+                    "Sales", "Grouped Sales")
+            End If
+        End If
+    End If
+   
+   ' Change chart type of the grouped series
+   If GroupingFormulaList.SelectedItem.Value = "HiLoOpCl" Then
+      Chart1.Series("Grouped Sales").ChartType = SeriesChartType.Stock
+   Else
+      If GroupingFormulaList.SelectedItem.Value = "HiLo" Then
+         Chart1.Series("Grouped Sales").ChartType = SeriesChartType.SplineRange
+      Else
+         Chart1.Series("Grouped Sales").ChartType = SeriesChartType.Column
+      End If
+   End If
+End Sub 'PopulateData
+ 
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   PopulateData()
+End Sub 'Page_Load
+
+Private Sub List_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles List.SelectedIndexChanged
+   PopulateData()
+End Sub 'List_SelectedIndexChanged
+...

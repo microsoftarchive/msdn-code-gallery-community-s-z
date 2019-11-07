@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://assets.onestore.ms/cdnfiles/onestorerolling-1612-12000/shell/v3/scss/shellnoresponsive.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:sprite;/Areas/Epx/Themes/Windows/Content:0&amp;amp;v=5A8F2C7924508E93B220C779E83AA378" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Areas/Epx/Themes/Windows/Content/UhfHeader.css?v=636183226100754713" data-do-not-move="true" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:sprite,0:Footer,1:ImageSprite,2:SelectLocaleFromPopUp;/Areas/Epx/Themes/Windows/Content:0,/Areas/Epx/Themes/WindowsApps/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;v=BD7685882DB97CEEAF714E22F6547CFE" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Areas/Epx/Themes/Windows/Content/UhfFooter.css?v=636183226100754713" data-do-not-move="true" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SSRS RDLC report How To: Report, Processing Subreport, Drillthrough report.</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/83cbd0d8-276a-4dec-af1b-32267c5b00f7Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/windowsapps/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/windowsapps/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SSRS RDLC report How To: Report, Processing Subreport, Drillthrough report.</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            SSRS, RDLC, System.Data.Com<wbr />mon, SQLiteFactory, DbProviderFacto<wbr />ries, Processing Subreport, Drillthrough report
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            System.Data.Com<wbr />mon, SQLiteFactory, Processing Subreport, Drillthrough report, SSRS RDLC
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud, Phone, Data, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/14/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="background-color:#ffff00"><strong>Working template (you will not find here detail instruction how to build rdlc file).</strong></span></p>
+<p>SSRS RDLC reports How To: Report, Processing Subreport, Drillthrough report.</p>
+<p>How to<strong> open rdlc</strong> report with - report viewer.</p>
+<p>How to manage <strong>multiple </strong>subreports (see code)</p>
+<p>How to <strong>processing subrepor</strong>t.</p>
+<p>How to drill<strong> through report</strong>.&nbsp;&nbsp;</p>
+<p>How&nbsp;to&nbsp;manage <strong>multiple </strong><strong>drillthrough report</strong>&nbsp; (see code)</p>
+<p>How to&nbsp;<strong><a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.Data.Common.aspx"  title="Auto generated link to System.Data.Common">System.Data.Common</a></strong></p>
+<p>Completely working web application - please see&nbsp;<strong>More Information</strong><strong>&nbsp;</strong>on the bottom<strong>&nbsp;(In order to use the SQLiteFactory and have the SQLite data provider enumerated in the DbProviderFactories methods)</strong></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>RDLC - design view&nbsp;</p>
+<p><img id="166769" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/166769/1/MainRdlcReport.PNG" alt="" width="700" height="270"></p>
+<p><strong>Report on web page</strong></p>
+<p><img id="166770" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/166770/1/ReportItself.PNG" alt="" width="700" height="370"></p>
+<p>&nbsp;</p>
+<p><strong>Drillthrough repor</strong></p>
+<p>&nbsp;</p>
+<p><img id="166771" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/166771/1/Drill.PNG" alt="" width="350" height="270"></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">Imports <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/Microsoft.Reporting.WebForms.aspx"  title="Auto generated link to Microsoft.Reporting.WebForms">Microsoft.Reporting.WebForms</a>
+Imports <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.Data.Common.aspx"  title="Auto generated link to System.Data.Common">System.Data.Common</a>
+
+Public Class Report
+    Inherits <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.Web.UI.Page.aspx"  title="Auto generated link to System.Web.UI.Page">System.Web.UI.Page</a>
+
+
+
+    Private Const strCustomerID As String = &quot;SELECT &quot;&quot;CustomerID&quot;&quot;, &quot;&quot;CompanyName&quot;&quot;, &quot;&quot;ContactName&quot;&quot;, &quot;&quot;ContactTitle&quot;&quot; FROM  `Customers` &quot;
+    Private Const strCustomerAddress As String = &quot;SELECT &quot;&quot;Address&quot;&quot;, &quot;&quot;City&quot;&quot;, &quot;&quot;Region&quot;&quot;, &quot;&quot;PostalCode&quot;&quot;, &quot;&quot;Country&quot;&quot;, &quot;&quot;Phone&quot;&quot;, &quot;&quot;Fax&quot;&quot; FROM  `Customers` &quot;
+
+
+    Private Const strOrderID As String = &quot;SELECT &quot;&quot;OrderID&quot;&quot;, &quot;&quot;CustomerID&quot;&quot;, &quot;&quot;EmployeeID&quot;&quot;, Date(&quot;&quot;OrderDate&quot;&quot;) AS &quot;&quot;OrderDate&quot;&quot;,Date(&quot;&quot;RequiredDate&quot;&quot;) AS &quot;&quot;RequiredDate&quot;&quot; , DATE(&quot;&quot;ShippedDate&quot;&quot;) AS &quot;&quot;ShippedDate&quot;&quot;, &quot;&quot;ShipVia&quot;&quot;, &quot;&quot;Freight&quot;&quot;, &quot;&quot;ShipName&quot;&quot;, &quot;&quot;ShipAddress&quot;&quot;, &quot;&quot;ShipCity&quot;&quot;, &quot;&quot;ShipRegion&quot;&quot;, &quot;&quot;ShipPostalCode&quot;&quot;, &quot;&quot;ShipCountry&quot;&quot; FROM `Orders`  &quot;
+
+    Private strConnection = &quot;Data Source=&quot; &#43; AppDomain.CurrentDomain.BaseDirectory.ToString() &#43; &quot;Northwind.sl3&quot;
+
+    Private strError As String = &quot;&quot;
+    Private dc As New DataCommon
+    Private cmd As DbCommand
+
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles Me.Load
+
+        If Not Page.IsPostBack Then
+            If InitDataBase() Then
+                LoadReport()
+            Else
+                Alert(&quot;Data Base does not Exist. \nPlease verify Name/location! \nOr install SQLite provider! &quot;)
+            End If
+
+        End If
+
+    End Sub
+
+    'Private Const strMaster = &quot;SELECT * FROM sqlite_master&quot;
+    'For Debug purpose added SHEMA - please make sure that you use existed database ....
+    'Dim dtMaster As DataTable = db.FindDataSet(New StringBuilder(strMaster), strConnection).Tables(0)
+    Protected Function InitDataBase() As Boolean
+        Try
+            dc = New DataCommon
+            dc.connectionString = strConnection
+            cmd = dc.commandDB
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    'How To Report itself - http://rohit-developer.blogspot.com/2015/02/sub-report-in-rdlc-report-viewer.html
+
+    'http://stackoverflow.com/questions/456982/microsoft-reporting-setting-subreport-parameters-in-code
+    'https://blogs.msdn.microsoft.com/sqlforum/2011/01/02/walkthrough-add-a-subreport-in-local-report-in-reportviewer/
+
+    'How to Run Subreport
+    'https://msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.localreport.subreportprocessing.aspx?cs-save-lang=1&amp;cs-lang=vb#code-snippet-1
+
+    Private Sub LoadReport()
+
+        InitDataBase()
+
+        cmd.CommandText = strCustomerID
+        Dim dtCustomer As DataTable = dc.GetDataSet(cmd).Tables(0)
+
+        Dim warnings As <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/Microsoft.Reporting.WebForms.Warning.aspx"  title="Auto generated link to Microsoft.Reporting.WebForms.Warning">Microsoft.Reporting.WebForms.Warning</a>() = Nothing
+        Dim streamIds As String() = Nothing
+        Dim mimeType As String = String.Empty
+        Dim encoding As String = String.Empty
+        Dim extension As String = String.Empty
+
+        ' ActivityCodeDescriptions.rdlc
+        Dim reportPath As String = AppDomain.CurrentDomain.BaseDirectory.ToString() &#43; &quot;Rdls\ReportCustomers.rdlc&quot;
+
+        '//Create MS Report object
+        rv.Reset()
+        rv.LocalReport.ReportPath = reportPath
+        rv.ProcessingMode = ProcessingMode.Local
+        rv.LocalReport.SetBasePermissionsForSandboxAppDomain(New <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.Security.PermissionSet.aspx"  title="Auto generated link to System.Security.PermissionSet">System.Security.PermissionSet</a>(System.Security.Permissions.PermissionState.Unrestricted))
+
+        rv.LocalReport.DataSources.Clear()   ' MUST CLEAR DATA 
+
+        rv.LocalReport.DataSources.Add(New ReportDataSource(&quot;dtCustomer&quot;, dtCustomer))
+
+        Dim param As List(Of ReportParameter) = New List(Of ReportParameter)
+        param.Add(New ReportParameter(&quot;pNameReport&quot;, &quot;Customer Report&quot;))
+        rv.LocalReport.SetParameters(param)
+
+        rv.AsyncRendering = True
+        rv.DataBind()
+
+        'Process subreport(s) which you include in main report (from ToolBox)
+        AddHandler rv.LocalReport.SubreportProcessing, AddressOf SubreportProcessingEventHandler
+
+        rv.LocalReport.Refresh()
+        rv.Visible = True
+
+    End Sub
+
+    'Process subreport(s) which you include in main report (from ToolBox)
+    Public Sub SubreportProcessingEventHandler(ByVal sender As Object, ByVal e As SubreportProcessingEventArgs)
+
+        Dim infoParam As ReportParameterInfoCollection = e.Parameters()
+        Dim strCaseId As String = infoParam.First.Values(0).ToString()
+
+
+        Select Case e.ReportPath
+            Case &quot;subreport1&quot;    '  just example - how to manage multiply subreports ...
+
+            Case &quot;ReportCustomersAddress&quot;
+                cmd.CommandText = strCustomerAddress &#43; &quot; where &quot;&quot;CustomerID&quot;&quot; = '&quot; &#43; strCaseId &#43; &quot;'&quot;
+                Dim dtCustomersAddress As DataTable = dc.GetDataSet(cmd).Tables(0)
+                e.DataSources.Add(New ReportDataSource(&quot;dtCustomersAddress&quot;, dtCustomersAddress))
+
+            Case &quot;subreport3&quot;
+        End Select
+
+    End Sub
+
+
+
+
+
+    Protected Sub Alert(ByVal message As String)
+
+        Dim sb As New <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.Text.StringBuilder.aspx"  title="Auto generated link to System.Text.StringBuilder">System.Text.StringBuilder</a>()
+        sb.Append(&quot;&lt;script type = 'text/javascript'&gt;&quot;)
+        sb.Append(&quot;window.onload=function(){&quot;)
+        sb.Append(&quot;alert('&quot;)
+        sb.Append(message)
+        sb.Append(&quot;')};&quot;)
+        sb.Append(&quot;&lt;/script&gt;&quot;)
+
+        ClientScript.RegisterClientScriptBlock(Me.GetType(), &quot;alert&quot;, sb.ToString())
+    End Sub
+
+    'https://msdn.microsoft.com/en-us/library/dn154769.aspx
+    Protected Sub rv_Drillthrough(sender As Object, e As DrillthroughEventArgs) Handles rv.Drillthrough
+        'Get the instance of the Target report.
+
+
+        Select Case e.ReportPath
+            Case &quot;subreport1&quot;    '  just example - how to manage multiply subreports ...
+
+            Case &quot;ReportOrder&quot;
+                Dim report As LocalReport = e.Report
+                Dim list As IList(Of ReportParameter) = report.OriginalParametersToDrillthrough
+                Dim strCaseId As String = list.Item(0).Values(0).ToString
+                InitDataBase()
+                cmd.CommandText = strOrderID &#43; &quot; where &quot;&quot;CustomerID&quot;&quot; = '&quot; &#43; strCaseId &#43; &quot;'&quot;
+                Dim dtOrders As DataTable = dc.GetDataSet(cmd).Tables(0)
+                report.DataSources.Add(New ReportDataSource(&quot;dtOrders&quot;, dtOrders))
+
+            Case &quot;subreport3&quot;
+        End Select
+
+
+    End Sub
+
+    Protected Sub btnMainReport_Click(sender As Object, e As EventArgs) Handles btnMainReport.Click
+        LoadReport()
+    End Sub
+End Class</pre>
+<div class="preview">
+<pre class="csharp">Imports&nbsp;Microsoft.Reporting.WebForms&nbsp;
+Imports&nbsp;System.Data.Common&nbsp;
+&nbsp;
+Public&nbsp;Class&nbsp;Report&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Inherits&nbsp;System.Web.UI.Page&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Const&nbsp;strCustomerID&nbsp;As&nbsp;String&nbsp;=&nbsp;<span class="cs__string">&quot;SELECT&nbsp;&quot;</span><span class="cs__string">&quot;CustomerID&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;CompanyName&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ContactName&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ContactTitle&quot;</span><span class="cs__string">&quot;&nbsp;FROM&nbsp;&nbsp;`Customers`&nbsp;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Const&nbsp;strCustomerAddress&nbsp;As&nbsp;String&nbsp;=&nbsp;<span class="cs__string">&quot;SELECT&nbsp;&quot;</span><span class="cs__string">&quot;Address&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;City&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;Region&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;PostalCode&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;Country&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;Phone&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;Fax&quot;</span><span class="cs__string">&quot;&nbsp;FROM&nbsp;&nbsp;`Customers`&nbsp;&quot;</span>&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Const&nbsp;strOrderID&nbsp;As&nbsp;String&nbsp;=&nbsp;<span class="cs__string">&quot;SELECT&nbsp;&quot;</span><span class="cs__string">&quot;OrderID&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;CustomerID&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;EmployeeID&quot;</span><span class="cs__string">&quot;,&nbsp;Date(&quot;</span><span class="cs__string">&quot;OrderDate&quot;</span><span class="cs__string">&quot;)&nbsp;AS&nbsp;&quot;</span><span class="cs__string">&quot;OrderDate&quot;</span><span class="cs__string">&quot;,Date(&quot;</span><span class="cs__string">&quot;RequiredDate&quot;</span><span class="cs__string">&quot;)&nbsp;AS&nbsp;&quot;</span><span class="cs__string">&quot;RequiredDate&quot;</span><span class="cs__string">&quot;&nbsp;,&nbsp;DATE(&quot;</span><span class="cs__string">&quot;ShippedDate&quot;</span><span class="cs__string">&quot;)&nbsp;AS&nbsp;&quot;</span><span class="cs__string">&quot;ShippedDate&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ShipVia&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;Freight&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ShipName&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ShipAddress&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ShipCity&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ShipRegion&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ShipPostalCode&quot;</span><span class="cs__string">&quot;,&nbsp;&quot;</span><span class="cs__string">&quot;ShipCountry&quot;</span><span class="cs__string">&quot;&nbsp;FROM&nbsp;`Orders`&nbsp;&nbsp;&quot;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;strConnection&nbsp;=&nbsp;<span class="cs__string">&quot;Data&nbsp;Source=&quot;</span>&nbsp;&#43;&nbsp;AppDomain.CurrentDomain.BaseDirectory.ToString()&nbsp;&#43;&nbsp;<span class="cs__string">&quot;Northwind.sl3&quot;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;strError&nbsp;As&nbsp;String&nbsp;=&nbsp;<span class="cs__string">&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;dc&nbsp;As&nbsp;New&nbsp;DataCommon&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;cmd&nbsp;As&nbsp;DbCommand&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Protected&nbsp;Sub&nbsp;Page_Load(ByVal&nbsp;sender&nbsp;As&nbsp;Object,&nbsp;ByVal&nbsp;e&nbsp;As&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;Handles&nbsp;Me.Load&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;Not&nbsp;Page.IsPostBack&nbsp;Then&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;InitDataBase()&nbsp;Then&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LoadReport()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Else&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alert(<span class="cs__string">&quot;Data&nbsp;Base&nbsp;does&nbsp;not&nbsp;Exist.&nbsp;\nPlease&nbsp;verify&nbsp;Name/location!&nbsp;\nOr&nbsp;install&nbsp;SQLite&nbsp;provider!&nbsp;&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;If&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;If&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Sub&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'Private&nbsp;Const&nbsp;strMaster&nbsp;=&nbsp;<span class="cs__string">&quot;SELECT&nbsp;*&nbsp;FROM&nbsp;sqlite_master&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'For&nbsp;Debug&nbsp;purpose&nbsp;added&nbsp;SHEMA&nbsp;-&nbsp;please&nbsp;make&nbsp;sure&nbsp;that&nbsp;you&nbsp;use&nbsp;existed&nbsp;database&nbsp;....&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'Dim&nbsp;dtMaster&nbsp;As&nbsp;DataTable&nbsp;=&nbsp;db.FindDataSet(New&nbsp;StringBuilder(strMaster),&nbsp;strConnection).Tables(<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Protected&nbsp;Function&nbsp;InitDataBase()&nbsp;As&nbsp;Boolean&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Try&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dc&nbsp;=&nbsp;New&nbsp;DataCommon&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dc.connectionString&nbsp;=&nbsp;strConnection&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cmd&nbsp;=&nbsp;dc.commandDB&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;True&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Catch&nbsp;ex&nbsp;As&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;False&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Try&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Function&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'How&nbsp;To&nbsp;Report&nbsp;itself&nbsp;-&nbsp;http:<span class="cs__com">//rohit-developer.blogspot.com/2015/02/sub-report-in-rdlc-report-viewer.html</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'http:<span class="cs__com">//stackoverflow.com/questions/456982/microsoft-reporting-setting-subreport-parameters-in-code</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'https:<span class="cs__com">//blogs.msdn.microsoft.com/sqlforum/2011/01/02/walkthrough-add-a-subreport-in-local-report-in-reportviewer/</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'How&nbsp;to&nbsp;Run&nbsp;Subreport&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'https:<span class="cs__com">//msdn.microsoft.com/en-us/library/microsoft.reporting.webforms.localreport.subreportprocessing.aspx?cs-save-lang=1&amp;cs-lang=vb#code-snippet-1</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Sub&nbsp;LoadReport()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitDataBase()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strCustomerID&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;dtCustomer&nbsp;As&nbsp;DataTable&nbsp;=&nbsp;dc.GetDataSet(cmd).Tables(<span class="cs__number">0</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;warnings&nbsp;As&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/Microsoft.Reporting.WebForms.Warning.aspx"  title="Auto generated link to Microsoft.Reporting.WebForms.Warning">Microsoft.Reporting.WebForms.Warning</a>()&nbsp;=&nbsp;Nothing&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;streamIds&nbsp;As&nbsp;String()&nbsp;=&nbsp;Nothing&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;mimeType&nbsp;As&nbsp;String&nbsp;=&nbsp;String.Empty&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;encoding&nbsp;As&nbsp;String&nbsp;=&nbsp;String.Empty&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;extension&nbsp;As&nbsp;String&nbsp;=&nbsp;String.Empty&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'&nbsp;ActivityCodeDescriptions.rdlc&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;reportPath&nbsp;As&nbsp;String&nbsp;=&nbsp;AppDomain.CurrentDomain.BaseDirectory.ToString()&nbsp;&#43;&nbsp;<span class="cs__string">&quot;Rdls\ReportCustomers.rdlc&quot;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'<span class="cs__com">//Create&nbsp;MS&nbsp;Report&nbsp;object</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.Reset()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.LocalReport.ReportPath&nbsp;=&nbsp;reportPath&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.ProcessingMode&nbsp;=&nbsp;ProcessingMode.Local&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.LocalReport.SetBasePermissionsForSandboxAppDomain(New&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.Security.PermissionSet.aspx"  title="Auto generated link to System.Security.PermissionSet">System.Security.PermissionSet</a>(System.Security.Permissions.PermissionState.Unrestricted))&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.LocalReport.DataSources.Clear()&nbsp;&nbsp;&nbsp;'&nbsp;MUST&nbsp;CLEAR&nbsp;DATA&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.LocalReport.DataSources.Add(New&nbsp;ReportDataSource(<span class="cs__string">&quot;dtCustomer&quot;</span>,&nbsp;dtCustomer))&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;param&nbsp;As&nbsp;List(Of&nbsp;ReportParameter)&nbsp;=&nbsp;New&nbsp;List(Of&nbsp;ReportParameter)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param.Add(New&nbsp;ReportParameter(<span class="cs__string">&quot;pNameReport&quot;</span>,&nbsp;<span class="cs__string">&quot;Customer&nbsp;Report&quot;</span>))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.LocalReport.SetParameters(param)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.AsyncRendering&nbsp;=&nbsp;True&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.DataBind()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Process&nbsp;subreport(s)&nbsp;which&nbsp;you&nbsp;include&nbsp;<span class="cs__keyword">in</span>&nbsp;main&nbsp;report&nbsp;(from&nbsp;ToolBox)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddHandler&nbsp;rv.LocalReport.SubreportProcessing,&nbsp;AddressOf&nbsp;SubreportProcessingEventHandler&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.LocalReport.Refresh()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rv.Visible&nbsp;=&nbsp;True&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Sub&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'Process&nbsp;subreport(s)&nbsp;which&nbsp;you&nbsp;include&nbsp;<span class="cs__keyword">in</span>&nbsp;main&nbsp;report&nbsp;(from&nbsp;ToolBox)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Public&nbsp;Sub&nbsp;SubreportProcessingEventHandler(ByVal&nbsp;sender&nbsp;As&nbsp;Object,&nbsp;ByVal&nbsp;e&nbsp;As&nbsp;SubreportProcessingEventArgs)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;infoParam&nbsp;As&nbsp;ReportParameterInfoCollection&nbsp;=&nbsp;e.Parameters()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;strCaseId&nbsp;As&nbsp;String&nbsp;=&nbsp;infoParam.First.Values(<span class="cs__number">0</span>).ToString()&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select&nbsp;Case&nbsp;e.ReportPath&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case&nbsp;<span class="cs__string">&quot;subreport1&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;'&nbsp;&nbsp;just&nbsp;example&nbsp;-&nbsp;how&nbsp;to&nbsp;manage&nbsp;multiply&nbsp;subreports&nbsp;...&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case&nbsp;<span class="cs__string">&quot;ReportCustomersAddress&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strCustomerAddress&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;where&nbsp;&quot;</span><span class="cs__string">&quot;CustomerID&quot;</span><span class="cs__string">&quot;&nbsp;=&nbsp;'&quot;</span>&nbsp;&#43;&nbsp;strCaseId&nbsp;&#43;&nbsp;<span class="cs__string">&quot;'&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;dtCustomersAddress&nbsp;As&nbsp;DataTable&nbsp;=&nbsp;dc.GetDataSet(cmd).Tables(<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.DataSources.Add(New&nbsp;ReportDataSource(<span class="cs__string">&quot;dtCustomersAddress&quot;</span>,&nbsp;dtCustomersAddress))&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case&nbsp;<span class="cs__string">&quot;subreport3&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Select&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Sub&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Protected&nbsp;Sub&nbsp;Alert(ByVal&nbsp;message&nbsp;As&nbsp;String)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;sb&nbsp;As&nbsp;New&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://msdn.microsoft.com/en-US/library/System.Text.StringBuilder.aspx"  title="Auto generated link to System.Text.StringBuilder">System.Text.StringBuilder</a>()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;&lt;script&nbsp;type&nbsp;=&nbsp;'text/javascript'&gt;&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;window.onload=function(){&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;alert('&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(message)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;')};&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.Append(<span class="cs__string">&quot;&lt;/script&gt;&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClientScript.RegisterClientScriptBlock(Me.GetType(),&nbsp;<span class="cs__string">&quot;alert&quot;</span>,&nbsp;sb.ToString())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Sub&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;'https:<span class="cs__com">//msdn.microsoft.com/en-us/library/dn154769.aspx</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Protected&nbsp;Sub&nbsp;rv_Drillthrough(sender&nbsp;As&nbsp;Object,&nbsp;e&nbsp;As&nbsp;DrillthroughEventArgs)&nbsp;Handles&nbsp;rv.Drillthrough&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Get&nbsp;the&nbsp;instance&nbsp;of&nbsp;the&nbsp;Target&nbsp;report.&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select&nbsp;Case&nbsp;e.ReportPath&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case&nbsp;<span class="cs__string">&quot;subreport1&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;'&nbsp;&nbsp;just&nbsp;example&nbsp;-&nbsp;how&nbsp;to&nbsp;manage&nbsp;multiply&nbsp;subreports&nbsp;...&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case&nbsp;<span class="cs__string">&quot;ReportOrder&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;report&nbsp;As&nbsp;LocalReport&nbsp;=&nbsp;e.Report&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;list&nbsp;As&nbsp;IList(Of&nbsp;ReportParameter)&nbsp;=&nbsp;report.OriginalParametersToDrillthrough&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;strCaseId&nbsp;As&nbsp;String&nbsp;=&nbsp;list.Item(<span class="cs__number">0</span>).Values(<span class="cs__number">0</span>).ToString&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitDataBase()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strOrderID&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;where&nbsp;&quot;</span><span class="cs__string">&quot;CustomerID&quot;</span><span class="cs__string">&quot;&nbsp;=&nbsp;'&quot;</span>&nbsp;&#43;&nbsp;strCaseId&nbsp;&#43;&nbsp;<span class="cs__string">&quot;'&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;dtOrders&nbsp;As&nbsp;DataTable&nbsp;=&nbsp;dc.GetDataSet(cmd).Tables(<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;report.DataSources.Add(New&nbsp;ReportDataSource(<span class="cs__string">&quot;dtOrders&quot;</span>,&nbsp;dtOrders))&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case&nbsp;<span class="cs__string">&quot;subreport3&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Select&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Sub&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Protected&nbsp;Sub&nbsp;btnMainReport_Click(sender&nbsp;As&nbsp;Object,&nbsp;e&nbsp;As&nbsp;EventArgs)&nbsp;Handles&nbsp;btnMainReport.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LoadReport()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Sub&nbsp;
+End&nbsp;Class</pre>
+</div>
+</div>
+</div>
+<ul>
+</ul>
+<h1>More Information</h1>
+<p>This example uses SQLite database &ldquo;Northwind.sl3&rdquo;</p>
+<p>So for work this sample please install on your PC SQLite provider <a href="https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki">
+https://code.msdn.microsoft.com/windowsapps/SSRS-RDLC-report-How-To-9cff1dd6/https://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki</a></p>
+<p>(Use setup file it install System.Data.SQLite to assembly)</p>
+<p>I recommend install x86 and x64 version &ndash; just choose right Net Framework for you.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>In order to use the SQLiteFactory and have the SQLite data provider enumerated in the DbProviderFactories methods, you must add the following segment into your application's app.config file:</p>
+<p>&lt;configuration&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; &lt;system.data&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DbProviderFactories&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;remove invariant=&quot;System.Data.SQLite&quot; /&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name=&quot;SQLite Data Provider&quot; invariant=&quot;System.Data.SQLite&quot; description=&quot;.NET Framework Data Provider for SQLite&quot;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type=&quot;System.Data.SQLite.SQLiteFactory, System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139&quot; /&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DbProviderFactories&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; &lt;/system.data&gt;</p>
+<p>&lt;/configuration&gt;</p>
+<p>See the help documentation for further details on implementing both version-specific (GAC enabled) and version independent DBProviderFactories support.&nbsp;</p>
+<div class="mcePaste" id="_mcePaste" style="left:-10000px; top:0px; width:1px; height:1px; overflow:hidden">
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutPageTitle" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ampm" xml:space="preserve">
+    <value>true</value>
+    <comment>Timepicker.js</comment>
+  </data>
+  <data name="BeginDateError" xml:space="preserve">
+    <value>Invalid begin date</value>
+  </data>
+  <data name="BeginDateLabel" xml:space="preserve">
+    <value>Begin date</value>
+  </data>
+  <data name="closeText" xml:space="preserve">
+    <value>Done</value>
+    <comment>Timepicker.js</comment>
+  </data>
+  <data name="currentText" xml:space="preserve">
+    <value>Now</value>
+    <comment>Timepicker.js</comment>
+  </data>
+  <data name="EndDateError" xml:space="preserve">
+    <value>Invalid end date</value>
+  </data>
+  <data name="EndDateLabel" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="hourText" xml:space="preserve">
+    <value>Hour</value>
+    <comment>Timepicker.js</comment>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log Off</value>
+  </data>
+  <data name="LogOn" xml:space="preserve">
+    <value>Log On</value>
+  </data>
+  <data name="minuteText" xml:space="preserve">
+    <value>Minute</value>
+    <comment>Timepicker.js</comment>
+  </data>
+  <data name="MMMdd" xml:space="preserve">
+    <value>MMM dd</value>
+    <comment>jul 30 - both Client Server side</comment>
+  </data>
+  <data name="MMMddcyyyy" xml:space="preserve">
+    <value>MMM dd, yyyy</value>
+    <comment>July 30, 2011 - Server side</comment>
+  </data>
+  <data name="MonthDayYear" xml:space="preserve">
+    <value>MMMM d, yyyy</value>
+    <comment>July 30, 2011 - Client Side Global plugin</comment>
+  </data>
+  <data name="RSVP" xml:space="preserve">
+    <value>RSVP</value>
+  </data>
+  <data name="RsvpForThisEvent" xml:space="preserve">
+    <value>RSVP for this event</value>
+  </data>
+  <data name="RSVPs" xml:space="preserve">
+    <value>RSVPs</value>
+  </data>
+  <data name="SampleGraphPageTitle" xml:space="preserve">
+    <value>Graphs</value>
+  </data>
+  <data name="secondText" xml:space="preserve">
+    <value>Second</value>
+    <comment>Timepicker.js</comment>
+  </data>
+  <data name="StockNameLabel" xml:space="preserve">
+    <value>Stock name</value>
+  </data>
+  <data name="timeOnlyTitle" xml:space="preserve">
+    <value>Choose Time</value>
+    <comment>Timepicker.js</comment>
+  </data>
+  <data name="timeText" xml:space="preserve">
+    <value>Time</value>
+    <comment>Timepicker.js</comment>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="with" xml:space="preserve">
+    <value>with</value>
+  </data>
+  <data name="CalendarCloseText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CalendarCurrentText" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="CalendarDayNames" xml:space="preserve">
+    <value>'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'</value>
+  </data>
+  <data name="CalendarDayNamesMin" xml:space="preserve">
+    <value>\'Mo\', \'Tu\', \'We\', \'Th\', \'Fr\', \'Sa\', \'Su\'</value>
+  </data>
+  <data name="CalendarDayNamesShort" xml:space="preserve">
+    <value>'Mon', 'Tue', 'Wedy', 'Thu', 'Fri', 'Sat', 'Sun'</value>
+  </data>
+  <data name="CalendarFirstDay" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CalendarIsRTL" xml:space="preserve">
+    <value>false</value>
+  </data>
+  <data name="CalendarMonthNames" xml:space="preserve">
+    <value>'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'</value>
+  </data>
+  <data name="CalendarMonthNames1" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="CalendarMonthNames10" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="CalendarMonthNames11" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="CalendarMonthNames12" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="CalendarMonthNames2" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="CalendarMonthNames3" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="CalendarMonthNames4" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="CalendarMonthNames5" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="CalendarMonthNames6" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="CalendarMonthNames7" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="CalendarMonthNames8" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="CalendarMonthNames9" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="CalendarMonthNamesShort" xml:space="preserve">
+    <value>'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Augt', 'Sep', 'Oct', 'Nov', 'Dec'</value>
+  </data>
+  <data name="CalendarMonthNamesShort1" xml:space="preserve">
+    <value>Jan</value>
+  </data>
+  <data name="CalendarMonthNamesShort10" xml:space="preserve">
+    <value>Oct</value>
+  </data>
+  <data name="CalendarMonthNamesShort11" xml:space="preserve">
+    <value>Nov</value>
+  </data>
+  <data name="CalendarMonthNamesShort12" xml:space="preserve">
+    <value>Dec</value>
+  </data>
+  <data name="CalendarMonthNamesShort2" xml:space="preserve">
+    <value>Febr</value>
+  </data>
+  <data name="CalendarMonthNamesShort3" xml:space="preserve">
+    <value>Mar</value>
+  </data>
+  <data name="CalendarMonthNamesShort4" xml:space="preserve">
+    <value>Apr</value>
+  </data>
+  <data name="CalendarMonthNamesShort5" xml:space="preserve">
+    <value>Ma</value>
+  </data>
+  <data name="CalendarMonthNamesShort6" xml:space="preserve">
+    <value>Jun</value>
+  </data>
+  <data name="CalendarMonthNamesShort7" xml:space="preserve">
+    <value>Jul</value>
+  </data>
+  <data name="CalendarMonthNamesShort8" xml:space="preserve">
+    <value>Aug</value>
+  </data>
+  <data name="CalendarMonthNamesShort9" xml:space="preserve">
+    <value>Sep</value>
+  </data>
+  <data name="CalendarNextText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="CalendarPrevText" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="CalendarShowMonthAfterYear" xml:space="preserve">
+    <value>false</value>
+  </data>
+  <data name="CalendarWeekHeader" xml:space="preserve">
+    <value>'Mo'</value>
+  </data>
+  <data name="CalendarYearSuffix" xml:space="preserve">
+    <value>''</value>
+  </data>
+  <data name="CalendarDayNames1" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="CalendarDayNames2" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="CalendarDayNames3" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="CalendarDayNames4" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="CalendarDayNames5" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="CalendarDayNames6" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="CalendarDayNames7" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="CalendarDayNamesMin1" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="CalendarDayNamesMin2" xml:space="preserve">
+    <value>Mon</value>
+  </data>
+  <data name="CalendarDayNamesMin3" xml:space="preserve">
+    <value>Tue</value>
+  </data>
+  <data name="CalendarDayNamesMin4" xml:space="preserve">
+    <value>Wed</value>
+  </data>
+  <data name="CalendarDayNamesMin5" xml:space="preserve">
+    <value>Thu</value>
+  </data>
+  <data name="CalendarDayNamesMin6" xml:space="preserve">
+    <value>Fri</value>
+  </data>
+  <data name="CalendarDayNamesMin7" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="CalendarDayNamesShort1" xml:space="preserve">
+    <value>Su</value>
+  </data>
+  <data name="CalendarDayNamesShort2" xml:space="preserve">
+    <value>Mo</value>
+  </data>
+  <data name="CalendarDayNamesShort3" xml:space="preserve">
+    <value>Tu</value>
+  </data>
+  <data name="CalendarDayNamesShort4" xml:space="preserve">
+    <value>We</value>
+  </data>
+  <data name="CalendarDayNamesShort5" xml:space="preserve">
+    <value>Th</value>
+  </data>
+  <data name="CalendarDayNamesShort6" xml:space="preserve">
+    <value>Fr</value>
+  </data>
+  <data name="CalendarDayNamesShort7" xml:space="preserve">
+    <value>Sa</value>
+  </data>
+  <data name="LayoutFooter" xml:space="preserve">
+    <value>Coded by &lt;a href="mailto:finance@silesiaresearch.com"&gt;Silesia Research Ltd &lt;/a&gt;.</value>
+  </data>
+  <data name="CalendarDateFormat" xml:space="preserve">
+    <value>yyyy/MM/dd</value>
+  </data>
+  <data name="GraphTypeBarsLabel" xml:space="preserve">
+    <value>Bars</value>
+  </data>
+  <data name="GraphTypeCandlestickLabel" xml:space="preserve">
+    <value>Candles</value>
+  </data>
+  <data name="GraphTypeLinearLabel" xml:space="preserve">
+    <value>Linear</value>
+  </data>
+  <data name="GraphTypeLabel" xml:space="preserve">
+    <value>Graph type</value>
+  </data>
+  <data name="GraphInputLegend" xml:space="preserve">
+    <value>Please provide data for the type of graph you want to see</value>
+  </data>
+  <data name="GraphPreviewLabel" xml:space="preserve">
+    <value>Graph preview can be seen below</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="AboutUsText" xml:space="preserve">
+    <value>We are an open team of software engineers interested in mathematical modelling of electronic stock data
+&lt;br/&gt;
+We are conducting research on usability of technical analysis for predicting prices of stocks or other financial instruments.
+&lt;br/&gt;&lt;br/&gt;
+This web page is basically a first experiment in how useful modern Microsoft technologies are for creation of a portal which presents data from major stock exchanges in different languages. Currently we download daily trading data from Warsaw Stock Exchange (WIG). We are describing briefly basic theory required to read stocks data, which allows analysis of trends in various time intervals, where a trading day is used as a time unit.
+&lt;br/&gt;&lt;br/&gt;
+The technologies used to create this website are:
+&lt;br/&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;a href="http://www.asp.net/mvc/tutorials/getting-started-with-aspnet-mvc3"&gt;Asp.net MVC3&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://www.silverlight.net/learn/overview/what's-new-in-silverlight-5"&gt;Silverlight 5&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://www.microsoft.com/sql/"&gt;SQL Server 2008&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://www.microsoft.com/visualstudio/"&gt;Visual Studio&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Windows_Communication_Foundation"&gt;Windows Communication Foundations&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/C_Sharp_4.0"&gt;C# 4.0&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://jquery.com"&gt;JQuery&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br/&gt;&lt;br/&gt;
+Anyone interested in a source code version of this portal, so they can learn something about the mentioned technologies can download it from &lt;a href="http://silesiaresearch.com/Finance/FinanceSrc.zip"&gt;this address&lt;/a&gt;.
+&lt;br/&gt;
+To contact us, please send an email to &lt;a href="mailto:finance@silesiaresearch.com"&gt;finance@silesiaresearch.com&lt;/a&gt;</value>
+  </data>
+  <data name="GraphsPageTitle" xml:space="preserve">
+    <value>Statistical analysis</value>
+  </data>
+  <data name="IndexText" xml:space="preserve">
+    <value>Welcome to the website dedicated to statistical analysis of electronic stock exchanges. &lt;br&gt;
+This is an experimental website of educational character, aimed at helping the user to understand electronic stocks behaviour as well as visualisation of it in various time periods. &lt;br&gt;
+The user has a choice of several tools displaying various methods of analysis. &lt;br&gt;
+In order to start working with our software you can go directly to </value>
+  </data>
+  <data name="IndexWelcomeText" xml:space="preserve">
+    <value>Stocks analysis home page</value>
+  </data>
+  <data name="BackToIndexLinkLabel" xml:space="preserve">
+    <value>Back to Home</value>
+  </data>
+  <data name="GraphsChapters" xml:space="preserve">
+    <value>Graphs informations</value>
+  </data>
+  <data name="GraphsDescriptionHeader" xml:space="preserve">
+    <value>Details of the following graph type: </value>
+  </data>
+  <data name="GraphTypeBarsInformation" xml:space="preserve">
+    <value>The bar graph show stock values for a specified period of time with precisely defined time units. The time units could be defined as hours, minutes, seconds up to miliseconds.  This page uses daily units. Each day has values defined as opening, closing, minimum and maximum prices. Opening and closing prices are the values on a start and end of a trading day. The graph comprises of small bars which is a single vertical line, defining minimum and maximum values with a short horizontal line on the left depicting opening value and short line on the right depicting closing value.&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Open-high-low-close_chart"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="GraphTypeCandlestickInformation" xml:space="preserve">
+    <value>Candlestick graph, just like bar, represents stock prices in chosen itervals of time. A difference is, that to display the data it uses a rectangle with different colours. The lighter the colour is, then the difference between opening and closing values is bigger, with closing being hight than open. The darker the colour is describing a negative closing compared to opening price. The height of vertical line is showing difference between minimum and maximum prices. Comparing this kind of of graph to the bar, we can see more information quickly by observing local positive and negative trends.
+&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Candlestick_chart"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="GraphTypeLinearInformation" xml:space="preserve">
+    <value>Linear graph is the simplest of the trio. It introduces a slight linearity between closing prices of stocks observed in a chosen time interval. Therefore it is easier to read, as less information is presented. It shows general trends for a stock, however it has less information about mangitude of changes on a daily basis.
+&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Trend_line_(technical_analysis)"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="GraphsPageOutputTitle" xml:space="preserve">
+    <value>Direct observation of ticker values</value>
+  </data>
+  <data name="GraphTypeVolumeInformation" xml:space="preserve">
+    <value>The volume graph is generally shown straight below the main graph. It presents information about total amount of stock units sold in a chosen time interval. The higher a local bar is, the more transactions of buying and selling took place. It is very important for traders as they tend observe how price changes are associated with the level of activitiy on a market. It enables them to forecast future trends and make decisions about buying, selling or waiting.</value>
+  </data>
+  <data name="GraphTypeVolumeLabel" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="FunctionsChaptersInformation" xml:space="preserve">
+    <value>Financial indicators are mathematical functions which analyse changes of stock prices over a period of time. Each one represent a different type of information. They have different applications and a method of their usability depends only on a person who reads them. It is important to mind that indicators are just a different view on the same information already visible in normal graphs. They should not be interepreted alone but rather in context of other information available.</value>
+  </data>
+  <data name="FunctionsChaptersLabel" xml:space="preserve">
+    <value>Functions and oscillators</value>
+  </data>
+  <data name="FunctionTypeBollingerDescription" xml:space="preserve">
+    <value>The Bollinger index is a set of two or three bands, showing what is the dynamic of price changes and when do they reach highs or lows. The top band represents local maximum values, and the lower band is responsible for local minimum values. The investors observe differences between top and bottom lines. A big difference is showing a greater market volatility, whereas small tells us about potential consolidation on the market.
+&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Bollinger_Bands"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="FunctionTypeBollingerLabel" xml:space="preserve">
+    <value>Bollinger's Bands</value>
+  </data>
+  <data name="FunctionTypeCciDescription" xml:space="preserve">
+    <value>CCI (commodity channel index) measure a variance of stock price compared to its average typical price. The typical price is an average of maximum, minimum and closing prices. Big values this index mean about unnaturally high current prices of the stock compared to its local average. Low values inform about reverse situation.
+&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Commodity_channel_index"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="FunctionTypeCciLabel" xml:space="preserve">
+    <value>CCI</value>
+  </data>
+  <data name="FunctionTypeEmaDescription" xml:space="preserve">
+    <value>The EMA indicator (exponential moving average) is similar to SMA, with a difference that more emphasis is put on most recent prices, compared to less importance of the older prices. The most popular time intervals are 12 and 26 days, whereas longer ones such as 50 and 200 days are use in long trend analysis.
+&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/MACD"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="FunctionTypeEmaLabel" xml:space="preserve">
+    <value>EMA (Exponential Moving Average)</value>
+  </data>
+  <data name="FunctionTypeMaxDescription" xml:space="preserve">
+    <value>The MAX indicator shows maximum price of a given stock in a determined interval specified by a number of days in the past from a current element in the graph. It is a psychological barrier which shows how much are the investors prepared to pay for a given stock.</value>
+  </data>
+  <data name="FunctionTypeMaxLabel" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="FunctionTypeMinDescription" xml:space="preserve">
+    <value>The MIN indicator shows minumum price of a given stock in a determined interval specified by a number of days in the past from a current element in the graph. It is a quite important indicator as it allows to observe a so called support trend. It is a psychological barrier which shows how little are the investors prepared to pay for a given stock.</value>
+  </data>
+  <data name="FunctionTypeMinLabel" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="FunctionTypeMoneyflowDescription" xml:space="preserve">
+    <value>Moneyflow oscillator is a simple function calculated based on a number of days in the past. It is devised as a multiplication of volume and typical price. Similarily to &lt;RSI&gt; it has values between 0 and 100. Values of above 80 mean a bought out market, whereas values below 20 mean that the market is sold out market.
+&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Money_flow_index"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="FunctionTypeMoneyflowLabel" xml:space="preserve">
+    <value>Moneyflow Index</value>
+  </data>
+  <data name="FunctionTypeRsiDescription" xml:space="preserve">
+    <value>RSI (relative strength index) shows a magnitue of a trend. It can achieve values ranging from 0 to 100 and contains a moving average. It is a ratio of average stock closing prices growth to average stock closing prices decrease. The sensitivity of RSI depends on a number of days taken into consideration during calculations. Its most usability is achieved when its values is reaching extremes. For example value of 100 increases probability of reversing to decrasing trend, whereas value of 0 informs about better potential for growth in the future. Low and high values send respectively signals for buying or selling.
+&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Relative_strength_index"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="FunctionTypeRsiLabel" xml:space="preserve">
+    <value>RSI</value>
+  </data>
+  <data name="FunctionTypeSmaDescription" xml:space="preserve">
+    <value>The SMA indicator (simple moving average) shows an average value of stock price in a chosen period in the past. If the indicator moves up, then it informs about positive trends compared to prices observed recently. The changes in SMA are in general smoother then linear graph. Its negative side is lack of visibility of sudden changes in short time spans.&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Moving_average"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="FunctionTypeSmaLabel" xml:space="preserve">
+    <value>SMA (Simple Moving Average)</value>
+  </data>
+  <data name="FunctionTypeStochasticOscillatorDescription" xml:space="preserve">
+    <value>Stochastic oscillator allows observation of closing prices compared to prices in a defined period. It uses two lines. During a growth trend closing prices are close to higher borders of their resistance line. The bands are oscillating between 0 and 100. The signals for buying or selling are devised based on crossing of the bands in proximity of levels 80 and 20 respectively.
+&lt;br&gt; More information can be found &lt;a href="http://en.wikipedia.org/wiki/Stochastic_oscillator"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="FunctionTypeStochasticOscillatorLabel" xml:space="preserve">
+    <value>Stochastic Oscillator</value>
+  </data>
+  <data name="FunctionsDescriptionHeader" xml:space="preserve">
+    <value>Detailed description of function/oscillator</value>
+  </data>
+</root>

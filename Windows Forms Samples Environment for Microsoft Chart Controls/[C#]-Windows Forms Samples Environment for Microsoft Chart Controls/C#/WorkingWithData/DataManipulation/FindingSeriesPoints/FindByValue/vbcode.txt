@@ -1,0 +1,13 @@
+Imports System.Windows.Forms.DataVisualization.Charting
+...
+ 
+' Find all points with second Y value equal to 10 and change their color
+Dim index As Integer = 0
+
+Dim dataPoint As DataPoint = Chart1.Series("Series1").Points.FindValue(10, "Y2", index)
+While Not (dataPoint Is Nothing)
+    dataPoint.Color = Color.FromArgb(255, 128, 128)
+    index += 1
+    dataPoint = Chart1.Series("Series1").Points.FindValue(10, "Y2", index)
+End While 
+...

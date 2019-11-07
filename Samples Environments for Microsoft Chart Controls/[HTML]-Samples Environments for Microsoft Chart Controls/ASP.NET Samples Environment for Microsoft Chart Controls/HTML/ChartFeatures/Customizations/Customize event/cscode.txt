@@ -1,0 +1,26 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+//IMPORTANT: For this event to work the event handler must be added to the InitializeComponent()
+//  method. We recommend that you add the event using the Properties window in the IDE   
+private void OnCustomize(System.Web.UI.DataVisualization.Charting.Chart sender)
+{
+
+    // Set new Maximum value for X axis
+    Chart1.ChartAreas["ChartArea1"].AxisX.Maximum += double.Parse( XAxis.SelectedItem.Value );
+
+    // Set new Minimum value for X axis
+    Chart1.ChartAreas["ChartArea1"].AxisX.Minimum -= double.Parse( XAxis.SelectedItem.Value );
+
+    // Set new Maximum value for Y axis
+    Chart1.ChartAreas["ChartArea1"].AxisY.Maximum += double.Parse( YAxis.SelectedItem.Value );
+
+    // Set new Minimum value for Y axis
+    Chart1.ChartAreas["ChartArea1"].AxisY.Minimum -= double.Parse( YAxis.SelectedItem.Value );
+
+    // This method will fill labels using 
+    // new Minimum and Maximum values. 
+    Chart1.ChartAreas["ChartArea1"].RecalculateAxesScale();
+    
+}
+...

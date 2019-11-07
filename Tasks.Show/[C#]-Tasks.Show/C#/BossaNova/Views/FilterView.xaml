@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Tasks.Show.Views.FilterView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" MinWidth="80" Background="LightGray">
+
+    <ItemsControl Name="m_filters" ItemsSource="{Binding Path=Items}">
+        <ItemsControl.Template>
+            <ControlTemplate TargetType="ItemsControl">
+                <StackPanel Orientation="Horizontal" IsItemsHost="True" />
+            </ControlTemplate>
+        </ItemsControl.Template>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <Button Content="{Binding}" Command="{Binding Path=DataContext.SetCurrentCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}" />
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+
+    </ItemsControl>
+
+</UserControl>

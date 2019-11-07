@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:NullTextDemo.CustomControls" x:Class="NullTextDemo.MainWindow"
+        Title="MainWindow" Height="382.894" Width="498.684">
+    <Grid>
+
+        <my:NullTextBox HorizontalAlignment="Left"  Margin="10,10,0,0" TextWrapping="Wrap" 
+                        NullText="Searching"
+                        VerticalAlignment="Top" Width="257"/>
+        <my:NullTextBox HorizontalAlignment="Left"  Margin="10,37,0,0" TextWrapping="Wrap" 
+        	VerticalAlignment="Top" Width="257"
+                        NullText="Vlozte text"/>
+        <my:NullTextBox HorizontalAlignment="Left"  Margin="10,64,0,0" TextWrapping="Wrap" 
+        	VerticalAlignment="Top" Width="257"/>
+
+    </Grid>
+</Window>

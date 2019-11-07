@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RestDemo"
+             x:Class="RestDemo.MainPage">
+
+    <Grid>
+        
+        <Label Text="Call Webservices with HttpClient" FontSize="25" FontAttributes="Bold" />
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <!--<Button Text="Json Parsing wihtout JSON.NET" Margin="20" Clicked="BtnJson_Click" />-->
+            <Button Text="Xml Parsing" Margin="20" HorizontalOptions="StartAndExpand"  Clicked="BtnXml_Click" />
+        </StackLayout>
+    </Grid>
+    
+
+</ContentPage>

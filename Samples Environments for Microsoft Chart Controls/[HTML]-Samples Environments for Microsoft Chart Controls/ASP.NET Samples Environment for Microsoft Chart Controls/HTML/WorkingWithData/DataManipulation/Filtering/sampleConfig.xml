@@ -1,0 +1,80 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Filtering">
+	<Title>Filtering Top N Values</Title> 
+	<Thumbnail>FilterTopN\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Filtering Top N Values</ShortBlurb> 
+	<Content>FilterTopN\FilterTopN.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">FilterTopN\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">FilterTopN\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">FilterTopN\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Data manipulation, Filtering Top N values</Keyword>
+      <Keyword>Filtering, Top N values</Keyword>
+    </Keywords>
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Filtering">
+	<Title>Filtering Date Ranges</Title> 
+	<Thumbnail>FilterDateRange\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Filtering Date Ranges</ShortBlurb> 
+	<Content>FilterDateRange\FilterDateRange.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">FilterDateRange\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">FilterDateRange\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">FilterDateRange\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Data manipulation, Filtering dates</Keyword>
+      <Keyword>Filtering, Dates</Keyword>
+    </Keywords>
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Filtering">
+	<Title>Filtering by Y or X Values</Title> 
+	<Thumbnail>FilterYValuesRange\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Filtering by Y or X Values</ShortBlurb> 
+	<Content>FilterYValuesRange\FilterYValuesRange.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">FilterYValuesRange\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">FilterYValuesRange\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">FilterYValuesRange\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Data manipulation, Filtering Y values</Keyword>
+      <Keyword>Filtering, Y values</Keyword>
+    </Keywords> 
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Filtering">
+	<Title>Custom Filtering Criteria</Title> 
+	<Thumbnail>FilterWithCustomCriteria\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Custom Filtering Criteria</ShortBlurb> 
+	<Content>FilterWithCustomCriteria\FilterWithCustomCriteria.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">FilterWithCustomCriteria\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">FilterWithCustomCriteria\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">FilterWithCustomCriteria\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Data manipulation, Custom filtering</Keyword>
+      <Keyword>Filtering, Custom</Keyword>
+    </Keywords>
+	</SampleConfig>
+
+	
+</SampleConfigs>

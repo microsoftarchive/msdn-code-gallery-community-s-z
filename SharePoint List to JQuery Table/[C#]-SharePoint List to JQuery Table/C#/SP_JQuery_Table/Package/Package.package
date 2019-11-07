@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="0529e41e-28d3-47ef-8c82-63adaeee2a8b" 
+        solutionId="0529e41e-28d3-47ef-8c82-63adaeee2a8b" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SP_JQuery_Table"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="c0494cc5-9d34-4a61-a8b3-f941df40c645" />
+  </features>
+</package>

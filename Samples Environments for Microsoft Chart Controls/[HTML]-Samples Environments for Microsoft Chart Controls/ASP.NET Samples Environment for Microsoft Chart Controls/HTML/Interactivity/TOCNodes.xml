@@ -1,0 +1,22 @@
+<?xml version="1.0" ?> 
+<TOCNodes>
+  <TOCNode ID="Interactivity" Priority="1000">
+    <Title>Interactivity and AJAX</Title>
+  </TOCNode>
+  <TOCNode ID="AJAXInteractivity" Priority="500" ParentNodeID="Interactivity">
+    <Title>AJAX</Title>
+  </TOCNode>
+  <TOCNode ID="Tooltips" Priority="500" ParentNodeID="Interactivity">
+    <Title>Tooltips</Title>
+  </TOCNode>
+  <TOCNode ID="Drill Down" Priority="600" ParentNodeID="Interactivity">
+    <Title>Drill Down</Title>
+  </TOCNode>
+  <TOCNode ID="Client Side Scripts" Priority="700" ParentNodeID="Interactivity">
+    <Title>Client Side Scripts</Title>
+  </TOCNode>
+  <TOCNode ID="ImageMaps" Priority="800" ParentNodeID="Interactivity">
+    <Title>Image Maps</Title>
+  </TOCNode>
+
+</TOCNodes>

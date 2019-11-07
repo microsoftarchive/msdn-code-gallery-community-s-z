@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<LINK href="../../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<p>
+            <br />
+            <i>Empty points </i>are data points that do not have Y values or have been 
+            marked as empty. They are visually displayed in the chart area. Empty points are 
+            not the same as missing data points, which&nbsp; refer to data points that are 
+            missing in a data set.</p>
+        <p>
+            The following example shows that there is no data for Wednesday.
+        </p>
+        <p>
+            <table id="Table1" border="0" cellpadding="1" cellspacing="1" width="500">
+                <tr>
+                    <td>
+                        <img alt="Missing Data?" border="0" src="MissingPoints1.PNG" /><br />
+                    </td>
+                    <td valign="top">
+&nbsp;
+                        <br />
+                        <table id="Table2" border="1" cellpadding="1" cellspacing="1" width="100%">
+                            <tr>
+                                <td align="middle" valign="center">
+                                    <strong>X</strong></td>
+                                <td align="middle" valign="center">
+                                    <strong>Y</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Monday</td>
+                                <td>
+                                    978</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tuesday</td>
+                                <td>
+                                    345</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thursday</td>
+                                <td>
+                                    567</td>
+                            </tr>
+                            <tr>
+                                <td height="21">
+                                    Friday</td>
+                                <td height="21">
+                                    778</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Saturday</td>
+                                <td>
+                                    46</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Sunday</td>
+                                <td>
+                                    78</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </p>
+        <p>
+            If the X values of the plotted series are indexed, then it is possible that the 
+            missing data is can be overlooked by the chart reader (see the figure below).</p>
+        <p>
+            <img alt="Missing Data and Indexed Points" border="0" 
+                src="MissingPoints2.PNG" /><br />
+        </p>
+        <p>
+            In this case, use an empty point to clarify that a data point is missing. For 
+            example:</p>
+        <p>
+            <img alt="Missing Data and Indexed Points" border="0" 
+                src="MissingPoints3.PNG" /></p>
+        <h3>
+            Empty Points Usage</h3>
+        <p>
+            Use empty points to:</p>
+        <ul>
+            <li>Represent points with NULL values. </li>
+            <li>Change the appearance of missing data points. </li>
+            <li>Align two or more series. </li>
+        </ul>
+        <p>
+            Empty data points can be added to a series using:
+        </p>
+        <ul>
+            <li>The Empty property of each data point in a series. If Empty is set to <b>True</b>, 
+                a point is marked as empty. </li>
+            <li>Data binding to DBNull values.&nbsp;If a point is data bound to a DBNull value it 
+                will be marked as empty.</li>
+            <li>The InsertEmptyPoints method of the DataManipulator class, which checks for 
+                missing data and inserts empty points into a series using intervals.</li>
+        </ul>
+        <h3>
+            Empty Points Styles</h3>
+        <p>
+            Empty points can be displayed as a marker or a line that connect the nearest two 
+            points. It can be displayed as an average of the adjacent points or as having a 
+            value of zero (see the figure below).</p>
+        <p>
+            <img border="0" src="MissingPoints.png" /><br />
+        </p>
+	</body>
+</html>

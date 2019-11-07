@@ -1,0 +1,30 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series with random data
+    Random	random = new Random();
+    for(int pointIndex = 0; pointIndex < 10; pointIndex++)
+    {
+        Chart1.Series["Series1"].Points.AddY(random.Next(45, 95));
+        Chart1.Series["Series2"].Points.AddY(random.Next(5, 75));
+    }
+
+    // Set series chart type
+    Chart1.Series["Series1"].ChartType = SeriesChartType.Line;
+    Chart1.Series["Series2"].ChartType = SeriesChartType.Spline;
+
+    // Set point labels
+    Chart1.Series["Series1"].IsValueShownAsLabel = true;
+    Chart1.Series["Series2"].IsValueShownAsLabel = true;
+
+    // Enable X axis margin
+    Chart1.ChartAreas["ChartArea1"].AxisX.IsMarginVisible = true;
+
+	// Show data point marker lines for both series
+	Chart1.Series["Series1"]["ShowMarkerLines"] = true;
+	Chart1.Series["Series2"]["ShowMarkerLines"] = false;
+    
+}
+...

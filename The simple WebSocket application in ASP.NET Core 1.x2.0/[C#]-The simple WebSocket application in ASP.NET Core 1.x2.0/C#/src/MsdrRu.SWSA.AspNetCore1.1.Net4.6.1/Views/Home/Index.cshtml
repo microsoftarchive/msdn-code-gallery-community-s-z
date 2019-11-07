@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<form id="form1" runat="server">
+    <div>
+        <span id="webSocketStatusSpan">Please type any text and click send.</span>
+        <br />
+        <span id="webSocketReceiveDataSpan"></span>
+        <br />
+        <span>Please enter a string</span>
+        <br />
+        <input id="nameTextBox" type="text" value="" />
+        <input type="button" value="Send data" onclick="sendData();" />
+        <input type="button" value="Close WebSocket" onclick="closeWebSocket();" />
+    </div>
+</form>
+<script type="text/javascript">
+
+    var webSocketStatusSpan = document.getElementById("webSocketStatusSpan");
+    var webSocketReceiveDataSpan = document.getElementById("webSocketReceiveDataSpan");
+    var nameTextBox = document.getElementById("nameTextBox");
+
+    var webSocket;
+
+    //The address of our HTTP-handler
+    var handlerUrl = "ws://" + window.location.host + "/ws";
+
+    function sendData() {
+
+        //Initialize WebSocket.
+        initWebSocket();
+
+        //Send data if WebSocket is opened.
+        if (webSocket.OPEN && webSocket.readyState === 1)
+            webSocket.send(nameTextBox.value);
+
+        //If WebSocket is closed, show message.
+        if (webSocket.readyState === 2 || webSocket.readyState === 3)
+            webSocketStatusSpan.innerText = "WebSocket closed, the data can't be sent.";
+    }
+
+    function closeWebSocket() {
+        webSocket.close();
+    }
+
+    function initWebSocket() {
+
+        //If the WebSocket object isn't initialized, we initialize it.
+        if (webSocket == undefined) {
+
+            try {
+                webSocket = new WebSocket(handlerUrl);
+            }
+            catch (err) {
+                webSocketStatusSpan.innerText = err.message;
+                return;
+            }
+
+            //Open connection  handler.
+            webSocket.onopen = function () {
+                webSocketStatusSpan.innerText = "WebSocket opened successfully!";
+                webSocket.send(nameTextBox.value);
+            };
+
+            //Message data handler.
+            webSocket.onmessage = function (e) {
+                webSocketReceiveDataSpan.innerText = e.data;
+            };
+
+            //Close event handler.
+            webSocket.onclose = function () {
+                webSocketStatusSpan.innerText = "WebSocket closed.";
+            };
+
+            //Error event handler.
+            webSocket.onerror = function (e) {
+                webSocketStatusSpan.innerText = e.message;
+            }
+        }
+    }
+</script>

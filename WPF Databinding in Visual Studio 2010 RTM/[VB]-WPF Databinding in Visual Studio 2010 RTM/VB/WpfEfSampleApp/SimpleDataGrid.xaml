@@ -1,0 +1,56 @@
+﻿<Window x:Class="SimpleDataGrid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Simple Data Grid" Height="301" Width="329" Name="Window1">
+    <Window.Resources>
+        <CollectionViewSource x:Key="CustomerSource" />
+    </Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource CustomerSource}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="222*" />
+        </Grid.RowDefinitions>
+        <Button Name="btnSave" HorizontalAlignment="Left" Width="75" Height="23" VerticalAlignment="Top">Save</Button>
+        <Button Margin="81,0,0,0" Name="btnAdd" HorizontalAlignment="Left" Width="75" Height="23" VerticalAlignment="Top">Add</Button>
+        <Button HorizontalAlignment="Left" Margin="162,0,0,0" Name="btnDelete" Width="75" Height="23" VerticalAlignment="Top">Delete</Button>
+        <ListView 
+            ItemsSource="{Binding}"
+            IsSynchronizedWithCurrentItem="True" 
+            Grid.Row="1" Name="ListView1">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <EventSetter Event="GotFocus" Handler="Item_GotFocus" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Last Name" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=LastName}" 
+                                         Margin="-6,0,-6,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="First Name" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=FirstName}" 
+                                         Margin="-6,0,-6,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="City" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=City}" 
+                                         Margin="-6,0,-6,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

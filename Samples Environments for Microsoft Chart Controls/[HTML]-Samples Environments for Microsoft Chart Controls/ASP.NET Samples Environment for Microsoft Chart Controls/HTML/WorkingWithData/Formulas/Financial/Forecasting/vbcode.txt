@@ -1,0 +1,35 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+'/ <summary>
+'/ This method calculates Time series.
+'/ </summary>
+Private Sub Calculations()
+   Dim typeRegression As String
+   
+   If Type.SelectedItem.Value = "Linear" Then
+      typeRegression = "2"
+   Else
+      typeRegression = Order.SelectedItem.Value
+   End If 
+   ' The number of days for Forecasting
+   Dim forecasting As Integer = Integer.Parse(Forecasting.SelectedItem.Value)
+   
+   ' Show Error as a range chart
+   Dim [error] As String = Error1.Checked.ToString()
+   
+   ' Show Error as a range chart
+   Dim forecastingError As String = ForecastingError.Checked.ToString()
+   
+   ' Formula parameters
+   Dim parameters As String = typeRegression + ","c + forecasting + ","c + [error] + ","c + forecastingError
+   
+   Chart1.DataManipulator.FinancialFormula(FinancialFormula.Forecasting, parameters, "Input:Y", "Forecasting:Y,Forecasting:Y2,Forecasting:Y3")
+   
+   Chart1.Series("Range").Enabled = false
+   If Error1.Checked Or ForecastingError.Checked Then
+      Chart1.Series("Range").Enabled = true
+      Chart1.DataManipulator.CopySeriesValues("Forecasting:Y2,Forecasting:Y3", "Range:Y,Range:Y")
+   End If
+End Sub 'Calculations
+...       

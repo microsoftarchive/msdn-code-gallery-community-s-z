@@ -1,0 +1,24 @@
+﻿<Window x:Class="AntisocialRobots.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Antisocial Robots" Height="341" Width="362" Background="Black" WindowState="Maximized" Icon="/AntisocialRobots;component/Images/Users.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="txtStatus" Grid.Row="0" Width="150" Text="Frames Per Second Here" Foreground="White" />
+            <CheckBox x:Name="chkParallel" Content="Parallel" Foreground="White" />
+            <TextBlock Text="F5=Restart" Margin="10,0,0,0" Foreground="White" />
+        </StackPanel>
+        <Border x:Name="RoomParent" Grid.Row="1" Margin="5" SizeChanged="RoomParent_SizeChanged" Background="Gray" CornerRadius="15">
+            <Canvas x:Name="Room" Width="1" Height="1" HorizontalAlignment="Left" VerticalAlignment="Top" Background="White"
+                    MouseLeftButtonDown="Room_MouseLeftButtonDown" MouseMove="Room_MouseMove">
+                <Canvas.RenderTransform>
+                    <ScaleTransform x:Name="RoomScaleTransform" ScaleX="200" ScaleY="200" />
+                </Canvas.RenderTransform>
+            </Canvas>
+        </Border>
+    </Grid>
+</Window>

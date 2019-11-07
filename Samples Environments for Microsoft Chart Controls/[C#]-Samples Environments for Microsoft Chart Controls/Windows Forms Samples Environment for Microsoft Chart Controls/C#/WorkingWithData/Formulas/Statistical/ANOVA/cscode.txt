@@ -1,0 +1,7 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+// Perform ANOVA Test
+AnovaResult result = chart1.DataManipulator.Statistics.Anova( 0.6, "Group1,Group2,Group3" );
+
+...

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Orders" targetNamespace="http://tempuri.org/Orders.xsd" xmlns:mstns="http://tempuri.org/Orders.xsd" xmlns="http://tempuri.org/Orders.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Orders" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Orders" msprop:Generator_UserDSName="Orders">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Orders" msprop:Generator_TableClassName="OrdersDataTable" msprop:Generator_TableVarName="tableOrders" msprop:Generator_RowChangedName="OrdersRowChanged" msprop:Generator_TablePropName="_Orders" msprop:Generator_RowDeletingName="OrdersRowDeleting" msprop:Generator_RowChangingName="OrdersRowChanging" msprop:Generator_RowEvHandlerName="OrdersRowChangeEventHandler" msprop:Generator_RowDeletedName="OrdersRowDeleted" msprop:Generator_RowClassName="OrdersRow" msprop:Generator_UserTableName="Orders" msprop:Generator_RowEvArgName="OrdersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderID" msprop:Generator_ColumnVarNameInTable="columnOrderID" msprop:Generator_ColumnPropNameInRow="OrderID" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="OrderIDColumn" msprop:Generator_UserColumnName="OrderID" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderDate" msprop:Generator_ColumnVarNameInTable="columnOrderDate" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_UserColumnName="OrderDate" type="xs:string" minOccurs="0" />
+              <xs:element name="RequiredDate" msprop:Generator_ColumnVarNameInTable="columnRequiredDate" msprop:Generator_ColumnPropNameInRow="RequiredDate" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="RequiredDateColumn" msprop:Generator_UserColumnName="RequiredDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ShippedDate" msprop:Generator_ColumnVarNameInTable="columnShippedDate" msprop:Generator_ColumnPropNameInRow="ShippedDate" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ShippedDateColumn" msprop:Generator_UserColumnName="ShippedDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipVia" msprop:Generator_ColumnVarNameInTable="columnShipVia" msprop:Generator_ColumnPropNameInRow="ShipVia" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ShipViaColumn" msprop:Generator_UserColumnName="ShipVia" type="xs:string" minOccurs="0" />
+              <xs:element name="Freight" msprop:Generator_ColumnVarNameInTable="columnFreight" msprop:Generator_ColumnPropNameInRow="Freight" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="FreightColumn" msprop:Generator_UserColumnName="Freight" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipName" msprop:Generator_ColumnVarNameInTable="columnShipName" msprop:Generator_ColumnPropNameInRow="ShipName" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ShipNameColumn" msprop:Generator_UserColumnName="ShipName" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipAddress" msprop:Generator_ColumnVarNameInTable="columnShipAddress" msprop:Generator_ColumnPropNameInRow="ShipAddress" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ShipAddressColumn" msprop:Generator_UserColumnName="ShipAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipCity" msprop:Generator_ColumnVarNameInTable="columnShipCity" msprop:Generator_ColumnPropNameInRow="ShipCity" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ShipCityColumn" msprop:Generator_UserColumnName="ShipCity" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipRegion" msprop:Generator_ColumnVarNameInTable="columnShipRegion" msprop:Generator_ColumnPropNameInRow="ShipRegion" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ShipRegionColumn" msprop:Generator_UserColumnName="ShipRegion" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipPostalCode" msprop:Generator_ColumnVarNameInTable="columnShipPostalCode" msprop:Generator_ColumnPropNameInRow="ShipPostalCode" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ShipPostalCodeColumn" msprop:Generator_UserColumnName="ShipPostalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipCountry" msprop:Generator_ColumnVarNameInTable="columnShipCountry" msprop:Generator_ColumnPropNameInRow="ShipCountry" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ShipCountryColumn" msprop:Generator_UserColumnName="ShipCountry" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

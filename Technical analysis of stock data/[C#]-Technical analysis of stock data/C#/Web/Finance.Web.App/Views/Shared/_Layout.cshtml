@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+	<link href="@Url.Content("~/Content/Production.css?v=2")" rel="stylesheet" type="text/css" media="screen" />
+
+	<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.11/themes/humanity/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.2.min.js" type="text/javascript"></script> 
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.11/jquery-ui.min.js" type="text/javascript"></script> 
+
+
+    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/yepnope.1.0.1-min.js")" type="text/javascript"></script>    
+    @*<script src="@Url.Content("~/Scripts/date.format.js")" type="text/javascript"></script>*@
+    <script src="@Url.Content("~/Scripts/globalize.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/cultures/globalize.culture." + Finance.Web.Controllers.Helpers.CultureHelper.GetCurrentCulture() + ".js")" type="text/javascript"></script>
+ 
+
+	
+	<script type="text/javascript">    
+            $(function () 
+			{
+                Globalize.addCultureInfo("@Finance.Web.Controllers.Helpers.CultureHelper.GetCurrentCulture()" /*pl-PL*/, 
+				{
+                    messages: 
+					{
+                        "RSVP": "@Resources.RSVP",
+                        "RSVPs": "@Resources.RSVPs",
+                        "MonthDayYear": "@Html.Raw(Resources.MonthDayYear)",
+                        "MonthDay": "@Html.Raw(Resources.MMMdd)",
+                        "with":"@Resources.with"
+                    }
+                });
+
+                Globalize.culture("@Finance.Web.Controllers.Helpers.CultureHelper.GetCurrentCulture()"); @* Set appropriate culture *@
+
+                $(".lang-picker").bind("mouseenter mouseleave", function()
+				{
+					$(this).toggleClass('hover');
+					var size = $('a', this).size(); // number of links
+					var height = $('a', this).height(); // link height
+					var start = $(this).hasClass('hover') ? size : 1;
+					$(this).stop(true, false).animate({ height: (height+2) * start }, 150);
+                });
+
+               
+                $(".lang-picker a." + Globalize.culture().name.toLowerCase()).prependTo($(".lang-picker")); @* Select current culture*@
+
+                @* culture change *@
+                $(".lang-picker a").click(function()
+				{
+					if ($(this).hasClass(Globalize.culture().name.toLowerCase()))
+						return false; // do nothing
+
+					$.cookie("_culture", $(this).attr("class") , {expires : 365, path: '/'});
+					window.location.reload(); // reload 
+
+                });
+            });
+    </script>
+
+
+	<script src="@Url.Content("~/Scripts/jquery.cookie.js")" type="text/javascript"></script>  
+    <script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+    <script src="http://cdn.uservoice.com/javascripts/widgets/tab.js" type="text/javascript"></script>
+
+    @RenderSection("HeadArea", required: false)
+
+</head>
+<body>
+    <div class="page">
+		<header>
+			<div id="title">
+				<div class="lang-picker-wrapper">
+					<span class="lang-picker">
+						<a class="en-us" href="javascript:void(0);">English</a>
+						<a class="@(Finance.Web.Controllers.Helpers.CultureHelper.GetNeutralCulture(Request.UserLanguages[0].ToLower()) == "pl" ? Request.UserLanguages[0].ToLower() : "pl")" href="javascript:void(0);">Polski</a>
+					</span>
+				</div>
+				<a href="@Url.Content("~/")"><img src="@(Url.Content("~/Content/Img/") + "hm-masthead-" + Finance.Web.Controllers.Helpers.CultureHelper.GetCurrentNeutralCulture() + ".png") "/></a>
+            </div>
+            <!--<div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>-->
+			<nav>
+                <ul id="menu">
+                    <li>@Html.ActionLink(@Resources.HomePageTitle, "Index", "Home")</li>
+                    <li>@Html.ActionLink(@Resources.AboutPageTitle, "About", "Home")</li>
+					<li class="last">@Html.ActionLink(@Resources.SampleGraphPageTitle, "GraphInput", "Graphs")</li>
+                </ul>
+            </nav>
+        </header>
+        @RenderSection("Masthead", required: false)
+        <div id="main" class="clearfix">
+            @RenderBody()
+        </div>
+        <footer>
+           @Html.Raw(Resources.LayoutFooter)
+        </footer>
+        <script type="text/javascript">
+        	var pageTracker = _gat._getTracker("UA-6399325-1");
+        	pageTracker._initData();
+        	pageTracker._trackPageview();
+        </script>
+	</div>
+</body>
+</html>

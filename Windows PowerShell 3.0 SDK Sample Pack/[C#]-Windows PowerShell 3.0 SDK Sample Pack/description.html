@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/56ca8eff-3846-44d5-93cf-e53633af8140Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Windows PowerShell 3.0 SDK Sample Pack</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Windows PowerShell 3.0 SDK Sample Pack</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows PowerShell 3.0
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Windows PowerShell
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">3/12/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Windows-PowerShell-30-SDK-9a34641d">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>Windows PowerShell 3.0 SDK Sample Pack contains code samples that show how to build applications based on Windows PowerShell 3.0.</p>
+<p>Windows PowerShell is a Microsoft .NET Framework-connected environment designed for administrative automation. Windows PowerShell provides a new approach to building commands, composing solutions, and creating graphical user interface-based management tools.</p>
+<h1><span>Overview</span></h1>
+<p>This sample pack contains code samples that demonstrate how to use the Windows PowerShell 3.0 API to build a rich set of applications. In this package, you will find code samples that show how to host the Windows PowerShell Workflow runtime, generate workflow
+ activities from Windows PowerShell cmdlets and modules, disconnect and reconnect a Windows PowerShell session, support paging operations, and a number of other tasks that are possible with Windows PowerShell 3.0. This sample pack also includes samples from
+ the Windows PowerShell 2.0 SDK.</p>
+<p>The following code samples are new for Windows PowerShell 3.0:</p>
+<ul>
+<li>Activity Controller Extensibility </li><li>Activity Generator </li><li>Disconnected Sessions </li><li>Job Source Adapter </li><li>Script Line Profiler </li><li>SQL Store Extensibility </li><li>Supports Paging </li><li>Workflow Hosting </li></ul>
+<p>The following code samples from previous releases of Windows PowerShell are also included:</p>
+<ul>
+<li>Event Registration </li><li>Event Notification </li><li>Hosts </li><li>PowerShell </li><li>Cmdlets </li><li>Providers </li><li>Runspaces </li><li>Remote Runspaces </li><li>Serialization </li></ul>
+<p><span style="font-size:20px; font-weight:bold">Requirements</span></p>
+<p>Using the samples requires that you have the following installed:</p>
+<ul>
+<li>Windows PowerShell 3.0 </li><li>Visual Studio 2010 or later </li><li>Windows 8 SDK, available at <a href="http://msdn.microsoft.com/en-us/windows/hardware/hh852363.aspx">
+http://msdn.microsoft.com/en-us/windows/hardware/hh852363.aspx</a> </li></ul>
+<p><strong>Note:</strong> After installing the Windows 8 SDK, the Windows PowerShell reference assemblies will be installed in the
+<em>%ProgramFiles(x86)%\Reference Assemblies\Microsoft\WindowsPowerShell\3.0</em> folder.</p>
+
+</div>
+
+
+            <hr />
+            <div id="sampleIndex">
+                <h2>Sample index</h2>
+                <div id="SampleIndexList">
+                        <!--ps19618-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 10/description.html">Runspace Sample 10</a></div>
+                            <div>This sample shows how to add a cmdlet to an InitialSessionState object and then use the modified InitialSessionState object when creating a Runspace object.</div>
+                        </div>
+                        <!--pe19618-->
+                        <!--ps19585-->
+                        <div id="item">
+                                <div><a href="Host Sample 06/description.html">Host Sample 06</a></div>
+                            <div>This sample application shows building a fairly complete interactive console-based host which allows users to run cmdlets and see the output.</div>
+                        </div>
+                        <!--pe19585-->
+                        <!--ps19589-->
+                        <div id="item">
+                                <div><a href="Get-Process Sample 01/description.html">Get-Process Sample 01</a></div>
+                            <div>This sample shows how to create a simple cmdlet.</div>
+                        </div>
+                        <!--pe19589-->
+                        <!--ps19616-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 08/description.html">Runspace Sample 08</a></div>
+                            <div>This sample shows how to use a PowerShell object to run commands.</div>
+                        </div>
+                        <!--pe19616-->
+                        <!--ps19619-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 11/description.html">Runspace Sample 11</a></div>
+                            <div>This sample shows how to use the ProxyCommand class to create a proxy command that calls an existing cmdlet, but restricts the set of available parameters.</div>
+                        </div>
+                        <!--pe19619-->
+                        <!--ps19726-->
+                        <div id="item">
+                                <div><a href="SQL Store Extensibility Sample/description.html">SQL Store Extensibility Sample</a></div>
+                            <div>This sample demonstrates the data store extensibility of the Windows PowerShell workflow engine.</div>
+                        </div>
+                        <!--pe19726-->
+                        <!--ps19588-->
+                        <div id="item">
+                                <div><a href="PowerShell Sample 02/description.html">PowerShell Sample 02</a></div>
+                            <div>This sample uses a RunspacePool to run multiple commands concurrently.</div>
+                        </div>
+                        <!--pe19588-->
+                        <!--ps19604-->
+                        <div id="item">
+                                <div><a href="AccessDB Provider Sample 05/description.html">AccessDB Provider Sample 05</a></div>
+                            <div>This sample shows how to implement a basic Windows PowerShell provider that creates PowerShell drives to manipulate items with containers and navigation support.</div>
+                        </div>
+                        <!--pe19604-->
+                        <!--ps19608-->
+                        <div id="item">
+                                <div><a href="Remoting Disconnect Reconnect Sample 01/description.html">Remoting Disconnect Reconnect Sample 01</a></div>
+                            <div>This sample shows how to construct a remote runspace, construct a pipeline to execute a long running script, disconnect the runspace and pipeline, reconnect the runspace and pipeline, and retrieve command execution state and output data.</div>
+                        </div>
+                        <!--pe19608-->
+                        <!--ps19606-->
+                        <div id="item">
+                                <div><a href="Remote Runspace Sample 01/description.html">Remote Runspace Sample 01</a></div>
+                            <div>This sample shows how to construct a remote runspace, set connection and operation timeouts, establish a remote connection, and close the connection.</div>
+                        </div>
+                        <!--pe19606-->
+                        <!--ps19590-->
+                        <div id="item">
+                                <div><a href="Get-Process Sample 02/description.html">Get-Process Sample 02</a></div>
+                            <div>This sample shows how to create a cmdlet that has a parameter.</div>
+                        </div>
+                        <!--pe19590-->
+                        <!--ps19612-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 04/description.html">Runspace Sample 04</a></div>
+                            <div>This sample shows how to use the PowerShell class to run commands.</div>
+                        </div>
+                        <!--pe19612-->
+                        <!--ps19580-->
+                        <div id="item">
+                                <div><a href="Host Sample 01/description.html">Host Sample 01</a></div>
+                            <div>This sample uses the RunspaceInvoke class to execute a script that calls exit.</div>
+                        </div>
+                        <!--pe19580-->
+                        <!--ps19536-->
+                        <div id="item">
+                                <div><a href="Activity Generator Sample/description.html">Activity Generator Sample</a></div>
+                            <div>This sample shows how to generate source code for Windows Workflow Activities that wrap Windows PowerShell commands.</div>
+                        </div>
+                        <!--pe19536-->
+                        <!--ps19571-->
+                        <div id="item">
+                                <div><a href="Event Registration Sample/description.html">Event Registration Sample</a></div>
+                            <div>This sample shows how to create a cmdlet for event registration by deriving from ObjectEventRegistrationBase.</div>
+                        </div>
+                        <!--pe19571-->
+                        <!--ps19592-->
+                        <div id="item">
+                                <div><a href="Get-Process Sample 04/description.html">Get-Process Sample 04</a></div>
+                            <div>This sample shows how to create a cmdlet that handles non-terminating errors.</div>
+                        </div>
+                        <!--pe19592-->
+                        <!--ps19611-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 03/description.html">Runspace Sample 03</a></div>
+                            <div>This sample uses the PowerShell class to execute a script that retrieves process information for the list of process names passed into the script.</div>
+                        </div>
+                        <!--pe19611-->
+                        <!--ps19607-->
+                        <div id="item">
+                                <div><a href="Remote Runspace Pool Sample 01/description.html">Remote Runspace Pool Sample 01</a></div>
+                            <div>This sample shows how to construct a remote runspace pool and how to run multiple commands concurrently using this pool.</div>
+                        </div>
+                        <!--pe19607-->
+                        <!--ps19600-->
+                        <div id="item">
+                                <div><a href="AccessDB Provider Sample 01/description.html">AccessDB Provider Sample 01</a></div>
+                            <div>This sample shows how to implement a basic Windows PowerShell provider.</div>
+                        </div>
+                        <!--pe19600-->
+                        <!--ps19680-->
+                        <div id="item">
+                                <div><a href="Serialization Sample 01/description.html">Serialization Sample 01</a></div>
+                            <div>This sample looks at an existing .NET class and shows how to make sure that information from selected public properties of this class is preserved across serialization and deserialization.</div>
+                        </div>
+                        <!--pe19680-->
+                        <!--ps19609-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 01/description.html">Runspace Sample 01</a></div>
+                            <div>This sample uses the PowerShell class to run the Get-Process cmdlet synchronously.</div>
+                        </div>
+                        <!--pe19609-->
+                        <!--ps19587-->
+                        <div id="item">
+                                <div><a href="PowerShell Sample 01/description.html">PowerShell Sample 01</a></div>
+                            <div>This sample uses the InitialSessionState APIs to constrain a runspace and add commands and providers.</div>
+                        </div>
+                        <!--pe19587-->
+                        <!--ps19569-->
+                        <div id="item">
+                                <div><a href="Script Line Profiler Sample/description.html">Script Line Profiler Sample</a></div>
+                            <div>This sample shows how to create a script line profiler using the new Windows PowerShell 3.0 AST (Abstract Syntax Tree) support.</div>
+                        </div>
+                        <!--pe19569-->
+                        <!--ps19582-->
+                        <div id="item">
+                                <div><a href="Host Sample 03/description.html">Host Sample 03</a></div>
+                            <div>This examples shows building a fairly complete interactive console-based host which allows users to run cmdlets and see the output.</div>
+                        </div>
+                        <!--pe19582-->
+                        <!--ps19713-->
+                        <div id="item">
+                                <div><a href="Activity Controller Extensibility Sample/description.html">Activity Controller Extensibility Sample</a></div>
+                            <div>This sample demonstrates how to extend the Windows PowerShell Workflow activity controller. The extended activity controller uses RunspacePool-based queuing on a local WinRM custom workflow endpoint.</div>
+                        </div>
+                        <!--pe19713-->
+                        <!--ps19724-->
+                        <div id="item">
+                                <div><a href="Simple Workflow Extensibility Sample/description.html">Simple Workflow Extensibility Sample</a></div>
+                            <div>This sample demonstrates how to host the Windows PowerShell Worflow runtime in an application.</div>
+                        </div>
+                        <!--pe19724-->
+                        <!--ps19681-->
+                        <div id="item">
+                                <div><a href="Serialization Sample 02/description.html">Serialization Sample 02</a></div>
+                            <div>This sample looks at an existing .NET class and shows how to make sure that information from an instance of this class is preserved across serialization and deserialization when the information is not available in public properties of the class.</div>
+                        </div>
+                        <!--pe19681-->
+                        <!--ps19614-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 06/description.html">Runspace Sample 06</a></div>
+                            <div>This sample shows how to add a module to an initial session state, how to create a runspace that uses the initial session state, and how to run a cmdlet that is provided by the module.</div>
+                        </div>
+                        <!--pe19614-->
+                        <!--ps19572-->
+                        <div id="item">
+                                <div><a href="Event Notification Sample/description.html">Event Notification Sample</a></div>
+                            <div>This sample shows how to receive notifications of Windows PowerShell events that are generated on remote computers.</div>
+                        </div>
+                        <!--pe19572-->
+                        <!--ps19581-->
+                        <div id="item">
+                                <div><a href="Host Sample 02/description.html">Host Sample 02</a></div>
+                            <div>This sample application uses the PowerShell runtime along with a host implementation to call Get-Process and display the results as you would see them in powershell.exe.</div>
+                        </div>
+                        <!--pe19581-->
+                        <!--ps19584-->
+                        <div id="item">
+                                <div><a href="Host Sample 05/description.html">Host Sample 05</a></div>
+                            <div>This sample application shows building a fairly complete interactive console-based host which allows users to run cmdlets and see the output.</div>
+                        </div>
+                        <!--pe19584-->
+                        <!--ps19586-->
+                        <div id="item">
+                                <div><a href="JobSourceAdapter Sample/description.html">JobSourceAdapter Sample</a></div>
+                            <div>This sample shows how to derive a FileCopyJob class from a Job2 type and a FileCopyJobSourceAdapter class from a JobSourceAdapter type.</div>
+                        </div>
+                        <!--pe19586-->
+                        <!--ps19601-->
+                        <div id="item">
+                                <div><a href="AccessDB Provider Sample 02/description.html">AccessDB Provider Sample 02</a></div>
+                            <div>This sample shows how to implement a basic Windows PowerShell provider that creates PowerShell drives.</div>
+                        </div>
+                        <!--pe19601-->
+                        <!--ps19663-->
+                        <div id="item">
+                                <div><a href="Select-String Sample/description.html">Select-String Sample</a></div>
+                            <div>This sample creates a cmdlet called Select-Str that searches files for specified patterns.</div>
+                        </div>
+                        <!--pe19663-->
+                        <!--ps19662-->
+                        <div id="item">
+                                <div><a href="Select-Object Sample 01/description.html">Select-Object Sample 01</a></div>
+                            <div>This sample creates a cmdlet called Select-Obj which acts as a filter to select only certain objects to process or pass down the pipeline.</div>
+                        </div>
+                        <!--pe19662-->
+                        <!--ps19603-->
+                        <div id="item">
+                                <div><a href="AccessDB Provider Sample 04/description.html">AccessDB Provider Sample 04</a></div>
+                            <div>This sample shows how to implement a basic Windows PowerShell provider that creates PowerShell drives to manipulate items with containers.</div>
+                        </div>
+                        <!--pe19603-->
+                        <!--ps19605-->
+                        <div id="item">
+                                <div><a href="AccessDB Provider Sample 06/description.html">AccessDB Provider Sample 06</a></div>
+                            <div>This sample shows how to implement a basic Windows PowerShell provider that creates PowerShell drives to manipulate items, navigate containers, and access content.</div>
+                        </div>
+                        <!--pe19605-->
+                        <!--ps19696-->
+                        <div id="item">
+                                <div><a href="Supports Paging 01 Sample/description.html">Supports Paging 01 Sample</a></div>
+                            <div>This sample shows how to implement a cmdlet called Get-Numbers that supports paging operations.</div>
+                        </div>
+                        <!--pe19696-->
+                        <!--ps19615-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 07/description.html">Runspace Sample 07</a></div>
+                            <div>This sample shows how to create a runspace and how to run commands using a PowerShell object.</div>
+                        </div>
+                        <!--pe19615-->
+                        <!--ps19597-->
+                        <div id="item">
+                                <div><a href="Stop-Process Sample 04/description.html">Stop-Process Sample 04</a></div>
+                            <div>This sample shows how to declare parameter sets, the input object, and how to specify the default parameter set to use.</div>
+                        </div>
+                        <!--pe19597-->
+                        <!--ps19594-->
+                        <div id="item">
+                                <div><a href="Stop-Process Sample 01/description.html">Stop-Process Sample 01</a></div>
+                            <div>This sample shows how to write a cmdlet that implements a PassThru parameter that indicates that the user wants the cmdlet to return an object, and how to request user feedback by calls to the ShouldProcess and ShouldContinue methods.</div>
+                        </div>
+                        <!--pe19594-->
+                        <!--ps19595-->
+                        <div id="item">
+                                <div><a href="Stop-Process Sample 02/description.html">Stop-Process Sample 02</a></div>
+                            <div>This sample shows how to write a cmdlet that implements user notifications using WriteWarning, WriteVerbose, and WriteDebug.</div>
+                        </div>
+                        <!--pe19595-->
+                        <!--ps19596-->
+                        <div id="item">
+                                <div><a href="Stop-Process Sample 03/description.html">Stop-Process Sample 03</a></div>
+                            <div>This sample shows how to write a cmdlet that declares aliases for parameters and supports wildcards.</div>
+                        </div>
+                        <!--pe19596-->
+                        <!--ps19602-->
+                        <div id="item">
+                                <div><a href="AccessDB Provider Sample 03/description.html">AccessDB Provider Sample 03</a></div>
+                            <div>This sample shows how to implement a basic Windows PowerShell provider that creates PowerShell drives to manipulate items.</div>
+                        </div>
+                        <!--pe19602-->
+                        <!--ps19610-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 02/description.html">Runspace Sample 02</a></div>
+                            <div>This sample uses the PowerShell class to run the Get-Process cmdlet synchronously.</div>
+                        </div>
+                        <!--pe19610-->
+                        <!--ps19682-->
+                        <div id="item">
+                                <div><a href="Serialization Sample 03/description.html">Serialization Sample 03</a></div>
+                            <div>This sample looks at an existing .NET class and shows how to make sure that instances of this class and of derived classes are deserialized (rehydrated) into live .NET objects.</div>
+                        </div>
+                        <!--pe19682-->
+                        <!--ps19697-->
+                        <div id="item">
+                                <div><a href="Template Provider Sample 01/description.html">Template Provider Sample 01</a></div>
+                            <div>This sample creates a template for a provider that hooks into the Windows PowerShell namespaces. It contains all possible provider overrides and interfaces.</div>
+                        </div>
+                        <!--pe19697-->
+                        <!--ps19698-->
+                        <div id="item">
+                                <div><a href="Transacted Comment Sample/description.html">Transacted Comment Sample</a></div>
+                            <div>This sample shows a set of cmdlets that participate in Windows PowerShell transactions.</div>
+                        </div>
+                        <!--pe19698-->
+                        <!--ps19591-->
+                        <div id="item">
+                                <div><a href="Get-Process Sample 03/description.html">Get-Process Sample 03</a></div>
+                            <div>This sample shows how to create a cmdlet that can take input from the pipeline.</div>
+                        </div>
+                        <!--pe19591-->
+                        <!--ps19593-->
+                        <div id="item">
+                                <div><a href="Get-Process Sample 05/description.html">Get-Process Sample 05</a></div>
+                            <div>This sample shows how to create a cmdlet that displays a list of specified processes.</div>
+                        </div>
+                        <!--pe19593-->
+                        <!--ps19583-->
+                        <div id="item">
+                                <div><a href="Host Sample 04/description.html">Host Sample 04</a></div>
+                            <div>This sample application shows building a fairly complete interactive console-based host which allows users to run cmdlets and see the output.</div>
+                        </div>
+                        <!--pe19583-->
+                        <!--ps19613-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 05/description.html">Runspace Sample 05</a></div>
+                            <div>This sample shows how to create an initial session state and then use the initial session state when creating the runspace.</div>
+                        </div>
+                        <!--pe19613-->
+                        <!--ps19617-->
+                        <div id="item">
+                                <div><a href="Runspace Sample 09/description.html">Runspace Sample 09</a></div>
+                            <div>This sample shows how to use a PowerShell object to run a script that generates the numbers from 1 to 10 with delays between each number.</div>
+                        </div>
+                        <!--pe19617-->
+                </div>
+            </div>
+    </div>
+</body>
+</html>

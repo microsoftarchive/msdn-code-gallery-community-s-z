@@ -1,0 +1,189 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Labels" Priority="800">
+	<Title>Auto-fit Axes Labels</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Automatically Fitting Axes Labels</ShortBlurb> 
+	<Content>AutoFitAxesLabels\AutoFitAxesLabels.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="Overview">AutoFitAxesLabels\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">AutoFitAxesLabels\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">AutoFitAxesLabels\vbcode.txt</InfoPage>
+	</InfoPages>
+	<Keywords>
+	<Keyword>Labels, Auto fitting</Keyword>
+	<Keyword>Auto fitting axes labels</Keyword>
+	<Keyword>Axis, Labels auto fitting</Keyword>
+  </Keywords>   
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Axis">
+	<Title>Auto Fit Axes Labels</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Automatically Fit Axes Labels</ShortBlurb> 
+	<Content>AutoFitAxesLabels\AutoFitAxesLabels.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="Overview">AutoFitAxesLabels\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">AutoFitAxesLabels\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">AutoFitAxesLabels\vbcode.txt</InfoPage>
+	</InfoPages>
+	<Keywords>
+	<Keyword>Labels, Auto fitting</Keyword>
+	<Keyword>Auto fitting axes labels</Keyword>
+	<Keyword>Axis, Labels auto fitting</Keyword>
+  </Keywords>    
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Labels" Priority="200">
+	<Title>Axis and Data Point Labels</Title> 
+	<Thumbnail>MultilineLabels\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Axis and Data Point Labels</ShortBlurb> 
+	<Content>MultilineLabels\MultilineLabels.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">MultilineLabels\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">MultilineLabels\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Labels, Multiline</Keyword>
+    <Keyword>Multiline Labels</Keyword>
+  </Keywords>  
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Labels" Priority="500">
+	<Title>Formatting Labels</Title> 
+	<Thumbnail>LabelsFormatting\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Formatting Labels</ShortBlurb> 
+	<Content>LabelsFormatting\LabelsFormatting.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LabelsFormatting\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LabelsFormatting\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Data Label, Formatting</Keyword>
+	<Keyword>Labels, Formatting</Keyword>
+	<Keyword>Axis, Labels formatting</Keyword>
+	<Keyword>Formatting, Labels</Keyword>
+  </Keywords>  
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Labels" Priority="300">
+	<Title>Axis Labels Interval</Title> 
+	<Thumbnail>AxisLabelsInterval\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Axis Labels Interval</ShortBlurb> 
+	<Content>AxisLabelsInterval\AxisLabelsInterval.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">AxisLabelsInterval\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">AxisLabelsInterval\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	<Keyword>Labels, Interval</Keyword>
+	<Keyword>Interval, Axis labels</Keyword>
+	<Keyword>Axis, Labels interval</Keyword>
+  </Keywords> 
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Labels" Priority="400">
+	<Title>Axis Labels Font Styles</Title> 
+	<Thumbnail>LabelsTextStyle\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Axis Labels Font Styles</ShortBlurb> 
+	<Content>LabelsTextStyle\LabelsTextStyle.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LabelsTextStyle\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LabelsTextStyle\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Axis, Labels Font Style</Keyword>
+	</Keywords> 
+	</SampleConfig>
+	
+
+	<SampleConfig ParentNodeID = "Labels" Priority="600">
+	<Title>Using Keywords in Labels</Title> 
+	<Thumbnail>LabelsKeywords\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Keywords in Labels</ShortBlurb> 
+	<Content>LabelsKeywords\LabelsKeywords.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LabelsKeywords\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LabelsKeywords\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Keywords</Keyword>
+    <Keyword>Data Label, Keywords</Keyword>
+	<Keyword>Labels, Keywords</Keyword>
+	<Keyword>Formatting, Labels Keywords</Keyword>
+  </Keywords>   
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Labels" Priority="900">
+	<Title>Custom Axis Labels</Title> 
+	<Thumbnail>CustomLabels\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Custom Axis Labels</ShortBlurb> 
+	<Content>CustomLabels\CustomLabels.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">CustomLabels\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">CustomLabels\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	<Keyword>Labels, Custom</Keyword>
+	<Keyword>Axis, Custom labels</Keyword>
+	<Keyword>Custom axis labels</Keyword>
+	</Keywords> 
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Axis">
+	<Title>Custom Axis Labels</Title> 
+	<Thumbnail>CustomLabels\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Creating Custom Axis Labels</ShortBlurb> 
+	<Content>CustomLabels\CustomLabels.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">CustomLabels\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">CustomLabels\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	<Keyword>Labels, Custom</Keyword>
+	<Keyword>Axis, Custom labels</Keyword>
+	<Keyword>Custom axis labels</Keyword>
+	</Keywords>  
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Labels" Priority="700">
+	<Title>Labels Next To Axis</Title> 
+	<Thumbnail>LabelsNextToAxis\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Displaying Labels Next To Axis</ShortBlurb> 
+	<Content>LabelsNextToAxis\LabelsNextToAxis.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LabelsNextToAxis\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LabelsNextToAxis\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Axis, Markings Next to Axis</Keyword>
+    <Keyword>Grid Lines, Next to Axis</Keyword>
+    <Keyword>Tick Marks, Next to Axis</Keyword>
+	<Keyword>Labels, Next to Axis</Keyword>
+  </Keywords>  
+	</SampleConfig>
+
+
+
+
+</SampleConfigs>

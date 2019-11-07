@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:Banner,2:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Shared/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;hashKey=43176693215A318AD0042E0718980CBA" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/5bc88194-d588-46d6-8941-7996e5ba8f96Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SignalR con VB - Ejemplo Practico y Simple</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SignalR con VB - Ejemplo Practico y Simple</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnolog&#237;as">Tecnolog&#237;as</label>
+                        <div id="Tecnolog&#237;as">
+                            jQuery, Javascript, Visual Basic .NET, HTML5, SignalR 2.0
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Temas">Temas</label>
+                        <div id="Temas">
+                            SignalR, Notificaciones
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">es-ES</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">&#218;ltima actualizaci&#243;n</label>
+                    <div id="LastUpdated">06/06/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licencia</label>
+                    <div id="License">
+                        <a href="license.rtf">Licencia de Apache, versi&#243;n 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/SiganIR-con-VB-Ejemplo-af9205e9">Vea este ejemplo en l&#237;nea</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiar c&#243;digo';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduccion</h1>
+<div class="OutlineElement Ltr SCX161946830">
+<p class="Paragraph SCX161946830"><span class="TextRun SCX161946830">Cuando busque como realizar un ejemplo de esta tecnolog&iacute;a o m&eacute;todo (SignaIR) me toco buscar mucho, sobre todo por que no es tan com&uacute;n en VB.NET o dif&iacute;cil
+ de comprender.</span><span class="EOP SCX161946830">&nbsp;</span></p>
+</div>
+<div class="OutlineElement Ltr SCX161946830">
+<p class="Paragraph SCX161946830"><span class="TextRun SCX85310167">Este ejemplo consta de 2 paginas para notificar de una a otra desde eventos cliente&nbsp;</span><span class="TextRun SCX85310167"><span class="SpellingError SCX85310167">SignaIR</span><span class="NormalTextRun SCX85310167">,
+ adem&aacute;s pueden probar como notificar a usuarios espec&iacute;ficos.</span></span></p>
+</div>
+<div class="OutlineElement Ltr SCX161946830">
+<p class="Paragraph SCX161946830"><span class="TextRun SCX161946830">&nbsp;</span><span class="EOP SCX161946830">&nbsp;</span></p>
+</div>
+<div class="OutlineElement Ltr SCX161946830">
+<p class="Paragraph SCX161946830"><span class="TextRun SCX161946830">Tambi&eacute;n</span><span class="TextRun SCX161946830"><span class="NormalTextRun SCX161946830">&nbsp;se utiliza un una librer&iacute;a&nbsp;</span><span class="SpellingError SCX161946830">javascript</span><span class="NormalTextRun SCX161946830">&nbsp;para
+ emular&nbsp;</span></span><span class="TextRun SCX161946830"><span class="NormalTextRun SCX161946830">notificaciones como mensajes emergentes, este&nbsp;</span><span class="SpellingError SCX161946830">plugin</span><span class="NormalTextRun SCX161946830">&nbsp;permite
+ tener diferentes tipos de notificaciones (Error, Decisi&oacute;n, Exitoso</span></span><span class="TextRun SCX161946830">) y en diferentes posiciones de la pantalla.</span></p>
+</div>
+<p>&nbsp;</p>
+<h1><span>Ejemplo</span></h1>
+<p><em><span class="TextRun SCX256468429"><span class="NormalTextRun SCX256468429">Este ejemplo requiere de Visual Studio 2013 y de la librer&iacute;as&nbsp;</span><span class="SpellingError SCX256468429">SignaIL,</span><span class="NormalTextRun SCX256468429">&nbsp;Notificaciones</span></span><span class="EOP SCX256468429">&nbsp;y
+ Jquery.</span></em></p>
+<p><span style="font-size:20px; font-weight:bold">Descripcion</span></p>
+<p><em><span class="NormalTextRun SCX114747066">Primero creamos un proyecto web simple y vac&iacute;o, luego con el administrador de paquetes o&nbsp;</span><span class="SpellingError SCX114747066">nugets</span><span class="NormalTextRun SCX114747066">&nbsp;agregamos&nbsp;</span><span class="SpellingError SCX114747066">SignaIR</span><span class="NormalTextRun SCX114747066">&nbsp;y&nbsp;</span><span class="SpellingError SCX114747066">Noty</span><span class="NormalTextRun SCX114747066">.</span></em></p>
+<p><em><img id="116342" src="description/SignaIR install.PNG" alt="" width="499" height="301">&nbsp;&nbsp;</em></p>
+<p><em><img id="116343" src="description/Noty Install.PNG" alt="" width="452" height="301"></em></p>
+<p>&nbsp;</p>
+<p><span class="TextRun SCX225770693">Despu&eacute;s</span><span class="TextRun SCX225770693">&nbsp;de esto el proyecto generar un error el cual fue un poco dif&iacute;cil de corregir hasta que al fin entend&iacute; que tenia que agregar una clase con
+ el nombre de Startup y con el siguiente codigo:</span><span class="EOP SCX225770693">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">Imports System
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Net.aspx"  title="Auto generated link to System.Net">System.Net</a>
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Web.aspx"  title="Auto generated link to System.Web">System.Web</a>
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/System.Web.Routing.aspx"  title="Auto generated link to System.Web.Routing">System.Web.Routing</a>
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/Microsoft.AspNet.SignalR.aspx"  title="Auto generated link to Microsoft.AspNet.SignalR">Microsoft.AspNet.SignalR</a>
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/Microsoft.Owin.Security.aspx"  title="Auto generated link to Microsoft.Owin.Security">Microsoft.Owin.Security</a>
+Imports Owin
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/Microsoft.Owin.aspx"  title="Auto generated link to Microsoft.Owin">Microsoft.Owin</a>
+
+&lt;Assembly: OwinStartup(GetType(NotificacionesSignalr.Startup))&gt; 
+Namespace NotificacionesSignalr
+    Public Class Startup
+        Public Sub Configuration(app As IAppBuilder)
+            ' Any connection or hub wire up and configuration should go here
+            app.MapSignalR()
+        End Sub
+    End Class
+End Namespace
+</pre>
+<div class="preview">
+<pre class="vb"><span class="visualBasic__keyword">Imports</span>&nbsp;System&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;System.Collections.Generic&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;System.Linq&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;System.Net&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;System.Threading.Tasks&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;System.Web&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;System.Web.Routing&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;Microsoft.AspNet.SignalR&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;Microsoft.Owin.Security&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;Owin&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;Microsoft.Owin&nbsp;
+&nbsp;
+&lt;Assembly:&nbsp;OwinStartup(<span class="visualBasic__keyword">GetType</span>(NotificacionesSignalr.Startup))&gt;&nbsp;&nbsp;
+<span class="visualBasic__keyword">Namespace</span>&nbsp;NotificacionesSignalr&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;Startup&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;Configuration(app&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;IAppBuilder)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;Any&nbsp;connection&nbsp;or&nbsp;hub&nbsp;wire&nbsp;up&nbsp;and&nbsp;configuration&nbsp;should&nbsp;go&nbsp;here</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.MapSignalR()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;
+<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Namespace</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p><span class="TextRun SCX52483283">Despu&eacute;s</span><span class="TextRun SCX52483283">&nbsp;creo la clase de mensajes:</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/Microsoft.AspNet.SignalR.aspx"  title="Auto generated link to Microsoft.AspNet.SignalR">Microsoft.AspNet.SignalR</a>
+Public Class Notification
+    Private _mensaje As String
+    Private _user As String
+    Public Property mesanje As String
+        Get
+            Return _mensaje
+        End Get
+        Set(value As String)
+            _mensaje = value
+        End Set
+    End Property
+    Public Property user As String
+        Get
+            Return _user
+        End Get
+        Set(value As String)
+            _user = value
+        End Set
+    End Property
+End Class
+</pre>
+<div class="preview">
+<pre class="vb"><span class="visualBasic__keyword">Imports</span>&nbsp;Microsoft.AspNet.SignalR&nbsp;
+<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;Notification&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;_mensaje&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;_user&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;mesanje&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;_mensaje&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Set</span>(value&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_mensaje&nbsp;=&nbsp;value&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Set</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;user&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;_user&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Set</span>(value&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_user&nbsp;=&nbsp;value&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Set</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Property</span>&nbsp;
+<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;Por ultimo creamos la clase que se encarga de notificar MessageHub:</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">Imports <a class="libraryLink" href="http://msdn.microsoft.com/es-ES/library/Microsoft.AspNet.SignalR.aspx"  title="Auto generated link to Microsoft.AspNet.SignalR">Microsoft.AspNet.SignalR</a>
+
+Public Class MessageHub
+    Inherits Hub
+
+    Public Sub senmessage(Message As String, user As String)
+        Me.Clients.All.receivenotification(Message, user)
+    End Sub
+    Public Function receivenotification(Message As String) As String
+        Return Message
+    End Function
+    Public Sub Hello()
+        Clients.All.Hello()
+    End Sub
+
+End Class
+</pre>
+<div class="preview">
+<pre class="vb"><span class="visualBasic__keyword">Imports</span>&nbsp;Microsoft.AspNet.SignalR&nbsp;
+&nbsp;
+<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;MessageHub&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Inherits</span>&nbsp;Hub&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;senmessage(Message&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>,&nbsp;user&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.Clients.All.receivenotification(Message,&nbsp;user)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Function</span>&nbsp;receivenotification(Message&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>)&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Return</span>&nbsp;Message&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Function</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;Hello()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clients.All.Hello()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+<div class="endscriptcode">y ya el resto es html y javascript:</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden"> function algo(texto, type) {
+            noty({
+                text: texto,
+                layout: 'bottomRight',
+                maxVisible: 10, // you can set max visible notification for dismissQueue true option,
+                type: type, //success, error, warning, information, confir, alert
+                timeout: 10000 // delay for closing event. Set false for sticky notifications
+            });
+        }
+
+        $(function () {
+            $.connection.hub.start();
+            $(&quot;#button1&quot;).click(function () {
+                proxy.server.senmessage(document.getElementById('mesaje').value, document.getElementById('userenviar').value);
+            });
+
+        });
+
+        var proxy = $.connection.messageHub;
+        $(function () {
+            proxy.client.receivenotification = function (message, user) {
+                if (document.getElementById('user').value == user) {
+                    algo(message);
+                }
+            }
+            $.connection.hub.start().done();
+
+        });</pre>
+<div class="preview">
+<pre class="js">&nbsp;<span class="js__operator">function</span>&nbsp;algo(texto,&nbsp;type)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noty(<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text:&nbsp;texto,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout:&nbsp;<span class="js__string">'bottomRight'</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxVisible:&nbsp;<span class="js__num">10</span>,&nbsp;<span class="js__sl_comment">//&nbsp;you&nbsp;can&nbsp;set&nbsp;max&nbsp;visible&nbsp;notification&nbsp;for&nbsp;dismissQueue&nbsp;true&nbsp;option,</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type:&nbsp;type,&nbsp;<span class="js__sl_comment">//success,&nbsp;error,&nbsp;warning,&nbsp;information,&nbsp;confir,&nbsp;alert</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeout:&nbsp;<span class="js__num">10000</span>&nbsp;<span class="js__sl_comment">//&nbsp;delay&nbsp;for&nbsp;closing&nbsp;event.&nbsp;Set&nbsp;false&nbsp;for&nbsp;sticky&nbsp;notifications</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.connection.hub.start();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__string">&quot;#button1&quot;</span>).click(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proxy.server.senmessage(document.getElementById(<span class="js__string">'mesaje'</span>).value,&nbsp;document.getElementById(<span class="js__string">'userenviar'</span>).value);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">var</span>&nbsp;proxy&nbsp;=&nbsp;$.connection.messageHub;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proxy.client.receivenotification&nbsp;=&nbsp;<span class="js__operator">function</span>&nbsp;(message,&nbsp;user)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(document.getElementById(<span class="js__string">'user'</span>).value&nbsp;==&nbsp;user)&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;algo(message);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.connection.hub.start().done();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+</div>
+<h1><img id="116382" src="description/notificacion signair.png" alt="" width="657" height="459"></h1>
+<h1><span>Codigo Fuente</span></h1>
+<ul>
+<li><span>SignaIR</span> </li></ul>
+<h1>Mas Informacion</h1>
+<ul>
+<li>Si requieren mas informacion recuerden preguntar, tal ves le pueda ser de ayuda.
+</li></ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>

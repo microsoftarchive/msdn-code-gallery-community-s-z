@@ -1,0 +1,49 @@
+Imports System.Drawing.Text
+Imports System.Drawing.Imaging
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Chart1_PostPaint(ByVal sender As Object, ByVal e As ChartPaintEventArgs) 
+    ' Painting series object 
+    If TypeOf e.ChartElement Is Series Then 
+        ' Add custom painting only to the series with name "Series2" 
+        Dim series As Series = DirectCast(e.ChartElement, Series) 
+        If series.Name = "Series2" AndAlso series.Tag Is Nothing Then 
+            ' Find data point with maximum Y value 
+            Dim dataPoint As DataPoint = series.Points.FindMaxByValue() 
+            
+            ' Load bitmap from file 
+            Dim bitmap As System.Drawing.Image = Bitmap.FromFile(Me.Page.MapPath("logo.png")) 
+            
+            ' Set White color as transparent 
+            Dim attrib As New ImageAttributes() 
+            attrib.SetColorKey(Color.White, Color.White, ColorAdjustType.[Default]) 
+            
+            ' Calculates marker position depending on the data point X and Y values 
+            Dim imagePosition As RectangleF = RectangleF.Empty 
+            imagePosition.X = CSng(e.ChartGraphics.GetPositionFromAxis("Chart Area 1", AxisName.X, dataPoint.XValue)) 
+            imagePosition.Y = CSng(e.ChartGraphics.GetPositionFromAxis("Chart Area 1", AxisName.Y, dataPoint.YValues(0))) 
+            imagePosition = e.ChartGraphics.GetAbsoluteRectangle(imagePosition) 
+            imagePosition.Width = bitmap.Width 
+            imagePosition.Height = bitmap.Height 
+            imagePosition.Y -= bitmap.Height 
+            imagePosition.X -= bitmap.Width / 2 
+            
+            ' Draw image 
+            e.ChartGraphics.Graphics.DrawImage(bitmap, Rectangle.Round(imagePosition), 0, 0, bitmap.Width, bitmap.Height, _ 
+            GraphicsUnit.Pixel, attrib) 
+            
+            ' Add a custom map area in the coordinates of the image 
+            Dim rect As RectangleF = e.ChartGraphics.GetRelativeRectangle(imagePosition) 
+            
+            Dim area As New MapArea("Maximum Y value marker. Y = " + dataPoint.YValues(0), "http://www.microsoft.com", "target=""_blank""", [String].Empty, rect, Nothing) 
+            Chart1.MapAreas.Add(area) 
+            ' Dispose image object 
+            bitmap.Dispose() 
+            
+            series.Tag = True 
+        End If 
+    End If 
+End Sub 
+
+...

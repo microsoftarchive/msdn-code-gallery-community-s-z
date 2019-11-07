@@ -1,0 +1,61 @@
+using System.Data.OleDb;
+using System.Windows.Forms.DataVisualization.Charting;
+...
+ 
+private void PopulateData()
+{
+    // Prepare database connection and query strings
+    string fileNameString = "C:\\data\\chartdata.mdb";
+    string myConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString;
+    string mySelectQuery="SELECT * FROM DETAILEDSALES ORDER BY SaleDate";
+
+    // Open database connection
+    OleDbConnection myConnection = new OleDbConnection(myConnectionString);
+    OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+    myCommand.Connection.Open();
+
+    // Create a database reader	
+    OleDbDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+    // Data bind to the reader
+    chart1.Series["Sales"].Points.DataBindXY(myReader, "SaleDate", myReader, "Net");
+
+    // Close the reader and the connection
+    myReader.Close();
+    myConnection.Close();   
+
+    // Group series data points by interval.
+    string formula = "AVE, X:CENTER";
+
+    if(GroupingTypeList.Text == "Week")
+    {
+        chart1.DataManipulator.Group(formula, 1, IntervalType.Weeks, 
+            "Sales", "Grouped Sales");
+    }
+    else if(GroupingTypeList.Text == "2 Weeks")
+    {
+        chart1.DataManipulator.Group(formula, 2, IntervalType.Weeks, 
+            "Sales", "Grouped Sales");
+    }
+    else if(GroupingTypeList.Text == "Month")
+    {
+        chart1.DataManipulator.Group(formula, 1, IntervalType.Months, 
+            "Sales", "Grouped Sales");
+    }
+
+    // Change chart type of the grouped series
+    if(GroupingFormulaList.Text == "HiLoOpCl")
+    {
+        chart1.Series["Grouped Sales"].ChartType = SeriesChartType.Stock;
+    }
+    else if(GroupingFormulaList.Text == "HiLo")
+    {
+        chart1.Series["Grouped Sales"].ChartType = SeriesChartType.SplineRange;
+    }
+    else
+    {
+        chart1.Series["Grouped Sales"].ChartType = SeriesChartType.Column;
+    }
+}
+...
+

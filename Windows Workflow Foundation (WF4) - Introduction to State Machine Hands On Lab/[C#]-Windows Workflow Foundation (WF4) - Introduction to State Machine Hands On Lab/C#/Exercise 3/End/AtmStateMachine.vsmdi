@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestList name="Exercise 3" id="0579d6b0-5714-4e7a-975e-8c3199e1a4dc" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="fdad407d-e3d3-aa4a-c958-d1c8a017083c" name="EnterPinTriggerKeypadEnterToMainMenu" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="e11c99f1-df0a-9b55-be58-dc206872d75e" name="EnterPinTriggerTimeoutToRemoveCard" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="da2a84bf-6249-afb1-2ac3-4ec1fc3d7e46" name="EnterPinTriggerKeypadCancelToRemoveCard" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Exercise 4" id="512d7251-51b6-41b6-a48e-acab9959283e" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="3e3488c2-b979-ee2a-7af1-65d853b73a10" name="TransactionMenuToWithdraw" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="768dfd50-953b-52c6-3684-326eb5209297" name="TransactionMenuTimeout" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="6c4b2e06-f000-8748-0470-3e8af57ea32f" name="TransactionMenuKeypadCancel" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="f005b196-24b6-dfc3-29d6-00108a5b19fd" name="TransactionMenuToDeposit" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Exercise 2" id="6e729a94-ec1b-443d-b52a-ea7018a662bc" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="e722c158-cfb9-f9fd-0dfc-5a2e1355e218" name="InsertValidCard" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="f663e41b-c8d1-36fe-4a18-14c3c34b2ec3" name="InsertInvalidCard" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <RunConfiguration id="7cd79890-9f47-41b4-b3d1-95cf0eb74291" name="Local" storage="local.testsettings" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestList>
+  <TestList name="Exercise 1" id="b02af944-82d9-4dad-8a87-2db4606eb9c5" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="e44d6795-2567-fd8f-6377-4346d43873f3" name="PowerOnAtmScenario" storage="atmstatemachine.tests\bin\debug\atmstatemachine.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+</TestLists>

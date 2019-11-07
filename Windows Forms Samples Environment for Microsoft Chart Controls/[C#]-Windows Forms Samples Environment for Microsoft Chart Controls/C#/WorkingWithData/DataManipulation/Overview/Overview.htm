@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<LINK href="../../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<p>
+            Data can be manipulated by:</p>
+        <ul>
+            <li>Applying a statistical or financial formula.&nbsp;Depending on the type of formula 
+                being applied, new series of data can be created and existing series can be 
+                changed.</li>
+            <li>Merging or splitting series.&nbsp; </li>
+            <li>Exporting series.</li>
+            <li>Filtering series.</li>
+            <li>Grouping series.</li>
+            <li>Sorting series.</li>
+        </ul>
+        <h3>
+            Using Formulas</h3>
+        <p>
+            Microsoft Chart Control for .NET Framework provides two types of formulas: 
+            financial and statistical.</p>
+        <h4>
+            Financial Formulas</h4>
+        <blockquote dir="ltr">
+            <p>
+                The Chart control provides over&nbsp;thirty technical analysis formulas, such 
+                as&nbsp;moving averages, price indicators, volume indicators, oscillators, and 
+                forecasting formulas.</p>
+        </blockquote>
+        <h4>
+            Statistical&nbsp;Formulas</h4>
+        <blockquote dir="ltr">
+            <p>
+                Statistical formulas in the Chart control can be&nbsp;organized into&nbsp;four general 
+                groups: statistical tests, statistical distributions, basic statistical 
+                functions and utility functions.</p>
+        </blockquote>
+        <h3>
+            Splitting, Copying, and Merging</h3>
+        <blockquote dir="ltr">
+            <p>
+                <i>Splitting</i> refers to the&nbsp;copying of multiple Y values from a single source 
+                series to multiple destination series.&nbsp;The figure on the left shows a Bubble 
+                chart, which plots two Y values in a single series. The data is split into two 
+                different series and plotted in the figure on the right, and each series is 
+                plotted using a different chart type (Column and Line).</p>
+            <p>
+                <img alt="Filtering Data" border="0" src="BeforeSplitting.PNG" /><em><img 
+                    alt="Filtering Data" border="0" src="AfterSplitting.PNG" /></em></p>
+            <p>
+                <i>Merging</i> refers to&nbsp;copying values from multiple source series to populate 
+                one destination series. In other words, it is the reverse of data splitting.</p>
+            <p>
+                <i>Copying </i>refers to&nbsp;all other copy operations.</p>
+        </blockquote>
+        <h3 dir="ltr">
+            Exporting Series</h3>
+        <blockquote dir="ltr">
+            <p>
+                When a series is <i>exported</i>, the X and Y values of all data points in the 
+                series are persisted in an in-memory cache, where they can be used for:</p>
+            <ul dir="ltr">
+                <li>
+                    <div style="MARGIN-RIGHT: 0px">
+                        Data binding.</div>
+                </li>
+                <li>
+                    <div style="MARGIN-RIGHT: 0px">
+                        Saving into the file or stream.</div>
+                </li>
+                <li>
+                    <div style="MARGIN-RIGHT: 0px">
+                        Converting to a different format, like XML.</div>
+                </li>
+                <li>
+                    <div style="MARGIN-RIGHT: 0px">
+                        Editing.</div>
+                </li>
+            </ul>
+        </blockquote>
+        <h3>
+            Filtering Series</h3>
+        <blockquote dir="ltr">
+            <p>
+                Data is <i>filtered </i>on a series-by-series basis. When a series is filtered, 
+                its data points are either removed from the series&nbsp;or marked as empty. The 
+                points that are filtered depends on the specified filtering criteria.</p>
+            <p>
+                Filtering allows for the display of only useful data to chart readers. The 
+                figure below shows data points below the value of 400 removed after the series 
+                is filtered.</p>
+            <p>
+                <img alt="Filtering Data" border="0" src="FilteredSeries.png" /><br />
+            </p>
+        </blockquote>
+        <h3 dir="ltr">
+            Grouping Series</h3>
+        <blockquote dir="ltr">
+            <p>
+                <i>Grouping</i> replaces a sequence of data points in a series with one grouped 
+                point. The X and&nbsp;Y values of each grouped point are calculated using a specified 
+                formula and&nbsp;the original points&#39; values.
+            </p>
+            <p>
+                Grouping is especially useful when a large data set makes it difficult to&nbsp;spot 
+                trends in a chart.</p>
+        </blockquote>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+
+  <style parent="Theme.AppCompat.Light.NoActionBar" name="MyTheme">
+
+    <item name="windowNoTitle">true</item>
+
+    <!--We will be using the toolbar so no need to show ActionBar-->
+
+
+    <item name="windowActionBar">false</item>
+
+    <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
+
+
+    <!-- colorPrimary is used for the default action bar background -->
+
+
+    <item name="colorPrimary">#3a1972 </item>
+
+    <!-- colorPrimaryDark is used for the status bar -->
+
+
+    <item name="colorPrimaryDark">#3a1972 </item>
+
+    <!-- colorAccent is used as the default value for colorControlActivated which is used to tint widgets -->
+
+
+    <item name="colorAccent">#FF4081</item>
+
+    <!-- You can also set colorControlNormal, colorControlActivated colorControlHighlight and colorSwitchThumbNormal. -->
+
+
+  </style>
+
+</resources>

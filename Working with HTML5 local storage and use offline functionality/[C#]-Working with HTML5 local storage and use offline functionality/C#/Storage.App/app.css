@@ -1,0 +1,14 @@
+button {
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+div {
+	margin-bottom: 10px;
+}
+
+#status {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}

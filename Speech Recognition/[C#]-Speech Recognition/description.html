@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/4f0db316-e33e-4e5c-b975-0f6de635f8e4Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Speech Recognition</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Speech Recognition</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, WPF, XAML, .NET Framework, System.Speech Namespace, Speech
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Speech recognition, Speech Synthesis, Speech, speech synthesizer
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/14/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Speech-Recognition-7a66e0a1">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span>Speech Recognition is a reverse process of Speech Synthesis that converts speech to text. There are two major applications for speech recognition. The first application is people who are for some reason unable to type but can speak to the system and
+ system will type text for them. For example, in endoscopic applications a surgeon can evaluate the patient and speak to the system. While surgeon is doing the evaluation, his hands are buys but he can speak. The second application is speech command enabled
+ applications where instead of using mouse, we can use voice to run and execute an application commands.</span><br>
+<br>
+<span>Windows Vista and Window 7 comes with built-in Speech Recognition controls that allow you to setup speech related options such as voice settings, microphone, and other voice recognition settings. Let's take a quick look at what Control Panel has to offer
+ related to Speech Recognition.</span></p>
+<h1>Before Running the Application configure the Speech Recognition:</h1>
+<p><span>Go to Control Panel and open Speech Recognition Options. You will see a dialog looks like Figure 1.</span></p>
+<p><span><img id="104518" src="description/image1.gif" alt="" width="628" height="472"><br>
+</span></p>
+<p><span><span>As you can see from Figure 1, there are options to start speech recognition, setup your microphone, take speech tutorial, train your computer, and open reference card. You may want to click on these options one by one to understand Speech Recognition
+ better.</span><br>
+<br>
+<span>If you click on first link Start Speech Recognition, it will activate speech recognition on the system and system will start listening sounds around your computer.</span><br>
+<br>
+<span>Next option is Set up Microphone. This option allows you to tell system what microphone to use if you have more than one. Otherwise system will use default microphone.</span><br>
+<br>
+<span>Next option Take Speech Tutorial is a step by step tutorial that teaches you how to use various system controls.</span><br>
+<br>
+<span>Next option, Train your computer to better understand is very important. Before you want build and test your application, I recommend you use this option and follow step by steps of the wizard. This wizard will understand your voice and ensures the accuracy
+ of commands you sends to the system. If you do not train your computer for your voice, computer may not understand your command properly.</span><br>
+<br>
+<span>The component that is responsible for controlling and managing speech recognition is called Windows Desktop Speech Technology Recognition Engine (SR Engine).</span><br>
+<br>
+<span>When you build a Speech Recognition application and you do not setup microphone and voice settings, system will launch wizards and it will ask you to setup these settings. On Windows Vista machine, when first time you will use its and some Speech Recognition
+ controls, you will notice a Windows application like figure 2.</span></span></p>
+<p><span><span><img id="104519" src="description/Image2.gif" alt="" width="330" height="110"></span></span></p>
+<p><span>That tells me that SR Engine is ready. We just need to enable this by saying first command start listening.&nbsp;</span><br>
+<br>
+<span>If you right click on Speech Recognition control, you will see various options that allow you to turn speech recognition on, off and put it in sleep mode as you see in Figure 3.</span></p>
+<p><img id="104520" src="description/image3.gif" alt="" width="357" height="407"></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

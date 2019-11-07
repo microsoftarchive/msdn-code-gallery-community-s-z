@@ -1,0 +1,40 @@
+﻿<Page x:Class="Microsoft.Workflow.Explorer.Views.WorkflowsSummaryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:c="clr-namespace:Microsoft.Workflow.Explorer.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+      Title="Workflows">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListBox 
+            Name="WorkflowsListBox"
+            Grid.Row="0"
+            ItemsSource="{Binding WorkflowCollection.Workflows}"
+            SelectedValue="{Binding WorkflowCollection.SelectedWorkflow, Mode=TwoWay}"
+            Margin="10,10,10,0"/>
+        <Grid Grid.Row="1" Margin="10" DataContext="{Binding WorkflowCollection.SelectedWorkflow}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Command="{Binding ShowRootActivityCommand}" c:MetroButtonProperties.Label="Root Activity" c:MetroButtonProperties.ContentFontSize="16" Content="{Binding ActivityPath}" Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource MetroButton}" Background="{StaticResource MetroButtonPurple}" Margin="5" Height="80"/>
+            <Button Command="{Binding ShowInstancesCommand}" c:MetroButtonProperties.Label="Instances" Content="{Binding InstanceCollection.InstanceCount}" Grid.Row="1" Grid.Column="0" Style="{StaticResource MetroButton}" Background="{StaticResource MetroButtonBlue}" Margin="5" Height="90"/>
+            <Label c:MetroButtonProperties.Label="Last Modified" Content="{Binding LastModified}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource MetroLabel}" Background="{StaticResource MetroButtonGreen}" Margin="5" Height="90"/>
+            <Button Command="{Binding ShowExternalVariablesCommand}" c:MetroButtonProperties.Label="External Variables" Content="{Binding ExternalVariableCount}" Grid.Row="2" Grid.Column="0" Style="{StaticResource MetroButton}" Background="{StaticResource MetroButtonRed}" Margin="5" Height="90"/>
+            <Button Command="{Binding ShowConfigurationCommand}" c:MetroButtonProperties.Label="" Content=".config" Grid.Row="2" Grid.Column="1" Style="{StaticResource MetroButton}" Background="{StaticResource MetroButtonPurple}" Margin="5" Height="90"/>
+            <Button Command="{Binding ShowMetadataCommand}" c:MetroButtonProperties.Label="Metadata" Content="{Binding MetadataCount}" Grid.Row="2" Grid.Column="2" Style="{StaticResource MetroButton}" Background="{StaticResource MetroButtonBrown}" Margin="5" Height="90"/>
+        </Grid>
+    </Grid>
+</Page>

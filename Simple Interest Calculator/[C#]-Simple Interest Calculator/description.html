@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Simple Interest Calculator</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Simple Interest Calculator</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            desktop
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/14/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1><span style="font-size:small">Introduction</span></h1>
+<h1><span style="font-size:small">According to wikipedia, &quot;<strong>Interest</strong>&nbsp;is a&nbsp;fee&nbsp;paid by a borrower of&nbsp;assets&nbsp;to the owner as a form of compensation for the use of the assets. It is most commonly the price paid for the
+ use of borrowed money,&nbsp;or money earned by deposited funds.</span></h1>
+<p><span style="font-size:small">When money is borrowed, interest is typically paid to the lender as a percentage of the&nbsp;principal, the amount owed to the lender<br>
+</span></p>
+<p><span style="font-size:small"><em>This is a simple c# application which helps user to calculate the simple interest and the total amount. Simple Interest is the calculated based on the Rate Time and Principal entered by the user.&nbsp;</em></span></p>
+<p><span style="font-size:small">After accepting the values for Principal, Time an Interest from user it&rsquo;s time to calculate simple interest and total amount.</span></p>
+<p><span style="font-size:small">Simple interest (i) = (Principal (p) * Time (t) * Rate(r))/100</span></p>
+<p><span style="font-size:small">Amount (a) = Interest (i) &#43;Principal (p)</span></p>
+<p><span style="font-size:small"><em><br>
+</em></span></p>
+<p><span style="font-size:small"><img id="129699" src="description/Simple interest calculator.PNG" alt="" width="421" height="295"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size:small; font-weight:bold">Description</span></p>
+<p><span style="font-size:small"><em>This application is easy to use and user friendly. using this sample is very easy all you need to do is debug the application and run. A form will appear where user can input the required values and calculate Simple Interest
+ and total amount at a time.</em>This application calculates simple interest and amount based on the value provided by user for&nbsp;principal, time, rate.</span></p>
+<p><span style="font-size:small">After providing following Input:</span></p>
+<p><span style="font-size:small">Principal=5000</span></p>
+<p><span style="font-size:small">Time=5 (in years)</span></p>
+<p><span style="font-size:small">Rate= 5 (in %)</span></p>
+<p><span style="font-size:small">You will get the output as:</span></p>
+<p><span style="font-size:small">Interest = 1250</span></p>
+<p><span style="font-size:small">Amount=6250</span></p>
+<p><span style="font-size:small"><img id="129702" src="description/Simple interest calculator result.PNG" alt="" width="419" height="453"></span></p>
+<p><span style="font-size:small"><em>You can include <em><strong>code snippets,&nbsp;</strong></em><strong>images</strong>,
+<strong>videos</strong>. &nbsp;&nbsp;</em></span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span style="font-size:small">C#</span></div>
+<div class="pluginLinkHolder"><span style="font-size:small"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></span></div>
+<span class="hidden" style="font-size:small">csharp </span>
+<pre class="hidden"><span style="font-size:small">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.ComponentModel.aspx"  title="Auto generated link to System.ComponentModel">System.ComponentModel</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;
+
+namespace Simple_Interest_calculator
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        float interest, Amount;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
+            if (textBox1.Text != &quot;&quot; &amp; textBox2.Text != &quot;&quot; &amp; textBox3.Text != &quot;&quot;)
+            {
+                interest = Convert.ToSingle(textBox1.Text) * Convert.ToSingle(textBox2.Text) * Convert.ToSingle(textBox3.Text);
+                Amount = interest &#43; Convert.ToSingle(textBox1.Text);
+                MessageBox.Show(&quot; simple interest =&quot; &#43; &quot; &quot; &#43; interest &#43; &quot; &quot; &#43; &quot;Amount =&quot; &#43; Amount);
+            }
+            else
+            {
+                MessageBox.Show(&quot;please enter the value&quot;);
+            }
+            
+
+        }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
+</span></pre>
+<div class="preview">
+<pre class="csharp"><span style="font-size:small"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.ComponentModel.aspx"  title="Auto generated link to System.ComponentModel">System.ComponentModel</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Threading.Tasks.aspx"  title="Auto generated link to System.Threading.Tasks">System.Threading.Tasks</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/https://msdn.microsoft.com/en-US/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;Simple_Interest_calculator&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;Form1&nbsp;:&nbsp;Form&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Form1()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitializeComponent();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">float</span>&nbsp;interest,&nbsp;Amount;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;button1_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(textBox1.Text&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>&nbsp;&amp;&nbsp;textBox2.Text&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>&nbsp;&amp;&nbsp;textBox3.Text&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interest&nbsp;=&nbsp;Convert.ToSingle(textBox1.Text)&nbsp;*&nbsp;Convert.ToSingle(textBox2.Text)&nbsp;*&nbsp;Convert.ToSingle(textBox3.Text);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amount&nbsp;=&nbsp;interest&nbsp;&#43;&nbsp;Convert.ToSingle(textBox1.Text);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;&nbsp;simple&nbsp;interest&nbsp;=&quot;</span>&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;interest&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;<span class="cs__string">&quot;Amount&nbsp;=&quot;</span>&nbsp;&#43;&nbsp;Amount);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;please&nbsp;enter&nbsp;the&nbsp;value&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;textBox1_TextChanged(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;button2_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.Close();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</span></pre>
+</div>
+</div>
+</div>
+<ul>
+</ul>
+<h1><span style="font-size:small">More Information</span></h1>
+<p><span style="font-size:small"><em>For more information ,discussion and other application samples and source code visit
+<a title="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/Shrijanshil.com" href="https://code.msdn.microsoft.com/Simple-Interest-Calculator-7d8bc8d5/Shrijanshil.com" >www.shrijanshil.com</a></em></span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

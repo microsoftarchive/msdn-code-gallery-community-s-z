@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="StarterKit.DirectXPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StarterKit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="HudCounter" TargetType="TextBlock">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="64"/>
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+
+    <SwapChainPanel x:Name="swapChainPanel" Tapped="OnTapped">
+        <Border VerticalAlignment="Top" HorizontalAlignment="Center" Padding="10" Background="Black">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="HitCountCube" Text="0" Style="{StaticResource HudCounter}"/>
+                <TextBlock x:Name="HitCountSphere" Text="0" Style="{StaticResource HudCounter}"/>
+
+                <TextBlock x:Name="HitCountTeapot" Text="0" Style="{StaticResource HudCounter}" Margin="5" FontSize="55"/>
+
+                <TextBlock x:Name="HitCountCone" Text="0" Style="{StaticResource HudCounter}"/>
+                <TextBlock x:Name="HitCountCylinder" Text="0" Style="{StaticResource HudCounter}"/>
+            </StackPanel>
+        </Border>
+    </SwapChainPanel>
+
+    <Page.BottomAppBar>
+        <AppBar Padding="10,0,10,0">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <AppBarButton Label="Previous Color"
+                                  AutomationProperties.Name="Previous Color"
+                                  AutomationProperties.AutomationId="PreviousAppBarButton"
+                                  Icon="Previous"
+                                  Click="OnPreviousColorPressed"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <AppBarButton Label="Next Color"
+                                  AutomationProperties.Name="Next Color"
+                                  AutomationProperties.AutomationId="NextAppBarButton"
+                                  Icon="Next"
+                                  Click="OnNextColorPressed"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

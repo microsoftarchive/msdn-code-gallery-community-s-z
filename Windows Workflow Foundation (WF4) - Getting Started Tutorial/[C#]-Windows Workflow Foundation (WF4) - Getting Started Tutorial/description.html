@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=1AE70879656240D353B07D345ADABB04" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=4011E3BC67229AD60CF6140717B1CABE" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Windows Workflow Foundation (WF4) - Getting Started Tutorial</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Windows Workflow Foundation (WF4) - Getting Started Tutorial</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows Workflow Foundation, WF4
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Flowchart Workflow, State Machine Workflow, Sequential Workflow, Workflow Hosting
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/25/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>This project is a completed version of steps 1-3 of the <a href="http://go.microsoft.com/fwlink/?LinkId=188591">
+WF4 Getting Started Tutorial</a>.</p>
+<p>(For a WF45 version of the tutorial,&nbsp;see <a href="http://aka.ms/wf45gettingstarted">
+WF45 Getting Started Tutorial</a>.)</p>
+<p>Step 1 of the tutorial, <a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://msdn.microsoft.com/en-us/library/dd489453.aspx">
+How to: Create an Activity</a>, demonstrates how to create a simple activity by using code to implement its execution logic and an activity whose implementation is defined by using other activities.</p>
+<p><div style="background:#FFFFCC;border:dotted 1px #FF0000;width:350px;height:300px;padding:10px;"><a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://i1.code.msdn.s-msft.com/windows-workflow-164557c3/image/file/23973/1/howtocreateanactivityfb.wmv">https://i1.code<wbr />.msdn.s-msft.co<wbr />m/windows-workf<wbr />low-164557c3/im<wbr />age/file/23973/<wbr />1/howtocreatean<wbr />activityfb.wmv</a></div>
+</p>
+<p><a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://i1.code.msdn.s-msft.com/windows-workflow-164557c3/image/file/23973/1/howtocreateanactivityfb.wmv">Download the video</a></p>
+<p>&nbsp;</p>
+<p>Step 2 of the tutorial, <a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://msdn.microsoft.com/en-us/library/dd489437.aspx">
+How to: Create a Workflow</a>, demonstrates how to create a workflow using either a Flowchart workflow, a Sequential workflow, or a State Machine workflow, using built-in activities and the custom activities from the first step in the tutorial.</p>
+<p><div style="background:#FFFFCC;border:dotted 1px #FF0000;width:350px;height:300px;padding:10px;"><a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://i1.code.msdn.s-msft.com/windows-workflow-164557c3/image/file/23974/1/how%20to%20create%20a%20flowchart%20workflow.wmv">https://i1.code<wbr />.msdn.s-msft.co<wbr />m/windows-workf<wbr />low-164557c3/im<wbr />age/file/23974/<wbr />1/how%20to%20cr<wbr />eate%20a%20flow<wbr />chart%20workflo<wbr />w.wmv</a></div>
+</p>
+<p><a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://i1.code.msdn.s-msft.com/windows-workflow-164557c3/image/file/23974/1/how%20to%20create%20a%20flowchart%20workflow.wmv">Download the video</a></p>
+<p><div style="background:#FFFFCC;border:dotted 1px #FF0000;width:350px;height:300px;padding:10px;"><a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://i1.code.msdn.s-msft.com/windows-workflow-164557c3/image/file/23976/1/statemachinegettingstartedtutorialfb.wmv">https://i1.code<wbr />.msdn.s-msft.co<wbr />m/windows-workf<wbr />low-164557c3/im<wbr />age/file/23976/<wbr />1/statemachineg<wbr />ettingstartedtu<wbr />torialfb.wmv</a></div>
+</p>
+<p><a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://i1.code.msdn.s-msft.com/windows-workflow-164557c3/image/file/23976/1/statemachinegettingstartedtutorialfb.wmv">Download the video</a></p>
+<p>Step 3 of the tutorial, <a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://msdn.microsoft.com/en-us/library/dd489463.aspx">
+How to: Run a Workflow</a>, demonstrates how to host a workflow using&nbsp;<a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://msdn.microsoft.com/en-us/library/system.activities.workflowapplication.aspx">WorkflowApplication</a>. It shows how to pass data into a workflow when starting the workflow,
+ how to retrieve data from a completed workflow, and how to pass data into a running workflow using bookmarks.</p>
+<p><div style="background:#FFFFCC;border:dotted 1px #FF0000;width:350px;height:300px;padding:10px;"><a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://i1.code.msdn.s-msft.com/windows-workflow-164557c3/image/file/23975/1/how%20to%20run%20a%20workflow.wmv">https://i1.code<wbr />.msdn.s-msft.co<wbr />m/windows-workf<wbr />low-164557c3/im<wbr />age/file/23975/<wbr />1/how%20to%20ru<wbr />n%20a%20workflo<wbr />w.wmv</a></div>
+</p>
+<p><a href="https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://code.msdn.microsoft.com/Windows-Workflow-164557c3/https://i1.code.msdn.s-msft.com/windows-workflow-164557c3/image/file/23975/1/how%20to%20run%20a%20workflow.wmv">Download the video</a></p>
+<p>There are two versions of the completed tutorial in the zip file for this code project:</p>
+<p>GettingStartedTutorial.sln<br>
+==========================<br>
+This version of the project is for folks that have <a href="http://go.microsoft.com/fwlink/?LinkID=215092">
+Update 4.0.1 for Microsoft .NET Framework 4</a> installed. It demonstrates the Getting Started Tutorial using<br>
+State Machine, Flowchart and Sequential workflows.</p>
+<p>For more information on the Platform Update including instructions for installing<br>
+it, see:&nbsp;<a href="http://go.microsoft.com/fwlink/?LinkID=215092">Update 4.0.1 for Microsoft .NET Framework 4</a></p>
+<p>WithoutStateMachine\GettingStartedTutorial.sln<br>
+==============================================<br>
+This version of the project is for folks that do not have <a href="http://go.microsoft.com/fwlink/?LinkID=215092">
+Update 4.0.1 for Microsoft .NET Framework 4</a> installed (and therefore do not have state machine functionality). It<br>
+demonstrates the Getting Started Tutorial using Flowchart and Sequential workflows.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "CircularCharts">
+	<Title>Radar Chart</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Radar Chart</ShortBlurb> 
+	<Content>RadarChart.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Chart type, Radar</Keyword>
+      <Keyword>Radar chart</Keyword>
+      <Keyword>Data Label, Radar labels style</Keyword>
+    </Keywords>
+	</SampleConfig>
+	
+		
+
+</SampleConfigs>

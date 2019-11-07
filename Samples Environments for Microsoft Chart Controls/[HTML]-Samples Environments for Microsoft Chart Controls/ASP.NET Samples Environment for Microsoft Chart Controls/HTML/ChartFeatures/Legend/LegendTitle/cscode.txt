@@ -1,0 +1,24 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set the legend title text
+	chart1.Legends["Default"].Title = "Chart";
+	
+	// Set the legend title to Black
+	chart1.Legends["Default"].ForeColor = Color.Black;
+	
+	// Set the alignment of the legend title
+	chart1.Legends["Default"].TextAlignment = StringAlignment.Center;
+	
+	// Set the title separator type
+	chart1.Legends["Default"].TitleSeparator = LegendSeparatorStyle.Line;
+	
+	// Set the color of the title separator
+	chart1.Legends["Default"].TitleSeparatorColor = Color.Black;
+		
+	// Set docking of the legend title
+	chart1.Legends["Default"].Docking = LegendDocking.Right;
+}
+...

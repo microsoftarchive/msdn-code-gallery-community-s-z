@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "JapanCharts">
+  <Title>Kagi Chart</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Kagi Chart</ShortBlurb> 
+  <Content>KagiChart.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+      <Keyword>Chart type, Kagi</Keyword>
+      <Keyword>Kagi chart</Keyword>
+      <Keyword>Reversal Amount, Kagi</Keyword>
+    </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

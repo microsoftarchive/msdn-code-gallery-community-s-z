@@ -1,0 +1,63 @@
+﻿.subMenu h1 {
+    font-size: 36px;
+}
+a, a:link, a:visited {
+    color: #005FB7;
+}
+
+#projectPage #Collections .bevelButton
+{
+    background-color: #F8F8F8;
+    color: #0066DD;
+    border: 1px solid #707070;
+}
+
+.internav .lastChild, .internav .lastChild:hover {
+    background: transparent url('http://galchameleon.redmond.corp.microsoft.com/contentservice/6a24b0d1-2a8b-4a3d-81f1-9f9c00c6a0e1/green-arrow.png') right center no-repeat!important;
+    text-transform: lowercase !important;
+    font-size: 22px !important;
+    float: right !important;
+    padding: 2px 40px 4px 2px !important;
+    margin: 0px 12px 0px 12px !important;
+    margin-right: 25px !important;
+    margin-top: 15px !important;
+    font-weight: normal !important;
+}
+
+.itemRow a.officialMicrosoftLabel
+{
+    color: #ACACAC !important;
+}
+#editorPicksSection a.officialMicrosoftLabel
+{
+    color: #ACACAC !important;
+}
+
+#projectPage h2.projectSummary
+{
+    font-family:inherit;
+    font-weight:normal;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#projectPage #Downloads .button
+{
+    color:#fff !important;
+}
+
+.IE7 #eyebrow
+{
+    margin-top: -28px;
+}
+
+
+/*-------- Start Upload Page --------*/
+#UploadPage .projectTypeChoice > div {
+    height: 240px;
+}
+/*-------- End Upload Page --------*/
+
+#sideNav #contributeSection {
+    padding: 0 0 83px 0;
+}

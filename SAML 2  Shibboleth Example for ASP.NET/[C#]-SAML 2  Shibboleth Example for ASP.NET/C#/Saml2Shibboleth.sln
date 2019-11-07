@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityProvider_2010", "IdentityProvider\IdentityProvider_2010.csproj", "{DF4C4FEE-E3FC-4BA0-B170-124F8BFE8A15}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceProvider_2010", "ServiceProvider\ServiceProvider_2010.csproj", "{46B54538-F531-425F-A87E-3CCF56F858BA}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF4C4FEE-E3FC-4BA0-B170-124F8BFE8A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4C4FEE-E3FC-4BA0-B170-124F8BFE8A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4C4FEE-E3FC-4BA0-B170-124F8BFE8A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4C4FEE-E3FC-4BA0-B170-124F8BFE8A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B54538-F531-425F-A87E-3CCF56F858BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B54538-F531-425F-A87E-3CCF56F858BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B54538-F531-425F-A87E-3CCF56F858BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B54538-F531-425F-A87E-3CCF56F858BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

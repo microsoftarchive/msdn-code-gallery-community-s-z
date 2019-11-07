@@ -1,0 +1,17 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	if(Template.SelectedItem.Value == "None")
+	{
+		// Reset chart appearance
+		Chart1.Serializer.Content = SerializationContents.Appearance;
+		Chart1.Serializer.Reset();
+	}
+	else
+	{
+		// Load template		
+		Chart1.LoadTemplate(Template.SelectedItem.Value + ".xml");
+	}
+}

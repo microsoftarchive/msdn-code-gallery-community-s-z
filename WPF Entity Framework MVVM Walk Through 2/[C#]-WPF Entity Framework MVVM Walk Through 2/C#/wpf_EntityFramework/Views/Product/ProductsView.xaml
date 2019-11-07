@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="wpf_EntityFramework.ProductsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:e2c="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+             xmlns:spt="clr-namespace:Support"
+             xmlns:local="clr-namespace:wpf_EntityFramework"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:support="clr-namespace:Support"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <DataGrid x:Name="dg"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Products}"
+                  HeadersVisibility="Column"
+                  SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"
+                  SelectionMode="Single"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  IsReadOnly="True"
+                  >
+            <i:Interaction.Behaviors>
+                <local:ScrollDataGridRowIntoView />
+            </i:Interaction.Behaviors>
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="local:DataGridRowBehavior.IsDataGridRowFocussedWhenSelected" Value="true"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding TheEntity.ProductShortName, Mode=TwoWay}"  Header="Product Name" />
+                <DataGridTextColumn Binding="{Binding TheEntity.Weight, Mode=TwoWay}"  Header="Weight" />
+                <DataGridTextColumn Binding="{Binding TheEntity.BarCode, Mode=TwoWay}"  Header="Bar Code" />
+                <DataGridTextColumn Binding="{Binding TheEntity.PricePer, Mode=TwoWay, StringFormat=C}"  Header="Price Per Outer" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <ContentControl Template="{StaticResource EditPopUp}">
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl>
+
+                        <spt:EditRow LabelFor="Product Name:" >
+                            <TextBox Text="{Binding EditVM.TheEntity.ProductShortName, 
+                                            UpdateSourceTrigger=PropertyChanged,  
+                                            NotifyOnSourceUpdated=True,
+                                            NotifyOnValidationError=True,
+                                            Mode=TwoWay}"  />
+                        </spt:EditRow>
+
+                        <spt:EditRow LabelFor="Weight:" >
+                            <TextBox Text="{Binding EditVM.TheEntity.Weight,  StringFormat=N2,
+                                            UpdateSourceTrigger=PropertyChanged, 
+                                            NotifyOnSourceUpdated=True,
+                                            NotifyOnValidationError=True,
+                                            Mode=TwoWay}"  />
+                        </spt:EditRow>
+
+                        <spt:EditRow LabelFor="BarCode:" >
+                            <TextBox Text="{Binding  EditVM.TheEntity.BarCode, 
+                                            UpdateSourceTrigger=PropertyChanged,
+                                            NotifyOnSourceUpdated=True,
+                                            NotifyOnValidationError=True,
+                                            Mode=TwoWay}"  />
+                        </spt:EditRow>
+
+                        <spt:EditRow LabelFor="Price Per Outer:" >                        
+                            <TextBox Text="{Binding  EditVM.TheEntity.PricePer, 
+                                            UpdateSourceTrigger=PropertyChanged,  
+                                            NotifyOnSourceUpdated=True,
+                                            NotifyOnValidationError=True,
+                                            Mode=TwoWay, StringFormat=C}" />
+                        </spt:EditRow>
+                    </ItemsControl>
+                </ScrollViewer>
+        </ContentControl>
+        <support:Throbber x:Name="Throbber" Visibility="{Binding ThrobberVisible}"/>
+        <TextBlock Text="{Binding ErrorMessage}"  HorizontalAlignment="Right" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

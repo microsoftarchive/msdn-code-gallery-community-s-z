@@ -1,0 +1,40 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+   ' Populate chart with random data
+   Dim random As New Random()
+   Dim pointIndex As Integer
+   
+   For pointIndex = 0 To 99
+      Chart1.Series("Series Input").Points.AddXY(random.Next(50, 950), random.Next(50, 950))
+   Next pointIndex
+   
+   ' Get filtering criteria constant
+   Dim criteriaValue As Double = Double.Parse(MoreValuesList.SelectedItem.Value)
+   
+   ' Create strip line which covers the area with filtered values
+   Dim stripLine As New StripLine()
+   stripLine.BackColor = Color.FromArgb(120, 225, 0, 0)
+   stripLine.IntervalOffset = criteriaValue
+   stripLine.StripWidth = 1000
+   If PointValueList.SelectedItem.Value = "Y" Then
+      Chart1.ChartAreas("ChartArea1").AxisY.StripLines.Add(stripLine)
+   Else
+      Chart1.ChartAreas("ChartArea1").AxisX.StripLines.Add(stripLine)
+   End If
+   
+   ' Points that do not match the criteria will be removed
+   If MatchCriteriaList.SelectedItem.Value = "False" Then
+      Chart1.DataManipulator.FilterMatchedPoints = False
+      
+      ' Update the strip line which covers filtered area
+      stripLine.IntervalOffset = 0
+      stripLine.StripWidth = criteriaValue
+   End If
+   
+   ' Filter series data by point's values
+   Chart1.DataManipulator.Filter(CompareMethod.MoreThan, criteriaValue, "Series Input", "Series Output", "Y")
+End Sub 'Page_Load
+...

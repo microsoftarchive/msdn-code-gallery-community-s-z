@@ -1,0 +1,24 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "ChartTypes" Priority = "1200">
+	<Title>Error Bar Chart</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Error Bar Chart</ShortBlurb> 
+	<Content>ErrorBarChart.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+	
+		<Keywords>
+	  <Keyword>Error bar chart</Keyword>
+	  <Keyword>Standard error</Keyword>
+	  <Keyword>Standard Deviation for Error Calculation</Keyword>
+      <Keyword>Chart type, Error bar</Keyword>
+      <Keyword>Statistical, Error bar</Keyword>
+    </Keywords>
+
+	</SampleConfig>
+
+</SampleConfigs>

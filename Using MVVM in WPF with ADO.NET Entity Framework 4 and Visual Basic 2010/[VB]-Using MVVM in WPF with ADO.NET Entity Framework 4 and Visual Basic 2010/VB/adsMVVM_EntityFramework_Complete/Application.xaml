@@ -1,0 +1,47 @@
+﻿<Application x:Class="Application"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="Views\MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <!--Template per validazione controlli
+            Mostrerà un bordo rosso e un messaggio
+            quando la validazione dell'ordine fallisce
+        -->
+        <Style TargetType="Control" x:Key="myErrorTemplate">
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel LastChildFill="True">
+                            <TextBlock DockPanel.Dock="Right" 
+                        Foreground="Red"
+                        FontSize="14pt" 
+                        FontWeight="ExtraBold">*
+                            </TextBlock>
+                            <Border BorderBrush="Red" BorderThickness="4">
+                                <AdornedElementPlaceholder Name="myControl"/>
+                            </Border>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip"
+                Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource myErrorTemplate}"/>
+
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,48 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+// Check point existence for every day
+if(EmptyPointIntervalList.GetItemText(EmptyPointIntervalList.SelectedItem) == "Every Day")
+{
+	chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Days, "Series1");
+}
+
+	// Check point existence for every 12 hours
+else if(EmptyPointIntervalList.GetItemText(EmptyPointIntervalList.SelectedItem) == "Every 12 Hours")
+{
+	chart1.DataManipulator.InsertEmptyPoints(12, IntervalType.Hours, "Series1");
+}
+
+	// Check point existence for every week day
+else if(EmptyPointIntervalList.GetItemText(EmptyPointIntervalList.SelectedItem) == "Every Week Day")
+{
+	chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, 1, IntervalType.Days, "Series1");
+	chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, 2, IntervalType.Days, "Series1");
+	chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, 3, IntervalType.Days, "Series1");
+	chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, 4, IntervalType.Days, "Series1");
+	chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, 5, IntervalType.Days, "Series1");
+}
+
+	// Check point existence for every Monday
+else if(EmptyPointIntervalList.GetItemText(EmptyPointIntervalList.SelectedItem) == "Every Monday")
+{
+	chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, 1, IntervalType.Days, "Series1");
+}
+
+// Use point index instead of the X value
+if(ShowAsIndexedList.GetItemText(ShowAsIndexedList.SelectedItem) == "True")
+{
+	chart1.Series["Series1"].IsXValueIndexed = true;
+	chart1.ChartAreas[0].AxisX.MajorGrid.Interval = 1;
+	chart1.ChartAreas[0].AxisX.MajorTickMark.Interval = 1;
+	chart1.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+}
+else
+{
+	chart1.Series["Series1"].IsXValueIndexed = false;
+	chart1.ChartAreas[0].AxisX.MajorGrid.Interval = 0;
+	chart1.ChartAreas[0].AxisX.MajorTickMark.Interval = 0;
+	chart1.ChartAreas[0].AxisX.LabelStyle.Interval = 0;
+}
+
+...

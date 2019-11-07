@@ -1,0 +1,9 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Financial" Priority = "1">
+  <Title>Overview</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Financial Formulas</ShortBlurb> 
+  <Content>Overview.htm</Content> 
+</SampleConfig>
+</SampleConfigs>

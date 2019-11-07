@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.WindowsAzure.ActiveDirectory.GraphHelper", "WindowsAzure.AD.Graph.2013_04_05\Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.csproj", "{56364C2F-DCF4-4D98-8FF7-72E98F0B7E86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56364C2F-DCF4-4D98-8FF7-72E98F0B7E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56364C2F-DCF4-4D98-8FF7-72E98F0B7E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56364C2F-DCF4-4D98-8FF7-72E98F0B7E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56364C2F-DCF4-4D98-8FF7-72E98F0B7E86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

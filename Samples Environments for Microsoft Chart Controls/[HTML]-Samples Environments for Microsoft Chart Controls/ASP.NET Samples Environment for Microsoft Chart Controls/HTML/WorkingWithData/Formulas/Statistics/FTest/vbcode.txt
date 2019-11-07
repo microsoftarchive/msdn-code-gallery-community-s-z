@@ -1,0 +1,10 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Perform FTest
+    Dim result As FTestResult = chart1.DataManipulator.Statistics.FTest(0.95, "FirstGroup", "SecondGroup")
+   
+End Sub 'Page_Load
+...

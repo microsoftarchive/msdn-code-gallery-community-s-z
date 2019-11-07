@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Windows Imaging Component Animated GIF Win32 Sample</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Windows Imaging Component Animated GIF Win32 Sample</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Direct2D, Windows Imaging Component (WIC)
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Graphics, Imaging
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">10/17/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Windows-Imaging-Component-65abbc6a">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This is the Windows Imaging Component animated GIF sample from the Windows 7 SDK, updated to use Visual Studio 2012.</p>
+<p>This sample demonstrates decoding each frame from a GIF file, reading the appropriate animation metadata for each frame, composing frames, and rendering the animation with Direct2D.</p>
+<h1>GIF Animation Overview</h1>
+<p>In order to play a gif animation, raw frames (which are compressed frames directly retrieved from the image file) and image metadata are loaded and used to compose the frames that are actually displayed in the animation loop (which we call composed frames
+ in this sample). Composed frames have the same sizes as the global gif image size, while raw frames can have their own sizes.</p>
+<p>At the highest level, a gif animation contains a fixed or infinite number of animationloops, in which the animation will be displayed repeatedly frame by frame; once all loops are displayed, the animation will stop and the last frame will be displayed from
+ that point.</p>
+<p>In each loop, first the entire composed frame will be initialized with the background color retrieved from the image metadata. The very first raw frame then will be loaded and directly overlaid onto the previous composed frame (i.e. in this case, the frame
+ cleared with background color) to produce the first &nbsp;composed frame, and this frame will then be displayed for a period that equals its delay. &nbsp;For any raw frame after the first raw frame (if there are any), the composed frame will first be disposed
+ based on the disposal method associated with the previous raw frame. Then the next raw frame will be loaded and overlaid onto the result (i.e. the composed frame after disposal). &nbsp;These two steps (i.e. disposing the previous frame and overlaying the current
+ frame) together 'compose' the next frame to be displayed. &nbsp;The composed frame then gets displayed. &nbsp;This process continues until the last frame in a loop is reached.</p>
+<p>An exception is the zero delay intermediate frames, which are frames with 0 delay associated with them. &nbsp;These frames will be used to compose the next frame, but the difference is that the composed frame will not be displayed unless it's the last frame
+ in the loop (i.e. we move immediately to composing the next composed frame).</p>
+<h1><span style="font-size:10px">&nbsp;</span>Building the Sample</h1>
+<p><span>This sample is built for Visual Studio 2012 and the Windows 7 SDK, but will work with&nbsp;Visual Studio 2013&nbsp;and newer versions of the Windows SDK without any issues.</span></p>
+<p><span>You may need to upgrade the project to the version of Visual Studio installed on your system. You can do this by opening the .sln file, right clicking on the project in the Solution Explorer, and selecting Upgrade VC&#43;&#43; Compiler and Libraries.</span></p>
+<h1>Running the Sample</h1>
+<p><span>After the application is launched, load an image file by using the <strong>
+Open </strong>command of the <strong>File </strong>menu. Window resizing is supported. An example animated GIF image is included with the sample.</span></p>
+<h1>More Information</h1>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ee719902(v=vs.85).aspx">Windows Imaging Component</a></span></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd370990(v=vs.85).aspx"><span>Direct2D</span></a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

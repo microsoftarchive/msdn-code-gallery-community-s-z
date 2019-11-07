@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "PopulatingData" Priority="48">
+  <Title>Multiple Y Values</Title> 
+  <ShortBlurb>Using Multiple Y Values</ShortBlurb> 
+  <Content>MultiYBubble.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Multiple Y values</Keyword>
+    <Keyword>Multiple Y values</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

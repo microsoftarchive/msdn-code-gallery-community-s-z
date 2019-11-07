@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/9bf1b74c-1640-46af-84d3-e440c8f95162Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SharePoint 2013 Approval &amp; Publishing Workflows (Multilingual)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SharePoint 2013 Approval &amp; Publishing Workflows (Multilingual)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            SharePoint Server 2013, SharePoint Foundation 2013, apps for SharePoint
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            SharePoint, Workflows, apps for SharePoint
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/10/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/SharePoint-2013-Approval-7c1c0b8d">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>SharePoint 2013 doesnt provide any out of the box Approval or Publishing Approval Workflows as like 2010. Moreover the workflow has been completly</em> re architectured in 2013 based on CSOM.
+<span>The Custom workflow sample provides an option of enabling workflows on any list with a custom association form to configure input parameters and task alert email parameters. The sample also&nbsp;provides&nbsp;multilingual capabilities. Moreover the publishing
+ approval workflow can be enabled on publishing sites by enabling just one feature. provides an additional option of configuring the global settings thru a common configuration list.</span></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>Upon deployment, the solution&nbsp;enables the following&nbsp;3 features.</em></p>
+<ol>
+<li>Custom Approval Workflows Infrastructure (Site Collection Scoped) &nbsp; </li><li>Custom Approval Workflows Infrastructure (Web Scoped) </li><li>Configure Publishing Approval Workflow - For Windows Based Authentication (Web Scoped)
+</li></ol>
+<p><strong>Custom Approval Workflows Infrastructure (Web Scoped) <br>
+</strong>If you would like to enable workflow on a non publishing site, this is the only feature you need to activate. the feature basically deploys the Approval Worklfow, associated resources and forms. Upon activation you will be able to see the worklfow
+ listed on any list workflow settings.</p>
+<p>Upon association the workflow does provides an association page 2, where it does provide an option to fill the following parameters.</p>
+<ol>
+<li>Approvers </li><li>Due duration (days) </li><li>Option to end on document change </li><li>Option to End on First Approval </li><li>Task Title </li><li>Task Assignment Email Subject </li><li>Task Assignment Email Body </li><li>Task Cancellation Email Subject </li><li>Task Cancellation Email Body </li><li>Task Overdue Email Subject </li><li>Task Overdue Email Body </li></ol>
+<p>During first time configuration the fields will be filled with default values. If you would like to change the values, please ensure you dont remove the place holders from the default values.</p>
+<p>Upon submission the workflow will be configured on the given list.</p>
+<p><strong>Important Note:</strong></p>
+<p>Upon assocation, the following manul steps are required for the workflow to work as expected.</p>
+<ol>
+<li>Enable &quot;<strong>Worklfow 2013 Task&quot; Content Type </strong>on Workflow Task list associated with the workflow.
+</li><li>Activate the web scoped feature <strong>&quot;Workflows can use app permissions&quot;</strong>
+</li><li>Enable <a href="http://msdn.microsoft.com/en-us/library/jj822159.aspx/">permission</a> for the workflow to access the content on the sharepoint.
+</li></ol>
+<p><strong>Custom Approval Workflows Infrastructure (Site Collection Scoped)<br>
+</strong>Required only when you need to <strong>enable publishing workflows.</strong> Can be activated only on the Root site collection. Upon activation, the feature deploys a
+<strong>&quot;Workflow Global Settings&quot;</strong> list with the following items.</p>
+<ul>
+<li><strong>ApprovalWorkflowApproversSharePointGroup </strong>- Approvers|Administrators
+<ul>
+<li>use this entry to configure the default approvers group associated with the publishing approval. The values can be | (or) or &amp; (And) splitted. Can have multiple values. however doesnt support mixed splitters. (both | and &amp;)
+</li></ul>
+</li><li><strong>ApprovalWorkflowDefaultDurationDays </strong>- 7
+<ul>
+<li>Default number of duration days. </li></ul>
+</li><li><strong>EnablePublishingApprovalWorkflowOnLists </strong>- Pages,Images,Documents
+<ul>
+<li>Lists on Publlishing site for which the approval workflow needs to be enabled.
+</li></ul>
+</li></ul>
+<p><strong>Configure Publishing Approval Workflow - For Windows Based Authentication (Web Scoped)<br>
+</strong>This feature configures publishing approval workflows as per the above configuration settings on a publishing site. Upon activation the feature perfroms the following actions on the web.</p>
+<ol>
+<li>Associates the workflow on Pages, Images and Document Libraries. </li><li>Uses the email templates from resource files. </li><li>Since Sharepoint 2013 supports triggering of workflow only on Item Added, Updated or Manul, there is no option of triggering the workflow on Item Major checkins, hence the approval action can be handled only thru the event recivers.
+<ul>
+<li>Associates the following event receivers on the lists to handle all the possible scenarios of approval actions.
+<ul>
+<li>Item Updating </li><li>Item Updated </li><li>Item CheckedIn </li></ul>
+</li><li>Approval Actions Supported
+<ul>
+<li>Approval Override (Direct Approval/Reject) thru ribbon (cancells the in progress workflow)
+</li><li>Cancel Approval (Cancells the inprogress workflow) </li><li>Approval/Rejection thru workflow task. </li></ul>
+</li></ul>
+</li><li>Activates the dependency feature - &nbsp;<strong>&quot;Workflows can use app permissions&quot;</strong>
+</li><li>Enables Trust to the workflow - (Automation of enabling <a href="http://msdn.microsoft.com/en-us/library/jj822159.aspx/">
+permission</a> for the workflow to access the sharepoint) </li></ol>
+<h1>More Information</h1>
+<p><strong><em>Workflow Services WCF Service</em></strong></p>
+<p><em>The solution includes a WCF service which provides some management capabilities like&nbsp;approval/Rejection. As the 2013 workflows are CSOM based these actions are not possible directly from the workflow. hence those capabilities are acheived thru the
+ server based services.</em></p>
+<h1>Jquery (OpenSource) - Work with your Legal Dept</h1>
+<p>The solution leverages Jquery to perform some operations on the association form to provide enhanced features.
+<br>
+<span style="color:#ff0000"><strong><span style="text-decoration:underline">However the script files are not included as part of the solution.</span></strong></span><br>
+<br>
+For the solution, in order to work/behave as expected the following Jquery <span style="text-decoration:underline">
+.js files need to be included</span> in the solution path <span style="text-decoration:underline">
+\layouts\customapprovalworkflow\scripts\</span> before compilation and deployment.</p>
+<ol>
+<li>jquery-1.8.2.js </li><li>jquery-1.8.2.min.js </li></ol>
+<p><span style="color:#ff0000"><span style="text-decoration:underline">Please check with your legal department before enabling the jquery scripts on the end user solution</span>.</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

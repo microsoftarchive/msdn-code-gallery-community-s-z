@@ -1,0 +1,99 @@
+﻿@model Finance.Web.Models.GraphModel
+
+@{
+	ViewBag.Title = @Resources.GraphsPageTitle;
+}
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#BeginDate').datepicker();
+		$('#EndDate').datepicker();
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$.datepicker.regional['@Finance.Web.Controllers.Helpers.CultureHelper.GetCurrentCulture()'] = 
+			{ 
+				dateFormat: '@Html.ConvertDateFormat()',
+				closeText: '@Resources.CalendarCloseText',
+				prevText: '@Resources.CalendarPrevText',
+				nextText: '@Resources.CalendarCurrentText', 
+				currentText: '@Resources.CalendarCurrentText', 
+				monthNames: ['@Resources.CalendarMonthNames1', '@Resources.CalendarMonthNames2', '@Resources.CalendarMonthNames3', '@Resources.CalendarMonthNames4', '@Resources.CalendarMonthNames5', '@Resources.CalendarMonthNames6', '@Resources.CalendarMonthNames7', '@Resources.CalendarMonthNames8', '@Resources.CalendarMonthNames9', '@Resources.CalendarMonthNames10', '@Resources.CalendarMonthNames11', '@Resources.CalendarMonthNames12' ], 
+				monthNamesShort: ['@Resources.CalendarMonthNamesShort1', '@Resources.CalendarMonthNamesShort2', '@Resources.CalendarMonthNamesShort3', '@Resources.CalendarMonthNamesShort4', '@Resources.CalendarMonthNamesShort5', '@Resources.CalendarMonthNamesShort6', '@Resources.CalendarMonthNamesShort7', '@Resources.CalendarMonthNamesShort8', '@Resources.CalendarMonthNamesShort9', '@Resources.CalendarMonthNamesShort10', '@Resources.CalendarMonthNamesShort11', '@Resources.CalendarMonthNamesShort12' ], 
+				monthNamesShort: ['@Resources.CalendarMonthNamesShort1', '@Resources.CalendarMonthNamesShort2', '@Resources.CalendarMonthNamesShort3', '@Resources.CalendarMonthNamesShort4', '@Resources.CalendarMonthNamesShort5', '@Resources.CalendarMonthNamesShort6', '@Resources.CalendarMonthNamesShort7', '@Resources.CalendarMonthNamesShort8', '@Resources.CalendarMonthNamesShort9', '@Resources.CalendarMonthNamesShort10', '@Resources.CalendarMonthNamesShort11', '@Resources.CalendarMonthNamesShort12' ], 
+				dayNames: ['@Resources.CalendarDayNames1', '@Resources.CalendarDayNames2','@Resources.CalendarDayNames3','@Resources.CalendarDayNames4','@Resources.CalendarDayNames5','@Resources.CalendarDayNames6','@Resources.CalendarDayNames7'],
+				dayNamesShort: ['@Resources.CalendarDayNamesShort1', '@Resources.CalendarDayNamesShort2','@Resources.CalendarDayNamesShort3','@Resources.CalendarDayNamesShort4','@Resources.CalendarDayNamesShort5','@Resources.CalendarDayNamesShort6','@Resources.CalendarDayNamesShort7'],
+				dayNamesMin: ['@Resources.CalendarDayNamesMin1', '@Resources.CalendarDayNamesMin2','@Resources.CalendarDayNamesMin3','@Resources.CalendarDayNamesMin4','@Resources.CalendarDayNamesMin5','@Resources.CalendarDayNamesMin6','@Resources.CalendarDayNamesMin7'],
+				firstDay: @Resources.CalendarFirstDay, 
+				isRTL: @Resources.CalendarIsRTL, 
+				showMonthAfterYear: @Resources.CalendarShowMonthAfterYear
+			}; 
+		$.datepicker.setDefaults($.datepicker.regional['@Finance.Web.Controllers.Helpers.CultureHelper.GetCurrentCulture()']); 	
+	});	
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#GraphTypeSelected").change(function () {
+			$("#imagePreview").empty();
+			var imageAddress = "@Url.Content("~/Content/Img/")" + $("#GraphTypeSelected").val() + "_mini_" + "@(Finance.Web.Controllers.Helpers.CultureHelper.GetCurrentNeutralCulture())" + ".png";
+			$("#imagePreview").append("<img src=" + imageAddress + ">");
+		});
+	});
+</script>
+
+@Html.ValidationSummary(true, "Submit was unsuccessful. Please correct the errors and try again.")
+
+@using (Html.BeginForm()) {
+	<div>
+		<fieldset>
+			<legend>@Resources.GraphInputLegend</legend>
+			<table>
+				<thead>
+					<tr>
+						<th class="labelColumnHeader"></th>
+						<th class="editorColumnHeader"></th>
+						<th class="detailsColumnHeader"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="formDataRow">
+						<td><div class="editor-label">@Html.LabelFor(m => m.BeginDate)</div></td>
+						<td><div class="editor-field">@Html.EditorFor(m => m.BeginDate)@Html.ValidationMessageFor(m => m.BeginDate)</div></td>
+					</tr>
+
+					<tr class="formDataRow">
+						<td><div class="editor-label">@Html.LabelFor(m => m.EndDate)</div></td>
+						<td><div class="editor-field">@Html.EditorFor(m => m.EndDate)@Html.ValidationMessageFor(m => m.EndDate)</div></td>
+					</tr>
+					
+					<tr class="formDataRow">
+						<td><div class="editor-label">@Html.LabelFor(m => m.StockNameSelected)</div></td>
+						<td><div class="styled-select">@Html.DropDownListFor(m => m.StockNameSelected, @Model.StocksList)@Html.ValidationMessageFor(m => m.StockNameSelected)</div></td>
+					</tr>
+						
+					<tr>
+						<td><div class="editor-label">@Html.LabelFor(m => m.GraphTypeSelected)</div></td>
+						<td><div class="styled-select">@Html.DropDownListFor(m => m.GraphTypeSelected, @Model.GraphsList)</div></td>
+						<td align="center">@Resources.GraphPreviewLabel</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td colspan="2"><div id="imagePreview">
+								<img src="@(Url.Content("~/Content/Img/") + Model.GraphTypeSelected + "_mini_" + Finance.Web.Controllers.Helpers.CultureHelper.GetCurrentNeutralCulture() + ".png")"> 
+							</div>
+						</td>						
+					</tr>
+					<tr class="formDataRow">
+						<td></td><td><input class="submit-button" type="submit" value="@Resources.SubmitButtonLabel" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</div>
+}

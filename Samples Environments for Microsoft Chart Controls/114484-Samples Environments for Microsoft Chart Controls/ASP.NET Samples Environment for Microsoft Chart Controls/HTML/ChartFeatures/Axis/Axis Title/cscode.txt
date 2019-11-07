@@ -1,0 +1,16 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    
+    // Set axis title
+    Chart1.ChartAreas["ChartArea1"].AxisX.Title = "Chart Axis";
+    
+    // Set Title font
+    Chart1.ChartAreas["ChartArea1"].AxisX.TitleFont = new Font("Times New Roman",12, FontStyle.Bold);
+
+    // Set Title color
+    Chart1.ChartAreas["ChartArea1"].AxisX.ForeColor = Color.Red;
+
+}

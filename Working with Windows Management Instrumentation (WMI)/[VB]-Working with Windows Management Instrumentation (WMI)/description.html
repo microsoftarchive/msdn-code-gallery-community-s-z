@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/b79636be-b088-48b5-8a8d-c21645d26d2fCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Working with Windows Management Instrumentation (WMI)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Working with Windows Management Instrumentation (WMI)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows Forms, .NET Framework 4.0
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            System Information, Windows Management Instrumentation<wbr />, BIOS
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/7/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Custom</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Working-with-Windows-d2509544">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span id="ctl00_ctl00_Content_TabContentPanel_Content_wikiSourceLabel">Demonstrates how to use objects in the <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Management.aspx"  title="Auto generated link to System.Management">System.Management</a> namespace to access Windows Management Instrumentation (WMI) and to query system information such as operating system name,
+ version, manufacturer, and computer name.</span></p>
+<h1><span>Building the Sample</span></h1>
+<p>Press F5</p>
+<h1>Description<em></em></h1>
+<p>The two tabbed pages of the TabControl demonstrate two types of WMI tasks:</p>
+<ul>
+<li>
+<p><span class="ui">Queries</span>&nbsp;&nbsp;&nbsp;This one shows how to use the ManagementObjectSearcher object to query the following system information: Operating System Name, Version, Manufacturer, Computer name, and Windows Directory; Computer System
+ Manufacturer, Model, System Type, and Total Physical Memory; Processor name; BIOS version; and Time zone. These queries are created by using the SelectQuery class.</p>
+</li><li>
+<p><span class="ui">Objects</span>&nbsp;&nbsp;&nbsp;This one shows how to enumerate through the top-level WMI classes and all their data management objects using the ManagementClass and EnumerationOptions classes.</p>
+</li></ul>
+<h1>Screenshot</h1>
+<p><img src="description/Screenshot.png" alt="" width="610" height="392"></p>
+<h1>Sample Code<em></em></h1>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">    ' This subroutine fills in the output text box with Operating System information
+    ' from WMI
+    Private Sub btnOperatingSytem_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnOperatingSytem.Click
+        ' ManagementObjectSearcher retrieves a collection of WMI objects based on 
+        ' the query.  In this case a string is used instead of a SelectQuery object.
+        Dim search As New ManagementObjectSearcher(&quot;SELECT * FROM Win32_OperatingSystem&quot;)
+
+        ' Display each entry for Win32_OperatingSystem
+        Dim info As ManagementObject
+        For Each info In search.Get()
+            txtOutput.Text = &quot;Name: &quot; &amp; info(&quot;name&quot;).ToString() &amp; vbCrLf
+            txtOutput.Text &amp;= &quot;Version: &quot; &amp; info(&quot;version&quot;).ToString() &amp; vbCrLf
+            txtOutput.Text &amp;= &quot;Manufacturer: &quot; &amp; info(&quot;manufacturer&quot;).ToString() &amp; vbCrLf
+            txtOutput.Text &amp;= &quot;Computer name: &quot; &amp; info(&quot;csname&quot;).ToString() &amp; vbCrLf
+            txtOutput.Text &amp;= &quot;Windows Directory: &quot; &amp; _
+                info(&quot;windowsdirectory&quot;).ToString() &amp; vbCrLf
+        Next
+    End Sub</pre>
+<div class="preview">
+<pre id="codePreview" class="vb">&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;This&nbsp;subroutine&nbsp;fills&nbsp;in&nbsp;the&nbsp;output&nbsp;text&nbsp;box&nbsp;with&nbsp;Operating&nbsp;System&nbsp;information</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;from&nbsp;WMI</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnOperatingSytem_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnOperatingSytem.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;ManagementObjectSearcher&nbsp;retrieves&nbsp;a&nbsp;collection&nbsp;of&nbsp;WMI&nbsp;objects&nbsp;based&nbsp;on&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;the&nbsp;query.&nbsp;&nbsp;In&nbsp;this&nbsp;case&nbsp;a&nbsp;string&nbsp;is&nbsp;used&nbsp;instead&nbsp;of&nbsp;a&nbsp;SelectQuery&nbsp;object.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;search&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;ManagementObjectSearcher(<span class="visualBasic__string">&quot;SELECT&nbsp;*&nbsp;FROM&nbsp;Win32_OperatingSystem&quot;</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;Display&nbsp;each&nbsp;entry&nbsp;for&nbsp;Win32_OperatingSystem</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;info&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;ManagementObject&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;<span class="visualBasic__keyword">Each</span>&nbsp;info&nbsp;<span class="visualBasic__keyword">In</span>&nbsp;search.<span class="visualBasic__keyword">Get</span>()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtOutput.Text&nbsp;=&nbsp;<span class="visualBasic__string">&quot;Name:&nbsp;&quot;</span>&nbsp;&amp;&nbsp;info(<span class="visualBasic__string">&quot;name&quot;</span>).ToString()&nbsp;&amp;&nbsp;vbCrLf&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtOutput.Text&nbsp;&amp;=&nbsp;<span class="visualBasic__string">&quot;Version:&nbsp;&quot;</span>&nbsp;&amp;&nbsp;info(<span class="visualBasic__string">&quot;version&quot;</span>).ToString()&nbsp;&amp;&nbsp;vbCrLf&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtOutput.Text&nbsp;&amp;=&nbsp;<span class="visualBasic__string">&quot;Manufacturer:&nbsp;&quot;</span>&nbsp;&amp;&nbsp;info(<span class="visualBasic__string">&quot;manufacturer&quot;</span>).ToString()&nbsp;&amp;&nbsp;vbCrLf&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtOutput.Text&nbsp;&amp;=&nbsp;<span class="visualBasic__string">&quot;Computer&nbsp;name:&nbsp;&quot;</span>&nbsp;&amp;&nbsp;info(<span class="visualBasic__string">&quot;csname&quot;</span>).ToString()&nbsp;&amp;&nbsp;vbCrLf&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtOutput.Text&nbsp;&amp;=&nbsp;<span class="visualBasic__string">&quot;Windows&nbsp;Directory:&nbsp;&quot;</span>&nbsp;&amp;&nbsp;_&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info(<span class="visualBasic__string">&quot;windowsdirectory&quot;</span>).ToString()&nbsp;&amp;&nbsp;vbCrLf&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span></pre>
+</div>
+</div>
+</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><a class="browseFile" href="http://code.msdn.microsoft.com/Working-with-Windows-d2509544/sourcecode?fileId=23136&amp;pathId=1459912393">MainForm.designer.vb</a>
+</li><li><a class="browseFile" href="http://code.msdn.microsoft.com/Working-with-Windows-d2509544/sourcecode?fileId=23136&amp;pathId=164201288">MainForm.vb</a>
+</li></ul>
+<h1>More Information</h1>
+<p>For more information on Windows Management Insturmentation: <a href="http://msdn.microsoft.com/en-us/library/aa394582%28VS.85%29.aspx" >
+http://msdn.microsoft.com/en-us/library/aa394582%28VS.85%29.aspx</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
+using System.Data.SqlClient;
+using System.Collections.Specialized;
+using Microsoft.SqlServer.Management.Smo;
+using Microsoft.SqlServer.Management.Sdk.Sfc;
+using Microsoft.SqlServer.Management.Common;
+using System.IO;
+
+namespace WindowsFormsApp1
+{
+    /// <summary>
+    /// https://www.mssqltips.com/sqlservertip/1833/generate-scripts-for-database-objects-with-smo-for-sql-server/
+    /// 
+    /// Table operations
+    /// http://technico.qnownow.com/table-operations-using-smo/
+    /// 
+    /// https://www.mssqltips.com/sqlservertip/1826/getting-started-with-sql-server-management-objects-smo/
+    /// 
+    /// </summary>
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        public Server InitializeServer()
+        {
+            // Setup a new connection to the data server
+            ServerConnection connection = new ServerConnection(@"KARENS-PC");
+            // Log in using SQL authentication
+            //connection.LoginSecure = false;
+            //connection.Login = "testuser";
+            //connection.Password = "testuser";
+            Server sqlServer = new Server(connection);
+            return sqlServer;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //GetDatabaseNames().ForEach(item => Console.WriteLine(item));
+            //GenerateInsert();
+            CreateTablesAndInsertData();
+
+        }
+        public void GenerateInsert()
+        {
+            var server = InitializeServer();
+
+            Scripter scripter = new Scripter();
+            scripter.Server = server;
+            scripter.Options.ScriptData = true;
+            // true for create table
+            scripter.Options.ScriptSchema = false;
+            scripter.Options.ToFileOnly = true;
+
+            server.ConnectionContext.Connect();
+            var database = server.Databases["NorthWindAzure"]; // null if it does not exists
+            Console.WriteLine();
+
+
+            foreach (Table table in database.Tables)
+            {
+                if (table.IsSystemObject == false)
+                {
+                    scripter.Options.FileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Scripts", table.Name + ".txt");
+                    scripter.Options.IncludeHeaders = false;
+                    
+                    
+                    scripter.EnumScript(new SqlSmoObject[] { table });
+                    
+                }
+
+            }
+
+            MessageBox.Show("Done");
+
+        }
+
+        string ConnectionString = @"Data Source=KARENS-PC;Initial Catalog=CityStateReferences;Integrated Security=True";
+        public static List<string> GetDatabaseNames()
+        {
+            string connString = null;
+            List<string> databaseNames = new List<string>();
+
+            // Be sure to replace this with your connection string. 
+            connString = "Data Source=KARENS-PC;Integrated Security=True";
+
+            if (!string.IsNullOrWhiteSpace(connString))
+            {
+                using (SqlConnection cn = new SqlConnection(connString))
+                {
+                    // Open the connection 
+                    cn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.Connection = cn;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "sp_databases";
+
+                        using (SqlDataReader myReader = cmd.ExecuteReader())
+                        {
+                            while ((myReader.Read()))
+                            {
+                                databaseNames.Add(myReader.GetString(0));
+                            }
+                        }
+                    }
+                }
+            }
+            return databaseNames;
+        }
+        /// <summary>
+        /// Create tables for database, insert data
+        /// </summary>
+        public void CreateTablesAndInsertData()
+        {
+            var server = new Server(new ServerConnection
+            {
+                ConnectionString = new SqlConnectionStringBuilder
+                {
+                    DataSource = @"KARENS-PC", IntegratedSecurity = true }.ToString()
+            });
+
+            server.ConnectionContext.Connect();
+            var database = server.Databases["NorthWindAzure"];
+            var output = new StringBuilder();
+
+            foreach (Table table in database.Tables)
+            {
+                var scripter = new Scripter(server) { Options = { ScriptData = true } };
+                var script = scripter.EnumScript(new SqlSmoObject[] { table });
+                foreach (var line in script)
+                    output.AppendLine(line);
+            }
+            File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "results.txt"), output.ToString());
+            MessageBox.Show("Done");
+
+        }
+        public void GenerateDatabaseScripts()
+        {
+            var server = new Server(new ServerConnection { ConnectionString = new SqlConnectionStringBuilder { DataSource = @"KARENS-PC", IntegratedSecurity = true }.ToString() });
+            Scripter scripter = new Scripter(server);
+            Database myAdventureWorks = server.Databases["NorthWindAzure"];
+            Database myAdventureWorksDW = server.Databases["NorthWindAzure"];
+            Urn[] DatabaseURNs = new Urn[] { myAdventureWorks.Urn, myAdventureWorksDW.Urn };
+            StringCollection scriptCollection = scripter.Script(DatabaseURNs);
+            foreach (string script in scriptCollection)
+                Console.WriteLine(script);
+        }
+        /// <summary>
+        /// Create tables for database
+        /// </summary>
+        public void ScriptDatabase2()
+        {
+
+
+            var server = new Server(new ServerConnection { ConnectionString = new SqlConnectionStringBuilder { DataSource = @"KARENS-PC", IntegratedSecurity = true }.ToString() });
+            Scripter scripter = new Scripter(server);
+
+            Database myAdventureWorks = server.Databases["NorthWindAzure"];
+            /* With ScriptingOptions you can specify different scripting  
+            * options, for example to include IF NOT EXISTS, DROP  
+            * statements, output location etc*/
+            var scriptOptions = new ScriptingOptions();
+            scriptOptions.ScriptDrops = true;
+            scriptOptions.IncludeIfNotExists = true;
+            foreach (Table myTable in myAdventureWorks.Tables)
+            {
+                /* Generating IF EXISTS and DROP command for tables */
+                StringCollection tableScripts = myTable.Script(scriptOptions);
+                foreach (string script in tableScripts)
+                    Console.WriteLine(script);
+
+                /* Generating CREATE TABLE command */
+                tableScripts = myTable.Script();
+                foreach (string script in tableScripts)
+                    Console.WriteLine(script);
+            }
+
+            MessageBox.Show("Done");
+
+        }
+        public string ScriptDatabase()
+        {
+            var sb = new StringBuilder();
+
+            var server = new Server(@"KARENS-PC");
+            var databse = server.Databases["NorthWindAzure"];
+            var test = databse.Tables;
+
+            var scripter = new Scripter(server);
+            scripter.Options.ScriptDrops = false;
+            scripter.Options.WithDependencies = true;
+            scripter.Options.IncludeHeaders = true;
+            
+            //And so on ....
+
+
+            var smoObjects = new Urn[1];
+            Console.WriteLine(databse.Tables.Count);
+            foreach (Table t in databse.Tables)
+            {
+                Console.WriteLine(t.Name);
+                smoObjects[0] = t.Urn;
+                if (t.IsSystemObject == false)
+                {
+                    StringCollection sc = scripter.Script(smoObjects);
+
+                    foreach (var st in sc)
+                    {
+                        sb.Append(st);
+                    }
+                }
+            }
+            return sb.ToString();
+        }
+
+        private void cmdLoadDatabaseNames_Click(object sender, EventArgs e)
+        {
+            var ops = new SmoOperations();
+            lstDatabaseNames.DataSource = ops.DatabaseNames();
+            var Index = lstDatabaseNames.FindString("NorthWindAzure");
+            if (Index > -1)
+            {
+                lstDatabaseNames.SelectedIndex = Index;
+
+            }
+        }
+        private void cmdSpecialLoader_Click(object sender, EventArgs e)
+        {
+            var ops = new SmoOperations();
+            lstDatabaseNames.DataSource = ops.DatabaseNames();
+            var Index = lstDatabaseNames.FindString("NorthWindAzure");
+            if (Index > -1)
+            {
+                lstDatabaseNames.SelectedIndex = Index;
+                lstTableNames.DataSource = ops.TableNames(lstDatabaseNames.Text);
+                Index = lstTableNames.FindString("Orders");
+                if (Index > -1)
+                {
+                    lstTableNames.SelectedIndex = Index;
+                    lstColumnNames.DataSource = ops.TableColumnNames(lstDatabaseNames.Text, lstTableNames.Text);
+                }
+
+            }
+        }
+        private void cmdLoadTableNamesForSelectedDatabaseName_Click(object sender, EventArgs e)
+        {
+            if (lstDatabaseNames.DataSource != null)
+            {
+                var ops = new SmoOperations();
+                lstTableNames.DataSource = ops.TableNames(lstDatabaseNames.Text);
+            }
+            else
+            {
+                MessageBox.Show("Please populate the first ListBox with database names");
+            }
+        }
+        private void cmdLoadColumnNamesForSelectedTable_Click(object sender, EventArgs e)
+        {
+            if (lstTableNames.DataSource != null)
+            {
+                var ops = new SmoOperations();
+                lstColumnNames.DataSource = ops.TableColumnNames(lstDatabaseNames.Text, lstTableNames.Text);
+            }
+            else
+            {
+                MessageBox.Show("Please populate the second ListBox with table names");
+            }
+        }
+        /// <summary>
+        /// SET A BREAK-POINT in the return statement for GetColumnDetails and inspect
+        /// the details in the IDE Local window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmdColumnDetails_Click(object sender, EventArgs e)
+        {
+            var ops = new SmoOperations();
+            ops.GetColumnDetails(lstDatabaseNames.Text, lstTableNames.Text);
+        }
+
+        private void cmdGetForeignDetails_Click(object sender, EventArgs e)
+        {
+            var ops = new SmoOperations();
+            var keyList = ops.TableKeys(lstDatabaseNames.Text, lstTableNames.Text);
+            if (keyList.Count >0)
+            {
+                var results = string.Join(Environment.NewLine, keyList.Select(k => k.SchemaName).ToArray());
+                MessageBox.Show(results);
+            }
+            else
+            {
+                MessageBox.Show("Nothing to show");
+            }
+        }
+    }
+}

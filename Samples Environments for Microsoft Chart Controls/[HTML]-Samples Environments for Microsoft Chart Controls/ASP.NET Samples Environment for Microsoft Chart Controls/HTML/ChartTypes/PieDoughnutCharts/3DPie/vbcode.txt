@@ -1,0 +1,30 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Populate series data
+    Dim yValues As Double() =  {65.62, 75.54, 60.45, 34.73, 85.42}
+    Dim xValues As String() =  {"France", "Canada", "Germany", "USA", "Italy"}
+    Chart1.Series("Default").Points.DataBindXY(xValues, yValues)
+
+    ' Set Doughnut chart type
+    Chart1.Series("Default").ChartType = SeriesChartType.Doughnut
+
+    ' Set labels style
+    Chart1.Series("Default")("PieLabelStyle") = "Outside"
+
+    ' Set Doughnut radius percentage
+    Chart1.Series("Default")("DoughnutRadius") = "30"
+
+    ' Explode data point with label "Italy"
+    Chart1.Series("Default").Points(4)("Exploded") = "true"
+
+	' Enable 3D
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.Enabled = True
+
+	' Disable the Legend
+	Chart1.Legends[0].Enabled = false;
+
+End Sub 'Page_Load
+...

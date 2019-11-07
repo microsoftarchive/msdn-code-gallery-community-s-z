@@ -1,0 +1,183 @@
+<?Mapping XmlNamespace="CodeMapNS" ClrNamespace="Sandbox3D" ?>
+<?Mapping XmlNamespace="mv3d" ClrNamespace="Mesh3DObjects"?>
+<Window x:Class="Sandbox3D.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Sandbox3D" 
+	Loaded="WindowLoaded"
+    xmlns:c="CodeMapNS"
+    xmlns:mv3d="mv3d"
+	
+
+    Width="702.68" Height="500.32"
+	
+
+    >
+	<Window.Resources>
+		<Style x:Key="Horizontal" TargetType="{x:Type Slider}">
+			<Setter Property = "IsSnapToTickEnabled" Value ="False"/>
+			<Setter Property = "TickPlacement" Value ="BottomRight"/>
+			<Setter Property = "TickFrequency" Value =".5"/>
+			<Setter Property = "Minimum" Value ="-5"/>
+			<Setter Property = "Maximum" Value ="5"/>
+			<Setter Property = "Width" Value ="100"/>
+			<Setter Property = "Orientation" Value ="Horizontal"/>
+    </Style>
+
+
+
+	</Window.Resources>
+	<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+
+		<Grid.ColumnDefinitions>
+
+		<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+		<RowDefinition Height="30"/>
+		<RowDefinition/>
+		</Grid.RowDefinitions>
+    <MediaElement Name="myMedia" LoadedBehavior="Manual" UnloadedBehavior="Manual" />
+
+    <DockPanel  Grid.Row="0" Grid.Column="0">
+
+			<Menu x:Name="mainMenu">
+				<MenuItem Header="Select Mesh">
+					<MenuItem  Header="New" >
+						<MenuItem Header="Cylinder" Click="ResetPrimitive"/>
+						<MenuItem  Header="Sphere" Click="ResetPrimitive"/>
+						<MenuItem Header="Plane" Click="ResetPrimitive"/>
+						<MenuItem Header="Torus" Click="ResetPrimitive"/>
+						<MenuItem Header="Cube" Click="ResetPrimitive"/>
+
+          </MenuItem>
+					<MenuItem  Header="Open" />
+				</MenuItem>
+				<MenuItem Header="Manipulate Mesh">
+					<MenuItem  Header="Add VisualBrush" Click="PaintVideo"/>
+          <MenuItem  Header="Add VideoDrawing" Click="PaintVideo"/>
+          <MenuItem  Header="Add Image" Click="PaintImage"/>
+          
+        </MenuItem>
+
+			</Menu>
+
+		</DockPanel>
+		<DockPanel Grid.Row="1" Grid.Column="0">
+			<Border Width="150" Background='Azure'>
+				<StackPanel>
+            <StackPanel  x:Name="ScaleStackPanel" DataContext="{Binding ElementName=ModelScale}" >
+              <DockPanel>
+							<TextBlock>Scale</TextBlock>
+						</DockPanel>
+						<DockPanel  >
+							<TextBlock >X:</TextBlock>
+              <Slider Style="{StaticResource Horizontal}" Value="{Binding ScaleX}" />
+              <TextBlock Width="35" Text="{Binding ScaleX}" HorizontalAlignment="Left"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >Y:</TextBlock>
+							<Slider  Style="{StaticResource Horizontal}" Value="{Binding ScaleY}" />
+							<TextBlock Text="{Binding ScaleY}"
+					HorizontalAlignment="Left"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >Z:</TextBlock>
+							<Slider  Style="{StaticResource Horizontal}" Value="{Binding ScaleZ}"/>
+							<TextBlock Text="{Binding ScaleZ}"
+					HorizontalAlignment="Left"/>
+						</DockPanel>
+					</StackPanel>
+					<StackPanel  x:Name="TranslateStackPanel"  DataContext="{Binding ElementName=ModelTranslate}" >
+
+						<DockPanel>
+							<TextBlock>Translate</TextBlock>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >X:</TextBlock>
+							<Slider Style="{StaticResource Horizontal}" Value="{Binding OffsetX, Mode=TwoWay}"/>
+							<TextBlock Text="{Binding OffsetX}"
+					HorizontalAlignment="Left"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >Y:</TextBlock>
+							<Slider  Style="{StaticResource Horizontal}" Value="{Binding OffsetY}"/>
+							<TextBlock Text="{Binding OffsetY}"
+					HorizontalAlignment="Left"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >Z:</TextBlock>
+							<Slider  Style="{StaticResource Horizontal}" Value="{Binding OffsetZ}"/>
+							<TextBlock Text="{Binding OffsetZ}"
+					HorizontalAlignment="Left"/>
+						</DockPanel>
+					</StackPanel>
+					<StackPanel  x:Name="RotateStackPanel"  DataContext="{Binding ElementName=ModelRotate}" >
+						<DockPanel>
+							<TextBlock>Rotation</TextBlock>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >X:</TextBlock>
+							<Slider Style="{StaticResource Horizontal}" Value="{Binding (AxisAngleRotation3D.Axis).(Vector3D.X)}"/>
+							<TextBlock Text="{Binding (AxisAngleRotation3D.Axis).(Vector3D.X)}"
+					HorizontalAlignment="Left"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >Y:</TextBlock>
+							<Slider  Style="{StaticResource Horizontal}" Value="{Binding (AxisAngleRotation3D.Axis).(Vector3D.Y)}"/>
+							<TextBlock Text="{Binding (AxisAngleRotation3D.Axis).(Vector3D.Y)}"
+					HorizontalAlignment="Left"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >Z:</TextBlock>
+							<Slider  Style="{StaticResource Horizontal}" Value="{Binding (AxisAngleRotation3D.Axis).(Vector3D.Z)}"/>
+							<TextBlock Text="{Binding (AxisAngleRotation3D.Axis).(Vector3D.Z), Mode=Default}"
+					HorizontalAlignment="Left"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock >Angle:</TextBlock>
+							<Slider Style="{StaticResource Horizontal}" Value="{Binding Angle}" Maximum="360" Minimum="0" TickFrequency="10"/>
+							<TextBlock Text="{Binding Angle}"/>
+						</DockPanel>
+					</StackPanel>
+        </StackPanel>
+			</Border>
+			<Border Background="Blue" BorderBrush="Black" BorderThickness="1">
+				<Viewport3D x:Name="myViewPort3D">
+					<Viewport3D.Camera>
+            <PerspectiveCamera 
+           Position=".2,.2,5.0"
+            />
+          </Viewport3D.Camera>
+            <ModelVisual3D>
+              <ModelVisual3D.Content>
+                <Model3DGroup >
+                  <AmbientLight Color="DarkGray"/>
+                  <DirectionalLight Color="LightGray" Direction="-7, -4, 10" />
+                  </Model3DGroup>
+              </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+              <ModelVisual3D.Transform>
+                <Transform3DGroup>
+                      <ScaleTransform3D x:Name="ModelScale" ScaleX="1" ScaleY="1"  ScaleZ="1" />
+                      <RotateTransform3D>
+                        <RotateTransform3D.Rotation>
+                          <AxisAngleRotation3D x:Name="ModelRotate" Angle="0" Axis="0 1 0">
+                          <!--
+                            <AxisAngleRotation3D.Axis >
+                              <Vector3D X="0" Y="1" Z="0"/>
+                            </AxisAngleRotation3D.Axis>
+                              -->
+                          </AxisAngleRotation3D>
+                        </RotateTransform3D.Rotation>
+                      </RotateTransform3D>
+                      <TranslateTransform3D x:Name="ModelTranslate" OffsetX="0" OffsetY="0" OffsetZ="0" />
+                </Transform3DGroup>
+              </ModelVisual3D.Transform>
+            </ModelVisual3D>
+				</Viewport3D>
+			</Border>
+		</DockPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>酷炫聊天</title>
+    <link href="~/Content/Css/Chat.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <p style="font-size:26px; font-weight:bolder; color:cornflowerblue;">Asp.net MVC中使用SignalR实现仿QQ聊天的即时通信功能</p>
+        <p style="font-size:20px; font-weight:bolder; ">作者：Learninghard</p>
+        <p style="font-size:20px; font-weight:bolder; ">网址：http://www.cnblogs.com/zhili/</p>
+        <p style="font-size:20px; font-weight:bolder; ">欢迎关注微信公众号：chenxuyuanHome</p>
+    </div>
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/layer/layer.min.js"></script>
+    <script type="text/javascript">
+        //用户编号
+        var userid = "@Session["userid"]";
+        //用户名
+        var username = "@Session["username"]";
+    </script>
+    <script src="~/Scripts/Chat.js"></script>
+</body>
+</html>

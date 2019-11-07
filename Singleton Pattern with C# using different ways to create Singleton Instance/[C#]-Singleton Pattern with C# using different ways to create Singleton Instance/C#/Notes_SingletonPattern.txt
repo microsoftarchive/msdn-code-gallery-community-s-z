@@ -1,0 +1,14 @@
+﻿
+----------------------------------------------------------------
+Head First Design Patterns
+Chapter Five - The Singleton Pattern
+----------------------------------------------------------------
+
+									"One of a Kind Objects"
+
+SINGLETON PATTERN ensures a class has only one instance, and provides a global point of access to it.
+
+
+1. The Singleton Pattern ensures that you have at most one instance of a class in your application.
+2. Provides Global Access point to that instance.
+3. Private Constructor +  Static Method or Getter + Static Variable

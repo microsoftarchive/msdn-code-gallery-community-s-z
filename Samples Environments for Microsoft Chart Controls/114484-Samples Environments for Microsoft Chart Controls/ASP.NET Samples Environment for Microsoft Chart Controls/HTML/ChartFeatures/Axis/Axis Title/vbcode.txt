@@ -1,0 +1,15 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+   ' Set  axis title
+   Chart1.ChartAreas("ChartArea1").AxisX.Title = "Chart Axis"
+   
+   ' Set Title font
+   Chart1.ChartAreas("ChartArea1").AxisX.TitleFont = New Font("Times New Roman", 12, FontStyle.Bold)
+   
+   ' Set Title color
+   Chart1.ChartAreas("ChartArea1").AxisX.ForeColor = Color.Red
+   
+End Sub 'Page_Load 

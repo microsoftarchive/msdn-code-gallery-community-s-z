@@ -1,0 +1,18 @@
+Imports System.Web.UI.DataVisualization.Charting.Chart
+...
+
+Sub Page_Load(sender As Object, e As System.EventArgs) '
+   Dim random As New Random()
+   Dim pointIndex As Integer
+   For pointIndex = 0 To 6
+      Chart1.Series("Series1").Points.AddXY(DateTime.Now.Date.AddDays(pointIndex), random.Next(1, 1000))
+   Next pointIndex
+   
+   ' Export chart series values into the data set
+   Dim dataSet As DataSet = Chart1.DataManipulator.ExportSeriesValues("Series1")
+   
+   ' Get XML data and schema from data set
+   XMLTextBox.Text = dataSet.GetXml()
+   SchemaTextBox.Text = dataSet.GetXmlSchema()
+End Sub 'Page_Load
+...

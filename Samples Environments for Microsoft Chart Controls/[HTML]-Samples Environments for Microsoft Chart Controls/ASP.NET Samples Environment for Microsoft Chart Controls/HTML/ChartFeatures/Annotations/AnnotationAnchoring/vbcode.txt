@@ -1,0 +1,18 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' Anchor to a DataPoint
+	Chart1.Annotations(0).AnchorDataPoint = Chart1.Series(0).Points(3)
+
+	' Or anchor to a X,Y coordinate
+	' Set annotation anchor X and Y coordinates
+	Chart1.Annotations(0).AnchorX = 5 
+	Chart1.Annotations(0).AnchorY = 20 
+
+	' Attach the annotation to the X and Y axis
+	Chart1.Annotations(0).AxisX = Chart1.ChartAreas(0).AxisX
+	Chart1.Annotations(0).AxisY = Chart1.ChartAreas(0).AxisY
+	
+End Sub 'Page_Load

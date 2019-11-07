@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Select Enum Post";
+    Layout = "~/Views/Shared/_Simple_Layout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    <fieldset>
+           Movie Type
+           @Html.DropDownList("MovieType")
+
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </fieldset>
+}
+

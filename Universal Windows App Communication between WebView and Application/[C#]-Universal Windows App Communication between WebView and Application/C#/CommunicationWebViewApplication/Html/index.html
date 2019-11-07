@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WebView Content</title>
+    <script type="text/javascript">
+        function reload() {
+            document.getElementById('log').innerHTML = 'Application Version: ' + window.sharedObj.getApplicationVersion();
+        }
+
+        function log(string) {
+            
+        }
+
+    </script>
+</head>
+<body>
+    <p id="log">Application Version:</p>
+    <button onclick="reload();">Get Application Version</button>
+
+</body>
+</html>

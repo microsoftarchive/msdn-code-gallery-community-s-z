@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDAPLibrary", "LDAPLibrary\LDAPLibrary.csproj", "{31938D00-F27A-4333-953E-2BC2C05A704E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LDAPWebsite", "LDAPWebsite\", "{BEF800DF-5B00-4182-AE08-C7F65B454D97}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{31938D00-F27A-4333-953E-2BC2C05A704E}|LDAPLibrary.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/LDAPWebsite"
+		Debug.AspNetCompiler.PhysicalPath = "LDAPWebsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LDAPWebsite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/LDAPWebsite"
+		Release.AspNetCompiler.PhysicalPath = "LDAPWebsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\LDAPWebsite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59590"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31938D00-F27A-4333-953E-2BC2C05A704E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31938D00-F27A-4333-953E-2BC2C05A704E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31938D00-F27A-4333-953E-2BC2C05A704E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31938D00-F27A-4333-953E-2BC2C05A704E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEF800DF-5B00-4182-AE08-C7F65B454D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEF800DF-5B00-4182-AE08-C7F65B454D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEF800DF-5B00-4182-AE08-C7F65B454D97}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEF800DF-5B00-4182-AE08-C7F65B454D97}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

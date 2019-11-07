@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "JapanCharts" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Price Change Financial Chart Gallery</ShortBlurb> 
+  <Content>AdvancedFinanceGallery.htm</Content>    
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "FinancialChartingJapanese" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Price Change Financial Chart Gallery</ShortBlurb> 
+  <Content>AdvancedFinanceGallery.htm</Content>    
+</SampleConfig>
+
+
+</SampleConfigs>

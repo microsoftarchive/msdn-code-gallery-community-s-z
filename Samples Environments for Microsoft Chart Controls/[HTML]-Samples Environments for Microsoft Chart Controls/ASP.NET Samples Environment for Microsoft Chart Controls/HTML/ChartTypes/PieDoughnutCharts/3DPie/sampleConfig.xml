@@ -1,0 +1,24 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "PieDoughnutCharts" Priority="100">
+	<Title>Pie and Doughnut Charts</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Pie and Doughnut Chart Types</ShortBlurb> 
+	<Content>Pie3D.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+<Keywords>
+    <Keyword>Pie</Keyword>
+    <Keyword>Doughnut</Keyword>
+    <Keyword>3D, Pie chart</Keyword>
+    <Keyword>3D, Doughnut chart</Keyword>
+    <Keyword>Chart type, Doughnut</Keyword>
+    <Keyword>Chart type, Pie</Keyword>
+  </Keywords>
+	</SampleConfig>
+	
+</SampleConfigs>

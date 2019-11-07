@@ -1,0 +1,93 @@
+﻿<Window xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PEJL_WPF_Examples" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" 
+		x:Class="PEJL_WPF_Examples.MainWindow"
+        x:Name="Window"
+        Width="800" Height="600" Background="White"
+        >
+    
+	<Window.Resources>
+		<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <!-- Look in App.xaml for example default  -->
+	</Window.Resources>
+    
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="100"/> <!-- Actions & Indicators -->
+            <RowDefinition/>
+		</Grid.RowDefinitions>
+
+        <GroupBox Padding="10" >
+            <GroupBox.Header>
+                <TextBlock FontSize="20" FontWeight="Bold" Text="These are all code created controls" />
+            </GroupBox.Header>
+            <Grid x:Name="CodedControlsGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1" x:Name="NewButtonsStack" Margin="10"/>
+                <StackPanel Grid.Column="2" x:Name="NewCheckBoxesStack" Margin="10"/>
+            </Grid>
+        </GroupBox>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="1. Hover mouse over DataGrid headers, above" FontWeight="Bold" TextWrapping="Wrap"/>
+                <TextBlock Foreground="Red" Text="{Binding MyIndicators.OverColumnName, StringFormat=Mouse is Over \{0\} column header!}" Visibility="{Binding MyIndicators.IsOverColumnHeader, Converter={StaticResource BooleanToVisibilityConverter}}" FontWeight="Bold" FontSize="13" TextWrapping="Wrap" />
+            </StackPanel>
+
+            <CheckBox Margin="10" Grid.Column="1" IsChecked="{Binding MyIndicators.IsConfirmed, Mode=OneWayToSource}">
+                <TextBlock Text="2. Click to confirm attached property is working" FontWeight="Bold" TextWrapping="Wrap"/>
+            </CheckBox>
+        </Grid>
+        
+        <GroupBox Grid.Row="2" Padding="10" >
+            <GroupBox.Header>
+                <TextBlock FontSize="20" FontWeight="Bold" Text="These are all the original XAML created controls" />
+            </GroupBox.Header>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Text="XAML ControlTemplates cannot decalare event handlers" TextWrapping="Wrap"/>
+                
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <DataGrid ItemsSource="{Binding MyList}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    
+                    <StackPanel Grid.Column="1">
+                        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Content="Default button" Width="130" Margin="20" />
+                        <Button Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Default style" Width="130" Margin="20" />
+                        <Button x:Name="MyTestButton" Style="{StaticResource ButtonStyle2}" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Attached property" Width="130" Margin="20" local:AttachedProperties.IsHighlighted="{Binding MyIndicators.IsConfirmed}" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <CheckBox Content="Default xaml CheckBox" />
+                        <CheckBox Content="Using standard CheckBox style" Style="{DynamicResource CheckBoxStyle1}"/>
+                    </StackPanel>
+                    
+                </Grid>
+            </Grid>
+
+        </GroupBox>
+        
+    </Grid>
+</Window>

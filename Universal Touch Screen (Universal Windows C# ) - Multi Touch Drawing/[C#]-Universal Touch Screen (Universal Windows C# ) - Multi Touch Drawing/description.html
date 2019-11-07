@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:sprite;/Areas/Epx/Themes/Windows/Content:0&amp;amp;v=2127BA016FE2A342BD62CA9533CAAD4D" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Areas/Epx/Themes/Windows/Content/UhfHeader.css?v=636456760532126700" data-do-not-move="true" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" href="https://statics-uhf-wus.akamaized.net/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/66-41abaf/ad-ec92c6/98-847609/e9-c399ba/8e-9c6412/cc-c21898/9c-3df1cf?ver=2.0" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/sprite.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/Footer.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/WindowsApps/Content/ImageSprite.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/UhfFooter.css" data-do-not-move="true" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Base/Content/SelectLocaleFromPopUp.css" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Universal Touch Screen (Universal Windows C# ) - Multi Touch Drawing ...</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/934c1f77-8b78-464a-85d7-fd4f92d359edBrand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/windowsapps/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/windowsapps/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Universal Touch Screen (Universal Windows C# ) - Multi Touch Drawing ...</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            universal windows app, UWP, windows phone 10, multi-touch track-pad, pen
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C# Language Features, universal windows app, UWP, windows phone 10, multi-touch track-pad, Lumia 950
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Phone, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/28/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>Just in case,&nbsp;project works with SDK 10.0.10240</p>
+<p><img id="148915" src="https://i1.code.msdn.s-msft.com/windowsapps/universal-touch-screen-942e781b/image/file/148915/1/build.png" alt="" width="320" height="170">&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p>If you have a problem with upload to WP (ask PIN) ... see&nbsp;link <a href="http://stackoverflow.com/questions/34114265/visual-studio-pin-is-required-to-establish-a-connection">
+http://stackoverflow.com/questions/34114265/visual-studio-pin-is-required-to-establish-a-connection</a></p>
+<p><em>Universal Windows App - Windows Phone/Store Application. Multi-touch screen example. GetIntermediatePoints, PointerDeviceType, PointerPointProperties. Show how to draw many lines with fingers. How to use the stylus, tap, mouse. Multiple input points
+ (fingertips). &nbsp; How to use PointerPoint class ...&nbsp;<br>
+<br>
+</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>Bring project, choose architecture X86, x64, ARM deploy and RUN/Debug</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>Simple Application which shows how to use multiple fingertips to draw multiple lines ...</em></p>
+<p><em>Below screenshot from Lumia 950XL</em></p>
+<p>&nbsp;</p>
+<p><span style="background-color:#ffff00">For use properties pressure please comment out (in code) line</span></p>
+<p><span style="background-color:#ffff00">pressure&nbsp;=&nbsp;<span class="cs__number">1</span>;</span></p>
+<p>&nbsp;</p>
+<p><em><br>
+</em></p>
+<p><img id="148622" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/148622/1/Lumia950XL.png" alt="" width="350" height="650"><em>&nbsp;</em></p>
+<p>Screenshot's device emulator &nbsp;(using the mouse) ...</p>
+<p><img id="148624" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/148624/1/DeviceEmulator.PNG" alt="" width="320" height="500"></p>
+<p>This windows store application (Local PC)</p>
+<p><img id="148625" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/148625/1/LocalPC.PNG" alt="" width="350" height="250"></p>
+<p>&nbsp;</p>
+<p><span style="font-size:small">In this example you find an answer how to use&nbsp;PointerPointProperties class,&nbsp;GetIntermediatePoints,&nbsp;It demonstrates how to using touch, mouse, and pen features. The application is written in C# and it designed
+ for Windows 10 devices.&nbsp;</span></p>
+<p><span style="font-size:small">The biggest advantages of touch interactions are the ability to use multiple input points (fingertips) at the same time.</span></p>
+<p><span style="font-size:small">Application support Stylus Interaction (pressure propeties).</span></p>
+<p><span style="font-size:small">Using Touch, Mouse, and Pen...</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder">
+<div class="title"><span>C#</span><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">xaml</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.IO.aspx"  title="Auto generated link to System.IO">System.IO</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.Runtime.InteropServices.WindowsRuntime.aspx"  title="Auto generated link to System.Runtime.InteropServices.WindowsRuntime">System.Runtime.InteropServices.WindowsRuntime</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.Windows.Input.aspx"  title="Auto generated link to System.Windows.Input">System.Windows.Input</a>;
+
+using Windows.UI;
+using Windows.UI.Popups;
+
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+
+using Windows.UI.Xaml.Shapes;
+using Windows.Devices.Input;
+
+namespace UniversalTouchScreen
+{
+    // Thanks ProfessorWeb.ru site - &gt; http://professorweb.ru/my/windows8/rt-ext/level1/1_4.php   (please use Google Translate)
+    public sealed partial class MainPage : Page
+    {
+        public MainPage()
+        {
+            this.InitializeComponent();
+        }
+
+        private SortedSet&lt;uint&gt; setId = new SortedSet&lt;uint&gt;();
+
+        private void gridPad_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            IList&lt;Windows.UI.Input.PointerPoint&gt; IlistPointer = e.GetIntermediatePoints(gridPad);
+            int intPointerCount = IlistPointer.Count();
+
+            byte[] rgb = new byte[3];
+            (new Random()).NextBytes(rgb);
+            Color color = Color.FromArgb(255, rgb[0], rgb[1], rgb[2]);
+
+            var blnIsMouse = e.Pointer.PointerDeviceType == PointerDeviceType.Mouse;
+
+            //Pointer saved in reversed mode ...
+            for (int i = intPointerCount - 1; i &gt;= 0; i--)
+            {
+                Windows.UI.Input.PointerPoint pointer = IlistPointer[i];
+
+                // User PointerId for identify sequence (line) - if needed
+                setId.Add(pointer.PointerId); // Add to Set - Set Automatically does not include duplicate Id ... 
+
+                Point point = pointer.Position;
+
+                // Prevent adding ellipse if mouse over grid and not left pressed ...
+                if (blnIsMouse &amp;&amp; !pointer.Properties.IsLeftButtonPressed) continue; 
+                
+                //Properties -  https://msdn.microsoft.com/en-us/library/windows.ui.input.pointerpointproperties.aspx
+                //if your devise has stylus ...
+                float pressure = pointer.Properties.Pressure;
+
+                // 48 just randomly chosen value...
+                // value pressure always 0.5 if not pen (stylus) ...
+
+
+                // Pay attention about simulator - pressure will be very small 
+                 pressure = 1; // use for simulate
+
+                double w = 48.0 * pressure;
+                double h = 48.0 * pressure;
+
+                if (point.X &lt; w / 2.0 || point.X &gt; gridPad.ActualWidth - w / 2)
+                {
+                    continue;  // add ellipse only on grid
+                }
+
+                if (point.Y &lt; h / 2.0 || point.Y &gt; gridPad.ActualHeight - h / 2)
+                {
+                    continue; // add ellipse only on grid
+                }
+
+                var tr = new TranslateTransform();
+                tr.X = point.X - gridPad.ActualWidth / 2.0;
+                tr.Y = point.Y - gridPad.ActualHeight / 2.0;
+
+                Ellipse el = new Ellipse()
+                {
+                    Width = w,
+                    Height = h,
+                    Fill = new SolidColorBrush(color),
+                    RenderTransform = tr,
+                    Visibility = Visibility.Visible
+                };
+
+                gridPad.Children.Add(el);
+
+            }
+
+            txtInfo.Text = &quot; &quot; &#43; setId.Count().ToString() &#43; &quot; lines ...&quot;;
+
+            // base.OnPointerMoved(e); //You can see differences if uncomment this line
+        }
+
+        private void btnClearAll_Click(object sender, RoutedEventArgs e)
+        {
+            while (gridPad.Children.Count != 0) // because below removed only first occurrence
+            {
+                foreach (UIElement uie in gridPad.Children)
+                {
+                    gridPad.Children.Remove(uie);
+                }
+            }
+
+            setId = new SortedSet&lt;uint&gt;();
+            txtInfo.Text = &quot;0 - lines ...&quot;;
+
+        }
+
+    }
+}
+
+//GestureRecognizer class - &gt; https://msdn.microsoft.com/library/windows/apps/br241937
+//Some interesting idea   - &gt; https://software.intel.com/en-us/articles/mixing-stylus-and-touch-input-on-windows-8
+</pre>
+<pre class="hidden">&lt;Page
+    x:Class=&quot;UniversalTouchScreen.MainPage&quot;
+    xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+    xmlns:local=&quot;using:UniversalTouchScreen&quot;
+    xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+    xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+    mc:Ignorable=&quot;d&quot;  &gt;
+
+    &lt;Grid Background=&quot;{ThemeResource ApplicationPageBackgroundThemeBrush}&quot;&gt;
+        &lt;Grid.ColumnDefinitions&gt;
+            &lt;ColumnDefinition /&gt;
+            &lt;ColumnDefinition /&gt;
+        &lt;/Grid.ColumnDefinitions&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height=&quot;Auto&quot;/&gt;
+            &lt;RowDefinition Height=&quot;*&quot;/&gt;
+            &lt;RowDefinition Height=&quot;Auto&quot;/&gt;
+            &lt;RowDefinition Height=&quot;Auto&quot;/&gt;
+        &lt;/Grid.RowDefinitions&gt;
+
+
+        &lt;Button x:Name=&quot;btnClearAll&quot;  Margin=&quot;12,0&quot; Grid.Row=&quot;0&quot; Grid.ColumnSpan=&quot;2&quot; VerticalAlignment=&quot;Top&quot; HorizontalAlignment=&quot;Stretch&quot; Content=&quot;Clear All&quot; Click=&quot;btnClearAll_Click&quot;  /&gt;
+       
+        &lt;Grid
+            Name=&quot;gridPad&quot; Grid.ColumnSpan=&quot;2&quot; Grid.Row=&quot;1&quot; Margin=&quot;10&quot; Background=&quot;#FFEAE9E9&quot;  PointerMoved=&quot;gridPad_PointerMoved&quot; /&gt;
+        &lt;TextBlock x:Name=&quot;txtInfo&quot; Text=&quot;MultiTouch &quot;  Margin=&quot;10,0,12,0&quot; Grid.Row=&quot;2&quot; Grid.ColumnSpan=&quot;2&quot; /&gt;
+
+    &lt;/Grid&gt;
+&lt;/Page&gt;
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.IO.aspx"  title="Auto generated link to System.IO">System.IO</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.Runtime.InteropServices.WindowsRuntime.aspx"  title="Auto generated link to System.Runtime.InteropServices.WindowsRuntime">System.Runtime.InteropServices.WindowsRuntime</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://code.msdn.microsoft.com/windowsapps/Universal-Touch-Screen-942e781b/https://msdn.microsoft.com/en-US/library/System.Windows.Input.aspx"  title="Auto generated link to System.Windows.Input">System.Windows.Input</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Popups;&nbsp;
+&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.Foundation;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.Foundation.Collections;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Xaml;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Xaml.Controls;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Xaml.Controls.Primitives;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Xaml.Data;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Xaml.Input;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Xaml.Media;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Xaml.Navigation;&nbsp;
+&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.UI.Xaml.Shapes;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;Windows.Devices.Input;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;UniversalTouchScreen&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Thanks&nbsp;ProfessorWeb.ru&nbsp;site&nbsp;-&nbsp;&gt;&nbsp;http://professorweb.ru/my/windows8/rt-ext/level1/1_4.php&nbsp;&nbsp;&nbsp;(please&nbsp;use&nbsp;Google&nbsp;Translate)</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">sealed</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;MainPage&nbsp;:&nbsp;Page&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;MainPage()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.InitializeComponent();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;SortedSet&lt;<span class="cs__keyword">uint</span>&gt;&nbsp;setId&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SortedSet&lt;<span class="cs__keyword">uint</span>&gt;();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;gridPad_PointerMoved(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;PointerRoutedEventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IList&lt;Windows.UI.Input.PointerPoint&gt;&nbsp;IlistPointer&nbsp;=&nbsp;e.GetIntermediatePoints(gridPad);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>&nbsp;intPointerCount&nbsp;=&nbsp;IlistPointer.Count();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">byte</span>[]&nbsp;rgb&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;<span class="cs__keyword">byte</span>[<span class="cs__number">3</span>];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="cs__keyword">new</span>&nbsp;Random()).NextBytes(rgb);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color&nbsp;color&nbsp;=&nbsp;Color.FromArgb(<span class="cs__number">255</span>,&nbsp;rgb[<span class="cs__number">0</span>],&nbsp;rgb[<span class="cs__number">1</span>],&nbsp;rgb[<span class="cs__number">2</span>]);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;blnIsMouse&nbsp;=&nbsp;e.Pointer.PointerDeviceType&nbsp;==&nbsp;PointerDeviceType.Mouse;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Pointer&nbsp;saved&nbsp;in&nbsp;reversed&nbsp;mode&nbsp;...</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">for</span>&nbsp;(<span class="cs__keyword">int</span>&nbsp;i&nbsp;=&nbsp;intPointerCount&nbsp;-&nbsp;<span class="cs__number">1</span>;&nbsp;i&nbsp;&gt;=&nbsp;<span class="cs__number">0</span>;&nbsp;i--)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows.UI.Input.PointerPoint&nbsp;pointer&nbsp;=&nbsp;IlistPointer[i];&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;User&nbsp;PointerId&nbsp;for&nbsp;identify&nbsp;sequence&nbsp;(line)&nbsp;-&nbsp;if&nbsp;needed</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setId.Add(pointer.PointerId);&nbsp;<span class="cs__com">//&nbsp;Add&nbsp;to&nbsp;Set&nbsp;-&nbsp;Set&nbsp;Automatically&nbsp;does&nbsp;not&nbsp;include&nbsp;duplicate&nbsp;Id&nbsp;...&nbsp;</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Point&nbsp;point&nbsp;=&nbsp;pointer.Position;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Prevent&nbsp;adding&nbsp;ellipse&nbsp;if&nbsp;mouse&nbsp;over&nbsp;grid&nbsp;and&nbsp;not&nbsp;left&nbsp;pressed&nbsp;...</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(blnIsMouse&nbsp;&amp;&amp;&nbsp;!pointer.Properties.IsLeftButtonPressed)&nbsp;<span class="cs__keyword">continue</span>;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Properties&nbsp;-&nbsp;&nbsp;https://msdn.microsoft.com/en-us/library/windows.ui.input.pointerpointproperties.aspx</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//if&nbsp;your&nbsp;devise&nbsp;has&nbsp;stylus&nbsp;...</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">float</span>&nbsp;pressure&nbsp;=&nbsp;pointer.Properties.Pressure;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;48&nbsp;just&nbsp;randomly&nbsp;chosen&nbsp;value...</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;value&nbsp;pressure&nbsp;always&nbsp;0.5&nbsp;if&nbsp;not&nbsp;pen&nbsp;(stylus)&nbsp;...</span>&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Pay&nbsp;attention&nbsp;about&nbsp;simulator&nbsp;-&nbsp;pressure&nbsp;will&nbsp;be&nbsp;very&nbsp;small&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pressure&nbsp;=&nbsp;<span class="cs__number">1</span>;&nbsp;<span class="cs__com">//&nbsp;use&nbsp;for&nbsp;simulate</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">double</span>&nbsp;w&nbsp;=&nbsp;<span class="cs__number">48.0</span>&nbsp;*&nbsp;pressure;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">double</span>&nbsp;h&nbsp;=&nbsp;<span class="cs__number">48.0</span>&nbsp;*&nbsp;pressure;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(point.X&nbsp;&lt;&nbsp;w&nbsp;/&nbsp;<span class="cs__number">2.0</span>&nbsp;||&nbsp;point.X&nbsp;&gt;&nbsp;gridPad.ActualWidth&nbsp;-&nbsp;w&nbsp;/&nbsp;<span class="cs__number">2</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">continue</span>;&nbsp;&nbsp;<span class="cs__com">//&nbsp;add&nbsp;ellipse&nbsp;only&nbsp;on&nbsp;grid</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(point.Y&nbsp;&lt;&nbsp;h&nbsp;/&nbsp;<span class="cs__number">2.0</span>&nbsp;||&nbsp;point.Y&nbsp;&gt;&nbsp;gridPad.ActualHeight&nbsp;-&nbsp;h&nbsp;/&nbsp;<span class="cs__number">2</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">continue</span>;&nbsp;<span class="cs__com">//&nbsp;add&nbsp;ellipse&nbsp;only&nbsp;on&nbsp;grid</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;tr&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;TranslateTransform();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tr.X&nbsp;=&nbsp;point.X&nbsp;-&nbsp;gridPad.ActualWidth&nbsp;/&nbsp;<span class="cs__number">2.0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tr.Y&nbsp;=&nbsp;point.Y&nbsp;-&nbsp;gridPad.ActualHeight&nbsp;/&nbsp;<span class="cs__number">2.0</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ellipse&nbsp;el&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Ellipse()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width&nbsp;=&nbsp;w,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height&nbsp;=&nbsp;h,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fill&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SolidColorBrush(color),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RenderTransform&nbsp;=&nbsp;tr,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visibility&nbsp;=&nbsp;Visibility.Visible&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gridPad.Children.Add(el);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtInfo.Text&nbsp;=&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;setId.Count().ToString()&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;lines&nbsp;...&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;base.OnPointerMoved(e);&nbsp;//You&nbsp;can&nbsp;see&nbsp;differences&nbsp;if&nbsp;uncomment&nbsp;this&nbsp;line</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;btnClearAll_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;RoutedEventArgs&nbsp;e)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">while</span>&nbsp;(gridPad.Children.Count&nbsp;!=&nbsp;<span class="cs__number">0</span>)&nbsp;<span class="cs__com">//&nbsp;because&nbsp;below&nbsp;removed&nbsp;only&nbsp;first&nbsp;occurrence</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">foreach</span>&nbsp;(UIElement&nbsp;uie&nbsp;<span class="cs__keyword">in</span>&nbsp;gridPad.Children)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gridPad.Children.Remove(uie);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setId&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SortedSet&lt;<span class="cs__keyword">uint</span>&gt;();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txtInfo.Text&nbsp;=&nbsp;<span class="cs__string">&quot;0&nbsp;-&nbsp;lines&nbsp;...&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+&nbsp;
+<span class="cs__com">//GestureRecognizer&nbsp;class&nbsp;-&nbsp;&gt;&nbsp;https://msdn.microsoft.com/library/windows/apps/br241937</span>&nbsp;
+<span class="cs__com">//Some&nbsp;interesting&nbsp;idea&nbsp;&nbsp;&nbsp;-&nbsp;&gt;&nbsp;https://software.intel.com/en-us/articles/mixing-stylus-and-touch-input-on-windows-8</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<h1>More Information</h1>
+<p>Thanks ProfessorWeb.ru site - &gt; http://professorweb.ru/my/windows8/rt-ext/level1/1_4.php</p>
+<p><em>//GestureRecognizer class - &gt; https://msdn.microsoft.com/library/windows/apps/br241937</em></p>
+<p><em>//Some interesting idea &nbsp; - &gt; https://software.intel.com/en-us/articles/mixing-stylus-and-touch-input-on-windows-8</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

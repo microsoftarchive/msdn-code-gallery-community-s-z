@@ -1,0 +1,26 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set series chart type
+    Chart1.Series("Default").ChartType = SeriesChartType.Bar
+
+    ' Set series point width
+    Chart1.Series("Default")("PointWidth") = "0.6"
+
+	' Show chart with right-angled axes
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.IsRightAngleAxes = true
+	
+	' Show columns as clustered
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.IsClustered = false
+	
+	' Show X axis end labels
+	Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.IsEndLabelVisible = True
+	
+	' Set rotational angles
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.Inclination = 30
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.Inclination = 30	
+
+End Sub 'Page_Load
+...

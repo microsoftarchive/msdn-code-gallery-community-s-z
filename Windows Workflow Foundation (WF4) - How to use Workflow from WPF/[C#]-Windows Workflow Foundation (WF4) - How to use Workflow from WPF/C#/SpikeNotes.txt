@@ -1,0 +1,145 @@
+Demonstrate how to use Workflows in a Model/View/ViewModel (MVVM) style architecture.
+
+Client UI Requirements
+* Follows MVVM architecture
+* Runs workflows on background thread in the client process
+* Supports notification of events from Workflow
+* Supports control of workflow from UI (Cancel)
+* High test coverage
+* Implemented in TDD style (Test First - Red / Green / Refactor)
+
+Non-Goals for this Sprint
+* Long Running Workflows (Persistence)
+* Workflow Designers
+* Console Applications
+
+Spike Goals
+* How to use a Workflow in an MVVM architecture
+* How to support notifications from a workflow without messaging activities
+* How to control a workflow from the client app in MVVM
+
+App Design
+The app will have a workflow that counts up to a number C that gets passed to it.  It will delay for X milliseconds through each loop to simiulate lengthy work.
+
+Step 0 - My Plan
+
+I'm going to start by creating the empty projects that I will use just so that I can setup the necessary references automatically.  Here are the projects I anticipate
+
+ClientWorkflow.Tests - (Unit Test Template) Unit tests for the solution
+ClientWorkflow.WPF - (WPF Windows App Template) WPF Client application with the View and ViewModel 
+ClientWorkflow.Model - (Workflow Activity Library Template) Class Library for the Workflow, Activities and Model classes
+
+Then I'm going to begin by building the system from the inside out.  I will start with tests that will verify the model behavior.  
+Then I will create tests to drive the view model and finally the WPF UI to drive the View Model.
+
+Step 1 - Create Test and Model
+
+I created the ClientWorkflow.Model project as a Workflow Activity Library so that it has all the necessary namespaces included.  
+I created a CountModel.cs class and renamed Activity1.xaml to WorkflowCount.xaml (renamed the activity itself as well)
+
+Now I can create my unit test project and it will have the necessary references to drive it by creating tests for my empty class CountModel
+
+What am I testing?  The model contains a workflow that will count up to a number with control operations and notifications
+The model will have 
+
+The properties are 
+* int max count default 100
+* int millisecond delay default 50.
+* int CountTo - the value to count to
+
+The operations are 
+* Start 
+* Cancel
+
+The delegates are 
+* Started
+* CountUpdated - passes the count
+* Canceled
+* Completed
+
+Note: I decided to use Action and Action<T> for these rather than events for now - seems like a cleaner implementation.
+
+11:14am Up to this point I've implemented all of the model (except Cancel) without workflow.  Everything is running on the calling thread.  
+But now I've reached the place where I have to put the workflow in the picture to support cancel.  Yes I could implement this with other threading 
+techniques but the point of this spike was to use a Workflow.
+
+At this point I'm thinking of building an alternate implementation of the model based on the Tasks library in .NET 4 - for this reason and also to support mocking of the model
+I'm going to extract an interface of the model.  For now I'll resist the temptation to implement with Tasks and stick to workflow.
+
+Thread Safety issue: What about setting the properties while the count is in progress?  What if you start counting and then change the CountTo property?  
+This should not be allowed - If I support properties on the model then I have to take into account controlling when you can set them.
+It would be much easier (and more predictable) if I made them arguments to the constructor.  Then you get the idea that you can't change these later or while
+the count is in progress.  Of course constructors can't be represented in the interface so perhaps it is better to add these to the StartCounting method.
+
+Step 2 - Adding Workflow To The Picture
+
+This is going to break my tests until I implement the notificiations.  First I will get the counting working and then go back and add the notifications.
+
+11:53am 
+I created the ICountNotification interface.  I decided to have CountModel implement this interface but then it occured to me that I don't want external users 
+of CountModel to be able to fire events on CountModel (though it might be useful later when mocking...).  For now I've decided to make ICountNotification 
+an internal interface since the Workflow Activities that will invoke it are going to be in the same project.
+
+I wonder if later when building the UI and I want to create a mock model if this decision will come back to bite me... don't know but I'm going to press on
+
+11:56am 
+Considered creating a base class for the various notification activities since they all have code to get the extension and throw an exception if they don't
+get it.  For now I've decided against this because I think it just makes this code harder to understand.
+
+12:24pm
+Now that I've added the workflow my tests are all failing because previously the tests were single threaded.  Now I need to add thread synchronization to wait 
+on the model to complete before I can assert the results.  I can do this by providing the completed delegate and setting a sync handle there.
+
+After reviewing the tests code I think that having a property that returns the target count on the model makes no sense at all.  I'm going to remove it.
+
+12:44pm
+Got the unit tests passing - I think the model is basically done.  One interesting thing was to note the timing issues.  
+You can't call StopCounting from a notification callback.  This results in some kind of a deadlock and WorkflowApplication eventually times out after 30 secs.
+
+If you want to signal a cancel event from a notification handler you have to do a little dance with AutoResetEvents - you will see this sprinkeled throughout 
+the test code.
+
+1:02pm 
+
+Step 3 - Creating the View Model
+Researching MVVM and how to handle commands with ViewModels.  I'm a WPF noob and I really don't understand but I think I'm going to press ahead and create 
+some ICommands that hang off the view model and go from there (after lunch).
+
+4:30pm
+After an afternoon of struggling with WPF and Commands I've finally settled on using a class called RelayCommand that allows me to put the command logic 
+into the ViewModel.  One last problem to overcome...  CommandManager.InvalidateRequerySuggested doesn't seem to work if fired on a notification callback
+(perhaps because it is not on the correct thread?)
+
+9:00pm
+Figured out that if I move the CommandManager.InvalidateRequerySuggested to the thread that starts the count rather than handling it in the notification 
+it works.  This might be ok
+
+Day 2
+5:00am
+Searched on the web and found people saying that CommandManager.InvalidateRequerySuggested has to be dispatched to the correct thread.  Strangely 
+DataBinding does not require this - changed the code to dispatch the call and now I can handle it from the notifications (which is better).
+
+Step 4 - Testing the View Model
+8:30am
+Yes... I know. I should have written the ViewModel tests as I was developing the ViewModel.  I was so new to ViewModel I was experimenting a lot yesterday
+when you churn the implementation a lot writing the tests can be a real hinderance.  Once I got the ViewModel to a place where I am happy with it
+I decided to write the tests.
+
+The first challenge is how to deal with the lifecycle of the workflow when its events are hidden from the ViewModel interface.  I decided to try and handle
+changes in the Command states since these mirror the lifecycle of the workflow but even though I try to handle the CanExecuteChanged event it never fires.
+Searching on the web I find a lot of people complaining about the way this whole CommandManager thing was written and I'm not sure if it will serve the need I
+have to test the ViewModel.
+
+Even though the UI doesn't require it I think I'm going to add a delegate that is called when the Counting property is changed that way I can test the ViewModel.
+
+8:48am
+Yes - test on view model work much better when handling the IsCountingChanged delegate
+Because I didn't write the test first I am selectively "breaking" the CounterViewModel to insure my tests are Red then I fix them to do Green and then refactor
+
+10:16am
+Done... Everything works, all tests are passing with 89% test coverage and I feel pretty good about the MVVM architecture.  There is a small amount of code in the MainWindow.xaml.cs 
+codebehind but avoiding this code would require me to go deeper into WPF behaviors and such.  I don't want to obscure the WF elements of the solution
+even further than they already are.
+
+Now to write up the blog post...
+

@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Tasks.Show.UserControls.FolderDetailsDropDown" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c="clr-namespace:Tasks.Show.Controls" xmlns:h="clr-namespace:Tasks.Show.Helpers" xmlns:vm="clr-namespace:Tasks.Show.ViewModels" xmlns:pl="clr-namespace:PixelLab.Wpf;assembly=PixelLab.Wpf" xmlns:utils="clr-namespace:Tasks.Show.Utils" xmlns:r="clr-namespace:Tasks.Show" >
+    <Grid x:Name="LayoutRoot" Background="#0000">
+
+        <c:PopupToggle OverridesDefaultStyle="True" Cursor="Hand"  Popup="{Binding ElementName=Popup}" Background="{Binding Path=Color,  Converter={x:Static pl:ColorBrushConverter.Instance}}" >
+            <c:PopupToggle.Template>
+                <ControlTemplate TargetType="c:PopupToggle">
+                    <Border Background="Transparent" />
+                </ControlTemplate>
+            </c:PopupToggle.Template>
+        </c:PopupToggle>
+
+        <Popup x:Name="Popup" AllowsTransparency="True" Focusable="False" Placement="Custom" CustomPopupPlacementCallback="{x:Static h:PopupHelper.SimplePlacementCallback}" VerticalOffset="-5" HorizontalOffset="-15" PopupAnimation="Fade" Opened="Popup_Opened" >
+            <Grid Name="DropDown" Margin="20" SnapsToDevicePixels="True">
+
+                <c:CalloutShape ArrowPlacement="Top" ArrowAlignment="Left" ArrowWidth="25" ArrowHeight="25" Stroke="Black" CornerRadius="4" >
+                    <c:CalloutShape.Fill>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Offset="0" Color="#E8383C3E"/>
+                            <GradientStop Offset="1" Color="#E8222627"/>
+                        </LinearGradientBrush>
+                    </c:CalloutShape.Fill>
+                    <c:CalloutShape.Effect>
+                        <DropShadowEffect BlurRadius="15" Direction="-90" Opacity="0.5" ShadowDepth="5"/>
+                    </c:CalloutShape.Effect>
+                </c:CalloutShape>
+
+                <StackPanel Margin="1,26,1,0">
+
+                    <pl:InfoTextBox x:Name="m_newFolderTextBox" TextBoxInfo="Folder Name..." Style="{StaticResource DarkTextBox}" Height="30" Margin="10" Text="{Binding Name, Mode=OneWay}" />
+                      <ListBox x:Name="ColorListBox" ItemsSource="{Binding Source={x:Static r:App.Root}, Path=FolderColorOptions}" SelectionChanged="ColorListBox_SelectionChanged" Margin="0,0,0,10">
+                        <ListBox.Template>
+                            <ControlTemplate>
+                                <WrapPanel Margin="1,1,1,1" Width="160" IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained"/>
+                            </ControlTemplate>
+                        </ListBox.Template>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Width="32" Height="32" Background="{Binding  Converter={x:Static pl:ColorBrushConverter.Instance}}" SnapsToDevicePixels="True" Margin="16,16,0,0" >
+                                    <Border x:Name="Border" BorderBrush="#000000" BorderThickness="1" />
+                                    <Border BorderBrush="#10FFFFFF" BorderThickness="1" Margin="-1" />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                <Setter Property="SnapsToDevicePixels" Value="True" />
+                                <Setter Property="OverridesDefaultStyle" Value="True" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListBoxItem">
+                                            <ContentPresenter />
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                    </ListBox>
+
+                    <Grid x:Name="RemoveButtonGrid" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}">
+                        <Border Height="1" Background="#4000" />
+                        <Button Style="{StaticResource DropDownSelectorButton}" Tag="Last" Content="Remove" HorizontalContentAlignment="Center" Panel.ZIndex="100" Click="Button_Click" />
+                    </Grid>
+      
+                </StackPanel>
+                <c:CalloutShape ArrowPlacement="Top" ArrowAlignment="Left" ArrowWidth="23" ArrowHeight="24" Stroke="#20FFFFFF" CornerRadius="4" Margin="1,2,1,1" IsHitTestVisible="False" />
+
+            </Grid>
+        </Popup>
+    </Grid>
+</UserControl>

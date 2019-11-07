@@ -1,0 +1,122 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Statistical">
+	<Title>Descriptive Statistics</Title> 
+	<Thumbnail>Descriptive Statistics\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Descriptive Statistics</ShortBlurb> 
+	<SampleControl>DescriptiveStatistics</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">Descriptive Statistics\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">Descriptive Statistics\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Statistical, Mean</Keyword>
+		<Keyword>Statistical, Variance</Keyword>
+		<Keyword>Statistical, Median</Keyword>
+		<Keyword>Statistical, Standard Deviation</Keyword>
+		<Keyword>Mean formula</Keyword>
+		<Keyword>Variance formula</Keyword>
+		<Keyword>Median formula</Keyword>
+		<Keyword>Statistical Standard Deviation</Keyword>
+	</Keywords> 	
+	
+	</SampleConfig>
+	
+	<SampleConfig ParentNodeID = "Statistical">
+	<Title>Distributions</Title> 
+	<Thumbnail>Distributions\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Distribution formulas</ShortBlurb> 
+	<SampleControl>Distributions</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">Distributions\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">Distributions\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Statistical Analysis, Distributions</Keyword>
+		<Keyword>Distribution formulas</Keyword>
+		<Keyword>Normal Distribution formula</Keyword>
+		<Keyword>T Distribution formula</Keyword>
+		<Keyword>F Distribution formula</Keyword>
+	</Keywords> 	
+	
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Statistical">
+	<Title>TTest</Title> 
+	<Thumbnail>TTest\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using T-Test Formulas</ShortBlurb> 
+	<SampleControl>TTest</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">TTest\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">TTest\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Statistical, t-test</Keyword>
+    <Keyword>t-test formulas</Keyword>
+	</Keywords> 	
+	
+	</SampleConfig>
+	
+	<SampleConfig ParentNodeID = "Statistical">
+	<Title>ANOVA</Title> 
+	<Thumbnail>ANOVA\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using ANOVA formulas</ShortBlurb> 
+	<SampleControl>ANOVA</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">ANOVA\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">ANOVA\vbcode.txt</InfoPage>
+	</InfoPages>
+	
+	<Keywords>
+		<Keyword>Statistical, ANOVA</Keyword>
+		<Keyword>ANOVA formulas</Keyword>
+	</Keywords> 	
+	
+	</SampleConfig>
+	
+	<SampleConfig ParentNodeID = "Statistical">
+	<Title>FTest</Title> 
+	<Thumbnail>Ftest\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using F-Test Formulas</ShortBlurb> 
+	<SampleControl>FTest</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">FTest\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">FTest\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Statistical, F-Test</Keyword>
+		<Keyword>F-Test formulas</Keyword>
+	</Keywords> 	
+
+	</SampleConfig>
+	
+	<SampleConfig ParentNodeID = "Statistical">
+	<Title>Covariance and Correlation</Title> 
+	<Thumbnail>CovarianceAndCorrelation\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Covariance and Correlation</ShortBlurb> 
+	<SampleControl>CovarianceAndCorrelation</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">CovarianceAndCorrelation\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">CovarianceAndCorrelation\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Statistical, Covariance and Correlation</Keyword>
+		<Keyword>Covariance formulas</Keyword>
+		<Keyword>Correlation formulas</Keyword>
+	</Keywords> 	
+	
+	</SampleConfig>
+	
+</SampleConfigs>

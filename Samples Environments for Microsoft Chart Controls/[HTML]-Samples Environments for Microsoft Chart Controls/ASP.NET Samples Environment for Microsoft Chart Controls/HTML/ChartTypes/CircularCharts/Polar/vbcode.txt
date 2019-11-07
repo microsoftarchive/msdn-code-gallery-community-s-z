@@ -1,0 +1,29 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' Populate series data
+	Dim angle As Double
+	For angle = 0.0 To 360.0 Step 10.0
+		Dim yValue As Double = (1.0 + Math.Sin((angle / 180.0 * Math.PI))) * 10.0
+		Chart1.Series("Series1").Points.AddXY(angle, yValue)
+	Next angle
+
+	' Set polar chart type
+	Chart1.Series("Default").ChartType = SeriesChartType.Polar
+
+	' Set polar chart style (Line or Marker)
+	Chart1.Series("Default")("PolarDrawingStyle") = "Marker"
+
+	' Set circular area drawing style (Circle or Polygon)
+	Chart1.Series("Default")("AreaDrawingStyle") = "Polygon"
+
+	' Set labels style (Auto, Horizontal, Circular or Radial)
+	Chart1.Series("Default")("CircularLabelsStyle") = "Horizontal"
+
+	' Show as 3D
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
+
+End Sub 'Page_Load
+...

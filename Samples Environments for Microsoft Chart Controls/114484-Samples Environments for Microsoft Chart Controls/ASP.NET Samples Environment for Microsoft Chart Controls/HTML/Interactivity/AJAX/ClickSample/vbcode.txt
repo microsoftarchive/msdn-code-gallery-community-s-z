@@ -1,0 +1,45 @@
+''' <summary> 
+''' Page Load event handler. 
+''' </summary> 
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) 
+    ' Note that special keywords were used to represent series name and data point index. 
+    For Each series As Series In Me.Chart1.Series 
+        series.PostBackValue = "#SERIESNAME;#INDEX" 
+    Next 
+End Sub 
+
+''' <summary> 
+''' Handles the Click event of the Chart1 control. 
+''' </summary> 
+''' <param name="sender">The source of the event.</param> 
+''' <param name="e">The <see cref="System.Web.UI.WebControls.ImageMapEventArgs"/> instance containing the event data.</param> 
+Protected Sub Chart1_Click(ByVal sender As Object, ByVal e As ImageMapEventArgs) 
+    ' get series name and point index 
+    Dim pointData As String() = e.PostBackValue.Split(";"C) 
+    Dim series As Series = Chart1.Series(pointData(0)) 
+    Dim point As DataPoint = series.Points(Int32.Parse(pointData(1))) 
+    
+    Me.PointData.Value = e.PostBackValue 
+    Me.PointValue.Text = point.YValues(0).ToString() 
+    
+    ' show the input panel and focus to text box 
+    Me.InputPanel.Visible = True 
+    Me.PointValue.Focus() 
+    
+End Sub 
+
+''' <summary> 
+''' Handles the Click event of the Button1 control. 
+''' </summary> 
+''' <param name="sender">The source of the event.</param> 
+''' <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param> 
+Protected Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    ' get series name and point index 
+    Dim pointData As String() = Me.PointData.Value.Split(";"C) 
+    Dim series As Series = Chart1.Series(pointData(0)) 
+    Dim point As DataPoint = series.Points(Int32.Parse(pointData(1))) 
+    ' update point value 
+    point.YValues(0) = [Double].Parse(Me.PointValue.Text) 
+    ' hide the input panel 
+    Me.InputPanel.Visible = False 
+End Sub 

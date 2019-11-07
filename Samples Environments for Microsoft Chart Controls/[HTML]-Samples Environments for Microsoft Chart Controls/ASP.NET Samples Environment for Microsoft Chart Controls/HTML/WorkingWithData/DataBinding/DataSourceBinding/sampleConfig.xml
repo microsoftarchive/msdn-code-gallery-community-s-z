@@ -1,0 +1,21 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataBinding" Priority= "300">
+  <Title>Data Source Binding</Title>
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Source Binding</ShortBlurb> 
+  <Content>DataSourceBinding.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding to Data Source</Keyword>
+    <Keyword>Binding, Data Source</Keyword>
+    <Keyword>Data Source Binding</Keyword>
+  </Keywords> 
+</SampleConfig>
+
+</SampleConfigs>

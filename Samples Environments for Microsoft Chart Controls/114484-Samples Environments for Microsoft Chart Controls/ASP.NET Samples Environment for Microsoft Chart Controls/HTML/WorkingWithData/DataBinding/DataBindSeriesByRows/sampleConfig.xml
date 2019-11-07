@@ -1,0 +1,23 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataBinding">
+  <Title>DataBind Series By Rows</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>DataBind Series By Rows</ShortBlurb> 
+  <Content>DataBindSeriesByRows.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding Series by Rows</Keyword>
+    <Keyword>Binding, Series by Rows</Keyword>
+     <Keyword>Series Data Binding by Rows</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+
+
+</SampleConfigs>

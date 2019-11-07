@@ -1,0 +1,54 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' Set X axis custom labels
+	Dim element As Integer = Chart1.ChartAreas("ChartArea1").AxisY.CustomLabels.Add(0, 30, "Low")
+	element = Chart1.ChartAreas("ChartArea1").AxisY.CustomLabels.Add(30, 70, "Medium")
+	element = Chart1.ChartAreas("ChartArea1").AxisY.CustomLabels.Add(70, 100, "High")
+
+	Dim stripLow As New StripLine()
+	stripLow.IntervalOffset = 0
+	stripLow.StripWidth = 30
+	stripLow.BackColor = Color.FromArgb(128, Color.Green)
+
+	Dim stripMed As New StripLine()
+	stripMed.IntervalOffset = 30
+	stripMed.StripWidth = 40
+	stripMed.BackColor = Color.FromArgb(128, Color.Orange)
+
+	Dim stripHigh As New StripLine()
+	stripHigh.IntervalOffset = 70
+	stripHigh.StripWidth = 30
+	stripHigh.BackColor = Color.FromArgb(128, Color.Red)
+
+	Chart1.ChartAreas("ChartArea1").AxisY.StripLines.Add(stripLow) 
+	Chart1.ChartAreas("ChartArea1").AxisY.StripLines.Add(stripMed) 
+	Chart1.ChartAreas("ChartArea1").AxisY.StripLines.Add(stripHigh)
+
+	' Set Y axis custom labels
+	element = Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels.Add(0.5, 1.5, "A")
+	Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels(element).GridTicks = GridTickTypes.All
+
+	element = Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels.Add(1.5, 2.5, "B")
+	Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels(element).GridTicks = GridTickTypes.TickMark
+
+	element = Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels.Add(2.5, 3.5, "C")
+	Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels(element).GridTicks = GridTickTypes.All
+
+	element = Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels.Add(3.5, 4.5, "D")
+	Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels(element).GridTicks = GridTickTypes.TickMark
+
+	element = Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels.Add(4.5, 5.5, "E")
+	Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels(element).GridTicks = GridTickTypes.All
+
+	' set second row of labels
+	Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels.Add(0.5, 3.5, "Group 1", 1, LabelMarkStyle.LineSideMark)
+	Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels.Add(3.5, 5.5, "Group 2", 1, LabelMarkStyle.LineSideMark)
+
+	' One more row of labels
+	Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels.Add(0.5, 5.5, "All Groups", 2, LabelMarkStyle.LineSideMark)
+
+Sub 'Page_Load
+...

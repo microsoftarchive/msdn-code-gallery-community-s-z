@@ -1,0 +1,22 @@
+﻿@model Finance.Web.Models.GraphDescriptionModel
+
+@{
+	ViewBag.Title = String.Format("{0} {1}", @Resources.GraphsDescriptionHeader, @Model.GraphTypeAsString);
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.GraphsDescriptionHeader @Model.GraphTypeAsString</h2>
+
+<table>
+	<thead></thead>
+	<tbody>
+		<tr><td><div class="display-field">
+					<p>@Html.DisplayTextFor(model => model.Information)</p><br/>
+				</div>
+		</td></tr>
+		<tr><td><img src="@Model.ImageThumbnail" /></td></tr>
+	</tbody>
+</table>
+<p>
+		@Html.ActionLink(@Resources.BackToIndexLinkLabel, "Index", "Home")
+</p>

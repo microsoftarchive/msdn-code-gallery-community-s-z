@@ -1,0 +1,156 @@
+﻿<Activity mc:Ignorable="sap" x:Class="MvcMusicStore.Workflow.CheckoutFlowchart" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:local="clr-namespace:MvcMusicStore.Models" xmlns:local1="clr-namespace:MvcMusicStore.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:s4="clr-namespace:System;assembly=System.ServiceModel" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Context" Type="InOutArgument(local:WorkFlowContext)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>844.8,676.8</sap:VirtualizedContainerService.HintSize>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
+  <Flowchart sad:XamlDebuggerXmlReader.FileName="C:\Users\muhusman\Documents\My Dropbox\code\MvcMusicStore-Completed\MvcMusicStore\Workflow\CheckoutFlowchart.xaml" sap:VirtualizedContainerService.HintSize="804.8,636.8">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+        <av:Point x:Key="ShapeLocation">260,2.4</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">290,77.6 290,98.8</av:PointCollection>
+        <x:Double x:Key="Width">790</x:Double>
+      </scg3:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID10</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">190,98.8</av:Point>
+          <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">290,121.2 290,148.8</av:PointCollection>
+        </scg3:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <local1:ShippingMethodActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">190,148.8</av:Point>
+              <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">290,171.2 290,188.8</av:PointCollection>
+            </scg3:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <local1:ShippingAddressActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">190,188.8</av:Point>
+                  <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">290,211.2 290,241.2 295,241.2 295,242.4</av:PointCollection>
+                </scg3:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <local1:PromoCodeActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID3" Condition="[Context.Request.Get(Of String)(&quot;PromoCode&quot;) = &quot;FREE&quot;]" sap:VirtualizedContainerService.HintSize="60,75.2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">250,242.4</av:Point>
+                      <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+                      <av:PointCollection x:Key="TrueConnector">250,280 220,280 220,320 200,320</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">310,280 340,280 390,280</av:PointCollection>
+                    </scg3:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">0,308.8</av:Point>
+                          <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                        </scg3:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <local1:ConfirmationActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+                    </FlowStep>
+                  </FlowDecision.True>
+                  <FlowDecision.False>
+                    <FlowStep x:Name="__ReferenceID5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">390,268.8</av:Point>
+                          <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">490,291.2 490,321.2 455,321.2 455,342.4</av:PointCollection>
+                        </scg3:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <local1:PaymentOptionsActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+                      <FlowStep.Next>
+                        <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID6" Expression="[Context.Request.Get(Of String)(&quot;PaymentOption&quot;)]" sap:VirtualizedContainerService.HintSize="60,75.2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">410,342.4</av:Point>
+                              <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+                              <av:PointCollection x:Key="PaypalConnector">410,361.2 180,361.2 180,388.8</av:PointCollection>
+                              <av:PointCollection x:Key="GoogleCheckoutConnector">410,380 410,400 280,400</av:PointCollection>
+                              <av:PointCollection x:Key="CreditCardConnector">470,380 580,380 580,428.8</av:PointCollection>
+                            </scg3:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <FlowStep x:Key="Paypal" x:Name="__ReferenceID0">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">80,388.8</av:Point>
+                                <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                              </scg3:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <local1:RedirectActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+                          </FlowStep>
+                          <x:Reference>__ReferenceID0<x:Key>GoogleCheckout</x:Key></x:Reference>
+                          <FlowStep x:Key="CreditCard" x:Name="__ReferenceID7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">480,428.8</av:Point>
+                                <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">580,451.2 580,481.2 580,488.8</av:PointCollection>
+                              </scg3:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <local1:BillingAddressActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">480,488.8</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">580,511.2 580,541.2 580,548.8</av:PointCollection>
+                                  </scg3:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <local1:CreditCardActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">480,548.8</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                                      </scg3:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <local1:ConfirmationActivity sap:VirtualizedContainerService.HintSize="200,22.4" WFContext="[Context]" />
+                                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowSwitch>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.False>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+  </Flowchart>
+</Activity>

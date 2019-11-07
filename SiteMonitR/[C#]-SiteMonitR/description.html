@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/4eb150e8-896b-4260-a046-ac085b94c62bCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SiteMonitR</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SiteMonitR</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Microsoft Azure, Windows Azure Storage, Windows Azure Web Sites, SignalR, ASP.NET Web API 2, WebJobs
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Microsoft Azure, Windows Azure Storage, Windows Azure Web Sites, SignalR
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/17/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/SiteMonitR-dd4fcf77">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>SiteMonitR Sample</h1>
+<p>The SiteMonitR scheduled WebJob pings all of the sites in a list of sites stored in Microsoft Azure Storage. As each site's status is obtained a message is sent to a storage queue. A WebJob running in a Web Site picks up the results of each site's status
+ check and saves the log entry to a storage table. Hosted in a Web Site in Azure, a Web API controller receives messages from the WebJobs when sites are pinged. The Web API controller then sends updates to the SiteMonitR dashboard via a SignalR Hub. The result
+ is a web-based web site monitoring tool.</p>
+<h3><a class="anchor" name="prerequisites" href="#prerequisites"></a>Prerequisites</h3>
+<ul>
+<li><a href="http://www.microsoft.com/visualstudio/en-us/products">Visual Studio 2013</a>
+</li><li><a href="http://www.windowsazure.com/en-us/develop/net/">Windows Azure SDK for .NET 2.2</a>
+</li></ul>
+<h3><a class="anchor" name="setting-up-the-sample" href="#setting-up-the-sample"></a>Setting up the Sample</h3>
+<p>The instructions below will walk you through the process of setting up SiteMonitR both locally on your development workstation and for getting it running live in Microsoft Azure.</p>
+<ol>
+<li>Download the code </li><li>Open the solution in Visual Studio and compile it. NuGet package restore should pull down all of the required NuGet packages automatically
+</li><li>Go to the <strong>bin/Debug</strong> folder of the SiteMonitR.WebJobs.EventDriven project. Zip all of the files (excluding .PDB and .XML files or any file with the term
+<strong>vshost</strong>). Rename the zip file to <strong>EventDriven.zip</strong> and copy it to your desktop.
+</li><li>Go to the <strong>bin/Debug</strong> folder of the SiteMonitR.WebJobs.Scheduled project. Zip all of the files (excluding .PDB and .XML files or any file with the term
+<strong>vshost</strong>). Rename the zip file to <strong>Scheduled.zip</strong> and copy it to your desktop.
+</li><li>Publish the SiteMonitR.Web web project into a new Windows Azure Web Site </li><li>If you don't have any Storage accounts in your Azure subscription, create one in the Azure portal.
+</li><li>
+<p>Copy the storage account's name and primary (or secondary) keys, and build a string representing the storage account connection string. The format of this string looks like this:</p>
+<p>DefaultEndpointsProtocol=https;AccountName=[YOUR ACCOUNT NAME];AccountKey=[YOUR ACCOUNT KEY]</p>
+</li><li>
+<p>Go to the Web Site's <strong>Configure</strong> tab in the Management Portal</p>
+</li><li>Create a new Connection String for the web site <strong>using the Azure Management Portal</strong>
+<em>(just setting the value in your Web.config file won't work, you need to set this using the portal)</em> you just deployed named
+<strong>AzureJobsDashboard</strong> and paste the connection string as the value of the Connection String.
+</li><li>Create a new Connection String for the web site <strong>using the Azure Management Portal</strong>
+<em>(just setting the value in your Web.config file won't work, you need to set this using the portal)</em> you just deployed named
+<strong>AzureJobsStorage</strong> and paste the connection string as the value of the Connection String.
+</li><li>Create a new App Setting for the web site <strong>using the Azure Management Portal</strong>. The name of the App Setting should be set to
+<strong>SiteMonitR.DashboardUrl</strong> and the value should be your web site's root URL (i.e.,
+<a href="http://sitemonitr.azurewebsites.net">http://sitemonitr.azurewebsites.net</a>)
+</li><li>Go to the <strong>WebJobs</strong> tab for the Web Site in the Management Portal
+</li><li>Click the <strong>Add a Job</strong> link </li><li>Name the job &quot;Event Driven&quot; and upload the <strong>EventDriven.zip</strong> file from your desktop. Select
+<strong>Run Continuously</strong> from the <strong>How to Run</strong> drop-down menu.
+</li><li>Go to the <strong>WebJobs</strong> tab for the Web Site in the Management Portal
+</li><li>Click the <strong>Add</strong> button at the bottom of the Management Portal </li><li>Name the job <strong>Scheduled</strong> and upload the <strong>Scheduled.zip</strong> file from your desktop. Select
+<strong>Run on a Schedule</strong> from the <strong>How to Run</strong> drop-down menu.
+</li><li>Set the schedule for the Scheduled WebJob per your liking. A suggestion is to set it to run every 15 minutes, but you can specify it for however often you prefer for your sites to be pinged.
+</li><li>Restart the web site </li><li>Click the <strong>Browse</strong> button from within the Management Portal to browse the site.
+</li><li>Add sites you wish to monitor. </li><li>If you'd like to force the WebJob to ping the sites you add from the SiteMonitR Web Dashboard, select the
+<strong>Scheduled</strong> WebJob and click the <strong>Run</strong> button at the bottom of the Management Portal.
+</li></ol>
+
+</div>
+
+
+    </div>
+</body>
+</html>

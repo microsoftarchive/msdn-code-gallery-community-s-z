@@ -1,0 +1,27 @@
+﻿<!--
+ Copyright (c) Microsoft Corporation. All rights reserved.
+ THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, 
+ INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<UserControl x:Class="Microsoft.Consulting.WorkflowStudio.Views.ValidationErrorsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Microsoft.Consulting.WorkflowStudio.Converters" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <local:BooleanToErrorTypeConverter x:Key="BooleanToErrorTypeConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <DataGrid Name="ErrorsDataGrid" AutoGenerateColumns="False">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Id" Binding="{Binding Id}" IsReadOnly="True"/>
+            <DataGridTextColumn Header="Type" Binding="{Binding IsWarning, Converter={StaticResource BooleanToErrorTypeConverter}}" IsReadOnly="True" />
+            <DataGridTextColumn Header="Message" Binding="{Binding Message}" IsReadOnly="True" Width="*"/>
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

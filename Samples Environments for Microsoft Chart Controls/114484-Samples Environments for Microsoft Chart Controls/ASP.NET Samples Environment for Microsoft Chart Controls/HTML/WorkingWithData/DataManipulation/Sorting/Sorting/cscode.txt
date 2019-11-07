@@ -1,0 +1,12 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Use point index for drawing the chart
+    Chart1.Series["Series1"].IsXValueIndexed = true;
+
+    // Sort series points by second Y value
+    Chart1.DataManipulator.Sort(PointSortOrder.Ascending, "Y2", "Series1");
+}
+...

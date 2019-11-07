@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://assets.onestore.ms/cdnfiles/onestorerolling-1603-16000/shell/v3/scss/shellnoresponsive.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Combined.css?resources=0:Header,0:sprite;/Areas/Epx/Themes/Windows/Content:0&amp;amp;v=7671ED4E2900C9BA5BE716DAE297BCE1" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Areas/Epx/Themes/Windows/Content/UhfHeader.css?v=635935999443863299" data-do-not-move="true" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Combined.css?resources=0:sprite,0:Footer,1:ImageSprite,2:SelectLocaleFromPopUp;/Areas/Epx/Themes/Windows/Content:0,/Areas/Epx/Themes/WindowsApps/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;v=CBE3E593A346890F9F2226E42ECC35DD" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Areas/Epx/Themes/Windows/Content/UhfFooter.css?v=635935999443863299" data-do-not-move="true" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Windows 10 #UWP Apps: Calendar Controls (C#-XAML)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/6e66e364-f0ae-469c-bec4-3d77930c8bdbBrand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/windowsapps/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/windowsapps/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Windows 10 #UWP Apps: Calendar Controls (C#-XAML)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows 10, Universal Windows App Development, Universal Windows Platform
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            CalendarView Controls in windows 10 C#-Xaml
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Phone, Xbox, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">3/5/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><span style="font-family:verdana,sans-serif; font-size:small"><strong>Introduction:</strong></span></p>
+<p><span style="font-size:small"><span style="font-family:verdana,sans-serif">In&nbsp;</span><a href="http://bsubramanyamraju.blogspot.in/2014/06/windowsphone-80-vs-windowsphone-81new.html">prev</a><span style="font-family:verdana,sans-serif">&nbsp;post i was
+ explained about how to use TimePicker &amp; DatePicker controls in WinRT windows phone 8.1.But the DatePicker is optimized for picking a known date, such as a date of birth, where the context of the calendar is not important. Fortunately from Windows 10 OS(version
+ 10.0.10240.0) Microsoft introduce&nbsp;<a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendarview.aspx">CalendarView&nbsp;</a>&amp;&nbsp;<a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendardatepicker.aspx">CalendarDatePicker&nbsp;</a>controls,
+ so these controls can gives you a standardized way to let users view and interact with a calendar.</span><span style="font-family:verdana,sans-serif">&nbsp;</span></span></p>
+<p><span style="font-size:small">You can also read this article at my original blog from
+<a href="http://bsubramanyamraju.blogspot.com/2016/03/windows-10-uwp-apps-now-calendar.html" >
+here</a></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://3.bp.blogspot.com/-U8hrFXODqog/Vtu9bEw1Z1I/AAAAAAAACbw/LBgqULodtgc/s1600/2.Output3.png"><img src="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://3.bp.blogspot.com/-U8hrFXODqog/Vtu9bEw1Z1I/AAAAAAAACbw/LBgqULodtgc/s1600/2.Output3.png" border="0" alt=""></a></span></p>
+<p class="separator"><span style="font-size:small">&nbsp;<strong style="font-size:small">Requirements:</strong></span></p>
+<ul>
+<li><span style="font-family:verdana,sans-serif; font-size:small">This article is targeted for windows 10 Universal Windows Platform(Version 1511) , so make sure you&rsquo;ve downloaded and installed the latest Windows 10 SDK from&nbsp;<a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://dev.windows.com/en-us/downloads">h
+ ere</a>.</span> </li><li><span style="font-family:verdana,sans-serif; font-size:small">I assumes that you&rsquo;re going to test your app on the Windows Phone emulator. If you want to test your app on a phone, you have to take some additional steps. For more info, see&nbsp;<a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/dn614128.aspx">Register
+ your Windows Phone device for development</a>.</span> </li><li><span style="font-family:verdana,sans-serif; font-size:small">This post assumes&nbsp;you&rsquo;re using&nbsp;<strong>Microsoft Visual Studio 2015 or Later.</strong></span>
+</li><li><span style="font-family:verdana,sans-serif; font-size:small">This article is developed on windows 8.1 machine. So Visual Studio settings may differ from windows 10 OS VS.</span>
+</li></ul>
+<div>
+<p><span style="font-size:small"><span style="font-family:verdana,sans-serif"><strong>Note:</strong>&nbsp;Windows 10 SDK works best on the Windows 10 operating system. And it is&nbsp;</span><span style="font-family:verdana,sans-serif">also supported on: Windows
+ 8.1, Windows 8, Windows 7, Windows Server 2012, Windows Server 2008 R2, but n</span><span style="font-family:verdana,sans-serif">ot all tools are supported on these operating systems.</span>&nbsp;</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small"><strong>Description:</strong></span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">This article can explain you about below topics</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">1. How to create new project in Windows 10?</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">2. How to use CalendarView control in Windows 10?</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">3. How to use CalendarDatePicker control in Windows 10?</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">4. How to run Windows 10 UWP app in emulator?</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small"><br>
+<strong>1. How to create new project in Windows 10?</strong></span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">Before to use&nbsp;calendar&nbsp;controls, first we need to create new project.&nbsp;</span></p>
+<ul>
+<li><span style="font-family:verdana,sans-serif; font-size:small">Launch Visual Studio 2015</span>
+</li><li><span style="font-family:verdana,sans-serif; font-size:small">On the File menu, select New &gt; Project.</span>
+</li><li><span style="font-family:verdana,sans-serif; font-size:small">The New Project dialog appears. The left pane of the dialog lets you select the type of templates to display.In the left pane, expand&nbsp;<strong>Installed</strong>&nbsp;&gt;&nbsp;<strong>Templates&nbsp;</strong>&gt;&nbsp;<strong>Visual
+ C#</strong>&nbsp;&gt;&nbsp;<strong>Windows</strong>, then pick the&nbsp;<strong>Universal&nbsp;</strong>template group. The dialog's center pane displays a list of project templates for Universal Windows Platform (UWP) apps.</span>
+</li><li><span style="font-family:verdana,sans-serif; font-size:small">In the center pane, select the Blank App (Universal Windows) template.The Blank App template creates a minimal UWP app that compiles and runs, but contains no user-interface controls or data.
+ You add controls to the app over the course of this tutorial.In the Name text box, type &quot;<strong>UWPCalenderControl</strong>&quot;.Click OK to create the project.</span>
+</li></ul>
+<p><span style="font-family:verdana,sans-serif; font-size:small">&nbsp;</span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://3.bp.blogspot.com/-NsUsbrH3jo8/Vtr77pMZvAI/AAAAAAAACbA/nTpTclwgnzA/s1600/1.NewProject.PNG"><img src="https://3.bp.blogspot.com/-NsUsbrH3jo8/Vtr77pMZvAI/AAAAAAAACbA/nTpTclwgnzA/s640/1.NewProject.PNG" border="0" alt="" width="640" height="390"></a></span></p>
+<span style="font-size:small"><span style="font-family:verdana,sans-serif">
+<p class="separator">Visual Studio creates your project and displays it in the Solution Explorer.</p>
+<p class="separator"><a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://4.bp.blogspot.com/-ppLBaXT3E1c/Vtr8rP1nRsI/AAAAAAAACbE/iJUKk14uhGo/s1600/1.NewProject1.PNG"><img src="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://4.bp.blogspot.com/-ppLBaXT3E1c/Vtr8rP1nRsI/AAAAAAAACbE/iJUKk14uhGo/s1600/1.NewProject1.PNG" border="0" alt=""></a></p>
+</span><strong><span style="font-family:verdana,sans-serif">2.&nbsp;</span><span style="font-family:verdana,sans-serif">How to use&nbsp;CalendarView&nbsp;control in Windows 10?</span></strong>
+</span>
+<p><span style="font-family:verdana,sans-serif; font-size:small">&nbsp;Now its time to use calendar controls and from windows 10 OS we have an in-built class called&nbsp;CalendarView, which can provide a standardized way to let users view and interact with
+ a calendar. If you need to let a user select multiple dates, you must use a CalendarView.</span></p>
+<p><span style="font-size:small"><span style="font-family:verdana,sans-serif">Okay now lets start to use&nbsp;</span><span style="font-family:verdana,sans-serif">CalendarView in our MainPage.xaml like below:</span>&nbsp;</span></p>
+<ol class="dp-xml">
+<li class="alt"><span style="color:#000000; font-size:small"><span class="tag">&lt;</span><span class="tag-name">CalendarView&nbsp;x:Name=&quot;MyCalendarView</span>&nbsp;<span class="attribute">DisplayMode</span>=<span class="attribute-value">&quot;Month&quot;&nbsp;SelectionMode=&quot;Multiple&quot;</span>&nbsp;<span class="attribute">CalendarItemBackground</span>=<span class="attribute-value">&quot;LightBlue&quot;</span>&nbsp;<span class="attribute">BorderBrush</span>=<span class="attribute-value">&quot;Orange&quot;</span>&nbsp;<span class="attribute">BorderThickness</span>=<span class="attribute-value">&quot;3&quot;</span><span class="tag">/&gt;</span>&nbsp;&nbsp;</span>
+</li></ol>
+<p><span style="font-family:verdana,sans-serif; font-size:small">In above code&nbsp;</span></p>
+<p><span style="font-size:small"><span style="font-family:verdana,sans-serif">SelectionMode property is set to Multiple to let a user select multiple dates.&nbsp;</span><span style="font-family:verdana,sans-serif">DisplayMode property is useful to set calendar
+ startup view and it is having three values(Month,Year,Decade). By default, it starts with the month view open.</span>&nbsp;</span></p>
+<p class="separator"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://1.bp.blogspot.com/-UtqVgBPos8Q/VtsM9QwJD6I/AAAAAAAACbY/5heSimEobv0/s1600/CalendarView.png"><img src="https://1.bp.blogspot.com/-UtqVgBPos8Q/VtsM9QwJD6I/AAAAAAAACbY/5heSimEobv0/s640/CalendarView.png" border="0" alt="" width="640" height="290"></a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">So when users click the header in the month view to open the year view, and click the header in the year view to open the decade view. Users pick a year in the decade view to return to the year
+ view, and pick a month in the year view to return to the month view. The two arrows to the side of the header navigate forward or backward by month, by year, or by decade.</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">And in C# code we can also set selected date, MinDate &amp; MaxDate like below:</span></p>
+<p>&nbsp;</p>
+<ol class="dp-c">
+<li class="alt"><span style="color:#000000; font-size:small">MyCalendarView.SelectedDates.Add(<span class="keyword" style="color:#006699">new</span>&nbsp;DateTime(2016,&nbsp;3,&nbsp;11));<span class="comment" style="color:#008200">//&nbsp;Set&nbsp;selected&nbsp;date&nbsp;is&nbsp;March&nbsp;3rd&nbsp;2016);</span>&nbsp;&nbsp;</span>
+</li><li><span style="color:#000000; font-size:small">MyCalendarView.MinDate&nbsp;=&nbsp;<span class="keyword" style="color:#006699">new</span>&nbsp;DateTime(2016,&nbsp;2,&nbsp;28);<span class="comment" style="color:#008200">//Min&nbsp;date&nbsp;is&nbsp;FEB&nbsp;28th&nbsp;2016</span>&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small"><span style="color:#000000">MyCalendarView.MaxDate&nbsp;=&nbsp;DateTime.Now.AddMonths(3);&nbsp;</span>//Max date is 3 months from current date</span>
+</li><li class="alt"><span style="font-size:small"><span style="font-family:consolas,'courier new',courier,mono,serif">MyCalendarView.NumberOfWeeksInView = 6;</span><span class="comment" style="color:#008200">//Month view show 6 weeks at a time</span>&nbsp;&nbsp;</span>
+</li></ol>
+<p class="separator"><span style="font-size:small"><span style="font-family:verdana,sans-serif"><strong>3.&nbsp;</strong></span><span style="font-family:verdana,sans-serif"><strong>How to use CalendarDatePicker control in Windows 10?</strong></span></span></p>
+<p class="separator"><span style="font-size:small"><span style="font-family:verdana,sans-serif">The CalendarView gives you a standardized way to let users view and interact with a calendar. If you need to let a user select multiple dates, you must use a CalendarView.
+ If you need to let a user pick only a single date and don&rsquo;t need a calendar to be always visible, consider using a CalendarDatePicker or DatePicker control. &nbsp;So&nbsp;</span>CalendarDatePicker&nbsp;can represents a control that allows a user to pick
+ a date from a calendar display.</span></p>
+<p class="separator"><span style="font-size:small"><span style="font-family:verdana,sans-serif">Okay now lets start to use&nbsp;</span><span style="font-family:verdana,sans-serif">CalendarDatePicker&nbsp;in our MainPage.xaml like below:</span></span></p>
+<ol class="dp-xml">
+<li class="alt"><span style="font-size:small"><span class="tag">&lt;</span><span class="tag-name">CalendarDatePicker</span>&nbsp;<span class="attribute">x:Name</span>=<span class="attribute-value">&quot;MyCalendarDatePicker&quot;</span><span class="tag">/&gt;</span>&nbsp;&nbsp;</span>
+</li></ol>
+<p class="separator"><span style="font-size:small"><span style="font-family:verdana,sans-serif">But we can also add more below properties to&nbsp;</span>CalendarDatePicker</span></p>
+<p class="separator">&nbsp;</p>
+<ul>
+<li><span style="font-size:small">customize Header</span> </li><li><span style="font-family:verdana,sans-serif; font-size:small">PlaceholderText</span>
+</li><li><span style="font-family:verdana,sans-serif; font-size:small">We can also set DateFormat</span>
+</li><li><span style="font-family:verdana,sans-serif; font-size:small">DisplayMode of calendar(Month, Year, Decade)</span>
+</li></ul>
+<p>&nbsp;</p>
+<ol class="dp-xml">
+<li class="alt"><span style="font-size:small"><span class="tag">&lt;</span><span class="tag-name">CalendarDatePicker</span>&nbsp;<span class="attribute">x:Name</span>=<span class="attribute-value">&quot;MyCalendarDatePicker&quot;</span>&nbsp;<span class="attribute">Grid.Row</span>=<span class="attribute-value">&quot;0&quot;</span>&nbsp;<span class="attribute">DisplayMode</span>=<span class="attribute-value">&quot;Month&quot;</span>&nbsp;<span class="attribute">IsCalendarOpen</span>=<span class="attribute-value">&quot;True&quot;</span>&nbsp;<span class="attribute">DateChanged</span>=<span class="attribute-value">&quot;MyCalendarDatePicker_DateChanged&quot;</span>&nbsp;<span class="attribute">DateFormat</span>&nbsp;=&nbsp;<span class="attribute-value">&quot;{}{dayofweek.full}&lrm;,&nbsp;&lrm;{month.full}&lrm;&nbsp;&lrm;{day.integer}&lrm;,&nbsp;&lrm;{year.full}&quot;</span>&nbsp;<span class="attribute">PlaceholderText</span>=<span class="attribute-value">&quot;Choose&nbsp;your&nbsp;date&quot;</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li><span class="comments" style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Customising&nbsp;CalendarDatePicker&nbsp;HeaderTemplate&nbsp;--&gt;&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">CalendarDatePicker.HeaderTemplate</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">DataTemplate</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">TextBlock</span>&nbsp;<span class="attribute">FontSize</span>=<span class="attribute-value">&quot;18&quot;</span>&nbsp;<span class="attribute">FontWeight</span>=<span class="attribute-value">&quot;Bold&quot;</span>&nbsp;<span class="attribute">Foreground</span>=<span class="attribute-value">&quot;Green&quot;</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">Underline</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows&nbsp;10&nbsp;Calendar&nbsp;control&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">Underline</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">TextBlock</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">DataTemplate</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">CalendarDatePicker.HeaderTemplate</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">CalendarDatePicker</span><span class="tag">&gt;</span>&nbsp;&nbsp;</span>
+</li></ol>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p class="separator"><span style="font-size:small">And in C# code we can also set selected date, MinDate &amp; MaxDate like below:</span></p>
+<ol class="dp-c">
+<li class="alt"><span style="font-size:small">MyCalendarDatePicker.Date&nbsp;=&nbsp;<span class="keyword">new</span>&nbsp;DateTime(2016,&nbsp;3,&nbsp;11);<span class="comment">//Selected&nbsp;date&nbsp;is&nbsp;March&nbsp;3rd&nbsp;2016</span>&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">MyCalendarDatePicker.MinDate&nbsp;=&nbsp;<span class="keyword">new</span>&nbsp;DateTime(2016,&nbsp;2,&nbsp;28);<span class="comment">//FEB&nbsp;28th&nbsp;2016</span>&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">MyCalendarDatePicker.MaxDate&nbsp;=&nbsp;DateTime.Now.AddMonths(3);<span class="comment">//Max&nbsp;date&nbsp;is&nbsp;3&nbsp;months&nbsp;from&nbsp;current&nbsp;date</span>&nbsp;&nbsp;</span>
+</li></ol>
+<p>&nbsp;</p>
+<p class="separator"><span style="font-size:small">We can get selected date of calendar view in 'DateChanged' event and in below code I am trying to display selected date in ContentDialog.</span></p>
+<ol class="dp-c">
+<li class="alt"><span style="font-size:small"><span class="keyword">private</span>&nbsp;<span class="keyword">void</span>&nbsp;MyCalendarDatePicker_DateChanged(CalendarDatePicker&nbsp;sender,&nbsp;CalendarDatePickerDateChangedEventArgs&nbsp;args)&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp; &nbsp; {&nbsp;&nbsp;</span> </li><li class="alt"><span class="comment" style="font-size:small">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;//Checking&nbsp;selected&nbsp;date&nbsp;is&nbsp;null&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="keyword">if</span>&nbsp;(args.NewDate&nbsp;!=&nbsp;<span class="keyword">null</span>)&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span>
+</li><li><span class="comment" style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;Getting&nbsp;selected&nbsp;new&nbsp;date&nbsp;value*/&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DisplayDate(args.NewDate.Value.ToString());&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp; &nbsp; &nbsp;}&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small"><span class="keyword">private</span>&nbsp;async&nbsp;<span class="keyword">void</span>&nbsp;DisplayDate(<span class="keyword">string</span>&nbsp;SelectedDate)&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp; &nbsp; &nbsp;{&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ContentDialog&nbsp;noWifiDialog&nbsp;=&nbsp;<span class="keyword">new</span>&nbsp;ContentDialog()&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title&nbsp;=&nbsp;<span class="string">&quot;Windows&nbsp;10&nbsp;Calendar&nbsp;Control&quot;</span>,&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content&nbsp;=&nbsp;<span class="string">&quot;Selected&nbsp;date&nbsp;is:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;SelectedDate,&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PrimaryButtonText&nbsp;=&nbsp;<span class="string">&quot;Ok&quot;</span>&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noWifiDialog.Margin&nbsp;=&nbsp;<span class="keyword">new</span>&nbsp;Thickness(0,&nbsp;100,&nbsp;0,&nbsp;0);&nbsp;&nbsp;</span>
+</li><li class="alt"><span style="font-size:small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;noWifiDialog.ShowAsync();&nbsp;&nbsp;</span>
+</li><li><span style="font-size:small">&nbsp; &nbsp; &nbsp; } &nbsp;</span> </li></ol>
+<p><span style="font-size:small"><strong>4. How to run Windows 10 UWP app in emulator?</strong></span></p>
+<p><span style="font-size:small">Now its time to test our sample, so follow below steps to run the app.</span></p>
+<p><span style="font-size:small"><strong>Step 1:&nbsp;</strong><span style="font-family:verdana,sans-serif">In addition to the options to&nbsp;<strong>Debug&nbsp;</strong>on a desktop device, Visual Studio provides options for deploying and debugging your app
+ on a physical mobile device connected to the computer, or on a mobile device emulator. You can choose among emulators for devices with different memory and display configurations like below</span></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://1.bp.blogspot.com/-UKOk1pFvA4Q/VtvMfguNRfI/AAAAAAAACcA/qP5qCZIuIh0/s1600/Emulator.PNG"><img src="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://1.bp.blogspot.com/-UKOk1pFvA4Q/VtvMfguNRfI/AAAAAAAACcA/qP5qCZIuIh0/s1600/Emulator.PNG" border="0" alt=""></a></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><strong>Note:&nbsp;</strong></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small">1. It's a good idea to test your app on a deivce with a small screen and limited memory, so use the Emulator 10.0.10240.0 WVGA 4 inch 512MB option.</span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small">2. If you want to test our app in physical device, you must&nbsp;<a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/dn614128.aspx">Register your Windows
+ Phone device for development</a>.</span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small">3. If you already have .APPx file, you can deploy it from&nbsp;<a href="http://bsubramanyamraju.blogspot.in/2016/02/windows-10-uwp-apps-how-to-deploy-appx.html" >WinAppDeployCmd.exe</a>&nbsp;tool</span></p>
+<span style="font-family:verdana,sans-serif; font-size:small">
+<p class="separator">&nbsp;</p>
+<p class="separator">After selecting emulator/device, From the&nbsp;<strong>Debug</strong>&nbsp;menu, click&nbsp;<strong>Start Debugging&nbsp;</strong>or Press F5. Then we can found below screen on emulator/device:</p>
+<p class="separator"><a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://1.bp.blogspot.com/-g3yIyipOegA/VtvOv5Wkx7I/AAAAAAAACcI/TOnWnpm0ZOY/s1600/2.Output1.PNG"><img src="https://1.bp.blogspot.com/-g3yIyipOegA/VtvOv5Wkx7I/AAAAAAAACcI/TOnWnpm0ZOY/s400/2.Output1.PNG" border="0" alt="" width="212" height="400"></a></p>
+<p class="separator"><a href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://3.bp.blogspot.com/-ycKuK06BIVE/VtvOv5_iJ8I/AAAAAAAACcM/7Mo5fQwo6nY/s1600/2.Output2.PNG"><img src="https://3.bp.blogspot.com/-ycKuK06BIVE/VtvOv5_iJ8I/AAAAAAAACcM/7Mo5fQwo6nY/s400/2.Output2.PNG" border="0" alt="" width="212" height="400"></a></p>
+<p>&nbsp;</p>
+<p class="separator"><strong><span style="font-family:verdana,sans-serif">Important Notes:</span></strong></p>
+</span>
+<div>
+<div>
+<div>
+<p><span style="font-family:verdana,sans-serif; font-size:small">1. A user can clear the selected date by clicking the selected date in the calendar view to deselect it.</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">2. By default, the minimum date shown in the CalendarView is 100 years prior to the current date, and the maximum date shown is 100 years past the current date. You can change the minimum and
+ maximum dates that the calendar shows by setting the MinDate and MaxDate properties.</span></p>
+<p><span style="font-family:verdana,sans-serif; font-size:small">3. By default, the month view shows 6 weeks at a time. You can change the number of weeks shown by setting the NumberOfWeeksInView property. The minimum number of weeks to show is 2; the maximum
+ is 8.</span></p>
+</div>
+<p class="separator">&nbsp;</p>
+<div>
+<p><span style="font-size:small"><span style="font-family:verdana,sans-serif">4. This sample will be work on all window 10 devices OS devices. And this sample was tested in Emulator &amp; Lumia 735 device with Windows 10 OS (</span><span style="font-family:verdana,sans-serif">version
+ 1511</span><span style="font-family:verdana,sans-serif">)</span><span style="font-family:verdana,sans-serif">.</span></span></p>
+</div>
+<div>
+<p><span style="font-size:small"><span style="font-family:verdana,sans-serif">5. W</span><span style="font-family:verdana,sans-serif">indows 10 SDK works best on the Windows 10 operating system. And it is&nbsp;</span><span style="font-family:verdana,sans-serif">also
+ supported on: Windows 8.1, Windows 8, Windows 7, Windows Server 2012, Windows Server 2008 R2, but n</span><span style="font-family:verdana,sans-serif">ot all tools are supported on these operating systems</span></span></p>
+</div>
+<div>
+<p><span style="font-size:small"><span style="font-family:verdana,sans-serif">6.&nbsp;</span><span style="font-family:verdana,sans-serif">This article is developed on windows 8.1 OS Machine with 64 bit.</span><span style="font-family:verdana,sans-serif">&nbsp;</span></span></p>
+<p class="separator"><span style="font-size:small"><strong>Help me with feedback:</strong></span></p>
+<p class="separator"><span style="font-size:small"><strong>&nbsp;</strong>Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="description/Ratings.png" alt="" width="74" height="15">&nbsp;star
+ rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice).&nbsp;</span></p>
+<p><span style="font-size:small"><span style="font-family:verdana,sans-serif"><br>
+</span></span></p>
+</div>
+</div>
+</div>
+<h2>
+<p class="separator"><span style="font-size:small"><span style="font-family:verdana,sans-serif">Follow me always at&nbsp;&nbsp;</span><a class="account-group x_x_x_js-account-group x_x_x_js-action-profile x_x_x_js-user-profile-link x_x_x_js-nav" href="https://code.msdn.microsoft.com/windowsapps/Windows-10-UWP-AppsCalendar-7e0aa4d5/https://twitter.com/Subramanyam_B" style="font-family:verdana,sans-serif; font-size:small"><span class="username js-action-profile-name" style="color:#8899a6"><span style="color:#b1bbc3">@</span>Subramanyam_B</span>&nbsp;</a></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small">Have a nice day by<span style="color:#000000">&nbsp;</span><a href="http://bsubramanyamraju.blogspot.in/p/about-me.html">Subramanyam Raju</a><span style="color:#000000">&nbsp;:)</span></span></p>
+</h2>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

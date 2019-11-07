@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataSourceTypes">
+  <Title>Binding to Dataviews</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Binding to Dataviews</ShortBlurb> 
+  <Content>DataDataview.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding to Data View</Keyword>
+    <Keyword>Binding, Data View</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

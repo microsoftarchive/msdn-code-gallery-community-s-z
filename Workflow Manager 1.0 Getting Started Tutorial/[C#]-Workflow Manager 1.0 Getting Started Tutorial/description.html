@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=6A843E98DB5AEC74CF385ACE5E94CB36" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=7B1318331AB587926159A23CD37DE62D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Workflow Manager 1.0 Getting Started Tutorial</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Workflow Manager 1.0 Getting Started Tutorial</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows Workflow Foundation, Workflow Manager 1.0
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Workflow Manager 1.0, DynamicValue, Microsoft.Workf<wbr />low.Samples.Com<wbr />mon
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">4/9/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><strong>Note that the designer experience for some of the activities in this tutorial (such as the HttpSend activity) are part of the Workflow Manager Tools for Visual Studio. These tools were not released for Visual Studio 2013 except as part of the Office
+ Tools installation. WFM workflow authoring using WFM tools in VS 2013 is not supported at this time, however Sharepoint workflow authoring and debugging using WFM Tools in VS 2013 is supported &nbsp;through office tools installation). Workflow Manager Tools
+ is still supported for Visual Studio 2012, and you can still follow the tutorial successfully using VS 2012.</strong></p>
+<p>This project contains the completed version of the <a href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://msdn.microsoft.com/en-us/library/windowsazure/dn217859(v=azure.10).aspx">
+Workflow Manager 1.0 Getting Started Tutorial</a>&nbsp;on MSDN. This tutorial provides an example of creating a custom activity that retrieves products from the Northwind sample database, and an example of creating a workflow that uses this activity to enumerate
+ the returned products. It shows how to create a scope, publish the activity and the workflow to the scope, and then create a workflow client application that starts the workflow. This lab also provides a demo of the Workflow Explorer sample application which
+ provides a graphical way to inspect the scopes and workflow artifacts of a Workflow Manager server.</p>
+<p style="padding-left:30px"><strong>Important:</strong> If you download and run the accompanying sample, copy the sample to a new path or rename the path so that it does not have a # in the path. By default the sample will extract to &quot;Workflow Manager 1.0
+ Getting Started Tutorial\C#\...&quot;. Before running the sample, copy the files to a new folder or rename the path so that the # is removed, for example &quot;Workflow Manager 1.0 Getting Started Tutorial\CSharp\...&quot;.</p>
+<p>In step 1, <a href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://msdn.microsoft.com/en-us/library/windowsazure/dn175762(v=azure.10).aspx">
+How to: Create a Custom Activity for Workflow Manager 1.0</a>,&nbsp;a custom activity that retrieves products from the Northwind sample database hosted at
+<a href="http://services.odata.org/Northwind/Northwind.svc">http://services.odata.org/Northwind/Northwind.svc</a> is created. This activity used in following steps in the tutorial.</p>
+<p><div style="background:#FFFFCC;border:dotted 1px #FF0000;width:350px;height:300px;padding:10px;"><a href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85514/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%201.wmv">https://i1.code<wbr />.msdn.s-msft.co<wbr />m/workflow-mana<wbr />ger-10-4d6b3c14<wbr />/image/file/855<wbr />14/1/workflow%2<wbr />0manager%201.0%<wbr />20getting%20sta<wbr />rted%20tutorial<wbr />%20step%201.wmv</a></div> <br>
+<a id="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85514/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%201.wmv" href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85514/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%201.wmv">Download
+ video</a></p>
+<p style="padding-left:30px"><strong>Note:</strong> The Uri expression for the HttpSend activity is slightly different in this video than in the accompanying documentation and sample code. This is because the&nbsp;sample was written to consume the more verbose
+ JSON returned by OData 2 services. The Northwind OData service now uses OData 3 which has a less verbose JSON format. This change to the Uri expression specifies the more verbose format which the sample was written to consume.</p>
+<p>&nbsp;</p>
+<p>In step 2, <a href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://msdn.microsoft.com/en-us/library/windowsazure/dn217861(v=azure.10).aspx">
+How to: Create a Workflow for Workflow Manager 1.0</a>, a workflow is created that uses the GetProducts activity to return a collection of products. The workflow iterates through the collection and extracts the product name for each returned product, adds it
+ to a list, and sets a user status containing the name of the product. This status is read and displayed by the workflow client application, which is created in a subsequent task. After all products have been read, the workflow sets a user status containing
+ the list of product names, and completes.</p>
+<p><div style="background:#FFFFCC;border:dotted 1px #FF0000;width:350px;height:300px;padding:10px;"><a href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85515/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%202.wmv">https://i1.code<wbr />.msdn.s-msft.co<wbr />m/workflow-mana<wbr />ger-10-4d6b3c14<wbr />/image/file/855<wbr />15/1/workflow%2<wbr />0manager%201.0%<wbr />20getting%20sta<wbr />rted%20tutorial<wbr />%20step%202.wmv</a></div> <br>
+<a id="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85515/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%202.wmv" href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85515/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%202.wmv">Download
+ video</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>In step 3, <a href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://msdn.microsoft.com/en-us/library/windowsazure/dn217860(v=azure.10).aspx">
+How to: Publish and Run a Workflow for Workflow Manager 1.0</a>, a workflow client application is created that creates a scope, publishes the activity and workflow, and then invokes the workflow. This step also demonstrates the Workflow Resource Browser sample.</p>
+<p><div style="background:#FFFFCC;border:dotted 1px #FF0000;width:350px;height:300px;padding:10px;"><a href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85516/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%203.wmv">https://i1.code<wbr />.msdn.s-msft.co<wbr />m/workflow-mana<wbr />ger-10-4d6b3c14<wbr />/image/file/855<wbr />16/1/workflow%2<wbr />0manager%201.0%<wbr />20getting%20sta<wbr />rted%20tutorial<wbr />%20step%203.wmv</a></div> <br>
+<a id="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85516/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%203.wmv" href="https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://code.msdn.microsoft.com/Workflow-Manager-10-4d6b3c14/https://i1.code.msdn.s-msft.com/workflow-manager-10-4d6b3c14/image/file/85516/1/workflow%20manager%201.0%20getting%20started%20tutorial%20step%203.wmv">Download
+ video</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

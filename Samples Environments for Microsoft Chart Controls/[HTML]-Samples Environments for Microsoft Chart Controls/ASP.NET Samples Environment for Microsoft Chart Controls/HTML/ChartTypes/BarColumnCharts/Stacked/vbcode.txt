@@ -1,0 +1,34 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Populate series data
+   Dim random As New Random()
+   Dim pointIndex As Integer
+   For pointIndex = 0 To 9
+      Chart1.Series("Series1").Points.AddY(random.Next(45, 95))
+   Next pointIndex
+   
+   ' Set chart type
+   Chart1.Series("Series1").ChartType = SeriesChartType.StackedArea100
+   
+   ' Show point labels
+   Chart1.Series("Series1").IsValueShownAsLabel = True
+   
+   ' Disable X axis margin
+   Chart1.ChartAreas("ChartArea1").AxisX.IsMarginVisible = False
+   
+   ' Enable 3D
+   Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True 
+
+   ' Set the first two series to be grouped into Group1
+   Chart1.Series("LightBlue")("StackedGroupName") = "Group1";
+   Chart1.Series("Gold")("StackedGroupName") = "Group1";
+
+   ' Set the last two series to be grouped into Group2
+   Chart1.Series("Red")("StackedGroupName") = "Group2";
+   Chart1.Series("DarkBlue")("StackedGroupName") = "Group2";
+
+End Sub 'Page_Load
+...

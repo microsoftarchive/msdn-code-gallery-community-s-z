@@ -1,0 +1,25 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(sender As Object, e As System.EventArgs)
+   
+   ' Set series type
+   Chart1.Series("Default").ChartType = SeriesChartType.PointAndFigure
+   
+   ' Set the PriceUpColor attribute			
+   Chart1.Series("Default")("PriceUpColor") = "Blue"
+   
+   ' Set the Color attribute			
+   Chart1.Series("Default").Color = Color.Red
+   
+   ' Set the ReversalAmount attribute
+   Chart1.Series("Default")("ReversalAmount") = "1"
+   
+   ' Set the BoxSize attribute
+   Chart1.Series("Default")("BoxSize") = "8%"
+   
+   ' Set the ProportionalSymbols attribute
+   Chart1.Series("Default")("ProportionalSymbols") = "true"
+   
+End Sub 'Page_Load 
+...

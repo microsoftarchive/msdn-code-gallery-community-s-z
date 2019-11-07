@@ -1,0 +1,25 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Create new data series and set it's visual attributes
+    Series series = new Series("Spline");
+    series.ChartType = SeriesChartType.Spline;
+    series.BorderWidth = 3;
+    series.ShadowOffset = 2;
+
+    // Populate new series with data
+    series.Points.AddY(67);
+    series.Points.AddY(57);
+    series.Points.AddY(83);
+    series.Points.AddY(23);
+    series.Points.AddY(70);
+    series.Points.AddY(60);
+    series.Points.AddY(90);
+    series.Points.AddY(20);
+
+    // Add series into the chart's series collection
+    Chart1.Series.Add(series);
+}
+...

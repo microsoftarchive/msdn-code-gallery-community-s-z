@@ -1,0 +1,1 @@
+Please open the folder in Windows, and read the pdf files with Adobe Reader.

@@ -1,0 +1,21 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+
+	// Set series chart type
+	Chart1.Series["Default"].ChartType = SeriesChartType.Kagi;
+
+	// Set the PriceUpColor attribute			
+	Chart1.Series["Default"]["PriceUpColor"] = "SkyBlue";
+
+	// Set the default color - price-down			
+	Chart1.Series["Default"].Color = Color.Tomato;
+
+	// Set the reversal amount attribute
+	Chart1.Series["Default"]["ReversalAmount"] = "1";	
+	
+}
+...
+

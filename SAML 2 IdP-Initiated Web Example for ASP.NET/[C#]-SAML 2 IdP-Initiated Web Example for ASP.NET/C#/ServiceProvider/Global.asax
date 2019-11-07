@@ -1,0 +1,1 @@
+<%@ Application Inherits="SamlIdPInitiated.ServiceProvider.Global" Language="C#" %>

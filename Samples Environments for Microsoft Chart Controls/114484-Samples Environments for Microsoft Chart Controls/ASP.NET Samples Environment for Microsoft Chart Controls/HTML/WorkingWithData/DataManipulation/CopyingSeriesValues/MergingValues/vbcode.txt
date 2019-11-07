@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Merge data from 4 different series into one series that has 4 Y values
+    Chart1.DataManipulator.CopySeriesValues("High:Y,Low:Y,Open:Y,Close:Y", _
+        "Stock:Y1,Stock:Y2,Stock:Y3,Stock:Y4")
+
+    ' Set stock series attributes
+    Chart1.Series("Stock").ChartType = SeriesChartType.Stock
+    Chart1.Series("Stock").BorderWidth = 2
+    Chart1.Series("Stock").ShadowOffset = 2
+
+End Sub 'Page_Load
+...

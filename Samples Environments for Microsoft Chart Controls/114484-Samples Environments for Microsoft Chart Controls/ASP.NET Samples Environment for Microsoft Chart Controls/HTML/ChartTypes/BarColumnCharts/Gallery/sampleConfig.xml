@@ -1,0 +1,12 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "BarColumnCharts" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Bar and Column Chart Gallery</ShortBlurb> 
+   <Content>BarColumnGallery.htm</Content>   
+    
+</SampleConfig>
+
+</SampleConfigs>

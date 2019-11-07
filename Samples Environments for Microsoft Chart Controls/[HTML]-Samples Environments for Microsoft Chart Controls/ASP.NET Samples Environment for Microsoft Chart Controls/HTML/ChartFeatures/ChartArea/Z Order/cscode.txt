@@ -1,0 +1,19 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Create references to chart areas.
+    ChartArea [] areas = new ChartArea[3];
+    areas[0] = Chart1.ChartAreas["ChartArea1"];
+    areas[1] = Chart1.ChartAreas["Chart Area 2"];
+    areas[2] = Chart1.ChartAreas["Chart Area 3"];
+
+    // Remove all chart areas from the collection
+    Chart1.ChartAreas.Clear();
+
+    // Add chart areas to the collection in selected order
+    Chart1.ChartAreas.Add(areas[0]);
+    Chart1.ChartAreas.Add(areas[2]);
+    Chart1.ChartAreas.Add(areas[1]);
+}

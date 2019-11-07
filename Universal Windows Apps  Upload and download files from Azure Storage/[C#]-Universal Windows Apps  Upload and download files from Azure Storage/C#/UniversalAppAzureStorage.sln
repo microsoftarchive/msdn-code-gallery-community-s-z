@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UniversalAppAzureStorage", "UniversalAppAzureStorage", "{F2AEBCFC-08EB-4244-97D4-6BC99076FB80}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UniversalAppAzureStorage.Shared", "UniversalAppAzureStorage\UniversalAppAzureStorage.Shared\UniversalAppAzureStorage.Shared.shproj", "{5362E974-5B71-4CEA-B7A7-6CFD856CEF1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalAppAzureStorage.Windows", "UniversalAppAzureStorage\UniversalAppAzureStorage.Windows\UniversalAppAzureStorage.Windows.csproj", "{21CC59BD-4069-4EC2-AFA7-940922883A66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalAppAzureStorage.WindowsPhone", "UniversalAppAzureStorage\UniversalAppAzureStorage.WindowsPhone\UniversalAppAzureStorage.WindowsPhone.csproj", "{34B6D5CB-BB16-4261-9393-7C80D6DD4891}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		UniversalAppAzureStorage\UniversalAppAzureStorage.Shared\UniversalAppAzureStorage.Shared.projitems*{34b6d5cb-bb16-4261-9393-7c80d6dd4891}*SharedItemsImports = 4
+		UniversalAppAzureStorage\UniversalAppAzureStorage.Shared\UniversalAppAzureStorage.Shared.projitems*{21cc59bd-4069-4ec2-afa7-940922883a66}*SharedItemsImports = 4
+		UniversalAppAzureStorage\UniversalAppAzureStorage.Shared\UniversalAppAzureStorage.Shared.projitems*{5362e974-5b71-4cea-b7a7-6cfd856cef1b}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|ARM.ActiveCfg = Debug|ARM
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|ARM.Build.0 = Debug|ARM
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|ARM.Deploy.0 = Debug|ARM
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|x64.ActiveCfg = Debug|x64
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|x64.Build.0 = Debug|x64
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|x64.Deploy.0 = Debug|x64
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|x86.ActiveCfg = Debug|x86
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|x86.Build.0 = Debug|x86
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Debug|x86.Deploy.0 = Debug|x86
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|ARM.ActiveCfg = Release|ARM
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|ARM.Build.0 = Release|ARM
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|ARM.Deploy.0 = Release|ARM
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|x64.ActiveCfg = Release|x64
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|x64.Build.0 = Release|x64
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|x64.Deploy.0 = Release|x64
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|x86.ActiveCfg = Release|x86
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|x86.Build.0 = Release|x86
+		{21CC59BD-4069-4EC2-AFA7-940922883A66}.Release|x86.Deploy.0 = Release|x86
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|ARM.ActiveCfg = Debug|ARM
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|ARM.Build.0 = Debug|ARM
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|ARM.Deploy.0 = Debug|ARM
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|x86.ActiveCfg = Debug|x86
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|x86.Build.0 = Debug|x86
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Debug|x86.Deploy.0 = Debug|x86
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|ARM.ActiveCfg = Release|ARM
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|ARM.Build.0 = Release|ARM
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|ARM.Deploy.0 = Release|ARM
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|x64.ActiveCfg = Release|Any CPU
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|x86.ActiveCfg = Release|x86
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|x86.Build.0 = Release|x86
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5362E974-5B71-4CEA-B7A7-6CFD856CEF1B} = {F2AEBCFC-08EB-4244-97D4-6BC99076FB80}
+		{21CC59BD-4069-4EC2-AFA7-940922883A66} = {F2AEBCFC-08EB-4244-97D4-6BC99076FB80}
+		{34B6D5CB-BB16-4261-9393-7C80D6DD4891} = {F2AEBCFC-08EB-4244-97D4-6BC99076FB80}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+﻿<Window x:Class="SpellChecker.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spell Checker" Height="449" Width="477" >
+    <Grid>
+        <ListBox Margin="12,44,12,12" Name="listBox1" ToolTip="Calculated suggestions" FontFamily="Consolas" />
+        <TextBox Height="23" Margin="163,11,0,0" Name="txtInput" VerticalAlignment="Top" TextChanged="txtInput_TextChanged" ToolTip="The word to spell check" IsEnabled="False" HorizontalAlignment="Left" Width="155" />
+        <Label Content="Sec: 0" Height="28" HorizontalAlignment="Right" Margin="0,9,12,0" Name="lblTime" VerticalAlignment="Top" Width="119" ToolTip="The time required for the calculation" />
+        <CheckBox Content="Parallel" Height="18.161" HorizontalAlignment="Left" Margin="95,15,0,0" Name="chkParallel" VerticalAlignment="Top" Width="62.475" Checked="chkParallel_CheckedChanged" Unchecked="chkParallel_CheckedChanged" IsEnabled="False" />
+        <Button Content="Load Words" Height="23" HorizontalAlignment="Left" Margin="12,11,0,0" Name="btnLoad" VerticalAlignment="Top" Width="75" Click="btnLoad_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿		[TestMethod] 
+		#region コード分析（命名規則）抑制
+		[SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly"), 
+		  SuppressMessage("Microsoft.Naming", "CA1707:IdentifiersShouldNotContainUnderscores"),
+		  SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly")]
+		#endregion
+		public void PlusArguments＿正常系＿引数が{1}と{2}と{3}の時に{0}が返ること() {
+
+			var args = new { 
+				first = {1},
+				second= {2},
+				third = {3},
+			};
+			var expected = {0};
+			ConsoleReport.WriteArgsAndExpected(args, expected);
+
+			var actual = StaticSomethingExecutor.PlusArguments(args.first, args.second, args.third);
+			ConsoleReport.WriteActual(actual);
+
+			Assert.AreEqual<int>(expected, actual);
+
+		} // end function

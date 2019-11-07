@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IllusionManufacturingDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="IllusionManufacturingDBModelStoreContainer">
+          <EntitySet Name="BillOfMaterials" EntityType="IllusionManufacturingDBModel.Store.BillOfMaterials" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductInventory" EntityType="IllusionManufacturingDBModel.Store.ProductInventory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorkOrder" EntityType="IllusionManufacturingDBModel.Store.WorkOrder" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="BillOfMaterials">
+          <Key>
+            <PropertyRef Name="ProductAssemblyID" />
+          </Key>
+          <Property Name="ProductAssemblyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AssemblyID" Type="int" />
+          <Property Name="ComponentID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="PerAssemblyQty" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="ComponentLevel" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductInventory">
+          <Key>
+            <PropertyRef Name="ProductInventoryID" />
+          </Key>
+          <Property Name="ProductInventoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Product" Type="nvarchar" MaxLength="50" />
+          <Property Name="Inventory Location" Type="nvarchar" MaxLength="50" />
+          <Property Name="Qty Available" Type="int" />
+        </EntityType>
+        <EntityType Name="WorkOrder">
+          <Key>
+            <PropertyRef Name="WorkOrderID" />
+          </Key>
+          <Property Name="WorkOrderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Product" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderQty" Type="int" />
+          <Property Name="DueDate" Type="datetime" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IllusionManufacturingDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="IllusionManufacturingDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BillOfMaterials" EntityType="IllusionManufacturingDBModel.BillOfMaterial" />
+          <EntitySet Name="ProductInventories" EntityType="IllusionManufacturingDBModel.ProductInventory" />
+          <EntitySet Name="WorkOrders" EntityType="IllusionManufacturingDBModel.WorkOrder" />
+        </EntityContainer>
+        <EntityType Name="BillOfMaterial">
+          <Key>
+            <PropertyRef Name="ProductAssemblyID" />
+          </Key>
+          <Property Name="ProductAssemblyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AssemblyID" Type="Int32" />
+          <Property Name="ComponentID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PerAssemblyQty" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="ComponentLevel" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ProductInventory">
+          <Key>
+            <PropertyRef Name="ProductInventoryID" />
+          </Key>
+          <Property Name="ProductInventoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Inventory_Location" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Qty_Available" Type="Int32" />
+        </EntityType>
+        <EntityType Name="WorkOrder">
+          <Key>
+            <PropertyRef Name="WorkOrderID" />
+          </Key>
+          <Property Name="WorkOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OrderQty" Type="Int32" />
+          <Property Name="DueDate" Type="DateTime" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IllusionManufacturingDBModelStoreContainer" CdmEntityContainer="IllusionManufacturingDBEntities">
+          <EntitySetMapping Name="BillOfMaterials">
+            <EntityTypeMapping TypeName="IllusionManufacturingDBModel.BillOfMaterial">
+              <MappingFragment StoreEntitySet="BillOfMaterials">
+                <ScalarProperty Name="ProductAssemblyID" ColumnName="ProductAssemblyID" />
+                <ScalarProperty Name="AssemblyID" ColumnName="AssemblyID" />
+                <ScalarProperty Name="ComponentID" ColumnName="ComponentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PerAssemblyQty" ColumnName="PerAssemblyQty" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="ComponentLevel" ColumnName="ComponentLevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductInventories">
+            <EntityTypeMapping TypeName="IllusionManufacturingDBModel.ProductInventory">
+              <MappingFragment StoreEntitySet="ProductInventory">
+                <ScalarProperty Name="ProductInventoryID" ColumnName="ProductInventoryID" />
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="Inventory_Location" ColumnName="Inventory Location" />
+                <ScalarProperty Name="Qty_Available" ColumnName="Qty Available" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkOrders">
+            <EntityTypeMapping TypeName="IllusionManufacturingDBModel.WorkOrder">
+              <MappingFragment StoreEntitySet="WorkOrder">
+                <ScalarProperty Name="WorkOrderID" ColumnName="WorkOrderID" />
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="OrderQty" ColumnName="OrderQty" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Illusion.ManufacturingsEDM">
+        <EntityTypeShape EntityType="IllusionManufacturingDBModel.BillOfMaterial" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="IllusionManufacturingDBModel.ProductInventory" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="IllusionManufacturingDBModel.WorkOrder" Width="1.5" PointX="2.75" PointY="3.75" Height="1.787985026041667" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

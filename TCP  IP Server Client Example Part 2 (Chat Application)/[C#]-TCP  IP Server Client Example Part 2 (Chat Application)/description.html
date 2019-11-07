@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/4f0db316-e33e-4e5c-b975-0f6de635f8e4Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>TCP / IP Server Client Example Part 2 (Chat Application)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>TCP / IP Server Client Example Part 2 (Chat Application)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Silverlight, .NET, Windows Forms, Windows Phone 7, .NET Framework 4, .NET Framework, VB.Net, .NET Framework 4.0, Windows General, Windows Phone, C# Language, WinForms, Windows 8, Visual Studio 2012, Windows Phone 8, Windows Store app, .NET Development
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Controls, Animation, Graphics, C#, Data Binding, Asynchronous Programming, Security, GDI+, Authentication, File System, User Interface, Games, Windows Forms, Graphics and 3D, Serialization, Architecture and Design, Multithreading, Navigation, Microsoft Azure, Data Access, threading, Images, customization, Media, custom controls, Web Services, 2d graphics, Parallel Programming, Image manipulation, Getting Started, Image Gallery, Printing, Windows Phone, Image, .NET 4, Drawing, How to, UI Design, Generic C# resuable code, Contacts, File Systems, Networking, Image Optimization, Windows 8, Windows Forms Controls, C# Language Features, Language Samples, Graphics Functions, ASP.NET Web API, Web API, Audio and video, User Experience, BitmapImage, Windows Store app, Load Image, data and storage
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud, Phone, Data, Xbox, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/17/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/TCP-IP-Server-Client-bacafcf4">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div>
+<h1>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduction</h1>
+</div>
+<p>In this series we are going to be looking at TCP IP, Client / Servers and what a massive world of opportunities this knowledge opens up to us, Today we will be doing a Chat System!</p>
+<div>
+<h1>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Building the Sample</h1>
+</div>
+<p>The sample is built in Visual Studio 2012 Ultimate as an x86 targeted application using .Net Framework 4. We will be using NuGet packages, a number of 3rd party libraries. All of which will be fully explained to you ensuring that the final compilation of
+ your App will be hassle free. Oh! And the sample code is verbosely commented so you should have no problem in working out what the code does.</p>
+<div>
+<h1>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description</h1>
+</div>
+<p>Communication is fundamental to us all. But it is also fundamental to many programs. When your application connects with a database it has to communicate, when your browser connects to a website, it communicates and the vast majority of the communication
+ that occurs on the internet is does through TCP communication. In this first example we will write a client and an &ldquo;echo server&rdquo; which simply replies with the message you sent &ndash; pretty much like the ping command. It doesn&rsquo;t sound like
+ much but it is the basis that we will start from.</p>
+<div>
+<h1>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creating our Application</h1>
+</div>
+<p>Open Visual Studio 2012 and Create a New Project. Call the Project ChatApp. You will find in the Solution download a new .dll called NetComm it is a 3<sup>rd</sup> party library that we will be using for our communication. Or you can download it from the
+ link below in the More Information section.</p>
+<h2>4.1&nbsp;&nbsp;&nbsp; Server Design</h2>
+<p>We have a single Toolstrip with a button which will create new Clients for us. This just makes things a little simpler for us at this stage.</p>
+<p>We have a RichTextBox which shows what the Server is doing and</p>
+<p>A StatusStrip which shows how many Connections (clients) are currently being processed by the Server.</p>
+<p>I will leave you do build your own design, and that of the Clients.</p>
+<h2>4.2&nbsp;&nbsp;&nbsp; How it works</h2>
+<p>The Server is instantiated and a number of events are subscribed to. We then start the Server and wait for the Events to be fired so we can process them. The Events will only be fired when a client connects. You can simulate clients connecting by clicking
+ on the button at the top of the Server window. You can have as many clients as you like and delete clients as you like as well.</p>
+<p>All messages sent by the clients are sent through the server. At this point the server looks to see if it is a command or a simple message for other&rsquo;s to read. In this implementation a message sent by one client is displayed on all other connected
+ clients screens. Later we will change this.</p>
+<p>The only command the Server currently recognises is &ldquo;CLOSING&rdquo; which is sent from a client when it is going off line. The Clients also recognise a single command which is &ldquo;CList&rdquo; &ndash; this tells the client which friends are online
+ &ndash; in this present version that is every client that is connected to the Server.</p>
+<h2>4.3&nbsp;&nbsp;&nbsp; Source Code</h2>
+<ul>
+<li>Source Code Form1.cs &ndash; The Server application </li><li>Source Code Forms/FrmClient.cs &ndash; the Client Application(s) </li></ul>
+<div>
+<h1>5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; More Information</h1>
+</div>
+<p>To convert the solution to a previous version of Visual Studio you can use this free application:
+<a href="http://vsprojectconverter.codeplex.com/"><em>http://vsprojectconverter.codeplex.com/</em></a> or download and use Visual Studio 2013 Express which is freely available from Microsoft from here:
+<a href="http://www.visualstudio.com/downloads/download-visual-studio-vs"><em>http://www.visualstudio.com/downloads/download-visual-studio-vs</em></a>.</p>
+<p>NetComm.dll: <a href="http://www.codeproject.com/Articles/118485/C-VB-NET-Multi-user-Communication-Library-TCP">
+http://www.codeproject.com/Articles/118485/C-VB-NET-Multi-user-Communication-Library-TCP</a></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

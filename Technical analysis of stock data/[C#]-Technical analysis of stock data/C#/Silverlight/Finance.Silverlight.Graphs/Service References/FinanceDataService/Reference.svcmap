@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="26b1eaea-3e43-4a13-91c3-bab9363f1bcd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Finance.disco" MetadataType="Disco" ID="8b0f4325-0e09-4c44-952f-de87ca663273" SourceId="1" SourceUrl="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc?disco" />
+    <MetadataFile FileName="Finance.xsd" MetadataType="Schema" ID="86540d75-cea8-4a4b-8b26-d8433987072f" SourceId="1" SourceUrl="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FinanceDataService.wsdl" MetadataType="Wsdl" ID="89ff105f-455a-4c01-966b-b72fb5693007" SourceId="1" SourceUrl="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc?wsdl" />
+    <MetadataFile FileName="Finance1.xsd" MetadataType="Schema" ID="712e615c-5ce2-4743-bf21-992b4cfef604" SourceId="1" SourceUrl="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="Finance2.xsd" MetadataType="Schema" ID="d2c6c75a-e4f4-411e-aa9a-9fea8ab3ffaf" SourceId="1" SourceUrl="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc?xsd=xsd3" />
+    <MetadataFile FileName="Finance3.xsd" MetadataType="Schema" ID="382aa9e3-9432-4266-a1c5-807bdd724ce0" SourceId="1" SourceUrl="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="Finance.wsdl" MetadataType="Wsdl" ID="edf8979f-9e7b-423c-82be-a8cd4e4751fa" SourceId="1" SourceUrl="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,24 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+'Note: for this event to work the name of the Chart must be "Chart1"
+Private Sub Chart1_Customize(ByVal sender As System.Web.UI.DataVisualization.Charting.Chart) Handles Chart1.Customize
+   
+   ' Set new Maximum value for X axis
+   Chart1.ChartAreas("ChartArea1").AxisX.Maximum += Double.Parse(XAxis.SelectedItem.Value)
+   
+   ' Set new Minimum value for X axis
+   Chart1.ChartAreas("ChartArea1").AxisX.Minimum -= Double.Parse(XAxis.SelectedItem.Value)
+   
+   ' Set new Maximum value for Y axis
+   Chart1.ChartAreas("ChartArea1").AxisY.Maximum += Double.Parse(YAxis.SelectedItem.Value)
+   
+   ' Set new Minimum value for Y axis
+   Chart1.ChartAreas("ChartArea1").AxisY.Minimum -= Double.Parse(YAxis.SelectedItem.Value)
+   
+   ' This method will fill labels using 
+   ' new Minimum and Maximum values. 
+   Chart1.ChartAreas("ChartArea1").RecalculateAxesScale()
+   
+End Sub 'OnCustomize event
+...

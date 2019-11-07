@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{8613DDCA-7A3D-4FDB-8CB3-6EC8E3DA0A34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsApp", "FormsApp\FormsApp.csproj", "{DA41DE5F-4F94-448E-B043-D93D5D091EDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8613DDCA-7A3D-4FDB-8CB3-6EC8E3DA0A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8613DDCA-7A3D-4FDB-8CB3-6EC8E3DA0A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8613DDCA-7A3D-4FDB-8CB3-6EC8E3DA0A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8613DDCA-7A3D-4FDB-8CB3-6EC8E3DA0A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA41DE5F-4F94-448E-B043-D93D5D091EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA41DE5F-4F94-448E-B043-D93D5D091EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA41DE5F-4F94-448E-B043-D93D5D091EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA41DE5F-4F94-448E-B043-D93D5D091EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs40
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WpfApp\\WpfApp.csproj
+		SccProjectName1 = WpfApp
+		SccLocalPath1 = WpfApp
+		SccProjectUniqueName2 = FormsApp\\FormsApp.csproj
+		SccProjectName2 = FormsApp
+		SccLocalPath2 = FormsApp
+	EndGlobalSection
+EndGlobal

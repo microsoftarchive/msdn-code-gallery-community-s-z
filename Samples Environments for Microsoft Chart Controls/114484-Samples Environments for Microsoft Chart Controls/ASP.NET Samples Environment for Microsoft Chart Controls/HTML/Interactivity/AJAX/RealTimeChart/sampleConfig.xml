@@ -1,0 +1,22 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "AJAXInteractivity" Priority="300">
+	<Title>Real Time Chart</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Real Time Chart</ShortBlurb> 
+	<Content>RealTimeChart.aspx</Content> 
+	
+	<InfoPages>
+    <InfoPage Title="HTML Source">realtimechart._aspx</InfoPage>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	  <Keyword>AJAX, Real Time Chart</Keyword>
+	  <Keyword>Real Time Chart</Keyword>
+  </Keywords>
+	</SampleConfig>
+	
+</SampleConfigs>

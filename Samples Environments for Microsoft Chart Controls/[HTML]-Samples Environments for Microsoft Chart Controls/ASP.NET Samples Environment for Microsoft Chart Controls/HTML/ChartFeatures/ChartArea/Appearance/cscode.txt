@@ -1,0 +1,26 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+   // Set Back Color
+   Chart1.ChartAreas["ChartArea1"].BackColor = Color.Blue;
+   
+   // Set Back Gradient End Color
+   Chart1.ChartAreas["ChartArea1"].BackSecondaryColor = Color.Green;
+   
+   // Set Hatch Style
+   Chart1.ChartAreas["ChartArea1"].BackHatchStyle = ChartHatchStyle.Cross;
+   
+   // Set Gradient Type
+   Chart1.ChartAreas["ChartArea1"].BackGradientStyle = GradientStyle.Center;
+      
+   // Set Border Color
+   Chart1.ChartAreas["ChartArea1"].BorderColor = Color.Blue;
+   
+   // Set Border Style
+   Chart1.ChartAreas["ChartArea1"].BorderDashStyle = ChartDashStyle.Solid;
+   
+   // Set Border Width
+   Chart1.ChartAreas["ChartArea1"].BorderWidth = 2;
+}

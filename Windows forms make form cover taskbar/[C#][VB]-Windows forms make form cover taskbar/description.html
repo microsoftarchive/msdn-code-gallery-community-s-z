@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=46D0EADCABBE3E18DF970254C2C182AB" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=D4D084DF03A9CB234D78334671AC996E" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Windows forms make form cover taskbar</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Windows forms make form cover taskbar</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            User Interface, Windows Forms
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            User Interface, Windows Forms, VB.Net, C# Language Features, User Experience
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/13/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Windows-forms-make-form-11da482a">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Description</h1>
+<p><span style="font-size:small">This sample shows how to make a form cover the entire screen with an option to cover or not cover the Windows task bar. There are many reasons for this but the main reason is a form has many controls that requires either the
+ user scrolls through the controls or simply depresses the X in the window title bar to maximism the window.&nbsp;</span></p>
+<p><span style="font-size:small">With that we must allow the user to remember this to either startup with&nbsp;maximized or not as the user may be fine with scolling so that when working with one monitor they can share the screen with another application that
+ is used in tangent with your application.</span></p>
+<p><span style="font-size:small">Let's get started, we could place all the code presented in the attached solution directly into a form and be good yet it's a good idea to place the code into another class so that it is reusable and does not clutter up the
+ form with this code. Best practices dicate place very little code into a form so that is what I have done with a slight twist which is place the code into a class project where each method is done as a language extension method.</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span><span class="hidden">csharp</span>
+<pre class="hidden">Imports <a class="libraryLink" href="https://code.msdn.microsoft.com/Windows-forms-make-form-11da482a/https://code.msdn.microsoft.com/Windows-forms-make-form-11da482a/https://msdn.microsoft.com/en-US/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>
+Public Module FormExtensions
+    Private Declare Function SetWindowPos Lib &quot;user32.dll&quot; _
+        Alias &quot;SetWindowPos&quot; (ByVal hWnd As IntPtr,
+                              ByVal hWndIntertAfter As IntPtr,
+                              ByVal X As Integer,
+                              ByVal Y As Integer,
+                              ByVal cx As Integer,
+                              ByVal cy As Integer,
+                              ByVal uFlags As Integer) As Boolean
+
+    Private HWND_TOP As IntPtr = IntPtr.Zero
+    Private Const SWP_SHOWWINDOW As Integer = 64
+
+    ''' &lt;summary&gt;
+    ''' Place form into full screen
+    ''' &lt;/summary&gt;
+    ''' &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;
+    ''' &lt;param name=&quot;TaskBar&quot;&gt;True to hide Windows TaskBar&lt;/param&gt;
+    ''' &lt;remarks&gt;
+    ''' Showing this task bar may not work fully but that is not the
+    ''' point here, the point is to cover the task bar with a option
+    ''' to expose it is secondary.
+    ''' &lt;/remarks&gt;
+    &lt;Runtime.CompilerServices.Extension()&gt;
+    Public Sub FullScreen(ByVal sender As Form, ByVal TaskBar As Boolean)
+
+        sender.WindowState = FormWindowState.Maximized
+        sender.FormBorderStyle = FormBorderStyle.None
+        sender.TopMost = True
+
+        If TaskBar Then
+
+            SetWindowPos(sender.Handle, HWND_TOP, 0, 0,
+                         Screen.PrimaryScreen.Bounds.Width,
+                         Screen.PrimaryScreen.Bounds.Height,
+                         SWP_SHOWWINDOW
+            )
+
+        End If
+
+    End Sub
+    ''' &lt;summary&gt;
+    ''' Restore to original size/position
+    ''' &lt;/summary&gt;
+    ''' &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;
+    ''' &lt;remarks&gt;&lt;/remarks&gt;
+    &lt;Runtime.CompilerServices.Extension()&gt;
+    Public Sub NormalMode(ByVal sender As Form)
+        sender.WindowState = FormWindowState.Normal
+        sender.FormBorderStyle = FormBorderStyle.FixedSingle
+        sender.TopMost = True
+    End Sub
+End Module
+</pre>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Windows-forms-make-form-11da482a/https://code.msdn.microsoft.com/Windows-forms-make-form-11da482a/https://msdn.microsoft.com/en-US/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;
+
+namespace WinFormMaxLibrary
+{
+    public static class FormExtensions
+    {
+        [System.Runtime.InteropServices.DllImport(&quot;user32.dll&quot;,
+            EntryPoint = &quot;SetWindowPos&quot;,
+            ExactSpelling = true,
+            CharSet = System.Runtime.InteropServices.CharSet.Ansi,
+            SetLastError = true)]
+        private static extern bool SetWindowPos(
+            IntPtr hWnd,
+            IntPtr hWndIntertAfter,
+            int X,
+            int Y,
+            int cx,
+            int cy,
+            int uFlags);
+
+        private static IntPtr HWND_TOP = IntPtr.Zero;
+        private const int SWP_SHOWWINDOW = 64;
+
+        /// &lt;summary&gt;
+        /// Place form into full screen
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;TaskBar&quot;&gt;True to hide Windows TaskBar&lt;/param&gt;
+        /// &lt;remarks&gt;
+        /// Showing this task bar may not work fully but that is not the
+        /// point here, the point is to cover the task bar with a option
+        /// to expose it is secondary.
+        /// &lt;/remarks&gt;
+        public static void FullScreen(this Form sender, bool TaskBar)
+        {
+
+            sender.WindowState = FormWindowState.Maximized;
+            sender.FormBorderStyle = FormBorderStyle.None;
+            sender.TopMost = true;
+
+            if (TaskBar)
+            {
+
+                SetWindowPos(sender.Handle, HWND_TOP, 0, 0,
+                    Screen.PrimaryScreen.Bounds.Width,
+                    Screen.PrimaryScreen.Bounds.Height,
+                    SWP_SHOWWINDOW);
+
+            }
+
+        }
+        /// &lt;summary&gt;
+        /// Restore to original size/position
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;
+        /// &lt;remarks&gt;&lt;/remarks&gt;
+        public static void NormalMode(this Form sender)
+        {
+            sender.WindowState = FormWindowState.Normal;
+            sender.FormBorderStyle = FormBorderStyle.FixedSingle;
+            sender.TopMost = true;
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="js">Imports&nbsp;System.Windows.Forms&nbsp;
+Public&nbsp;Module&nbsp;FormExtensions&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Declare&nbsp;<span class="js__object">Function</span>&nbsp;SetWindowPos&nbsp;Lib&nbsp;<span class="js__string">&quot;user32.dll&quot;</span>&nbsp;_&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alias&nbsp;<span class="js__string">&quot;SetWindowPos&quot;</span>&nbsp;(ByVal&nbsp;hWnd&nbsp;As&nbsp;IntPtr,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByVal&nbsp;hWndIntertAfter&nbsp;As&nbsp;IntPtr,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByVal&nbsp;X&nbsp;As&nbsp;Integer,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByVal&nbsp;Y&nbsp;As&nbsp;Integer,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByVal&nbsp;cx&nbsp;As&nbsp;Integer,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByVal&nbsp;cy&nbsp;As&nbsp;Integer,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByVal&nbsp;uFlags&nbsp;As&nbsp;Integer)&nbsp;As&nbsp;<span class="js__object">Boolean</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;HWND_TOP&nbsp;As&nbsp;IntPtr&nbsp;=&nbsp;IntPtr.Zero&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Const&nbsp;SWP_SHOWWINDOW&nbsp;As&nbsp;Integer&nbsp;=&nbsp;<span class="js__num">64</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;summary&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;Place&nbsp;form&nbsp;into&nbsp;full&nbsp;screen&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;/summary&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;param&nbsp;name=<span class="js__string">&quot;sender&quot;</span>&gt;&lt;/param&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;param&nbsp;name=<span class="js__string">&quot;TaskBar&quot;</span>&gt;True&nbsp;to&nbsp;hide&nbsp;Windows&nbsp;TaskBar&lt;/param&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;remarks&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;Showing&nbsp;<span class="js__operator">this</span>&nbsp;task&nbsp;bar&nbsp;may&nbsp;not&nbsp;work&nbsp;fully&nbsp;but&nbsp;that&nbsp;is&nbsp;not&nbsp;the&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;point&nbsp;here,&nbsp;the&nbsp;point&nbsp;is&nbsp;to&nbsp;cover&nbsp;the&nbsp;task&nbsp;bar&nbsp;<span class="js__statement">with</span>&nbsp;a&nbsp;option&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;to&nbsp;expose&nbsp;it&nbsp;is&nbsp;secondary.&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;/remarks&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Runtime.CompilerServices.Extension()&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Public&nbsp;Sub&nbsp;FullScreen(ByVal&nbsp;sender&nbsp;As&nbsp;Form,&nbsp;ByVal&nbsp;TaskBar&nbsp;As&nbsp;<span class="js__object">Boolean</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sender.WindowState&nbsp;=&nbsp;FormWindowState.Maximized&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sender.FormBorderStyle&nbsp;=&nbsp;FormBorderStyle.None&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sender.TopMost&nbsp;=&nbsp;True&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;TaskBar&nbsp;Then&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetWindowPos(sender.Handle,&nbsp;HWND_TOP,&nbsp;<span class="js__num">0</span>,&nbsp;<span class="js__num">0</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Screen.PrimaryScreen.Bounds.Width,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Screen.PrimaryScreen.Bounds.Height,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SWP_SHOWWINDOW&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;If&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Sub&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;summary&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;Restore&nbsp;to&nbsp;original&nbsp;size/position&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;/summary&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;param&nbsp;name=<span class="js__string">&quot;sender&quot;</span>&gt;&lt;/param&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">''</span>'&nbsp;&lt;remarks&gt;&lt;/remarks&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Runtime.CompilerServices.Extension()&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Public&nbsp;Sub&nbsp;NormalMode(ByVal&nbsp;sender&nbsp;As&nbsp;Form)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sender.WindowState&nbsp;=&nbsp;FormWindowState.Normal&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sender.FormBorderStyle&nbsp;=&nbsp;FormBorderStyle.FixedSingle&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sender.TopMost&nbsp;=&nbsp;True&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;Sub&nbsp;
+End&nbsp;Module&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p><span style="font-size:small">So by placing the code into a class project allows us to use the methods in other applications.</span></p>
+<p><span style="font-size:small">The screenshot below shows the main form. The button labeled &quot;Full&quot; works in tangent with the CheckBox labeled Taskbar. Press this button with the check box checked will cover the screen and Window's taskbar while un-checking
+ the check box will allow the taskbar to display but when testing the code the main form may slightly overlap the taskbar yet for the focus here the intent is to cover the taskbar so let's not get hung up on this.</span></p>
+<p><span style="font-size:small">The button labeled &quot;Show form&quot; simply shows a modal form that works no different than in a regular form but we must change the TopMost property from the main form being top most to the child form then to ensure we revert back
+ to the main form I wrapped the code in a try/finally.</span></p>
+<p><span style="font-size:small">The &quot;Detect&quot; button indicate the form's state for demo purposes.</span></p>
+<p><span style="font-size:small">The CheckBox &quot;Remember full screen&quot; we databind to a property under the project properties were the data binding is done via selecting the checkbox, select properties then set as per figure 2</span></p>
+<p><img id="163423" src="description/Figure1.jpg" alt="" width="375" height="297"></p>
+<p><span style="font-size:small">Figure 2</span></p>
+<p><img id="163424" src="description/Figure2.jpg" alt="" width="610" height="426"></p>
+<p><span style="font-size:small">When examining the code in the vb.net or c# main form, note all you really need is a call to Me.FullScreen(true/false) or this.FullScreen(true/false) to max the form or me.NormalMode/this.NormalMode()</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

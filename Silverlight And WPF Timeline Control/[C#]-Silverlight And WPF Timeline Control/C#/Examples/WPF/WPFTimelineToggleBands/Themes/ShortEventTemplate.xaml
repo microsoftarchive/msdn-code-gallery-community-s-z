@@ -1,0 +1,71 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TimelineLibrary;assembly=TimelineLibrary">
+	<SolidColorBrush
+        x:Key="EventTooltipBackground">White</SolidColorBrush>
+
+	<SolidColorBrush
+        x:Key="EventTooltipTitleForeground">Blue</SolidColorBrush>
+
+	<SolidColorBrush
+        x:Key="EventTooltipDescriptionForeground">Gray</SolidColorBrush>
+	<ControlTemplate x:Key="EventToolTipStyle">
+		<Border
+            BorderBrush="Silver"
+            BorderThickness="1"
+			CornerRadius="4"
+            Background="{StaticResource EventTooltipBackground}">
+			<StackPanel
+                Margin="5"
+                MaxWidth="400">
+
+				<TextBlock
+                    Margin="0,0,0,0"
+                    Text="{Binding Event.Title, Mode=OneWay}"
+                    MinWidth="{Binding EventPixelWidth}"
+                    TextWrapping="NoWrap"
+                    Foreground="{StaticResource EventTooltipTitleForeground}"
+                    HorizontalAlignment="Left">
+				</TextBlock>
+
+				<TextBlock
+                    Margin="0,0,0,0"
+                    Text="{Binding Event.Description, Mode=OneWay}"
+                    TextWrapping="Wrap"
+                    Foreground="{StaticResource EventTooltipDescriptionForeground}"
+                    FontStyle="italic"
+                    HorizontalAlignment="Left"
+                    FontSize="11">
+				</TextBlock>
+			</StackPanel>
+		</Border>
+	</ControlTemplate>
+    <DataTemplate
+        x:Key="ShortEventTemplateStyle">
+		<Grid>
+			<!-- Fill="{Binding EventColorBrush, Mode=OneTime}" -->
+			<Rectangle
+                            Margin="0"
+                            RadiusX="1"
+                            RadiusY="1"
+                            MinWidth="4"
+                            Width="{Binding EventPixelWidth}"
+                            Fill="Green"
+                            StrokeThickness="0"
+                            VerticalAlignment="Top"
+                            Height="3">
+
+				<local:TooltipServiceEx.ToolTipEx>
+				<local:ToolTipEx
+                                    HideToolTipTimeout="60" />
+				</local:TooltipServiceEx.ToolTipEx>
+				<ToolTipService.ToolTip>
+					<ToolTip
+                                    Template="{StaticResource EventToolTipStyle}" />
+				</ToolTipService.ToolTip>
+
+			</Rectangle>
+		</Grid>
+	</DataTemplate>
+</ResourceDictionary>

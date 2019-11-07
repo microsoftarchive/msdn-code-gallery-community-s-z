@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "ChartAppearance" Priority="210">
+  <Title>Borders</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Setting Border Appearance</ShortBlurb> 
+  <Content>Borders.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+	<Keyword>Borders</Keyword>
+  </Keywords>
+
+</SampleConfig>
+
+
+</SampleConfigs>

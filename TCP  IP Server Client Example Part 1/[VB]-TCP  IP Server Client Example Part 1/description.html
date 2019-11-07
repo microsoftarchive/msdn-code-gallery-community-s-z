@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/4f0db316-e33e-4e5c-b975-0f6de635f8e4Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>TCP / IP Server Client Example Part 1</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>TCP / IP Server Client Example Part 1</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, vb, Win32, Windows Forms, WPF, Microsoft Azure, .NET Framework, Visual Basic .NET, VB.Net, .NET Framework 4.0, Windows General, Windows Phone, C# Language, VB.NET Language Features, WinForms, Windows 8, Visual Studio 2012, Windows Phone 8, Windows Store app
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Interop, Controls, Animation, Graphics, C#, Data Binding, Asynchronous Programming, Security, GDI+, Authentication, ASP.NET, File System, Class Library, User Interface, Games, Windows Forms, Serialization, Architecture and Design, Multithreading, Navigation, Microsoft Azure, Data Access, threading, Powershell, Images, customization, Media, custom controls, Web Services, Windows Form Controls, 2d graphics, Performance, Search, VB.Net, Parallel Programming, Image manipulation, Code Sample, Word, Image Gallery, Printing, Image, Console Window, .NET 4, Imaging, Drawing, How to, UI Design, Generic C# resuable code, File Systems, Networking, Windows PowerShell, Image Optimization, general, Windows 8, Windows Forms Controls, C# Language Features, Language Samples, Graphics Functions, Audio and video, Devices and sensors, Windows web services, User Experience, BitmapImage, Windows Store app, Load Image
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud, Phone, Data, Xbox, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/17/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/TCP-IP-Server-Client-0964d476">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>&nbsp;</p>
+<div style="border:none; border-bottom:solid #595959 1.0pt; padding:0cm 0cm 1.0pt 0cm">
+<h1><span><span>1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>Introduction</span></h1>
+</div>
+<p class="MsoNormal"><span>In this series we are going to be looking at TCP IP, Client / Servers and what a massive world of opportunities this knowledge opens up to us, from Chat and Video Conferencing, to Invisible process communication, and even Service
+ Management. But today let&rsquo;s get the framework done.</span></p>
+<div style="border:none; border-bottom:solid #595959 1.0pt; padding:0cm 0cm 1.0pt 0cm">
+<h1><span><span>2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>Building the Sample</span></h1>
+</div>
+<p class="MsoNormal"><span>The sample is built in Visual Studio 2012 Ultimate as an x86 targeted application using .Net Framework 4. We will be using NuGet packages, a number of 3rd party libraries. All of which will be fully explained to you ensuring that
+ the final compilation of your App will be hassle free. Oh! And the sample code is verbosely commented so you should have no problem in working out what the code does.</span></p>
+<div style="border:none; border-bottom:solid #595959 1.0pt; padding:0cm 0cm 1.0pt 0cm">
+<h1><span><span>3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>Description</span></h1>
+</div>
+<p class="MsoNormal"><span>Communication is fundamental to us all. But it is also fundamental to many programs. When your application connects with a database it has to communicate, when your browser connects to a website, it communicates and the vast majority
+ of the communication that occurs on the internet is does through TCP communication. In this first example we will write a client and an &ldquo;echo server&rdquo; which simply replies with the message you sent &ndash; pretty much like the ping command. It doesn&rsquo;t
+ sound like much but it is the basis that we will start from.</span></p>
+<p class="MsoNormal"><span><img id="103976" src="description/ClientServer.png" alt="" width="714" height="188"><br>
+</span></p>
+<div style="border:none; border-bottom:solid #595959 1.0pt; padding:0cm 0cm 1.0pt 0cm">
+<h1><span><span>4<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>Creating our Application</span></h1>
+</div>
+<p class="MsoNormal"><span>Open Visual Studio 2012 and Create a New Project. Call the Project ClientApp. Now Click on the ClientApp Project in Solution Explorer and Add a New Project Called ServerApp. This makes it nice a simple for us to separate the Client
+ and Server logic and code.</span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>Change the form Text to Server and Client accordingly.</span></p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>The Server is a little more complicated than the Client so we will design that first</span></p>
+<h2><span><span>4.1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span>
+</span></span><span>The Server</span></h2>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-size:9.5pt; line-height:107%; font-family:Symbol; color:black"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">Add a StatusStrip to the Server Form</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt; text-indent:-18.0pt">
+<span style="font-size:9.5pt; line-height:107%; font-family:&quot;Courier New&quot;; color:black"><span>o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">Add two Labels to the StatusStrip and Set their Text Properties to</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:108.0pt; text-indent:-18.0pt">
+<span style="font-size:9.5pt; line-height:107%; font-family:Wingdings; color:black"><span>&sect;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">Number of Connections</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:108.0pt; text-indent:-18.0pt">
+<span style="font-size:9.5pt; line-height:107%; font-family:Wingdings; color:black"><span>&sect;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">0</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt; text-indent:-18.0pt">
+<span style="font-size:9.5pt; line-height:107%; font-family:&quot;Courier New&quot;; color:black"><span>o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">Change the Second Labels Name to lblNumberOfConnections</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-size:9.5pt; line-height:107%; font-family:Symbol; color:black"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">Add a RichTextBox to the Form and Set it&rsquo;s Docking property to Fill</span></p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-size:9.5pt; line-height:107%; font-family:Symbol; color:black"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">Name The RichTextBox rtbServer</span></p>
+<h2><span><span>4.2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span>
+</span></span><span>The Client</span></h2>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-size:9.5pt; line-height:107%; font-family:Symbol; color:black"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">Add a RichTextBox to the Form and Set it&rsquo;s Docking property to Fill</span></p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-size:9.5pt; line-height:107%; font-family:Symbol; color:black"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size:9.5pt; line-height:107%; font-family:Consolas; color:black">Name The RichTextBox rtbClient</span></p>
+<h2><span><span>4.3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span>
+</span></span><span>Now to the Code</span></h2>
+<p class="MsoNormal"><span>Ok now we have created our front ends, you can format the RichTextBoxes any way you like. We need to start our coding. Again we will start with the Server.</span></p>
+<h2><span><span>4.4<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span>
+</span></span><span>Server Code</span></h2>
+<p class="MsoNormal"><span>Our server does three things</span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>It waits until a client connects</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> this.tcpListener = new TcpListener(IPAddress.Loopback, 3000); // Change to IPAddress.Any for internet wide Communication
+            this.listenThread = new Thread(new ThreadStart(ListenForClients));
+            this.listenThread.Start();</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;<span class="cs__keyword">this</span>.tcpListener&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;TcpListener(IPAddress.Loopback,&nbsp;<span class="cs__number">3000</span>);&nbsp;<span class="cs__com">//&nbsp;Change&nbsp;to&nbsp;IPAddress.Any&nbsp;for&nbsp;internet&nbsp;wide&nbsp;Communication</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.listenThread&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Thread(<span class="cs__keyword">new</span>&nbsp;ThreadStart(ListenForClients));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.listenThread.Start();</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span>It Handles the client&rsquo;s connection and communication</span></p>
+<p>&nbsp;</p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-family:Symbol">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> private void ListenForClients()
+        {
+            this.tcpListener.Start();
+
+            while (true) // Never ends until the Server is closed.
+            {
+                //blocks until a client has connected to the server
+                TcpClient client = this.tcpListener.AcceptTcpClient();
+
+                //create a thread to handle communication 
+                //with connected client
+                connectedClients&#43;&#43;; // Increment the number of clients that have communicated with us.
+                lblNumberOfConnections.Text = connectedClients.ToString();
+
+                Thread clientThread = new Thread(new ParameterizedThreadStart(HandleClientComm));
+                clientThread.Start(client);
+            }
+        }</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;ListenForClients()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.tcpListener.Start();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">while</span>&nbsp;(<span class="cs__keyword">true</span>)&nbsp;<span class="cs__com">//&nbsp;Never&nbsp;ends&nbsp;until&nbsp;the&nbsp;Server&nbsp;is&nbsp;closed.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//blocks&nbsp;until&nbsp;a&nbsp;client&nbsp;has&nbsp;connected&nbsp;to&nbsp;the&nbsp;server</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TcpClient&nbsp;client&nbsp;=&nbsp;<span class="cs__keyword">this</span>.tcpListener.AcceptTcpClient();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//create&nbsp;a&nbsp;thread&nbsp;to&nbsp;handle&nbsp;communication&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//with&nbsp;connected&nbsp;client</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connectedClients&#43;&#43;;&nbsp;<span class="cs__com">//&nbsp;Increment&nbsp;the&nbsp;number&nbsp;of&nbsp;clients&nbsp;that&nbsp;have&nbsp;communicated&nbsp;with&nbsp;us.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lblNumberOfConnections.Text&nbsp;=&nbsp;connectedClients.ToString();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thread&nbsp;clientThread&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Thread(<span class="cs__keyword">new</span>&nbsp;ParameterizedThreadStart(HandleClientComm));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clientThread.Start(client);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span>It replies with the same message that it received (Echoes)</span></p>
+<p>&nbsp;</p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span>&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> private void HandleClientComm(object client)
+        {
+            TcpClient tcpClient = (TcpClient)client;
+            NetworkStream clientStream = tcpClient.GetStream();
+
+            byte[] message = new byte[4096];
+            int bytesRead;
+
+            while (true)
+            {
+                bytesRead = 0;
+
+                try
+                {
+                    //blocks until a client sends a message
+                    bytesRead = clientStream.Read(message, 0, 4096);
+                }
+                catch
+                {
+                    //a socket error has occured
+                    break;
+                }
+
+                if (bytesRead == 0)
+                {
+                    //the client has disconnected from the server
+                    connectedClients--;
+                    lblNumberOfConnections.Text = connectedClients.ToString();
+                    break;
+                }
+
+                //message has successfully been received
+                ASCIIEncoding encoder = new ASCIIEncoding();
+
+                // Convert the Bytes received to a string and display it on the Server Screen
+                string msg = encoder.GetString(message, 0, bytesRead);
+                WriteMessage(msg);
+
+                // Now Echo the message back
+
+                Echo(msg, encoder, clientStream);
+            }
+
+            tcpClient.Close();
+        }</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;HandleClientComm(<span class="cs__keyword">object</span>&nbsp;client)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TcpClient&nbsp;tcpClient&nbsp;=&nbsp;(TcpClient)client;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NetworkStream&nbsp;clientStream&nbsp;=&nbsp;tcpClient.GetStream();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">byte</span>[]&nbsp;message&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;<span class="cs__keyword">byte</span>[<span class="cs__number">4096</span>];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>&nbsp;bytesRead;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">while</span>&nbsp;(<span class="cs__keyword">true</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bytesRead&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//blocks&nbsp;until&nbsp;a&nbsp;client&nbsp;sends&nbsp;a&nbsp;message</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bytesRead&nbsp;=&nbsp;clientStream.Read(message,&nbsp;<span class="cs__number">0</span>,&nbsp;<span class="cs__number">4096</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">catch</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//a&nbsp;socket&nbsp;error&nbsp;has&nbsp;occured</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(bytesRead&nbsp;==&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//the&nbsp;client&nbsp;has&nbsp;disconnected&nbsp;from&nbsp;the&nbsp;server</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connectedClients--;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lblNumberOfConnections.Text&nbsp;=&nbsp;connectedClients.ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">break</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//message&nbsp;has&nbsp;successfully&nbsp;been&nbsp;received</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASCIIEncoding&nbsp;encoder&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;ASCIIEncoding();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Convert&nbsp;the&nbsp;Bytes&nbsp;received&nbsp;to&nbsp;a&nbsp;string&nbsp;and&nbsp;display&nbsp;it&nbsp;on&nbsp;the&nbsp;Server&nbsp;Screen</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>&nbsp;msg&nbsp;=&nbsp;encoder.GetString(message,&nbsp;<span class="cs__number">0</span>,&nbsp;bytesRead);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WriteMessage(msg);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Now&nbsp;Echo&nbsp;the&nbsp;message&nbsp;back</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Echo(msg,&nbsp;encoder,&nbsp;clientStream);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tcpClient.Close();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><span><span>4.5<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span>
+</span></span><span>Client Code</span></h2>
+<p class="MsoNormal"><span>Our Client does three things</span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>It connects to the Server</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> client.Connect(serverEndPoint);</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;client.Connect(serverEndPoint);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span>It sends a message</span></p>
+<p>&nbsp;</p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-family:Symbol">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> NetworkStream clientStream = client.GetStream();
+
+            ASCIIEncoding encoder = new ASCIIEncoding();
+            byte[] buffer = encoder.GetBytes(msg);
+
+            clientStream.Write(buffer, 0, buffer.Length);
+            clientStream.Flush();
+
+            // Receive the TcpServer.response.
+
+            // Buffer to store the response bytes.
+            Byte[]  data = new Byte[256];</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;NetworkStream&nbsp;clientStream&nbsp;=&nbsp;client.GetStream();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASCIIEncoding&nbsp;encoder&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;ASCIIEncoding();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">byte</span>[]&nbsp;buffer&nbsp;=&nbsp;encoder.GetBytes(msg);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clientStream.Write(buffer,&nbsp;<span class="cs__number">0</span>,&nbsp;buffer.Length);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clientStream.Flush();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Receive&nbsp;the&nbsp;TcpServer.response.</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Buffer&nbsp;to&nbsp;store&nbsp;the&nbsp;response&nbsp;bytes.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Byte[]&nbsp;&nbsp;data&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Byte[<span class="cs__number">256</span>];</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span>It displays the response</span></p>
+<p>&nbsp;</p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span>&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> // String to store the response ASCII representation.
+            String responseData = String.Empty;
+
+            // Read the first batch of the TcpServer response bytes.
+            Int32 bytes = clientStream.Read(data, 0, data.Length);
+            responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
+            
+            rtbClient.AppendText(Environment.NewLine &#43; &quot;From Server: &quot; &#43; responseData);</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;<span class="cs__com">//&nbsp;String&nbsp;to&nbsp;store&nbsp;the&nbsp;response&nbsp;ASCII&nbsp;representation.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;responseData&nbsp;=&nbsp;String.Empty;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Read&nbsp;the&nbsp;first&nbsp;batch&nbsp;of&nbsp;the&nbsp;TcpServer&nbsp;response&nbsp;bytes.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Int32&nbsp;bytes&nbsp;=&nbsp;clientStream.Read(data,&nbsp;<span class="cs__number">0</span>,&nbsp;data.Length);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;responseData&nbsp;=&nbsp;System.Text.Encoding.ASCII.GetString(data,&nbsp;<span class="cs__number">0</span>,&nbsp;bytes);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtbClient.AppendText(Environment.NewLine&nbsp;&#43;&nbsp;<span class="cs__string">&quot;From&nbsp;Server:&nbsp;&quot;</span>&nbsp;&#43;&nbsp;responseData);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3><span><span>4.5.1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+</span></span></span><span>Source Code Files</span></h3>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><em><span>Source code ClientApp:Form1.cs &ndash; The main interface to our Client application</span></em><span>&nbsp;</span></p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-family:Symbol"><span>&middot;<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><em><span>Source code ServerApp:Form1.cs &ndash; The main interface to our Server application</span></em><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>In the next of this series we shall start making things interesting!</span></p>
+<div style="border:none; border-bottom:solid #595959 1.0pt; padding:0cm 0cm 1.0pt 0cm">
+<h1><span><span>5<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span>More Information</span></h1>
+</div>
+<p class="MsoNormal"><span>To convert the solution to a previous version of Visual Studio you can use this free application:
+</span><a href="http://vsprojectconverter.codeplex.com/"><span style="font-size:12.0pt; line-height:107%; font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">http://vsprojectconverter.codeplex.com/</span></a><span> or download and use Visual Studio 2013 Express which is
+ freely available from Microsoft from here: </span><a href="http://www.visualstudio.com/downloads/download-visual-studio-vs"><span style="font-size:12.0pt; line-height:107%; font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">http://www.visualstudio.com/downloads/download-visual-studio-vs</span></a><span>.</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

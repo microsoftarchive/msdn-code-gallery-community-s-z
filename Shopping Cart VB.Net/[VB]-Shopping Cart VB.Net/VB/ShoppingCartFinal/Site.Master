@@ -1,0 +1,91 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="ShoppingCartFinal.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<form runat="server" id="MyForm">
+ <div id="outer">
+	<div id="header">
+		<div style="float: left;">
+			<h1><a href="#">Test Project</a></h1>
+			<h2>Powered by ASP.NET</h2>
+		</div>
+		<div style="float: right; vertical-align:middle;">
+		<br /><br />
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr style="vertical-align:middle;" >
+					<td align="center" style="width: 65px">
+                    <a id="A1" href="~/Account/Login.aspx" runat="server" class="SiteLinkBold">
+                    <img id="Img1" src="~/Styles/Images/sign_in.gif" alt="" runat="server" /><br />
+                        <asp:LoginView ID="MenuLoginView" runat="server">
+                        <AnonymousTemplate>
+                            Sign In
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Log Out
+                        </LoggedInTemplate>
+                        </asp:LoginView>
+                    </a>
+                    </td>
+					<td align="center" style="width: 75"><a id="A2" href="~/Account/OrderList.aspx" runat="server" class="SiteLinkBold"><img id="Img2" src="~/Styles/Images/account.gif" alt="" runat="server" /><br />Account</a></td>
+					<td align="center" style="width: 65"><a id="A3" href="~/MyShoppingCart.aspx"  runat="server" class="SiteLinkBold"><img id="Img3" src="~/Styles/Images/cart.gif" alt="" runat="server" /><br />Cart</a></td>
+                    <td align="center" style="width: 65">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="subheader" class="style1">
+			<a id="A4" href="~/Default.aspx" runat="server" title="">Home</a>
+			<a id="A5" href="~/ProductsList.aspx" runat="server" title="">Products</a>
+			<a id="A6" href="~/AboutUs.aspx" runat="server" title="">About Us</a>
+		    <a id="A7" href="~/ContactUs.aspx" runat="server" title="">Contact Us</a>
+	</div>	
+	<div id="content">
+ 		<div id="rightColumn">
+		</div>
+ 		<div id="mainContent">
+			<div id="centerColumn">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+			</div>
+		</div>
+ 		<div id="leftColumn">
+			<h3>Our Products</h3>
+            <asp:ListView ID="ListView_ProductsMenu" runat="server" 
+                DataKeyNames="CategoryID" DataSourceID="EDS_Category_Menu">
+                <EmptyDataTemplate>No Menu Items.</EmptyDataTemplate>
+                <ItemSeparatorTemplate></ItemSeparatorTemplate>
+                <ItemTemplate>
+                    <li>
+                       <a href='<%# VirtualPathUtility.ToAbsolute("~/ProductsList.aspx?CategoryId=" + Eval("CategoryID").toString()) %>'><%# Eval("CategoryName") %></a>
+                    </li>
+                </ItemTemplate>               
+
+                <LayoutTemplate>
+                    <ul ID="itemPlaceholderContainer" runat="server" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+                        <li runat="server" id="itemPlaceholder" />
+                    </ul>
+                    <div style="text-align: left;background-color: #FFCC66;font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;"></div>
+                </LayoutTemplate>
+            </asp:ListView>
+            <asp:EntityDataSource ID="EDS_Category_Menu" runat="server" EnableFlattening="False" 
+                                  ConnectionString="name=CommerceEntities" DefaultContainerName="CommerceEntities" EntitySetName="Categories">
+            </asp:EntityDataSource>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer"><p>Copyright &copy; Test Project</p></div>
+</div>
+</form>
+</body>
+</html>

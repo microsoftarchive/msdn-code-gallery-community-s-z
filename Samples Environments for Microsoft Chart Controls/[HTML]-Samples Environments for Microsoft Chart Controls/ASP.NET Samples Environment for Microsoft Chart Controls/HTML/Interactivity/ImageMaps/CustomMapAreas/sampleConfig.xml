@@ -1,0 +1,36 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+	
+	<SampleConfig ParentNodeID = "Customizations">
+	<Title>Custom Map Areas and the PostPaint Event</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Custom Map Areas and the PostPaint Event</ShortBlurb> 
+	<Content>ImageMapCustom.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+        <Keywords>
+    		<Keyword>Custom map areas</Keyword>
+	</Keywords>
+	</SampleConfig>
+
+  <SampleConfig ParentNodeID = "ImageMaps">
+    <Title>Custom Map Areas and the PostPaint Event</Title>
+    <Thumbnail>thumbnail.jpg</Thumbnail>
+    <ShortBlurb>Custom Map Areas and the PostPaint Event</ShortBlurb>
+    <Content>ImageMapCustom.aspx</Content>
+
+    <InfoPages>
+      <InfoPage Title="C# Source">cscode.txt</InfoPage>
+      <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+    </InfoPages>
+
+    <Keywords>
+      <Keyword>Custom map areas</Keyword>
+    </Keywords>
+  </SampleConfig>
+
+</SampleConfigs>

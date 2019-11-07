@@ -1,0 +1,13 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "CombinationalCharts" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Combining Chart Types</ShortBlurb> 
+  <Content>CombinationGallery.htm</Content>
+    
+</SampleConfig>
+
+
+</SampleConfigs>

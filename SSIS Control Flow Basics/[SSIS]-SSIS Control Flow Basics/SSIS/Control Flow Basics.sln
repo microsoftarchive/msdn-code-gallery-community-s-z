@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Control Flow Basics", "Control Flow Basics\Control Flow Basics.dtproj", "{DF73B521-AE55-4E17-891C-D06AE4C4E31D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF73B521-AE55-4E17-891C-D06AE4C4E31D}.Development|Default.ActiveCfg = Development
+		{DF73B521-AE55-4E17-891C-D06AE4C4E31D}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

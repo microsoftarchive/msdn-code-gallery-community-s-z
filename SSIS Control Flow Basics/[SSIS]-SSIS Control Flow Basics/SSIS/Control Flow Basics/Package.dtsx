@@ -1,0 +1,801 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/1/2012 11:41:06 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="SAMPLECOMPUTER"
+  DTS:CreatorName="SAMPLEDOMAIN\sampleuser"
+  DTS:DTSID="{A809D785-8509-4228-ACF9-8B358BBF1A27}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{98125FD3-0EA3-430B-81EB-609094E0B3E2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FailureDestination]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{9E2120AF-0579-41A3-AC84-E444753AA0E5}"
+      DTS:ObjectName="FailureDestination">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\SSIS\Control Flow Basics\Result\Failure" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FailureSource]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{29886B20-FCAB-4BFD-8A9D-01ED89BCF1C3}"
+      DTS:ObjectName="FailureSource">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\SSIS\Control Flow Basics\Semaphores\Failure" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{27205977-7A13-4E15-8831-05811ED7D231}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\SSIS\Product data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product code"
+              DTS:DTSID="{1EC16EED-49DA-42B8-AD0D-E43BFED870F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Shipping Weight"
+              DTS:DTSID="{91C95A56-ECA7-49B3-989A-BE071411AA54}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Shipping Length"
+              DTS:DTSID="{2668FCFD-5BEE-48B0-879A-B1984B165D2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Shipping Width"
+              DTS:DTSID="{2072BA67-8041-41D7-B548-7DA72FDA1442}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Shipping Height"
+              DTS:DTSID="{B599939D-3126-4EB8-84C8-F94D54B120DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit Cost"
+              DTS:DTSID="{0D7A5DE9-870C-490F-B0A0-ADAB35C40A2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Per Order"
+              DTS:DTSID="{8DDD28AF-DAE6-4477-929F-5470B8153D92}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SSISSample]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{70A8DEB2-8428-4332-A019-0D12F60C8C15}"
+      DTS:ObjectName="LocalHost.SSISSample">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SSISSample;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SuccessDestination]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{BC600B45-AD53-4061-B33E-0A36FA0EC615}"
+      DTS:ObjectName="SuccessDestination">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\SSIS\Control Flow Basics\Result\Success" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SuccessSource]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{2142A7DB-EB79-4547-8AB7-7173519B7912}"
+      DTS:ObjectName="SuccessSource">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\SSIS\Control Flow Basics\Semaphores\Success" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Copy failure semaphore"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="File System Task"
+      DTS:DTSID="{3A1261B3-5961-4C45-9107-8EBEDE9B6919}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Copy failure semaphore"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOverwriteDestFile="True"
+          TaskSourcePath="{29886B20-FCAB-4BFD-8A9D-01ED89BCF1C3}"
+          TaskDestinationPath="{9E2120AF-0579-41A3-AC84-E444753AA0E5}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Copy success semaphore"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="File System Task"
+      DTS:DTSID="{678C442A-32CF-4283-BF64-7BCC7EC0CD89}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Copy success semaphore"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOverwriteDestFile="True"
+          TaskSourcePath="{2142A7DB-EB79-4547-8AB7-7173519B7912}"
+          TaskDestinationPath="{BC600B45-AD53-4061-B33E-0A36FA0EC615}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load data into ProductData table"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2F7937F2-75CD-4F53-9B11-0D3EB8C50B44}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load data into ProductData table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load data into ProductData table\Flat File Source"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load data into ProductData table\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Product code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product code]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Product code]"
+                      name="Product code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Weight]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shipping Weight]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Weight]"
+                      name="Shipping Weight"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Length]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shipping Length]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Length]"
+                      name="Shipping Length"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Width]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shipping Width]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Width]"
+                      name="Shipping Width"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Height]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shipping Height]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Height]"
+                      name="Shipping Height"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                      name="Unit Cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Per Order]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Per Order]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Per Order]"
+                      name="Per Order"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product code]"
+                      dataType="i4"
+                      name="Product code" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shipping Weight]"
+                      dataType="r4"
+                      name="Shipping Weight" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shipping Length]"
+                      dataType="r4"
+                      name="Shipping Length" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shipping Width]"
+                      dataType="r4"
+                      name="Shipping Width" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Shipping Height]"
+                      dataType="r4"
+                      name="Shipping Height" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
+                      dataType="r4"
+                      name="Unit Cost" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Per Order]"
+                      dataType="i1"
+                      name="Per Order" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load data into ProductData table\OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Products]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load data into ProductData table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SSISSample]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SSISSample]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Product code]"
+                      cachedDataType="i4"
+                      cachedName="Product code"
+                      externalMetadataColumnId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCode]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Product code]" />
+                    <inputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Shipping Weight]"
+                      cachedDataType="r4"
+                      cachedName="Shipping Weight"
+                      externalMetadataColumnId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShippingWeight]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Weight]" />
+                    <inputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Shipping Length]"
+                      cachedDataType="r4"
+                      cachedName="Shipping Length"
+                      externalMetadataColumnId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShippingLength]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Length]" />
+                    <inputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Shipping Width]"
+                      cachedDataType="r4"
+                      cachedName="Shipping Width"
+                      externalMetadataColumnId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShippingWidth]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Width]" />
+                    <inputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Shipping Height]"
+                      cachedDataType="r4"
+                      cachedName="Shipping Height"
+                      externalMetadataColumnId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShippingHeight]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Shipping Height]" />
+                    <inputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Unit Cost]"
+                      cachedDataType="r4"
+                      cachedName="Unit Cost"
+                      externalMetadataColumnId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitCost]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]" />
+                    <inputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Per Order]"
+                      cachedDataType="i1"
+                      cachedName="Per Order"
+                      externalMetadataColumnId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerOrder]"
+                      lineageId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output].Columns[Per Order]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCode]"
+                      dataType="i4"
+                      name="ProductCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShippingWeight]"
+                      dataType="r8"
+                      name="ShippingWeight" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShippingLength]"
+                      dataType="r8"
+                      name="ShippingLength" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShippingWidth]"
+                      dataType="r8"
+                      name="ShippingWidth" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShippingHeight]"
+                      dataType="r8"
+                      name="ShippingHeight" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitCost]"
+                      dataType="r8"
+                      name="UnitCost" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerOrder]"
+                      dataType="ui1"
+                      name="PerOrder" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load data into ProductData table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load data into ProductData table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load data into ProductData table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load data into ProductData table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load data into ProductData table.Paths[Flat File Source Output]"
+              endId="Package\Load data into ProductData table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load data into ProductData table\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{DA9D1452-4ED1-460B-BA0C-0AE83D7BB7B8}"
+      DTS:From="Package\Load data into ProductData table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Copy success semaphore" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{7085E44E-8188-4B88-9591-42A170F7E057}"
+      DTS:From="Package\Load data into ProductData table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Copy failure semaphore"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Copy failure semaphore"
+          TopLeft="341,182" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Copy success semaphore"
+          TopLeft="38.5,159.5" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Load data into ProductData table"
+          TopLeft="35.5,35.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="153,77.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.5,82"
+              Start="0,0"
+              End="-15.5,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37"
+                    Point2="0,41"
+                    Point3="-4,41" />
+                  <mssgle:LineSegment
+                    End="-11.5,41" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.5,41"
+                    Point2="-15.5,41"
+                    Point3="-15.5,45" />
+                  <mssgle:LineSegment
+                    End="-15.5,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="190.833333333333,77.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="245.666666666667,104.5"
+              Start="0,0"
+              End="245.666666666667,97">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.2240067624683" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.2240067624683"
+                    Point2="0,42.2240067624683"
+                    Point3="4,42.2240067624683" />
+                  <mssgle:LineSegment
+                    End="241.666666666667,42.2240067624683" />
+                  <mssgle:CubicBezierSegment
+                    Point1="241.666666666667,42.2240067624683"
+                    Point2="245.666666666667,42.2240067624683"
+                    Point3="245.666666666667,46.2240067624683" />
+                  <mssgle:LineSegment
+                    End="245.666666666667,97" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="108.591985677083,47.2240067624683,28.4826953125,7.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load data into ProductData table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Load data into ProductData table\OLE DB Destination"
+          TopLeft="11.5,114.5" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Load data into ProductData table\Flat File Source"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package\Load data into ProductData table.Paths[Flat File Source Output]"
+          TopLeft="81.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16,67"
+              Start="0,0"
+              End="16,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="4,33.5" />
+                  <mssgle:LineSegment
+                    End="12,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12,33.5"
+                    Point2="16,33.5"
+                    Point3="16,37.5" />
+                  <mssgle:LineSegment
+                    End="16,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load data into ProductData table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

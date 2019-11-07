@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<!-- =====================================================================
+  This file is part of the Microsoft Dynamics CRM SDK code samples.
+
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+
+  This source code is intended only as a supplement to Microsoft
+  Development Tools and/or on-line documentation.  See these other
+  materials for detailed information regarding Microsoft code samples.
+
+  THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+  KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+  PARTICULAR PURPOSE.
+=====================================================================-->
+
+<html>
+<head>
+ <title>Samples</title>
+ <script type="text/javascript">
+  function showSample() {
+   var ss = document.getElementById("sampleSelector");
+   var sf = document.getElementById("sampleFrame");
+   var so = ss.options[ss.selectedIndex].value;
+
+   switch (so) {
+    case "messages":
+     sf.src = "pages/MessagesSample.htm";
+     break;
+    case "async":
+     sf.src = "pages/Sdk.AsyncSample.htm";
+     break;
+    case "fetch":
+     sf.src = "pages/Sdk.FetchExpressionSample.htm";
+     break;
+    case "jquery":
+     sf.src = "pages/Sdk.jQSample.htm";
+     break;
+    case "Q":
+     sf.src = "pages/Sdk.QSample.htm";
+     break;
+    case "query":
+     sf.src = "pages/Sdk.QueryExpressionSample.htm";
+     break;
+    case "metadata":
+     sf.src = "pages/Sdk.RetrieveMetadataChangesSample.htm";
+     break;
+    case "sync":
+     sf.src = "pages/Sdk.SyncSample.htm";
+     break;     
+    case "simpleAction":
+     sf.src = "pages/SimpleAction.htm";
+     break;
+    case "testAction":
+     sf.src = "pages/TestAction.htm";
+     break;
+    default:
+     sf.src = "pages/EmptyPage.htm";
+     break;
+   }
+  }
+  document.onreadystatechange = function () {
+   if (document.readyState == "complete") {
+    var sampleSelector = document.getElementById("sampleSelector");
+    if (sampleSelector.addEventListener) {
+     sampleSelector.addEventListener("change", showSample);
+    }
+    else if (sampleSelector.attachEvent) {
+     //IE 8
+     sampleSelector.attachEvent("change", showSample);
+    }
+   }
+  }
+
+ </script>
+ <style type="text/css">
+  body
+  {
+   font-family: 'Segoe UI';
+  }
+
+  #sampleSelectorContainer
+  {
+   position: absolute;
+   padding-top: 5px;
+   padding-left: 5px;
+   top: 0px;
+   right: 0px;
+   left: 0px;
+   height: 30px;
+   background-color: #CCCCCC;
+  }
+
+  #sampleFrameContainer
+  {
+   position: absolute;
+   top: 35px;
+   right: 5px;
+   left: 5px;
+   bottom: 10px;
+  }
+
+  #sampleFrame
+  {
+   width: 100%;
+   height: 100%;
+   border: hidden;
+  }
+ </style>
+</head>
+<body>
+ <div id="sampleSelectorContainer">
+  <label for="sampleSelector">Select a sample:</label>
+  <select id="sampleSelector">
+   <option value="none" selected="selected">No sample selected</option>
+   <option value="messages">Messages Sample</option>
+   <option value="async">Sdk.Async Sample</option>
+   <option value="fetch">Sdk.FetchExpression Sample</option>
+   <option value="jquery">Sdk.jQ Sample</option>
+   <option value="Q">Sdk.Q Sample</option>
+   <option value="query">Sdk.QueryExpression Sample</option>
+   <option value="metadata">Sdk.RetrieveMetadataChanges Sample</option>
+   <option value="sync">Sdk.Sync Sample</option>
+   <option value="simpleAction">Simple Action</option>
+   <option value="testAction">Test Action</option>
+  </select>
+ </div>
+ <div id="sampleFrameContainer">
+  <iframe id="sampleFrame" src="pages/EmptyPage.htm" />
+ </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Data Manipulation" Priority = "1">
+  <Title>Overview</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Manipulation</ShortBlurb> 
+  <Content>Overview.htm</Content> 
+  
+</SampleConfig>
+
+</SampleConfigs>

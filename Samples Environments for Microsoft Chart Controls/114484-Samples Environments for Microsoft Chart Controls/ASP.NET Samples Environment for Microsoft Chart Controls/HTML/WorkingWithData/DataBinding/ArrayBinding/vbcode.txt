@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Initialize an array of doubles
+    Dim yval As Double() =  {2, 6, 4, 5, 3}
+        
+    ' Initialize an array of strings
+    Dim xval As String() =  {"Peter", "Andrew", "Julie", "Mary", "Dave"}
+        
+    ' Bind the double array to the Y axis points of the Default data series
+    Chart1.Series("Series 1").Points.DataBindXY(xval, yval)
+
+End Sub 'Page_Load
+...   

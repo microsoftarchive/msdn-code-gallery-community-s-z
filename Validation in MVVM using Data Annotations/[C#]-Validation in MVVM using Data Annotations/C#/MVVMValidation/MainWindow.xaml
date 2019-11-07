@@ -1,0 +1,80 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MVVMValidation.Extensions"
+        xmlns:Model="clr-namespace:MVVMValidation.Model"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		x:Class="MVVMValidation.MainWindow"
+        Title="MainWindow" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10,5,10,5">
+        <StackPanel>
+            <DataGrid ItemsSource="{Binding Customers}" AutoGenerateColumns="False" HorizontalAlignment="Center" FontSize="16">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="40"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Age" Binding="{Binding Age}" Width="40"/>
+                    <DataGridTextColumn Header="Gender" Binding="{Binding Gender}" Width="70"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Style="{StaticResource TextBlockStyle}" Text="Add New Customer" Margin="0,10,0,10"/>
+            <Grid x:Name="GrdCustomer" DataContext="{Binding NewCustomer, ValidatesOnDataErrors=True}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="0" Grid.Row="0" Text="Id : "/>
+                <TextBox x:Name="TxtId" Style="{StaticResource TextBoxStyle}" Grid.Column="1" Grid.Row="0" Text="{Binding Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Width="100" Validation.Error="Validation_Error" />
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="2" Grid.Row="0" Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=TxtId}" Foreground="Red" Margin="5,0,0,0"/>
+
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="0" Grid.Row="1" Text="Name : "/>
+                <TextBox x:Name="TxtName" Style="{StaticResource TextBoxStyle}" Grid.Column="1" Grid.Row="1" Width="100" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Validation.Error="Validation_Error"  />
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="2" Grid.Row="1" Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=TxtName}" Foreground="Red" Margin="5,0,0,0"/>
+
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="0" Grid.Row="2" Text="Age : "/>
+                <TextBox x:Name="TxtAge" Style="{StaticResource TextBoxStyle}" Grid.Column="1" Grid.Row="2" Width="100" Text="{Binding Age, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Validation.Error="Validation_Error"  />
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="2" Grid.Row="2" Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=TxtAge}" Foreground="Red" Margin="5,0,0,0"/>
+
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="0" Grid.Row="3" Text="Gender : "/>
+                <ComboBox x:Name="CbxGender" Grid.Column="1" SelectedIndex="0" Grid.Row="3" Width="100" SelectedItem="{Binding Gender}" ItemsSource="{Binding Source={local:Enumeration {x:Type Model:Gender}}}" Validation.ErrorTemplate="{x:Null}"  DisplayMemberPath="Description" SelectedValuePath="Value"/>
+
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="0" Grid.Row="4" Text="Email : "/>
+                <TextBox x:Name="TxtEmail" Style="{StaticResource TextBoxStyle}" Grid.Column="1" Grid.Row="4" Width="100" Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Validation.Error="Validation_Error" />
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="2" Grid.Row="4" Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=TxtEmail}" Foreground="Red" Margin="5,0,0,0"/>
+
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="0" Grid.Row="5" Text="Repeat Email : "/>
+                <TextBox x:Name="TxtRepeatEmail" Style="{StaticResource TextBoxStyle}" Grid.Column="1" Grid.Row="5" Width="100" Text="{Binding RepeatEmail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Validation.Error="Validation_Error"  />
+                <TextBlock Style="{StaticResource TextBlockStyle}" Grid.Column="2" Grid.Row="5" Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=TxtRepeatEmail}" Foreground="Red" Margin="5,0,0,0"/>
+            </Grid>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Save" Command="{Binding SaveCommand}" Width="60" Height="30" Margin="10,15,0,15" />
+                <Button Content="Clear" Command="{Binding ClearCommand}" Width="60" Height="30" Margin="10,15,0,15" />
+                <Button Content="Save Data" Command="{Binding SaveDataCommand}" Width="60" Height="30" Margin="10,15,0,15" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

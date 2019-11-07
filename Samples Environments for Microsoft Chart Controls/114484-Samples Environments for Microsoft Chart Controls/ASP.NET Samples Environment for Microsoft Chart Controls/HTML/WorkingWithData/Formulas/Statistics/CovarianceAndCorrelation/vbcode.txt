@@ -1,0 +1,9 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+' Calculate Covariance
+Dim covariance As Double = chart1.DataManipulator.Statistics.Covariance("FirstGroup", "SecondGroup")
+
+' Calculate Correlation
+Dim correlation As Double = chart1.DataManipulator.Statistics.Correlation("FirstGroup", "SecondGroup")
+...

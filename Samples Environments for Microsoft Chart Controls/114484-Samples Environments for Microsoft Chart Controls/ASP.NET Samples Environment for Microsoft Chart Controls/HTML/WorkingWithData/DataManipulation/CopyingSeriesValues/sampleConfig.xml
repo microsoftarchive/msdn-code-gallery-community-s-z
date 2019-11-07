@@ -1,0 +1,40 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "CopyingSeriesValues">
+	<Title>Merging Series Values</Title> 
+	<Thumbnail>MergingValues\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Merging Series Values</ShortBlurb> 
+	<Content>MergingValues\MergingValues.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">MergingValues\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">MergingValues\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      		<Keyword>Merging series</Keyword>
+      		<Keyword>Data manipulation, Merging series</Keyword>
+        </Keywords>
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "CopyingSeriesValues">
+	<Title>Splitting Series Values</Title> 
+	<Thumbnail>SplittingValues\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Splitting Series Values</ShortBlurb> 
+	<Content>SplittingValues\SplittingValues.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">SplittingValues\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">SplittingValues\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      		<Keyword>Splitting series</Keyword>
+      		<Keyword>Data manipulation, Splitting series</Keyword>
+	</Keywords>
+	</SampleConfig>
+
+
+</SampleConfigs>

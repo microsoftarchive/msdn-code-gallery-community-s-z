@@ -1,0 +1,40 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "SeriesAlignment">
+	<Title>Series Alignment</Title> 
+	<Thumbnail>SeriesAlignment\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Series Alignment</ShortBlurb> 
+	<SampleControl>SeriesAlignment</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">SeriesAlignment\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">SeriesAlignment\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">SeriesAlignment\vbcode.txt</InfoPage>
+	</InfoPages>
+
+    <Keywords>
+		<Keyword>Series, Alignment</Keyword>
+		<Keyword>Alignment, Series</Keyword>
+	</Keywords> 	
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "EmptyPoints">
+	<Title>Series Alignment</Title> 
+	<Thumbnail>SeriesAlignment\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Series Alignment</ShortBlurb> 
+	<SampleControl>SeriesAlignment</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">SeriesAlignment\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">SeriesAlignment\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">SeriesAlignment\vbcode.txt</InfoPage>
+	</InfoPages>
+
+    <Keywords>
+		<Keyword>Series, Alignment</Keyword>
+		<Keyword>Alignment, Series</Keyword>
+	</Keywords> 	
+	</SampleConfig>
+
+</SampleConfigs>

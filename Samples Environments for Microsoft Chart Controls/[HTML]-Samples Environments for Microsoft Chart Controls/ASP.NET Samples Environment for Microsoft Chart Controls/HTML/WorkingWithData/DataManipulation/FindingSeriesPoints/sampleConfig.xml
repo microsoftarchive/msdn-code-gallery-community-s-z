@@ -1,0 +1,42 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "FindingSeriesPoints">
+	<Title>Find Maximum and Minimum Values</Title> 
+	<Thumbnail>FindByMaxMinValues\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Finding Maximum and Minimum Values</ShortBlurb> 
+	<Content>FindByMaxMinValues\FindByMaxMinValues.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">FindByMaxMinValues\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">FindByMaxMinValues\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Data manipulation, Finding Min/Max values</Keyword>
+      <Keyword>Finding min/max data values</Keyword>
+    </Keywords>
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "FindingSeriesPoints">
+	<Title>Find Multiple Points by Values</Title> 
+	<Thumbnail>FindByValue\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Finding Multiple Points by Values</ShortBlurb> 
+	<Content>FindByValue\FindByValue.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">FindByValue\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">FindByValue\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Data manipulation, Finding value</Keyword>
+      <Keyword>Finding data value</Keyword>
+    </Keywords> 
+	</SampleConfig>
+
+
+
+
+</SampleConfigs>

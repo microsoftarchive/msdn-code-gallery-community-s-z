@@ -1,0 +1,10 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+' Set interval of X axis to zero, which represents an "Auto" value.
+Chart1.ChartAreas("ChartArea1").AxisX.Interval = 0
+
+' Use variable count algorithm to generate labels.
+Chart1.ChartAreas("ChartArea1").AxisX.IntervalAutoMode = IntervalAutoMode.VariableCount
+
+...

@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=F704091DF1C7CCA7FCDC858EF7F1728D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=7539D6CB6321717CD70641F13ABDCFD6" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SharePoint Rest API Sample</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SharePoint Rest API Sample</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, REST, SharePoint, OData
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, SharePoint
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Phone
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/28/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>This sample contains a explaination on how to call the SharePoint Rest API's within C# and use Application Authentication with the help of the TokenHelper.&nbsp;</em></p>
+<h2>SharePoint Rest API Handler</h2>
+<p>SharePoint contains a lot of Rest API&rsquo;s that can be used for many scenario&rsquo;s. You could use them for example in desktop and windows phone applications. When using these API&rsquo;s you need to make sure authentication is handled before calling
+ the API. For authenticating to these API&rsquo;s there a couple of options:</p>
+<ul>
+<li>Authenticate as a User. This is a registered user with a license within your Office 365 tenant or your on-premise AD.
+</li><li>Authenticate as a Application. You can register a application within an SharePoint site by using the &ldquo;AppRegNew.aspx&rdquo; page and perform actions on behalf of a application.
+</li></ul>
+<p>The token that is received from the authentication request needs to be supplied in the header of the API call. In order to retrieve the token you can make use of the &ldquo;TokenHelper&rdquo; class that is added by default to SharePoint App projects.</p>
+<p>With the token the API call can be made, this needs do be done in different ways. Example for this is getting items from SharePoint.</p>
+<p>Getting items from a SharePoint list can be achieved by using a Http Get to the &ldquo;GetItems&rdquo; API method and supplying a Caml query in the URL.</p>
+<ul>
+<li>[siteurl]/_api/web/lists/GetByTitle('[listname]')/GetItems(<a href="mailto:query=@v1)?@v1={%22ViewXml%22:%22[camlquery">query=@v1)?@v1={&quot;ViewXml&quot;:&quot;[camlquery</a>]&quot;}
+</li></ul>
+<p>&nbsp;</p>
+<p>Example for a Caml query is displayed below. Make sure you supply a query with the &ldquo;View&rdquo; and &ldquo;Query&rdquo; tag included.</p>
+<p></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;View&gt;
+ &lt;ViewFields&gt;
+  &lt;FieldRef Name='LinkFilename' /&gt;
+ &lt;/ViewFields&gt;
+ &lt;Query&gt;
+  &lt;OrderBy&gt;
+   &lt;FieldRef Name='Created' /&gt;
+  &lt;/OrderBy&gt;
+ &lt;/Query&gt;
+&lt;/View&gt;</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;View</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;<span class="xml__tag_start">&lt;ViewFields</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;<span class="xml__tag_start">&lt;FieldRef</span>&nbsp;<span class="xml__attr_name">Name</span>=<span class="xml__attr_value">'LinkFilename'</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;<span class="xml__tag_end">&lt;/ViewFields&gt;</span>&nbsp;
+&nbsp;<span class="xml__tag_start">&lt;Query</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;<span class="xml__tag_start">&lt;OrderBy</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;FieldRef</span>&nbsp;<span class="xml__attr_name">Name</span>=<span class="xml__attr_value">'Created'</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_end">&lt;/OrderBy&gt;</span>&nbsp;
+&nbsp;<span class="xml__tag_end">&lt;/Query&gt;</span>&nbsp;
+<span class="xml__tag_end">&lt;/View&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p></p>
+<p>The call that makes use of the SPAPIHandler is as followed:</p>
+<p></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public string GetItems(string siteUrl, string list, string camlQuery) {
+    string retVal = string.Empty;
+
+    string data = camlJson.Replace(&quot;{0}&quot;, camlQuery);
+    camlQuery = &quot;(query=@v1)?@v1={\&quot;ViewXml\&quot;:\&quot;{2}\&quot;}&quot;.Replace(&quot;{2}&quot;, camlQuery);
+    string url =string.Format(CultureInfo.InvariantCulture, &quot;{0}/_api/web/lists/GetByTitle('{1}')/GetItems{2}&quot;, siteUrl, list, camlQuery);
+
+    SPAPIHandler handler = new SPAPIHandler(ClientId, ClientSecret);
+    retVal = handler.Post(url);
+
+    return retVal;
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;GetItems(<span class="cs__keyword">string</span>&nbsp;siteUrl,&nbsp;<span class="cs__keyword">string</span>&nbsp;list,&nbsp;<span class="cs__keyword">string</span>&nbsp;camlQuery)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>&nbsp;retVal&nbsp;=&nbsp;<span class="cs__keyword">string</span>.Empty;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>&nbsp;data&nbsp;=&nbsp;camlJson.Replace(<span class="cs__string">&quot;{0}&quot;</span>,&nbsp;camlQuery);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;camlQuery&nbsp;=&nbsp;<span class="cs__string">&quot;(query=@v1)?@v1={\&quot;ViewXml\&quot;:\&quot;{2}\&quot;}&quot;</span>.Replace(<span class="cs__string">&quot;{2}&quot;</span>,&nbsp;camlQuery);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>&nbsp;url&nbsp;=<span class="cs__keyword">string</span>.Format(CultureInfo.InvariantCulture,&nbsp;<span class="cs__string">&quot;{0}/_api/web/lists/GetByTitle('{1}')/GetItems{2}&quot;</span>,&nbsp;siteUrl,&nbsp;list,&nbsp;camlQuery);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;SPAPIHandler&nbsp;handler&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SPAPIHandler(ClientId,&nbsp;ClientSecret);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;retVal&nbsp;=&nbsp;handler.Post(url);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;retVal;&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p></p>
+<p>The API calls are explicitly made by the so called SPAPIHandler.</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class SPAPIHandler {
+
+    private string contenttype = &quot;application/json;odata=verbose&quot;;
+
+    private string acceptHeader = &quot;application/json;odata=verbose&quot;;
+
+    /// &lt;summary&gt;
+    /// Gets or sets the client identifier.
+    /// &lt;/summary&gt;
+    /// &lt;value&gt;
+    /// The client identifier.
+    /// &lt;/value&gt;
+    private string ClientId { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the client secret.
+    /// &lt;/summary&gt;
+    /// &lt;value&gt;
+    /// The client secret.
+    /// &lt;/value&gt;
+    private string ClientSecret { get; set; }
+
+    public SPAPIHandler(string clientId, string clientSecret) {
+        ClientId = clientId;
+        ClientSecret = clientSecret;
+    }
+
+    public string Get(string url) {
+        var accessToken = GetAccessTokenResponse(url);
+
+        HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+        request.Method = &quot;GET&quot;;
+        request.Accept = acceptHeader;
+        request.Headers.Add(&quot;Authorization&quot;, accessToken.TokenType &#43; &quot; &quot; &#43; accessToken.AccessToken);
+
+        HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+
+        if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.NoContent) {
+            using (var reader = new <a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msdn.microsoft.com/en-US/library/System.IO.StreamReader.aspx"  title="Auto generated link to System.IO.StreamReader">System.IO.StreamReader</a>(response.GetResponseStream())) {
+                return reader.ReadToEnd();
+            }
+        }
+
+        return null;
+    }
+
+    public string Post(string url) {
+        var accessToken = GetAccessTokenResponse(url);
+
+        HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+        request.Method = &quot;POST&quot;;
+        request.ContentLength = 0;
+        request.Accept = acceptHeader;
+        request.Headers.Add(&quot;Authorization&quot;, accessToken.TokenType &#43; &quot; &quot; &#43; accessToken.AccessToken);
+
+        HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+
+        if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.NoContent) {
+            using (var reader = new <a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msdn.microsoft.com/en-US/library/System.IO.StreamReader.aspx"  title="Auto generated link to System.IO.StreamReader">System.IO.StreamReader</a>(response.GetResponseStream())) {
+                return reader.ReadToEnd();
+            }
+        }
+
+        return (null);
+    }
+
+    public string Merge(string url, Document doc) {
+
+        var accessToken = GetAccessTokenResponse(url);
+
+        var postData = new JObject {
+            [&quot;__metadata&quot;] = new JObject { [&quot;type&quot;] = &quot;SP.File&quot; }
+        };
+
+        foreach(string key in doc.MetaData.Keys) {
+            postData.Add(key, doc.MetaData[key]);
+        }
+
+        byte[] listPostData = Encoding.ASCII.GetBytes(postData.ToString());
+
+        HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+        request.Method = &quot;POST&quot;;
+        request.ContentLength = postData.ToString().Length;
+        request.ContentType = contenttype;
+        request.Accept = acceptHeader;
+        request.Headers.Add(&quot;Authorization&quot;, accessToken.TokenType &#43; &quot; &quot; &#43; accessToken.AccessToken);
+        request.Headers.Add(&quot;If-Match&quot;, &quot;*&quot;);
+        request.Headers.Add(&quot;X-Http-Method&quot;, &quot;MERGE&quot;);
+
+        Stream listRequestStream = request.GetRequestStream();
+        listRequestStream.Write(listPostData, 0, listPostData.Length);
+        listRequestStream.Close();
+
+        HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+
+        if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.NoContent) {
+            using (var reader = new <a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msdn.microsoft.com/en-US/library/System.IO.StreamReader.aspx"  title="Auto generated link to System.IO.StreamReader">System.IO.StreamReader</a>(response.GetResponseStream())) {
+             return reader.ReadToEnd();
+            }
+        }
+
+        return null;
+    }
+
+    public string PostDocument(string url, byte[] document) {
+        var accessToken = GetAccessTokenResponse(url);
+
+        HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+        request.Method = &quot;POST&quot;;
+        request.ContentLength = document.Length;
+        request.ContentType = contenttype;
+        request.Accept = acceptHeader;
+        request.Headers.Add(&quot;Authorization&quot;, accessToken.TokenType &#43; &quot; &quot; &#43; accessToken.AccessToken);
+
+        Stream listRequestStream = request.GetRequestStream();
+        listRequestStream.Write(document, 0, document.Length);
+        listRequestStream.Close();
+
+        HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+
+        if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.NoContent) {
+            using (var reader = new <a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msdn.microsoft.com/en-US/library/System.IO.StreamReader.aspx"  title="Auto generated link to System.IO.StreamReader">System.IO.StreamReader</a>(response.GetResponseStream())) {
+                return reader.ReadToEnd();
+            }
+        }
+
+        return (null);
+    }
+
+
+    private OAuth2AccessTokenResponse GetAccessTokenResponse(string url) {
+        Uri targetWeb = new Uri(url);
+        string targetRealm = TokenHelper.GetRealmFromTargetUrl(targetWeb);
+        var responseToken = TokenHelper.GetAppOnlyAccessToken(TokenHelper.SharePointPrincipal, targetWeb.Authority, targetRealm, ClientId, ClientSecret);
+
+        return responseToken;
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;SPAPIHandler&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;contenttype&nbsp;=&nbsp;<span class="cs__string">&quot;application/json;odata=verbose&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;acceptHeader&nbsp;=&nbsp;<span class="cs__string">&quot;application/json;odata=verbose&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;Gets&nbsp;or&nbsp;sets&nbsp;the&nbsp;client&nbsp;identifier.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;value&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;The&nbsp;client&nbsp;identifier.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;/value&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;ClientId&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;Gets&nbsp;or&nbsp;sets&nbsp;the&nbsp;client&nbsp;secret.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;value&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;The&nbsp;client&nbsp;secret.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;/value&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;ClientSecret&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;SPAPIHandler(<span class="cs__keyword">string</span>&nbsp;clientId,&nbsp;<span class="cs__keyword">string</span>&nbsp;clientSecret)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClientId&nbsp;=&nbsp;clientId;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClientSecret&nbsp;=&nbsp;clientSecret;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;Get(<span class="cs__keyword">string</span>&nbsp;url)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;accessToken&nbsp;=&nbsp;GetAccessTokenResponse(url);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpWebRequest&nbsp;request&nbsp;=&nbsp;(HttpWebRequest)HttpWebRequest.Create(url);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Method&nbsp;=&nbsp;<span class="cs__string">&quot;GET&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Accept&nbsp;=&nbsp;acceptHeader;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Headers.Add(<span class="cs__string">&quot;Authorization&quot;</span>,&nbsp;accessToken.TokenType&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;accessToken.AccessToken);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpWebResponse&nbsp;response&nbsp;=&nbsp;(HttpWebResponse)request.GetResponse();&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(response.StatusCode&nbsp;==&nbsp;HttpStatusCode.OK&nbsp;||&nbsp;response.StatusCode&nbsp;==&nbsp;HttpStatusCode.NoContent)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;reader&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msdn.microsoft.com/en-US/library/System.IO.StreamReader.aspx"  title="Auto generated link to System.IO.StreamReader">System.IO.StreamReader</a>(response.GetResponseStream()))&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;reader.ReadToEnd();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">null</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;Post(<span class="cs__keyword">string</span>&nbsp;url)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;accessToken&nbsp;=&nbsp;GetAccessTokenResponse(url);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpWebRequest&nbsp;request&nbsp;=&nbsp;(HttpWebRequest)HttpWebRequest.Create(url);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Method&nbsp;=&nbsp;<span class="cs__string">&quot;POST&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.ContentLength&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Accept&nbsp;=&nbsp;acceptHeader;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Headers.Add(<span class="cs__string">&quot;Authorization&quot;</span>,&nbsp;accessToken.TokenType&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;accessToken.AccessToken);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpWebResponse&nbsp;response&nbsp;=&nbsp;(HttpWebResponse)request.GetResponse();&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(response.StatusCode&nbsp;==&nbsp;HttpStatusCode.OK&nbsp;||&nbsp;response.StatusCode&nbsp;==&nbsp;HttpStatusCode.NoContent)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;reader&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msdn.microsoft.com/en-US/library/System.IO.StreamReader.aspx"  title="Auto generated link to System.IO.StreamReader">System.IO.StreamReader</a>(response.GetResponseStream()))&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;reader.ReadToEnd();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;(<span class="cs__keyword">null</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;Merge(<span class="cs__keyword">string</span>&nbsp;url,&nbsp;Document&nbsp;doc)&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;accessToken&nbsp;=&nbsp;GetAccessTokenResponse(url);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;postData&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;JObject&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<span class="cs__string">&quot;__metadata&quot;</span>]&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;JObject&nbsp;{&nbsp;[<span class="cs__string">&quot;type&quot;</span>]&nbsp;=&nbsp;<span class="cs__string">&quot;SP.File&quot;</span>&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">foreach</span>(<span class="cs__keyword">string</span>&nbsp;key&nbsp;<span class="cs__keyword">in</span>&nbsp;doc.MetaData.Keys)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;postData.Add(key,&nbsp;doc.MetaData[key]);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">byte</span>[]&nbsp;listPostData&nbsp;=&nbsp;Encoding.ASCII.GetBytes(postData.ToString());&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpWebRequest&nbsp;request&nbsp;=&nbsp;(HttpWebRequest)HttpWebRequest.Create(url);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Method&nbsp;=&nbsp;<span class="cs__string">&quot;POST&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.ContentLength&nbsp;=&nbsp;postData.ToString().Length;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.ContentType&nbsp;=&nbsp;contenttype;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Accept&nbsp;=&nbsp;acceptHeader;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Headers.Add(<span class="cs__string">&quot;Authorization&quot;</span>,&nbsp;accessToken.TokenType&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;accessToken.AccessToken);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Headers.Add(<span class="cs__string">&quot;If-Match&quot;</span>,&nbsp;<span class="cs__string">&quot;*&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Headers.Add(<span class="cs__string">&quot;X-Http-Method&quot;</span>,&nbsp;<span class="cs__string">&quot;MERGE&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stream&nbsp;listRequestStream&nbsp;=&nbsp;request.GetRequestStream();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listRequestStream.Write(listPostData,&nbsp;<span class="cs__number">0</span>,&nbsp;listPostData.Length);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listRequestStream.Close();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpWebResponse&nbsp;response&nbsp;=&nbsp;(HttpWebResponse)request.GetResponse();&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(response.StatusCode&nbsp;==&nbsp;HttpStatusCode.OK&nbsp;||&nbsp;response.StatusCode&nbsp;==&nbsp;HttpStatusCode.NoContent)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;reader&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msdn.microsoft.com/en-US/library/System.IO.StreamReader.aspx"  title="Auto generated link to System.IO.StreamReader">System.IO.StreamReader</a>(response.GetResponseStream()))&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;reader.ReadToEnd();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">null</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;PostDocument(<span class="cs__keyword">string</span>&nbsp;url,&nbsp;<span class="cs__keyword">byte</span>[]&nbsp;document)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;accessToken&nbsp;=&nbsp;GetAccessTokenResponse(url);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpWebRequest&nbsp;request&nbsp;=&nbsp;(HttpWebRequest)HttpWebRequest.Create(url);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Method&nbsp;=&nbsp;<span class="cs__string">&quot;POST&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.ContentLength&nbsp;=&nbsp;document.Length;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.ContentType&nbsp;=&nbsp;contenttype;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Accept&nbsp;=&nbsp;acceptHeader;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.Headers.Add(<span class="cs__string">&quot;Authorization&quot;</span>,&nbsp;accessToken.TokenType&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;accessToken.AccessToken);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stream&nbsp;listRequestStream&nbsp;=&nbsp;request.GetRequestStream();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listRequestStream.Write(document,&nbsp;<span class="cs__number">0</span>,&nbsp;document.Length);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listRequestStream.Close();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpWebResponse&nbsp;response&nbsp;=&nbsp;(HttpWebResponse)request.GetResponse();&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(response.StatusCode&nbsp;==&nbsp;HttpStatusCode.OK&nbsp;||&nbsp;response.StatusCode&nbsp;==&nbsp;HttpStatusCode.NoContent)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(var&nbsp;reader&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msdn.microsoft.com/en-US/library/System.IO.StreamReader.aspx"  title="Auto generated link to System.IO.StreamReader">System.IO.StreamReader</a>(response.GetResponseStream()))&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;reader.ReadToEnd();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;(<span class="cs__keyword">null</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;OAuth2AccessTokenResponse&nbsp;GetAccessTokenResponse(<span class="cs__keyword">string</span>&nbsp;url)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uri&nbsp;targetWeb&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Uri(url);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">string</span>&nbsp;targetRealm&nbsp;=&nbsp;TokenHelper.GetRealmFromTargetUrl(targetWeb);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;responseToken&nbsp;=&nbsp;TokenHelper.GetAppOnlyAccessToken(TokenHelper.SharePointPrincipal,&nbsp;targetWeb.Authority,&nbsp;targetRealm,&nbsp;ClientId,&nbsp;ClientSecret);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;responseToken;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">The complete description can be found on my blog:</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><a href="https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msftplayground.com/2016/07/sharepoint-rest-api-handler/">https://code.msdn.microsoft.com/SharePoint-Rest-API-Sample-06ec173a/https://msftplayground.com/2016/07/sharepoint-rest-api-handler/</a></div>
+<p>&nbsp;</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

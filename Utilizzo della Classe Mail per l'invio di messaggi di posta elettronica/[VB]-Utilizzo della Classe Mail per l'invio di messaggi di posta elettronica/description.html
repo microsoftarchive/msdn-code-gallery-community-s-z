@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:Banner,2:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Shared/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;hashKey=43176693215A318AD0042E0718980CBA" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/1c1e217c-1475-400e-91a7-b2be1bd6efa0Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Utilizzo della Classe Mail per l&#39;invio di messaggi di posta elettronica</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Utilizzo della Classe Mail per l&#39;invio di messaggi di posta elettronica</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnologie">Tecnologie</label>
+                        <div id="Tecnologie">
+                            Windows Forms, VB.Net, .NET Framework 4.0, Windows General
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Argomenti">Argomenti</label>
+                        <div id="Argomenti">
+                            Send Email, Windows Forms, Windows
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">it-IT</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Ultimo aggiornamento</label>
+                    <div id="LastUpdated">09/10/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licenza</label>
+                    <div id="License">
+                        <a href="license.rtf">Licenza di Apache, versione 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Utilizzo-della-Classe-Mail-4ad3b287">Visualizza questo esempio online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiare il codice';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>Questo esempio di applicazione utilizza la classe Mail presente nello spazio dei nomi <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Net.aspx"  title="Auto generated link to System.Net">System.Net</a> . Questo esempio descrive come implementare tutti i suoi metodi per L'invio di messaggi di posta elettronica. Per ulteriori informazioni sulla Classe Mail
+ vi rimando a questo&nbsp;<a href="http://msdn.microsoft.com/it-it/library/system.net.mail.aspx">link</a>&nbsp;.</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>Per poter provare l'esempio sul proprio pc &egrave; necessario aver installato il .netFramework4.0</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>La classe <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Net.Mail.aspx"  title="Auto generated link to System.Net.Mail">System.Net.Mail</a> contiene al suo interno le classi necessarie per poter inviare messaggi di posta elettronica&nbsp;, e mediante il server SMTP il quale riceve in entrata il messaggio di posta ,&nbsp;per poi successivamente inviare il &nbsp;messaggio
+ al destinatario specificato. Esiste anche la classe attachment , con la quale si possono includere al messaggio di posta elettronica degli allegati. L'esempio oltre permettere di inviare messaggi di posta elettronica , permette di inviare assieme degli allegati
+ , ed inoltre e possibile memorizzare tutti gli indirizzi email all'interno di una variabile nelle impostazioni di tipo StringCollection appartenente allo spazio dei nomi System.Collection.Specializated.</p>
+<p>Avviata l'applicazione e necessario specificare il proprio indirizzo Email e la password per l'identificazione ed autenticazione al proprio server di posta , bisogner&agrave; anche specificare il server SMTP di posta , l'esempio utilizza SMTP.live.com. Per
+ altri server bisogner&agrave; essere a conoscenza del nome del server e la porta per le transazioni SMTP.</p>
+<p>Dopodich&egrave; il o i destinatari di posta alla quale inviare le Email, quindi l'oggetto ovvero il titolo del messaggio che il deastinatario visualizzer&agrave; nella propria casella di posta elettronica , ed il corpo del messaggio , ci&ograve; che il
+ destinatario visualzzer&agrave; quando aprir&agrave; il messaggio di posta elettronica ricevuto.</p>
+<p>&nbsp;E possibile inviare il messaggio per conoscenza (Cc) mediante l'apposita casella di testo&nbsp; e gli allegati.</p>
+<p>Vi saranno anche dei pulsanti Cc&nbsp;e To che eseguiranno il DropDown delle Combobox per la selezione degli indirizzi di posta, un pulsante Aggiungi ai contatti , il quale aggiunger&agrave; il nuovo&nbsp;indirizzo Email alla variabile nelle impostazioni
+ dell'applicazione&nbsp;in modo da renderlo disponibile all'utente, e un pulsante Rimuovi contatti che al contrario effettuer&agrave; la cancellazione del contenuto della variabile &nbsp;nelle impostazioni dell'applicazione.</p>
+<p>Qui di seguito il codice in VB.NET .</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Modifica script</span>|<span class="pluginRemoveHolderLink">{#scriptcode_dlg.remove_script}</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">'dll .netFramework
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Net.Mail.aspx"  title="Auto generated link to System.Net.Mail">System.Net.Mail</a>
+Imports <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.IO.aspx"  title="Auto generated link to System.IO">System.IO</a>
+
+'Classe FrmEmail
+Public Class FrmEmail
+
+    'Istanzio una variabile per la spedizione dei messaggi di posta elettronica
+    Dim myMessage As New MailMessage
+    'Istanzio una variabile per il protocollo SMTP
+    Dim myClient As New SmtpClient()
+
+    'Evento Load del Form FrmEmail
+    Private Sub FrmEmail_Load(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles MyBase.Load
+        ' Se la variabile d'impostazione address none nothing
+        If My.MySettings.Default.address IsNot Nothing Then
+            'Eseguo l'iterazione e popolo le combobox cbxTo e cbxCc con gli indirizzi di posta memorizzati
+            For Each myAddress As String In My.MySettings.Default.address
+                'Aggiungo i relativi indirizzi di posta mediante metodo Add delle combobox
+                Me.cbxTo.Items.Add(myAddress)
+                Me.cbxCc.Items.Add(myAddress)
+                'Iterazione successiva
+            Next
+            'Altrimenti
+        Else
+            'Creo una nuova variabile StringCollection address nelle impostazioni dell'applicazione
+            My.MySettings.Default.address = New <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Collections.Specialized.StringCollection.aspx"  title="Auto generated link to System.Collections.Specialized.StringCollection">System.Collections.Specialized.StringCollection</a>
+            'Effettuo il salvataggio delle impostazioni dell'applicazione
+            My.MySettings.Default.Save()
+        End If
+    End Sub
+
+    'Evento Click del pulsnate btnInvia
+    Private Sub btnInvia_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnInvia.Click
+        'Prova
+        Try
+            'Se il valore di txtTo termina con ;
+            If txtTo.Text.EndsWith(&quot;;&quot;) Then
+                'Elimina l'ultimo carattere ; dal contenuto di txtTo
+                Me.txtTo.Text = Me.txtTo.Text.TrimEnd(&quot;;&quot;)
+            End If
+
+            'Dichiaro un arraylist per spedizione Email a pi&ugrave; destinatari
+            Dim emailMultiple As String() = txtTo.Text.Split(&quot;;&quot;)
+            'Impoosto la porta per le transazioni SMTP
+            myClient.Port = &quot;587&quot;
+            'Imposto il nome dell'host utilizzato per le transazioni SMTP
+            myClient.Host = &quot;smtp.live.com&quot;
+            'Disabilito le credenziali user
+            myClient.UseDefaultCredentials = False
+            'Imposto le credenziali per l'autenticazione del Mittente
+            myClient.Credentials = New <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Net.NetworkCredential.aspx"  title="Auto generated link to System.Net.NetworkCredential">System.Net.NetworkCredential</a>(txtFrom.Text, txtPassword.Text)
+            'Imposto l'indirizzo del Mittente
+            myMessage.From = New MailAddress(txtFrom.Text)
+            'Specifico l'oggetto del messaggio di posta
+            myMessage.Subject = txtOggetto.Text
+            'Eseguo la codifica del contenuto del messaggio
+            myMessage.BodyEncoding = <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Text.Encoding.UTF8.aspx"  title="Auto generated link to System.Text.Encoding.UTF8">System.Text.Encoding.UTF8</a>
+            'Qui si imposta il corpo del messaggio di posta , il contenuto
+            myMessage.Body = txtBody.Text
+            'Imposta la crittografia di connessione specificando che la connessione SMTP 
+            'utilizza SSL
+            myClient.EnableSsl = True
+            'Eseguo l'iterazione per la spedizione di messaggi di posta a pi&ugrave; destinatari
+            For Each destinatari As String In emailMultiple
+                'Aggiungo l'indirizzo di posta elettronica del o dei destinatari
+                myMessage.To.Add(destinatari)
+                'Invio il messaggio di posta al o ai destinatari
+                myClient.Send(myMessage)
+                'Effettuo la cancellazione del destinatario
+                myMessage.To.Clear()
+                'Iterazione successiva
+            Next
+            'In caso di eccezzione
+        Catch ex As Exception
+            'Visualizza messaggio a utente
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    'Evento Click del pulsante btnAggiungi
+    Private Sub btnAggiungi_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnAggiungi.Click
+        'Se il TextBox txtCc contiene caratteri
+        If Not Me.txtCc.Text = &quot;&quot; Then
+            'Se l'utente decide di inserire un nuovo contatto
+            If MessageBox.Show(&quot;Aggiungere il contatto&quot; &amp; &quot; &quot; &amp; Me.txtCc.Text, Application.ProductName.ToString, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                'Aggiungo alla variabile di impostazione address il contenuto di txtCc
+                My.MySettings.Default.address.Add(Me.txtCc.Text)
+                'Effettuo il salvataggio delle impostazioni dell'applicazione
+                My.MySettings.Default.Save()
+                'Altrimrnti
+            End If
+        End If
+
+        'Se il TextBox txtTo contiene caratteri
+        If Not Me.txtTo.Text = &quot;&quot; Then
+            'Se l'utente decide di inserire un nuovo contatto
+            If MessageBox.Show(&quot;Aggiungere il contatto&quot; &amp; &quot; &quot; &amp; Me.txtTo.Text, Application.ProductName.ToString, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                'Aggiungo alla variabile di impostazione address il contenuto di txtTo
+                My.MySettings.Default.address.Add(Me.txtTo.Text)
+                'Effettuo il salvataggio delle impostazioni dell'applicazione
+                My.MySettings.Default.Save()
+            End If
+        End If
+    End Sub
+
+    'Evento Click del pulsante btnEliminaContatti
+    Private Sub btnEliminaContatti_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnEliminaContatti.Click
+        'Se l'utente decide di rimuovere tutti i contatti di posta
+        If MessageBox.Show(&quot;Si desidera canlellare tutti i contatti?&quot;, Application.ProductName.ToString, MessageBoxButtons.YesNo) Then
+            'Rimuovo dlla variabile di impostazione address tutti i contatti memorizzati
+            My.MySettings.Default.address.Clear()
+            'Effettuo il salvataggio delle impostazioni dell'applicazione
+            My.MySettings.Default.Save()
+            'Rimuovo dalle combobox cbxCc e cbxTo i contatti
+            cbxCc.Items.Clear()
+            cbxTo.Items.Clear()
+            'Avvvisa l'utente delle rimozione dei contatti
+            MessageBox.Show(&quot;I contatti sono stati rimossi&quot;)
+        End If
+    End Sub
+
+    'Evento Click del pulsante btnCc
+    Private Sub btnCc_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnCc.Click
+        'Eseguo il DroppedDwwn del combobox cbxCc
+        Me.cbxCc.DroppedDown = True
+    End Sub
+
+    'Evento Click del pulsante btnTo
+    Private Sub btnTo_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnTo.Click
+        'Eseguo il DroppedDwwn del combobox cbxTo
+        Me.cbxTo.DroppedDown = True
+    End Sub
+
+    'Evento Click del pulsante btnAllega
+    Private Sub btnAllega_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnAllega.Click
+        'Se l'utente conferma la scelta dei file da allegare con pulsante ok
+        If ofd.ShowDialog() = DialogResult.OK Then
+            'Eseguo l'iterazione della variabile allegat e recupero i file selezionati dall'utente
+            For Each allegat As String In ofd.FileNames
+                'Visualizzo ad utente l'elenco del o dei file selezionati come allegato
+                Me.txtAllegati.Text &#43;= New <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.IO.FileInfo.aspx"  title="Auto generated link to System.IO.FileInfo">System.IO.FileInfo</a>(allegat).Name &amp; &quot;;&quot;
+                'Istanzio un nuovo oggetto Attachment
+                Dim allegato As New Net.Mail.Attachment(allegat)
+                'Aggiungo l'allegato o gli allegati al messaggio di posta elettronica
+                myMessage.Attachments.Add(allegato)
+                'Iterazione successiva
+            Next
+        End If
+    End Sub
+
+    'Evento click del pulsante btnEsci
+    Private Sub btnEsci_Click(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles btnEsci.Click
+        'Esce e chiude l'applicazione Email
+        Me.Close()
+    End Sub
+
+    'Evento SelectedIndexChanged del combobox cbxCc
+    Private Sub cbxCc_SelectedIndexChanged(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles cbxCc.SelectedIndexChanged
+        'Se il contenuto del combobox cbxCc non e vuoto
+        If Me.cbxCc.Text IsNot String.Empty Then
+            'Visualizzo su TextBox txtCc il valore attuale di cbxCc
+            Me.txtCc.Text &#43;= Me.cbxCc.Text &amp; &quot;;&quot;
+        End If
+    End Sub
+
+    'Evento SelectedIndexChanged del combobox cbxTo
+    Private Sub cbxTo_SelectedIndexChanged(ByVal sender As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Object.aspx"  title="Auto generated link to System.Object">System.Object</a>, ByVal e As <a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>) Handles cbxTo.SelectedIndexChanged
+        'Se il contenuto del combobox cbxTo non e vuoto
+        If Me.cbxTo.Text IsNot String.Empty Then
+            'Visualizzo su TextBox txtTo il valore attuale di cbxTo
+            Me.txtTo.Text &#43;= Me.cbxTo.Text &amp; &quot;;&quot;
+        End If
+    End Sub
+End Class
+</pre>
+<div class="preview">
+<pre class="vb"><span class="visualBasic__com">'dll&nbsp;.netFramework</span>&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;System.Net.Mail&nbsp;
+<span class="visualBasic__keyword">Imports</span>&nbsp;System.IO&nbsp;
+&nbsp;
+<span class="visualBasic__com">'Classe&nbsp;FrmEmail</span>&nbsp;
+<span class="visualBasic__keyword">Public</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;FrmEmail&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Istanzio&nbsp;una&nbsp;variabile&nbsp;per&nbsp;la&nbsp;spedizione&nbsp;dei&nbsp;messaggi&nbsp;di&nbsp;posta&nbsp;elettronica</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;myMessage&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;MailMessage&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Istanzio&nbsp;una&nbsp;variabile&nbsp;per&nbsp;il&nbsp;protocollo&nbsp;SMTP</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;myClient&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;SmtpClient()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;Load&nbsp;del&nbsp;Form&nbsp;FrmEmail</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;FrmEmail_Load(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;<span class="visualBasic__keyword">MyBase</span>.Load&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;Se&nbsp;la&nbsp;variabile&nbsp;d'impostazione&nbsp;address&nbsp;none&nbsp;nothing</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.address&nbsp;<span class="visualBasic__keyword">IsNot</span>&nbsp;<span class="visualBasic__keyword">Nothing</span>&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Eseguo&nbsp;l'iterazione&nbsp;e&nbsp;popolo&nbsp;le&nbsp;combobox&nbsp;cbxTo&nbsp;e&nbsp;cbxCc&nbsp;con&nbsp;gli&nbsp;indirizzi&nbsp;di&nbsp;posta&nbsp;memorizzati</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;<span class="visualBasic__keyword">Each</span>&nbsp;myAddress&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;<span class="visualBasic__keyword">In</span>&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.address&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Aggiungo&nbsp;i&nbsp;relativi&nbsp;indirizzi&nbsp;di&nbsp;posta&nbsp;mediante&nbsp;metodo&nbsp;Add&nbsp;delle&nbsp;combobox</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.cbxTo.Items.Add(myAddress)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.cbxCc.Items.Add(myAddress)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Iterazione&nbsp;successiva</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Altrimenti</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Creo&nbsp;una&nbsp;nuova&nbsp;variabile&nbsp;StringCollection&nbsp;address&nbsp;nelle&nbsp;impostazioni&nbsp;dell'applicazione</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.address&nbsp;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;System.Collections.Specialized.StringCollection&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Effettuo&nbsp;il&nbsp;salvataggio&nbsp;delle&nbsp;impostazioni&nbsp;dell'applicazione</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.Save()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;Click&nbsp;del&nbsp;pulsnate&nbsp;btnInvia</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnInvia_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnInvia.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Prova</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;il&nbsp;valore&nbsp;di&nbsp;txtTo&nbsp;termina&nbsp;con&nbsp;;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;txtTo.Text.EndsWith(<span class="visualBasic__string">&quot;;&quot;</span>)&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Elimina&nbsp;l'ultimo&nbsp;carattere&nbsp;;&nbsp;dal&nbsp;contenuto&nbsp;di&nbsp;txtTo</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.txtTo.Text&nbsp;=&nbsp;<span class="visualBasic__keyword">Me</span>.txtTo.Text.TrimEnd(<span class="visualBasic__string">&quot;;&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Dichiaro&nbsp;un&nbsp;arraylist&nbsp;per&nbsp;spedizione&nbsp;Email&nbsp;a&nbsp;pi&ugrave;&nbsp;destinatari</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;emailMultiple&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>()&nbsp;=&nbsp;txtTo.Text.Split(<span class="visualBasic__string">&quot;;&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Impoosto&nbsp;la&nbsp;porta&nbsp;per&nbsp;le&nbsp;transazioni&nbsp;SMTP</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myClient.Port&nbsp;=&nbsp;<span class="visualBasic__string">&quot;587&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Imposto&nbsp;il&nbsp;nome&nbsp;dell'host&nbsp;utilizzato&nbsp;per&nbsp;le&nbsp;transazioni&nbsp;SMTP</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myClient.Host&nbsp;=&nbsp;<span class="visualBasic__string">&quot;smtp.live.com&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Disabilito&nbsp;le&nbsp;credenziali&nbsp;user</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myClient.UseDefaultCredentials&nbsp;=&nbsp;<span class="visualBasic__keyword">False</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Imposto&nbsp;le&nbsp;credenziali&nbsp;per&nbsp;l'autenticazione&nbsp;del&nbsp;Mittente</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myClient.Credentials&nbsp;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.Net.NetworkCredential.aspx"  title="Auto generated link to System.Net.NetworkCredential">System.Net.NetworkCredential</a>(txtFrom.Text,&nbsp;txtPassword.Text)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Imposto&nbsp;l'indirizzo&nbsp;del&nbsp;Mittente</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myMessage.From&nbsp;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;MailAddress(txtFrom.Text)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Specifico&nbsp;l'oggetto&nbsp;del&nbsp;messaggio&nbsp;di&nbsp;posta</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myMessage.Subject&nbsp;=&nbsp;txtOggetto.Text&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Eseguo&nbsp;la&nbsp;codifica&nbsp;del&nbsp;contenuto&nbsp;del&nbsp;messaggio</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myMessage.BodyEncoding&nbsp;=&nbsp;System.Text.Encoding.UTF8&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Qui&nbsp;si&nbsp;imposta&nbsp;il&nbsp;corpo&nbsp;del&nbsp;messaggio&nbsp;di&nbsp;posta&nbsp;,&nbsp;il&nbsp;contenuto</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myMessage.Body&nbsp;=&nbsp;txtBody.Text&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Imposta&nbsp;la&nbsp;crittografia&nbsp;di&nbsp;connessione&nbsp;specificando&nbsp;che&nbsp;la&nbsp;connessione&nbsp;SMTP&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'utilizza&nbsp;SSL</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myClient.EnableSsl&nbsp;=&nbsp;<span class="visualBasic__keyword">True</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Eseguo&nbsp;l'iterazione&nbsp;per&nbsp;la&nbsp;spedizione&nbsp;di&nbsp;messaggi&nbsp;di&nbsp;posta&nbsp;a&nbsp;pi&ugrave;&nbsp;destinatari</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;<span class="visualBasic__keyword">Each</span>&nbsp;destinatari&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;<span class="visualBasic__keyword">In</span>&nbsp;emailMultiple&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Aggiungo&nbsp;l'indirizzo&nbsp;di&nbsp;posta&nbsp;elettronica&nbsp;del&nbsp;o&nbsp;dei&nbsp;destinatari</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myMessage.<span class="visualBasic__keyword">To</span>.Add(destinatari)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Invio&nbsp;il&nbsp;messaggio&nbsp;di&nbsp;posta&nbsp;al&nbsp;o&nbsp;ai&nbsp;destinatari</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myClient.Send(myMessage)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Effettuo&nbsp;la&nbsp;cancellazione&nbsp;del&nbsp;destinatario</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myMessage.<span class="visualBasic__keyword">To</span>.Clear()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Iterazione&nbsp;successiva</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'In&nbsp;caso&nbsp;di&nbsp;eccezzione</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Catch</span>&nbsp;ex&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Visualizza&nbsp;messaggio&nbsp;a&nbsp;utente</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(ex.Message)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;Click&nbsp;del&nbsp;pulsante&nbsp;btnAggiungi</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnAggiungi_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnAggiungi.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;il&nbsp;TextBox&nbsp;txtCc&nbsp;contiene&nbsp;caratteri</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;<span class="visualBasic__keyword">Not</span>&nbsp;<span class="visualBasic__keyword">Me</span>.txtCc.Text&nbsp;=&nbsp;<span class="visualBasic__string">&quot;&quot;</span>&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;l'utente&nbsp;decide&nbsp;di&nbsp;inserire&nbsp;un&nbsp;nuovo&nbsp;contatto</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;MessageBox.Show(<span class="visualBasic__string">&quot;Aggiungere&nbsp;il&nbsp;contatto&quot;</span>&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;&nbsp;&quot;</span>&nbsp;&amp;&nbsp;<span class="visualBasic__keyword">Me</span>.txtCc.Text,&nbsp;Application.ProductName.ToString,&nbsp;MessageBoxButtons.YesNo)&nbsp;=&nbsp;DialogResult.Yes&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Aggiungo&nbsp;alla&nbsp;variabile&nbsp;di&nbsp;impostazione&nbsp;address&nbsp;il&nbsp;contenuto&nbsp;di&nbsp;txtCc</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.address.Add(<span class="visualBasic__keyword">Me</span>.txtCc.Text)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Effettuo&nbsp;il&nbsp;salvataggio&nbsp;delle&nbsp;impostazioni&nbsp;dell'applicazione</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.Save()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Altrimrnti</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;il&nbsp;TextBox&nbsp;txtTo&nbsp;contiene&nbsp;caratteri</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;<span class="visualBasic__keyword">Not</span>&nbsp;<span class="visualBasic__keyword">Me</span>.txtTo.Text&nbsp;=&nbsp;<span class="visualBasic__string">&quot;&quot;</span>&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;l'utente&nbsp;decide&nbsp;di&nbsp;inserire&nbsp;un&nbsp;nuovo&nbsp;contatto</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;MessageBox.Show(<span class="visualBasic__string">&quot;Aggiungere&nbsp;il&nbsp;contatto&quot;</span>&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;&nbsp;&quot;</span>&nbsp;&amp;&nbsp;<span class="visualBasic__keyword">Me</span>.txtTo.Text,&nbsp;Application.ProductName.ToString,&nbsp;MessageBoxButtons.YesNo)&nbsp;=&nbsp;DialogResult.Yes&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Aggiungo&nbsp;alla&nbsp;variabile&nbsp;di&nbsp;impostazione&nbsp;address&nbsp;il&nbsp;contenuto&nbsp;di&nbsp;txtTo</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.address.Add(<span class="visualBasic__keyword">Me</span>.txtTo.Text)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Effettuo&nbsp;il&nbsp;salvataggio&nbsp;delle&nbsp;impostazioni&nbsp;dell'applicazione</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.Save()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;Click&nbsp;del&nbsp;pulsante&nbsp;btnEliminaContatti</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnEliminaContatti_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnEliminaContatti.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;l'utente&nbsp;decide&nbsp;di&nbsp;rimuovere&nbsp;tutti&nbsp;i&nbsp;contatti&nbsp;di&nbsp;posta</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;MessageBox.Show(<span class="visualBasic__string">&quot;Si&nbsp;desidera&nbsp;canlellare&nbsp;tutti&nbsp;i&nbsp;contatti?&quot;</span>,&nbsp;Application.ProductName.ToString,&nbsp;MessageBoxButtons.YesNo)&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Rimuovo&nbsp;dlla&nbsp;variabile&nbsp;di&nbsp;impostazione&nbsp;address&nbsp;tutti&nbsp;i&nbsp;contatti&nbsp;memorizzati</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.address.Clear()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Effettuo&nbsp;il&nbsp;salvataggio&nbsp;delle&nbsp;impostazioni&nbsp;dell'applicazione</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My.MySettings.<span class="visualBasic__keyword">Default</span>.Save()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Rimuovo&nbsp;dalle&nbsp;combobox&nbsp;cbxCc&nbsp;e&nbsp;cbxTo&nbsp;i&nbsp;contatti</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cbxCc.Items.Clear()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cbxTo.Items.Clear()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Avvvisa&nbsp;l'utente&nbsp;delle&nbsp;rimozione&nbsp;dei&nbsp;contatti</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="visualBasic__string">&quot;I&nbsp;contatti&nbsp;sono&nbsp;stati&nbsp;rimossi&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;Click&nbsp;del&nbsp;pulsante&nbsp;btnCc</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnCc_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnCc.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Eseguo&nbsp;il&nbsp;DroppedDwwn&nbsp;del&nbsp;combobox&nbsp;cbxCc</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.cbxCc.DroppedDown&nbsp;=&nbsp;<span class="visualBasic__keyword">True</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;Click&nbsp;del&nbsp;pulsante&nbsp;btnTo</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnTo_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnTo.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Eseguo&nbsp;il&nbsp;DroppedDwwn&nbsp;del&nbsp;combobox&nbsp;cbxTo</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.cbxTo.DroppedDown&nbsp;=&nbsp;<span class="visualBasic__keyword">True</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;Click&nbsp;del&nbsp;pulsante&nbsp;btnAllega</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnAllega_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnAllega.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;l'utente&nbsp;conferma&nbsp;la&nbsp;scelta&nbsp;dei&nbsp;file&nbsp;da&nbsp;allegare&nbsp;con&nbsp;pulsante&nbsp;ok</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;ofd.ShowDialog()&nbsp;=&nbsp;DialogResult.OK&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Eseguo&nbsp;l'iterazione&nbsp;della&nbsp;variabile&nbsp;allegat&nbsp;e&nbsp;recupero&nbsp;i&nbsp;file&nbsp;selezionati&nbsp;dall'utente</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;<span class="visualBasic__keyword">Each</span>&nbsp;allegat&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">String</span>&nbsp;<span class="visualBasic__keyword">In</span>&nbsp;ofd.FileNames&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Visualizzo&nbsp;ad&nbsp;utente&nbsp;l'elenco&nbsp;del&nbsp;o&nbsp;dei&nbsp;file&nbsp;selezionati&nbsp;come&nbsp;allegato</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.txtAllegati.Text&nbsp;&#43;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.IO.FileInfo.aspx"  title="Auto generated link to System.IO.FileInfo">System.IO.FileInfo</a>(allegat).Name&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Istanzio&nbsp;un&nbsp;nuovo&nbsp;oggetto&nbsp;Attachment</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;allegato&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;Net.Mail.Attachment(allegat)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Aggiungo&nbsp;l'allegato&nbsp;o&nbsp;gli&nbsp;allegati&nbsp;al&nbsp;messaggio&nbsp;di&nbsp;posta&nbsp;elettronica</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myMessage.Attachments.Add(allegato)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Iterazione&nbsp;successiva</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;click&nbsp;del&nbsp;pulsante&nbsp;btnEsci</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;btnEsci_Click(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;btnEsci.Click&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Esce&nbsp;e&nbsp;chiude&nbsp;l'applicazione&nbsp;Email</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.Close()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;SelectedIndexChanged&nbsp;del&nbsp;combobox&nbsp;cbxCc</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;cbxCc_SelectedIndexChanged(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;cbxCc.SelectedIndexChanged&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;il&nbsp;contenuto&nbsp;del&nbsp;combobox&nbsp;cbxCc&nbsp;non&nbsp;e&nbsp;vuoto</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;<span class="visualBasic__keyword">Me</span>.cbxCc.Text&nbsp;<span class="visualBasic__keyword">IsNot</span>&nbsp;<span class="visualBasic__keyword">String</span>.Empty&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Visualizzo&nbsp;su&nbsp;TextBox&nbsp;txtCc&nbsp;il&nbsp;valore&nbsp;attuale&nbsp;di&nbsp;cbxCc</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.txtCc.Text&nbsp;&#43;=&nbsp;<span class="visualBasic__keyword">Me</span>.cbxCc.Text&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Evento&nbsp;SelectedIndexChanged&nbsp;del&nbsp;combobox&nbsp;cbxTo</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;cbxTo_SelectedIndexChanged(<span class="visualBasic__keyword">ByVal</span>&nbsp;sender&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;System.<span class="visualBasic__keyword">Object</span>,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;e&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/it-IT/library/System.EventArgs.aspx"  title="Auto generated link to System.EventArgs">System.EventArgs</a>)&nbsp;<span class="visualBasic__keyword">Handles</span>&nbsp;cbxTo.SelectedIndexChanged&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Se&nbsp;il&nbsp;contenuto&nbsp;del&nbsp;combobox&nbsp;cbxTo&nbsp;non&nbsp;e&nbsp;vuoto</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;<span class="visualBasic__keyword">Me</span>.cbxTo.Text&nbsp;<span class="visualBasic__keyword">IsNot</span>&nbsp;<span class="visualBasic__keyword">String</span>.Empty&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'Visualizzo&nbsp;su&nbsp;TextBox&nbsp;txtTo&nbsp;il&nbsp;valore&nbsp;attuale&nbsp;di&nbsp;cbxTo</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Me</span>.txtTo.Text&nbsp;&#43;=&nbsp;<span class="visualBasic__keyword">Me</span>.cbxTo.Text&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;
+<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Class</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<h1>More Information</h1>
+<p><em>Per maggiori informazioni <a href="http://community.visual-basic.it/carmelolamonica/">
+http://community.visual-basic.it/carmelolamonica/</a></em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

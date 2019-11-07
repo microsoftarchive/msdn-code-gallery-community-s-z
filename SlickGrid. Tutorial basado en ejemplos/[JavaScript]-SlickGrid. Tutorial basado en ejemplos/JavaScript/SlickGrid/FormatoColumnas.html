@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Añadiendo Formato a Columnas</title>
+    <link href="https://code.jquery.com/ui/1.11.4/themes/blitzer/jquery-ui.css" rel="stylesheet" />
+    <link href="css/slick.grid.css" rel="stylesheet" />
+    <link href="css/theme/slick-default-theme.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="Scripts/jquery.event.drag-2.2.js"></script>
+    <script src="Scripts/slick.core.js"></script>
+    <script src="Scripts/slick.grid.js"></script>
+    <script src="Scripts/gridformatters.js"></script>
+    <style>
+        .prKeyHeadColumn {
+            background: rgba(204,0,0,0.2);
+        }
+        .headColumn{
+            background: -webkit-linear-gradient(top, white, white 40%, rgba(204,0,0,0.2));
+            background: -moz-linear-gradient(top, white, white 40%, rgba(204,0,0,0.2));
+            background: -o-linear-gradient(top, white, white 40%, rgba(204,0,0,0.2));
+            background: -ms-linear-gradient(top, white, white 40%, rgba(204,0,0,0.2));
+        }
+        .numericCell{
+            text-align: right;
+        }
+    </style>
+    <script type="text/javascript">
+        var products = [
+            { ProductID: 514, ProductNumber: "SA-M198", Name: "LL Mountain Seat Assembly", Color: null, StandardCost: 98.77, ProductSubcategoryID: null },
+            { ProductID: 515, ProductNumber: "SA-M237", Name: "ML Mountain Seat Assembly", Color: null, StandardCost: 108.99, ProductSubcategoryID: null },
+            { ProductID: 516, ProductNumber: "SA-M687", Name: "HL Mountain Seat Assembly", Color: null, StandardCost: 145.87, ProductSubcategoryID: null },
+            { ProductID: 517, ProductNumber: "SA-R127", Name: "LL Road Seat Assembly", Color: null, StandardCost: 98.77, ProductSubcategoryID: null },
+            { ProductID: 518, ProductNumber: "SA-R430", Name: "ML Road Seat Assembly", Color: null, StandardCost: 108.99, ProductSubcategoryID: null },
+            { ProductID: 519, ProductNumber: "SA-R522", Name: "HL Road Seat Assembly", Color: null, StandardCost: 145.87, ProductSubcategoryID: null },
+            { ProductID: 520, ProductNumber: "SA-T467", Name: "LL Touring Seat Assembly", Color: null, StandardCost: 98.77, ProductSubcategoryID: null },
+            { ProductID: 521, ProductNumber: "SA-T612", Name: "ML Touring Seat Assembly", Color: null, StandardCost: 108.99, ProductSubcategoryID: null },
+            { ProductID: 522, ProductNumber: "SA-T872", Name: "HL Touring Seat Assembly", Color: null, StandardCost: 145.87, ProductSubcategoryID: null },
+            { ProductID: 680, ProductNumber: "FR-R92B-58", Name: "HL Road Frame - Black, 58", Color: "Black", StandardCost: 1059.31, ProductSubcategoryID: 14 },
+            { ProductID: 706, ProductNumber: "FR-R92R-58", Name: "HL Road Frame - Red, 58", Color: "Red", StandardCost: 1059.31, ProductSubcategoryID: 14 },
+            { ProductID: 707, ProductNumber: "HL-U509-R", Name: "Sport-100 Helmet, Red", Color: "Red", StandardCost: 13.09, ProductSubcategoryID: 31 },
+            { ProductID: 708, ProductNumber: "HL-U509", Name: "Sport-100 Helmet, Black", Color: "Black", StandardCost: 13.09, ProductSubcategoryID: 31 },
+            { ProductID: 709, ProductNumber: "SO-B909-M", Name: "Mountain Bike Socks, M", Color: "White", StandardCost: 3.40, ProductSubcategoryID: 23 },
+            { ProductID: 710, ProductNumber: "SO-B909-L", Name: "Mountain Bike Socks, L", Color: "White", StandardCost: 3.40, ProductSubcategoryID: 23 },
+            { ProductID: 711, ProductNumber: "HL-U509-B", Name: "Sport-100 Helmet, Blue", Color: "Blue", StandardCost: 13.09, ProductSubcategoryID: 31 },
+            { ProductID: 712, ProductNumber: "CA-1098", Name: "AWC Logo Cap", Color: "Multi", StandardCost: 6.92, ProductSubcategoryID: 19 },
+            { ProductID: 713, ProductNumber: "LJ-0192-S", Name: "Long-Sleeve Logo Jersey, S", Color: "Multi", StandardCost: 38.49, ProductSubcategoryID: 21 },
+            { ProductID: 714, ProductNumber: "LJ-0192-M", Name: "Long-Sleeve Logo Jersey, M", Color: "Multi", StandardCost: 38.49, ProductSubcategoryID: 21 },
+            { ProductID: 715, ProductNumber: "LJ-0192-L", Name: "Long-Sleeve Logo Jersey, L", Color: "Multi", StandardCost: 38.49, ProductSubcategoryID: 21 },
+            { ProductID: 716, ProductNumber: "LJ-0192-X", Name: "Long-Sleeve Logo Jersey, XL", Color: "Multi", StandardCost: 38.49, ProductSubcategoryID: 21 },
+            { ProductID: 717, ProductNumber: "FR-R92R-62", Name: "HL Road Frame - Red, 62", Color: "Red", StandardCost: 868.63, ProductSubcategoryID: 14 },
+            { ProductID: 718, ProductNumber: "FR-R92R-44", Name: "HL Road Frame - Red, 44", Color: "Red", StandardCost: 868.63, ProductSubcategoryID: 14 },
+            { ProductID: 719, ProductNumber: "FR-R92R-48", Name: "HL Road Frame - Red, 48", Color: "Red", StandardCost: 868.63, ProductSubcategoryID: 14 },
+            { ProductID: 720, ProductNumber: "FR-R92R-52", Name: "HL Road Frame - Red, 52", Color: "Red", StandardCost: 868.63, ProductSubcategoryID: 14 },
+            { ProductID: 721, ProductNumber: "FR-R92R-56", Name: "HL Road Frame - Red, 56", Color: "Red", StandardCost: 868.63, ProductSubcategoryID: 14 },
+            { ProductID: 722, ProductNumber: "FR-R38B-58", Name: "LL Road Frame - Black, 58", Color: "Black", StandardCost: 204.63, ProductSubcategoryID: 14 },
+            { ProductID: 723, ProductNumber: "FR-R38B-60", Name: "LL Road Frame - Black, 60", Color: "Black", StandardCost: 204.63, ProductSubcategoryID: 14 },
+            { ProductID: 724, ProductNumber: "FR-R38B-62", Name: "LL Road Frame - Black, 62", Color: "Black", StandardCost: 204.63, ProductSubcategoryID: 14 },
+            { ProductID: 725, ProductNumber: "FR-R38R-44", Name: "LL Road Frame - Red, 44", Color: "Red", StandardCost: 187.16, ProductSubcategoryID: 14 },
+            { ProductID: 726, ProductNumber: "FR-R38R-48", Name: "LL Road Frame - Red, 48", Color: "Red", StandardCost: 187.16, ProductSubcategoryID: 14 },
+            { ProductID: 727, ProductNumber: "FR-R38R-52", Name: "LL Road Frame - Red, 52", Color: "Red", StandardCost: 187.16, ProductSubcategoryID: 14 },
+            { ProductID: 728, ProductNumber: "FR-R38R-58", Name: "LL Road Frame - Red, 58", Color: "Red", StandardCost: 187.16, ProductSubcategoryID: 14 },
+            { ProductID: 729, ProductNumber: "FR-R38R-60", Name: "LL Road Frame - Red, 60", Color: "Red", StandardCost: 187.16, ProductSubcategoryID: 14 },
+            { ProductID: 730, ProductNumber: "FR-R38R-62", Name: "LL Road Frame - Red, 62", Color: "Red", StandardCost: 187.16, ProductSubcategoryID: 14 },
+            { ProductID: 731, ProductNumber: "FR-R72R-44", Name: "ML Road Frame - Red, 44", Color: "Red", StandardCost: 352.14, ProductSubcategoryID: 14 },
+            { ProductID: 732, ProductNumber: "FR-R72R-48", Name: "ML Road Frame - Red, 48", Color: "Red", StandardCost: 352.14, ProductSubcategoryID: 14 },
+            { ProductID: 733, ProductNumber: "FR-R72R-52", Name: "ML Road Frame - Red, 52", Color: "Red", StandardCost: 352.14, ProductSubcategoryID: 14 },
+            { ProductID: 734, ProductNumber: "FR-R72R-58", Name: "ML Road Frame - Red, 58", Color: "Red", StandardCost: 352.14, ProductSubcategoryID: 14 },
+            { ProductID: 735, ProductNumber: "FR-R72R-60", Name: "ML Road Frame - Red, 60", Color: "Red", StandardCost: 352.14, ProductSubcategoryID: 14 }
+        ];
+
+        var subcategories = [
+            { ProductSubcategoryID: 1, Name: "Mountain Bikes" },
+            { ProductSubcategoryID: 2, Name: "Road Bikes" },
+            { ProductSubcategoryID: 3, Name: "Touring Bikes" },
+            { ProductSubcategoryID: 4, Name: "Handlebars" },
+            { ProductSubcategoryID: 5, Name: "Bottom Brackets" },
+            { ProductSubcategoryID: 6, Name: "Brakes" },
+            { ProductSubcategoryID: 7, Name: "Chains" },
+            { ProductSubcategoryID: 8, Name: "Cranksets" },
+            { ProductSubcategoryID: 9, Name: "Derailleurs" },
+            { ProductSubcategoryID: 10, Name: "Forks" },
+            { ProductSubcategoryID: 11, Name: "Headsets" },
+            { ProductSubcategoryID: 12, Name: "Mountain Frames" },
+            { ProductSubcategoryID: 13, Name: "Pedals" },
+            { ProductSubcategoryID: 14, Name: "Road Frames" },
+            { ProductSubcategoryID: 15, Name: "Saddles" },
+            { ProductSubcategoryID: 16, Name: "Touring Frames" },
+            { ProductSubcategoryID: 17, Name: "Wheels" },
+            { ProductSubcategoryID: 18, Name: "Bib-Shorts" },
+            { ProductSubcategoryID: 19, Name: "Caps" },
+            { ProductSubcategoryID: 20, Name: "Gloves" },
+            { ProductSubcategoryID: 21, Name: "Jerseys" },
+            { ProductSubcategoryID: 22, Name: "Shorts" },
+            { ProductSubcategoryID: 23, Name: "Socks" },
+            { ProductSubcategoryID: 24, Name: "Tights" },
+            { ProductSubcategoryID: 25, Name: "Vests" },
+            { ProductSubcategoryID: 26, Name: "Bike Racks" },
+            { ProductSubcategoryID: 27, Name: "Bike Stands" },
+            { ProductSubcategoryID: 28, Name: "Bottles and Cages" },
+            { ProductSubcategoryID: 29, Name: "Cleaners" },
+            { ProductSubcategoryID: 30, Name: "Fenders" },
+            { ProductSubcategoryID: 31, Name: "Helmets" },
+            { ProductSubcategoryID: 32, Name: "Hydration Packs" },
+            { ProductSubcategoryID: 33, Name: "Lights" },
+            { ProductSubcategoryID: 34, Name: "Locks" },
+            { ProductSubcategoryID: 35, Name: "Panniers" },
+            { ProductSubcategoryID: 36, Name: "Pumps" },
+            { ProductSubcategoryID: 37, Name: "Tires and Tubes" }
+        ];
+
+        function subcategoryNameFormatter(row, cell, value, columnDef, dataContext)
+        {
+            if (value == null) return "";
+
+            var name;
+            for (var subcat in subcategories) {
+                if (value == subcategories[subcat].ProductSubcategoryID)
+                    return subcategories[subcat].Name;
+            }
+            return "";
+        }
+
+        $(function () {
+            var columns = [
+                { name: "ID", field: "ProductID", id: "ProductID", width: 60, resizable: false
+                    , headerCssClass: "prKeyHeadColumn", cssClass: "numericCell" },
+                { name: "Nº Producto", field: "ProductNumber", id: "ProductNumber", width: 120, resizable: false
+                    , headerCssClass: "headColumn" },
+                { name: "Denominación", field: "Name", id: "Name", width: 250, minWidth: 150, maxWidth: 400
+                    , headerCssClass: "headColumn" },
+                { name: "Color", field: "Color", id: "Color", width: 80, minWidth: 60, maxWidth: 120
+                    , headerCssClass: "headColumn", formatter: Slick.Formatters.ColorFormatter },
+                { name: "Precio", field: "StandardCost", id: "StandardCost", width: 110, minWidth: 80, maxWidth: 170
+                    , headerCssClass: "headColumn", cssClass: "numericCell", formatter: Slick.Formatters.CurrencyFormatter },
+                { name: "Sub", field: "ProductSubcategoryID", id: "ProductSubcategoryID", width: 60, resizable: false
+                    , headerCssClass: "headColumn", cssClass: "numericCell" },
+                { name: "Subcategoría", field: "ProductSubcategoryID", id: "SubcategoryName", width:200, minWidth: 150, maxWidth: 400
+                    , headerCssClass: "headColumn", formatter: subcategoryNameFormatter
+                }
+            ];
+
+            var grid = new Slick.Grid("#FormatGrid", products, columns);
+        });
+    </script>
+</head>
+<body>
+    <div id="FormatGrid" style="width:1024px; height:500px;"></div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,1:ImageSprite;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Content/Css:1&amp;amp;hashKey=E7560C71640616C5057FAEACB58DCB00" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/2f95808e-ca34-4249-88ff-44fabe33cdc0Combined.css,1:LinkList,2:ImageSprite,2:SiteFeedbackLink;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Epx/Content/Css:2&amp;amp;hashKey=EEE39C2D6B93379FDAF50337BE99AF8C" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sample MVC4/WCF and EF Code First .NET 4.5. Domain design</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Sample MVC4/WCF and EF Code First .NET 4.5. Domain design</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, WCF, Visual Studio 2010, jQuery, Entity Framework, .NET Framework 4.0, C# Language, HTML5, ASP.NET MVC 4, Visual Studio 2012, .NET 4.5
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, WCF, ASP.NET, Architecture and Design, ASP.NET MVC, jQuery, Web Services, Javascript, Entity Framework, Image manipulation, Getting Started, .NET 4, Imaging, Generic C# resuable code, Image Optimization, Software Architecture, Web Architecture
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary Language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">6/13/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/MVC-4-Open-Framework-296fa001">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="background-color:#ffffff"><em>This sample provides basic infrastructure for MVC application with WCF and EF Code first support. All communications in this application are done through the WCF services without service references. There are no
+ ties to the EF in MVC at all. Application has an example of storing and displaying images in database with replication on file system for better performance. Common design patterns are used:
+<span style="background-color:#ffffff">Repository, Unit Of Work, MVC, Service Locator</span></em></span></p>
+<p><span style="background-color:#ffffff"><em><span style="background-color:#ffff99"><span style="background-color:#ffffff"><strong>In this scenario I didn&rsquo;t want my WEB client to know anything about Entity Framework. Please not that there is not Membership
+ provider as well.&nbsp;</strong></span></span></em></span><span style="background-color:#ffffff"><span style="background-color:#ffff99"><span style="background-color:#ffffff">Authentication is done in similar way, but without dependency on Membership Provider.
+ You may change this if you want to have use regular MS Membership provider. Domain objects will support that structure.</span></span></span></p>
+<h1><span>Building the Sample</span></h1>
+<p><strong><span style="color:#ff0000; background-color:#ffffff">Important!</span> Please download all required NuGet packages.
+</strong></p>
+<p>The sample requires Visual Studio 2010/2012, .net 4.5 and SQL Server.&nbsp;To build and seed the database run integration unit test method
+<span style="background-color:#ffff00">CreateAndSeedDatabaseTest </span></p>
+<ul>
+<li><span style="background-color:#ffffff">Login: <strong>sysadmin </strong></span></li><li><span style="background-color:#ffffff">Password: <strong>Virtue2013!</strong></span>
+</li></ul>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>Main advantages:</em></p>
+<ul>
+<li>Basic Application layout </li><li>Loosely coupled components </li><li>Service calls without service references </li><li>EF Code First </li><li>Remove Circular references in Entities for WCF serialization </li><li>Use of common design patterns </li><li>No knowledge of EF in MVC </li><li>Use of Areas </li><li>Dynamic Ajax calls with partial views <br>
+<em></em></li></ul>
+<p><em>Basic layout for distributed application.</em></p>
+<p><em>&nbsp;<img id="83647" src="description/solution.PNG" alt="" width="304" height="263">&nbsp;</em></p>
+<p>Client MVC application has knowledge of service interfaces and domain objects.<br>
+Domain objects are used by web client and server (EF).&nbsp; Web client only knows is how to call services, it has no idea where is the data coming from. A Service host responsibility is to specify database connection and provide centralized configurations
+ for WCF services.<br>
+WCF services implementation is also separated into different projects and loosely coupled with the service host.<br>
+DAL &ndash; Data Access Layer is divided into two logical groups: Context and Infrastructure<br>
+Context project is responsible for creating and managing Entities and databases. Database migration should be added here for future updates.<br>
+Infrastructure project is implementation of Unit of work and repositories.<br>
+A WCF Services implementation project knows how to create UOW or call repositories.<br>
+Domain objects and Core project are shared between layers. Interface based implementation provides nice decoupling and separations<em><br>
+</em></p>
+<p><em>Sample&nbsp;WCF service invocation through interface call.</em></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public ActionResult GetHomeTypes()
+        {
+            var model =
+                _wcfService.InvokeService&lt;IVirtueContextService, ICollection&lt;HomeType&gt;&gt;((svc) =&gt; svc.GetHomeTypes(true));
+
+            return PartialView(&quot;_HomeTypes&quot;, model.OrderBy(i =&gt; i.SortOrder));
+        }</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;ActionResult&nbsp;GetHomeTypes()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;model&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_wcfService.InvokeService&lt;IVirtueContextService,&nbsp;ICollection&lt;HomeType&gt;&gt;((svc)&nbsp;=&gt;&nbsp;svc.GetHomeTypes(<span class="cs__keyword">true</span>));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;PartialView(<span class="cs__string">&quot;_HomeTypes&quot;</span>,&nbsp;model.OrderBy(i&nbsp;=&gt;&nbsp;i.SortOrder));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em><strong>ManagementController</strong>.cs &ndash; This controller is an example of displaying, creating and editing application types.<br>
+Only <span style="color:#ff0000">HomeTypes </span>are implemented. You should be able to create a new HomeType and attach the image to it. Thumbnail is generated up on image upload.<br>
+</em></li></ul>
+<h1>More Information</h1>
+<p><em>This solution is designed as a starting point with all basic components in place and provides complete wiring for application</em></p>
+<p><em>Please post any question, I will be more than happy to answer them.</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

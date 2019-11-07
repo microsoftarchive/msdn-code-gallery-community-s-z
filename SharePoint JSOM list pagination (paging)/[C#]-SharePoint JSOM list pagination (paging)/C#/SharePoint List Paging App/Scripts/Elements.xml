@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" />
+    <File Path="Scripts\jquery-1.8.2.min.js" Url="Scripts/jquery-1.8.2.min.js" />
+    <File Path="Scripts\jquery-1.8.2.js" Url="Scripts/jquery-1.8.2.js" />
+    <File Path="Scripts\jquery-1.8.2.intellisense.js" Url="Scripts/jquery-1.8.2.intellisense.js" />
+    <File Path="Scripts\Basic.js" Url="Scripts/Basic.js" />
+    <File Path="Scripts\Sorting.js" Url="Scripts/Sorting.js" />
+  </Module>
+</Elements>

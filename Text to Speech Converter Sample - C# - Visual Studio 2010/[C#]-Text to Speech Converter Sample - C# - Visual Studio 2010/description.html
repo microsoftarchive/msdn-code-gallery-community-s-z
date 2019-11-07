@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/4f0db316-e33e-4e5c-b975-0f6de635f8e4Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Text to Speech Converter Sample - C# - Visual Studio 2010</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Text to Speech Converter Sample - C# - Visual Studio 2010</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            System.Speech Namespace
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Speech Synthesis, Text to Speech Conversion
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/11/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Text-to-Speech-Converter-0ed77dd5">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div class="endscriptcode">&nbsp;</div>
+<h1><span style="color:#ff0000">Introduction</span></h1>
+<p><span style="font-size:small; font-family:arial black,avant garde">The demo below explains how to convert text to speech using C# in Visual Studio 2010 using System.Speech Library.</span></p>
+<p><span style="font-size:small; font-family:arial black,avant garde">Microsoft .NET framework provides <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Speech.Synthesis.aspx"  title="Auto generated link to System.Speech.Synthesis">System.Speech.Synthesis</a> for voice synthesis.</span><em>&nbsp;</em></p>
+<p><img src="description/text_2_speech_screen.png" alt="" width="543" height="339"></p>
+<h1><span style="color:#ff0000">Building the Sample</span></h1>
+<p><span style="font-family:arial black,avant garde; font-size:small">You must have Visual Studio 2010 to build and run the sample.</span><em><br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold; color:#ff0000">Description</span></p>
+<p><span style="font-size:small">To convert text to speech , which is called voice synthesis, you must include<strong> &quot;System.Speech&quot;
+</strong>reference in your project. It contains functions for both speech synthesis and recognition</span></p>
+<p><span style="font-size:small">After adding System.speech reference you have to use
+<strong><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Speech.Synthesis.aspx"  title="Auto generated link to System.Speech.Synthesis">System.Speech.Synthesis</a></strong> in your project which conatins various function for voice synthesis.</span></p>
+<p><span style="font-size:small"><span style="text-decoration:underline"><strong><span style="color:#ff0000">Creating object of SpeechSynthesizer class.</span></strong></span>
+</span></p>
+<p><span style="font-size:small">The first step is to create an object of SpeechSynthesizer class (e.g. &quot;reader&quot; in my sample)</span><em>&nbsp;</em></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">SpeechSynthesizer reader = new SpeechSynthesizer();</pre>
+<div class="preview">
+<pre id="codePreview" class="csharp">SpeechSynthesizer&nbsp;reader&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SpeechSynthesizer();</pre>
+</div>
+</div>
+</div>
+<h1><span style="text-decoration:underline"><span style="font-size:small"><strong><span style="color:#ff0000">Calling Speak() function :</span></strong></span></span><span style="font-size:small"><br>
+</span></h1>
+<p><span style="font-size:small"><strong><span style="color:#ff0000">&nbsp;</span></strong>The next step is to call the &quot;Speak()&quot; function by passing the text to to spoken as string.</span></p>
+<p><span style="font-size:small">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> reader.Speak(&quot;This is my first speech project&quot;);</pre>
+<div class="preview">
+<pre id="codePreview" class="js">&nbsp;reader.Speak(<span class="js__string">&quot;This&nbsp;is&nbsp;my&nbsp;first&nbsp;speech&nbsp;project&quot;</span>);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<p><span style="font-size:small">The problem with the speak() function is that it is not threaded. It means that you cannot perform any other function in your windows form until the &quot;reader&quot; object has completed the speech.</span></p>
+<p><span style="font-size:small">So it is better to use<strong> &quot;SpeakAsync()</strong>&quot; function. I have also used SpeakAsync() in the sample.</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> reader.SpeakAsync(&quot;Speaking text asynchronously&quot;);</pre>
+<div class="preview">
+<pre id="codePreview" class="csharp">&nbsp;reader.SpeakAsync(<span class="cs__string">&quot;Speaking&nbsp;text&nbsp;asynchronously&quot;</span>);</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h1><span style="text-decoration:underline"><span style="font-size:small"><strong><span style="color:#ff0000">Using Pause() and Resume() function :</span></strong></span></span><span style="font-size:small">&nbsp;</span></h1>
+<p><span style="font-size:small">You can also detect the state of the &quot;reader&quot; object by using
+<strong>&quot;SynthesizerState&quot;</strong> property. And using that you can also <strong>
+&quot;Pause&quot;</strong> or <strong>&quot;Resume&quot;</strong> the narration.</span></p>
+<p><span style="font-size:small">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> if (reader.State == SynthesizerState.Speaking)
+   {
+                    reader.Pause();
+   }</pre>
+<div class="preview">
+<pre id="codePreview" class="js"><span class="js__statement">if</span>&nbsp;(reader.State&nbsp;==&nbsp;SynthesizerState.Speaking)&nbsp;<br><span class="js__brace">{</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.Pause();&nbsp;<br><span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden"> if (reader.State == SynthesizerState.Paused)
+   {
+                    reader.Resume();
+  }</pre>
+<div class="preview">
+<pre id="codePreview" class="js"><span class="js__statement">if</span>&nbsp;(reader.State&nbsp;==&nbsp;SynthesizerState.Paused)&nbsp;<br><span class="js__brace">{</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.Resume();&nbsp;<br><span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h1><span style="text-decoration:underline"><span style="font-size:small"><strong><span style="color:#ff0000">Using Dispose() function :</span></strong></span></span><span style="font-size:small">&nbsp;</span></h1>
+<p><span style="font-size:small">You can use Dispose() function to stop narration and dispose the &quot;reader&quot; object.</span></p>
+<p><span style="font-size:small">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">if( reader!= null )
+{
+     reader.Dispose();
+}
+
+</pre>
+<div class="preview">
+<pre id="codePreview" class="csharp"><span class="cs__keyword">if</span>(&nbsp;reader!=&nbsp;<span class="cs__keyword">null</span>&nbsp;)&nbsp;<br>{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.Dispose();&nbsp;<br>}&nbsp;<br>&nbsp;<br></pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="endscriptcode"></div>
+<p>&nbsp;</p>
+<p><span style="font-size:small">The are some of the basic operations. You can also change voice, volume , rate and other parameters. You can also save the spoken audio stream directly into a &quot;wave&quot; file.</span></p>
+<p><span style="font-size:small">The sample also show some other features such as using event handlers to detect speech progress and display status of synthesizer.</span></p>
+<p><span style="font-size:small">Below is the compelete code for speech synthesis.</span></p>
+<p><strong><span style="font-size:small">COMMENTS and QUESTIONS are most welcome......HAPPY CODING!!!!</span></strong></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.ComponentModel.aspx"  title="Auto generated link to System.ComponentModel">System.ComponentModel</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Speech.Synthesis.aspx"  title="Auto generated link to System.Speech.Synthesis">System.Speech.Synthesis</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.IO.aspx"  title="Auto generated link to System.IO">System.IO</a>;
+
+namespace text_to_speech
+{
+    public partial class Form1 : Form
+    {
+        SpeechSynthesizer reader; //declare the object
+        public Form1()
+        {
+            InitializeComponent();
+
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            reader = new SpeechSynthesizer(); //create new object
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            textBox1.ScrollBars = ScrollBars.Both;
+        }
+
+        //SPEAK TEXT
+        private void button1_Click(object sender, EventArgs e)
+        {
+            reader.Dispose();
+            if (textBox1.Text != &quot;&quot;)    //if text area is not empty
+            {
+
+                reader = new SpeechSynthesizer();
+                reader.SpeakAsync(textBox1.Text);
+                label2.Text = &quot;SPEAKING&quot;;
+                button2.Enabled = true;
+                button4.Enabled = true;
+                reader.SpeakCompleted &#43;= new EventHandler&lt;SpeakCompletedEventArgs&gt;(reader_SpeakCompleted);
+            }
+            else
+            {
+                MessageBox.Show(&quot;Please enter some text in the textbox&quot;, &quot;Message&quot;, MessageBoxButtons.OK);
+            }
+        }
+
+        //event handler
+        void reader_SpeakCompleted(object sender, SpeakCompletedEventArgs e)
+        {
+            label2.Text = &quot;IDLE&quot;;
+        }
+
+        //PAUSE
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (reader != null)
+            {
+                if (reader.State == SynthesizerState.Speaking)
+                {
+                    reader.Pause();
+                    label2.Text = &quot;PAUSED&quot;;
+                    button3.Enabled = true;
+
+                }
+            }
+        }
+
+        //RESUME
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (reader != null)
+            {
+                if (reader.State == SynthesizerState.Paused)
+                {
+                    reader.Resume();
+                    label2.Text = &quot;SPEAKING&quot;;
+                }
+                button3.Enabled = false;
+            }
+        }
+
+        //STOP
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (reader != null)
+            {
+                reader.Dispose();
+                label2.Text = &quot;IDLE&quot;;
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+            }
+        }
+
+        //load data from text file button
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            //copy data from text file and load it to textbox
+            textBox1.Text =  File.ReadAllText(openFileDialog1.FileName.ToString());
+
+        }
+
+     }
+}
+</pre>
+<div class="preview">
+<pre id="codePreview" class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.ComponentModel.aspx"  title="Auto generated link to System.ComponentModel">System.ComponentModel</a>;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Drawing.aspx"  title="Auto generated link to System.Drawing">System.Drawing</a>;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Text.aspx"  title="Auto generated link to System.Text">System.Text</a>;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.Forms.aspx"  title="Auto generated link to System.Windows.Forms">System.Windows.Forms</a>;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Speech.Synthesis.aspx"  title="Auto generated link to System.Speech.Synthesis">System.Speech.Synthesis</a>;&nbsp;<br><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.IO.aspx"  title="Auto generated link to System.IO">System.IO</a>;&nbsp;<br>&nbsp;<br><span class="cs__keyword">namespace</span>&nbsp;text_to_speech&nbsp;<br>{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;Form1&nbsp;:&nbsp;Form&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpeechSynthesizer&nbsp;reader;&nbsp;<span class="cs__com">//declare&nbsp;the&nbsp;object</span><span class="cs__keyword">public</span>&nbsp;Form1()&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitializeComponent();&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;Form1_Load(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SpeechSynthesizer();&nbsp;<span class="cs__com">//create&nbsp;new&nbsp;object</span>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button2.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button3.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button4.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.ScrollBars&nbsp;=&nbsp;ScrollBars.Both;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//SPEAK&nbsp;TEXT</span><span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;button1_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.Dispose();&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(textBox1.Text&nbsp;!=&nbsp;<span class="cs__string">&quot;&quot;</span>)&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//if&nbsp;text&nbsp;area&nbsp;is&nbsp;not&nbsp;empty</span>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SpeechSynthesizer();&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.SpeakAsync(textBox1.Text);&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label2.Text&nbsp;=&nbsp;<span class="cs__string">&quot;SPEAKING&quot;</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button2.Enabled&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button4.Enabled&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.SpeakCompleted&nbsp;&#43;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EventHandler&lt;SpeakCompletedEventArgs&gt;(reader_SpeakCompleted);&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show(<span class="cs__string">&quot;Please&nbsp;enter&nbsp;some&nbsp;text&nbsp;in&nbsp;the&nbsp;textbox&quot;</span>,&nbsp;<span class="cs__string">&quot;Message&quot;</span>,&nbsp;MessageBoxButtons.OK);&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//event&nbsp;handler</span><span class="cs__keyword">void</span>&nbsp;reader_SpeakCompleted(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;SpeakCompletedEventArgs&nbsp;e)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label2.Text&nbsp;=&nbsp;<span class="cs__string">&quot;IDLE&quot;</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//PAUSE</span><span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;button2_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(reader&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(reader.State&nbsp;==&nbsp;SynthesizerState.Speaking)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.Pause();&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label2.Text&nbsp;=&nbsp;<span class="cs__string">&quot;PAUSED&quot;</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button3.Enabled&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//RESUME</span><span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;button3_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(reader&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(reader.State&nbsp;==&nbsp;SynthesizerState.Paused)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.Resume();&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label2.Text&nbsp;=&nbsp;<span class="cs__string">&quot;SPEAKING&quot;</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button3.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//STOP</span><span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;button4_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(reader&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.Dispose();&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label2.Text&nbsp;=&nbsp;<span class="cs__string">&quot;IDLE&quot;</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button2.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button3.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button4.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//load&nbsp;data&nbsp;from&nbsp;text&nbsp;file&nbsp;button</span><span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;button5_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;EventArgs&nbsp;e)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;openFileDialog1.ShowDialog();&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span><span class="cs__keyword">void</span>&nbsp;openFileDialog1_FileOk(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;CancelEventArgs&nbsp;e)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//copy&nbsp;data&nbsp;from&nbsp;text&nbsp;file&nbsp;and&nbsp;load&nbsp;it&nbsp;to&nbsp;textbox</span>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;&nbsp;File.ReadAllText(openFileDialog1.FileName.ToString());&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>}&nbsp;<br></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+<p>&nbsp;</p>
+<h1><span style="text-decoration:underline; font-family:arial black,avant garde"><span style="font-size:small"><strong><span style="color:#ff0000">Adding SYSTEM.SPEECH Reference</span></strong></span></span></h1>
+<p><span style="text-decoration:underline"><span style="font-size:small"><strong><span style="color:#ff0000"><img src="description/img1.png" alt=""></span></strong></span></span></p>
+<p>&nbsp;</p>
+<p><span style="text-decoration:underline"><span style="font-size:small"><strong><span style="color:#ff0000"><img src="description/img2.png" alt="" width="597" height="498"><br>
+</span></strong></span></span></p>
+<p><span style="font-size:small"><br>
+</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

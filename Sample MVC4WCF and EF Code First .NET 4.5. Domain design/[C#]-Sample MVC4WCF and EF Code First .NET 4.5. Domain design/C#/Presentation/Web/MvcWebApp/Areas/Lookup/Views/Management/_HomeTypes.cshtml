@@ -1,0 +1,47 @@
+﻿@model IEnumerable<VirtueBuild.Domain.Lookups.HomeType>
+
+<h2>Home Types:</h2>
+<div>
+    <button id="HomeType" class="btn create">Add New Home Type</button>
+</div>
+<table width="100%" class="table-stripe">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SortOrder)
+        </th>
+        <th>
+            Image
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SortOrder)
+            </td>
+            <td>
+                @if (item.ImageGuid != null && item.ImageGuid != Guid.Empty) {
+                    <img id="@item.ImageGuid" src="@Url.Action("GetImage", new {imageGuid = item.ImageGuid, isThumb = true, width = 50})" width="50" />
+                }
+            
+            </td>
+            <td>            
+                <i class="icon-edit" id="HomeType" data-id="@item.Id"></i>
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=2BC858EE6D767D0C2BEFC420C2BABEA0" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=0B25E7803D8872332DD14DBB1E1B1A8D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Using the Bing Maps V8 Web control in a WinForm application</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Using the Bing Maps V8 Web control in a WinForm application</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Bing Maps, WinForms
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Bing Maps, WinForms
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/14/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Using-the-Bing-Maps-V8-Web-07e21f3a">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This code sample shows how to load the Bing Maps V8 Web control inside of a WinForm application using a WebBrowser control. In addition to this is also provides an example of how to call JavaScript functions from the C# code to call functionality in the
+ webpage, along with an example of how to call C# from JavaScript to update values in WinForm controls based on information in the map.</p>
+<h1><span>Building the Sample</span></h1>
+<p>In order to get the map to load correctly and be able to geocode search values, you must add your Bing Maps key to the Html\Map.html file where it says &quot;Your Bing Maps Key&quot;.</p>
+<div>If you do not have a Bing Maps key you can get ne by first creating a Bing Maps account and then a key as documented here:</div>
+<div></div>
+<div><a href="http://msdn.microsoft.com/en-us/library/gg650598.aspx">http://msdn.microsoft.com/en-us/library/gg650598.aspx</a></div>
+<div><a href="http://msdn.microsoft.com/en-us/library/ff428642.aspx">http://msdn.microsoft.com/en-us/library/ff428642.aspx</a><strong>&nbsp;</strong><em>&nbsp;</em></div>
+<p>Alternatively,&nbsp;you can&nbsp;get a Bing Maps key through the Azure Marketplace here:
+<a href="https://code.msdn.microsoft.com/Using-the-Bing-Maps-V8-Web-07e21f3a/https://azure.microsoft.com/en-us/marketplace/partners/bingmaps/mapapis/">
+https://code.msdn.microsoft.com/Using-the-Bing-Maps-V8-Web-07e21f3a/https://azure.microsoft.com/en-us/marketplace/partners/bingmaps/mapapis/</a><strong>&nbsp;</strong><em>&nbsp;</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>When you run this application you will see a search box/button where you can enter in addresses or places to search for. Beside this information displaying the center latitude and longitude value and the zoom level of the map will be constantly updated as
+ you move the map.</p>
+<p><em><img id="165768" src="https://i1.code.msdn.s-msft.com/using-the-bing-maps-v8-web-07e21f3a/image/file/165768/1/v8winform.png" alt="" width="800" height="598" style="width:573px; height:438px"></em></p>
+<h1>More Information</h1>
+<p>Here are some additional resources about the Bing Maps V8 web control:</p>
+<ul type="disc">
+<li><a href="http://www.bing.com/api/maps/sdk/mapcontrol/isdk"><span><span style="color:#0563c1">Bing Maps V8 Interactive SDK</span></span></a>
+</li><li><span><a href="https://code.msdn.microsoft.com/Using-the-Bing-Maps-V8-Web-07e21f3a/https://msdn.microsoft.com/en-us/library/mt712542.aspx"><span><span style="color:#0563c1">Bing Maps V8 documentation</span></span></a></span>
+</li><li><a href="https://code.msdn.microsoft.com/Using-the-Bing-Maps-V8-Web-07e21f3a/https://github.com/Microsoft/Bing-Maps-V8-TypeScript-Definitions"><span><span style="color:#0563c1">Bing Maps V8 TypeScript Definitions</span></span></a>
+</li></ul>
+<p><strong>&nbsp;</strong><em>&nbsp;</em></p>
+<p><em><br>
+</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

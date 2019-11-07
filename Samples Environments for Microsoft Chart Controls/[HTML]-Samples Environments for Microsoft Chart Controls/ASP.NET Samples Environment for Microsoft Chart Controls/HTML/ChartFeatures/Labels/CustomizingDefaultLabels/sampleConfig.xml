@@ -1,0 +1,36 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Labels">
+	<Title>Customizing Default Labels</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Customizing Default Labels</ShortBlurb> 
+	<Content>CustomizingDefaultLabels.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Labels, Customizing</Keyword>
+	</Keywords>  
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Customizations">
+	<Title>Customizing Default Labels</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Customizing Default Labels</ShortBlurb> 
+	<Content>CustomizingDefaultLabels.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Labels, Customizing</Keyword>
+	</Keywords>  
+	</SampleConfig>
+
+</SampleConfigs>

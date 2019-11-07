@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:sprite;/Areas/Epx/Themes/VStudio/Content:0&amp;amp;hashKey=568DE581322B18E8BF3768FC7E132C12" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/59726a7c-042c-4608-9d2c-a860417b3d55Combined.css,0:sprite;/Areas/Epx/Themes/VStudio/Content:0&amp;amp;hashKey=BE682BF23BC54E4C87CDBD0EB676D157" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Simple project to import / export Excel data in visual basic with office.Interop</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/2cb80c3a-b512-4c38-bba9-a562b0b64f67Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Simple project to import / export Excel data in visual basic with office.Interop</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Excel
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Visual Basic .NET
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary Language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">6/25/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/vstudio/importing-exporting-excel-271e96d5">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="color:#0000ff; font-size:medium"><em>this is a simple project to connect Excel to visual basic</em></span></p>
+<h1><span>Building the Sample</span></h1>
+<p>&nbsp;</p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><span style="font-size:medium; color:#800080"><em>to connect your project to Excel you can use Oledb or office libraries included with visual basic</em></span></p>
+<p><span style="font-size:medium; color:#800080"><em>this example show you how to import or export data from Excel using the library&nbsp;Microsoft.Office.Interop.Excel.dll</em></span></p>
+<p>&nbsp;</p>
+<p>I<span style="font-size:small; color:#000000">mports Microsoft.Office.Interop</span></p>
+<p><span style="font-size:small; color:#000000">to imports this library</span></p>
+<p><span style="font-size:small; color:#000000">click menu &quot;project&quot; -&gt; &quot;your project properties&quot; -&gt; references -&gt; add -&gt; browse'and add it,</span></p>
+<p><span style="font-size:small; color:#000000">with 2007 office version and 2008 VS version this library is exist in this folder</span></p>
+<p><span style="font-size:small; color:#000000">'C:\Program Files\Microsoft Visual Studio 9.0\Visual Studio Tools for Office\PIA\Office12'</span></p>
+<p><span style="font-size:small; color:#000000">and select this library: Microsoft.Office.Interop.Excel.dll</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size:small"><strong><span style="color:#000080">an important issue about globalization &amp; localization of this libraryyou might get a runtime error depending on user's culture (windows &amp; office language)</span></strong></span></p>
+<p><span style="font-size:small"><strong><span style="color:#000080">Exception from HRESULT: 0x800A03EC.</span></strong></span></p>
+<p><span style="font-size:small"><strong><span style="color:#000080">-or-</span></strong></span></p>
+<p><span style="font-size:small"><strong><span style="color:#000080">Old format or invalid type library.</span></strong></span></p>
+<p><span style="font-size:small"><strong><span style="color:#000080">to resolve this error add a culture info before calling Excel procedure, so your script will be as the below:</span></strong></span></p>
+<p><span style="font-size:small"><strong><span style="color:#000080">&nbsp;</span></strong></span><br>
+<span style="font-size:small; color:#000000">Dim thisThread As <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Threading.Thread.aspx"  title="Auto generated link to System.Threading.Thread">System.Threading.Thread</a> = _&nbsp; &nbsp; System.Threading.Thread.CurrentThreadDim originalCulture As _ <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Globalization.CultureInfo.aspx"  title="Auto generated link to System.Globalization.CultureInfo">System.Globalization.CultureInfo</a> = thisThread.CurrentCulture</span><br>
+<span style="font-size:small; color:#000000">Try&nbsp;</span></p>
+<p><span style="font-size:small; color:#000000">&nbsp; thisThread.CurrentCulture = New <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Globalization.CultureInfo.aspx"  title="Auto generated link to System.Globalization.CultureInfo">System.Globalization.CultureInfo</a>( &quot;en-US&quot;)</span><br>
+<span style="font-size:small; color:#000000">ExportDGV_toExcel ()</span></p>
+<p><span style="font-size:small; color:#000000">&nbsp;</span><br>
+<span style="font-size:small; color:#000000">Finally&nbsp; &nbsp;</span></p>
+<p><span style="font-size:small; color:#339966">' Restore the culture information for the thread after the Excel calls have completed.&nbsp; &nbsp;</span></p>
+<p><span style="font-size:small; color:#000000">thisThread.CurrentCulture = originalCulture</span></p>
+<p><span style="font-size:small; color:#000000">End Try&nbsp;</span></p>
+<p><span style="font-size:small; color:#000000">&nbsp;</span><br>
+<span style="font-size:small"><strong><span style="color:#000080">for full details please take a look at:</span></strong></span></p>
+<p><span style="font-size:medium"><a title="http://msdn.microsoft.com/en-us/library/aa168494(office.11).aspx" href="http://msdn.microsoft.com/en-us/library/aa168494(office.11).aspx">http://msdn.microsoft.com/en-us/library/aa168494(office.11).aspx</a></span></p>
+<p>==========</p>
+<p><span style="font-size:small; color:#000000">Please note that it reads the first used lines in the Excel file, it won't read all empty lines</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size:small; color:#000000">this example is only to give an idea about import and export data from/to an Excel file</span></p>
+<p><span style="font-size:small; color:#000000">you should modify scripts to be consistent with your project</span></p>
+<p><span style="font-size:small; color:#000000">I splited the scripts to multi functions to make ideas easiers&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>this some scripts,</p>
+<p>&nbsp; &nbsp;Private Sub ExportDGV_toExcel(ByVal _dgv As DataGridView)<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Dim ColCou As Byte<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Try&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>AppExcel.Visible = False</p>
+<p>Book = AppExcel.Workbooks.Add()&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Sheet = Book.Sheets(1)&nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; Catch ex As Exception<br>
+&nbsp; &nbsp; &nbsp; &nbsp; End Try&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; Try<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For _count As Short = 0 To _dgv.ColumnCount - 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If _dgv.Columns(_count).Visible Then&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sheet.Range(Chr(ColCou &#43; 65) &amp; &quot;1&quot;).Value = _dgv.Columns(_count).HeaderText 'first row&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ColCou &#43;= 1&nbsp; &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End If&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Next<br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dim RowDGV As Short&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; For RowXls = 2 To _dgv.RowCount &#43; 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; ColCou = 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; For Col As Byte = 0 To _dgv.ColumnCount - 1&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If _dgv.Columns(Col).Visible Then</p>
+<p><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.Forms.Application.DoEvents.aspx"  title="Auto generated link to System.Windows.Forms.Application.DoEvents">System.Windows.Forms.Application.DoEvents</a>()&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sheet.Range(Chr(ColCou &#43; 65) &amp; RowDGV &#43; 2).Value = _dgv.Item(Col, RowXls - 2).Value</p>
+<p><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ColCou &#43;= 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; End If&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; Next&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; RowDGV &#43;= 1&nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; Next<br>
+SetupSheet:&nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; ColCou = 0<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Try&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; Do While Not (Sheet.Range(Chr(ColCou &#43; 65) &amp; &quot;1&quot;).Value Is Nothing)&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; With Sheet.Range(Chr(ColCou &#43; 65) &amp; &quot;1&quot;) 'first row&nbsp;&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .Font.Size = 14&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .Font.Bold = True&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .Font.ColorIndex = 5 'blue --- 2: white, 3: red ... etc&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ColCou &#43;= 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; End With&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; Loop<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sheet.Columns.AutoFit()&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; Catch ex As Exception</p>
+<p><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; End Try<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AppExcel.Visible = True&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Exit Sub&nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; Catch ex As Exception&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; End Try<br>
+&nbsp; &nbsp; End Sub</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span>
+<pre class="hidden">  Private Sub ImportExcelSheetToDGV(ByVal _dgvToImportTo As DataGridView, ByVal ColTotal As Byte)
+        Dim ColIdx As Byte
+        Dim RowIdx, TotalLinesXls As Short
+
+        Try
+            DGV_import_export = New DataGridView
+
+            Book = AppExcel.Workbooks.Open(ExcelFileName)
+            Sheet = Book.Sheets(1)
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            With Sheet 'calculate how many lines in the Excel file
+                TotalLinesXls = 2
+                Do While Sheet.Range(&quot;A&quot; &amp; Trim(TotalLinesXls.ToString)).Value.ToString &lt;&gt; &quot;&quot;
+                    <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.Forms.Application.DoEvents.aspx"  title="Auto generated link to System.Windows.Forms.Application.DoEvents">System.Windows.Forms.Application.DoEvents</a>()
+                    TotalLinesXls &#43;= 1
+                Loop
+            End With
+
+        Catch ex As Exception
+        End Try
+
+        TotalLinesXls -= 1
+
+StartImport:
+
+        With DGV_import_export
+            PnlDGV.Controls.Add(DGV_import_export)
+
+            Dim ColHeader As Char
+
+            For ColCounter As Byte = 1 To ColTotal
+                ' Add columns
+                ColHeader = Chr(ColCounter &#43; 64).ToString.Trim 'A,B,C, ...
+
+                .Columns.Add(&quot;&quot;, Sheet.Range(ColHeader &amp; &quot;1&quot;).Value) 'A1. B1, C1, ...
+            Next
+
+            If TotalLinesXls &lt; 2 Then
+                MsgBox(&quot;no lines found in this Excel file&quot;)
+                GoTo EndMession
+            Else
+                .Rows.Add(TotalLinesXls - 1)
+            End If
+
+
+            .PerformLayout()
+
+            Dim CellCou As Integer = 1
+
+            For RowIdx = 2 To TotalLinesXls
+                ' Read lines
+                For ColIdx = 1 To ColTotal
+                    <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.Forms.Application.DoEvents.aspx"  title="Auto generated link to System.Windows.Forms.Application.DoEvents">System.Windows.Forms.Application.DoEvents</a>()
+                    If Not (Sheet.Range(Chr(ColIdx &#43; 64) &amp; RowIdx).Value) Is Nothing Then
+                        .Item(ColIdx - 1, RowIdx - 2).Value = Sheet.Range(Chr(ColIdx &#43; 64) &amp; RowIdx).Value.ToString
+                    End If
+                    CellCou &#43;= 1
+
+                Next
+            Next
+            .Columns(.ColumnCount - 1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+            .Dock = DockStyle.Fill
+
+        End With
+EndMession:
+        Try
+            AppExcel.Quit()
+        Catch ex_error As Exception
+            MsgBox(ex_error.Message)
+        End Try
+    End Sub</pre>
+<div class="preview">
+<pre class="vb">&nbsp;&nbsp;<span class="visualBasic__keyword">Private</span>&nbsp;<span class="visualBasic__keyword">Sub</span>&nbsp;ImportExcelSheetToDGV(<span class="visualBasic__keyword">ByVal</span>&nbsp;_dgvToImportTo&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;DataGridView,&nbsp;<span class="visualBasic__keyword">ByVal</span>&nbsp;ColTotal&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Byte</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;ColIdx&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Byte</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;RowIdx,&nbsp;TotalLinesXls&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Short</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DGV_import_export&nbsp;=&nbsp;<span class="visualBasic__keyword">New</span>&nbsp;DataGridView&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Book&nbsp;=&nbsp;AppExcel.Workbooks.Open(ExcelFileName)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sheet&nbsp;=&nbsp;Book.Sheets(<span class="visualBasic__number">1</span>)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Catch</span>&nbsp;ex&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">With</span>&nbsp;Sheet&nbsp;<span class="visualBasic__com">'calculate&nbsp;how&nbsp;many&nbsp;lines&nbsp;in&nbsp;the&nbsp;Excel&nbsp;file</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TotalLinesXls&nbsp;=&nbsp;<span class="visualBasic__number">2</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Do</span>&nbsp;<span class="visualBasic__keyword">While</span>&nbsp;Sheet.Range(<span class="visualBasic__string">&quot;A&quot;</span>&nbsp;&amp;&nbsp;Trim(TotalLinesXls.ToString)).Value.ToString&nbsp;&lt;&gt;&nbsp;<span class="visualBasic__string">&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.Forms.Application.DoEvents.aspx"  title="Auto generated link to System.Windows.Forms.Application.DoEvents">System.Windows.Forms.Application.DoEvents</a>()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TotalLinesXls&nbsp;&#43;=&nbsp;<span class="visualBasic__number">1</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Loop</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">With</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Catch</span>&nbsp;ex&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TotalLinesXls&nbsp;-=&nbsp;<span class="visualBasic__number">1</span>&nbsp;
+&nbsp;
+StartImport:&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">With</span>&nbsp;DGV_import_export&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PnlDGV.Controls.Add(DGV_import_export)&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;ColHeader&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Char</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;ColCounter&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Byte</span>&nbsp;=&nbsp;<span class="visualBasic__number">1</span>&nbsp;<span class="visualBasic__keyword">To</span>&nbsp;ColTotal&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;Add&nbsp;columns</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ColHeader&nbsp;=&nbsp;Chr(ColCounter&nbsp;&#43;&nbsp;<span class="visualBasic__number">64</span>).ToString.Trim&nbsp;<span class="visualBasic__com">'A,B,C,&nbsp;...</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Columns.Add(<span class="visualBasic__string">&quot;&quot;</span>,&nbsp;Sheet.Range(ColHeader&nbsp;&amp;&nbsp;<span class="visualBasic__string">&quot;1&quot;</span>).Value)&nbsp;<span class="visualBasic__com">'A1.&nbsp;B1,&nbsp;C1,&nbsp;...</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;TotalLinesXls&nbsp;&lt;&nbsp;<span class="visualBasic__number">2</span>&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox(<span class="visualBasic__string">&quot;no&nbsp;lines&nbsp;found&nbsp;in&nbsp;this&nbsp;Excel&nbsp;file&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">GoTo</span>&nbsp;EndMession&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Rows.Add(TotalLinesXls&nbsp;-&nbsp;<span class="visualBasic__number">1</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.PerformLayout()&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Dim</span>&nbsp;CellCou&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;<span class="visualBasic__keyword">Integer</span>&nbsp;=&nbsp;<span class="visualBasic__number">1</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;RowIdx&nbsp;=&nbsp;<span class="visualBasic__number">2</span>&nbsp;<span class="visualBasic__keyword">To</span>&nbsp;TotalLinesXls&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__com">'&nbsp;Read&nbsp;lines</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">For</span>&nbsp;ColIdx&nbsp;=&nbsp;<span class="visualBasic__number">1</span>&nbsp;<span class="visualBasic__keyword">To</span>&nbsp;ColTotal&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Windows.Forms.Application.DoEvents.aspx"  title="Auto generated link to System.Windows.Forms.Application.DoEvents">System.Windows.Forms.Application.DoEvents</a>()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;<span class="visualBasic__keyword">Not</span>&nbsp;(Sheet.Range(Chr(ColIdx&nbsp;&#43;&nbsp;<span class="visualBasic__number">64</span>)&nbsp;&amp;&nbsp;RowIdx).Value)&nbsp;<span class="visualBasic__keyword">Is</span>&nbsp;<span class="visualBasic__keyword">Nothing</span>&nbsp;<span class="visualBasic__keyword">Then</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Item(ColIdx&nbsp;-&nbsp;<span class="visualBasic__number">1</span>,&nbsp;RowIdx&nbsp;-&nbsp;<span class="visualBasic__number">2</span>).Value&nbsp;=&nbsp;Sheet.Range(Chr(ColIdx&nbsp;&#43;&nbsp;<span class="visualBasic__number">64</span>)&nbsp;&amp;&nbsp;RowIdx).Value.ToString&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">If</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CellCou&nbsp;&#43;=&nbsp;<span class="visualBasic__number">1</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Next</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Columns(.ColumnCount&nbsp;-&nbsp;<span class="visualBasic__number">1</span>).AutoSizeMode&nbsp;=&nbsp;DataGridViewAutoSizeColumnMode.Fill&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Dock&nbsp;=&nbsp;DockStyle.Fill&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">With</span>&nbsp;
+EndMession:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppExcel.Quit()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Catch</span>&nbsp;ex_error&nbsp;<span class="visualBasic__keyword">As</span>&nbsp;Exception&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox(ex_error.Message)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Try</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Sub</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

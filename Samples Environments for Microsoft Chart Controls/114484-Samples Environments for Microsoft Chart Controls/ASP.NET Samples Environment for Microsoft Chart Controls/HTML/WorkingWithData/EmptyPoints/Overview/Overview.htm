@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<LINK href="../../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<p>
+            <br />
+            <i>Empty points </i>are data points that do not have Y values or have been marked 
+            as empty. They are visually displayed in the chart area. Empty points are not 
+            the same as missing data points, which&nbsp; refer to data points that are missing in 
+            a data set.</p>
+		<p>The following example shows that there is no data for Wednesday. </p>
+		<p>
+			<TABLE id="Table1" cellSpacing="1" cellpadding="1" width="500" border="0">
+				<tr>
+					<td><IMG alt="Missing Data?" src="MissingPoints1.PNG" border="0"><BR>
+						</td>
+					<TD valign="top">&nbsp;
+						<BR>
+						<TABLE id="Table2" cellSpacing="1" cellpadding="1" width="100%" border="1">
+							<tr>
+								<TD valign="center" align="middle"><STRONG>X</STRONG></td>
+								<TD valign="center" align="middle"><STRONG>Y</STRONG></td>
+							</tr>
+							<tr>
+								<td>Monday</td>
+								<td>978</td>
+							</tr>
+							<tr>
+								<td>Tuesday</td>
+								<td>345</td>
+							</tr>
+							<tr>
+								<td>Thursday</td>
+								<td>567</td>
+							</tr>
+							<tr>
+								<TD height="21">Friday</td>
+								<TD height="21">778</td>
+							</tr>
+							<tr>
+								<td>Saturday</td>
+								<td>46</td>
+							</tr>
+							<tr>
+								<td>Sunday</td>
+								<td>78</td>
+							</tr>
+						</TABLE>
+					</td>
+				</tr>
+			</TABLE>
+		</p>
+		<p>If the X values of the plotted series are indexed, then it is possible that the 
+            missing data is can be overlooked by the chart reader (see the figure below).</p>
+		<p><IMG alt="Missing Data and Indexed Points" src="MissingPoints2.PNG" border="0"><BR>
+			</p>
+		<p>In this case, use an empty point to clarify that a data point is missing. For 
+            example:</p>
+		<p><IMG alt="Missing Data and Indexed Points" src="MissingPoints3.PNG" border="0"></p>
+		<H3>Empty Points Usage</H3>
+		<p>Use empty points to:</p>
+		<UL>
+			<LI>
+			    Represent points with NULL values.
+			<LI>
+			Change the appearance of missing data points.
+			<LI>
+				Align two or more series.
+			</LI>
+		</UL>
+		<p>Empty data points can be added to a series using:
+		</p>
+		<UL>
+			<LI>
+				The Empty 
+			property of each data point in a series. If Empty is set to <b>True</b>, a point is marked as empty.
+			<LI>
+				Data binding to DBNull values.&nbsp;If a point is data bound to a DBNull value 
+				it will be marked as empty.<LI>
+				The InsertEmptyPoints method of the DataManipulator class, 
+				which checks for missing data and inserts empty points into 
+				a series using intervals.</LI></UL>
+		<H3>Empty Points Styles</H3>
+		<p>Empty points can be displayed as a marker or a line that connect the nearest two 
+            points. It can be displayed as an average of the adjacent points or as having a 
+            value of zero (see the figure below).</p>
+		<p><IMG src="MissingPoints.png" border="0"><BR>
+			</p>
+	</body>
+</html>

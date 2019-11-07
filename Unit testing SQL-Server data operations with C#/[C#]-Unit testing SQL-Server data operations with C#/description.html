@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=3C7B146E4D24AB77A9D9006DC4F48F98" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=1070D4FA49BFA3C2DA44B1CB75FED7A7" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Unit testing SQL-Server data operations with C#</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Unit testing SQL-Server data operations with C#</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, SQL Server, Unit Test
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            SQL Server, Data Access, Unit Testing
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/26/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Unit-testing-SQL-Server-b17c7140">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Description</h1>
+<p><span style="font-size:small">This code sample will provide a method to unit test backend database operations, adding records, updating records and removal of records using SQL-Server database table.</span></p>
+<p><span style="font-size:small"><span>I&rsquo;ve been on various developer forums where developers have issues with their data operations and in most cases are not only dealing with the data operations but also how information is passed to the data operations
+ via controls such as TextBox, ListBox, DataGridView, ComboBox etc along with not writing SQL operations properly e.g. not using parameters. The code samples for unit test provided here are not concerned with user interface aspect of an application, only the
+ backend operations that one would pass information from the front-end to the back-end (then there is always the layer in between if used, business logic and validation which I have not done here, just the actual data operations).</span></span></p>
+<p><strong><span style="font-size:small">What is Unit Testing?</span></strong></p>
+<p><span style="font-size:small"><span>The objective of Unit Testing is to isolate a section of code and verify its correctness. In procedural programming a unit may be an individual function or procedure.</span></span></p>
+<p><span style="font-size:small"><span>The goal of Unit Testing is to isolate each part of the program and show that the individual parts are correct. Unit Testing is usually performed by the developer. Once a developer has tested in many teams there is a testing
+ team who will run their test e.g. our test team using Visual Studio test suite.</span></span></p>
+<p><strong><span style="font-size:small">Why do Unit Testing? Why it is important?</span></strong></p>
+<p><span style="font-size:small"><span>Sometimes software developers attempt to save time by doing minimal unit testing. This is a myth because skimping on unit testing leads to higher Defect fixing costs during System Testing, Integration Testing and even
+ Beta Testing after the application is completed. Proper unit testing done during the development stage saves both time and money in the end.</span></span></p>
+<p><span style="font-size:small"><span>A good deal of developers will mock data using a mocking framework while our team will mock up data then insert data into our database, run test then restore the environment back to how it was prior to the unit test. We
+ have another team that creates what we call sliced which isolate data into a private enviroment which also allows a developer to change the date/time meaning if we want to test something in the past we have a property &quot;Run Date&quot; which we can set to a specific
+ date e.g. enter 0 for today, enter say -7d to place the date back seven days etc.&nbsp;</span></span></p>
+<p><span style="font-size:small">Doing a Google search on <a title="Runs a Google search" href="https://code.msdn.microsoft.com/Unit-testing-SQL-Server-b17c7140/https://www.google.com/search?ei=6uQaWpqfCuuB0wKGobGgDw&amp;q=c%23+unit+test+mock+database&amp;oq=C%23+unit+test+mocking&amp;gs_l=psy-ab.3.1.0j0i22i30k1l9.23538.29457.0.33517.24.21.2.1.1.0.184.1684.20j1.21.0....0...1c.1.64.psy-ab..0.24.1703...35i39k1j0i67k1j0i131k1j0i20i264k1j0i20i263k1.0.f_fEVpIrZoE">
+C# unit test mocking database</a> will produce a lot of choices if you want to mock data.</span></p>
+<p><span style="font-size:small"><strong>Working with the code samples provided here</strong>.</span></p>
+<p><span style="font-size:small">In SQL-Server Management Studio I created a database named ApplicationProductionData then mirrored it with ApplicationTestData.</span></p>
+<p><img id="182663" src="description/1.jpg" alt="" width="250" height="484"></p>
+<p><span style="font-size:small">Then used RedGate data generator to create several thousand records in ApplicationProductionData. In the TestInitialize method in the unit test class run a reset method shown below.</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public void ResetPeopleTable()
+{
+    using (SqlConnection cn = new SqlConnection { ConnectionString = ConnectionString })
+    {
+        using (SqlCommand cmd = new SqlCommand { Connection = cn })
+        {
+
+            /*
+                * There are two statements separated with a semi-colon. First truncation then population.
+                */
+            cmd.CommandText = &quot;TRUNCATE TABLE ApplicationTestData.dbo.People;&quot; &#43;
+                                &quot;INSERT INTO ApplicationTestData.dbo.People &quot; &#43; 
+                                &quot;( FirstName , LastName , Gender , BirthDay ) &quot; &#43; 
+                                &quot;SELECT FirstName , LastName , Gender , BirthDay &quot; &#43;
+                                &quot;FROM  ApplicationProductionData.dbo.People&quot;;
+
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+        }
+    }
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;ResetPeopleTable()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(SqlConnection&nbsp;cn&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SqlConnection&nbsp;{&nbsp;ConnectionString&nbsp;=&nbsp;ConnectionString&nbsp;})&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(SqlCommand&nbsp;cmd&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SqlCommand&nbsp;{&nbsp;Connection&nbsp;=&nbsp;cn&nbsp;})&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__mlcom">/*&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;There&nbsp;are&nbsp;two&nbsp;statements&nbsp;separated&nbsp;with&nbsp;a&nbsp;semi-colon.&nbsp;First&nbsp;truncation&nbsp;then&nbsp;population.&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;<span class="cs__string">&quot;TRUNCATE&nbsp;TABLE&nbsp;ApplicationTestData.dbo.People;&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;INSERT&nbsp;INTO&nbsp;ApplicationTestData.dbo.People&nbsp;&quot;</span>&nbsp;&#43;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;(&nbsp;FirstName&nbsp;,&nbsp;LastName&nbsp;,&nbsp;Gender&nbsp;,&nbsp;BirthDay&nbsp;)&nbsp;&quot;</span>&nbsp;&#43;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;SELECT&nbsp;FirstName&nbsp;,&nbsp;LastName&nbsp;,&nbsp;Gender&nbsp;,&nbsp;BirthDay&nbsp;&quot;</span>&nbsp;&#43;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__string">&quot;FROM&nbsp;&nbsp;ApplicationProductionData.dbo.People&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cn.Open();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cmd.ExecuteNonQuery();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<p><span style="font-size:small">The reset method runs for each test. When running this is SSMS&nbsp; (SQL-Server Management Studio) execution time was 00:00:00 while I didn't measure time in the C# code it's super quick, not noticable at all.</span></p>
+<p><span style="font-size:small">The test consist of CRUD operations e.g. from the backend data operations class (which is a separate class project from the unit test used by our dummy application).</span></p>
+<p><span style="font-size:small"><img id="182664" src="description/1C.jpg" alt="" width="382" height="317"><br>
+</span></p>
+<p><span style="font-size:small">Our unit test where yellow are valid working test and the light blue are examples of test that should never had been written (see comments in code).</span></p>
+<p><span style="font-size:small"><img id="182665" src="description/2.jpg" alt="" width="277" height="275"></span></p>
+<p><span style="font-size:small">I have a test base which the unit test inherits.</span></p>
+<p><img id="182666" src="description/3.jpg" alt="" width="271" height="159"></p>
+<p><span style="font-size:small">These methods are used in the unit test to access the Operations class in the Backend project along with assisting with test validation.</span></p>
+<p><span style="font-size:small">When writing the unit test I added traits so that in test explorer we can segment test e.g.</span></p>
+<p><span style="font-size:small"><img id="182667" src="description/10.jpg" alt="" width="268" height="324"></span></p>
+<p><span style="font-size:small">Any ways what is presented here is but one way to look at using unit test. As you find your way consider looking at TDD (Test Driven Development) where you write test first, create classes from the unit test (Visual Studio allows
+ us to do this). TDD is a tough one to do at first and many will discard it for conventional ways of coding. Point in fact, I posted a thread on a Microsoft forum where the only reponses where (do you think people here know what a unit test is?) and another
+ person replied with links to learning unit testing, no other replies which indicate that I was right that there is not a big interest with some groups of developers as they simply write code with zero planning like many did in the older days of coding.</span></p>
+<p><span style="font-size:small">Today if you are looking to be a professional developer you need to be proficient with all aspects of testing be it C#, JavaScript, database etc to land a well paying position.</span></p>
+<h1><span style="font-size:x-small"><span style="font-size:medium">Configuring to run the test</span>.</span></h1>
+<p><span style="font-size:small">Run the script&nbsp;Create_ApplicationProductionDatabaseAndData.sql in the backend class project to create an populate ApplicationProduction database, People table and populate the People table.</span></p>
+<p><span style="font-size:small">Create on the same server a database named ApplicationTestData. Then run CreatePeopleTable.sql in the backend class project in the database ApplicationTestData.</span></p>
+<p><span style="font-size:small">Special note: I used a NuGet package <a href="https://code.msdn.microsoft.com/Unit-testing-SQL-Server-b17c7140/https://github.com/jamesfoster/DeepEqual">
+DeepEual</a> for comparing objects in several unit test where what's on the web did not suit my needs. Depending on how things are configured on your version of Visual Studio the package may be auto-restored or you may have to restore it yourself.</span></p>
+<p><span style="font-size:small">Build the solution.</span></p>
+<p><span style="font-size:small">Open Test Explorer. Select all test or any one test. Examine the test methods to see what I did.</span></p>
+<p><span style="font-size:small">If you are using MS-Acces see</span></p>
+<p><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Unit-testing-SQL-Server-b17c7140/https://code.msdn.microsoft.com/Unit-testing-data-55b60694?redir=0">Unit testing data operations with Access database in C#</a>. In this code sample I had to deal with copying a application database to the test project
+ rather than reset the table in SQL-Server as there is no &quot;Copy to Output directory&quot; so I rolled my own.</span></p>
+<p><span style="font-size:small">I also have one to mirror the C# MS-Access <a href="https://code.msdn.microsoft.com/Unit-testing-SQL-Server-b17c7140/https://code.msdn.microsoft.com/Unit-testing-data-a7d06269?redir=0">
+unit test here</a>.</span></p>
+<p><span style="font-size:small">From here explore, research on the web and form you own way to unit test based on what has been presented here and found on the web.</span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

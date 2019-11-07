@@ -1,0 +1,26 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set SplineArea chart type
+    Chart1.Series("Default").ChartType = SeriesChartType.SplineArea
+
+    ' Set spline line tension 
+    Chart1.Series("Default")("LineTension") = "0.6"
+
+    ' Enable data points labels
+    Chart1.Series("Default").IsValueShownAsLabel = True
+
+    ' Enable data points markers
+    Chart1.Series("Default").MarkerStyle = MarkerStyle.Circle
+    Chart1.Series("Default").MarkerColor = Color.Magenta
+
+    ' Disable X axis margin
+    Chart1.ChartAreas("ChartArea1").AxisX.IsMarginVisible = False
+    
+    ' Show as 3D
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True	
+
+End Sub 
+...

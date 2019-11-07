@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DF3FB3A-9EBE-4B6C-A794-A52103738E23}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Finance.Web.App</RootNamespace>
+    <AssemblyName>Finance.Web.App</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SilverlightApplicationList>{BF23C7E1-894B-4194-B040-BDA356629924}|..\..\Silverlight\Finance.Silverlight.Graphs\Finance.Silverlight.Graphs.csproj|ClientBin|False</SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc.Html5">
+      <HintPath>..\..\ExtLibs\System.Web.Mvc.Html5.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Finance.Web.DataService.svc.cs">
+      <DependentUpon>Finance.Web.DataService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SilverlightFaultBehavior.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientBin\Finance.Silverlight.Graphs.xap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\ajax-loader.png" />
+    <Content Include="Content\images\google.gif" />
+    <Content Include="Content\images\icon-search-black.png" />
+    <Content Include="Content\images\icons-18-black.png" />
+    <Content Include="Content\images\icons-18-white.png" />
+    <Content Include="Content\images\icons-36-black.png" />
+    <Content Include="Content\images\icons-36-white.png" />
+    <Content Include="Content\images\infocard_23x16.png" />
+    <Content Include="Content\images\myopenid.png" />
+    <Content Include="Content\images\openid.gif" />
+    <Content Include="Content\images\openid_login.gif" />
+    <Content Include="Content\images\verisign.gif" />
+    <Content Include="Content\images\yahoo.gif" />
+    <Content Include="Content\images\yahoo_login.png" />
+    <Content Include="Content\Img\bkg.jpg" />
+    <Content Include="Content\Img\Bollinger_mini_en.jpg" />
+    <Content Include="Content\Img\Bollinger_mini_pl.jpg" />
+    <Content Include="Content\Img\btn-go.png" />
+    <Content Include="Content\Img\btn-login.png" />
+    <Content Include="Content\Img\button-google.png" />
+    <Content Include="Content\Img\button-twitter.png" />
+    <Content Include="Content\Img\button-yahoo.png" />
+    <Content Include="Content\Img\Cci_mini_en.jpg" />
+    <Content Include="Content\Img\Cci_mini_pl.jpg" />
+    <Content Include="Content\Img\content-bottom.png" />
+    <Content Include="Content\Img\content-top.png" />
+    <Content Include="Content\Img\Ema_mini_en.jpg" />
+    <Content Include="Content\Img\Ema_mini_pl.jpg" />
+    <Content Include="Content\Img\exclamation.png" />
+    <Content Include="Content\Img\google.gif" />
+    <Content Include="Content\Img\Bars_mini_en.png" />
+    <Content Include="Content\Img\Bars_mini_pl.png" />
+    <Content Include="Content\Img\Candles_mini_en.png" />
+    <Content Include="Content\Img\Candles_mini_pl.png" />
+    <Content Include="Content\Img\Linear_mini_en.png" />
+    <Content Include="Content\Img\Linear_mini_pl.png" />
+    <Content Include="Content\Img\header-bkg.jpg" />
+    <Content Include="Content\Img\hm-content-bkg.png" />
+    <Content Include="Content\Img\hm-content-bottom.png" />
+    <Content Include="Content\Img\hm-content-top.png" />
+    <Content Include="Content\Img\hm-masthead-en.png" />
+    <Content Include="Content\Img\hm-masthead-pl.png" />
+    <Content Include="Content\Img\icon-facebook.png" />
+    <Content Include="Content\Img\icon-feed-28x28.png" />
+    <Content Include="Content\Img\icon-google.png" />
+    <Content Include="Content\Img\icon-icalfeed-16x16.png" />
+    <Content Include="Content\Img\icon-icalfeed-28x28.png" />
+    <Content Include="Content\Img\icon-odatafeed-28x28.png" />
+    <Content Include="Content\Img\icon-twitter.png" />
+    <Content Include="Content\Img\icon-yahoo.png" />
+    <Content Include="Content\Img\lang-picker-arrow-down.png" />
+    <Content Include="Content\Img\lang-picker-arrow-up.png" />
+    <Content Include="Content\Img\logo.png" />
+    <Content Include="Content\Img\Max_mini_en.jpg" />
+    <Content Include="Content\Img\Max_mini_pl.jpg" />
+    <Content Include="Content\Img\menu-left-selected.png" />
+    <Content Include="Content\Img\menu-left.png" />
+    <Content Include="Content\Img\menu-right-selected.png" />
+    <Content Include="Content\Img\menu-right.png" />
+    <Content Include="Content\Img\microformat_hcalendar.png" />
+    <Content Include="Content\Img\Min_mini_en.jpg" />
+    <Content Include="Content\Img\Min_mini_pl.jpg" />
+    <Content Include="Content\Img\Moneyflow_mini_en.jpg" />
+    <Content Include="Content\Img\Moneyflow_mini_pl.jpg" />
+    <Content Include="Content\Img\Rsi_mini_en.jpg" />
+    <Content Include="Content\Img\Rsi_mini_pl.jpg" />
+    <Content Include="Content\Img\search-bubble.png" />
+    <Content Include="Content\Img\search-header.png" />
+    <Content Include="Content\Img\Sma_mini_en.jpg" />
+    <Content Include="Content\Img\Sma_mini_pl.jpg" />
+    <Content Include="Content\Img\Stochastic_mini_en.jpg" />
+    <Content Include="Content\Img\Stochastic_mini_pl.jpg" />
+    <Content Include="Content\Img\Volume_mini_en.png" />
+    <Content Include="Content\Img\Volume_mini_pl.png" />
+    <Content Include="Content\Img\yahoo.gif" />
+    <Content Include="Content\iui\backButton.png" />
+    <Content Include="Content\iui\blueButton.png" />
+    <Content Include="Content\iui\cancel.png" />
+    <Content Include="Content\iui\custom.css" />
+    <Content Include="Content\iui\custom.js" />
+    <Content Include="Content\iui\grayButton.png" />
+    <Content Include="Content\iui\iPhoneLogo.png" />
+    <Content Include="Content\iui\iui.css" />
+    <Content Include="Content\iui\iui.js" />
+    <Content Include="Content\iui\iuix.css" />
+    <Content Include="Content\iui\iuix.js" />
+    <Content Include="Content\iui\LICENSE.txt" />
+    <Content Include="Content\iui\listArrow.png" />
+    <Content Include="Content\iui\listArrowSel.png" />
+    <Content Include="Content\iui\listGroup.png" />
+    <Content Include="Content\iui\loading.gif" />
+    <Content Include="Content\iui\NOTICE.txt" />
+    <Content Include="Content\iui\pinstripes.png" />
+    <Content Include="Content\iui\README.txt" />
+    <Content Include="Content\iui\releaseNotes.txt" />
+    <Content Include="Content\iui\selection.png" />
+    <Content Include="Content\iui\thumb.png" />
+    <Content Include="Content\iui\toggle.png" />
+    <Content Include="Content\iui\toggleOn.png" />
+    <Content Include="Content\iui\toolbar.png" />
+    <Content Include="Content\iui\toolButton.png" />
+    <Content Include="Content\iui\whiteButton.png" />
+    <Content Include="Content\jquery.mobile-1.0a4.1.css" />
+    <Content Include="Content\jquery.mobile-1.0a4.1.min.css" />
+    <Content Include="Content\Mobile\mobile-xhtml.css" />
+    <Content Include="Content\Production.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\theme\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\theme\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\theme\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\theme\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Content\theme\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\theme\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\theme\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\theme\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\theme\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\theme\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\theme\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\theme\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\theme\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\theme\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\theme\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\theme\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\theme\ui.accordion.css" />
+    <Content Include="Content\theme\ui.all.css" />
+    <Content Include="Content\theme\ui.base.css" />
+    <Content Include="Content\theme\ui.core.css" />
+    <Content Include="Content\theme\ui.datepicker.css" />
+    <Content Include="Content\theme\ui.dialog.css" />
+    <Content Include="Content\theme\ui.progressbar.css" />
+    <Content Include="Content\theme\ui.resizable.css" />
+    <Content Include="Content\theme\ui.slider.css" />
+    <Content Include="Content\theme\ui.tabs.css" />
+    <Content Include="Content\theme\ui.theme.css" />
+    <Content Include="Finance.Silverlight.GraphsTestPage.aspx" />
+    <Content Include="Finance.Silverlight.GraphsTestPage.html" />
+    <Content Include="Finance.Web.DataService.svc" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\cultures\globalize.culture.en-029.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-AU.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-BZ.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-CA.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-GB.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-IE.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-IN.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-JM.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-MY.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-NZ.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-PH.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-SG.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-TT.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-US.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-ZA.js" />
+    <Content Include="Scripts\cultures\globalize.culture.en-ZW.js" />
+    <Content Include="Scripts\cultures\globalize.culture.pl-PL.js" />
+    <Content Include="Scripts\cultures\globalize.culture.pl.js" />
+    <Content Include="Scripts\cultures\globalize.cultures.js" />
+    <Content Include="Scripts\date.format.js" />
+    <Content Include="Scripts\EditorHookup.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-1.5.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.2.js" />
+    <Content Include="Scripts\jquery-1.5.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\RangeDateValidator.js" />
+    <Content Include="Scripts\yepnope.1.0.1-min.js" />
+    <Content Include="Scripts\yepnope.js" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Deployment.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Helpers.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Finance.Common.Base\Finance.Common.Base.csproj">
+      <Project>{87A81847-415D-43C7-85FF-12ECB9EA509A}</Project>
+      <Name>Finance.Common.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Finance.Common\Finance.Common.csproj">
+      <Project>{5B58098E-B1B1-4A91-8AD4-DD68D452B3B4}</Project>
+      <Name>Finance.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Finance.DataProvider\Finance.DataProvider.csproj">
+      <Project>{2453AEF8-FCB0-4C72-AC46-6C99DD17DEF7}</Project>
+      <Name>Finance.DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Finance.Interfaces\Finance.Interfaces.csproj">
+      <Project>{021DB8D6-04CD-4311-8B97-03F1FDA70850}</Project>
+      <Name>Finance.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance.Web.Controllers\Finance.Web.Controllers.csproj">
+      <Project>{B76CBF44-0F0A-45A2-82A5-251A40981ACE}</Project>
+      <Name>Finance.Web.Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance.Web.DataWrappers\Finance.Web.DataWrappers.csproj">
+      <Project>{42942F97-8EA3-4499-ACFD-48CE0C5A808D}</Project>
+      <Name>Finance.Web.DataWrappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance.Web.Models\Finance.Web.Models.csproj">
+      <Project>{7CEFB205-D3C9-4486-93A9-2D15B87E5273}</Project>
+      <Name>Finance.Web.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance.Web.Resources\Finance.Web.Resources.csproj">
+      <Project>{8C1D29F1-1B73-4187-A43B-B06C343B341C}</Project>
+      <Name>Finance.Web.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Graphs\EditorTemplates\Date.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Helpers.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Graphs\EditorTemplates\Color.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\DateTime-Local.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\EmailAddress.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\Month.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\Number.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\PhoneNumber.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\Search.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\Time.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\Url.cshtml" />
+    <Content Include="Views\Graphs\EditorTemplates\Week.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Graphs\GraphInput.cshtml" />
+    <Content Include="Views\Graphs\GraphOutput.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_GraphsSelection.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Graphs\GraphDescription.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_FunctionsSelection.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Graphs\FunctionDescription.cshtml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>54526</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

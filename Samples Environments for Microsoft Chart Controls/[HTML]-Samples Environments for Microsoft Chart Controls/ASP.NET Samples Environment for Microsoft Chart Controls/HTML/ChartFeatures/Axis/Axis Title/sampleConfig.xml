@@ -1,0 +1,34 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "Axis" Priority="300">
+  <Title>Axis Titles</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Setting Axis Titles</ShortBlurb> 
+  <Content>AxisTitle.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+	<Keyword>Axis, Title</Keyword>
+	<Keyword>Title, Axis</Keyword>
+  </Keywords>
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "ChartAppearance" Priority="300">
+  <Title>Axis Title Appearance</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Setting Axis Titles</ShortBlurb> 
+  <Content>AxisTitle.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+	<Keyword>Axis, Title</Keyword>
+	<Keyword>Title, Axis</Keyword>
+  </Keywords> 
+</SampleConfig>
+
+</SampleConfigs>

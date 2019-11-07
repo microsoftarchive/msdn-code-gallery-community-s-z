@@ -1,0 +1,35 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set legend style
+    Chart1.Legends["Default"].LegendStyle = LegendStyle.Column;
+
+    // Set legend docking
+    Chart1.Legends["Default"].Docking = LegendDocking.Right;
+
+    // Set legend alignment
+    Chart1.Legends["Default"].Alignment = StringAlignment.Center;
+
+    if(InsideChartArea.Checked)
+    // Display legend inside the "Default" chart area
+    {
+        Chart1.Legends["Default"].InsideChartArea = "Default";
+    }
+    //do not display legend inside chart area
+    else
+    {
+        Chart1.Legends["Default"].InsideChartArea = "";
+    }
+
+    // Disable legend
+    if(LegendDisabled.Checked)
+    {
+        Chart1.Legends["Default"].Enabled = false;
+    }
+    
+	Chart1.Legends["Default"].IsEquallySpacedItems = true;
+    
+}
+...

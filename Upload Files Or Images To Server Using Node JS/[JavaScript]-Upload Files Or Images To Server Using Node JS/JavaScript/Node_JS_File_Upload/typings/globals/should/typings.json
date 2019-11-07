@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/57f79a1f3cb66a43dd54a27987694233765bf9cc/should/should.d.ts",
+    "raw": "registry:dt/should#8.1.1+20160608082854",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/57f79a1f3cb66a43dd54a27987694233765bf9cc/should/should.d.ts"
+  }
+}

@@ -1,0 +1,10 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+ 
+// Use point index for drawing the chart
+chart1.Series["Series1"].IsXValueIndexed = true;
+
+// Sort series' points by second Y value
+chart1.DataManipulator.Sort(PointSortOrder.Ascending, "Y2", "Series1");
+ 
+...

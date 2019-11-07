@@ -1,0 +1,13 @@
+<?xml version="1.0" ?> 
+<TOCNodes>
+
+  <TOCNode ID="PopulatingData" Priority="500">
+    <Title>Working with Chart Data</Title>
+  </TOCNode>
+
+  <TOCNode ID="DataSourceTypes" ParentNodeID="PopulatingData" Priority="100">
+    <Title>Data Source Types</Title>
+  </TOCNode>
+
+
+</TOCNodes>

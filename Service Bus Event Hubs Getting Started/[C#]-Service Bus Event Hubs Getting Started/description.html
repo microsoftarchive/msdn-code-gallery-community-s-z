@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=D051540662D994D8842C2D71427E5FFB" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=B296DC89199ECF6E28A0D94C3246485C" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Service Bus Event Hubs Getting Started</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Service Bus Event Hubs Getting Started</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Service Bus, Windows Azure Service Bus
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Service Bus, service
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/7/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Service-Bus-Event-Hub-286fd097">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p class="MsoNormal">Event Hubs feature in Service Bus enables developers to build rich data applications that require ingesting event streams at very high throughput and low latency. The ingested events are stored durably until the required retention period
+ expires. Some of the typical types of applications that require high throughput event ingestion are log analytics systems for monitoring, billing and commerce services, and Internet of Things (IoT) scenarios that involve large numbers of devices publishing
+ event streams.</p>
+<p class="MsoNormal">Events are partitioned based on a system property called <strong>
+PartitionKey,</strong> and sent to the Event Hub using an <strong>EventhubClient</strong> object. Consuming applications can then process the events from each of the partitions of the Event Hub. Events within a partition are delivered to the consumer in order.
+ In an Event Hub, you can create one consumer group per consuming application. An example of a scenario in which multiple consumer groups are created is batch processing and real time processing of the same event stream.</p>
+<p class="MsoNormal">Typically, applications that consume events must distribute the partitions among several workers for load balancing, as well as for fault handling. Building such distributed applications is not trivial. For this purpose, the
+<strong>EventHub</strong> client ships with an out-of-box solution for partition distribution using the
+<strong>EventProcessorHost</strong> SDK. <strong>EventprocessorHost</strong> distributes the partitions among the workers uniformly, and load balances the partitions as the workers encounter errors or go down.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>This sample demonstrates the basic capabilities of Event Hub&nbsp;like - Create an Event Hub, Send events to Event hub, Consume events using EventProcessor.</p>
+<p>Refer to Event Hub Developer guide for detailed API documentation&nbsp;<span style="color:#1f497d; font-family:&quot;Calibri&quot;,sans-serif; font-size:11pt"><a href="https://code.msdn.microsoft.com/Service-Bus-Event-Hub-286fd097/https://azure.microsoft.com/documentation/articles/event-hubs-ingest-telemetry-and-application-events/"><span style="color:#0563c1">https://code.msdn.microsoft.com/Service-Bus-Event-Hub-286fd097/https://azure.microsoft.com/documentation/articles/event-hubs-ingest-telemetry-and-application-events/</span></a></span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">Create EventHub :
+
+var ehd = new EventHubDescription(eventHubName);
+ehd.PartitionCount = numberOfPartitions;
+manager.CreateEventHubIfNotExistsAsync(ehd).Wait();
+
+Sent Events:
+
+EventData data = new EventData(bytes)
+data.PartitionKey = info.DeviceId.ToString();
+await client.SendAsync(data);
+
+</pre>
+<div class="preview">
+<pre class="csharp">Create&nbsp;EventHub&nbsp;:&nbsp;
+&nbsp;
+var&nbsp;ehd&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EventHubDescription(eventHubName);&nbsp;
+ehd.PartitionCount&nbsp;=&nbsp;numberOfPartitions;&nbsp;
+manager.CreateEventHubIfNotExistsAsync(ehd).Wait();&nbsp;
+&nbsp;
+Sent&nbsp;Events:&nbsp;
+&nbsp;
+EventData&nbsp;data&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;EventData(bytes)&nbsp;
+data.PartitionKey&nbsp;=&nbsp;info.DeviceId.ToString();&nbsp;
+await&nbsp;client.SendAsync(data);&nbsp;
+&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="mcePaste" id="_mcePaste" style="left:-10000px; top:0px; width:1px; height:1px; overflow:hidden">
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

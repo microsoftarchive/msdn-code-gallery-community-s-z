@@ -1,0 +1,21 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataSourceTypes">
+  <Title>Binding to Arrays</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Binding to Arrays</ShortBlurb>
+  <Content>ArrayBinding.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding to Array</Keyword>
+    <Keyword>Binding, Array</Keyword>
+    <Keyword>Array Binding</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

@@ -1,0 +1,12 @@
+﻿
+Demonstration generator file - reads your model.
+
+	Transistor T2
+	Transistor T1
+	Resistor RC2
+	Capacitor C1
+	Resistor RC1
+	Resistor RB2
+	Resistor RB1
+	Capacitor C2
+	Resistor Rout

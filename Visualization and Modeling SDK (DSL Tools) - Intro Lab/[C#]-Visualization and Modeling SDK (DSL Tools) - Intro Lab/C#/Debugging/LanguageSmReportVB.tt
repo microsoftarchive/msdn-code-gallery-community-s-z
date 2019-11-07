@@ -1,0 +1,16 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="VB" #>
+<#@ output extension=".txt" #>
+<#@ LanguageSm processor="LanguageSmDirectiveProcessor" requires="fileName='Sample.sm'" #>
+
+Generated material. Generating code in VB.
+
+
+<#
+  Rem When you change the DSL Definition, some of the code below may not work.
+
+  For Each element As ExampleElement In Me.ExampleModel.Elements
+#>
+	<#= element.Name #>
+<#    
+  Next
+#>

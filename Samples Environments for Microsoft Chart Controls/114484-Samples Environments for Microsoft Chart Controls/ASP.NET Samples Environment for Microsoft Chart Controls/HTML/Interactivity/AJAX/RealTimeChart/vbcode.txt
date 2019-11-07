@@ -1,0 +1,53 @@
+'
+' Note this code assumes that at design-time you have populated at least one Series with one Data Point.
+'
+
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+''' <summary> 
+''' Page Load event handler. 
+''' </summary> 
+Protected Sub Page_Load(sender As Object, e As System.EventArgs) 
+    
+End Sub 
+
+
+''' <summary> 
+''' Handles the Tick event of the Timer1 control. 
+''' </summary> 
+''' <param name="sender">The source of the event.</param> 
+''' <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param> 
+Protected Sub Timer1_Tick(sender As Object, e As EventArgs) 
+    Dim rand As New Random() 
+    
+    ' Add several random point into each series 
+    For Each series As Series In Me.Chart1.Series 
+        Dim lastYValue As Double = series.Points(series.Points.Count - 1).YValues(0) 
+        Dim lastXValue As Double = series.Points(series.Points.Count - 1).XValue + 1 
+        For pointIndex As Integer = 0 To 4 
+            lastYValue += rand.[Next](-3, 4) 
+            If lastYValue >= 100 Then 
+                lastYValue -= 25 
+            ElseIf lastYValue <= 10 Then 
+                lastYValue += 25 
+            End If 
+            series.Points.AddXY(System.Math.Max(System.Threading.Interlocked.Increment(lastXValue),lastXValue - 1), lastYValue) 
+        Next 
+    Next 
+    
+    ' Remove points from the left chart side if number of points exceeds 100. 
+    While Me.Chart1.Series(0).Points.Count > 100 
+        ' Remove series points 
+        For Each series As Series In Me.Chart1.Series 
+            series.Points.RemoveAt(0) 
+            
+        Next 
+    End While 
+    
+    ' Adjust categorical scale 
+    Dim axisMinimum As Double = Me.Chart1.Series(0).Points(0).XValue 
+    Me.Chart1.ChartAreas(0).AxisX.Minimum = axisMinimum 
+    Me.Chart1.ChartAreas(0).AxisX.Maximum = axisMinimum + 100 
+End Sub 
+...

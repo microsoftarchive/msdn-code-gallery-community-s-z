@@ -1,0 +1,15 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) 
+    Me.Chart1.Series(0).PostBackValue = "#AXISLABEL" 
+    Me.Chart1.Series(0).ToolTip = "#AXISLABEL Region: #VAL{C}" 
+End Sub 
+
+
+
+Protected Sub Chart1_Click(ByVal sender As Object, ByVal e As ImageMapEventArgs) 
+    Me.DetailSource.SelectParameters("RegionName").DefaultValue = e.PostBackValue 
+    Me.GridView.Caption = [String].Format("{0} Region", e.PostBackValue) 
+End Sub 
+...

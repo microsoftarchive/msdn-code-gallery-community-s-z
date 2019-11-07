@@ -1,0 +1,34 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Filename of the CSV file
+	string file = "DataFile.csv";
+
+	// Get the path of the CSV file
+	string path = this.MapPath(".");
+	path += "..\\..\\..\\data\\";
+
+	// Create a select statement and a connection string.
+	string mySelectQuery = "Select * from " + file;
+	string ConStr = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source="+ 
+		path+ ";Extended Properties=\"Text;HDR=No;FMT=Delimited\"";
+	OleDbConnection myConnection = new OleDbConnection(ConStr);
+
+	// Create a database command on the connection using query
+	OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+
+	// Open the connection and create the reader
+	myCommand.Connection.Open();
+	OleDbDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+	// Column 1 is a time value, column 2 is a double
+	// Databind the reader to the chart using the DataBindXY method
+	Chart1.Series[0].Points.DataBindXY(myReader, "1", myReader, "2");
+
+	// Close connection and data reader
+	myReader.Close();
+	myConnection.Close();
+}
+...

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Axis" Priority="600">
+  <Title>Grid Lines And Tick Marks</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Grid Lines And Tick Marks</ShortBlurb> 
+  <Content>GridLinesAndTickMarks.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+	<Keyword>Interval, Grid Lines and Tick Marks</Keyword>
+	<Keyword>Appearance, Grid Lines and Tick Marks</Keyword>
+	<Keyword>Grid Lines, Appearance</Keyword>
+	<Keyword>Tick Marks, Appearance</Keyword>
+  </Keywords>
+</SampleConfig>
+</SampleConfigs>

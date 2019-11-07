@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="cbd60210-3fff-4d62-a4e3-e2a1ffeee1e5" Publisher="CN=User" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>MyPictures</DisplayName>
+    <PublisherDisplayName>User</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MyPictures.App">
+      <m2:VisualElements DisplayName="MyPictures" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="This sample demonstrates how you can store your media such as Images, Videos, Documents or any binary data off the device in Windows Azure Blob Storage.  It will walk you through how to generate a Shared Access Signature using Windows Azure Mobile Services and then demonstrate how to upload that Blob using the Windows Azure Storage Client Library" ForegroundText="dark" BackgroundColor="#FFFFFF">
+        <m2:DefaultTile ShortName="My Pictures" Wide310x150Logo="Assets\widelogo.png">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FFFFFF" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

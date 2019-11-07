@@ -1,0 +1,28 @@
+Imports System.Windows.Forms.DataVisualization.Charting
+Imports System.Data
+Imports System.Data.OleDb
+...
+
+' Full path to the data source file
+Dim file As String = "DataFile.csv"
+
+' Create a connection string.
+Dim ConStr As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + ";Extended Properties=""Text;HDR=No;FMT=Delimited"""
+Dim myConnection As New OleDbConnection(ConStr)
+
+' Create a database command on the connection using query
+Dim mySelectQuery As String = "Select * from " + file
+Dim myCommand As New OleDbCommand(mySelectQuery, myConnection)
+
+' Open the connection and create the reader
+myCommand.Connection.Open()
+Dim myReader As OleDbDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection)
+
+' Column 1 is a time value, column 2 is a double
+' databind the reader to the chart using the DataBindXY method
+Chart1.Series(0).Points.DataBindXY(myReader, "1", myReader, "2" ) 
+
+' Close connection and data reader
+myReader.Close()
+myConnection.Close()
+...

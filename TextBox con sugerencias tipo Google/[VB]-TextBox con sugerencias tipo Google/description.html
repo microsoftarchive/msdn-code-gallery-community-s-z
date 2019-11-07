@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=2F399045A6473D6DDA998D434245B105" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=208A13BE6F6E0E45D0410CFC2406EB5F" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>TextBox con sugerencias tipo Google</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>TextBox con sugerencias tipo Google</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Controls, Windows Forms, custom controls, Text Control, Control personalizado
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Controls, User Interface, Windows Forms
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">es-ES</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">5/24/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/TextBox-con-sugerencias-4f57cba8">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div>El control TextBox incluido con en el Framework de .NET incorpora la opci&oacute;n de mostrar sugerencias mientras se escribe estableciendo la propiedad AutoCompleteMode al valor Suggest. Sin embargo la posibilidad de controlar los textos sugeridos es
+ muy limitada, se limita a mostrar los textos que comienzan con el texto introducido por el usuario en el TextBox a partir de una colecci&oacute;n de cadenas.</div>
+<div>Sin embargo, &iquest;qu&eacute; pasa si el criterio que queremos utilizar para seleccionar los textos a sugerir es otro? Por ejemplo si queremos implementar un control con sugerencias al estilo de las b&uacute;squedas de Google.</div>
+<div>&nbsp;</div>
+<div><img id="138118" src="description/00EjemploGoogle.png" alt="" width="538" height="137"></div>
+<div>&nbsp;</div>
+<div>En este&nbsp;ejemplo voy a mostrar c&oacute;mo podemos crear un control TextBox que nos permita elegir el algoritmo a utilizar para mostrar los textos sugeridos.</div>
+<div>&nbsp;</div>
+<div>Lo que he hecho es crear un nuevo control <em>TextSuggestion</em> que hereda del control
+<em>TextBox</em> y al que le he a&ntilde;adido cuatro nuevas propiedades para gestionar las sugerencias:</div>
+<ul>
+<li><em>MaxNumOfSuggestions</em>: que limita el n&uacute;mero de sugerencias a mostrar
+</li><li><em>SuggestDataSource</em>: que recibe una colecci&oacute;n de objetos que se utilizaran como sugerencias
+</li><li><em>MatchElement</em>: establece la funci&oacute;n que se utilizar&aacute; para establecer si un elemento del origen de datos es una sugerencia v&aacute;lida para el texto introducido o no.
+</li><li><em>TextFromElement</em>: establece una funci&oacute;n que devuelve el texto a mostrar en la sugerencia a partir de un elemento del origen de datos que se haya considerado v&aacute;lido por la funci&oacute;n
+<em>MatchElement</em> </li></ul>
+<div>&nbsp;</div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">        [DefaultValue(10)]
+        public int MaxNumOfSuggestions { get; set; }
+
+        public IEnumerable&lt;object&gt; SuggestDataSource { get; set; }
+
+        public Func&lt;object, string ,bool&gt; MatchElement
+        {
+            get
+            {
+                if (_matchElement == null)
+                {
+                    if (SuggestDataSource.GetType().GetGenericArguments()[0].IsAssignableFrom(typeof(string)))
+                        return delegate(object element, string text) { 
+                            return ((string)element).StartsWith(text, StringComparison.OrdinalIgnoreCase); 
+                        };
+                    else
+                        return delegate(object element, string text) { 
+                            return element.ToString().StartsWith(text, StringComparison.OrdinalIgnoreCase); 
+                        };
+                }
+                else
+                    return _matchElement;
+            }
+            set
+            {
+                _matchElement = value;
+            }
+        }
+
+        public Func&lt;object, string&gt; TextFromElement
+        {
+            get
+            {
+                if (_textFromElement == null)
+                {
+                    if (SuggestDataSource.GetType().GetGenericArguments()[0].IsAssignableFrom(typeof(string)))
+                        return delegate(object element) { return (string)element; };
+                    else
+                        return delegate(object element) { return element.ToString(); };
+                }
+                else
+                    return _textFromElement;
+            }
+            set
+            {
+                _textFromElement = value;
+            }
+        }</pre>
+<pre class="hidden">    &lt;DefaultValue(10)&gt; _
+    Public Property MaxNumOfSuggestions As Integer
+
+    Public Property SuggestDataSource As IEnumerable(Of Object)
+
+    Public Property MatchElement() As Func(Of Object, String, Boolean)
+        Get
+            If _matchElement Is Nothing Then
+                If SuggestDataSource.GetType().GetGenericArguments()(0).IsAssignableFrom(GetType(String)) Then
+                    Return Function(element As Object, text As String)
+                               Return CType(element, String).StartsWith(text, StringComparison.OrdinalIgnoreCase)
+                           End Function
+                Else
+                    Return Function(element As Object, text As String)
+                               Return element.ToString().StartsWith(text, StringComparison.OrdinalIgnoreCase)
+                           End Function
+                End If
+            Else
+                Return _matchElement
+            End If
+        End Get
+        Set(ByVal value As Func(Of Object, String, Boolean))
+            _matchElement = value
+        End Set
+    End Property
+
+    Public Property TextFromElement() As Func(Of Object, String)
+        Get
+            If _textFromElement Is Nothing Then
+                If SuggestDataSource.GetType().GetGenericArguments()(0).IsAssignableFrom(GetType(String)) Then
+                    Return Function(element As Object)
+                               Return CType(element, String)
+                           End Function
+                Else
+                    Return Function(element As Object)
+                               Return element.ToString()
+                           End Function
+                End If
+            Else
+                Return _textFromElement
+            End If
+        End Get
+        Set(ByVal value As Func(Of Object, String))
+            _textFromElement = value
+        End Set
+    End Property
+</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DefaultValue(<span class="cs__number">10</span>)]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">int</span>&nbsp;MaxNumOfSuggestions&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;IEnumerable&lt;<span class="cs__keyword">object</span>&gt;&nbsp;SuggestDataSource&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Func&lt;<span class="cs__keyword">object</span>,&nbsp;<span class="cs__keyword">string</span>&nbsp;,<span class="cs__keyword">bool</span>&gt;&nbsp;MatchElement&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(_matchElement&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(SuggestDataSource.GetType().GetGenericArguments()[<span class="cs__number">0</span>].IsAssignableFrom(<span class="cs__keyword">typeof</span>(<span class="cs__keyword">string</span>)))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">delegate</span>(<span class="cs__keyword">object</span>&nbsp;element,&nbsp;<span class="cs__keyword">string</span>&nbsp;text)&nbsp;{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;((<span class="cs__keyword">string</span>)element).StartsWith(text,&nbsp;StringComparison.OrdinalIgnoreCase);&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">delegate</span>(<span class="cs__keyword">object</span>&nbsp;element,&nbsp;<span class="cs__keyword">string</span>&nbsp;text)&nbsp;{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;element.ToString().StartsWith(text,&nbsp;StringComparison.OrdinalIgnoreCase);&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;_matchElement;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">set</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_matchElement&nbsp;=&nbsp;<span class="cs__keyword">value</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Func&lt;<span class="cs__keyword">object</span>,&nbsp;<span class="cs__keyword">string</span>&gt;&nbsp;TextFromElement&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">get</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(_textFromElement&nbsp;==&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(SuggestDataSource.GetType().GetGenericArguments()[<span class="cs__number">0</span>].IsAssignableFrom(<span class="cs__keyword">typeof</span>(<span class="cs__keyword">string</span>)))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">delegate</span>(<span class="cs__keyword">object</span>&nbsp;element)&nbsp;{&nbsp;<span class="cs__keyword">return</span>&nbsp;(<span class="cs__keyword">string</span>)element;&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">delegate</span>(<span class="cs__keyword">object</span>&nbsp;element)&nbsp;{&nbsp;<span class="cs__keyword">return</span>&nbsp;element.ToString();&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;_textFromElement;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">set</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_textFromElement&nbsp;=&nbsp;<span class="cs__keyword">value</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;Las sugerencias se muestran a trav&eacute;s de un control
+<em>ListBox</em> que controlo a trav&eacute;s de tres m&eacute;todos privados:</div>
+<ul>
+<li>
+<div class="endscriptcode"><em>ShowListBox</em>: que se encarga de mostrar el <em>
+ListBox</em> en pantalla</div>
+</li><li>
+<div class="endscriptcode"><em>HideListBox</em>: que se encarga de ocultarlo</div>
+</li><li>
+<div class="endscriptcode"><em>UpdateListBox</em>: que es el responsable de actualizar el contenido del
+<em>ListBox</em> en funci&oacute;n del texto introducido por el usuario.</div>
+</li></ul>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">        private void ShowListBox()
+        {
+            if (!_listBoxAddedToForm)
+            {
+                this.TopLevelControl.Controls.Add(_listBox);
+                Point controlLocation = this.TopLevelControl.PointToClient(this.Parent.PointToScreen(this.Location));
+                _listBox.Left = controlLocation.X;
+                _listBox.Top = controlLocation.Y &#43; this.Height;
+                _listBox.Font = this.Font;
+                _listBox.Width = this.Width;
+                _listBox.MinimumSize = new Size(this.Width, _listBox.MinimumSize.Height);
+                _listBox.Height = _listBox.ItemHeight * (MaxNumOfSuggestions &#43; 1);
+                _listBoxAddedToForm = true;
+            }
+            _listBox.Visible = true;
+            _listBox.BringToFront();
+        }
+
+        private void HideListBox() { _listBox.Visible = false; }
+
+        private void UpdateListBox() 
+        {
+            if (SuggestDataSource != null &amp;&amp; !string.IsNullOrEmpty(this.Text))
+            {
+                IEnumerable&lt;string&gt; result = SuggestDataSource
+                    .Where(item =&gt; MatchElement(item, this.Text)
+                        &amp;&amp; !TextFromElement(item).Equals(this.Text, StringComparison.OrdinalIgnoreCase))
+                    .Select(item =&gt; TextFromElement(item))
+                    .OrderBy(s =&gt; s)
+                    .Take(MaxNumOfSuggestions);
+                if (result.Count() &gt; 0)
+                {
+                    _listBox.DataSource = result.ToList();
+                    ShowListBox();
+                }
+                else
+                    HideListBox();
+            }
+            else
+                HideListBox();
+        }
+</pre>
+<pre class="hidden">    Private Sub ShowListBox()
+        If Not _listBoxAddedToForm Then
+            Me.TopLevelControl.Controls.Add(_listBox)
+            Dim controlLocation As Point _
+                = Me.TopLevelControl.PointToClient(Me.Parent.PointToScreen(Me.Location))
+            _listBox.Left = controlLocation.X
+            _listBox.Top = controlLocation.Y &#43; Me.Height
+            _listBox.Font = Me.Font
+            _listBox.Width = Me.Width
+            _listBox.MinimumSize = New Size(Me.Width, _listBox.MinimumSize.Height)
+            _listBox.Height = _listBox.ItemHeight * (MaxNumOfSuggestions &#43; 1)
+            _listBoxAddedToForm = True
+        End If
+        _listBox.Visible = True
+        _listBox.BringToFront()
+    End Sub
+
+    Private Sub HideListBox()
+        _listBox.Visible = False
+    End Sub
+
+    Private Sub UpdateListBox()
+        If SuggestDataSource IsNot Nothing AndAlso Not String.IsNullOrEmpty(Me.Text) Then
+            Dim result As IEnumerable(Of String) = SuggestDataSource _
+                .Where(Function(item) MatchElement(item, Me.Text) _
+                    AndAlso Not TextFromElement(item).Equals(Me.Text, StringComparison.OrdinalIgnoreCase)) _
+                .Select(Function(item) TextFromElement(item)) _
+                .OrderBy(Function(s) s) _
+                .Take(MaxNumOfSuggestions)
+            If result.Count() &gt; 0 Then
+                _listBox.DataSource = result.ToList()
+                ShowListBox()
+            Else
+                HideListBox()
+            End If
+        Else
+            HideListBox()
+        End If
+    End Sub
+</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;ShowListBox()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(!_listBoxAddedToForm)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.TopLevelControl.Controls.Add(_listBox);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Point&nbsp;controlLocation&nbsp;=&nbsp;<span class="cs__keyword">this</span>.TopLevelControl.PointToClient(<span class="cs__keyword">this</span>.Parent.PointToScreen(<span class="cs__keyword">this</span>.Location));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.Left&nbsp;=&nbsp;controlLocation.X;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.Top&nbsp;=&nbsp;controlLocation.Y&nbsp;&#43;&nbsp;<span class="cs__keyword">this</span>.Height;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.Font&nbsp;=&nbsp;<span class="cs__keyword">this</span>.Font;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.Width&nbsp;=&nbsp;<span class="cs__keyword">this</span>.Width;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.MinimumSize&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Size(<span class="cs__keyword">this</span>.Width,&nbsp;_listBox.MinimumSize.Height);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.Height&nbsp;=&nbsp;_listBox.ItemHeight&nbsp;*&nbsp;(MaxNumOfSuggestions&nbsp;&#43;&nbsp;<span class="cs__number">1</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBoxAddedToForm&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.Visible&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.BringToFront();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;HideListBox()&nbsp;{&nbsp;_listBox.Visible&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;UpdateListBox()&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(SuggestDataSource&nbsp;!=&nbsp;<span class="cs__keyword">null</span>&nbsp;&amp;&amp;&nbsp;!<span class="cs__keyword">string</span>.IsNullOrEmpty(<span class="cs__keyword">this</span>.Text))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IEnumerable&lt;<span class="cs__keyword">string</span>&gt;&nbsp;result&nbsp;=&nbsp;SuggestDataSource&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Where(item&nbsp;=&gt;&nbsp;MatchElement(item,&nbsp;<span class="cs__keyword">this</span>.Text)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;&nbsp;!TextFromElement(item).Equals(<span class="cs__keyword">this</span>.Text,&nbsp;StringComparison.OrdinalIgnoreCase))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Select(item&nbsp;=&gt;&nbsp;TextFromElement(item))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.OrderBy(s&nbsp;=&gt;&nbsp;s)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Take(MaxNumOfSuggestions);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(result.Count()&nbsp;&gt;&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_listBox.DataSource&nbsp;=&nbsp;result.ToList();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShowListBox();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HideListBox();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HideListBox();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;Se puede encontrar una descripci&oacute;n m&aacute;s detallada del ejemplo en los siguientes art&iacute;culos:</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode"><a href="http://pildorasdotnet.blogspot.com/2015/05/textbox-sugerencias-windows-forms.html" >Windows Forms. TextBox con sugerencias (I) - Creando el control</a></div>
+<div class="endscriptcode"><a href="http://pildorasdotnet.blogspot.com/2015/05/textbox-sugerencias-windows-forms-test.html" >Windows Forms. TextBox con sugerencias (II) - Creando el proyecto de pruebas</a></div>
+<div class="endscriptcode"><a href="http://pildorasdotnet.blogspot.com/2015/05/textbox-sugerencias-personalizadas.html" >Windows Forms. TextBox con sugerencias (III) - Personalizar las sugerencias</a></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

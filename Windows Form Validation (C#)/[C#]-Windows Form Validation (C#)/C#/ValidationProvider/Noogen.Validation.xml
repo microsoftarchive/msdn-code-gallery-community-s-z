@@ -1,0 +1,585 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Noogen.Validation</name>
+    </assembly>
+    <members>
+        <member name="T:Noogen.Validation.Design.RegExPattern">
+            <summary>
+            RegExItem.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.Design.RegExPattern.PatternName">
+            <summary>
+            This make pattern easier to remember.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.Design.RegExPattern.ErrorMessage">
+            <summary>
+            Suggested error message when pattern validation fail.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.Design.RegExPattern.Pattern">
+            <summary>
+            Regular expression pattern string.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.Design.RegExPattern.TestValue">
+            <summary>
+            Sample value to give user an idea about the pattern.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.Design.RegExPatternCollection">
+            <summary>
+            RegExItemCollection allow RegExPattern to be bindable.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.Design.RegExPatternCollection.Add(Noogen.Validation.Design.RegExPattern)">
+            <summary>
+            Add new RegExPattern to collection.
+            </summary>
+            <param name="rePattern"></param>
+        </member>
+        <member name="P:Noogen.Validation.Design.RegExPatternCollection.Item(System.Int32)">
+            <summary>
+            Get or set RegExPattern.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.Design.ValidationProviderDesigner">
+            <summary>
+            ValidationProviderDesigner add verbs for Validation setup on the PropertyGrid.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationProviderDesigner.#ctor">
+            <summary>
+            Default Ctor.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationProviderDesigner.EditValidationRulesHandler(System.Object,System.EventArgs)">
+            <summary>
+            Handle "Edit ValidationRules..." verb event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationProviderDesigner.CustomInitialize">
+            <summary>
+            Makes sure local variables are valid.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.Design.ValidationRuleConverter">
+            <summary>
+            ValidationRuleConverter allow ValidationRule to be Designer's serializable.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationRuleConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Override so Designer can Serialize ValidationRule.
+            </summary>
+            <param name="context"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationRuleConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Override so designer can Deserialize ValidationRule.
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Noogen.Validation.Design.ValidationRuleDesignForm">
+            <summary>
+            ValidationRuleDesignForm use to setup validation rule and assign it to a
+            specific control.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationRuleDesignForm.#ctor">
+            <summary>
+            Default Ctor.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationRuleDesignForm.#ctor(System.ComponentModel.Design.IDesignerHost,Noogen.Validation.ValidationProvider,System.Object[])">
+            <summary>
+            Validation Designer Ctor.
+            </summary>
+            <param name="designerHost"></param>
+            <param name="validationProvider"></param>
+            <param name="editorSelectedComponents"></param>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationRuleDesignForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationRuleDesignForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationRuleEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Setup to display our ValidationRuleDesignForm
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.Design.ValidationRuleEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Tell designer that our editor is a Modal Form.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Noogen.Validation.CustomValidationEventHandler">
+            <summary>
+            Delegate for custom validation methods.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.CustomValidationEventArgs">
+            <summary>
+            Arguments of validation event.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.CustomValidationEventArgs.#ctor(System.Object,Noogen.Validation.ValidationRule)">
+            <summary>
+            Default Ctor.
+            </summary>
+            <param name="Value"></param>
+            <param name="vr"></param>
+        </member>
+        <member name="P:Noogen.Validation.CustomValidationEventArgs.Value">
+            <summary>
+            Value to validate.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.CustomValidationEventArgs.IsValid">
+            <summary>
+            Get or set validity of attached validation rule.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.CustomValidationEventArgs.ErrorMessage">
+            <summary>
+            Get or set error message to display when validation fail.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.CustomValidationEventArgs.ValidationRule">
+            <summary>
+            Allow custom validation class to set IsValid and ErrorMessage
+            value.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.ValidationCompareOperator">
+            <summary>
+            Operations that can be perform in Compare Validation.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationCompareOperator.DataTypeCheck">
+            <summary>
+            Default - Check component DataType.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationCompareOperator.Equal">
+            <summary>
+            Compare is equal to ValueToCompare.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationCompareOperator.GreaterThan">
+            <summary>
+            Compare is greater than ValueToCompare.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationCompareOperator.GreaterThanEqual">
+            <summary>
+            Compare greater than or equal to ValueToCompare.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationCompareOperator.LessThan">
+            <summary>
+            Compare is less than ValueToCompare.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationCompareOperator.LessThanEqual">
+            <summary>
+            Compare is greater than ValueToCompare.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationCompareOperator.NotEqual">
+            <summary>
+            Compare is not equal to ValueToCompare.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.ValidationDataType">
+            <summary>
+            Date Type of the component.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationDataType.Currency">
+            <summary>
+            Monetary data type.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationDataType.Date">
+            <summary>
+            DateTime data type.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationDataType.Double">
+            <summary>
+            Double data type.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationDataType.Integer">
+            <summary>
+            Integer data type.
+            </summary>
+        </member>
+        <member name="F:Noogen.Validation.ValidationDataType.String">
+            <summary>
+            Default - string data type.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.ValidationProvider">
+            <summary>
+            Provider validation properties to controls that can be validated.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.Validate">
+            <summary>
+            Perform validation on all controls.
+            </summary>
+            <returns>False if any control contains invalid data.</returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.ValidationMessages(System.Boolean)">
+            <summary>
+            Get validation error messages.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.Validate(System.Windows.Forms.Control)">
+            <summary>
+            Perform validation on specific control.
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.DataTypeValidate(System.Windows.Forms.Control)">
+            <summary>
+            Validate Data Type.
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.CompareValidate(System.Windows.Forms.Control)">
+            <summary>
+            Perform CompareValidate on a specific control.
+            </summary>
+            <param name="ctrl"></param>
+            <returns>true if control has no validation rule.</returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.CustomValidate(System.Windows.Forms.Control)">
+            <summary>
+            Perform Custom Validation on specific control.
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.RangeValidate(System.Windows.Forms.Control)">
+            <summary>
+            Perform Range Validation on specific control.
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.IsDefaultRange(Noogen.Validation.ValidationRule)">
+            <summary>
+            Check if validation rule range is default.
+            </summary>
+            <param name="vr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.RegularExpressionValidate(System.Windows.Forms.Control)">
+            <summary>
+            Perform Regular Expression Validation on a specific control.
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.RequiredFieldValidate(System.Windows.Forms.Control)">
+            <summary>
+            Perform RequiredField Validation on a specific control.
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.SetValidationRule(System.Object,Noogen.Validation.ValidationRule)">
+            <summary>
+            Set validation rule.
+            </summary>
+            <param name="inputComponent"></param>
+            <param name="vr"></param>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.GetValidationRule(System.Object)">
+            <summary>
+            Get validation rule.
+            </summary>
+            <param name="inputComponent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.GetIconAlignment(System.Windows.Forms.Control)">
+            <summary>
+            Get Error Icon alignment.
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.GetIconPadding(System.Windows.Forms.Control)">
+            <summary>
+            Get Error Icon padding.
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.SetIconAlignment(System.Windows.Forms.Control,System.Windows.Forms.ErrorIconAlignment)">
+            <summary>
+            Set Error Icon alignment.
+            </summary>
+            <param name="control"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.SetIconPadding(System.Windows.Forms.Control,System.Int32)">
+            <summary>
+            Set Error Icon padding.
+            </summary>
+            <param name="control"></param>
+            <param name="padding"></param>
+        </member>
+        <member name="F:Noogen.Validation.ValidationProvider.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Designer Ctor.
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.#ctor">
+            <summary>
+            Default Ctor.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationProvider.CanExtend(System.Object)">
+            <summary>
+            Determine if ValidationProvider support a component.
+            </summary>
+            <param name="extendee"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Noogen.Validation.ValidationProvider.Icon">
+            <summary>
+            Icon display when validation failed.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationProvider.BlinkRate">
+            <summary>
+            BlinkRate of ErrorIcon.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationProvider.BlinkStyle">
+            <summary>
+            Get or set Blink Behavior.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.ValidationRule">
+            <summary>
+            ValidationRule is designed to be a simple as possible to
+            reduce overhead in run-time.  It's because each validation
+            rule can be attach to a control, so we can have a many
+            instances of this class.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationRule.OnCustomValidationMethod(Noogen.Validation.CustomValidationEventArgs)">
+            <summary>
+            Delegate invoking of validation method.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Noogen.Validation.ValidationRule.Compare(System.String,System.String,Noogen.Validation.ValidationCompareOperator,Noogen.Validation.ValidationRule)">
+            <summary>
+            Compare two values.
+            </summary>
+            <param name="leftText"></param>
+            <param name="rightText"></param>
+            <param name="op"></param>
+            <param name="vr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationRule.Clone">
+            <summary>
+            ValidationRule is memberwised cloneable.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.IsCaseSensitive">
+            <summary>
+            Set validation case sensitivity.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.DataType">
+            <summary>
+            Data Type of the validation.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.ErrorMessage">
+            <summary>
+            ErrorMessage result of validation.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.IsValid">
+            <summary>
+            Get validity of control value after Validate method is called.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.InitialValue">
+            <summary>
+            A mandatory value does not necessarily mean a value other than "". 
+            In some cases, a default control value might be used as a prompt 
+            e.g. using "[Choose a value]" in a DropDownList control. In this case, 
+            the required value must be different than the initial value of 
+            "[Choose a value]". InitialValue supports this requirement. The 
+            default is "".
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.IsRequired">
+            <summary>
+            Cause validation to check if field is required.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.Operator">
+            <summary>
+            Get or set operator to use to compare.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.ValueToCompare">
+            <summary>
+            Get or set value use to compare with the control value.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.MinimumValue">
+            <summary>
+            RangeValidator Minimum Value.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.MaximumValue">
+            <summary>
+            RangeValidator MaximumValue Value.
+            </summary>
+        </member>
+        <member name="P:Noogen.Validation.ValidationRule.RegExPattern">
+            <summary>
+            Regular Expression Pattern to use for validation.
+            </summary>
+        </member>
+        <member name="E:Noogen.Validation.ValidationRule.CustomValidationMethod">
+            <summary>
+            Allow for attachment of custom validation method.
+            </summary>
+        </member>
+        <member name="T:Noogen.Validation.ValidationUtil">
+            <summary>
+            Provide comparison of string data.  This class currently
+            implement System.Web.UI.WebControls validation so that
+            we don't have to write more codes.  Eventually, we may want
+            to implement out own code.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.#ctor">
+            <summary>
+            Disable default ctor.
+            </summary>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.CompareValues(System.String,System.String,Noogen.Validation.ValidationCompareOperator,Noogen.Validation.ValidationDataType)">
+            <summary>
+            Compare two values using provided operator and data type.
+            </summary>
+            <param name="leftText"></param>
+            <param name="rightText"></param>
+            <param name="op"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.ValidateRegEx(System.String,System.String)">
+            <summary>
+            Utility method validation regular expression.
+            </summary>
+            <param name="valueText"></param>
+            <param name="patternText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.EvaluateIsValid">
+            <summary>
+            Here because base class required it.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.XmlStringToObject(System.String,System.Type)">
+            <summary>
+            Get object from an xml string.
+            </summary>
+            <param name="xmlString"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.ObjectToXmlString(System.Object)">
+            <summary>
+            Write object to xml string.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.FileToString(System.String)">
+            <summary>
+            Load the entire text file into a string.
+            </summary>
+            <param name="sFile">Full pathname of file to read.</param>
+            <returns>String content of the text file.</returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.FileToString(System.String,System.Int32)">
+            <summary>
+            Load the text file with specified size as return text.
+            </summary>
+            <param name="sFile">File to read from.</param>
+            <param name="size">Number of char to read.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.StringToFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Save a string to file.
+            </summary>
+            <param name="strValue">String value to save.</param>
+            <param name="strFileName">File name to save to.</param>
+            <param name="bAppendToFile">True - to append string to file.  Default false - overwrite file.</param>
+        </member>
+        <member name="M:Noogen.Validation.ValidationUtil.StringToFile(System.String,System.String)">
+            <summary>
+            Save a string to file.
+            </summary>
+        </member>
+    </members>
+</doc>

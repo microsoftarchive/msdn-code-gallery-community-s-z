@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="TCD.Controls.Keyboard.Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TCD.Controls.Keyboard.Sample"
+    xmlns:oks="using:TCD.Controls.Keyboard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" RequestedTheme="Dark">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--Text="{Binding ElementName=keyboard, Path=OutputString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"-->
+        <StackPanel>
+            <TextBlock Text="Multiline TextBox" Margin="40,20,40,5" />
+            <TextBox x:Name="textBox" Margin="40,5" AcceptsReturn="True" />
+            <TextBlock Text="Password box" Margin="40,5" />
+            <PasswordBox x:Name="passwordBox" Margin="40,5" />
+            <TextBlock Text="The password value is:" Margin="40,5" />
+            <TextBlock Text="{Binding ElementName=passwordBox, Path=Password}" Margin="40,0" />
+        </StackPanel>
+
+        <oks:OnScreenKeyBoard x:Name="keyboard" InitialLayout="German" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" />
+    </Grid>
+</Page>

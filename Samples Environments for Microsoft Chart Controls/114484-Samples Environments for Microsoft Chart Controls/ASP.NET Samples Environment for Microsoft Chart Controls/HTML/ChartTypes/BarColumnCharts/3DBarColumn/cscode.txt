@@ -1,0 +1,26 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set series chart type
+    Chart1.Series["Default"].ChartType = SeriesChartType.Bar;
+
+    // Set series point width
+    Chart1.Series["Default"]["PointWidth"] = "0.6";
+
+	// Show chart with right-angled axes
+	Chart1.ChartAreas["ChartArea1"].Area3DStyle.IsRightAngleAxes = true;
+	
+	// Show columns as clustered
+	Chart1.ChartAreas["ChartArea1"].Area3DStyle.IsClustered = false;
+	
+	// Show X axis end labels
+	Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.IsEndLabelVisible = true;
+	
+	// Set rotational angles
+	Chart1.ChartAreas["ChartArea1"].Area3DStyle.Inclination = 30;
+	Chart1.ChartAreas["ChartArea1"].Area3DStyle.Inclination = 30;
+	
+}
+...

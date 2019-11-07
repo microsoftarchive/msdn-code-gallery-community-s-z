@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="std::vector&lt;int,*&gt;">
+    <DisplayString>CUSTOM VISUALIZER: {{ size={_Mylast - _Myfirst} }}</DisplayString>
+    <Expand>
+      <Item Name="[size]">_Mylast - _Myfirst</Item>
+      <Item Name="[capacity]">_Myend - _Myfirst</Item>
+      <ArrayItems>
+        <Size>_Mylast - _Myfirst</Size>
+        <ValuePointer>_Myfirst</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+</AutoVisualizer>

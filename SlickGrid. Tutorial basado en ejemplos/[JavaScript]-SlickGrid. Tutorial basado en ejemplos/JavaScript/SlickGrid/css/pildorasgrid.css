@@ -1,0 +1,30 @@
+﻿.prKeyHeadColumn {
+    background: rgba(204,0,0,0.2);
+}
+
+.headColumn {
+    background: -webkit-linear-gradient(top, white, white 40%, rgba(204,0,0,0.2));
+    background: -moz-linear-gradient(top, white, white 40%, rgba(204,0,0,0.2));
+    background: -o-linear-gradient(top, white, white 40%, rgba(204,0,0,0.2));
+    background: -ms-linear-gradient(top, white, white 40%, rgba(204,0,0,0.2));
+}
+
+.numericCell {
+    text-align: right;
+}
+
+input.gridTextEditor{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    outline: 0;
+    padding: 0;
+}
+
+.totalsRow{
+    color: #dddddd;
+    background-color: rgb(204,0,0);
+    font-weight: bold;
+}

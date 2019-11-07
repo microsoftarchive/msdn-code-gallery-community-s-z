@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/b79636be-b088-48b5-8a8d-c21645d26d2fCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>WPFでデータをソートして表示する方法</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>WPFでデータをソートして表示する方法</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="テクノロジ">テクノロジ</label>
+                        <div id="テクノロジ">
+                            WPF
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="トピック">トピック</label>
+                        <div id="トピック">
+                            WPF Basics
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">ja-JP</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">最終更新日</label>
+                    <div id="LastUpdated">2013/05/30</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">ライセンス</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/WPF-ac0fb021">このサンプルをオンラインで表示する</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'コードをコピー';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>サンプルプログラムの概要</h1>
+<p>このサンプルプログラムは、Windows Presentation FoudationのCollectionViewSourceを使用してデータをソートして表示するプログラムです。CollectionViewSourceのソート機能を使うことで、バックグラウンドで持つデータはソートしないまま、表示のソートを行うことが可能です。</p>
+<p>サンプルプログラムでは、画面の左右にあるListBoxに1つのコレクションを異なるソート条件で表示しています。</p>
+<p><img id="82899" src="description/WS000007.JPG" alt="" width="525" height="350"></p>
+<h1>サンプルプログラムの解説</h1>
+<p>このサンプルプログラムでは、画面に表示するデータを表すために以下のようなPersonクラスを定義しています。</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">スクリプトの編集</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">namespace WPFSortSample
+{
+    /// &lt;summary&gt;
+    /// 画面に表示するためのダミーオブジェクト
+    /// &lt;/summary&gt;
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public override string ToString()
+        {
+            // 画面に表示するための文字列を作成
+            return string.Format(&quot;{0} {1}才&quot;, this.Name, this.Age);
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">namespace</span>&nbsp;WPFSortSample&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;画面に表示するためのダミーオブジェクト</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">///&nbsp;&lt;/summary&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;Person&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;Name&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">int</span>&nbsp;Age&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">override</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;画面に表示するための文字列を作成</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">string</span>.Format(<span class="cs__string">&quot;{0}&nbsp;{1}才&quot;</span>,&nbsp;<span class="cs__keyword">this</span>.Name,&nbsp;<span class="cs__keyword">this</span>.Age);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;上記PersonクラスのAgeプロパティをキーにしてソートします。</div>
+<div class="endscriptcode">WPFでのソートは、CollectionViewSourceクラスのSortDescriptionsプロパティを使用すると簡単にできます。SortDescriptionsプロパティには複数のSortDescription構造体を設定できます。SortDescription構造体はCollectionViewSourceクラスのSourceプロパティに設定されたコレクション内のオブジェクトのプロパティをキーにして昇順でソートするか降順でソートするか指定可能です。</div>
+<div class="endscriptcode">サンプルプログラムでは、MainWindow.xamlのResourcesにAgeプロパティを昇順・降順でソートする2種類のCollectionViewSourceを定義しています。</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">スクリプトの編集</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;CollectionViewSource x:Key=&quot;source1&quot;&gt;
+    &lt;CollectionViewSource.SortDescriptions&gt;
+        &lt;ComponentModel:SortDescription
+            Direction=&quot;Ascending&quot;
+            PropertyName=&quot;Age&quot; /&gt;
+    &lt;/CollectionViewSource.SortDescriptions&gt;
+&lt;/CollectionViewSource&gt;
+&lt;CollectionViewSource x:Key=&quot;source2&quot;&gt;
+    &lt;CollectionViewSource.SortDescriptions&gt;
+        &lt;ComponentModel:SortDescription
+            Direction=&quot;Descending&quot;
+            PropertyName=&quot;Age&quot; /&gt;
+    &lt;/CollectionViewSource.SortDescriptions&gt;
+&lt;/CollectionViewSource&gt;
+&lt;/Window.Resources&gt;
+</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;CollectionViewSource</span>&nbsp;x:<span class="xaml__attr_name">Key</span>=<span class="xaml__attr_value">&quot;source1&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;CollectionViewSource</span>.SortDescriptions<span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;ComponentModel</span>:SortDescription&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__attr_name">Direction</span>=<span class="xaml__attr_value">&quot;Ascending&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__attr_name">PropertyName</span>=<span class="xaml__attr_value">&quot;Age&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CollectionViewSource.SortDescriptions&gt;&nbsp;
+<span class="xaml__tag_end">&lt;/CollectionViewSource&gt;</span>&nbsp;
+<span class="xaml__tag_start">&lt;CollectionViewSource</span>&nbsp;x:<span class="xaml__attr_name">Key</span>=<span class="xaml__attr_value">&quot;source2&quot;</span><span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;CollectionViewSource</span>.SortDescriptions<span class="xaml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__tag_start">&lt;ComponentModel</span>:SortDescription&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__attr_name">Direction</span>=<span class="xaml__attr_value">&quot;Descending&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xaml__attr_name">PropertyName</span>=<span class="xaml__attr_value">&quot;Age&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CollectionViewSource.SortDescriptions&gt;&nbsp;
+<span class="xaml__tag_end">&lt;/CollectionViewSource&gt;</span>&nbsp;
+&lt;/Window.Resources&gt;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;このCollectionViewSourceを画面のListBoxのItemsSourceプロパティにBindingしています。</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XAML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">スクリプトの編集</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xaml</span>
+<pre class="hidden">&lt;ListBox Grid.Row=&quot;1&quot; ItemsSource=&quot;{Binding Source={StaticResource source1}}&quot; /&gt;
+&lt;ListBox Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; ItemsSource=&quot;{Binding Source={StaticResource source2}}&quot; /&gt;
+</pre>
+<div class="preview">
+<pre class="xaml"><span class="xaml__tag_start">&lt;ListBox</span>&nbsp;Grid.<span class="xaml__attr_name">Row</span>=<span class="xaml__attr_value">&quot;1&quot;</span>&nbsp;<span class="xaml__attr_name">ItemsSource</span>=<span class="xaml__attr_value">&quot;{Binding&nbsp;Source={StaticResource&nbsp;source1}}&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+<span class="xaml__tag_start">&lt;ListBox</span>&nbsp;Grid.<span class="xaml__attr_name">Row</span>=<span class="xaml__attr_value">&quot;1&quot;</span>&nbsp;Grid.<span class="xaml__attr_name">Column</span>=<span class="xaml__attr_value">&quot;1&quot;</span>&nbsp;<span class="xaml__attr_name">ItemsSource</span>=<span class="xaml__attr_value">&quot;{Binding&nbsp;Source={StaticResource&nbsp;source2}}&quot;</span>&nbsp;<span class="xaml__tag_start">/&gt;</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+コードビハインドのMainWindow.xaml.csのコンストラクタで、XAMLに定義したCollectionViewSourceのSourceプロパティにデータを&#26684;納しているObservableCollectionのインスタンスを設定しています。</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">スクリプトの編集</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public MainWindow()
+{
+    InitializeComponent();
+
+    // XAMLで定義したCollectionViewSourceのSourceにコレクションを設定
+    var source1 = this.Resources[&quot;source1&quot;] as CollectionViewSource;
+    if (source1 != null)
+    {
+        source1.Source = people;
+    }
+
+    var source2 = this.Resources[&quot;source2&quot;] as CollectionViewSource;
+    if (source2 != null)
+    {
+        source2.Source = people;
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;MainWindow()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;InitializeComponent();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;XAMLで定義したCollectionViewSourceのSourceにコレクションを設定</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;source1&nbsp;=&nbsp;<span class="cs__keyword">this</span>.Resources[<span class="cs__string">&quot;source1&quot;</span>]&nbsp;<span class="cs__keyword">as</span>&nbsp;CollectionViewSource;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(source1&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;source1.Source&nbsp;=&nbsp;people;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;source2&nbsp;=&nbsp;<span class="cs__keyword">this</span>.Resources[<span class="cs__string">&quot;source2&quot;</span>]&nbsp;<span class="cs__keyword">as</span>&nbsp;CollectionViewSource;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(source2&nbsp;!=&nbsp;<span class="cs__keyword">null</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;source2.Source&nbsp;=&nbsp;people;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;画面上部にあるボタンのクリックイベントでは、年齢に乱数を設定したPersonクラスのインスタンスを作成してコレクションに追加しています。ポイントは、people変数の中では、何もソートをしていないという点です。</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">スクリプトの編集</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">private void AddPersonButton_Click(object sender, RoutedEventArgs e)
+{
+    // ランダムな年齢のPersonクラスのオブジェクトを追加する
+    var p = new Person
+    {
+        Name = &quot;No.&quot; &#43; (this.people.Count &#43; 1) &#43; &quot;: Dummy person&quot;,
+        Age = this.RandomObject.Next(100)
+    };
+    this.people.Add(p);
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;AddPersonButton_Click(<span class="cs__keyword">object</span>&nbsp;sender,&nbsp;RoutedEventArgs&nbsp;e)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;ランダムな年齢のPersonクラスのオブジェクトを追加する</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;p&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;Person&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;=&nbsp;<span class="cs__string">&quot;No.&quot;</span>&nbsp;&#43;&nbsp;(<span class="cs__keyword">this</span>.people.Count&nbsp;&#43;&nbsp;<span class="cs__number">1</span>)&nbsp;&#43;&nbsp;<span class="cs__string">&quot;:&nbsp;Dummy&nbsp;person&quot;</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age&nbsp;=&nbsp;<span class="cs__keyword">this</span>.RandomObject.Next(<span class="cs__number">100</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.people.Add(p);&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+プログラムを実行してボタンを何回かクリックすると、CollectionViewSourceに設定したソートの条件でListBoxにデータが表示されていることが確認できます。</div>
+<div class="endscriptcode"><img id="82900" src="description/WS000008.JPG" alt="" width="525" height="351"></div>
+</div>
+</div>
+<div class="endscriptcode"></div>
+<h1 class="endscriptcode">参考情報</h1>
+<div class="endscriptcode">このサンプルで使用している代表的なクラスのMSDNへのリンクです。</div>
+<ul>
+<li>
+<div class="endscriptcode">CollectionViewSourceクラス<br>
+<a href="http://msdn.microsoft.com/ja-jp/library/system.windows.data.collectionviewsource(v=vs.100).aspx">http://msdn.microsoft.com/ja-jp/library/system.windows.data.collectionviewsource(v=vs.100).aspx</a></div>
+</li><li>
+<div class="endscriptcode">SortDescription構造体<br>
+<a href="http://msdn.microsoft.com/ja-jp/library/system.componentmodel.sortdescription(v=vs.100).aspx">http://msdn.microsoft.com/ja-jp/library/system.componentmodel.sortdescription(v=vs.100).aspx</a></div>
+</li></ul>
+
+</div>
+
+
+    </div>
+</body>
+</html>

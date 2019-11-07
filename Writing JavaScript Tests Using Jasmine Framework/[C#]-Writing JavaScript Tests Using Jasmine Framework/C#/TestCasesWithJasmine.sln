@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCasesWithJasmine", "TestCasesWithJasmine\TestCasesWithJasmine.csproj", "{BD1F37E8-C5AD-41AF-9DEC-B048F35E629C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasmineTests", "JasmineTests\JasmineTests.csproj", "{A2E05023-455D-4CDC-88DA-7FFF6F17487E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD1F37E8-C5AD-41AF-9DEC-B048F35E629C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1F37E8-C5AD-41AF-9DEC-B048F35E629C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD1F37E8-C5AD-41AF-9DEC-B048F35E629C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD1F37E8-C5AD-41AF-9DEC-B048F35E629C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E05023-455D-4CDC-88DA-7FFF6F17487E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E05023-455D-4CDC-88DA-7FFF6F17487E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E05023-455D-4CDC-88DA-7FFF6F17487E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E05023-455D-4CDC-88DA-7FFF6F17487E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

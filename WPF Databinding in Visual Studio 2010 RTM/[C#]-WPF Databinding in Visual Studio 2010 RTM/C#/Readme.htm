@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>WPF-EDM Sample</title>
+    <style type="text/css">
+
+P.MsoNormal {
+	MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman","serif"; FONT-SIZE: 12pt;
+        }
+P {
+	MARGIN: 7.5pt 0in 3.75pt; FONT-FAMILY: "Times New Roman","serif"; FONT-SIZE: 12pt;
+        }
+H3 {
+	FONT-FAMILY: "Times New Roman","serif"; MARGIN-LEFT: 0in; FONT-SIZE: 13.5pt; FONT-WEIGHT: bold; MARGIN-RIGHT: 0in;
+        }
+H1 {
+	FONT-FAMILY: "Times New Roman","serif"; MARGIN-LEFT: 0in; FONT-SIZE: 24pt; FONT-WEIGHT: bold; MARGIN-RIGHT: 0in;
+        }
+    </style>
+</head>
+<body>
+
+    <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable" 
+        style="WIDTH: 100%; mso-cellspacing: 0in; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 0in 0in 0in" 
+        width="100%">
+        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td style="PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BACKGROUND: #efeff7; PADDING-TOP: 0in">
+                <p class="MsoNormal" style="MARGIN-TOP: 3.75pt">
+                    <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 10.0pt">
+                    <b><span style="COLOR: #000066">Note:<o:p> </o:p>
+                    </span></b></span><i style="mso-bidi-font-style: normal">
+                    <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8pt; mso-bidi-font-size: 13.5pt">
+                    This sample targets Microsoft .NET Framework 3.5.<o:p></o:p></span></i></p>
+            </td>
+        </tr>
+    </table>
+    <p xmlns:mshelp="http://msdn.microsoft.com/mshelp" 
+        xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">This is a 
+        Windows Presentation Framework sample that uses an Entity Data Model to connect 
+        to a simple Order Management System in a SQL Server database. The sample 
+        contains several WPF forms, each demonstrating various data binding features. 
+        The sample includes the following:<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l1 level1 lfo2; tab-stops: list .5in">
+        <span style="FONT-FAMILY: Symbol; FONT-SIZE: 10pt; mso-fareast-font-family: Symbol; mso-bidi-font-size: 8.5pt; mso-bidi-font-family: Symbol">
+        <span style="mso-list: Ignore">·<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">A sample SQL 
+        Server database: OMS. A SQL script is included in the sample that can be used to 
+        create and populate the database.<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l1 level1 lfo2; tab-stops: list .5in">
+        <span style="FONT-FAMILY: Symbol; FONT-SIZE: 10pt; mso-fareast-font-family: Symbol; mso-bidi-font-size: 8.5pt; mso-bidi-font-family: Symbol">
+        <span style="mso-list: Ignore">·<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">A data 
+        access layer. This class library project has an Entity Data Model (EDM) that 
+        maps to the various tables in the database. This also includes some validation 
+        logic.<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l1 level1 lfo2; tab-stops: list .5in">
+        <span style="FONT-FAMILY: Symbol; FONT-SIZE: 10pt; mso-fareast-font-family: Symbol; mso-bidi-font-size: 8.5pt; mso-bidi-font-family: Symbol">
+        <span style="mso-list: Ignore">·<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">The WPF 
+        application project. This consumes the data access layer and displays the data. 
+        The project contains multiple forms intended to demonstrate various aspects of 
+        WPF forms over data, such as:<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 1in; mso-list: l1 level2 lfo2; tab-stops: list 1.0in">
+        <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'; mso-bidi-font-size: 8.5pt">
+        <span style="mso-list: Ignore">o<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">A simple 
+        list of items<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 1in; mso-list: l1 level2 lfo2; tab-stops: list 1.0in">
+        <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'; mso-bidi-font-size: 8.5pt">
+        <span style="mso-list: Ignore">o<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">DataGrid<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 1in; mso-list: l1 level2 lfo2; tab-stops: list 1.0in">
+        <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'; mso-bidi-font-size: 8.5pt">
+        <span style="mso-list: Ignore">o<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Details view 
+        with navigation buttons<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 1in; mso-list: l1 level2 lfo2; tab-stops: list 1.0in">
+        <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'; mso-bidi-font-size: 8.5pt">
+        <span style="mso-list: Ignore">o<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">
+        Master-Details<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 1in; mso-list: l1 level2 lfo2; tab-stops: list 1.0in">
+        <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'; mso-bidi-font-size: 8.5pt">
+        <span style="mso-list: Ignore">o<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Lookup 
+        tables<o:p></o:p></span></p>
+    <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 1in; mso-list: l1 level2 lfo2; tab-stops: list 1.0in">
+        <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt; mso-fareast-font-family: 'Courier New'; mso-bidi-font-size: 8.5pt">
+        <span style="mso-list: Ignore">o<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;
+        </span></span></span>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Formatting 
+        and validation<o:p></o:p></span></p>
+    <p>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt"><o:p>&nbsp;</o:p></span></p>
+    <h3>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; mso-fareast-font-family: 'Times New Roman'">
+        To run this sample<o:p></o:p></span></h3>
+    <div>
+        <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l0 level1 lfo4; tab-stops: list .5in">
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt; mso-fareast-font-family: Verdana; mso-bidi-font-family: Verdana">
+            <span style="mso-list: Ignore">1.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span></span>
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Open the 
+            sample project.<o:p></o:p></span></p>
+        <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l0 level1 lfo4; tab-stops: list .5in">
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt; mso-fareast-font-family: Verdana; mso-bidi-font-family: Verdana">
+            <span style="mso-list: Ignore">2.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span></span>
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Under the 
+            Solution node, expand the <i style="mso-bidi-font-style: normal">Solution Items</i> 
+            folder and open <i style="mso-bidi-font-style: normal">CreateDatabaseOMS.sql</i>.<o:p></o:p></span></p>
+        <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l0 level1 lfo4; tab-stops: list .5in">
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt; mso-fareast-font-family: Verdana; mso-bidi-font-family: Verdana">
+            <span style="mso-list: Ignore">3.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span></span>
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Right-click 
+            in the TSQL editor and, from the context menu, select
+            <b style="mso-bidi-font-weight: normal">Execute SQL</b>.<o:p></o:p></span></p>
+        <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l0 level1 lfo4; tab-stops: list .5in">
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt; mso-fareast-font-family: Verdana; mso-bidi-font-family: Verdana">
+            <span style="mso-list: Ignore">4.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span></span>
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">When 
+            prompted to select a connection, choose or create a new connection to your SQL 
+            Server.<o:p></o:p></span></p>
+        <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l0 level1 lfo4; tab-stops: list .5in">
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt; mso-fareast-font-family: Verdana; mso-bidi-font-family: Verdana">
+            <span style="mso-list: Ignore">5.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span></span>
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Close the 
+            TSQL Editor<o:p></o:p></span></p>
+        <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l0 level1 lfo4; tab-stops: list .5in">
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt; mso-fareast-font-family: Verdana; mso-bidi-font-family: Verdana">
+            <span style="mso-list: Ignore">6.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span></span>
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Press F5 to 
+            build and run the sample<o:p></o:p></span></p>
+    </div>
+    <h1>
+        <span style="FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #003399; FONT-SIZE: 10pt; mso-fareast-font-family: 'Times New Roman'">
+        Requirements</span></h1>
+    <div id="requirementsTitleSection">
+        <p style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in; mso-list: l2 level1 lfo6; tab-stops: list .5in">
+            <span style="FONT-FAMILY: Symbol; FONT-SIZE: 10pt; mso-fareast-font-family: Symbol; mso-bidi-font-size: 8.5pt; mso-bidi-font-family: Symbol">
+            <span style="mso-list: Ignore">·<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span></span>
+            <span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8.5pt">Microsoft 
+            SQL Server 2005 or above<o:p></o:p></span></p>
+    </div>
+
+</body>
+</html>

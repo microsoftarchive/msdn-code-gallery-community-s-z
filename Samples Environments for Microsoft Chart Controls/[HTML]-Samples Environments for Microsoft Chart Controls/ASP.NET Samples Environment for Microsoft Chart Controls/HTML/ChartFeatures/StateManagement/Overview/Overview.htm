@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<LINK href="../../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<p>
+			<br />
+			View state is used by the ASP.NET page framework to automatically save the page 
+			and its control values prior to rendering the page, and state management is 
+			accomplished using view state.</p>
+		<p>When an ASP.NET page is processed the current state of the page and its controls 
+			is converted into a string and saved in the page as a hidden field. When the 
+			page is posted back to the server, such as through a postback event when a server-side 
+			control is clicked, the page parses the view state string at page 
+			initialization and restores property information in the page.</p>
+		<p>For more information see the "Introduction to Web Forms State Management" topic 
+			in your Visual Studio documentation.</p>
+		<H3>Advantages of State Management</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>The greatest benefit of state management is in situations where a user accesses 
+			a chart with a large amount of relatively static data that takes a long time to 
+			retrieve. For example, if a chart is generated after a data query from a remote 
+			database or socket server, then the chart's performance is affected by 
+			factors external to your chart server, such as network delays, busy data server, 
+			and so on.</p>
+			<p>By using state management, the chart data and/or appearance settings are persisted and 
+			reused for subsequent charts. This reduces the requests to the database or 
+            socket server and improves the performance of your page.</p>
+		</BLOCKQUOTE>
+		<H3>Considerations</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>When using state management, you should consider the increase in the amount of data 
+				sent from the server to the client. Using state management on appearance 
+                settings causes a relatively small increase in network traffic, while using 
+                state management on 1,000 data points causes a large increate in network 
+                traffic.</p>
+		</BLOCKQUOTE>
+	</body>
+</html>

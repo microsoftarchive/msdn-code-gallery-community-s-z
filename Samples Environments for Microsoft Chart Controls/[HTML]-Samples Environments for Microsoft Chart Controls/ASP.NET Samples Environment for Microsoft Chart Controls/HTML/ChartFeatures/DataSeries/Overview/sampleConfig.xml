@@ -1,0 +1,11 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataSeries" Priority = "1">
+  <Title>Overview</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Series</ShortBlurb> 
+  <Content>Overview.htm</Content> 
+  
+</SampleConfig>
+
+</SampleConfigs>

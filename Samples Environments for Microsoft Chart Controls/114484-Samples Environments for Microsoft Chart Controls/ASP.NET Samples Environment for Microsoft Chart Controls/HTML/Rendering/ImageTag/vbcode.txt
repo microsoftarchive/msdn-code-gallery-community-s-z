@@ -1,0 +1,13 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(sender As Object, e As System.EventArgs)
+
+	Chart1.RenderType = RenderType.ImageTag
+	
+	' A unique temp. image name, with a maximum of 300 images, with a lifespan 
+	' of 38 seconds
+	Chart1.ImageLocation = "..\\..\\TempImages\\ChartPic_#SEQ(300,38)"
+
+End Sub 'Page_Load
+...

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Exporting">
+	<Title>Exporting Values in XML</Title> 
+	<Thumbnail>XML\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Exporting Values in XML</ShortBlurb> 
+	<SampleControl>ExportingInXML</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">DataGridBinding\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">XML\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">XML\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Exporting series data</Keyword>
+      <Keyword>Series, Exporting data</Keyword>
+    </Keywords>
+	</SampleConfig>
+	
+
+	<SampleConfig ParentNodeID = "Exporting">
+	<Title>Data Binding to Exported Values</Title> 
+	<Thumbnail>DataGridBinding\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Data Binding to Exported Values</ShortBlurb> 
+	<SampleControl>DataGridBinding</SampleControl> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">DataGridBinding\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">DataGridBinding\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">DataGridBinding\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	</SampleConfig>
+
+</SampleConfigs>

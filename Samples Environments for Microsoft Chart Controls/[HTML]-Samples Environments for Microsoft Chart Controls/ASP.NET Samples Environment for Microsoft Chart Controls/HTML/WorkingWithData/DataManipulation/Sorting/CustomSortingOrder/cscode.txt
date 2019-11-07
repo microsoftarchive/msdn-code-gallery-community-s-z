@@ -1,0 +1,44 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series
+    double[]	valueY = {120, 530, 670, 430, 860, 240, 350, 890, 540, 180 };
+    string[]	valueX = {"D", "A", "B", "A", "C", "C", "B", "A", "C", "B"};
+    Chart1.Series["Original"].Points.DataBindXY(valueX, valueY);
+    Chart1.Series["Sorted"].Points.DataBindXY(valueX, valueY);
+
+    // Sort series data points
+    Chart1.DataManipulator.Sort(new MyComparer(), "Sorted");
+
+    // Use point index for drawing the chart
+    Chart1.Series["Sorted"].IsXValueIndexed = true;
+}
+...
+
+/// <summary>
+/// User defined sorting order logic
+/// </summary>
+public class MyComparer : IComparer
+{
+    // This function should return a value less than zero if the first object is less than the second,
+    //  zero if they are equal and a value greater than zero if the first object is greater than the second
+    public int Compare(object a, object b)
+    {
+        DataPoint pointA = (DataPoint)a;
+        DataPoint pointB = (DataPoint)b;
+
+        // Compare axis labels first
+        int result = pointA.AxisLabel.CompareTo(pointB.AxisLabel);
+
+        // If axis labels are equal - compare Y values
+        if(result == 0)
+        {
+            result = pointA.YValues[0].CompareTo(pointB.YValues[0]);
+        }
+
+        return result;
+    }
+}
+...

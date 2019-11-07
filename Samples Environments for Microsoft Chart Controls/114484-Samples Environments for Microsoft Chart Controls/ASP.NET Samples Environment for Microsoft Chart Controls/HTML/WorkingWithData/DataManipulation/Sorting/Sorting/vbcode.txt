@@ -1,0 +1,13 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Use point index for drawing the chart
+   Chart1.Series("Series1").IsXValueIndexed = True
+   
+   ' Sort series points by second Y value
+   Chart1.DataManipulator.Sort(PointSortOrder.Ascending, "Y2", "Series1")
+
+End Sub 'Page_Load
+...

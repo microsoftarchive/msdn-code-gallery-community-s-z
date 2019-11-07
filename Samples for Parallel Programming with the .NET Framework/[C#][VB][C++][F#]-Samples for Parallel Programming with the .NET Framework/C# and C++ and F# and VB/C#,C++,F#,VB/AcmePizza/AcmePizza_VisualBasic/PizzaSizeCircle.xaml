@@ -1,0 +1,12 @@
+﻿    <!--A user control that changes the appearance of a circle (and text label)
+    based on the specified pizza size-->
+    <UserControl x:Class="AcmePizza.PizzaSizeCircle"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="Auto" Width="Auto">
+    <Grid x:Name="layoutRoot" Height="75" Width="75">
+        <Ellipse x:Name="circle" Width="75" Height="75" Fill="Orange"/>
+        <TextBlock x:Name="label" VerticalAlignment="Center" HorizontalAlignment="Center" Text="17" FontSize="20
+                   " Foreground="White"/>
+    </Grid>
+</UserControl>

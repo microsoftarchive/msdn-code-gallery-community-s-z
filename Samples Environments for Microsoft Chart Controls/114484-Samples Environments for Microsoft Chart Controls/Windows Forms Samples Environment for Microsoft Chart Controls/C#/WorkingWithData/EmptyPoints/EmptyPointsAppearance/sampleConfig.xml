@@ -1,0 +1,38 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "EmptyPoints" Priority="10">
+	<Title>Empty Point Appearance</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Empty Point Appearance</ShortBlurb> 
+	<SampleControl>EmptyPointAppearance</SampleControl> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Empty points, Appearance</Keyword>
+		<Keyword>Appearance, Empty points</Keyword>
+		<Keyword>Empty points, Point value</Keyword>
+	</Keywords>    
+	
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "ChartAppearance">
+	<Title>Empty Point Appearance</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Empty Point Appearance</ShortBlurb> 
+	<SampleControl>EmptyPointAppearance</SampleControl> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Empty points, Inserting</Keyword>
+	</Keywords>    
+
+	</SampleConfig>
+
+</SampleConfigs>

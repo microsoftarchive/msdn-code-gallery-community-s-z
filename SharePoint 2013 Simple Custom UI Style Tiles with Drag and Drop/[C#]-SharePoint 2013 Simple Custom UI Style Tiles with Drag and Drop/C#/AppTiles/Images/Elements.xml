@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Images">
+    <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\Mail.png" Url="Images/Mail.png" ReplaceContent="TRUE" />
+    <File Path="Images\Mecanical.png" Url="Images/Mecanical.png" ReplaceContent="TRUE" />
+    <File Path="Images\Cloud.png" Url="Images/Cloud.png" ReplaceContent="TRUE" />
+    <File Path="Images\People.png" Url="Images/People.png" ReplaceContent="TRUE" />
+    <File Path="Images\Calculator.png" Url="Images/Calculator.png" ReplaceContent="TRUE" />
+    <File Path="Images\1pixel.gif" Url="Images/1pixel.gif" ReplaceContent="TRUE" />
+    <File Path="Images\Columns32.png" Url="Images/Columns32.png" ReplaceContent="TRUE" />
+    <File Path="Images\Columns16.png" Url="Images/Columns16.png" ReplaceContent="TRUE" />
+    <File Path="Images\Pictures.png" Url="Images/Pictures.png" ReplaceContent="TRUE" />
+    <File Path="Images\EditOption.png" Url="Images/EditOption.png" ReplaceContent="TRUE" />
+    <File Path="Images\Icon96.png" Url="Images/Icon96.png" ReplaceContent="TRUE" />
+    <File Path="Images\IcoOriginal.png" Url="Images/IcoOriginal.png" ReplaceContent="TRUE" />
+    <File Path="Images\bingLogo_lg-transparent.png" Url="Images/bingLogo_lg-transparent.png" ReplaceContent="TRUE" />
+    <File Path="Images\Logo_Office_Apps.png" Url="Images/Logo_Office_Apps.png" ReplaceContent="TRUE" />
+    <File Path="Images\IE.png" Url="Images/IE.png" ReplaceContent="TRUE" />
+    <File Path="Images\View.png" Url="Images/View.png" ReplaceContent="TRUE" />
+    <File Path="Images\dot.png" Url="Images/dot.png" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=2C5971170CD50D071D8444DDD87E68CD" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=01F89A31F1103BC3B9A3B2562E9C41B3" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Un Equivalente de strtok() Para .Net</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Un Equivalente de strtok() Para .Net</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, .NET, Class Library, .NET Framework 4.0, C# Language, .NET Framwork, Visual C Sharp .NET, Visual Studio 2013, .NET Development, Windows Desktop App Development, C# Unsafe Code
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Performance, Pointers, String Methods, String Operations, String Algorithms
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">es-ES</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/30/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introducci&oacute;n</h1>
+<p>Si bien es cierto que .Net provee <strong><a class="libraryLink" href="https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://msdn.microsoft.com/es-ES/library/System.String.Split.aspx"  title="Auto generated link to System.String.Split">System.String.Split</a>()</strong> para extraer tokens de cadenas de texto, hay informaci&oacute;n que se pierde en el proceso:&nbsp; Los separadores y espec&iacute;ficamente, la posici&oacute;n y cantidad de dichos
+ separadores.&nbsp; La gran parte del tiempo dicha informaci&oacute;n es irrelevante pues la gran mayor&iacute;a del tiempo lo que se necesita son los tokens y solamente los tokens.</p>
+<p>Sin embargo me top&eacute; con una pregunta cuyo requerimiento era extraer la subcadena de texto sin alterar hasta un n&uacute;mero de palabra determinado.&nbsp; Ejemplo:&nbsp; Extraer la subcadena de texto que contenga hasta la segunda palabra.&nbsp; Mi
+ primer pensamiento fue <strong>String.Split()</strong>, y conforme terminaba de responder la pregunta me di cuenta de algo:&nbsp; &iquest;Qu&eacute; separador o separadores deber&iacute;a usar para armar la respuesta?&nbsp; No lo sab&iacute;a porque
+<strong>String.Split()</strong> no me dice nada al respecto.&nbsp; Inmediatamente extra&ntilde;&eacute; la simplicidad de
+<strong>strtok()</strong> en C, lo que me me empuj&oacute; a crear esta funci&oacute;n que les muestro aqu&iacute;.</p>
+<h1><span style="font-size:20px; font-weight:bold">Para Compilar el Ejemplo</span></h1>
+<p><span style="font-size:20px; font-weight:bold"><span style="font-size:xx-small">El proyecto incluido aqu&iacute; tiene la configuraci&oacute;n correcta y deber&iacute;a compilar sin problema.&nbsp; El c&oacute;digo de la funci&oacute;n en el proyecto
+<strong>AdvString </strong>es c&oacute;digo inseguro y por lo tanto debe marcarse la opci&oacute;n de permitir c&oacute;digo inseguro en las propiedades del proyecto.</span><br>
+</span></p>
+<h1><span style="font-size:20px; font-weight:bold">Descripci&oacute;n</span></h1>
+<p>La funci&oacute;n <strong>AdvString.Tokenize.GetTokens() </strong>resuelve el problema funcionando de una forma similar a
+<strong>strtok() </strong>en C:&nbsp; Usa punteros para recorrer la cadena de texto y extraer la informaci&oacute;n de posici&oacute;n y longitud de cada token.&nbsp; A diferencia de
+<strong>strtok()</strong>, la funci&oacute;n no reemplaza los separadores por car&aacute;cteres nulos.&nbsp; La funci&oacute;n NO devuelve el token como tal pues no asume necesariamente que lo que se necesita es el token y simplemente se limita a identificar
+ la posici&oacute;n y longitud de cada token &uacute;nicamente.</p>
+<p>La funci&oacute;n en cuesti&oacute;n est&aacute; programada con c&oacute;digo inseguro en C#.&nbsp; Idealmente la funci&oacute;n debe compilarse en una bibliotecta (DLL) aparte con la opci&oacute;n de c&oacute;digo inseguro marcada en las propiedades del
+ proyecto tal como se indica en las instrucciones de la secci&oacute;n anterior.</p>
+<p>Aqu&iacute; se muestra la funci&oacute;n en cuesti&oacute;n.&nbsp; La funci&oacute;n determina los &iacute;ndices de posici&oacute;n de cada token sobre una copia de la cadena de texto, as&iacute; que pueden usarse directamente con
+<strong>String.Substring()</strong> para obtener cualquier token en cualquier momento a partir de la cadena de texto original.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using System;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://msdn.microsoft.com/es-ES/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;
+using <a class="libraryLink" href="https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://msdn.microsoft.com/es-ES/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;
+
+namespace AdvString
+{
+    public static class Tokenize
+    {
+        public static IEnumerable&lt;TokenInfo&gt; GetTokens(string text, params char[] separators)
+        {
+            List&lt;TokenInfo&gt; tokens = new List&lt;TokenInfo&gt;();
+            if (String.IsNullOrWhiteSpace(text)) throw new ArgumentNullException(&quot;text&quot;);
+            unsafe
+            {
+                fixed (char* startChar = text)
+                {
+                    char* curChar = startChar;
+                    int start = 0;
+                    int textLength = text.Length;
+                    bool insideToken = false;
+                    while (curChar - startChar &lt; textLength - 1)
+                    {
+                        if (separators.Contains(*curChar))
+                        {
+                            if (insideToken)
+                            {
+                                //End of token.
+                                insideToken = false;
+                                //Yield a new TokenInfo object to the caller.
+                                tokens.Add(new TokenInfo(start, (int)(curChar - startChar) - start));
+                            }
+                        }
+                        else if (!insideToken)
+                        {
+                            insideToken = true;
+                            start = (int)(curChar - startChar);
+                        }
+                        &#43;&#43;curChar;
+                    }
+                    if (insideToken)
+                    {
+                        //Yield the last token.
+                        tokens.Add(new TokenInfo(start, (int)(curChar - startChar) - start &#43; 1));
+                    }
+                }
+            }
+            return tokens;
+        }
+    }
+}
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://msdn.microsoft.com/es-ES/library/System.Collections.Generic.aspx"  title="Auto generated link to System.Collections.Generic">System.Collections.Generic</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://code.msdn.microsoft.com/Un-Equivalente-de-strtok-dc7105fc/https://msdn.microsoft.com/es-ES/library/System.Linq.aspx"  title="Auto generated link to System.Linq">System.Linq</a>;&nbsp;
+&nbsp;
+<span class="cs__keyword">namespace</span>&nbsp;AdvString&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;Tokenize&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">static</span>&nbsp;IEnumerable&lt;TokenInfo&gt;&nbsp;GetTokens(<span class="cs__keyword">string</span>&nbsp;text,&nbsp;<span class="cs__keyword">params</span>&nbsp;<span class="cs__keyword">char</span>[]&nbsp;separators)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;TokenInfo&gt;&nbsp;tokens&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;List&lt;TokenInfo&gt;();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(String.IsNullOrWhiteSpace(text))&nbsp;<span class="cs__keyword">throw</span>&nbsp;<span class="cs__keyword">new</span>&nbsp;ArgumentNullException(<span class="cs__string">&quot;text&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">unsafe</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">fixed</span>&nbsp;(<span class="cs__keyword">char</span>*&nbsp;startChar&nbsp;=&nbsp;text)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">char</span>*&nbsp;curChar&nbsp;=&nbsp;startChar;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>&nbsp;start&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>&nbsp;textLength&nbsp;=&nbsp;text.Length;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">bool</span>&nbsp;insideToken&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">while</span>&nbsp;(curChar&nbsp;-&nbsp;startChar&nbsp;&lt;&nbsp;textLength&nbsp;-&nbsp;<span class="cs__number">1</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(separators.Contains(*curChar))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(insideToken)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//End&nbsp;of&nbsp;token.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insideToken&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Yield&nbsp;a&nbsp;new&nbsp;TokenInfo&nbsp;object&nbsp;to&nbsp;the&nbsp;caller.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tokens.Add(<span class="cs__keyword">new</span>&nbsp;TokenInfo(start,&nbsp;(<span class="cs__keyword">int</span>)(curChar&nbsp;-&nbsp;startChar)&nbsp;-&nbsp;start));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;<span class="cs__keyword">if</span>&nbsp;(!insideToken)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insideToken&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start&nbsp;=&nbsp;(<span class="cs__keyword">int</span>)(curChar&nbsp;-&nbsp;startChar);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#43;&#43;curChar;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(insideToken)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//Yield&nbsp;the&nbsp;last&nbsp;token.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tokens.Add(<span class="cs__keyword">new</span>&nbsp;TokenInfo(start,&nbsp;(<span class="cs__keyword">int</span>)(curChar&nbsp;-&nbsp;startChar)&nbsp;-&nbsp;start&nbsp;&#43;&nbsp;<span class="cs__number">1</span>));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;tokens;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+}&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p>Si se examina el c&oacute;digo con atenci&oacute;n, la funci&oacute;n no es cosa del otro mundo y probablemente evoque los tiempos inmemoriales en los que estudi&aacute;bamos y nos asignaban tareas con bucles y otras cosas b&aacute;sicas.&nbsp; El c&oacute;digo
+ es sencillo y directo:&nbsp; Examinamos cada car&aacute;cter en la cadena de texto:&nbsp; Si es un separador o no es lo primero que se verifica; en cualquier caso hay que verificar una variable Booleana de control que nos dice si estamos sobre un token o no,
+ pues dependiendo de si lo estamos o no as&iacute; es el comportamiento dentro del bucle.</p>
+<p>Lo m&aacute;s &quot;sorprendente&quot; para programadores de .Net es tal vez los punteros.&nbsp; No puedo explicar el por qu&eacute; de lo que se ve ah&iacute; pues no es mi intenci&oacute;n familiarizar a nadie con punteros con este c&oacute;digo.&nbsp; Si no sabe
+ de punteros y aritm&eacute;tica de punteros, le recomiendo entonces leer al respecto en un buen libro o un buen tutorial en l&iacute;nea.</p>
+<h1><span>Archivos Fuente</span></h1>
+<ul>
+<li><em>AdvString.TokenInfo.cs:&nbsp; </em>Define la clase <strong>TokenInfo</strong>, una clase POCO de s&oacute;lo lectura que almacena la informaci&oacute;n de un &uacute;nico token.
+</li><li><em><em>AdvString.Tokenize.cs:</em></em>&nbsp; Define la clase est&aacute;tica Tokenize que contiene la funci&oacute;n objeto de este art&iacute;culo:&nbsp;
+<strong>GetTokens()</strong>. </li><li><em>Tester.Program.cs:</em>&nbsp; Define un programa de consola que demuestra el uso de la funci&oacute;n
+<strong>GetTokens()</strong> tanto para obtener los tokens como lo har&iacute;a <strong>
+String.Split()</strong> como para resolver el problema original descrito en la introducci&oacute;n.
+</li></ul>
+<div class="mcePaste" id="_mcePaste" style="left:-10000px; top:0px; width:1px; height:1px; overflow:hidden">
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

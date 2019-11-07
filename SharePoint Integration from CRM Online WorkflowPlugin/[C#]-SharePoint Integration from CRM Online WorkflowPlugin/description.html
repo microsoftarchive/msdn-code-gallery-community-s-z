@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=5CF4E24D59324FBE66CF8C9A49A3F942" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=F8E8917DA8158DB3E7C6F07AA1FFC4F3" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SharePoint Integration from CRM Online Workflow/Plugin</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SharePoint Integration from CRM Online Workflow/Plugin</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Microsoft Dynamics CRM 2013 Online
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            SharePoint
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/29/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/SharePoint-Integration-c5f21604">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span style="font-size:small">In this sample I&rsquo;ll show you how to integrate with SharePoint directly rather than relying on the out of the box integration.
+</span><br>
+<span style="font-size:small">Using the standard integration, a new folder will be created for each record underneath the default site. In some solutions you&rsquo;ll find that you want to modify this behaviour so that folders are created in a custom location.
+ You may for example want to have an opportunity folder created under a site that is specific to a particular client rather than all under the same site.</span><br>
+<span style="font-size:small">The challenge with integrating with SharePoint using a CRM Online Workflow Activity/Plugin is that you can&rsquo;t reference the SharePoint Assemblies which authenticating and calling the SharePoint web service somewhat harder.
+ Thanks goes to fellow Dynamics CRM MVP Rhett for his blog that provided a starting point for this sample -
+<a href="https://code.msdn.microsoft.com/SharePoint-Integration-c5f21604/https://bingsoft.wordpress.com/2013/06/19/crm-online-to-sharepoint-online-integration-using-rest-and-adfs/">
+https://code.msdn.microsoft.com/SharePoint-Integration-c5f21604/https://bingsoft.wordpress.com/2013/06/19/crm-online-to-sharepoint-online-integration-using-rest-and-adfs/</a>. The sample code in this post shows how to create a folder in SharePoint and then associate it with a Document Location. The authentication with SharePoint
+ works via ADFS and since the out of the box integration uses a trust between CRM and SharePoint that is not accessible from a sandbox (even if you try and ILMerge it!) we have to provide a username and password that will act as our privileged user that can
+ create folders in SharePoint. I have left a function where you can add your own credentials or implement a method to retrieve from a secure entity in CRM that only administrators have access to. Look in the code for the &lsquo;GetSecureConfigValue&rsquo; function.</span></p>
+<p><em>&nbsp;</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><span style="font-size:small">The workflow activity is deployed using the Developer Toolkit for Dynamics CRM and performs the following:</span></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><span style="font-size:small">The sample contains a custom workflow activity that works on both CRM Online and CRM OnPrem accepting the following parameters:</span></p>
+<ul>
+<li><span style="font-size:small">Site &ndash;&nbsp; A reference to the site that you want to create a folder in. You could store a look up to a site for each customer and populate this parameter from the related account.</span>
+</li><li><span style="font-size:small">Record Dynamic Url &ndash; The &lsquo;Dynamic Record Url&rsquo; for the record that you want the SharePoint document location to be related to. This uses my Polymorphic input parameter technique. You simply need to pass the
+ Record Url (Dynamic) for the record that you wish to create the folder for.</span>
+</li><li><span style="font-size:small">Document Library Name &ndash; The name of the document location to create the folder underneath. In the out of the box integration this is the entity logical name (e.g. account)</span>
+</li><li><span style="font-size:small">Record Folder Name &ndash; The name of the folder to create. You could use the client name, client ID etc. &ndash; but it will automatically have the GUID appended to it to ensure uniqueness just like the out of the box integration<br>
+</span></li></ul>
+<h1><em><em><br>
+</em></em></h1>
+<h1>More Information</h1>
+<p><span style="font-size:small"><em>For more information see the original blog post -
+<a href="http://develop1.net/public/post/SharePoint-Integration-Reloaded-e28093-Part-3.aspx">
+http://develop1.net/public/post/SharePoint-Integration-Reloaded-e28093-Part-3.aspx</a></em></span></p>
+<div class="mcePaste" id="_mcePaste" style="left:-10000px; top:0px; width:1px; height:1px; overflow:hidden">
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

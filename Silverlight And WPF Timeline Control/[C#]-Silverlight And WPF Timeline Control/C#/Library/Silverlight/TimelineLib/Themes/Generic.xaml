@@ -1,0 +1,513 @@
+﻿<!--
+ * Copyright (c) 2010, Andriy Syrov
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, are permitted provided 
+ * that the following conditions are met:
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of conditions and the 
+ * following disclaimer.
+ * 
+ * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and 
+ * the following disclaimer in the documentation and/or other materials provided with the distribution.
+ *
+ * Neither the name of Andriy Syrov nor the names of his contributors may be used to endorse or promote 
+ * products derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED 
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+ * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY 
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED 
+ * TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN 
+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *   
+ -->
+    
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TimelineLibrary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary
+            Source="/TimelineLibrary;Component/Themes/Constants.xaml" />
+        <ResourceDictionary
+            Source="/TimelineLibrary;Component/Themes/NavigationButtons.xaml" />
+        <ResourceDictionary
+            Source="/TimelineLibrary;Component/Themes/ToolboxButton.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <local:NullToUnsetConverter
+        x:Key="NullToUnsetConverter"></local:NullToUnsetConverter>
+
+    <ControlTemplate
+        x:Key="EventTooltipStyle"
+        TargetType="ToolTip">
+        <Border
+            TextOptions.TextHintingMode="Animated"
+            BorderBrush="Silver"
+            BorderThickness="1"
+            Background="{StaticResource EventTooltipBackground}">
+            <StackPanel
+                Margin="5"
+                MaxWidth="400">
+
+                <TextBlock
+                    Margin="0,0,0,0"
+                    Text="{Binding Event.Title, Mode=OneWay}"
+                    MinWidth="{Binding EventPixelWidth}"
+                    TextWrapping="NoWrap"
+                    Foreground="{StaticResource EventTooltipTitleForeground}"
+                    HorizontalAlignment="Left">
+                </TextBlock>
+
+                <TextBlock
+                    Margin="0,0,0,0"
+                    Text="{Binding Event.Description, Mode=OneWay}"
+                    TextWrapping="Wrap"
+                    Foreground="{StaticResource EventTooltipDescriptionForeground}"
+                    FontStyle="italic"
+                    HorizontalAlignment="Left"
+                    FontSize="11">
+                </TextBlock>
+            </StackPanel>
+        </Border>
+    </ControlTemplate>
+
+    <Style
+        TargetType="local:TimelineBand">
+
+        <Setter
+            Property="DefaultShortEventTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Grid>
+                        <Rectangle
+                            Margin="0"
+                            RadiusX="1"
+                            RadiusY="1"
+                            MinWidth="4"
+                            Width="{Binding EventPixelWidth}"
+                            Fill="{Binding EventColorBrush, Mode=OneWay}"
+                            StrokeThickness="0"
+                            VerticalAlignment="Top"
+                            Height="3">
+
+                            <local:TooltipServiceEx.ToolTipEx>
+                                <local:ToolTipEx
+                                    HideToolTipTimeout="60" />
+                            </local:TooltipServiceEx.ToolTipEx>
+                            <ToolTipService.ToolTip>
+                                <ToolTip
+                                    Template="{StaticResource EventTooltipStyle}" />
+                            </ToolTipService.ToolTip>
+
+                        </Rectangle>
+                    </Grid>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter
+            Property="DefaultEventTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Grid
+                        x:Name="EventTemplateRoot"
+                        MinWidth="226">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="6" />
+                            <RowDefinition
+                                Height="*" />
+                            <RowDefinition
+                                Height="20000" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="6" />
+                            <ColumnDefinition
+                                Width="220" />
+                        </Grid.ColumnDefinitions>
+
+                        <Canvas
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Height="6"
+                            Margin="0"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch">
+
+                            <Rectangle
+                                x:Name="EventDurationRect"
+                                Canvas.Left="0"
+                                Canvas.Top="0"
+                                Margin="0"
+                                Height="6"
+                                MinWidth="6"
+                                Width="{Binding EventPixelWidth}"
+                                Fill="{Binding EventColorBrush, Mode=OneWay}"
+                                RadiusX="3"
+                                RadiusY="3">
+                                <local:TooltipServiceEx.ToolTipEx>
+                                    <local:ToolTipEx
+                                        HideToolTipTimeout="{StaticResource TooltipTimeout}" />
+                                </local:TooltipServiceEx.ToolTipEx>
+                                <ToolTipService.ToolTip>
+                                    <ToolTip
+                                        Template="{StaticResource EventTooltipStyle}" />
+                                </ToolTipService.ToolTip>
+                            </Rectangle>
+
+                        </Canvas>
+
+                        <Border
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            BorderThickness="{Binding SelectionBorder, Mode=OneWay}"
+                            Visibility="{Binding BorderVisibility, Mode=OneWay}"
+                            Padding="2 2 2 2"
+                            Margin="2 2 2 2"
+                            BorderBrush="{StaticResource EventBorderLineBrush}"
+                            Background="{StaticResource EventBackground}">
+
+                            <local:TooltipServiceEx.ToolTipEx>
+                                <local:ToolTipEx
+                                    HideToolTipTimeout="{StaticResource TooltipTimeout}" />
+                            </local:TooltipServiceEx.ToolTipEx>
+                            <ToolTipService.ToolTip>
+                                <ToolTip
+                                    Template="{StaticResource EventTooltipStyle}" />
+                            </ToolTipService.ToolTip>
+                            <StackPanel
+                                Margin="0"
+                                Orientation="Vertical"
+                                Width="220">
+
+                                <Image
+                                    x:Name="EventImage"
+                                    Source="{Binding Event.TeaserEventImage, Converter={StaticResource NullToUnsetConverter}}"
+                                    Width="Auto"
+                                    Height="Auto"
+                                    Stretch="None"
+                                    Margin="0 1 0 0"
+                                    HorizontalAlignment="Left">
+                                    <local:TooltipServiceEx.ToolTipEx>
+                                        <local:ToolTipEx
+                                            HideToolTipTimeout="{StaticResource TooltipTimeout}" />
+                                    </local:TooltipServiceEx.ToolTipEx>
+                                    <ToolTipService.ToolTip>
+                                        <ToolTip
+                                            Template="{StaticResource EventTooltipStyle}" />
+                                    </ToolTipService.ToolTip>
+                                </Image>
+
+                                <StackPanel
+                                    Margin="2 0 0 0"
+                                    Orientation="Vertical"
+                                    Width="Auto"
+                                    Grid.Row="1">
+
+                                    <TextBlock
+                                        x:Name="EventTitleTextBlock"
+                                        Margin="0,0,0,0"
+                                        Text="{Binding Event.Title, Mode=OneWay}"
+                                        TextWrapping="Wrap"
+                                        Foreground="{StaticResource BandEventTitleForeground}"
+                                        Height="Auto"
+                                        HorizontalAlignment="Left"
+                                        Width="Auto">
+                                    <local:TooltipServiceEx.ToolTipEx>
+                                        <local:ToolTipEx
+                                                HideToolTipTimeout="{StaticResource TooltipTimeout}" />
+                                    </local:TooltipServiceEx.ToolTipEx>
+                                    <ToolTipService.ToolTip>
+                                        <ToolTip
+                                                Template="{StaticResource EventTooltipStyle}" />
+                                    </ToolTipService.ToolTip>
+                                    </TextBlock>
+
+                                    <TextBlock
+                                        x:Name="EventTeaserBlock"
+                                        Margin="0,0,0,0"
+                                        Text="{Binding Teaser, Mode=OneWay}"
+                                        TextWrapping="Wrap"
+                                        Foreground="{StaticResource BandTeaserForeground}"
+                                        FontStyle="italic"
+                                        Height="Auto"
+                                        HorizontalAlignment="Left"
+                                        FontSize="9.25">
+                                    </TextBlock>
+
+                                    <local:Hyperlink
+                                        x:Name="EventLinkTextBlock"
+                                        Margin="0,0,0,0"
+                                        Content="{Binding LinkText, Mode=OneWay}"
+                                        HorizontalAlignment="Left"
+                                        FontStyle="italic"
+                                        FontSize="9.25">
+                                    </local:Hyperlink>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                        </Border>
+                        
+                        <Border
+                            x:Name="BorderLine"
+                            Canvas.ZIndex="-1"
+                            Grid.Row="0"
+                            Grid.RowSpan="3"
+                            Grid.Column="0"
+                            VerticalAlignment="Stretch"
+                            Width="1"
+                            Background="{Binding EventColorBrush, Mode=OneWay}"/>
+
+
+                    </Grid>
+
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter
+            Property="DefaultItemTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Grid
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch">
+
+                        <Rectangle
+                            Fill="{StaticResource ItemBackground}" />
+
+                        <TextBlock
+                            FontFamily="Arial"
+                            TextWrapping="Wrap"
+                            Margin="5.5,0,2,2"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource ItemForeground}">
+                            
+                                <TextBlock.Text>
+                                    <Binding />
+                                </TextBlock.Text>
+
+                        </TextBlock>
+                        <Rectangle
+                            HorizontalAlignment="Left"
+                            Margin="1.25,0,3,0"
+                            Width="1"
+                            Fill="{StaticResource ItemLineBrush}" />
+                    </Grid>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="local:TimelineBand">
+
+                    <Grid
+                        x:Name="MainGrid"
+                        HorizontalAlignment="Stretch"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        VerticalAlignment="Stretch">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="10" />
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="10" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid
+                            x:Name="NavigateLeft"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Grid.Column="0"
+                            Background="{StaticResource ItemBackground}">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="*" />
+                                <RowDefinition
+                                    Height="20" />
+                            </Grid.RowDefinitions>
+
+                            <Button
+                                x:Name="NavigateLeftButton"
+                                Height="20"
+                                HorizontalAlignment="Center"
+                                Margin="0"
+                                Grid.Row="1"
+                                Style="{StaticResource NavigateLeftButtonStyle}"
+                                VerticalAlignment="Center"
+                                Width="9"
+                                Content="Button"
+                                Grid.Column="1" />
+                        </Grid>
+
+                        <Grid
+                            x:Name="NavigateRight"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Grid.Column="2"
+                            Background="{StaticResource ItemBackground}">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="*" />
+                                <RowDefinition
+                                    Height="20" />
+                            </Grid.RowDefinitions>
+
+                            <Button
+                                x:Name="NavigateRightButton"
+                                Height="20"
+                                HorizontalAlignment="Center"
+                                Margin="0"
+                                Grid.Row="1"
+                                Style="{StaticResource NavigateRightButtonStype}"
+                                VerticalAlignment="Bottom"
+                                Width="9"
+                                Grid.Column="1"
+                                Content="Button" />
+                        </Grid>
+
+                        <Canvas
+                            x:Name="CanvasPart"
+                            Grid.Column="1"
+                            MinHeight="20"
+                            MinWidth="20"
+                            Background="{StaticResource ItemBackground}"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch">
+
+                            <Canvas.Clip>
+                                <RectangleGeometry
+                                    x:Name="ClipRect" />
+                            </Canvas.Clip>
+
+                            <Rectangle
+                                x:Name="VisibleDatesPart"
+                                Canvas.Left="0"
+                                Canvas.Top="0"
+                                Fill="{StaticResource BandVisibleWindowBackground}">
+
+                            </Rectangle>
+
+                        </Canvas>
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        TargetType="local:TimelineToolbox">
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="local:TimelineToolbox">
+                    <Border
+                        Background="{StaticResource ItemBackground}"
+                        BorderBrush="{StaticResource ItemLineBrush}"
+                        Height="20"
+                        BorderThickness="0 0 0 1">
+
+                        <Grid
+                            x:Name="MainGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel
+                                Orientation="Horizontal"
+                                Grid.Column="1">
+
+                                <Button
+                                    x:Name="zoomIn"
+                                    FontSize="12"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Arial Black"
+                                    Margin="5 2 2 2"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Right"
+                                    Content=" + " />
+                                <Button
+                                    x:Name="zoomOut"
+                                    FontSize="12"
+                                    FontFamily="Arial Black"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    Margin="5 2 2 2"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Right"
+                                    Content=" - " />
+                                <Button
+                                    x:Name="findFirst"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="15 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content="9" />
+                                <Button
+                                    x:Name="moveLeft"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="5 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content="3" />
+                                <Button
+                                    x:Name="moveRight"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="5 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content="4" />
+                                <Button
+                                    x:Name="findLast"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="5 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content=":" />
+                                <Button
+                                    x:Name="fullScreen"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="5 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content="1" />
+                            </StackPanel>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

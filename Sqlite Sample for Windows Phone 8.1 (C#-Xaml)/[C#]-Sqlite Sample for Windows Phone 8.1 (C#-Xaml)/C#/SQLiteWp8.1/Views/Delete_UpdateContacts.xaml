@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="SQLiteWp8._1.Views.Delete_UpdateContacts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SQLiteWp8._1.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Delete/Update contact" FontSize="28" Margin="9,-7,0,0" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="1" Name="EditView">
+                <TextBox Name="NametxtBx" FontSize="25"/>
+                <TextBox Name="PhonetxtBx" FontSize="25"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <Button Content="Delete" HorizontalAlignment="Stretch"  Click="DeleteContact_Click"/>
+                <Button Content="Update" HorizontalAlignment="Stretch" Click="UpdateContact_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

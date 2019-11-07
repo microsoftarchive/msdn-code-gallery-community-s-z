@@ -1,0 +1,12 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Set axis labels
+   Chart1.Series("Series1").AxisLabel = "Month: #VALX{MMM}" + ControlChars.Lf + "Day: #VALX{dd}"
+   
+   ' Set series point's labels. On the first line we display
+   '  the first Y value, and on the second line we display the X value.
+   Chart1.Series("Series1").Label = "Y = #VALY" + ControlChars.Lf + "X = #VALX"
+   
+End Sub 'Page_Load

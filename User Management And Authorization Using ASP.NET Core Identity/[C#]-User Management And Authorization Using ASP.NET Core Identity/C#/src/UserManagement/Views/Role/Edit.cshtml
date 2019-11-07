@@ -1,0 +1,72 @@
+﻿@model EditRoleVm
+
+<div class="bg-primary panel-body">
+    <h4>
+        Edit Role
+    </h4>
+</div>
+
+<div class="text-danger" asp-validation-summary="All"></div>
+
+<form method="post" asp-controller="Role" asp-action="Edit" asp-antiforgery="true" class="form-horizontal">
+    <input type="hidden" name="RoleId" value="@Model.Role.Id" />
+    
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="RoleName">Role Name:</label>
+        <div class="col-sm-2">
+            <input class="form-control" name="RoleName" value="@Model.Role.Name"/>
+        </div>
+    </div>
+    
+    <h5 class="bg-info panel-body">
+        Add to @Model.Role.Name
+    </h5>
+    <table class="table table-condensed table-bordered table-striped">
+        @if (Model.NonMembers.Count() == 0)
+        {
+            <tr>
+                <td colspan="2">All Users Are @Model.Role.Name</td>
+            </tr>
+        }
+        else
+        {
+            foreach (User user in Model.NonMembers)
+             {
+                 <tr>
+                     <td>@user.UserName</td>
+                     <td>
+                         <input type="checkbox" name="IdsToAdd" value="@user.Id"/>
+                     </td>
+                 </tr>
+             }
+        }
+    </table>
+    
+    <h5 class="bg-info panel-body">Remove from @Model.Role.Name</h5>
+    <table class="table table-condensed table-bordered table-striped">
+        @if (Model.Members.Count() == 0)
+        {
+            <tr>
+                <td colspan="2">
+                    No Users are @Model.Role.Name
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (User user in Model.Members)
+            {
+                <tr>
+                    <td>@user.UserName</td>
+                    <td>
+                        <input type="checkbox" name="IdsToRemove" value="@user.Id"/>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+    <a class="btn btn-primary" asp-controller="Role" asp-action="Index">Cancel</a>
+</form>

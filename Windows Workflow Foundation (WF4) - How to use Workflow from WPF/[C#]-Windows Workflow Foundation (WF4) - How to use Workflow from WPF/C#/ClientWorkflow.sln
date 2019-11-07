@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C547096B-A738-41CD-8523-981AB32E2871}"
+	ProjectSection(SolutionItems) = preProject
+		ClientWorkflow.vsmdi = ClientWorkflow.vsmdi
+		Local.testsettings = Local.testsettings
+		SpikeNotes.txt = SpikeNotes.txt
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		WPF Client Applications and Windows Workflow 4 Together.docx = WPF Client Applications and Windows Workflow 4 Together.docx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWorkflow.Model", "ClientWorkflow.Model\ClientWorkflow.Model.csproj", "{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWorkflow.Tests", "ClientWorkflow.Tests\ClientWorkflow.Tests.csproj", "{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWorkflow.WPF", "ClientWorkflow.WPF\ClientWorkflow.WPF.csproj", "{899C472B-61F7-48F4-9B96-3323BF4FC6A5}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ClientWorkflow.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{540C6E7C-4C92-447E-AFBD-A77086E9DEA1}.Release|x86.ActiveCfg = Release|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1CAAEBF9-F152-4ABB-BFC3-A64819ACE256}.Release|x86.ActiveCfg = Release|Any CPU
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Debug|x86.ActiveCfg = Debug|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Debug|x86.Build.0 = Debug|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Release|Any CPU.ActiveCfg = Release|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Release|Mixed Platforms.Build.0 = Release|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Release|x86.ActiveCfg = Release|x86
+		{899C472B-61F7-48F4-9B96-3323BF4FC6A5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

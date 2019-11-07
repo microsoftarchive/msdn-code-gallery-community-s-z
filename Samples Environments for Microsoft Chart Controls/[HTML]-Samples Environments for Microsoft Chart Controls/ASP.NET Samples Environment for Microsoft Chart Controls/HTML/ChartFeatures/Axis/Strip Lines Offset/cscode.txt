@@ -1,0 +1,34 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+
+    // Create a strip line
+    StripLine stripLine = new StripLine();
+
+    // Set strip line color
+    stripLine.BackColor = Color.Red;
+
+    // Set strip line interval
+    stripLine.Interval = 1;
+
+    // Set strip line offset
+    stripLine.IntervalOffset = 1;
+
+    // Set Strip Width
+    stripLine.StripWidth = 0.5;
+
+    // Set strip line width
+    stripLine.StripWidthType = DateTimeIntervalType.Weeks;
+
+    // Set strip line interval type
+    stripLine.IntervalType = DateTimeIntervalType.Months;
+
+    // Set strip line offset type
+    stripLine.IntervalOffsetType = DateTimeIntervalType.Days;
+
+    // Add strip lines to the X axis.
+    Chart1.ChartAreas["ChartArea1"].AxisX.StripLines.Add( stripLine );
+
+}

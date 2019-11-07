@@ -1,0 +1,43 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+private Random	random = new Random();
+private	int		pointIndex = 0;
+...
+
+private void timerRealTimeData_Tick(object sender, System.EventArgs e)
+{
+	// Define some variables
+	int numberOfPointsInChart = 200;
+	int numberOfPointsAfterRemoval = 150;
+
+	// Simulate adding new data points
+	int numberOfPointsAddedMin = 5;
+	int numberOfPointsAddedMax = 10;
+	for(int pointNumber = 0; pointNumber < random.Next(numberOfPointsAddedMin, numberOfPointsAddedMax); pointNumber++)
+	{
+		chart1.Series[0].Points.AddXY(pointIndex + 1, random.Next(1000, 5000));
+		++pointIndex;
+	}
+
+	// Adjust Y & X axis scale
+	chart1.ResetAutoValues();
+
+	// Keep a constant number of points by removing them from the left
+	while(chart1.Series[0].Points.Count > numberOfPointsInChart)
+	{
+		// Remove data points on the left side
+		while(chart1.Series[0].Points.Count > numberOfPointsAfterRemoval)
+		{
+			chart1.Series[0].Points.RemoveAt(0);
+		}
+
+		// Adjust X axis scale
+		chart1.ChartAreas["Default"].AxisX.Minimum = pointIndex - numberOfPointsAfterRemoval;
+		chart1.ChartAreas["Default"].AxisX.Maximum = chart1.ChartAreas["Default"].AxisX.Minimum + numberOfPointsInChart;
+	}
+
+	// Invalidate chart
+	chart1.Invalidate();
+}
+...

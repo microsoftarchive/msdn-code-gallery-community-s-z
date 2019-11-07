@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="Toast_notifications.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Toast_notifications"
+    RequestedTheme="Light">
+
+</Application>

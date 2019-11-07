@@ -1,0 +1,47 @@
+using System.Data.OleDb;
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Resolve the address to the Access database
+    string fileNameString = this.MapPath(".");
+    fileNameString += "..\\..\\..\\data\\chartdata.mdb";
+
+    // Initialize a connection string	
+    string myConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString;
+    			
+    // Define the database query	
+    string mySelectQuery="SELECT * FROM REPS;";
+
+    // Create a database connection object using the connection string	
+    OleDbConnection myConnection = new OleDbConnection(myConnectionString);
+    			
+    // Create a database command on the connection using query	
+    OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+    			
+    // Open the connection	
+    myCommand.Connection.Open();
+    			
+    // Initializes a new instance of the OleDbDataAdapter class
+    OleDbDataAdapter custDA = new OleDbDataAdapter();
+    custDA.SelectCommand = myCommand;
+
+    // Initializes a new instance of the DataSet class
+    DataSet custDS = new DataSet();
+
+    // Adds rows in the DataSet
+    custDA.Fill(custDS, "Customers");
+
+    // Initializes a new instance of the DataView class
+    DataView firstView = new DataView(custDS.Tables[0]);
+
+    // Since the DataView implements IEnumerable, pass the dataview directly into
+    //   the DataBind method with the name of the Columns selected in the query	
+    Chart1.Series["Default"].Points.DataBindXY(firstView, "Name",firstView, "Sales");
+
+    // Closes the connection to the data source. This is the preferred 
+    //   method of closing any open connection.
+    myCommand.Connection.Close();
+}
+...

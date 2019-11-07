@@ -1,0 +1,67 @@
+erver.
+            </summary>
+            <value>The port of the proxy server.</value>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.ProxyType">
+            <summary>
+            Gets or sets the type of the proxy server.
+            </summary>
+            <value>The type of the proxy server.</value>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.AuthenticationMethod">
+            <summary>
+            Gets or sets the authentication method to use for HTTP CONNECT proxy.
+            NTLM authentication is only supported by some HTTP CONNECT proxies.
+            </summary>
+            <value>An authentication method.</value>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.Credentials">
+            <summary>
+            Gets or sets the credentials to submit to the proxy server for authentication.
+            Password authentication is not supported by SOCKS4 and SOCKS4a.
+            </summary>
+            <value>An <see cref="T:System.Net.ICredentials"/> containing the credentials to submit to the proxy server for authentication.</value>
+            <remarks>Only credentials of type <see cref="T:System.Net.NetworkCredential"/> are supported.</remarks>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.UserName">
+            <summary>
+            Gets or sets the username to submit to the proxy server for authentication.
+            </summary>
+            <value>A username to submit to the proxy server for authentication.</value>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.Password">
+            <summary>
+            Gets or sets the username to submit to the proxy server for authentication.
+            Password authentication is not supported by SOCKS4 and SOCKS4a.
+            </summary>
+            <value>A username to submit to the proxy server for authentication.</value>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.Domain">
+            <summary>
+            Gets or sets the domain to submit to the proxy server for authentication.
+            </summary>
+            <value>A domain to submit to the proxy server for authentication.</value>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.BypassProxyOnLocal">
+            <summary>
+            Gets or sets a value indicating whether to bypass the proxy server for local addresses.
+            </summary>
+            <value><b>true</b> to bypass the proxy server for local addresses; otherwise, <b>false</b>. The default value is <b>false</b>.</value>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.BypassArrayList">
+            <summary>
+            Gets a list of addresses that do not use the proxy server.
+            </summary>
+            <value>An <see cref="T:System.Collections.ArrayList"/> containing a list of regular expressions that describe URIs that will not use the proxy server when accessed.</value>
+            <remarks>Not supported by Atp FTP for .NET Compact Framework.</remarks>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.BypassList">
+            <summary>
+            Gets or sets an array of addresses that do not use the proxy server.
+            </summary>
+            <value>An array containing a list of regular expressions that describe URIs that will not use the proxy server when accessed.</value>
+            <remarks>Not supported by Atp FTP for .NET Compact Framework.</remarks>
+        </member>
+        <member name="P:Atp.Net.WebProxyEx.Encoding">
+            <summary>
+            Gets or sets the <see cref="T:System.Text.Encoding">Encoding</see> to use 

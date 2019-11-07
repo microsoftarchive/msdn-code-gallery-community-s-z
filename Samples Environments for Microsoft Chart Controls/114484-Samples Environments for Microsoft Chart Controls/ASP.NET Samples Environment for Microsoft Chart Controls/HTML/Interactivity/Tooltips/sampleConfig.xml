@@ -1,0 +1,40 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Tooltips">
+	<Title>Interactive Pie Chart</Title> 
+	<Thumbnail>ToolTipPie\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Interactive Pie Chart</ShortBlurb> 
+
+	<Content>ToolTipPie\ImageMapPieToolTip.aspx</Content> 
+
+	<InfoPages>
+	<InfoPage Title="Overview">ToolTipPie\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">ToolTipPie\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">ToolTipPie\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Tooltips</Keyword>
+  	</Keywords> 
+
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Tooltips">
+	<Title>Formatting Values</Title> 
+	<Thumbnail>ToolTipFormating\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Formatting Tooltips</ShortBlurb> 
+
+	<Content>ToolTipFormating\ImageMapToolTipsFormating.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">ToolTipFormating\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">ToolTipFormating\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Tooltips, Text Formatting</Keyword>
+  	</Keywords> 
+	</SampleConfig>
+
+</SampleConfigs>

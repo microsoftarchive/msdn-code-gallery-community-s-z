@@ -1,0 +1,12 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e) Handles MyBase.Load
+{
+	Chart1.RenderType = RenderType.ImageTag;
+	
+	// A unique temp. image name, with a maximum of 300 images, with a lifespan 
+	// of 38 seconds
+	Chart1.ImageLocation = "..\\..\\TempImages\\ChartPic_#SEQ(300,38)";
+}
+...

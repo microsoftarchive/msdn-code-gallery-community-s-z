@@ -1,0 +1,9 @@
+﻿<Window x:Class="WPFReportTest.ReportViewerUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ReportViewerUI" Height="399" Width="724" xmlns:my="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer">
+    <Grid>
+        <my:CrystalReportsViewer  Margin="63,38,0,0" Name="crystalReportsViewer" VerticalAlignment="Top" ShowLogo="False" HorizontalAlignment="Center"
+                                  ShowToggleSidePanelButton="True" ShowToolbar="True" ShowOpenFileButton="False"  />
+    </Grid>
+</Window>

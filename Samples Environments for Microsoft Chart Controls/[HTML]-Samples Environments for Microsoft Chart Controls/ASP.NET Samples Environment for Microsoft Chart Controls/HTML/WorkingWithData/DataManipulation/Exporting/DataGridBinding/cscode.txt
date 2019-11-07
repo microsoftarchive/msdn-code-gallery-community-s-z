@@ -1,0 +1,98 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+protected System.Web.UI.DataVisualization.Charting.Chart Chart1;
+protected System.Web.UI.WebControls.DataGrid SeriesValuesDataGrid;
+protected System.Data.DataSet seriesDataSet;
+protected System.Data.DataTable SeriesValuesDataTable;
+protected System.Web.UI.WebControls.Label ChartData;
+protected System.Web.UI.WebControls.Label ChartDataSchema;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series using random data
+    if(ChartData.Text == String.Empty)
+    {
+        double[]	yValues = {23.67, 75.45, 60.45, 34.54, 85.62, 32.43, 55.98, 67.23, 56.34, 23.14, 45.24, 67.41, 13.45, 56.36, 45.29};
+        for(int pointIndex = 0; pointIndex < yValues.Length; pointIndex++)
+        {
+            Chart1.Series["Series1"].Points.AddXY(1990 + pointIndex, yValues[pointIndex]);
+        }
+    }
+
+    // Populate series from the hidden text fields
+    else
+    {
+        DataSet	dataSet = new DataSet();
+        dataSet.ReadXmlSchema(new StringReader(ChartDataSchema.Text));
+        dataSet.ReadXml(new StringReader(ChartData.Text));
+        DataView dataView = new DataView(dataSet.Tables[0]);
+        Chart1.Series["Series1"].Points.DataBindXY(dataView, "X", dataView, "Y");
+    }
+
+    // Data bind grid control to the series data
+    if (!IsPostBack)
+    {
+        DataBindGrid();
+    }
+}
+
+private void DataBindGrid()
+{
+    // Export series values into DataSet object
+    seriesDataSet = Chart1.DataManipulator.ExportSeriesValues("Series1");
+
+    // Data bind DataGrid control. 
+    SeriesValuesDataGrid.DataSource = seriesDataSet;
+    SeriesValuesDataGrid.DataBind();
+}
+
+private void SeriesValuesDataGrid_UpdateCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
+{
+    try
+    {
+        // Get X and Y values
+        double xValue = double.Parse(e.Item.Cells[1].Text);
+        TextBox textBox = (TextBox)e.Item.Cells[2].Controls[0];
+        double yValue = double.Parse(textBox.Text);
+
+        // Find edited point by X value
+        DataPoint dataPoint = Chart1.Series["Series1"].Points.FindValue(xValue, "X");
+        if(dataPoint != null)
+        {
+            // Update Y value of the point
+            dataPoint.YValues[0] = yValue;
+        }
+
+        // Export series values data and schema into hidden text fields
+        ChartDataSchema.Text = Chart1.DataManipulator.ExportSeriesValues().GetXmlSchema();
+        ChartData.Text = Chart1.DataManipulator.ExportSeriesValues().GetXml();
+
+        // Data bind the grid
+        SeriesValuesDataGrid.EditItemIndex = -1;
+        DataBindGrid();
+    }
+    catch
+    {
+    }
+}
+
+private void SeriesValuesDataGrid_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
+{
+    SeriesValuesDataGrid.CurrentPageIndex = e.NewPageIndex;
+    DataBindGrid();
+}
+
+private void SeriesValuesDataGrid_EditCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
+{
+    SeriesValuesDataGrid.EditItemIndex = e.Item.ItemIndex;
+    DataBindGrid();
+}
+
+private void SeriesValuesDataGrid_CancelCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
+{
+    SeriesValuesDataGrid.EditItemIndex = -1;
+    DataBindGrid();
+}
+...

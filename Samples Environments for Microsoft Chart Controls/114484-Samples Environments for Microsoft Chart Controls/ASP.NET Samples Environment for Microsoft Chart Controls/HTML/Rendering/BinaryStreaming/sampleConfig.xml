@@ -1,0 +1,21 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+	<SampleConfig ParentNodeID = "Rendering">
+	<Title>Binary Streaming Rendering</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Binary Streaming Rendering</ShortBlurb> 
+	<Content>BinaryStreaming.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">Overview.htm</InfoPage>
+		<InfoPage Title="HTML - BinaryStreaming.aspx">HTMLcode.txt</InfoPage>
+		<InfoPage Title="HTML - BinaryStreamingImage.aspx">HTMLcode2.txt</InfoPage>
+	</InfoPages>
+
+        <Keywords>
+		<Keyword>Rendering, Binary Streaming</Keyword>
+		<Keyword>Binary Streaming</Keyword>
+  	</Keywords>
+	</SampleConfig>	
+	
+</SampleConfigs>

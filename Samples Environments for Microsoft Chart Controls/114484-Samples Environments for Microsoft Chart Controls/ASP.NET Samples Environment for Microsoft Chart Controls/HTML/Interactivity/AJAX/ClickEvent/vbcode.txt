@@ -1,0 +1,40 @@
+''' <summary> 
+''' Page Load event handler. 
+''' </summary> 
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) 
+    AddHandler Me.Chart1.Click, AddressOf Chart1_Click 
+    
+    ' direct using of PostBackValue 
+    For Each series As Series In Me.Chart1.Series 
+        series.PostBackValue = "series:" + series.Name + ",#INDEX" 
+    Next 
+    
+    ' transfer of click coordinates. getCoordinates is a javascript function.
+    Dim postbackScript As String = ClientScript.GetPostBackEventReference(Me.Chart1, "chart:@") 
+    Me.Chart1.Attributes("onclick") = postbackScript.Replace("@'", "' + getCoordinates(event)") 
+    
+End Sub 
+
+
+''' <summary> 
+''' Handles the Click event of the Chart1 control. 
+''' </summary> 
+''' <param name="sender">The source of the event.</param> 
+''' <param name="e">The <see cref="System.Web.UI.WebControls.ImageMapEventArgs"/> instance containing the event data.</param> 
+Protected Sub Chart1_Click(ByVal sender As Object, ByVal e As ImageMapEventArgs) 
+    Me.Chart1.Titles("ClickedElement").Text = "Nothing" 
+    
+    Dim input As String() = e.PostBackValue.Split(":"C) 
+    If input.Length = 2 Then 
+        Dim seriesData As String() = input(1).Split(","C) 
+        If input(0).Equals("series") Then 
+            Me.Chart1.Titles("ClickedElement").Text = "Last Clicked Element: " + seriesData(0) + " - Data Point #" + seriesData(1) 
+		ElseIf input(0).Equals("chart") Then 
+            ' hit test of X and Y click point 
+            Dim hitTestResult As HitTestResult = Me.Chart1.HitTest(Int32.Parse(seriesData(0)), Int32.Parse(seriesData(1))) 
+            If hitTestResult IsNot Nothing Then 
+                Me.Chart1.Titles("ClickedElement").Text = "Last Clicked Element: " + hitTestResult.ChartElementType.ToString() 
+            End If 
+        End If 
+    End If 
+End Sub 

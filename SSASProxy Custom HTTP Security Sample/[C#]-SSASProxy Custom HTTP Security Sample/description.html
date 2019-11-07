@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=FF4BAED4E9857C91CE286B28C4B56541" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://msdn.microsoft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=D8951F5856887402DEF6DE6C2A998E78" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SSASProxy Custom HTTP Security Sample</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SSASProxy Custom HTTP Security Sample</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Excel 2010, SQL server analysis services, Excel 2013
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            HTTP Handler, Business Intelligence
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/30/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/SSASProxy-Custom-HTTP-7db6d016">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>This sample shows how to put a HTTP Handler in front of the Analysis Services Data Pump, which is the HTTP interface for Analysis Services.&nbsp; This HTTP Handler should be deployed in an IIS application that supports HTTP Anonymous authentication.&nbsp;
+</em></p>
+<h1><span>Building the Sample</span></h1>
+<p>The code is delivered as a Visual Studio 2012 project is configured to deploy to the local IIS web server.&nbsp; You'll need to run Visual Studio as Administrator to allow it to configure and deploy to IIS.&nbsp; The code also assumes that the SSAS Data
+ Pump is deployed at <a href="http://localhost/ssas/msmdpump.dll">http://localhost/ssas/msmdpump.dll</a>.&nbsp; You should test connectivity to the data pump from Excel before trying to run through the SSAS Proxy.</p>
+<p><span style="color:#a31515; font-family:Consolas; font-size:medium">&nbsp;</span><span style="font-size:20px; font-weight:bold">&nbsp;</span>&nbsp;</p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>The HTTP interface for Analysis Services supports Windows Integrated Authenticaion (NTLM or Kerberos) and HTTP Basic Authentication.&nbsp; And the authenticated user is then impersonated for connection to Analysis Services.&nbsp; This works well for
+ the normal case of domain-based users connecting to SSAS cubes from Excel.&nbsp; But for scenarios where the end user is not a member of a trusted domain, or the Analysis Services box is on a remote server and the client can't use Kerberos (ie where the client
+ can't communicate with the Domain Controller), the data pump can be hard to deploy.&nbsp; So this sample is intended to be useful in that scenario, and also serve as a starting point for other custom authentication scenarios with Analysis Services.</em></p>
+<p><em>The SSAS Proxy has a custom implementation of HTTP Basic authentication to validate user credentials against a custom identity store.&nbsp; The authenticated user identity is then passed to SSAS in the CustomData field of the XMLA BeginSession request
+ so it can be used by a cube to implement custom security.&nbsp; Note that since this uses HTTP Basic authentication, the user's password is sent in plain text to the web server, and so you should alwas use HTTPS to protect the traffic in a production deployment.</em></p>
+<p>&nbsp;</p>
+<h1>More Information</h1>
+<p><strong>CustomData (MDX)</strong></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms145582.aspx">http://msdn.microsoft.com/en-us/library/ms145582.aspx</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Clients (Analysis Services - Multidimensional Data)</strong></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms174518.aspx">http://msdn.microsoft.com/en-us/library/ms174518.aspx</a></p>
+<p>&nbsp;</p>
+<p><strong><em>Configure HTTP Access to Analysis Services on Internet Information Services (IIS) 7.0</em></strong></p>
+<p><em><a href="http://msdn.microsoft.com/en-us/library/gg492140(v=sql.110).aspx">http://msdn.microsoft.com/en-us/library/gg492140(v=sql.110).aspx</a></em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

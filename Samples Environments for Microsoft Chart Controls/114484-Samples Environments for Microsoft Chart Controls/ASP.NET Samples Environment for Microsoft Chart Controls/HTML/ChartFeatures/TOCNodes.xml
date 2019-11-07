@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<TOCNodes>
+
+  <TOCNode ID="ChartFeatures" Priority="1000">
+    <Title>Chart Features</Title>
+  </TOCNode>  
+ 
+  <TOCNode ID="DataSeries" ParentNodeID="ChartFeatures" Priority="50">
+    <Title>Data Series</Title>
+  </TOCNode>  
+  
+    <TOCNode ID="StateManagement" ParentNodeID="ChartFeatures" Priority="2000">
+    <Title>State Management</Title>
+  </TOCNode>  
+
+    
+
+</TOCNodes>

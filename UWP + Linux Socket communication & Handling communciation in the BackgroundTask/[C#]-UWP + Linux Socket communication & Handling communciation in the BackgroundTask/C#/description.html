@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=2BC858EE6D767D0C2BEFC420C2BABEA0" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=0B25E7803D8872332DD14DBB1E1B1A8D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>UWP + Linux Socket communication &amp; Handling communciation in the BackgroundTask</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>UWP + Linux Socket communication &amp; Handling communciation in the BackgroundTask</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, linux, universal windows app, Background task, Stream socket, SocketActivityC<wbr />onnectedStandby<wbr />Action, SocketActivityT<wbr />rigger
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Background tasks, Socket communication
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">12/18/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/UWP-Linux-Socket-a336e743">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span>Quick Overview of Socket Communications in the BackgroundTask.</span></p>
+<p><span>Why has it required?</span></p>
+<p><span>When the GUI leaving in the foreground due to some synchro like app has suspended in the foreground, delegate this job to the background task, background Task will be handling the communication.</span><strong>&nbsp;</strong><em>&nbsp;</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><span>The server application is running in the Linux PC, the Client application is running on the Windows 10 PC.</span></p>
+<p><span>Client</span></p>
+<p><span>1.<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>Windows 10</span></p>
+<p><span>2.<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span>Visual studio 2017 RC With UWP tools</span></strong></p>
+<p><span>3.<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>C#</span></p>
+<p><span>4.<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>UWP Toolkit</span></p>
+<p><span>Server (Any Server)</span></p>
+<p><span>1.<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>Linux mint 18</span></p>
+<p><span>2.<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><strong><span>Visual Studio Code IDE</span></strong></p>
+<p><span>3.<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>C Programming</span></p>
+<p><span>4.<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>Oracle Virtual Box</span><strong>&nbsp;</strong><em>&nbsp;</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><span style="color:#333333; font-family:Segoe UI; font-size:large">Transfer the Socket Communications</span></p>
+<p><span>Transfer the StreamSocket to the BackgroundTask, first, we have to Enable the transfer the ownership, to enable the use the&nbsp;<strong>EnableTransferOwnership</strong>&nbsp;API. To call this function in Server Side socket before the binding host
+ address, In Client side call this function, before Connect to the server socket.&nbsp;</span></p>
+<p><span>Transfer the socket: &nbsp;Based on the needs, call the TransferOwnerShip API to transfer the socket communication to the Background Task.(Socket Broker) , In this example OnSuspending event, we call the&nbsp;<strong>TransferOwnership</strong>&nbsp;API.</span></p>
+<p><span>Concept of this sample</span></p>
+<p><span>Using TCP protocol, Server sends the continues data to the client, the client will receive the data&rsquo;s display in GUI, Once Client App has suspended, BackgroundTask of the app receives the data&rsquo;s display as a ToastNotification.</span><strong>&nbsp;</strong><em>&nbsp;</em></p>
+<p>&nbsp;</p>
+<p><span style="font-size:medium">More Info : <a title="UWP &#43; Linux Socket communication & Handling communciation in the BackgroundTask" href="http://social.technet.microsoft.com/wiki/contents/articles/36500.uwp-linux-socket-communication-handling-communciation-in-the-backgroundtask.aspx?wa=wsignin1.0" >
+http://social.technet.microsoft.com/wiki/contents/articles/36500.uwp-linux-socket-communication-handling-communciation-in-the-backgroundtask.aspx?wa=wsignin1.0</a></span></p>
+<p>&nbsp;</p>
+<p>Server APP</p>
+<p>Server code has written in the C lanuguage</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;netdb.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    printf(&quot;UWP Socket Demo\n&quot;);
+
+     int sockfd, newsockfd, portno, clilen;
+   char buf[256];
+   struct sockaddr_in serv_addr, cli_addr;
+   int  n;
+    
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+   
+   if (sockfd &lt; 0)
+    {
+      perror(&quot;socket created error&quot;);
+      exit(1);
+   }
+
+   bzero((char *) &amp;serv_addr, sizeof(serv_addr));
+   portno = 6000;
+   
+   serv_addr.sin_family = AF_INET;
+   serv_addr.sin_addr.s_addr = INADDR_ANY;
+   serv_addr.sin_port = htons(portno);
+   
+    if (bind(sockfd, (struct sockaddr *) &amp;serv_addr, sizeof(serv_addr)) &lt; 0) {
+      perror(&quot;ERROR on binding&quot;);
+      exit(1);
+   }
+
+    printf(&quot;socket created\n&quot;);
+    
+   
+   listen(sockfd,5);
+   clilen = sizeof(cli_addr);
+   
+   printf(&quot;listen has accepted\n&quot;);
+
+    
+   newsockfd = accept(sockfd,(struct sockaddr *)&amp;cli_addr, &amp;clilen);
+	
+   if (newsockfd &lt; 0) {
+      perror(&quot;ERROR on accept&quot;);
+      exit(1);
+   }
+   
+   printf(&quot;Welcome new client\n&quot;);
+   
+   printf(&quot;Here is the message: %s\n&quot;,buf);
+    bzero(buf,256);
+        n = read(newsockfd,buf,255);
+        
+        if (n &lt; 0) {
+            perror(&quot;ERROR reading from socket&quot;);
+            exit(1);
+        }
+   
+   int i = 0;
+   
+   while(1)
+   {
+    
+      char str[20];
+      int len = sprintf(str,&quot;value : %d&quot;,i&#43;&#43;);
+      n = write(newsockfd,str,len);
+      
+      if (n &lt; 0) {
+          perror(&quot;Send Failed!!!\n&quot;);
+          exit(1);
+      }
+      sleep(10);
+
+      printf(&quot;Send %d \n&quot;,i);
+   }
+    return 0;
+}</pre>
+<div class="preview">
+<pre class="cplusplus"><span class="cpp__preproc">#include&nbsp;&lt;unistd.h&gt;</span><span class="cpp__preproc">&nbsp;
+#include&nbsp;&lt;stdio.h&gt;</span><span class="cpp__preproc">&nbsp;
+#include&nbsp;&lt;stdlib.h&gt;</span><span class="cpp__preproc">&nbsp;
+#include&nbsp;&lt;netdb.h&gt;</span><span class="cpp__preproc">&nbsp;
+#include&nbsp;&lt;netinet/in.h&gt;</span><span class="cpp__preproc">&nbsp;
+#include&nbsp;&lt;string.h&gt;</span>&nbsp;
+&nbsp;
+<span class="cpp__datatype">int</span>&nbsp;main()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="cpp__string">&quot;UWP&nbsp;Socket&nbsp;Demo\n&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">int</span>&nbsp;sockfd,&nbsp;newsockfd,&nbsp;portno,&nbsp;clilen;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">char</span>&nbsp;buf[<span class="cpp__number">256</span>];&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">struct</span>&nbsp;sockaddr_in&nbsp;serv_addr,&nbsp;cli_addr;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">int</span>&nbsp;&nbsp;n;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;sockfd&nbsp;=&nbsp;socket(AF_INET,&nbsp;SOCK_STREAM,&nbsp;<span class="cpp__number">0</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(sockfd&nbsp;&lt;&nbsp;<span class="cpp__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perror(<span class="cpp__string">&quot;socket&nbsp;created&nbsp;error&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="cpp__number">1</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;bzero((<span class="cpp__datatype">char</span>&nbsp;*)&nbsp;&amp;serv_addr,&nbsp;<span class="cpp__keyword">sizeof</span>(serv_addr));&nbsp;
+&nbsp;&nbsp;&nbsp;portno&nbsp;=&nbsp;<span class="cpp__number">6000</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;serv_addr.sin_family&nbsp;=&nbsp;AF_INET;&nbsp;
+&nbsp;&nbsp;&nbsp;serv_addr.sin_addr.s_addr&nbsp;=&nbsp;INADDR_ANY;&nbsp;
+&nbsp;&nbsp;&nbsp;serv_addr.sin_port&nbsp;=&nbsp;htons(portno);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(bind(sockfd,&nbsp;(<span class="cpp__keyword">struct</span>&nbsp;sockaddr&nbsp;*)&nbsp;&amp;serv_addr,&nbsp;<span class="cpp__keyword">sizeof</span>(serv_addr))&nbsp;&lt;&nbsp;<span class="cpp__number">0</span>)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perror(<span class="cpp__string">&quot;ERROR&nbsp;on&nbsp;binding&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="cpp__number">1</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="cpp__string">&quot;socket&nbsp;created\n&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;listen(sockfd,<span class="cpp__number">5</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;clilen&nbsp;=&nbsp;<span class="cpp__keyword">sizeof</span>(cli_addr);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;printf(<span class="cpp__string">&quot;listen&nbsp;has&nbsp;accepted\n&quot;</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;newsockfd&nbsp;=&nbsp;accept(sockfd,(<span class="cpp__keyword">struct</span>&nbsp;sockaddr&nbsp;*)&amp;cli_addr,&nbsp;&amp;clilen);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(newsockfd&nbsp;&lt;&nbsp;<span class="cpp__number">0</span>)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perror(<span class="cpp__string">&quot;ERROR&nbsp;on&nbsp;accept&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="cpp__number">1</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;printf(<span class="cpp__string">&quot;Welcome&nbsp;new&nbsp;client\n&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;printf(<span class="cpp__string">&quot;Here&nbsp;is&nbsp;the&nbsp;message:&nbsp;%s\n&quot;</span>,buf);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;bzero(buf,<span class="cpp__number">256</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;=&nbsp;read(newsockfd,buf,<span class="cpp__number">255</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(n&nbsp;&lt;&nbsp;<span class="cpp__number">0</span>)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perror(<span class="cpp__string">&quot;ERROR&nbsp;reading&nbsp;from&nbsp;socket&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="cpp__number">1</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">int</span>&nbsp;i&nbsp;=&nbsp;<span class="cpp__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">while</span>(<span class="cpp__number">1</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">char</span>&nbsp;str[<span class="cpp__number">20</span>];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__datatype">int</span>&nbsp;len&nbsp;=&nbsp;sprintf(str,<span class="cpp__string">&quot;value&nbsp;:&nbsp;%d&quot;</span>,i&#43;&#43;);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;=&nbsp;write(newsockfd,str,len);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">if</span>&nbsp;(n&nbsp;&lt;&nbsp;<span class="cpp__number">0</span>)&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perror(<span class="cpp__string">&quot;Send&nbsp;Failed!!!\n&quot;</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="cpp__number">1</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sleep(<span class="cpp__number">10</span>);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<span class="cpp__string">&quot;Send&nbsp;%d&nbsp;\n&quot;</span>,i);&nbsp;
+&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cpp__keyword">return</span>&nbsp;<span class="cpp__number">0</span>;&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img id="165912" width="1366" height="728" src="description/BGSocketServer.png" alt=""></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>UWP Client App</p>
+<p>&nbsp;</p>
+<p><img id="165914" width="1362" height="664" src="https://i1.code.msdn.s-msft.com/uwp-linux-socket-a336e743/image/file/165914/1/output.png" alt=""></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

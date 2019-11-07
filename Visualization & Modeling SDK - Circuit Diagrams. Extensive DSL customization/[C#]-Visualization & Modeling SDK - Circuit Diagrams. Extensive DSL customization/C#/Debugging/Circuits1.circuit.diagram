@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Circuits1">
+  <componentModelMoniker name="/a circuit" />
+  <nestedChildShapes>
+    <transistorShape Id="5b3d6b6b-992e-4d91-b13c-b2e6e857597d" absoluteBounds="2.2350000000000008, 2.4299999999999997, 0.4, 0.4" rotate="0" flip="false">
+      <transistorMoniker name="/a circuit/T2" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="269f29a1-ca57-486d-8719-b7f69e20636a" absoluteBounds="2.2100000000000009, 2.6049999999999995, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/T2/base" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="025d4eb7-7941-4dd0-aab1-5823bde214cf" absoluteBounds="2.4300000000000006, 2.405, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/T2/collector" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="a983ed34-f5b8-44b1-83ca-0ebc7f7f885c" absoluteBounds="2.4300000000000006, 2.8049999999999997, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/T2/emitter" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+    </transistorShape>
+    <transistorShape Id="5291221b-1d96-47f3-acac-08ce62a5a0de" absoluteBounds="3.495, 2.4269999999999992, 0.4, 0.4" rotate="0" flip="true">
+      <transistorMoniker name="/a circuit/T1" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="6e5edcaf-8334-4222-a91d-6ca476484df0" absoluteBounds="3.87, 2.601999999999999, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/T1/base" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="7ebb609c-0772-4a54-9c26-4df9b1999176" absoluteBounds="3.65, 2.4019999999999992, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/T1/collector" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="5f664b7f-6344-4087-9f64-0a59436e5dff" absoluteBounds="3.65, 2.8019999999999992, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/T1/emitter" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+    </transistorShape>
+    <resistorShape Id="1633ecf0-7295-4ee9-9307-186637df8b4e" absoluteBounds="2.3800000000000003, 1.06, 0.15, 0.4" rotate="1" flip="false">
+      <resistorMoniker name="/a circuit/RC2" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="02edc548-b84c-42b3-a635-8c5d41b28c82" absoluteBounds="2.43, 1.435, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/RC2/t1" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="6c44718b-f0c8-488d-814a-2384a0bd469e" absoluteBounds="2.43, 1.0350000000000001, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/RC2/t2" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+    </resistorShape>
+    <wireConnector edgePoints="[(2.455 : 2.405); (2.455 : 1.485)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="025d4eb7-7941-4dd0-aab1-5823bde214cf" />
+        <componentTerminalShapeMoniker Id="02edc548-b84c-42b3-a635-8c5d41b28c82" />
+      </nodes>
+    </wireConnector>
+    <junctionShape Id="4c888758-44fc-43f3-bbfa-cddcddb884c8" absoluteBounds="6.7, 3.7600000000000002, 0.099999999999999645, 0.099999999999999645" rotate="0" flip="false">
+      <junctionMoniker name="/a circuit/+ve" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="6.86, 3.7000000000000006, 0.2587076723575592, 0.181884765625" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+    </junctionShape>
+    <wireConnector edgePoints="[(3.675 : 2.852); (3.675 : 3.81); (6.7 : 3.81)]" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="5f664b7f-6344-4087-9f64-0a59436e5dff" />
+        <junctionShapeMoniker Id="4c888758-44fc-43f3-bbfa-cddcddb884c8" />
+      </nodes>
+    </wireConnector>
+    <junctionShape Id="28b76f55-1fa8-44d3-93af-e8090e98d36a" absoluteBounds="6.72, 1.8800000000000001, 0.10000000000000053, 0.099999999999999867" rotate="0" flip="false">
+      <junctionMoniker name="/a circuit/out" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="6.9, 1.8400000000000005, 0.2336222231388092, 0.181884765625" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+    </junctionShape>
+    <commentBoxShape Id="c3a35d62-88bb-4e4a-b3b8-8e2170152912" absoluteBounds="5.36, 2.98, 1.42, 0.58000000000000007">
+      <commentMoniker Id="9a88f11e-2f25-422d-b29c-af12bc5d17ee" />
+    </commentBoxShape>
+    <capacitorShape Id="0fbeb5cf-fd4c-4c9b-b761-ab185af9ddf3" absoluteBounds="4.8900000000000006, 2.4269999999999987, 0.2, 0.4" rotate="2" flip="false">
+      <capacitorMoniker name="/a circuit/C1" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="f1ed2f54-eea9-4912-afb4-e01110f4bb0b" absoluteBounds="5.065, 2.6019999999999985, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/C1/t1" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="37a37ac8-1084-45ac-87c1-374bc96fafc7" absoluteBounds="4.865, 2.6019999999999985, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/C1/t2" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+    </capacitorShape>
+    <resistorShape Id="6e3422db-5b80-4e11-a128-54dc8d27b593" absoluteBounds="3.6, 1.06, 0.15, 0.4" rotate="3" flip="false">
+      <resistorMoniker name="/a circuit/RC1" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="d4c95b1c-a955-4630-acdb-fc7f58024d8f" absoluteBounds="3.65, 1.0350000000000001, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/RC1/t1" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="e0eab2fa-7470-4926-b15f-a91d8f93c859" absoluteBounds="3.65, 1.435, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/RC1/t2" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+    </resistorShape>
+    <junctionShape Id="efaf624c-bbd4-4b03-bfff-f293d2d1ee79" absoluteBounds="6.72, 0.70000000000000007, 0.10000000000000053, 0.099999999999999978" rotate="0" flip="false">
+      <junctionMoniker name="/a circuit/-ve" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="6.85379638671875, 0.65999999999999881, 0.2221476137638092, 0.181884765625" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+    </junctionShape>
+    <wireConnector edgePoints="[(3.675 : 1.485); (3.675 : 2.402)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="DeepSkyBlue">
+      <nodes>
+        <componentTerminalShapeMoniker Id="e0eab2fa-7470-4926-b15f-a91d8f93c859" />
+        <componentTerminalShapeMoniker Id="7ebb609c-0772-4a54-9c26-4df9b1999176" />
+      </nodes>
+    </wireConnector>
+    <resistorShape Id="960d1663-1db2-4751-8609-9cabfd931fc1" absoluteBounds="1.58, 1.06, 0.15, 0.4" rotate="1" flip="false">
+      <resistorMoniker name="/a circuit/RB2" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="f67c59e7-1e76-44bb-9b31-de389bf3dfe0" absoluteBounds="1.6300000000000001, 1.435, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/RB2/t1" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="7b286830-b4c3-4059-8862-10422293b344" absoluteBounds="1.6300000000000001, 1.0350000000000001, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/RB2/t2" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+    </resistorShape>
+    <wireConnector edgePoints="[(3.92 : 2.627); (4.865 : 2.627)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="6e5edcaf-8334-4222-a91d-6ca476484df0" />
+        <componentTerminalShapeMoniker Id="37a37ac8-1084-45ac-87c1-374bc96fafc7" />
+      </nodes>
+    </wireConnector>
+    <resistorShape Id="9efe4035-9bc0-49a1-8dba-719fbe61f3a1" absoluteBounds="4.4, 1.08, 0.15, 0.4" rotate="1" flip="false">
+      <resistorMoniker name="/a circuit/RB1" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="ee6e34bc-76cc-45be-bed8-b654b70e1f5d" absoluteBounds="4.45, 1.455, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/RB1/t1" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="2d2189e0-9d1b-4012-a998-77a24f32a0f6" absoluteBounds="4.45, 1.0550000000000002, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/RB1/t2" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+    </resistorShape>
+    <wireConnector edgePoints="[(4.475 : 1.505); (4.475 : 2.627); (4.865 : 2.627)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="ee6e34bc-76cc-45be-bed8-b654b70e1f5d" />
+        <componentTerminalShapeMoniker Id="37a37ac8-1084-45ac-87c1-374bc96fafc7" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(2.455 : 1.485); (2.455 : 2.19625); (3.59166666666667 : 2.19625 : JumpStart); (3.75833333333333 : 2.19625 : JumpEnd); (4.39166666666667 : 2.19625 : JumpStart); (4.55833333333333 : 2.19625 : JumpEnd); (5.88 : 2.19625); (5.88 : 2.627); (5.115 : 2.627)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="02edc548-b84c-42b3-a635-8c5d41b28c82" />
+        <componentTerminalShapeMoniker Id="f1ed2f54-eea9-4912-afb4-e01110f4bb0b" />
+      </nodes>
+    </wireConnector>
+    <capacitorShape Id="1e433a84-9dd0-4375-8a5c-365a2fbb4ca8" absoluteBounds="1.32, 2.4299999999999997, 0.2, 0.4" rotate="0" flip="false">
+      <capacitorMoniker name="/a circuit/C2" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="bfbe1ecb-e892-4daf-8d85-09db030ab3e1" absoluteBounds="1.2950000000000002, 2.6049999999999995, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/C2/t1" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="cf7061ea-72e6-49fa-a368-1f1bf2c11ea0" absoluteBounds="1.495, 2.6049999999999995, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/C2/t2" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+    </capacitorShape>
+    <wireConnector edgePoints="[(2.21 : 2.63); (1.545 : 2.63)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="269f29a1-ca57-486d-8719-b7f69e20636a" />
+        <componentTerminalShapeMoniker Id="cf7061ea-72e6-49fa-a368-1f1bf2c11ea0" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(1.295 : 2.63); (0.92 : 2.63); (0.92 : 1.86); (1.57166666666667 : 1.86 : JumpStart); (1.73833333333333 : 1.86 : JumpEnd); (2.37166666666667 : 1.86 : JumpStart); (2.53833333333333 : 1.86 : JumpEnd); (3.675 : 1.86); (3.675 : 1.485)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="bfbe1ecb-e892-4daf-8d85-09db030ab3e1" />
+        <componentTerminalShapeMoniker Id="e0eab2fa-7470-4926-b15f-a91d8f93c859" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(1.655 : 1.485); (1.655 : 2.63); (1.545 : 2.63)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="f67c59e7-1e76-44bb-9b31-de389bf3dfe0" />
+        <componentTerminalShapeMoniker Id="cf7061ea-72e6-49fa-a368-1f1bf2c11ea0" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(4.475 : 1.055); (4.475 : 0.75); (6.72 : 0.75)]" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="2d2189e0-9d1b-4012-a998-77a24f32a0f6" />
+        <junctionShapeMoniker Id="efaf624c-bbd4-4b03-bfff-f293d2d1ee79" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(3.675 : 1.035); (3.675 : 0.75); (6.72 : 0.75)]" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="d4c95b1c-a955-4630-acdb-fc7f58024d8f" />
+        <junctionShapeMoniker Id="efaf624c-bbd4-4b03-bfff-f293d2d1ee79" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(2.455 : 1.035); (2.455 : 0.75); (6.72 : 0.75)]" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="6c44718b-f0c8-488d-814a-2384a0bd469e" />
+        <junctionShapeMoniker Id="efaf624c-bbd4-4b03-bfff-f293d2d1ee79" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(1.655 : 1.035); (1.655 : 0.75); (6.72 : 0.75)]" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="7b286830-b4c3-4059-8862-10422293b344" />
+        <junctionShapeMoniker Id="efaf624c-bbd4-4b03-bfff-f293d2d1ee79" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(2.455 : 2.855); (2.455 : 3.81); (6.7 : 3.81)]" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="a983ed34-f5b8-44b1-83ca-0ebc7f7f885c" />
+        <junctionShapeMoniker Id="4c888758-44fc-43f3-bbfa-cddcddb884c8" />
+      </nodes>
+    </wireConnector>
+    <resistorShape Id="be6203c8-a832-4cdd-8541-252ad67e29e3" absoluteBounds="5.5, 1.8550000000000002, 0.5, 0.15" rotate="0" flip="false">
+      <resistorMoniker name="/a circuit/Rout" />
+      <relativeChildShapes>
+        <componentTerminalShape Id="fffeba1f-747c-4a98-b35d-44f32b352b18" absoluteBounds="5.475, 1.9050000000000003, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/Rout/t1" />
+        </componentTerminalShape>
+        <componentTerminalShape Id="11064a11-5b79-41fd-a6a1-c176ef08c3ae" absoluteBounds="5.975, 1.9050000000000003, 0.05, 0.05">
+          <componentTerminalMoniker name="/a circuit/Rout/t2" />
+        </componentTerminalShape>
+      </relativeChildShapes>
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="5.6620834922790539, 1.6608332538604738, 0.3106485903263092, 0.181884765625" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+    </resistorShape>
+    <wireConnector edgePoints="[(3.675 : 1.485); (3.675 : 1.93); (5.475 : 1.93)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="e0eab2fa-7470-4926-b15f-a91d8f93c859" />
+        <componentTerminalShapeMoniker Id="fffeba1f-747c-4a98-b35d-44f32b352b18" />
+      </nodes>
+    </wireConnector>
+    <wireConnector edgePoints="[(6.025 : 1.93); (6.72 : 1.93)]" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="e03e3c03-c1d5-42df-bf9d-ca45e1e90064" color="Black">
+      <nodes>
+        <componentTerminalShapeMoniker Id="11064a11-5b79-41fd-a6a1-c176ef08c3ae" />
+        <junctionShapeMoniker Id="28b76f55-1fa8-44d3-93af-e8090e98d36a" />
+      </nodes>
+    </wireConnector>
+    <commentBoxShape Id="860970d0-7d90-4e40-b53e-9eeba62c94ea" absoluteBounds="0.5, 3.3200000000000003, 1.8000000000000003, 0.85999999999999943">
+      <commentMoniker Id="b79868d9-524f-45d7-a123-37966de9759d" />
+    </commentBoxShape>
+    <commentLink edgePoints="[(1.42 : 3.32); (1.42 : 2.83)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="47946380-4f7b-408a-848f-d5334cd75407">
+      <nodes>
+        <commentBoxShapeMoniker Id="860970d0-7d90-4e40-b53e-9eeba62c94ea" />
+        <capacitorShapeMoniker Id="1e433a84-9dd0-4375-8a5c-365a2fbb4ca8" />
+      </nodes>
+    </commentLink>
+    <commentBoxShape Id="90e908c2-e511-44cc-b0e4-4305ad8bfef7" absoluteBounds="0.86, 4.7, 2.7800000000000002, 1.0599999999999996">
+      <commentMoniker Id="4a73e2f6-0292-4087-aeec-31f3fc4751ea" />
+    </commentBoxShape>
+  </nestedChildShapes>
+</componentDiagram>

@@ -1,0 +1,476 @@
+﻿/*
+//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF 
+//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
+//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A 
+//// PARTICULAR PURPOSE. 
+//// 
+//// Copyright (c) Microsoft Corporation. All rights reserved     
+////
+//// To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/dn163531
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2d353e;
+}
+
+.heading {
+    font-size: 40pt;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.label {
+    font-size: 18pt;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.value {
+    font-size: 18pt;
+    font-weight: 400;
+}
+
+.text {
+    font-size: 13pt;
+    font-weight: 400;
+}
+
+#contenthost {
+    height: 100%;
+    width: 100%;
+}
+
+h1 .pagetitle {
+    background: transparent url('/images/contoso-logo.png') no-repeat;
+    display: inline-block;
+    height: 25px;
+    overflow: hidden;
+    text-indent: -1000px;
+    width: 185px;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 128px 1fr;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment header[role=banner] {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 100px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin-left:39px;
+            margin-top:66px;
+            background: url('/images/back-arrow.png') center center no-repeat transparent;
+            border: none;
+            cursor: pointer;
+            border-radius: 0px;
+        }
+            .fragment header[role=banner] .win-backbutton:before {
+                display: none;
+            }
+            .fragment header[role=banner] .win-backbutton:hover {
+                background-color: transparent;
+            }
+
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 2;
+            margin-top: 37px;
+        }
+
+    .fragment section[role=main] {
+        -ms-grid-row: 2;        
+        width: 100%;
+    }
+
+[role=listitem] {
+    margin: 0px 0 0;
+}
+
+.win-listview > .win-horizontal .win-container {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+
+.win-groupheader.active {
+    overflow: visible;
+}
+
+.win-groupheader.active::before {
+    border-bottom: 7px solid rgb(215, 177, 65);
+    content: "";
+    display: block;
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    top: 600px;
+}
+
+.win-groupheader.active::after {
+    background: rgb(45, 53, 62);
+    box-shadow: rgb(215, 177, 65) 7px 7px;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 45px;
+    left: 50%;
+    margin-left: -22px;
+    position: absolute;
+    top: 589px;
+    width: 45px;
+    transform: rotateZ(-135deg);
+}
+
+.graph {
+    height: 500px;
+    width: 700px;
+}
+
+.callout {
+    height: 100%;
+    line-height: 180px;
+    position: relative;
+    width: 270px;
+    margin: 5px;
+}
+
+.callout-label,
+.callout-value {
+    display: block;
+    height: 100%;
+}
+
+.callout-label {
+    bottom: 0px;
+    font-size: 12px;
+    left: 10px;
+    line-height: 30px;
+    position: absolute;
+    height: 30px;
+}
+.callout-meta {
+    bottom: 0px;
+    font-size: 12px;
+    right: 10px;
+    line-height: 30px;
+    position: absolute;
+    height: 30px;
+    text-align: right;
+}
+
+.callout-value {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    line-height: 90px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.callout.box {
+    height: 115px;
+    line-height: 50px;
+    width: 130px;
+    margin-left: 10px;
+}
+
+.callout.box .callout-label {
+    left: 10px;
+    text-align: left;
+}
+.callout.double {
+    height: 240px;
+    line-height: 180px;
+    padding: 0px;
+    position: relative;
+    width: 550px;
+}
+.callout.full {
+    height: 240px;
+    line-height: 180px;
+    padding: 0px;
+    position: relative;
+    width: 270px;
+}
+.callout.half {
+    height: 115px;
+    line-height: 180px;
+    padding: 0px;
+    position: relative;
+    width: 270px;    
+}
+
+.callout.staticChart {
+    height: 490px;
+    width: 600px;
+}
+
+::selection,
+.win-selected.win-container .win-selectionborder, :not(.win-selectionstylefilled).win-listview .win-selected.win-container:hover .win-selectionborder  {
+    border-color: #4099FF !important;
+}
+
+.win-selectionstylefilled.win-listview .win-selectioncheckmarkbackground {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 60px 60px 0;
+    border-color: transparent #4099FF transparent transparent;
+} 
+
+.win-selectioncheckmark {
+    font-size: 12pt;
+    top: 5px;
+    right: 5px;
+    color: #fff !important;
+} 
+.win-selectionhint {
+    color: #fff;
+}
+
+
+/*========================
+Key Metrics
+==========================*/
+
+.callout.keyMetrics-callout {
+    background: #6f8d91;
+}
+.keyMetrics-callout.itemName .callout-value {
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: none;
+    padding: 0px 10px;
+}
+
+/*========================
+Social Reach
+==========================*/
+
+.callout.socialReach-callout {
+    background: #0072B1;
+}
+.callout.socialReach-callout.negative {
+    background: #C24648;
+}
+.socialReach-callout .callout-value {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: none;
+    padding: 15px 20px;
+    text-align: left;
+}
+
+
+/*========================
+Foot Traffic
+==========================*/
+
+.callout.footTraffic-callout {
+    background: #947e96;
+}
+.footTraffic-callout.compiled {
+    background: url('/images/icon-large-foot-traffic.png') center center no-repeat #947e96;
+}
+.footTraffic-callout.min {
+    background-color: #554659;
+}
+
+/*========================
+Revenue
+==========================*/
+
+.revenue-callout.box {
+    background: #97c256;
+}
+
+.revenue-callout.gross {
+    background: #97c256 url('/images/icon-large-revenue.png') center center no-repeat;
+}
+
+.revenue-callout.net {
+    background: #6d8a4c url('/images/icon-large-revenue.png') center center no-repeat;
+}
+
+/*========================
+Top Products
+==========================*/
+
+.topProducts-callout {
+
+}
+.topProducts-callout .callout-value {
+    font-size: 44px;
+}
+.topProducts-callout.electronics {
+    background-color: #bb4e53;
+}
+.topProducts-callout.food {
+    background-color: #cf5961;
+}
+.topProducts-callout.clothing {
+    background-color: #eb7072;
+}
+.topProducts-callout.appliances {
+    background-color: #f29583;
+}
+
+/*========================
+In-store pickups
+==========================*/
+
+.pickups-callout {
+
+}
+.pickups-callout .callout-value {
+    font-size: 44px;
+}
+.pickups-callout.electronics {
+    background-color: #ef5411;
+}
+.pickups-callout.food {
+    background-color: #ff6517;
+}
+.pickups-callout.clothing {
+    background-color: #ff6d1f;
+}
+.pickups-callout.appliances {
+    background-color: #ff822e;
+}
+
+
+/*========================
+Promotions
+==========================*/
+
+.promotions-callout.box {
+    background-color: #90b5ac;
+}
+
+.promotions-callout.promotions {
+    background: #90b5ac url('/images/icon-large-promotions.png') center center no-repeat;
+}
+
+.promotions-callout.sales {
+    background: #5b6e6f url('/images/icon-large-promotions.png') center center no-repeat;
+}
+.promoItem {
+    background-image: url('/images/icon-large-promotions.png');
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+    .promoItem .callout-value {
+        display: none;
+    }
+
+/*========================
+Restock
+==========================*/
+
+.restock {
+    background: #3db5b9; 
+}
+    .restock .callout-value::after {
+        content: "%";
+        position: relative;
+        top: -20px;
+        font-size: 26px;
+    }
+    .restock.low-inventory {
+        background: #C24648;
+    }
+        .restock.low-inventory:after {
+            content: "LOW INVENTORY";
+            font-weight: bold;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: -50px;
+        } 
+
+/*========================
+Conversion Rate
+==========================*/
+
+.conversionRate-callout {
+
+}
+
+.conversionRate-callout.actual {
+    background-color: #d7b141;
+}
+.conversionRate-callout.goal {
+    background-color: #ac8e34;
+}
+
+/*========================
+Loyalty Customers
+==========================*/
+
+.callout.loyaltyCustomers-callout {
+    width: 410px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+/*========================
+Main Competitors
+==========================*/
+
+.mainCompetitors-callout {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #3C4652;
+}
+
+
+
+@media screen and (-ms-view-state: snapped) {
+    .fragment header[role=banner] {
+        -ms-grid-columns: auto 1fr;
+        margin-left: 20px;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin: 0;
+            margin-right: 10px;
+            margin-top: 76px;
+        }
+
+            .fragment header[role=banner] .win-backbutton:disabled {
+                display: none;
+            }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 2;
+            margin-left: 0;
+            margin-top: 68px;
+        }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .fragment header[role=banner] {
+        -ms-grid-columns: 100px 1fr;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin-left: 29px;
+        }
+}

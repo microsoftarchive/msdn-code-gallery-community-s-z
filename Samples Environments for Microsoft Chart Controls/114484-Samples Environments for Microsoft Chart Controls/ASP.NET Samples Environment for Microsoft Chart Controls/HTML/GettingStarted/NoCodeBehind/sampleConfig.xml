@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Getting Started">
+  	<Title>Chart Without Code-Behind</Title>
+  	<Thumbnail>thumbnail.jpg</Thumbnail>
+  	<ShortBlurb>Chart without Code-Behind</ShortBlurb> 
+  	<Content>NoCodeChart.aspx</Content> 
+
+  	<InfoPages>
+    		<InfoPage Title="HTML Source">nocodechart._aspx</InfoPage>
+  	</InfoPages>
+
+	<Keywords>
+		<Keyword>Dynamic chart creation</Keyword>
+  	</Keywords>
+	</SampleConfig>
+	
+</SampleConfigs>

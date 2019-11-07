@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfMultiClick.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WpfMultiClick"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        FontSize="16"
+        Title="Exclusive single and double click commands" Height="350" Width="525">
+    <Grid>
+        <StackPanel Margin="10">        
+            <Button x:Name="button"
+                    local:MultiClickBehavior.SingleClickCommand="{Binding SingleClick}" 
+                    local:MultiClickBehavior.SingleClickCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Name}"
+                    local:MultiClickBehavior.DoubleClickCommand="{Binding DoubleClick}"
+                    local:MultiClickBehavior.DoubleClickCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Name}"
+                    Width="200">
+                MultiClick button
+            </Button>
+            <Label x:Name="label"
+                    local:MultiClickBehavior.SingleClickCommand="{Binding SingleClick}" 
+                    local:MultiClickBehavior.SingleClickCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Name}"
+                    local:MultiClickBehavior.DoubleClickCommand="{Binding DoubleClick}"
+                    local:MultiClickBehavior.DoubleClickCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Name}"
+                    Width="200" HorizontalContentAlignment="Center">
+                MultiClick label
+            </Label>
+            <Border x:Name="border"
+                    local:MultiClickBehavior.SingleClickCommand="{Binding SingleClick}" 
+                    local:MultiClickBehavior.SingleClickCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Name}"
+                    local:MultiClickBehavior.DoubleClickCommand="{Binding DoubleClick}"
+                    local:MultiClickBehavior.DoubleClickCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Name}"
+                    Width="200" Height="35" Background="Orange">
+                <TextBlock>MultiClick border</TextBlock>
+            </Border>
+            <ListView x:Name="lbxClickLog" Height="150" ScrollViewer.VerticalScrollBarVisibility="Disabled" ItemsSource="{Binding ClickLog}">                
+            </ListView>            
+            <TextBlock Text="{Binding DoubleClickTime,StringFormat='Windows double-click timeout {0} milliseconds'}"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

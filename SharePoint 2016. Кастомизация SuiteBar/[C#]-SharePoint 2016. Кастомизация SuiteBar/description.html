@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=A6AA17D0353A61CAAA95ADD5561E120A" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=4CF1B132D11479A210C89A75D257BCD6" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SharePoint 2016. Кастомизация SuiteBar</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SharePoint 2016. Кастомизация SuiteBar</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            SharePoint Server 2016
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            SharePoint Branding, SharePoint SuiteBar
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">ru-RU</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">7/12/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/SharePoint-2016-SuiteBar-9f9d8304">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Введение</h1>
+<p><span style="font-size:small"><em>Де&#1084;онстрационный проект, из&#1084;еняющий SuiteBar и AppLauncher в SharePoint 2016 OnPrem.</em></span></p>
+<p><em><img id="155755" src="https://i1.code.msdn.s-msft.com/sharepoint-2016-suitebar-9f9d8304/image/file/155755/1/suitebarmenu-note.png" alt="" width="815" height="475"><br>
+</em></p>
+<h1><span>Построение</span></h1>
+<p><em>Р<span style="font-size:small">ешение создано в Visual Studio 2015 и предназначено для развертывания в фер&#1084;е SharePoint 2016 On-Premise. Для его открытия потребуется наличие установленного пакета Office Developer Tools.</span></em></p>
+<p><span style="font-size:small"><em>Решение уровня фер&#1084;ы (farm solution) и не предназначено для его публикации в SharePoint Online либо в виде sandbox solution.</em></span></p>
+<h1><span style="font-size:20px; font-weight:bold">Описание</span></h1>
+<p><em style="font-size:small">В решение включены следующие артефакты:</em></p>
+<h2><em><span style="font-size:15px">Классы для создание SuiteNav</span></em></h2>
+<p><span style="font-size:small"><em>Класс-контейнер SuiteNav, содержит инфор&#1084;ацию о версии, воз&#1084;ожности кеширования и са&#1084;и данные (свойство NavBarData):</em></span></p>
+<p><em><span style="font-size:15px">&nbsp;</span></em></p>
+<div class="scriptcode"><em>
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class SuiteNav
+{
+    public bool DoNotCache { get; set; }
+    public SuiteNavBarData NavBarData { get; set; }
+    public int SPSuiteVersion { get; set; }
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;SuiteNav&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">bool</span>&nbsp;DoNotCache&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;SuiteNavBarData&nbsp;NavBarData&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">int</span>&nbsp;SPSuiteVersion&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</em></div>
+<p><em>&nbsp;</em></p>
+<div class="endscriptcode"><em><span style="font-size:small">&nbsp;Са&#1084;и данные для SuiteBar представленны классо&#1084; SuiteNavBarData:</span></em></div>
+<p><em>&nbsp;</em></p>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class SuiteNavBarData
+{
+    public SuiteNavLink AboutMeLink { get; set; }
+    public string ClientData { get; set; }
+    public string CurrentMainLinkElementID { get; set; }
+    public SuiteNavLink[] CurrentWorkloadHelpSubLinks { get; set; }
+    public SuiteNavLink[] CurrentWorkloadSettingsSubLinks { get; set; }
+    public SuiteNavLink[] CurrentWorkloadUserSubLinks { get; set; }
+    public SuiteNavLink HelpLink { get; set; }
+    public bool IsAuthenticated { get; set; }
+    public SuiteNavLink SignOutLink { get; set; }
+    public Dictionary&lt;string, string&gt; StringsOverride { get; set; }
+    public string UserDisplayName { get; set; }
+    public List&lt;SuiteNavLink&gt; WorkloadLinks { get; set; }
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">class</span>&nbsp;SuiteNavBarData&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;SuiteNavLink&nbsp;AboutMeLink&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;ClientData&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;CurrentMainLinkElementID&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;SuiteNavLink[]&nbsp;CurrentWorkloadHelpSubLinks&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;SuiteNavLink[]&nbsp;CurrentWorkloadSettingsSubLinks&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;SuiteNavLink[]&nbsp;CurrentWorkloadUserSubLinks&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;SuiteNavLink&nbsp;HelpLink&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">bool</span>&nbsp;IsAuthenticated&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;SuiteNavLink&nbsp;SignOutLink&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Dictionary&lt;<span class="cs__keyword">string</span>,&nbsp;<span class="cs__keyword">string</span>&gt;&nbsp;StringsOverride&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;UserDisplayName&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;List&lt;SuiteNavLink&gt;&nbsp;WorkloadLinks&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><em><span style="font-size:small">Свойства класса SuiteNavBarData:</span></em></div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li><span style="font-size:small"><strong>CurrentMainLinkElementID&nbsp;</strong>- просто указывае&#1084; &quot;ShellSharepoint&quot;;</span>
+</li><li><span style="font-size:small"><strong>UserDisplayName&nbsp;</strong>- и&#1084;я текущего пользователя, &#1084;ожно указать любое значение;</span>
+</li><li><span style="font-size:small"><strong>IsAuthenticated&nbsp;</strong>- авторизован ли пользователь;</span>
+</li><li><span style="font-size:small"><strong>CurrentWorkloadHelpSubLinks&nbsp;</strong>- дополнительные пункты &#1084;еню&nbsp;<em>Справка</em>;</span>
+</li><li><span style="font-size:small"><strong>CurrentWorkloadSettingsSubLinks&nbsp;</strong>- дополнительные пункты &#1084;еню&nbsp;<em>Настройка</em>;</span>
+</li><li><span style="font-size:small"><strong>CurrentWorkloadUserSubLinks</strong>&nbsp;- дополнительные пункты &#1084;еню&nbsp;<em>Пользователя</em>;</span>
+</li><li><span style="font-size:small"><strong>WorkloadLinks&nbsp;</strong>- App Launcher;</span>
+</li></ul>
+<p><em style="font-size:1.5em">&nbsp;</em></p>
+<div class="endscriptcode" style="display:inline!important">
+<p style="display:inline!important"><span style="font-size:small">Са&#1084;и ссылки описываются классо&#1084; SuiteNavLink:</span></p>
+</div>
+<h2><em>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class SuiteNavLink
+{
+    public string Id { get; set; }
+    public string Text { get; set; }
+    public string Title { get; set; }
+    public string Url { get; set; }
+}</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">public</span><span class="cs__keyword">class</span>&nbsp;SuiteNavLink&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">string</span>&nbsp;Id&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">string</span>&nbsp;Text&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">string</span>&nbsp;Title&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span><span class="cs__keyword">string</span>&nbsp;Url&nbsp;{&nbsp;<span class="cs__keyword">get</span>;&nbsp;<span class="cs__keyword">set</span>;&nbsp;}&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</em></h2>
+<h2>REST API</h2>
+<p><span style="font-size:small">В качестве источника данных для SuiteBar &#1084;ожет выступать только REST API. Для этого в решении описан сервис&nbsp;и, содержащий &#1084;етод&nbsp;<strong>GetSuiteNavData</strong>. Метод должен обязательно наызваться&nbsp;<strong>GetSuiteNavData</strong>,
+ иначе решение не заработает.</span></p>
+<h1><span style="font-size:small">Делегат контрол</span></h1>
+<p><span style="font-size:small">Для регистрации сервиса в качестве источника данных для SuiteBar в решении присутствует эле&#1084;ент&nbsp;<strong>SuiteNavStapling</strong>:</span></p>
+<p><span style="font-size:small">&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Elements xmlns=&quot;http://schemas.microsoft.com/sharepoint/&quot;&gt;
+  &lt;Control Id=&quot;SuiteBarDelegate&quot; 
+           Sequence=&quot;50&quot; 
+           ControlClass=&quot;Microsoft.SharePoint.WebControls.SuiteNavControl&quot;
+           ControlAssembly=&quot;<a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-2016-SuiteBar-9f9d8304/https://code.msdn.microsoft.com/SharePoint-2016-SuiteBar-9f9d8304/https://msdn.microsoft.com/ru-RU/library/Microsoft.SharePoint.aspx"  title="Auto generated link to Microsoft.SharePoint">Microsoft.SharePoint</a>, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c&quot; 
+           xmlns=&quot;http://schemas.microsoft.com/sharepoint/&quot;&gt;
+    &lt;Property Name=&quot;SuiteNavRestMethod&quot;&gt;CustomSuiteNav/GetSuiteNavData&lt;/Property&gt;
+  &lt;/Control&gt;
+&lt;/Elements&gt;
+</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;?xml</span>&nbsp;<span class="xml__attr_name">version</span>=<span class="xml__attr_value">&quot;1.0&quot;</span>&nbsp;<span class="xml__attr_name">encoding</span>=<span class="xml__attr_value">&quot;utf-8&quot;</span><span class="xml__tag_start">?&gt;</span>&nbsp;
+<span class="xml__tag_start">&lt;Elements</span>&nbsp;<span class="xml__attr_name">xmlns</span>=<span class="xml__attr_value">&quot;http://schemas.microsoft.com/sharepoint/&quot;</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;<span class="xml__tag_start">&lt;Control</span>&nbsp;<span class="xml__attr_name">Id</span>=<span class="xml__attr_value">&quot;SuiteBarDelegate&quot;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__attr_name">Sequence</span>=<span class="xml__attr_value">&quot;50&quot;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__attr_name">ControlClass</span>=<span class="xml__attr_value">&quot;Microsoft.SharePoint.WebControls.SuiteNavControl&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__attr_name">ControlAssembly</span>=<span class="xml__attr_value">&quot;<a class="libraryLink" href="https://code.msdn.microsoft.com/SharePoint-2016-SuiteBar-9f9d8304/https://code.msdn.microsoft.com/SharePoint-2016-SuiteBar-9f9d8304/https://msdn.microsoft.com/ru-RU/library/Microsoft.SharePoint.aspx"  title="Auto generated link to Microsoft.SharePoint">Microsoft.SharePoint</a>,&nbsp;Version=16.0.0.0,&nbsp;Culture=neutral,&nbsp;PublicKeyToken=71e9bce111e9429c&quot;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__attr_name">xmlns</span>=<span class="xml__attr_value">&quot;http://schemas.microsoft.com/sharepoint/&quot;</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;Property</span>&nbsp;<span class="xml__attr_name">Name</span>=<span class="xml__attr_value">&quot;SuiteNavRestMethod&quot;</span><span class="xml__tag_start">&gt;</span>CustomSuiteNav/GetSuiteNavData<span class="xml__tag_end">&lt;/Property&gt;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_end">&lt;/Control&gt;</span>&nbsp;
+<span class="xml__tag_end">&lt;/Elements&gt;</span>&nbsp;</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<ul>
+</ul>
+<h1>Подробное описание</h1>
+<p><span style="font-size:small"><em>Подробное описание доступно у &#1084;еня в блоге:&nbsp;<a href="http://blog.vitalyzhukov.ru/ru/sharepoint-2016-suitebar-menu.aspx" >http://blog.vitalyzhukov.ru/ru/sharepoint-2016-suitebar-menu.aspx</a></em></span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

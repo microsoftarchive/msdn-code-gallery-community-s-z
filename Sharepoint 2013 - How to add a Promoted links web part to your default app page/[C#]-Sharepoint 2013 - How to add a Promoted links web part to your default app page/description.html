@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/9bf1b74c-1640-46af-84d3-e440c8f95162Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sharepoint 2013 - How to add a Promoted links web part to your default app page</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Sharepoint 2013 - How to add a Promoted links web part to your default app page</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            apps for SharePoint, SharePoint 2013
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            SharePoint, Development
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">4/30/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Sharepoint-2013-How-to-add-e2966a24">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>In this sample will help you to add a Promoted links web part to your default app page. by using Microsoft Office Developer Tools for Visual Studio 2012 we will create nice view for Promoted links list and add to out sharepoint 2013 sharepoint-host app.</p>
+<p>To more details and apply this article step by step:<a href="http://mushannak.blogspot.com/2013/02/how-add-promoted-links-web-part-to.html">http://mushannak.blogspot.com/2013/02/how-add-promoted-links-web-part-to.html</a></p>
+<p>&nbsp;</p>
+<p>After we you prepared your SharePoint 2013 development environment then download and deploy the project, you will find your default app page as the following figure:</p>
+<p><img id="76382" src="description/Promoted links web-part to SharePoint 2013 app.png" alt="" width="507" height="275"></p>
+<p>&nbsp;</p>
+<h1><span>Prerequisites</span></h1>
+<p><em>This sample requires the following:<br>
+&bull;&nbsp;A SharePoint 2013 development environment (you can use office 365 developer preview)<br>
+&bull;&nbsp;Visual Studio 2012 and SharePoint development tools in Visual Studio 2012 installed on your developer computer</em></p>
+<h1><span style="font-size:20px; font-weight:bold"><span>Description</span></span></h1>
+<p>The sample also demonstrates how to create, package, and deploy a Promoted links list to the app web and add the Promoted links web part to your default app page.&nbsp;</p>
+<p>&nbsp;We will use the following tags to add the web part to the default.aspx app page:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">&lt;WebPartPages:WebPartZone ID=&quot;WebPartZone&quot; runat=&quot;server&quot; FrameType=&quot;None&quot;&gt;
+            &lt;WebPartPages:XsltListViewWebPart ID=&quot;XsltListViewAppPromotedList&quot;
+                runat=&quot;server&quot; ListUrl=&quot;Lists/MyPromotedLinks&quot; IsIncluded=&quot;True&quot;
+                NoDefaultStyle=&quot;TRUE&quot; Title=&quot;Images used in switcher&quot;
+                PageType=&quot;PAGE_NORMALVIEW&quot; Default=&quot;False&quot;
+                ViewContentTypeId=&quot;0x&quot;&gt;
+            &lt;/WebPartPages:XsltListViewWebPart&gt;
+       &lt;/WebPartPages:WebPartZone&gt;
+</pre>
+<div class="preview">
+<pre class="html"><span class="html__tag_start">&lt;WebPartPages</span>:WebPartZone&nbsp;<span class="html__attr_name">ID</span>=<span class="html__attr_value">&quot;WebPartZone&quot;</span>&nbsp;<span class="html__attr_name">runat</span>=<span class="html__attr_value">&quot;server&quot;</span>&nbsp;<span class="html__attr_name">FrameType</span>=<span class="html__attr_value">&quot;None&quot;</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_start">&lt;WebPartPages</span>:XsltListViewWebPart&nbsp;<span class="html__attr_name">ID</span>=<span class="html__attr_value">&quot;XsltListViewAppPromotedList&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__attr_name">runat</span>=<span class="html__attr_value">&quot;server&quot;</span>&nbsp;<span class="html__attr_name">ListUrl</span>=<span class="html__attr_value">&quot;Lists/MyPromotedLinks&quot;</span>&nbsp;<span class="html__attr_name">IsIncluded</span>=<span class="html__attr_value">&quot;True&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__attr_name">NoDefaultStyle</span>=<span class="html__attr_value">&quot;TRUE&quot;</span>&nbsp;<span class="html__attr_name">Title</span>=<span class="html__attr_value">&quot;Images&nbsp;used&nbsp;in&nbsp;switcher&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__attr_name">PageType</span>=<span class="html__attr_value">&quot;PAGE_NORMALVIEW&quot;</span>&nbsp;<span class="html__attr_name">Default</span>=<span class="html__attr_value">&quot;False&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__attr_name">ViewContentTypeId</span>=<span class="html__attr_value">&quot;0x&quot;</span><span class="html__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/WebPartPages:XsltListViewWebPart&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__tag_end">&lt;/WebPartPages:WebPartZone&gt;</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<h1>More Information</h1>
+<p><em>To more details and apply this article step by step:<a href="http://mushannak.blogspot.com/2013/02/how-add-promoted-links-web-part-to.html">http://mushannak.blogspot.com/2013/02/how-add-promoted-links-web-part-to.html</a></em></p>
+<p><em>How to Set up an environment for developing apps for SharePoint on Office 365:
+<a href="http://msdn.microsoft.com/en-us/library/fp161179.aspx">http://msdn.microsoft.com/en-us/library/fp161179.aspx</a></em></p>
+<p><em>How to Create a basic app for SharePoint by using &quot;Napa&quot; Office 365 Development Tools :
+<a href="http://msdn.microsoft.com/en-us/library/jj220041.aspx">http://msdn.microsoft.com/en-us/library/jj220041.aspx</a></em></p>
+<h1>Troubleshooting</h1>
+<p><span style="font-size:small">The following table lists common configuration and environment errors that prevent the sample from running or deploying properly and how to solve them.</span></p>
+<table border="0" cellspacing="5" cellpadding="5" frame="void" align="left" style="width:601px; height:212px">
+<tbody>
+<tr style="background-color:#a9a9a9">
+<th align="left" scope="col"><strong><span style="font-size:small">Problem </span>
+</strong></th>
+<th align="left" scope="col"><strong><span style="font-size:small">Solution</span></strong></th>
+</tr>
+<tr valign="top">
+<td><span style="font-size:small">Visual Studio does not open the browser after you press the F5 key.</span></td>
+<td><span style="font-size:small">Set the app for SharePoint project as the startup project.</span></td>
+</tr>
+<tr valign="top">
+<td><span style="font-size:small">
+<div>
+<p>&ldquo;The file not found&rdquo; error in App default.aspx page</p>
+</div>
+</span></td>
+<td><span style="font-size:small">validate and correct the ListUrl path.</span></td>
+</tr>
+</tbody>
+</table>
+<h1><br>
+<br>
+<span style="font-size:small">&nbsp;</span><br>
+<br>
+<br>
+</h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

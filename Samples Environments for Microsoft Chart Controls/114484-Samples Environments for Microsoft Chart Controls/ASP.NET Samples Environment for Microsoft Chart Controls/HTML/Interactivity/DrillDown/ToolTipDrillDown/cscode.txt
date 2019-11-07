@@ -1,0 +1,53 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Load the chart with values
+
+    // Resolve the address to the Access database
+    string fileNameString = this.MapPath(".");
+    fileNameString += "..\\..\\..\\..\\data\\chartdata.mdb";
+
+    // Initialize a connection string	
+    string myConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString;
+	
+    // Define the database query	
+    string mySelectQuery;
+    mySelectQuery = "SELECT REGIONS.RegionName, Sum(REPS_SALES.Sales) AS SumOfSales ";
+    mySelectQuery +="FROM REPS_SALES INNER JOIN REGIONS ON REPS_SALES.RegionID = REGIONS.RegionID ";
+    mySelectQuery +="GROUP BY REGIONS.RegionName;";
+
+    // Create a database connection object using the connection string	
+    OleDbConnection myConnection = new OleDbConnection(myConnectionString);
+			
+    // Create a database command on the connection using query	
+    OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+			
+    // Open the connection	
+    myCommand.Connection.Open();
+			
+    // Create a database reader	
+    OleDbDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+			
+    // Since the reader implements IEnumerable, pass the reader directly into
+    //   the DataBind method with the name of the Column selected in the query	
+    Chart1.Series["Sales"].Points.DataBindXY(myReader, "RegionName", myReader, "SumOfSales");
+
+    // Close the reader and the connection
+    myReader.Close();
+    myConnection.Close();   
+
+    // Set series tooltips
+    foreach(Series series in Chart1.Series)
+    {
+        for(int pointIndex = 0; pointIndex < series.Points.Count; pointIndex++)
+        {    
+            string toolTip = "";
+            toolTip = "<IMG SRC=RegionChart.aspx?region=" + series.Points[pointIndex].AxisLabel + ">";
+            series.Points[pointIndex].MapAreaAttributes = "onmouseover=\"DisplayTooltip('" + toolTip + "');\" onmouseout=\"DisplayTooltip('');\"";
+            series.Points[pointIndex].Href = "DetailedRegionChart.aspx?region=" + series.Points[pointIndex].AxisLabel;
+        }
+    }			
+}
+...

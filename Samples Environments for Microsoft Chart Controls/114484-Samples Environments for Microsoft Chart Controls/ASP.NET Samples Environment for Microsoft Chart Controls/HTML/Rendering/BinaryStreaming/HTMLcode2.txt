@@ -1,0 +1,26 @@
+<%@ Page Language="c#" Inherits="System.Web.UI.DataVisualization.Charting.Samples.BinaryStreamingImage" CodeFile="BinaryStreamingImage.aspx.cs" %>
+<asp:chart id="Chart1" runat="server" height="296px" width="412px" imagelocation="~/TempImages/ChartPic_#SEQ(300,3)"
+    imagetype="Png" palette="BrightPastel" backcolor="#F3DFC1" rendertype="BinaryStreaming"
+    BorderlineDashStyle="Solid" backgradientstyle="TopBottom" borderwidth="2" bordercolor="181, 64, 1">
+	<series>
+		<asp:Series ChartTypeName="SplineArea" Name="Series1" BorderColor="64, 64, 64" ShadowOffset="2">
+			<points>
+				<asp:DataPoint YValues="6" />
+				<asp:DataPoint YValues="9" />
+				<asp:DataPoint YValues="3" />
+				<asp:DataPoint YValues="5" />
+				<asp:DataPoint YValues="2" />
+				<asp:DataPoint YValues="7" />
+				<asp:DataPoint YValues="8" />
+				<asp:DataPoint YValues="1" />
+			</points>
+		</asp:Series>
+	</series>
+	<Legend Enabled="False"></Legend>
+	<borderskin SkinStyle="Emboss"></borderskin>
+	<chartareas>
+		<asp:ChartArea BorderColor="" Name="Default" BackColor="Transparent">
+			<axisx IsMarginVisible="False"></axisx>
+		</asp:ChartArea>
+	</chartareas>
+</asp:chart>

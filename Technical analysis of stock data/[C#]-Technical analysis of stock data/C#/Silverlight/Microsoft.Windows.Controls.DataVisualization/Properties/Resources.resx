@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Axis_AxisTypeIsNotCategory" xml:space="preserve">
+    <value>Axis type is not Category.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Axis_AxisTypeIsNotDateTime" xml:space="preserve">
+    <value>Axis type is not DateTime.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Axis_AxisTypeIsNotLinear" xml:space="preserve">
+    <value>Axis type is not Linear.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Axis_DateTimeAxis_InvalidFormatArgument" xml:space="preserve">
+    <value>For an Axis of type DateTime, value must be able to be parsed as a DateTime or a double.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Axis_LinearAxisAreaSizeChanged_WrongSign" xml:space="preserve">
+    <value>Interval is of the wrong sign for the Minimum and Maximum values provided.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Axis_LinearAxis_NonDoubleArgument" xml:space="preserve">
+    <value>For an Axis of type Linear, value must be able to be parsed as a double.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Axis_OnAxisTypeChanged_CannotChangeTypeOfAnAxisWhenItIsInUseByASeries" xml:space="preserve">
+    <value>Cannot change the type of an axis when it is in use by one or more series.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Axis_OnOrientationPropertyChanged_TheOrientationOfAnAxisCannotBeChangedWhenItIsInUse" xml:space="preserve">
+    <value>The orientation of an axis cannot be changed when it is in use by one or more objects.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Chart_Axes_SetterNotSupported" xml:space="preserve">
+    <value>Changing the Chart's Axes property is not supported; changes to the collection should be made with its .Add/.Remove methods instead.</value>
+    <comment>Setter is public to work around a limitation with the XAML editing tools.</comment>
+  </data>
+  <data name="Chart_OnAxesCollectionChanged_AnAxisCannotBeRemovedFromTheChartWhenItIsInUseByAnObject" xml:space="preserve">
+    <value>An axis cannot be removed from the chart when it is in use by one or more objects in the chart.  You must first remove the object using it from the chart.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Chart_Series_SetterNotSupported" xml:space="preserve">
+    <value>Changing the Chart's Series property is not supported; changes to the collection should be made with its .Add/.Remove methods instead.</value>
+    <comment>Setter is public to work around a limitation with the XAML editing tools.</comment>
+  </data>
+  <data name="Chart_UnregisterWithSeries_OneAxisCannotBeUsedByMultipleCharts" xml:space="preserve">
+    <value>Axis is not in the chart.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataPointSeriesWithAxes_AxisCannotPlotValue" xml:space="preserve">
+    <value>Axis cannot plot value {0}.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataPointSeriesWithAxes_AxisIsIncorrectOrientation" xml:space="preserve">
+    <value>Unexpected axis orientation.  Expected {0}.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataPointSeriesWithAxes_DependentValueMustBeNumeric" xml:space="preserve">
+    <value>Plotting of non-numeric values on the dependent axis is not supported.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataPointSeriesWithAxes_ExpectedAxesOfTypeICategoryAxis" xml:space="preserve">
+    <value>Expected axis of type ICategoryAxis.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataPointSeriesWithAxes_ExpectedAxesOfTypeIRangeAxis" xml:space="preserve">
+    <value>Expected axis of type IRangeAxis.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataPointSeriesWithAxes_GetDateTimeRangeGetNumericRange_InvalidAttemptToRetrieveDateTimeRangeForAxisNotInUseByTheSeries" xml:space="preserve">
+    <value>Invalid attempt to retrieve date time range for axis not in use by the series.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataPointSeriesWithAxes_GetNumericRange_InvalidAttemptToRetrieveNumericRangeForAxisNotInUseByTheSeries" xml:space="preserve">
+    <value>Invalid attempt to retrieve numeric range for axis not in use by the series.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataPointSeriesWithAxes_ValueMustBeDateTimeOrNumeric" xml:space="preserve">
+    <value>Invalid attempt to plot a value that is neither a DateTime or a numeric value on a range axis.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="DataVisualization_ReadOnlyDependencyPropertyChange" xml:space="preserve">
+    <value>{0} is a read-only DependencyProperty.</value>
+    <comment>Silverlight does not support DependencyProperty.RegisterReadOnly.</comment>
+  </data>
+  <data name="RangeAxis_MaximumValueMustBeLargerThanOrEqualToMinimumValue" xml:space="preserve">
+    <value>The maximum value must be larger than or equal to the minimum value.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="RangeAxis_MinimumValueMustBeLargerThanOrEqualToMaximumValue" xml:space="preserve">
+    <value>The minimum value must be smaller than or equal to the maximum value.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Range_ctor_MaximumValueMustBeLargerThanOrEqualToMinimumValue" xml:space="preserve">
+    <value>The maximum value must be larger than or equal to the minimum value.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Range_get_Maximum_CannotReadTheMaximumOfAnEmptyRange" xml:space="preserve">
+    <value>"Cannot read the Maximum of an empty range."</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Range_get_Minimum_CannotReadTheMinimumOfAnEmptyRange" xml:space="preserve">
+    <value>"Cannot read the Minimum of an empty range."</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="ReadOnlyObservableCollection_CollectionIsReadOnly" xml:space="preserve">
+    <value>Collection is read-only.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Series_CannotRegisterWithAxisWhenNotInsideOfAChartsSeriesCollection" xml:space="preserve">
+    <value>Cannot register with an axis when not inside of a Chart's Series collection.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Series_DependentValueMustEitherBeANumericValueOrADateTime" xml:space="preserve">
+    <value>DependentValue must be either be numeric or a DateTime.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Series_IndependentValueMustEitherBeANumericValueOrADateTime" xml:space="preserve">
+    <value>IndependentValue must be either be numeric or a DateTime.</value>
+    <comment>Exception message.</comment>
+  </data>
+  <data name="Series_OnGlobalSeriesIndexPropertyChanged_UntitledSeriesFormatString" xml:space="preserve">
+    <value>Series {0}</value>
+    <comment>Used to format the string returned by the Title property if a Title is not specified.</comment>
+  </data>
+  <data name="Series_SeriesHost_SeriesHostPropertyNotNull" xml:space="preserve">
+    <value>The Series is already in use by a different Host.</value>
+    <comment>Exception message.</comment>
+  </data>
+</root>

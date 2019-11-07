@@ -1,0 +1,67 @@
+﻿<Window x:Class="WebBrowser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebBrowser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800" MinWidth="800" MinHeight="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Bisque">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox
+                Grid.Column="0" 
+                Name="urlTxtBox"
+                Text="http://"
+                FontSize="20"
+                Margin="2"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Center"
+            />
+            <Button
+                Grid.Column="1"
+                Name="btnGo"
+                Click="btnGo_Click"
+                Content="Go"
+                FontSize="20"
+                Margin="5,2,5,2"
+            />
+        </Grid>
+
+        <Grid Grid.Row="1" Background="DarkBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Name="btnBackward" FontWeight="SemiBold" FontSize="20" Content="&#xE0A6;" FontFamily="segoe mdl2 assets" Margin="5,0" Click="btnBackward_Click"/>
+            <Button Grid.Column="1" Name="btnForward" FontWeight="SemiBold" FontSize="20" Content="&#xE0AD;" FontFamily="segoe mdl2 assets" Margin="5,0" Click="btnForward_Click"/>
+            <Button Grid.Column="2" Name="btnRefresh" FontWeight="SemiBold" FontSize="20" Content="&#xE149;" FontFamily="segoe mdl2 assets" Margin="5,0" Click="btnRefresh_Click"/>
+           
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <WebBrowser 
+                Name="webBrowser1" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Margin="5"
+            />
+        </Grid>
+        
+    </Grid>
+</Window>

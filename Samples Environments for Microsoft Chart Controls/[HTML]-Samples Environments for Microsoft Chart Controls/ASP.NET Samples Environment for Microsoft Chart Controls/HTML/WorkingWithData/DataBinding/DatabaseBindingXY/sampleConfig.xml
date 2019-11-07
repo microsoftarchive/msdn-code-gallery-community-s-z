@@ -1,0 +1,39 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "DataBinding" Priority = "500">
+  <Title>Data Binding X and Y Values</Title>
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Binding X and Y Values</ShortBlurb>
+  <Content>DataBindingXY.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding X and Y values</Keyword>
+    <Keyword>Binding, X and Y values</Keyword>
+  </Keywords>  
+  
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "DataSourceTypes">
+  <Title>Binding X and Y Values</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Binding X and Y Values</ShortBlurb>
+  <Content>DataBindingXY.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding X and Y values</Keyword>
+    <Keyword>Binding, X and Y values</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

@@ -1,0 +1,37 @@
+
+
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) 
+    If Not Me.IsPostBack Then 
+        
+        Me.Chart1.ViewStateContent = SerializationContents.All 
+        Me.Chart1.EnableViewState = True 
+        
+        Me.Chart1.Legends(0).CustomItems(0).Cells(0).PostBackValue = "LegendClick/0" 
+        Me.Chart1.Legends(0).CustomItems(1).Cells(0).PostBackValue = "LegendClick/1" 
+            
+        Me.Chart1.Legends(0).CustomItems(2).Cells(0).PostBackValue = "LegendClick/2" 
+    End If 
+End Sub 
+
+Protected Sub Chart1_Click(ByVal sender As Object, ByVal e As ImageMapEventArgs) 
+    ' If user clicks on the map area attribute that corresponds to a legend item 
+    If e.PostBackValue.StartsWith("LegendClick") Then 
+        Dim args As String = e.PostBackValue.Split("/"C)(1) 
+        ' Identify which legend item was clicked 
+        Dim index As Integer = Integer.Parse(args) 
+        
+        ' Legend item result 
+        Dim legendItem As LegendItem = Me.Chart1.Legends(0).CustomItems(index) 
+        
+        ' Resets all radio button images to be unchecked 
+        For Each item As LegendItem In Me.Chart1.Legends(0).CustomItems 
+            item.Cells(0).ImageTransparentColor = Color.Black 
+            item.Cells(0).Image = "radio_button_unchecked.gif" 
+        Next 
+        
+        Me.Chart1.Series(0).ChartType = DirectCast([Enum].Parse(GetType(SeriesChartType), legendItem.Cells(1).Text, True), SeriesChartType) 
+        Me.Chart1.Series(0).BorderWidth = IIf(Me.Chart1.Series(0).ChartType = SeriesChartType.Line,3,1) 
+        legendItem.Cells(0).Image = "radio_button_checked.gif" 
+        legendItem.Cells(0).ImageTransparentColor = Color.Green 
+    End If 
+End Sub 

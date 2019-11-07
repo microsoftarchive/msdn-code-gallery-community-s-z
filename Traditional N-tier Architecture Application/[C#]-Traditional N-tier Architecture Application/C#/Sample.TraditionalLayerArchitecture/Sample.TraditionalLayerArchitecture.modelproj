@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6aa002f9-9610-4c7e-a5d4-95416a4bd154}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Sample.TraditionalLayerArchitecture</Name>
+    <RootNamespace>Sample.TraditionalLayerArchitecture</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="false" />
+  <ItemGroup>
+    <Content Include="BusinessEntity.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BusinessEntity.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BusinessEntity.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Operation.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Operation.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Operation.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="UIControl.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UIControl.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UIControl.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\Sample.TraditionalLayerArchitecture.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Company.Caching\Company.Caching.csproj">
+      <Name>Company.Caching</Name>
+      <Project>{1901668c-4cb8-4fa5-8021-e91d120dd553}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Control\Company.UI.Web.Control.csproj">
+      <Name>Company.UI.Web.Control</Name>
+      <Project>{119b9861-58cc-4e71-899f-7b88fb8f32f9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Data\Company.Data.csproj">
+      <Name>Company.Data</Name>
+      <Project>{b9851b51-da00-479e-8c53-bd47384057b9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Entity\Company.Business.Entity.csproj">
+      <Name>Company.Business.Entity</Name>
+      <Project>{a23677ca-280f-42b8-a603-b8cde23b5401}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.ExceptionManager\Company.ExceptionManager.csproj">
+      <Name>Company.ExceptionManager</Name>
+      <Project>{fca44fad-261c-4bb8-8a8f-fdd9ec41ac95}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Helper\Company.Helper.csproj">
+      <Name>Company.Helper</Name>
+      <Project>{9920055b-e749-4454-acd8-a47e69349699}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Loging\Company.Loging.csproj">
+      <Name>Company.Loging</Name>
+      <Project>{b4497a91-6a33-494f-88d7-13851ab3ab0a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Mobile\Company.Mobile.csproj">
+      <Name>Company.Mobile</Name>
+      <Project>{c67509c0-ff54-4bdb-8b24-35cc1065f26f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Operation\Company.Business.Operation.csproj">
+      <Name>Company.Business.Operation</Name>
+      <Project>{19d237ba-f220-4015-a84e-b89d1b81997e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.ServerControl\Company.UI.Mobile.Control.csproj">
+      <Name>Company.UI.Mobile.Control</Name>
+      <Project>{c08e9333-0129-4b80-9038-43a2f1a6b632}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.UI.Windows.Control\Company.UI.Windows.Control.csproj">
+      <Name>Company.UI.Windows.Control</Name>
+      <Project>{96407b6b-f684-4a43-a144-7922a82660a9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Validation\Company.Validation.csproj">
+      <Name>Company.Validation</Name>
+      <Project>{0d3b9fdc-12c4-4d5f-8104-b7c3bdf10ee2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.WebControl\Company.UI.Control.csproj">
+      <Name>Company.UI.Control</Name>
+      <Project>{f7dbd354-e54d-4c50-803e-50eb747568dd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.WebUI\Company.Web.csproj">
+      <Name>Company.Web</Name>
+      <Project>{8c2fe456-d454-4420-b3b9-8621688fdcbe}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Windows\Company.Windows.csproj">
+      <Name>Company.Windows</Name>
+      <Project>{c6a5ccde-41cf-4f3a-8fd6-5293e7085172}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Structional0.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Structional0.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Structional0.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Structional0.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Structional0.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Structional1.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Structional1.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Structional1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Structional1.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Structional1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Structional2.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Structional2.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Structional2.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Structional2.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Structional2.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+</Project>

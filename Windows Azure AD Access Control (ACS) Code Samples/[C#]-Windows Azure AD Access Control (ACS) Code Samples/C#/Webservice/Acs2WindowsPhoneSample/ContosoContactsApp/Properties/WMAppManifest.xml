@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// Copyright 2010 Microsoft Corporation
+// Licensed under the Apache License, Version 2.0 (the "License");
+// You may not use this file except in compliance with the License.
+// You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+// THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR
+// CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+// INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OR
+// CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+// MERCHANTABLITY OR NON-INFRINGEMENT.
+
+// See the Apache 2 License for the specific language governing
+// permissions and limitations under the License. -->
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.0">
+  <App xmlns="" ProductID="{794059be-ac71-40fc-83cb-806db5f52bf2}" Title="ContosoContactsApp" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="ContosoContactsApp author" Description="Sample description" Publisher="ContosoContactsApp">
+    <IconPath IsRelative="true" IsResource="false">ContactIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="ContosoContactsAppToken" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">ContactIcon.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>Contoso Contacts</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>

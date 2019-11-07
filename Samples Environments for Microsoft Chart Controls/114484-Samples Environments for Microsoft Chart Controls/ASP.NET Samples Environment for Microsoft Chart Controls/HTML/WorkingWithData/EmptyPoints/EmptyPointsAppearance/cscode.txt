@@ -1,0 +1,68 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Bind Series1 to the array. Points with double.NaN values will be marked as empty
+    double[]	yValues = {12, 67, 45, double.NaN, 67, 89, 35, 12, 78, 54};
+    double[]	xValues = {1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999};
+    Chart1.Series["Series1"].Points.DataBindXY(xValues, yValues);
+
+    // Populate Series2 with random data. 
+    Random		random = new Random();
+    for(int pointIndex = 0; pointIndex < 10; pointIndex++)
+    {
+        // Insert empty point by setting the Empty property of the DataPoint
+        if(pointIndex == 7)
+        {
+            Chart1.Series["Series2"].Points.AddXY(pointIndex + 1990, 0);
+            Chart1.Series["Series2"].Points[pointIndex].IsEmpty = true;
+        }
+
+        // Insert point with random data
+        else
+        {
+            Chart1.Series["Series2"].Points.AddXY(pointIndex + 1990, random.Next(5, 95));
+        }
+    }
+
+
+    // Loop through all series
+    foreach(Series series in Chart1.Series)
+    {
+        // Set empty points visual appearance attributes
+        series.EmptyPointStyle.Color = Color.Gray;
+        series.EmptyPointStyle.BorderWidth = 2;
+        series.EmptyPointStyle.BorderDashStyle = ChartDashStyle.Dash;
+        series.EmptyPointStyle.MarkerSize = 7;
+        series.EmptyPointStyle.MarkerStyle = MarkerStyle.Cross;
+        series.EmptyPointStyle.MarkerBorderColor = Color.Black;
+        series.EmptyPointStyle.MarkerColor = Color.LightGray;
+
+        // Adjust visual appearance attributes depending on the user selection
+        if(EmptyPointAppearanceList.SelectedItem.Text == "Transparent")
+        {
+            series.EmptyPointStyle.BorderWidth = 0;
+            series.EmptyPointStyle.MarkerStyle = MarkerStyle.None;
+        }
+        else if(EmptyPointAppearanceList.SelectedItem.Text == "Line")
+        {
+            series.EmptyPointStyle.BorderDashStyle = ChartDashStyle.Dot;
+            series.EmptyPointStyle.BorderWidth = 1;
+            series.EmptyPointStyle.Color = series.Color;
+        }
+        else if(EmptyPointAppearanceList.SelectedItem.Text == "Marker")
+        {
+            series.EmptyPointStyle.BorderWidth = 0;
+            series.EmptyPointStyle.MarkerSize = 8;
+            series.EmptyPointStyle.MarkerStyle = MarkerStyle.Diamond;
+            series.EmptyPointStyle.MarkerColor = series.Color;
+        }
+    }
+    
+    // Set empty points values of Series1 to average and Series2 to zero
+    Chart1.Series[Series1]["EmptyPointValue"] = "Average";
+    Chart1.Series[Series2]["EmptyPointValue"] = "Zero";
+
+}
+...

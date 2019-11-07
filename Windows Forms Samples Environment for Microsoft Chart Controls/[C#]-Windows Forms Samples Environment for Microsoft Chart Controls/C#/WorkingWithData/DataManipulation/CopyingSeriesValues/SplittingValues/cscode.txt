@@ -1,0 +1,23 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+  
+// Split series data
+chart1.DataManipulator.CopySeriesValues("Bubble:Y1,Bubble:Y2", "Column:Y1,Line:Y1");
+
+// Set Column chart attributes
+chart1.Series["Column"].ChartType = SeriesChartType.Column;
+chart1.Series["Column"].BorderColor = Color.FromArgb(64, 64, 64);
+chart1.Series["Column"].ShadowOffset = 2;
+chart1.Series["Column"].Color = Color.Firebrick;
+
+// Set Line chart attributes
+chart1.Series["Line"].ChartType = SeriesChartType.Line;
+chart1.Series["Line"].YAxisType = AxisType.Secondary;
+chart1.Series["Line"].BorderWidth = 3;
+chart1.Series["Line"].BorderColor = Color.FromArgb(64, 64, 64);
+chart1.Series["Line"].ShadowOffset = 2;
+chart1.Series["Line"].Color = Color.Red;
+chart1.Series["Line"].MarkerBorderColor = Color.FromArgb(64, 64, 64);
+chart1.Series["Line"].MarkerStyle = MarkerStyle.Circle;
+chart1.Series["Line"].MarkerColor = Color.LightCoral; 
+...

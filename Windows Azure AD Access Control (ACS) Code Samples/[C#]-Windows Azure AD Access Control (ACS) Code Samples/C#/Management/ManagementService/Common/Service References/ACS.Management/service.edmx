@@ -1,0 +1,436 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="Microsoft.Cloud.AccessControl.Management" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2007/05/edm">
+      <EntityType Name="ServiceKey">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Usage" Type="Edm.String" Nullable="true" />
+        <Property Name="Type" Type="Edm.String" Nullable="true" />
+        <Property Name="Value" Type="Edm.Binary" Nullable="true" />
+        <Property Name="Password" Type="Edm.Binary" Nullable="true" />
+        <Property Name="IsPrimary" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="EndDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="true" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="IdentityProvider">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="IssuerId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="true" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" />
+        <Property Name="WebSSOProtocolType" Type="Edm.String" Nullable="true" />
+        <Property Name="Realm" Type="Edm.String" Nullable="true" />
+        <Property Name="LoginLinkName" Type="Edm.String" Nullable="true" />
+        <Property Name="LoginParameters" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="IdentityProviderAddresses" Relationship="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderAddresses_IdentityProviderAddress_IdentityProvider" FromRole="IdentityProvider_IdentityProviderAddresses" ToRole="IdentityProviderAddress_IdentityProvider" />
+        <NavigationProperty Name="IdentityProviderClaimTypes" Relationship="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderClaimTypes_IdentityProviderClaimType_IdentityProvider" FromRole="IdentityProvider_IdentityProviderClaimTypes" ToRole="IdentityProviderClaimType_IdentityProvider" />
+        <NavigationProperty Name="IdentityProviderKeys" Relationship="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderKeys_IdentityProviderKey_IdentityProvider" FromRole="IdentityProvider_IdentityProviderKeys" ToRole="IdentityProviderKey_IdentityProvider" />
+        <NavigationProperty Name="Issuer" Relationship="Microsoft.Cloud.AccessControl.Management.Issuer_IdentityProviders_IdentityProvider_Issuer" FromRole="IdentityProvider_Issuer" ToRole="Issuer_IdentityProviders" />
+        <NavigationProperty Name="RelyingPartyIdentityProviders" Relationship="Microsoft.Cloud.AccessControl.Management.IdentityProvider_RelyingPartyIdentityProviders_RelyingPartyIdentityProvider_IdentityProvider" FromRole="IdentityProvider_RelyingPartyIdentityProviders" ToRole="RelyingPartyIdentityProvider_IdentityProvider" />
+      </EntityType>
+      <EntityType Name="IdentityProviderAddress">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="IdentityProviderId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="EndpointType" Type="Edm.String" Nullable="true" />
+        <Property Name="Address" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="IdentityProvider" Relationship="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderAddresses_IdentityProviderAddress_IdentityProvider" FromRole="IdentityProviderAddress_IdentityProvider" ToRole="IdentityProvider_IdentityProviderAddresses" />
+      </EntityType>
+      <EntityType Name="IdentityProviderKey">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="IdentityProviderId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="true" />
+        <Property Name="Usage" Type="Edm.String" Nullable="true" />
+        <Property Name="Type" Type="Edm.String" Nullable="true" />
+        <Property Name="Value" Type="Edm.Binary" Nullable="true" />
+        <Property Name="Password" Type="Edm.Binary" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="EndDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="IdentityProvider" Relationship="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderKeys_IdentityProviderKey_IdentityProvider" FromRole="IdentityProviderKey_IdentityProvider" ToRole="IdentityProvider_IdentityProviderKeys" />
+      </EntityType>
+      <EntityType Name="ClaimType">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Uri" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="IdentityProviderClaimTypes" Relationship="Microsoft.Cloud.AccessControl.Management.ClaimType_IdentityProviderClaimTypes_IdentityProviderClaimType_ClaimType" FromRole="ClaimType_IdentityProviderClaimTypes" ToRole="IdentityProviderClaimType_ClaimType" />
+      </EntityType>
+      <EntityType Name="IdentityProviderClaimType">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ClaimTypeId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="IdentityProviderId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="ClaimType" Relationship="Microsoft.Cloud.AccessControl.Management.ClaimType_IdentityProviderClaimTypes_IdentityProviderClaimType_ClaimType" FromRole="IdentityProviderClaimType_ClaimType" ToRole="ClaimType_IdentityProviderClaimTypes" />
+        <NavigationProperty Name="IdentityProvider" Relationship="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderClaimTypes_IdentityProviderClaimType_IdentityProvider" FromRole="IdentityProviderClaimType_IdentityProvider" ToRole="IdentityProvider_IdentityProviderClaimTypes" />
+      </EntityType>
+      <EntityType Name="Delegation">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ServiceIdentityId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="RelyingPartyId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="IdentityProvider" Type="Edm.String" Nullable="true" />
+        <Property Name="NameIdentifier" Type="Edm.String" Nullable="true" />
+        <Property Name="Permissions" Type="Edm.String" Nullable="true" />
+        <Property Name="AuthorizationCode" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="RelyingParty" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_Delegations_Delegation_RelyingParty" FromRole="Delegation_RelyingParty" ToRole="RelyingParty_Delegations" />
+        <NavigationProperty Name="ServiceIdentity" Relationship="Microsoft.Cloud.AccessControl.Management.ServiceIdentity_Delegations_Delegation_ServiceIdentity" FromRole="Delegation_ServiceIdentity" ToRole="ServiceIdentity_Delegations" />
+      </EntityType>
+      <EntityType Name="RelyingParty">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="true" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" />
+        <Property Name="TokenType" Type="Edm.String" Nullable="true" />
+        <Property Name="TokenLifetime" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AsymmetricTokenEncryptionRequired" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="Delegations" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_Delegations_Delegation_RelyingParty" FromRole="RelyingParty_Delegations" ToRole="Delegation_RelyingParty" />
+        <NavigationProperty Name="RelyingPartyAddresses" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyAddresses_RelyingPartyAddress_RelyingParty" FromRole="RelyingParty_RelyingPartyAddresses" ToRole="RelyingPartyAddress_RelyingParty" />
+        <NavigationProperty Name="RelyingPartyIdentityProviders" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyIdentityProviders_RelyingPartyIdentityProvider_RelyingParty" FromRole="RelyingParty_RelyingPartyIdentityProviders" ToRole="RelyingPartyIdentityProvider_RelyingParty" />
+        <NavigationProperty Name="RelyingPartyKeys" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyKeys_RelyingPartyKey_RelyingParty" FromRole="RelyingParty_RelyingPartyKeys" ToRole="RelyingPartyKey_RelyingParty" />
+        <NavigationProperty Name="RelyingPartyRuleGroups" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyRuleGroups_RelyingPartyRuleGroup_RelyingParty" FromRole="RelyingParty_RelyingPartyRuleGroups" ToRole="RelyingPartyRuleGroup_RelyingParty" />
+      </EntityType>
+      <EntityType Name="RelyingPartyAddress">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="RelyingPartyId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="EndpointType" Type="Edm.String" Nullable="true" />
+        <Property Name="Address" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="RelyingParty" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyAddresses_RelyingPartyAddress_RelyingParty" FromRole="RelyingPartyAddress_RelyingParty" ToRole="RelyingParty_RelyingPartyAddresses" />
+      </EntityType>
+      <EntityType Name="RelyingPartyIdentityProvider">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="IdentityProviderId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="RelyingPartyId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="IdentityProvider" Relationship="Microsoft.Cloud.AccessControl.Management.IdentityProvider_RelyingPartyIdentityProviders_RelyingPartyIdentityProvider_IdentityProvider" FromRole="RelyingPartyIdentityProvider_IdentityProvider" ToRole="IdentityProvider_RelyingPartyIdentityProviders" />
+        <NavigationProperty Name="RelyingParty" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyIdentityProviders_RelyingPartyIdentityProvider_RelyingParty" FromRole="RelyingPartyIdentityProvider_RelyingParty" ToRole="RelyingParty_RelyingPartyIdentityProviders" />
+      </EntityType>
+      <EntityType Name="RelyingPartyKey">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="RelyingPartyId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="true" />
+        <Property Name="Usage" Type="Edm.String" Nullable="true" />
+        <Property Name="Type" Type="Edm.String" Nullable="true" />
+        <Property Name="Value" Type="Edm.Binary" Nullable="true" />
+        <Property Name="Password" Type="Edm.Binary" Nullable="true" />
+        <Property Name="IsPrimary" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="EndDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="RelyingParty" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyKeys_RelyingPartyKey_RelyingParty" FromRole="RelyingPartyKey_RelyingParty" ToRole="RelyingParty_RelyingPartyKeys" />
+      </EntityType>
+      <EntityType Name="ServiceIdentity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" />
+        <Property Name="RedirectAddress" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="Delegations" Relationship="Microsoft.Cloud.AccessControl.Management.ServiceIdentity_Delegations_Delegation_ServiceIdentity" FromRole="ServiceIdentity_Delegations" ToRole="Delegation_ServiceIdentity" />
+        <NavigationProperty Name="ServiceIdentityKeys" Relationship="Microsoft.Cloud.AccessControl.Management.ServiceIdentity_ServiceIdentityKeys_ServiceIdentityKey_ServiceIdentity" FromRole="ServiceIdentity_ServiceIdentityKeys" ToRole="ServiceIdentityKey_ServiceIdentity" />
+      </EntityType>
+      <EntityType Name="ServiceIdentityKey">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ServiceIdentityId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Usage" Type="Edm.String" Nullable="true" />
+        <Property Name="Type" Type="Edm.String" Nullable="true" />
+        <Property Name="Value" Type="Edm.Binary" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="EndDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="true" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="ServiceIdentity" Relationship="Microsoft.Cloud.AccessControl.Management.ServiceIdentity_ServiceIdentityKeys_ServiceIdentityKey_ServiceIdentity" FromRole="ServiceIdentityKey_ServiceIdentity" ToRole="ServiceIdentity_ServiceIdentityKeys" />
+      </EntityType>
+      <EntityType Name="RuleGroup">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="ConditionalRules" Relationship="Microsoft.Cloud.AccessControl.Management.RuleGroup_ConditionalRules_ConditionalRule_RuleGroup" FromRole="RuleGroup_ConditionalRules" ToRole="ConditionalRule_RuleGroup" />
+        <NavigationProperty Name="RelyingPartyRuleGroups" Relationship="Microsoft.Cloud.AccessControl.Management.RuleGroup_RelyingPartyRuleGroups_RelyingPartyRuleGroup_RuleGroup" FromRole="RuleGroup_RelyingPartyRuleGroups" ToRole="RelyingPartyRuleGroup_RuleGroup" />
+        <NavigationProperty Name="Rules" Relationship="Microsoft.Cloud.AccessControl.Management.RuleGroup_Rules_Rule_RuleGroup" FromRole="RuleGroup_Rules" ToRole="Rule_RuleGroup" />
+      </EntityType>
+      <EntityType Name="RelyingPartyRuleGroup">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="RelyingPartyId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="RuleGroupId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="RelyingParty" Relationship="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyRuleGroups_RelyingPartyRuleGroup_RelyingParty" FromRole="RelyingPartyRuleGroup_RelyingParty" ToRole="RelyingParty_RelyingPartyRuleGroups" />
+        <NavigationProperty Name="RuleGroup" Relationship="Microsoft.Cloud.AccessControl.Management.RuleGroup_RelyingPartyRuleGroups_RelyingPartyRuleGroup_RuleGroup" FromRole="RelyingPartyRuleGroup_RuleGroup" ToRole="RuleGroup_RelyingPartyRuleGroups" />
+      </EntityType>
+      <EntityType Name="Issuer">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="ConditionalRules" Relationship="Microsoft.Cloud.AccessControl.Management.Issuer_ConditionalRules_ConditionalRule_Issuer" FromRole="Issuer_ConditionalRules" ToRole="ConditionalRule_Issuer" />
+        <NavigationProperty Name="IdentityProviders" Relationship="Microsoft.Cloud.AccessControl.Management.Issuer_IdentityProviders_IdentityProvider_Issuer" FromRole="Issuer_IdentityProviders" ToRole="IdentityProvider_Issuer" />
+        <NavigationProperty Name="Rules" Relationship="Microsoft.Cloud.AccessControl.Management.Issuer_Rules_Rule_Issuer" FromRole="Issuer_Rules" ToRole="Rule_Issuer" />
+      </EntityType>
+      <EntityType Name="Rule">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="RuleGroupId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="IssuerId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" />
+        <Property Name="InputClaimType" Type="Edm.String" Nullable="true" />
+        <Property Name="InputClaimValue" Type="Edm.String" Nullable="true" />
+        <Property Name="OutputClaimType" Type="Edm.String" Nullable="true" />
+        <Property Name="OutputClaimValue" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="Issuer" Relationship="Microsoft.Cloud.AccessControl.Management.Issuer_Rules_Rule_Issuer" FromRole="Rule_Issuer" ToRole="Issuer_Rules" />
+        <NavigationProperty Name="RuleGroup" Relationship="Microsoft.Cloud.AccessControl.Management.RuleGroup_Rules_Rule_RuleGroup" FromRole="Rule_RuleGroup" ToRole="RuleGroup_Rules" />
+      </EntityType>
+      <EntityType Name="ConditionalRule">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="RuleGroupId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="IssuerId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" />
+        <Property Name="InputClaimType" Type="Edm.String" Nullable="true" />
+        <Property Name="InputClaimValue" Type="Edm.String" Nullable="true" />
+        <Property Name="ConditionIssuerId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ConditionClaimType" Type="Edm.String" Nullable="true" />
+        <Property Name="ConditionClaimValue" Type="Edm.String" Nullable="true" />
+        <Property Name="OutputClaimType" Type="Edm.String" Nullable="true" />
+        <Property Name="OutputClaimValue" Type="Edm.String" Nullable="true" />
+        <Property Name="SystemReserved" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Version" Type="Edm.Binary" Nullable="true" ConcurrencyMode="Fixed" />
+        <NavigationProperty Name="Issuer" Relationship="Microsoft.Cloud.AccessControl.Management.Issuer_ConditionalRules_ConditionalRule_Issuer" FromRole="ConditionalRule_Issuer" ToRole="Issuer_ConditionalRules" />
+        <NavigationProperty Name="RuleGroup" Relationship="Microsoft.Cloud.AccessControl.Management.RuleGroup_ConditionalRules_ConditionalRule_RuleGroup" FromRole="ConditionalRule_RuleGroup" ToRole="RuleGroup_ConditionalRules" />
+      </EntityType>
+      <Association Name="IdentityProvider_IdentityProviderAddresses_IdentityProviderAddress_IdentityProvider">
+        <End Role="IdentityProvider_IdentityProviderAddresses" Type="Microsoft.Cloud.AccessControl.Management.IdentityProvider" Multiplicity="0..1" />
+        <End Role="IdentityProviderAddress_IdentityProvider" Type="Microsoft.Cloud.AccessControl.Management.IdentityProviderAddress" Multiplicity="*" />
+      </Association>
+      <Association Name="IdentityProvider_IdentityProviderClaimTypes_IdentityProviderClaimType_IdentityProvider">
+        <End Role="IdentityProvider_IdentityProviderClaimTypes" Type="Microsoft.Cloud.AccessControl.Management.IdentityProvider" Multiplicity="0..1" />
+        <End Role="IdentityProviderClaimType_IdentityProvider" Type="Microsoft.Cloud.AccessControl.Management.IdentityProviderClaimType" Multiplicity="*" />
+      </Association>
+      <Association Name="IdentityProvider_IdentityProviderKeys_IdentityProviderKey_IdentityProvider">
+        <End Role="IdentityProvider_IdentityProviderKeys" Type="Microsoft.Cloud.AccessControl.Management.IdentityProvider" Multiplicity="0..1" />
+        <End Role="IdentityProviderKey_IdentityProvider" Type="Microsoft.Cloud.AccessControl.Management.IdentityProviderKey" Multiplicity="*" />
+      </Association>
+      <Association Name="Issuer_IdentityProviders_IdentityProvider_Issuer">
+        <End Role="Issuer_IdentityProviders" Type="Microsoft.Cloud.AccessControl.Management.Issuer" Multiplicity="0..1" />
+        <End Role="IdentityProvider_Issuer" Type="Microsoft.Cloud.AccessControl.Management.IdentityProvider" Multiplicity="*" />
+      </Association>
+      <Association Name="IdentityProvider_RelyingPartyIdentityProviders_RelyingPartyIdentityProvider_IdentityProvider">
+        <End Role="IdentityProvider_RelyingPartyIdentityProviders" Type="Microsoft.Cloud.AccessControl.Management.IdentityProvider" Multiplicity="0..1" />
+        <End Role="RelyingPartyIdentityProvider_IdentityProvider" Type="Microsoft.Cloud.AccessControl.Management.RelyingPartyIdentityProvider" Multiplicity="*" />
+      </Association>
+      <Association Name="ClaimType_IdentityProviderClaimTypes_IdentityProviderClaimType_ClaimType">
+        <End Role="ClaimType_IdentityProviderClaimTypes" Type="Microsoft.Cloud.AccessControl.Management.ClaimType" Multiplicity="0..1" />
+        <End Role="IdentityProviderClaimType_ClaimType" Type="Microsoft.Cloud.AccessControl.Management.IdentityProviderClaimType" Multiplicity="*" />
+      </Association>
+      <Association Name="RelyingParty_Delegations_Delegation_RelyingParty">
+        <End Role="RelyingParty_Delegations" Type="Microsoft.Cloud.AccessControl.Management.RelyingParty" Multiplicity="0..1" />
+        <End Role="Delegation_RelyingParty" Type="Microsoft.Cloud.AccessControl.Management.Delegation" Multiplicity="*" />
+      </Association>
+      <Association Name="ServiceIdentity_Delegations_Delegation_ServiceIdentity">
+        <End Role="ServiceIdentity_Delegations" Type="Microsoft.Cloud.AccessControl.Management.ServiceIdentity" Multiplicity="0..1" />
+        <End Role="Delegation_ServiceIdentity" Type="Microsoft.Cloud.AccessControl.Management.Delegation" Multiplicity="*" />
+      </Association>
+      <Association Name="RelyingParty_RelyingPartyAddresses_RelyingPartyAddress_RelyingParty">
+        <End Role="RelyingParty_RelyingPartyAddresses" Type="Microsoft.Cloud.AccessControl.Management.RelyingParty" Multiplicity="0..1" />
+        <End Role="RelyingPartyAddress_RelyingParty" Type="Microsoft.Cloud.AccessControl.Management.RelyingPartyAddress" Multiplicity="*" />
+      </Association>
+      <Association Name="RelyingParty_RelyingPartyIdentityProviders_RelyingPartyIdentityProvider_RelyingParty">
+        <End Role="RelyingParty_RelyingPartyIdentityProviders" Type="Microsoft.Cloud.AccessControl.Management.RelyingParty" Multiplicity="0..1" />
+        <End Role="RelyingPartyIdentityProvider_RelyingParty" Type="Microsoft.Cloud.AccessControl.Management.RelyingPartyIdentityProvider" Multiplicity="*" />
+      </Association>
+      <Association Name="RelyingParty_RelyingPartyKeys_RelyingPartyKey_RelyingParty">
+        <End Role="RelyingParty_RelyingPartyKeys" Type="Microsoft.Cloud.AccessControl.Management.RelyingParty" Multiplicity="0..1" />
+        <End Role="RelyingPartyKey_RelyingParty" Type="Microsoft.Cloud.AccessControl.Management.RelyingPartyKey" Multiplicity="*" />
+      </Association>
+      <Association Name="RelyingParty_RelyingPartyRuleGroups_RelyingPartyRuleGroup_RelyingParty">
+        <End Role="RelyingParty_RelyingPartyRuleGroups" Type="Microsoft.Cloud.AccessControl.Management.RelyingParty" Multiplicity="0..1" />
+        <End Role="RelyingPartyRuleGroup_RelyingParty" Type="Microsoft.Cloud.AccessControl.Management.RelyingPartyRuleGroup" Multiplicity="*" />
+      </Association>
+      <Association Name="ServiceIdentity_ServiceIdentityKeys_ServiceIdentityKey_ServiceIdentity">
+        <End Role="ServiceIdentity_ServiceIdentityKeys" Type="Microsoft.Cloud.AccessControl.Management.ServiceIdentity" Multiplicity="0..1" />
+        <End Role="ServiceIdentityKey_ServiceIdentity" Type="Microsoft.Cloud.AccessControl.Management.ServiceIdentityKey" Multiplicity="*" />
+      </Association>
+      <Association Name="RuleGroup_ConditionalRules_ConditionalRule_RuleGroup">
+        <End Role="RuleGroup_ConditionalRules" Type="Microsoft.Cloud.AccessControl.Management.RuleGroup" Multiplicity="0..1" />
+        <End Role="ConditionalRule_RuleGroup" Type="Microsoft.Cloud.AccessControl.Management.ConditionalRule" Multiplicity="*" />
+      </Association>
+      <Association Name="RuleGroup_RelyingPartyRuleGroups_RelyingPartyRuleGroup_RuleGroup">
+        <End Role="RuleGroup_RelyingPartyRuleGroups" Type="Microsoft.Cloud.AccessControl.Management.RuleGroup" Multiplicity="0..1" />
+        <End Role="RelyingPartyRuleGroup_RuleGroup" Type="Microsoft.Cloud.AccessControl.Management.RelyingPartyRuleGroup" Multiplicity="*" />
+      </Association>
+      <Association Name="RuleGroup_Rules_Rule_RuleGroup">
+        <End Role="RuleGroup_Rules" Type="Microsoft.Cloud.AccessControl.Management.RuleGroup" Multiplicity="0..1" />
+        <End Role="Rule_RuleGroup" Type="Microsoft.Cloud.AccessControl.Management.Rule" Multiplicity="*" />
+      </Association>
+      <Association Name="Issuer_ConditionalRules_ConditionalRule_Issuer">
+        <End Role="Issuer_ConditionalRules" Type="Microsoft.Cloud.AccessControl.Management.Issuer" Multiplicity="0..1" />
+        <End Role="ConditionalRule_Issuer" Type="Microsoft.Cloud.AccessControl.Management.ConditionalRule" Multiplicity="*" />
+      </Association>
+      <Association Name="Issuer_Rules_Rule_Issuer">
+        <End Role="Issuer_Rules" Type="Microsoft.Cloud.AccessControl.Management.Issuer" Multiplicity="0..1" />
+        <End Role="Rule_Issuer" Type="Microsoft.Cloud.AccessControl.Management.Rule" Multiplicity="*" />
+      </Association>
+      <EntityContainer Name="ManagementService" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="ServiceKeys" EntityType="Microsoft.Cloud.AccessControl.Management.ServiceKey" />
+        <EntitySet Name="IdentityProviders" EntityType="Microsoft.Cloud.AccessControl.Management.IdentityProvider" />
+        <EntitySet Name="IdentityProviderAddresses" EntityType="Microsoft.Cloud.AccessControl.Management.IdentityProviderAddress" />
+        <EntitySet Name="IdentityProviderKeys" EntityType="Microsoft.Cloud.AccessControl.Management.IdentityProviderKey" />
+        <EntitySet Name="ClaimTypes" EntityType="Microsoft.Cloud.AccessControl.Management.ClaimType" />
+        <EntitySet Name="IdentityProviderClaimTypes" EntityType="Microsoft.Cloud.AccessControl.Management.IdentityProviderClaimType" />
+        <EntitySet Name="Delegations" EntityType="Microsoft.Cloud.AccessControl.Management.Delegation" />
+        <EntitySet Name="RelyingParties" EntityType="Microsoft.Cloud.AccessControl.Management.RelyingParty" />
+        <EntitySet Name="RelyingPartyAddresses" EntityType="Microsoft.Cloud.AccessControl.Management.RelyingPartyAddress" />
+        <EntitySet Name="RelyingPartyIdentityProviders" EntityType="Microsoft.Cloud.AccessControl.Management.RelyingPartyIdentityProvider" />
+        <EntitySet Name="RelyingPartyKeys" EntityType="Microsoft.Cloud.AccessControl.Management.RelyingPartyKey" />
+        <EntitySet Name="ServiceIdentities" EntityType="Microsoft.Cloud.AccessControl.Management.ServiceIdentity" />
+        <EntitySet Name="ServiceIdentityKeys" EntityType="Microsoft.Cloud.AccessControl.Management.ServiceIdentityKey" />
+        <EntitySet Name="RuleGroups" EntityType="Microsoft.Cloud.AccessControl.Management.RuleGroup" />
+        <EntitySet Name="RelyingPartyRuleGroups" EntityType="Microsoft.Cloud.AccessControl.Management.RelyingPartyRuleGroup" />
+        <EntitySet Name="Issuers" EntityType="Microsoft.Cloud.AccessControl.Management.Issuer" />
+        <EntitySet Name="Rules" EntityType="Microsoft.Cloud.AccessControl.Management.Rule" />
+        <EntitySet Name="ConditionalRules" EntityType="Microsoft.Cloud.AccessControl.Management.ConditionalRule" />
+        <AssociationSet Name="IdentityProvider_IdentityProviderAddresses" Association="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderAddresses_IdentityProviderAddress_IdentityProvider">
+          <End Role="IdentityProvider_IdentityProviderAddresses" EntitySet="IdentityProviders" />
+          <End Role="IdentityProviderAddress_IdentityProvider" EntitySet="IdentityProviderAddresses" />
+        </AssociationSet>
+        <AssociationSet Name="IdentityProvider_IdentityProviderClaimTypes" Association="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderClaimTypes_IdentityProviderClaimType_IdentityProvider">
+          <End Role="IdentityProvider_IdentityProviderClaimTypes" EntitySet="IdentityProviders" />
+          <End Role="IdentityProviderClaimType_IdentityProvider" EntitySet="IdentityProviderClaimTypes" />
+        </AssociationSet>
+        <AssociationSet Name="IdentityProvider_IdentityProviderKeys" Association="Microsoft.Cloud.AccessControl.Management.IdentityProvider_IdentityProviderKeys_IdentityProviderKey_IdentityProvider">
+          <End Role="IdentityProvider_IdentityProviderKeys" EntitySet="IdentityProviders" />
+          <End Role="IdentityProviderKey_IdentityProvider" EntitySet="IdentityProviderKeys" />
+        </AssociationSet>
+        <AssociationSet Name="Issuer_IdentityProviders" Association="Microsoft.Cloud.AccessControl.Management.Issuer_IdentityProviders_IdentityProvider_Issuer">
+          <End Role="Issuer_IdentityProviders" EntitySet="Issuers" />
+          <End Role="IdentityProvider_Issuer" EntitySet="IdentityProviders" />
+        </AssociationSet>
+        <AssociationSet Name="IdentityProvider_RelyingPartyIdentityProviders" Association="Microsoft.Cloud.AccessControl.Management.IdentityProvider_RelyingPartyIdentityProviders_RelyingPartyIdentityProvider_IdentityProvider">
+          <End Role="IdentityProvider_RelyingPartyIdentityProviders" EntitySet="IdentityProviders" />
+          <End Role="RelyingPartyIdentityProvider_IdentityProvider" EntitySet="RelyingPartyIdentityProviders" />
+        </AssociationSet>
+        <AssociationSet Name="ClaimType_IdentityProviderClaimTypes" Association="Microsoft.Cloud.AccessControl.Management.ClaimType_IdentityProviderClaimTypes_IdentityProviderClaimType_ClaimType">
+          <End Role="ClaimType_IdentityProviderClaimTypes" EntitySet="ClaimTypes" />
+          <End Role="IdentityProviderClaimType_ClaimType" EntitySet="IdentityProviderClaimTypes" />
+        </AssociationSet>
+        <AssociationSet Name="RelyingParty_Delegations" Association="Microsoft.Cloud.AccessControl.Management.RelyingParty_Delegations_Delegation_RelyingParty">
+          <End Role="RelyingParty_Delegations" EntitySet="RelyingParties" />
+          <End Role="Delegation_RelyingParty" EntitySet="Delegations" />
+        </AssociationSet>
+        <AssociationSet Name="ServiceIdentity_Delegations" Association="Microsoft.Cloud.AccessControl.Management.ServiceIdentity_Delegations_Delegation_ServiceIdentity">
+          <End Role="ServiceIdentity_Delegations" EntitySet="ServiceIdentities" />
+          <End Role="Delegation_ServiceIdentity" EntitySet="Delegations" />
+        </AssociationSet>
+        <AssociationSet Name="RelyingParty_RelyingPartyAddresses" Association="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyAddresses_RelyingPartyAddress_RelyingParty">
+          <End Role="RelyingParty_RelyingPartyAddresses" EntitySet="RelyingParties" />
+          <End Role="RelyingPartyAddress_RelyingParty" EntitySet="RelyingPartyAddresses" />
+        </AssociationSet>
+        <AssociationSet Name="RelyingParty_RelyingPartyIdentityProviders" Association="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyIdentityProviders_RelyingPartyIdentityProvider_RelyingParty">
+          <End Role="RelyingParty_RelyingPartyIdentityProviders" EntitySet="RelyingParties" />
+          <End Role="RelyingPartyIdentityProvider_RelyingParty" EntitySet="RelyingPartyIdentityProviders" />
+        </AssociationSet>
+        <AssociationSet Name="RelyingParty_RelyingPartyKeys" Association="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyKeys_RelyingPartyKey_RelyingParty">
+          <End Role="RelyingParty_RelyingPartyKeys" EntitySet="RelyingParties" />
+          <End Role="RelyingPartyKey_RelyingParty" EntitySet="RelyingPartyKeys" />
+        </AssociationSet>
+        <AssociationSet Name="RelyingParty_RelyingPartyRuleGroups" Association="Microsoft.Cloud.AccessControl.Management.RelyingParty_RelyingPartyRuleGroups_RelyingPartyRuleGroup_RelyingParty">
+          <End Role="RelyingParty_RelyingPartyRuleGroups" EntitySet="RelyingParties" />
+          <End Role="RelyingPartyRuleGroup_RelyingParty" EntitySet="RelyingPartyRuleGroups" />
+        </AssociationSet>
+        <AssociationSet Name="ServiceIdentity_ServiceIdentityKeys" Association="Microsoft.Cloud.AccessControl.Management.ServiceIdentity_ServiceIdentityKeys_ServiceIdentityKey_ServiceIdentity">
+          <End Role="ServiceIdentity_ServiceIdentityKeys" EntitySet="ServiceIdentities" />
+          <End Role="ServiceIdentityKey_ServiceIdentity" EntitySet="ServiceIdentityKeys" />
+        </AssociationSet>
+        <AssociationSet Name="RuleGroup_ConditionalRules" Association="Microsoft.Cloud.AccessControl.Management.RuleGroup_ConditionalRules_ConditionalRule_RuleGroup">
+          <End Role="RuleGroup_ConditionalRules" EntitySet="RuleGroups" />
+          <End Role="ConditionalRule_RuleGroup" EntitySet="ConditionalRules" />
+        </AssociationSet>
+        <AssociationSet Name="RuleGroup_RelyingPartyRuleGroups" Association="Microsoft.Cloud.AccessControl.Management.RuleGroup_RelyingPartyRuleGroups_RelyingPartyRuleGroup_RuleGroup">
+          <End Role="RuleGroup_RelyingPartyRuleGroups" EntitySet="RuleGroups" />
+          <End Role="RelyingPartyRuleGroup_RuleGroup" EntitySet="RelyingPartyRuleGroups" />
+        </AssociationSet>
+        <AssociationSet Name="RuleGroup_Rules" Association="Microsoft.Cloud.AccessControl.Management.RuleGroup_Rules_Rule_RuleGroup">
+          <End Role="RuleGroup_Rules" EntitySet="RuleGroups" />
+          <End Role="Rule_RuleGroup" EntitySet="Rules" />
+        </AssociationSet>
+        <AssociationSet Name="Issuer_ConditionalRules" Association="Microsoft.Cloud.AccessControl.Management.Issuer_ConditionalRules_ConditionalRule_Issuer">
+          <End Role="Issuer_ConditionalRules" EntitySet="Issuers" />
+          <End Role="ConditionalRule_Issuer" EntitySet="ConditionalRules" />
+        </AssociationSet>
+        <AssociationSet Name="Issuer_Rules" Association="Microsoft.Cloud.AccessControl.Management.Issuer_Rules_Rule_Issuer">
+          <End Role="Issuer_Rules" EntitySet="Issuers" />
+          <End Role="Rule_Issuer" EntitySet="Rules" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

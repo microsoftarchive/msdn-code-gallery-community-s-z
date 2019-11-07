@@ -1,0 +1,21 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+
+    // Set Minimum value for X axis
+    Chart1.ChartAreas["ChartArea1"].AxisX.Minimum = new DateTime( 1998, 3, 5 ).ToOADate();
+
+    // Set Maximum value for X axis
+    Chart1.ChartAreas["ChartArea1"].AxisX.Maximum = new DateTime( 2001, 1, 1 ).ToOADate();
+
+    // Convert Double to DateTime.
+    DateTime dateTime = DateTime.FromOADate( 35977 );
+
+    // Convert DateTime to string.
+    Label1.Text = dateTime.ToLongDateString();
+
+}
+		
+...

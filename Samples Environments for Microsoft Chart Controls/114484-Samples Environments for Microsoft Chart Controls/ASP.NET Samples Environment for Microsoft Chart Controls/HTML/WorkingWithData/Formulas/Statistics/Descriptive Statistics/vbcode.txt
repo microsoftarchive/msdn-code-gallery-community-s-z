@@ -1,0 +1,13 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+' Calculate Mean
+Dim mean As Double = chart1.DataManipulator.Statistics.Mean("Series1")
+
+' Calculate Median
+Dim median As Double = chart1.DataManipulator.Statistics.Median("Series1")
+
+' Calculate Variance, and then Standard Deviation
+Dim variance As Double = chart1.DataManipulator.Statistics.Variance("Series1", True)
+Dim stdeviation As Double = Math.Sqrt(variance)
+...

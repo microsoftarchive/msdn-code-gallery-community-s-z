@@ -1,0 +1,35 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Annotations" Priority="300">
+	<Title>Annotation Anchoring</Title>
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Annotation Anchoring</ShortBlurb> 
+	<Content>AnnotationAnchoring.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Annotations, Data Point Anchoring</Keyword>
+    <Keyword>Annotations, Anchor Points</Keyword>
+  </Keywords>   
+</SampleConfig>
+
+	<SampleConfig ParentNodeID = "NewAnnotations">
+	<Title>Annotation Anchoring</Title>
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Annotation Anchoring</ShortBlurb> 
+	<Content>AnnotationAnchoring.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+</SampleConfig>
+
+	
+</SampleConfigs>

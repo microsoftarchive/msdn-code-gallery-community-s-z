@@ -1,0 +1,2412 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: PhotoData Streaming Data Service Sample
+Date: Wed, 4 Aug 2010 11:27:46 -0700
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0017_01CB33C8.101F8CD0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16543
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Default\be353d0a-85eb-4360-baf7-b728a8060b25\HTM\preview.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML dir=3Dltr XMLNS:MSHelp =3D "http://msdn.microsoft.com/mshelp" =
+xmlns:ddue =3D=20
+"http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink =3D=20
+"http://www.w3.org/1999/xlink" xmlns:tool =3D =
+"http://www.microsoft.com/tooltip"=20
+XMLNS:[default] http://ddue.schemas.microsoft.com/authoring/2003/5 =3D=20
+"http://ddue.schemas.microsoft.com/authoring/2003/5"><HEAD><TITLE>PhotoDa=
+ta Streaming Data Service Sample</TITLE>
+<META content=3D"text/html; CHARSET=3Dutf-8" =
+http-equiv=3DContent-Type></META>
+<META name=3Dsave content=3Dhistory></META><LINK rel=3Dstylesheet =
+type=3Dtext/css=20
+href=3D"file:///C:/D=
+efault/be353d0a-85eb-4360-baf7-b728a8060b25/local/Classic.css"></LINK>
+<SCRIPT=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/script.js"></SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16588"></HEAD>
+<BODY><INPUT id=3DuserDataCache class=3DuserDataStyle =
+type=3Dhidden></INPUT><INPUT=20
+id=3DhiddenScrollOffset type=3Dhidden></INPUT><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DdropDownImage=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/drpdown.gif"></IMG><IMG =
+
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DdropDownHoverImage =
+
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/drpdown_orange.gif"></IM=
+G><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DcopyImage=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG><IMG=
+=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DcopyHoverImage=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycodeHighlight.gif"><=
+/IMG><IMG=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DcollapseImage=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG><IMG=
+=20
+style=3D"WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id=3DexpandImage=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/exp.gif"></IMG>
+<DIV id=3Dheader>
+<TABLE id=3DtopTable width=3D"100%">
+  <TBODY>
+  <TR id=3DheaderTableRow1>
+    <TD align=3Dleft><SPAN id=3DrunningHeaderText></SPAN></TD></TR>
+  <TR id=3DheaderTableRow2>
+    <TD align=3Dleft><SPAN id=3DnsrTitle>PhotoData Streaming Data =
+Service=20
+      Sample</SPAN></TD></TR>
+  <TR id=3DheaderTableRow3>
+    <TD></TD></TR></TBODY></TABLE>
+<TABLE id=3DbottomTable cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD><SPAN style=3D"CURSOR: default" id=3DlanguageFilterToolTip=20
+      onfocusin=3DlanguageFilterImage.src=3DdropDownHoverImage.src;=20
+      onmouseover=3DlanguageFilterImage.src=3DdropDownHoverImage.src;=20
+      onfocusout=3DlanguageFilterImage.src=3DdropDownImage.src; =
+tabIndex=3D0=20
+      onmouseout=3DlanguageFilterImage.src=3DdropDownImage.src;><IMG=20
+      id=3DlanguageFilterImage=20
+      =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/drpdown.gif"></IMG><LABE=
+L=20
+      style=3D"DISPLAY: none" id=3DshowAllLabel =
+for=3DlanguageFilterImage>Language=20
+      Filter: All</LABEL><LABEL style=3D"DISPLAY: none" =
+id=3DmultipleLabel=20
+      for=3DlanguageFilterImage>Language Filter: Multiple</LABEL><LABEL=20
+      style=3D"DISPLAY: none" id=3DvbLabel =
+for=3DlanguageFilterImage>Language Filter:=20
+      Visual Basic</LABEL><LABEL style=3D"DISPLAY: none" id=3DcsLabel=20
+      for=3DlanguageFilterImage>Language Filter: C#</LABEL><LABEL=20
+      style=3D"DISPLAY: none" id=3DcLabel =
+for=3DlanguageFilterImage>Language Filter:=20
+      C++</LABEL><LABEL style=3D"DISPLAY: none" id=3DjsharpLabel=20
+      for=3DlanguageFilterImage>Language Filter: J#</LABEL><LABEL=20
+      style=3D"DISPLAY: none" id=3DjsLabel =
+for=3DlanguageFilterImage>Language Filter:=20
+      JScript</LABEL></SPAN></TD></TR></TBODY></TABLE><SPAN =
+style=3D"DISPLAY: none"=20
+id=3DlanguageSpan><INPUT id=3DvbDeclarationCheckbox =
+onclick=3DSetLanguage(this)=20
+type=3Dcheckbox name=3DlanguageFilter></INPUT><LABEL =
+class=3DlanguageFilter=20
+for=3DvbDeclarationCheckbox>Visual Basic (Declaration) =
+</LABEL><BR><INPUT=20
+id=3DvbUsageCheckbox onclick=3DSetLanguage(this) type=3Dcheckbox=20
+name=3DlanguageFilter></INPUT><LABEL class=3DlanguageFilter=20
+for=3DvbUsageCheckbox>Visual Basic (Usage) </LABEL><BR><INPUT =
+id=3DcsCheckbox=20
+onclick=3DSetLanguage(this) type=3Dcheckbox =
+name=3DlanguageFilter></INPUT><LABEL=20
+class=3DlanguageFilter for=3DcsCheckbox>C#</LABEL><BR><INPUT =
+id=3DcCheckbox=20
+onclick=3DSetLanguage(this) type=3Dcheckbox =
+name=3DlanguageFilter></INPUT><LABEL=20
+class=3DlanguageFilter for=3DcCheckbox>C++</LABEL><BR><INPUT =
+id=3DjsharpCheckbox=20
+onclick=3DSetLanguage(this) type=3Dcheckbox =
+name=3DlanguageFilter></INPUT><LABEL=20
+class=3DlanguageFilter for=3DjsharpCheckbox>J#</LABEL><BR><INPUT =
+id=3DjsCheckbox=20
+onclick=3DSetLanguage(this) type=3Dcheckbox =
+name=3DlanguageFilter></INPUT><LABEL=20
+class=3DlanguageFilter for=3DjsCheckbox>JScript</LABEL><BR></SPAN></DIV>
+<DIV id=3DmainSection>
+<DIV id=3DmainBody>
+<DIV id=3DallHistory class=3DsaveHistory onload=3D"loadAll()"=20
+onsave=3D"saveAll()"></DIV>
+<P>The Open Data Protocol (OData) enables you to define data feeds that =
+also=20
+make binary large object (BLOB) data, such as photos, videos, and =
+documents,=20
+available to client applications that consume OData feeds. This sample =
+is=20
+intended to demonstrate how to use the <A=20
+href=3D"http://msdn.microsoft.com/en-us/library/system.data.services.prov=
+iders.idataservicestreamprovider"=20
+target=3D_blank alt=3D""><linkText=20
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">IDataService=
+StreamProvider</linkText></A>=20
+interface in WCF Data Services to implement an OData service that uses a =
+
+streaming provider to store and retrieve image files, along with =
+information=20
+about each photo. For more information about the scenario and design =
+decisions=20
+made in implementing this application, see the <A=20
+href=3D"http://go.microsoft.com/fwlink/?LinkId=3D198989" target=3D_blank =
+
+alt=3D""><linkText =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">Data=20
+Services Streaming Provider Series: Implementing a Streaming Provider =
+(Part=20
+1)</linkText></A>.</P>
+<DIV>
+<H2 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3DExpandCollapse_CheckKey(ID0EDABA)=20
+onclick=3DExpandCollapse(ID0EDABA)><IMG id=3DID0EDABA class=3Dtoggle =
+name=3DtoggleSwitch=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG>Prer=
+equisites</SPAN></H2>
+<DIV id=3DsectionSection0 class=3Dsection><content=20
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+<P xmlns=3D"">Before running this sample, make sure that the following =
+software is=20
+installed:</P>
+<UL xmlns=3D"">
+  <LI class=3Dunordered>Visual Studio 2010, including SQL Server Express =
+(if SQL=20
+  Server is not already installed).<BR>
+  <LI class=3Dunordered>Internet Information Services (IIS) on the local =
+
+  computer.<BR></LI></UL></content></DIV></DIV>
+<DIV>
+<H2 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3DExpandCollapse_CheckKey(ID0ECABA)=20
+onclick=3DExpandCollapse(ID0ECABA)><IMG id=3DID0ECABA class=3Dtoggle =
+name=3DtoggleSwitch=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG>Buil=
+ding=20
+the Sample</SPAN></H2>
+<DIV id=3DsectionSection1 class=3Dsection><content=20
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+<P xmlns=3D"">Use the following procedure to build the sample.</P>
+<DIV class=3Dalert xmlns=3D"">
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TH align=3Dleft><IMG class=3Dnote=20
+      =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/note.gif"></IMG>Note:=20
+    </TH></TR>
+  <TR>
+    <TD>Because the ASP.NET Development Server does not support a =
+chunked HTTP=20
+      Transfer-Encoding, you must instead use IIS to host the ASP.NET =
+Web=20
+      application that implements this streaming data service. For more=20
+      information, see the <A=20
+      href=3D"http://msdn.microsoft.com/en-us/library/ee960144.aspx" =
+target=3D_blank=20
+      alt=3D""><linkText=20
+      =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">Streaming=20
+      Provider</linkText></A> topic.=20
+      <P></P></TD></TR></TBODY></TABLE>
+<P></P></DIV>
+<DIV xmlns=3D"">
+<H4 class=3DsubHeading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3DExpandCollapse_CheckKey(ID0ECACABA)=20
+onclick=3DExpandCollapse(ID0ECACABA)><IMG id=3DID0ECACABA class=3Dtoggle =
+
+name=3DtoggleSwitch=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG><B>T=
+o=20
+configure IIS</B></SPAN></H4>
+<DIV class=3DsubSection>
+<OL class=3Dordered>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Unzip the sample files on the local =
+computer.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">On the <B>Start</B> menu, right-click <B>Visual Studio =
+2010</B>=20
+  and select <B>Run as administrator</B>. </P>
+  <DIV class=3Dalert xmlns=3D"">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH align=3Dleft><IMG class=3Dnote=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/note.gif"></IMG>Note:=20
+      </TH></TR>
+    <TR>
+      <TD>Visual Studio must run with administrator privileges to be =
+able to=20
+        make changes to virtual directories and ASP.NET.
+        <P></P></TD></TR></TBODY></TABLE>
+  <P></P></DIV></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">In Visual Studio, open the PhotoService.sln solution =
+file in the=20
+  root directory of the sample.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">In the Solution Explorer window, expand the solution, =
+right-click=20
+  the PhotoService project, and click <B>Properties</B>. </P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">In the PhotoService properties page, click the =
+<B>Web</B> tab, and=20
+  then under <B>Servers</B> click <B>Create Virtual Directory</B>.</P>
+  <P xmlns=3D"">This creates the <CODE>\PhotoService</CODE> virtual =
+directory in=20
+  the default Web site with the project directory as the physical=20
+  directory.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Navigate to the <CODE>\PhotoService</CODE> physical =
+directory and=20
+  make sure that the user under which IIS runs (usually NETWORK SERVICE) =
+has at=20
+  least modify permissions on the directory.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">(Optional) From the command prompt with administrator =
+privileges,=20
+  execute one of the following commands (depending on the operating =
+system):</P>
+  <UL xmlns=3D"">
+    <LI class=3Dunordered>32-bit systems:<BR>
+    <DIV class=3Dcode><SPAN codeLanguage=3D"other">
+    <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+      <TBODY>
+      <TR>
+        <TH>&nbsp;</TH>
+        <TH><SPAN class=3DcopyCode onfocusin=3DChangeCopyCodeIcon(this)=20
+          onmouseover=3DChangeCopyCodeIcon(this)=20
+          onfocusout=3DChangeCopyCodeIcon(this) tabIndex=3D0=20
+          onkeypress=3DCopyCode_CheckKey(this) =
+onmouseout=3DChangeCopyCodeIcon(this)=20
+          onclick=3DCopyCode(this)><IMG class=3DcopyCodeImage =
+name=3DccImage=20
+          align=3DabsMiddle=20
+          =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG>Copy=
+=20
+          Code</SPAN></TH></TR>
+      <TR>
+        <TD =
+colSpan=3D2><PRE>"%windir%\Microsoft.NET\Framework\v3.0\Windows =
+Communication Foundation\ServiceModelReg.exe" =
+-i</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+    <LI class=3Dunordered>64-bit systems:<BR>
+    <DIV class=3Dcode><SPAN codeLanguage=3D"other">
+    <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+      <TBODY>
+      <TR>
+        <TH>&nbsp;</TH>
+        <TH><SPAN class=3DcopyCode onfocusin=3DChangeCopyCodeIcon(this)=20
+          onmouseover=3DChangeCopyCodeIcon(this)=20
+          onfocusout=3DChangeCopyCodeIcon(this) tabIndex=3D0=20
+          onkeypress=3DCopyCode_CheckKey(this) =
+onmouseout=3DChangeCopyCodeIcon(this)=20
+          onclick=3DCopyCode(this)><IMG class=3DcopyCodeImage =
+name=3DccImage=20
+          align=3DabsMiddle=20
+          =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG>Copy=
+=20
+          Code</SPAN></TH></TR>
+      <TR>
+        <TD =
+colSpan=3D2><PRE>"%windir%\Microsoft.NET\Framework64\v3.0\Windows =
+Communication Foundation\ServiceModelReg.exe" =
+-i</PRE></TD></TR></TBODY></TABLE></SPAN></DIV></LI></UL>
+  <P xmlns=3D"">This makes sure that Windows Communication Foundation =
+(WCF) is=20
+  registered on the computer.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">(Optional) From the command prompt with administrator =
+privileges,=20
+  execute one of the following commands (depending on the operating =
+system):</P>
+  <UL xmlns=3D"">
+    <LI class=3Dunordered>32-bit systems:<BR>
+    <DIV class=3Dcode><SPAN codeLanguage=3D"other">
+    <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+      <TBODY>
+      <TR>
+        <TH>&nbsp;</TH>
+        <TH><SPAN class=3DcopyCode onfocusin=3DChangeCopyCodeIcon(this)=20
+          onmouseover=3DChangeCopyCodeIcon(this)=20
+          onfocusout=3DChangeCopyCodeIcon(this) tabIndex=3D0=20
+          onkeypress=3DCopyCode_CheckKey(this) =
+onmouseout=3DChangeCopyCodeIcon(this)=20
+          onclick=3DCopyCode(this)><IMG class=3DcopyCodeImage =
+name=3DccImage=20
+          align=3DabsMiddle=20
+          =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG>Copy=
+=20
+          Code</SPAN></TH></TR>
+      <TR>
+        <TD =
+colSpan=3D2><PRE>"%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regi=
+is.exe" -i -enable</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+    <LI class=3Dunordered>64-bit systems:<BR>
+    <DIV class=3Dcode><SPAN codeLanguage=3D"other">
+    <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+      <TBODY>
+      <TR>
+        <TH>&nbsp;</TH>
+        <TH><SPAN class=3DcopyCode onfocusin=3DChangeCopyCodeIcon(this)=20
+          onmouseover=3DChangeCopyCodeIcon(this)=20
+          onfocusout=3DChangeCopyCodeIcon(this) tabIndex=3D0=20
+          onkeypress=3DCopyCode_CheckKey(this) =
+onmouseout=3DChangeCopyCodeIcon(this)=20
+          onclick=3DCopyCode(this)><IMG class=3DcopyCodeImage =
+name=3DccImage=20
+          align=3DabsMiddle=20
+          =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG>Copy=
+=20
+          Code</SPAN></TH></TR>
+      <TR>
+        <TD =
+colSpan=3D2><PRE>"%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_re=
+giis.exe" -i =
+-enable</PRE></TD></TR></TBODY></TABLE></SPAN></DIV></LI></UL>
+  <P xmlns=3D"">This makes sure that IIS runs correctly after WCF has =
+been=20
+  installed on the computer. You might have to also restart =
+IIS.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">When the ASP.NET application runs on IIS7, you must also =
+perform=20
+  the following steps:</P>
+  <OL class=3Dordered xmlns=3D"">
+    <LI>Open IIS Manager and navigate to the PhotoService application =
+under=20
+    <B>Default Web Site</B>.<BR>
+    <LI>In <B>Features View</B>, double-click <B>Authentication</B>.<BR>
+    <LI>On the <B>Authentication</B> page, select <B>Anonymous=20
+    Authentication</B>.<BR>
+    <LI>In the <B>Actions</B> pane, click <B>Edit</B> to set the =
+security=20
+    principal under which anonymous users will connect to the site.<BR>
+    <LI>In the <B>Edit Anonymous Authentication Credentials</B> dialog =
+box,=20
+    select <B>Application pool identity</B>.<BR></LI></OL>
+  <DIV class=3Dalert xmlns=3D"">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH align=3Dleft><IMG class=3Dnote=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/Important.gif"></IMG>Not=
+e:=20
+      </TH></TR>
+    <TR>
+      <TD>When you use the Network Service account, you grant anonymous =
+users=20
+        all the internal network access associated with that account.
+        <P></P></TD></TR></TBODY></TABLE>
+  <P></P></DIV></content></LI></OL></DIV></DIV>
+<DIV xmlns=3D"">
+<H4 class=3DsubHeading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3DExpandCollapse_CheckKey(ID0EBACABA)=20
+onclick=3DExpandCollapse(ID0EBACABA)><IMG id=3DID0EBACABA class=3Dtoggle =
+
+name=3DtoggleSwitch=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG><B>T=
+o=20
+create the PhotoStorage database</B></SPAN></H4>
+<DIV class=3DsubSection>
+<OL class=3Dordered>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">In Visual Studio, open the <B>PhotoData.edmx.sql</B> =
+file in the=20
+  PhotoService project.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">From the <B>Data</B> menu, expand <B>Transact-SQL =
+Editor</B> and=20
+  <B>Connection</B> and click <B>Connect</B>. </P>
+  <P xmlns=3D"">This displays the Connect to Database Engine dialog=20
+  box.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Type <B>localhost\SQLExpress</B> or select another local =
+instance=20
+  of SQL Server, and then click <B>Connect</B>.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">From the <B>Data</B> menu, expand <B>Transact-SQL =
+Editor</B> and=20
+  <B>Connection</B> and click <B>Execute SQL</B>. </P>
+  <P xmlns=3D"">This creates the PhotoStorage database. It also creates =
+a login=20
+  for the Network Service and grants this login access to the new =
+PhotoStorage=20
+  database, which gives the IIS process access to the=20
+data.</P></content></LI></OL></DIV></DIV>
+<DIV xmlns=3D"">
+<H4 class=3DsubHeading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3DExpandCollapse_CheckKey(ID0EAACABA)=20
+onclick=3DExpandCollapse(ID0EAACABA)><IMG id=3DID0EAACABA class=3Dtoggle =
+
+name=3DtoggleSwitch=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG><B>T=
+o=20
+build the sample</B></SPAN></H4>
+<DIV class=3DsubSection>
+<OL class=3Dordered>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Make sure that the connection string stored in the =
+web.config file=20
+  in the <CODE>\PhotoService</CODE> subdirectory is valid for the =
+database=20
+  instance being used.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Build the=20
+solution.</P></content></LI></OL></DIV></DIV></content></DIV></DIV>
+<DIV>
+<H2 class=3Dheading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3DExpandCollapse_CheckKey(ID0EBABA)=20
+onclick=3DExpandCollapse(ID0EBABA)><IMG id=3DID0EBABA class=3Dtoggle =
+name=3DtoggleSwitch=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG>Runn=
+ing=20
+the Sample</SPAN></H2>
+<DIV id=3DsectionSection2 class=3Dsection><content=20
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+<P xmlns=3D"">Use the following procedures to run the sample.</P>
+<DIV xmlns=3D"">
+<H4 class=3DsubHeading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3DExpandCollapse_CheckKey(ID0EBABABA)=20
+onclick=3DExpandCollapse(ID0EBABABA)><IMG id=3DID0EBABABA class=3Dtoggle =
+
+name=3DtoggleSwitch=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG><B>T=
+o=20
+test the data service</B></SPAN></H4>
+<DIV class=3DsubSection>
+<OL class=3Dordered>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">On the local computer, open the following URI in a Web=20
+browser:</P>
+  <DIV class=3Dcode xmlns=3D""><SPAN codeLanguage=3D"other">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=3DcopyCode onfocusin=3DChangeCopyCodeIcon(this)=20
+        onmouseover=3DChangeCopyCodeIcon(this) =
+onfocusout=3DChangeCopyCodeIcon(this)=20
+        tabIndex=3D0 onkeypress=3DCopyCode_CheckKey(this)=20
+        onmouseout=3DChangeCopyCodeIcon(this) =
+onclick=3DCopyCode(this)><IMG=20
+        class=3DcopyCodeImage name=3DccImage align=3DabsMiddle=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG>Copy=
+=20
+        Code</SPAN></TH></TR>
+    <TR>
+      <TD =
+colSpan=3D2><PRE>http://localhost/PhotoService/PhotoData.svc</PRE></TD></=
+TR></TBODY></TABLE></SPAN></DIV>
+  <DIV class=3Dalert xmlns=3D"">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH align=3Dleft><IMG class=3Dnote=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/note.gif"></IMG>Note:=20
+      </TH></TR>
+    <TR>
+      <TD>You may need to disable feed viewing in your browser. For more =
+
+        information, see <A=20
+        =
+href=3D"http://msdnstage.redmond.corp.microsoft.com/en-us/library/dd72827=
+9.aspx"=20
+        target=3D_blank alt=3D""><linkText=20
+        =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">Accessing =
+the=20
+        Service from a Web Browser (ADO.NET Data Services=20
+        Quickstart)</linkText></A>.
+        <P></P></TD></TR></TBODY></TABLE>
+  <P></P></DIV>
+  <P xmlns=3D"">Verify that the data service returns the =
+<CODE>PhotoData</CODE>=20
+  entity set definition.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">On the local computer, open the following URI in a Web=20
+browser:</P>
+  <DIV class=3Dcode xmlns=3D""><SPAN codeLanguage=3D"other">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=3DcopyCode onfocusin=3DChangeCopyCodeIcon(this)=20
+        onmouseover=3DChangeCopyCodeIcon(this) =
+onfocusout=3DChangeCopyCodeIcon(this)=20
+        tabIndex=3D0 onkeypress=3DCopyCode_CheckKey(this)=20
+        onmouseout=3DChangeCopyCodeIcon(this) =
+onclick=3DCopyCode(this)><IMG=20
+        class=3DcopyCodeImage name=3DccImage align=3DabsMiddle=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG>Copy=
+=20
+        Code</SPAN></TH></TR>
+    <TR>
+      <TD =
+colSpan=3D2><PRE>http://localhost/PhotoService/PhotoData.svc/$metadata</P=
+RE></TD></TR></TBODY></TABLE></SPAN></DIV>
+  <P xmlns=3D"">Notice that the <B>HasStream</B> attribute is applied to =
+the=20
+  <B>EntitySet</B> element that defines the <B>PhotoInfo</B>=20
+  entity.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">On the local computer, open the following URI in a Web=20
+browser:</P>
+  <DIV class=3Dcode xmlns=3D""><SPAN codeLanguage=3D"other">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=3DcopyCode onfocusin=3DChangeCopyCodeIcon(this)=20
+        onmouseover=3DChangeCopyCodeIcon(this) =
+onfocusout=3DChangeCopyCodeIcon(this)=20
+        tabIndex=3D0 onkeypress=3DCopyCode_CheckKey(this)=20
+        onmouseout=3DChangeCopyCodeIcon(this) =
+onclick=3DCopyCode(this)><IMG=20
+        class=3DcopyCodeImage name=3DccImage align=3DabsMiddle=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG>Copy=
+=20
+        Code</SPAN></TH></TR>
+    <TR>
+      <TD =
+colSpan=3D2><PRE>http://localhost/PhotoService/PhotoData.svc/PhotoInfo(1)=
+</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+  <P xmlns=3D"">This returns the <B>PhotoInfo</B> entity that has a key =
+value of=20
+  1.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">On the local computer, open the following URI in a Web=20
+browser:</P>
+  <DIV class=3Dcode xmlns=3D""><SPAN codeLanguage=3D"other">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH>&nbsp;</TH>
+      <TH><SPAN class=3DcopyCode onfocusin=3DChangeCopyCodeIcon(this)=20
+        onmouseover=3DChangeCopyCodeIcon(this) =
+onfocusout=3DChangeCopyCodeIcon(this)=20
+        tabIndex=3D0 onkeypress=3DCopyCode_CheckKey(this)=20
+        onmouseout=3DChangeCopyCodeIcon(this) =
+onclick=3DCopyCode(this)><IMG=20
+        class=3DcopyCodeImage name=3DccImage align=3DabsMiddle=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif"></IMG>Copy=
+=20
+        Code</SPAN></TH></TR>
+    <TR>
+      <TD =
+colSpan=3D2><PRE>http://localhost/PhotoService/PhotoData.svc/PhotoInfo(1)=
+/$value</PRE></TD></TR></TBODY></TABLE></SPAN></DIV>
+  <P xmlns=3D"">This returns the image file as a data stream for the =
+entity with=20
+  the specified key. The image is displayed in the Web=20
+  browser.</P></content></LI></OL></DIV></DIV>
+<DIV xmlns=3D"">
+<H4 class=3DsubHeading><SPAN style=3D"CURSOR: default" tabIndex=3D0=20
+onkeypress=3DExpandCollapse_CheckKey(ID0EAABABA)=20
+onclick=3DExpandCollapse(ID0EAABABA)><IMG id=3DID0EAABABA class=3Dtoggle =
+
+name=3DtoggleSwitch=20
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif"></IMG><B>T=
+o=20
+run the client application</B></SPAN></H4>
+<DIV class=3DsubSection>
+<OL class=3Dordered>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Make sure that <B>PhotoStreamingClient</B> is the =
+startup project,=20
+  and then press F5.</P>
+  <P xmlns=3D""><B>PhotoInfo</B> data is requested from the data service =
+and=20
+  loaded into a <A =
+href=3D"http://msdn.microsoft.com/en-us/library/ee474331.aspx"=20
+  target=3D_blank alt=3D""><linkText=20
+  =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">DataServiceC=
+ollection&lt;T&gt;</linkText></A>,=20
+  which is bound to the combo box. The image file associated with the =
+selected=20
+  entity is obtained as a stream from the data service.</P>
+  <DIV class=3Dalert xmlns=3D"">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH align=3Dleft><IMG class=3Dnote=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/note.gif"></IMG>Note:=20
+      </TH></TR>
+    <TR>
+      <TD>The data service is configured to limit uploaded images to 500 =
+KB.
+        <P></P></TD></TR></TBODY></TABLE>
+  <P></P></DIV></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Click <B>Photo Details</B>.</P>
+  <P xmlns=3D"">This displays data from the <B>PhotoInfo</B> entity for =
+the=20
+  selected image.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Select another photo to display a different image file. =
+</P>
+  <DIV class=3Dalert xmlns=3D"">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH align=3Dleft><IMG class=3Dnote=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/note.gif"></IMG>Note:=20
+      </TH></TR>
+    <TR>
+      <TD>Images are not cached. Each selection results in a request to =
+the=20
+        data service.
+        <P></P></TD></TR></TBODY></TABLE>
+  <P></P></DIV></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Click <B>Add Photo</B>, in the displayed dialog select =
+an image to=20
+  upload to the data service, and then click <B>Open</B>.</P>
+  <DIV class=3Dalert xmlns=3D"">
+  <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+    <TBODY>
+    <TR>
+      <TH align=3Dleft><IMG class=3Dnote=20
+        =
+src=3D"file:///C:/De=
+fault/be353d0a-85eb-4360-baf7-b728a8060b25/local/note.gif"></IMG>Note:=20
+      </TH></TR>
+    <TR>
+      <TD>The data service is configured to limit uploaded images to 500 =
+KB.
+        <P></P></TD></TR></TBODY></TABLE>
+  <P></P></DIV></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">In the <B>Select a new photo to upload...</B> dialog =
+box, enter=20
+  information about the selected photo and then click <B>Save and =
+Close</B>.</P>
+  <P xmlns=3D"">This sends a POST request to the data service that =
+contains the=20
+  image file as a stream. A subsequent MERGE request sends the rest of =
+the data=20
+  from the newly created <B>PhotoInfo</B> object.</P></content>
+  <LI><content =
+xmlns=3D"http://ddue.schemas.microsoft.com/authoring/2003/5">
+  <P xmlns=3D"">Click <B>Refresh Images</B> to reload <B>PhotoInfo</B> =
+data from=20
+  the data =
+service.</P></content></LI></OL></DIV></DIV></content></DIV></DIV><!--[if=
+ gte IE 5]><tool:tip=20
+avoidmouse=3D"false" =
+element=3D"languageFilterToolTip"></tool:tip><![endif]--></DIV>
+<P></P>
+<HR>
+</HR><BR><BR></DIV></BODY></HTML>
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/drpdown.gif
+
+R0lGODlhDwARAMQAANPd+9bf+7W95Jacu9zk/O7z/uvw/uXr/QAAAuns+t7m/Ovx/tni/AAABObs
+/eLp/QABBQEBA+zx/uju/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAA
+AAAALAAAAAAPABEAAAVaYCKMZEmKRaqu6iBIiyHP9OJOzqHvvOM+CoJwSFS4FIyAcslkuAgBgHRK
+DTyjAMgUMbUKoNIGF8GVesFSRKRsvlIbVMAZG++66/YvHT/H59F+VgkDhIWGhQkhADs=
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/drpdown_orange.gif
+
+R0lGODlhDwARANUAAOaLLP/IPP/TpP/Llv/IkP/56f/Fi//lxP/pzAAAAP/Xq//t0//Pnf/gvP/w
+2v/35f/ctP/25f/04P/s0//PnP/z4P/btP3sxv/py//w2f/x2v/03//XrP/z3wABAP/Yq//kxP/g
+u//YrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAPABEAAAaLwEtg
+SCwShYWkcqkEBCKRh3QKjUaclY5kW6lsOhtJReLMODSOtNqc0TgX8Al8MZHbnYg8AoPR5/tOB4Ig
+HoIHCYYHTg2MDQkJIY+NDU4WEJcQjwmWEBYWTgqhIh8KCaEcp04Cq6ytrE4MFAyxsrOxsU4Duru8
+u04EwMHCwU4GxsfIxwAXAM3Oz84XQQA7
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycode.gif
+
+R0lGODlhDwAPAOZmAJOit7LC2K7E8IGu5a6/1HOh3lyM2pirxilUqpmsx/z9/svP1JKw7Yqu/MXT
+8qm4zmSFydbe7Pb5/evv9itXsW6c2iJGj6a97CBBhqC572iX1ZywztLb8Zemu6OyyCNIlvn6/CJF
+jpyrwbLJ8K7Q/6++1DVlxSlUrKm5z4Kf2M/Z5tLW3Zqtym6X52CO58zX7Nff6puvzJCq4Lra/+rv
++yVMmydQopquypamu+bq8+Dm8SVNnSVKmL/L3dLe8MDK4MLO5PX2+7rF1Pv9/iNHkn+n8/D0+8fS
+4XOS0Uduup/F+iFDidvk9/f4+6/D7fDy+JepxKrB74648CFDipy156Kxx2aCpfDz+KOyx5quzKvC
+79Pe9VV5wSpXs3Ka6oWn6ydQpFtyj77O8DVJY1GD0f///////wAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAGYALAAAAAAPAA8AAAefgGaCg4SFhoeCAQEEBA8eK4gBZZNlVVYLhyWUCjhCYZiFKGUzJD4A
+AlpRGQwML4JYkyBPOQKUZV8mQGYiZUpSAwUXtl4jFD8dCkETOhFUZQ0NHC5dJ2AATcAVGjKURkwO
+WTsAVzAqRz0pZUUtBmRkNzwAY/PzSGVDNFtiTglEhhBl2rkjcyCEIS4SNsRgkeAAlCWGkiBAYKPG
+BwtTMAQCADs=
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/copycodeHighlight.gif
+
+R0lGODlhDwAPAOZjAMmzk+XMrPralfrAefrgqdm9lPq6aPq6Uvn599q/lbmGHeLJqdyZG/rYkNjT
+y/by6tfBoeLLq82QG/rSgsiQHcySHPrKjvn379y/le7du/XJdeHEl/j48/r28byHHayKX7WEHeWq
+OvjryeHZ0PivIfrmt/rewPn39PrrzPr05cy3l97Nt/bx5frIbPPDZfTq2frdrPrLcdzGptfBn/rb
+neSiHPrZk/ran9zAlfnSg9a7lPrShMOZZfr49ujZw8eQHPqyV+zdyvTlxe7h0u27VtaZHOmySNOV
+HPHl0frt1frov8y2lueiGufUutK8m+nauvrcpfrGYMONHd3FpffkyvTu4d6bG/rdtvq4Yb+JHfrh
+qPrXpfr16uDBlPrdpeDBloVmQfqxQfr6+v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAGMALAAAAAAPAA8AAAefgGOCg4SFhoeCAQELCzIQI4gBYpNiMzwOhxGUCEsrH5iFU2ImV1QA
+BFBeNA0NQoIQkycPVQSUYhMkGWNOYlsWAwY3tjEwNU8qCBcsL0g2YgICIlFMVkUAHMBYQDmUXElK
+XRIAD0NBPk0aYjstB2FhGBQAYPPzLmI9KSglWglShkRi2rkLU8CDISMdNnzBkaCADgWGQjBgcKTC
+jywKQAQCADs=
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/collapse.gif
+
+R0lGODlhCQAJAJEAAPf3/4SChAAAAAAAACH5BAAAAAAALAAAAAAJAAkAAAIRjI+gC8brXgtAWDtl
+lvGhHxQAOw==
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/exp.gif
+
+R0lGODlhCQAJAJEAAPf3/4SChAAAAAAAACH5BAAAAAAALAAAAAAJAAkAAAIUjI+gC7aynILKiXtb
+eHHPznQIUgAAOw==
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/note.gif
+
+R0lGODlhCgAKALMJAP8EAP9dWsbDxtbT1v/PAISGhIyOjAAAAP//zv///wAAAAAAAAAAAAAAAAAA
+AAAAACH5BAEAAAkALAAAAAAKAAoAAAQo0Mg5RAAG6X0I3lp3JBlHjORWnEOSIsNRIIVbFkNog/oL
+ooegMOiKAAA7
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/Important.gif
+
+R0lGODlhCgAKAJH/AAAA/wAAgMDAwJmZmSH5BAEAAAIALAAAAAAKAAoAAAIdlBWnCLkBRFNwiDEZ
+sHhCEIHZJwaWAUnm05yPKxQAOw==
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/Classic.css
+
+.userDataStyle {
+	BEHAVIOR: url(#default#userData)
+}
+
+@media All   =20
+{
+tool\:tip {
+	BEHAVIOR: url(../local/tooltip.htc)
+}
+    }
+BODY {
+	FONT-STYLE: normal; MARGIN: 0px; WIDTH: 100%; FONT-FAMILY: Verdana; =
+BACKGROUND: #ffffff; COLOR: #000000; FONT-SIZE: medium; FONT-WEIGHT: =
+normal
+}
+A {
+	COLOR: #0000ff
+}
+A:visited {
+	COLOR: #0000ff
+}
+A:link {
+	COLOR: #0000ff
+}
+A:hover {
+	COLOR: #ff0000; CURSOR: hand
+}
+A:active {
+	COLOR: #ff0000; CURSOR: hand
+}
+DIV#mainSection {
+	WIDTH: 100%; FONT-SIZE: 70%
+}
+DIV#mainBody {
+	PADDING-BOTTOM: 20px; MARGIN-TOP: 10px; MARGIN-LEFT: 5px; FONT-SIZE: =
+90%
+}
+DIV#header {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #d4dfff; PADDING-LEFT: 0px; =
+WIDTH: 100%; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV#header TABLE {
+	BORDER-BOTTOM: #c8cdde 1px solid; WIDTH: 100%
+}
+SPAN#runningHeaderText {
+	COLOR: #003399; FONT-SIZE: 90%
+}
+SPAN#nsrTitle {
+	COLOR: #003399; FONT-SIZE: 125%; FONT-WEIGHT: 600
+}
+DIV#header TABLE TD {
+	MARGIN-TOP: 0px; PADDING-RIGHT: 20px; MARGIN-BOTTOM: 0px; COLOR: =
+#0000ff; FONT-SIZE: 70%
+}
+DIV#header TABLE TR#headerTableRow3 TD {
+	PADDING-BOTTOM: 2px; PADDING-TOP: 5px
+}
+DIV#header TABLE#bottomTable {
+	TEXT-ALIGN: left; BORDER-TOP: #ffffff 1px solid
+}
+DIV#footer {
+	PADDING-BOTTOM: 2px; MARGIN: 0px; PADDING-LEFT: 2px; WIDTH: 100%; =
+PADDING-RIGHT: 2px; FONT-SIZE: 90%; PADDING-TOP: 2px
+}
+HR#footerHR {
+	BORDER-BOTTOM: #eeeeff 1px solid; HEIGHT: 3px; COLOR: #d4dfff; =
+BORDER-TOP: #c8cdde 1px solid
+}
+DIV.saveHistory {
+	BEHAVIOR: url(#default#saveHistory)
+}
+DIV.section {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 16px; WIDTH: 100%; PADDING-RIGHT: =
+15px; PADDING-TOP: 2px
+}
+.heading {
+	MARGIN-TOP: 18px; MARGIN-BOTTOM: 8px; FONT-WEIGHT: bold
+}
+.PacketFieldBitsTable {
+	TEXT-ALIGN: center; MARGIN: 3%; WIDTH: 95%; BORDER-COLLAPSE: collapse
+}
+.PacketFieldBitsTable TH {
+	BORDER-COLLAPSE: collapse
+}
+.PacketFieldBitsTable TH TD {
+	BORDER-BOTTOM: black 1px solid; TEXT-ALIGN: center; BORDER-LEFT: black =
+1px solid; BACKGROUND-COLOR: #ccc; VERTICAL-ALIGN: middle; BORDER-TOP: =
+black 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: black 1px solid
+}
+.PacketFieldBitsTable TR TD {
+	BORDER-BOTTOM: #000 1px solid; BORDER-LEFT: #000 1px solid; =
+BACKGROUND-COLOR: #ffffff; BORDER-TOP: #000 1px solid; BORDER-RIGHT: =
+#000 1px solid
+}
+.PacketTable {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; =
+BORDER-COLLAPSE: collapse; PADDING-TOP: 2px
+}
+.PacketTable TD {
+	BACKGROUND-COLOR: #ffffff
+}
+.IndentedPacketFieldBits {
+	PADDING-BOTTOM: 2px; MARGIN: 25px; PADDING-LEFT: 2px; PADDING-RIGHT: =
+2px; BORDER-COLLAPSE: collapse; PADDING-TOP: 2px
+}
+.IndentedPacketFieldBits TR TD {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; =
+BACKGROUND-COLOR: #ffffff; BORDER-TOP: black 1px solid; BORDER-RIGHT: =
+black 1px solid
+}
+.PacketFieldBits {
+	PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 2px; =
+PADDING-RIGHT: 2px; BORDER-COLLAPSE: collapse; PADDING-TOP: 2px
+}
+.PacketFieldBits TR TD {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; =
+BACKGROUND-COLOR: #ffffff; BORDER-TOP: black 1px solid; BORDER-RIGHT: =
+black 1px solid
+}
+TABLE.psdkRequirements {
+	BACKGROUND-COLOR: #ffffff; MARGIN-TOP: 0em; MARGIN-BOTTOM: 0em
+}
+TABLE.exampleTitle {
+	BACKGROUND-COLOR: #ffffff; MARGIN-TOP: 1em; FONT-FAMILY: Verdana, =
+Arial, Helvetica, Sans-Serif; MARGIN-BOTTOM: 0.6em; MARGIN-LEFT: 0pt; =
+FONT-SIZE: 100%; FONT-WEIGHT: bold
+}
+TABLE.debugSection {
+	BACKGROUND-COLOR: #ffffff; MARGIN-TOP: 1em; FONT-FAMILY: Verdana, =
+Arial, Helvetica, Sans-Serif; MARGIN-BOTTOM: 0.6em; COLOR: black; =
+MARGIN-LEFT: 0pt; FONT-SIZE: 100%; FONT-WEIGHT: bold
+}
+P.topic_change_notice {
+	MARGIN-BOTTOM: 0px; COLOR: gray; FONT-SIZE: 8pt
+}
+P.redText {
+	COLOR: red
+}
+P.no_folder {
+	TEXT-ALIGN: center; MARGIN-TOP: 0px; FONT-SIZE: 10pt; PADDING-TOP: 0px
+}
+P.folder_set {
+	FONT-SIZE: 10pt
+}
+P.protocol_title {
+	MARGIN-TOP: 1em; FONT-FAMILY: Verdana, Arial, Helvetica, Sans-Serif; =
+MARGIN-BOTTOM: 0.6em; MARGIN-LEFT: 0px; FONT-SIZE: 100%; FONT-WEIGHT: =
+bold
+}
+P.protocol_download_link {
+	TEXT-ALIGN: center; MARGIN-TOP: 0pt; FONT-SIZE: 0pt; PADDING-TOP: 0pt
+}
+P.TextIndented {
+	MARGIN-LEFT: 0.5in
+}
+H1.heading {
+	COLOR: #003399; FONT-SIZE: 125%
+}
+H2.heading {
+	COLOR: #003399; FONT-SIZE: 125%
+}
+.subHeading {
+	MARGIN-BOTTOM: 4px; FONT-WEIGHT: bold
+}
+H3.subHeading {
+	COLOR: #003399; FONT-SIZE: 115%; FONT-WEIGHT: bold
+}
+H4.subHeading {
+	COLOR: #003399; FONT-SIZE: 105%
+}
+H5.subHeading {
+	COLOR: #003399; FONT-SIZE: 100%
+}
+IMG.toggle {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+5px; BORDER-RIGHT: 0px
+}
+IMG.copyCodeImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+3px; BORDER-RIGHT: 0px
+}
+IMG.downloadCodeImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+3px; BORDER-RIGHT: 0px
+}
+IMG.viewCodeImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+3px; BORDER-RIGHT: 0px
+}
+IMG.note {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; MARGIN-RIGHT: =
+3px; BORDER-RIGHT: 0px
+}
+IMG#languageFilterImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-LEFT: 10px; =
+VERTICAL-ALIGN: middle; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IMG#membersOptionsFilterImage {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN-LEFT: 10px; =
+VERTICAL-ALIGN: middle; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IMG#toggleAllImage {
+	MARGIN-LEFT: 4px; VERTICAL-ALIGN: middle
+}
+DIV#mainSection TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; FONT-SIZE: 100%; =
+BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV#mainSection TABLE TH {
+	BORDER-BOTTOM: #c8cdde 1px solid; PADDING-LEFT: 5px; PADDING-RIGHT: =
+5px; BACKGROUND: #efeff7; COLOR: #000066
+}
+DIV#mainSection TABLE TD {
+	PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #f7f7ff; BORDER-TOP: =
+#ffffff 1px solid
+}
+DIV#mainSection TABLE TD.imageCell {
+	WHITE-SPACE: nowrap
+}
+DIV.code TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; MARGIN-BOTTOM: 5px; =
+FONT-SIZE: 95%; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV.code TABLE TH {
+	BORDER-BOTTOM: #c8cdde 1px solid; PADDING-LEFT: 5px; PADDING-RIGHT: =
+5px; BACKGROUND: #efeff7; COLOR: #000066; FONT-WEIGHT: bold
+}
+DIV.code TABLE TD {
+	PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #f7f7ff; BORDER-TOP: =
+#ffffff 1px solid; PADDING-TOP: 5px
+}
+DIV.alert {
+	WIDTH: 98%
+}
+DIV.alert TABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; FONT-SIZE: 100%; =
+BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DIV.alert TABLE TH {
+	PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #efeff7; =
+BORDER-BOTTOM-WIDTH: 0px; COLOR: #000066
+}
+DIV.alert TABLE TD {
+	PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #f7f7ff; BORDER-TOP: =
+#ffffff 1px solid
+}
+.copyCode {
+	COLOR: #0000ff; FONT-SIZE: 90%; FONT-WEIGHT: normal
+}
+.downloadCode {
+	COLOR: #0000ff; FONT-SIZE: 90%; FONT-WEIGHT: normal
+}
+.viewCode {
+	COLOR: #0000ff; FONT-SIZE: 90%; FONT-WEIGHT: normal
+}
+DIV.code PRE {
+	FONT-FAMILY: Monospace, Courier New, Courier; WORD-WRAP: break-word; =
+COLOR: #000066; FONT-SIZE: 105%
+}
+CODE {
+	FONT-FAMILY: Monospace, Courier New, Courier; COLOR: #000066; =
+FONT-SIZE: 105%
+}
+DL {
+	MARGIN-TOP: 0px; PADDING-LEFT: 1px
+}
+DT {
+	MARGIN-LEFT: 15px
+}
+DD {
+	MARGIN-BOTTOM: 0px; MARGIN-LEFT: 30px
+}
+UL {
+	LIST-STYLE-TYPE: disc; MARGIN-LEFT: 17px
+}
+UL UL {
+	LIST-STYLE-TYPE: disc; MARGIN-TOP: 3px; MARGIN-BOTTOM: 4px; =
+MARGIN-LEFT: 17px
+}
+OL {
+	LIST-STYLE-TYPE: decimal; MARGIN-LEFT: 24px
+}
+OL OL {
+	LIST-STYLE-TYPE: lower-alpha; MARGIN-TOP: 3px; MARGIN-BOTTOM: 4px; =
+MARGIN-LEFT: 24px
+}
+LI {
+	MARGIN-BOTTOM: 3px
+}
+.ordered OL {
+	LIST-STYLE-TYPE: decimal; MARGIN-LEFT: 24px
+}
+.ordered OL OL {
+	LIST-STYLE-TYPE: lower-alpha; MARGIN-TOP: 3px; MARGIN-BOTTOM: 4px; =
+MARGIN-LEFT: 24px
+}
+.ordered LI {
+	MARGIN-BOTTOM: 3px
+}
+.ordered LI {
+	LIST-STYLE-TYPE: decimal
+}
+.ordered OL LI OL LI OL LI {
+	LIST-STYLE-TYPE: decimal
+}
+.ordered OL LI OL LI OL LI OL LI OL LI OL LI {
+	LIST-STYLE-TYPE: decimal
+}
+.ordered OL LI OL LI OL LI OL LI OL LI OL LI OL LI OL LI OL LI {
+	LIST-STYLE-TYPE: decimal
+}
+.ordered OL LI {
+	LIST-STYLE-TYPE: lower-alpha
+}
+.ordered OL LI OL LI OL LI OL LI {
+	LIST-STYLE-TYPE: lower-alpha
+}
+.ordered OL LI OL LI OL LI OL LI OL LI OL LI OL LI {
+	LIST-STYLE-TYPE: lower-alpha
+}
+.ordered OL LI OL LI {
+	LIST-STYLE-TYPE: lower-roman
+}
+.ordered OL LI OL LI OL LI OL LI OL LI {
+	LIST-STYLE-TYPE: lower-roman
+}
+.ordered OL LI OL LI OL LI OL LI OL LI OL LI OL LI OL LI {
+	LIST-STYLE-TYPE: lower-roman
+}
+.unordered {
+	LIST-STYLE-TYPE: disc
+}
+OL OL UL LI.unordered {
+	LIST-STYLE-TYPE: disc
+}
+TABLE LI.unordered {
+	LIST-STYLE-TYPE: disc
+}
+LI.unordered {
+	LIST-STYLE-TYPE: disc
+}
+P {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 15px
+}
+.tip {
+	FONT-STYLE: italic; COLOR: #0000ff; CURSOR: hand; TEXT-DECORATION: =
+underline
+}
+.languageFilter {
+	PADDING-BOTTOM: 4px; COLOR: #0000ff; CURSOR: hand; TEXT-DECORATION: =
+underline
+}
+.math {
+	FONT-FAMILY: Times New Roman; FONT-SIZE: 125%
+}
+.sourceCodeList {
+	FONT-FAMILY: Verdana; FONT-SIZE: 90%
+}
+PRE.viewCode {
+	WIDTH: 100%; OVERFLOW: auto
+}
+MSHelp\:link {
+	COLOR: #0000ff; TEXT-DECORATION: underline; hoverColor: #3366ff; =
+filterString:=20
+}
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/Default/be353d0a-85eb-4360-baf7-b728a8060b25/local/script.js
+
+window.onload=3DLoadPage;
+window.onunload=3DWindow_Unload;
+window.onresize=3DResizeWindow;
+window.onbeforeprint =3D set_to_print;
+window.onafterprint =3D reset_form;
+
+var vbDeclaration;
+var vbUsage;
+var csLang;
+var cLang;
+var jsharpLang;
+var jsLang;
+
+var scrollPos =3D 0;
+
+var inheritedMembers;
+var protectedMembers;
+var netcfMembersOnly;
+
+
+/*=09
+**********
+**********   Begin
+**********
+*/
+
+function LoadPage()
+{
+	// show correct language
+	LoadLanguages();
+	LoadMembersOptions();
+=09
+	Set_up_checkboxes();
+
+	DisplayLanguages();
+=09
+	if(inheritedMembers=3D=3D"off")
+		DisplayInheritedMembers();
+	if(protectedMembers=3D=3D"off")
+		DisplayProtectedMembers();
+	if(netcfMembersOnly=3D=3D"on")
+		DisplayNETCFMembers();
+	=09
+	ChangeMembersOptionsFilterLabel();
+=09
+	LoadSections();
+
+	ResizeWindow();
+=09
+	// vs70.js did this to allow up/down arrow scrolling, I think
+	try { mainSection.setActive(); } catch(e) { }
+
+	// make body visible, now that we're ready to render
+	document.body.style.display =3D "";
+=09
+	//set the scroll position
+	try{mainSection.scrollTop =3D scrollPos;}
+	catch(e){}
+}
+
+function Window_Unload()
+{
+	SaveLanguages();
+	SaveMembersOptions();
+	SaveSections();
+}
+
+function ResizeWindow()
+{
+	if (document.body.clientWidth=3D=3D0) return;
+	var header =3D document.all.item("header");
+	var mainSection =3D document.all.item("mainSection");
+	if (mainSection =3D=3D null) return;
+=09
+=09
+	document.body.scroll =3D "no"
+	mainSection.style.overflow=3D "auto";
+	header.style.width=3D document.body.offsetWidth - 2;
+	//mainSection.style.paddingRight =3D "20px"; // Width issue code
+	mainSection.style.width=3D document.body.offsetWidth - 4;
+	mainSection.style.top=3D0; =20
+	if (document.body.offsetHeight > header.offsetHeight + 10)
+		mainSection.style.height=3D document.body.offsetHeight - =
+(header.offsetHeight + 10);
+	else
+		mainSection.style.height=3D0;
+=09
+	try
+	{
+		mainSection.setActive();
+	}
+	catch(e)
+	{
+	}
+}
+
+function Load(key)
+{
+	userDataCache.load("docSettings");
+	var value =3D userDataCache.getAttribute(key);
+	return value;
+}
+
+function Save(key, value)
+{
+	//userDataCache.setAttribute(key, value);
+	//userDataCache.save("docSettings");
+}
+
+function RemoveAttribute(key)
+{
+	userDataCache.removeAttribute(key);
+	userDataCache.save("docSettings");
+}
+
+function set_to_print()
+{
+	//breaks out of divs to print
+	var i;
+
+	if (window.text)document.all.text.style.height =3D "auto";
+		=09
+	for (i=3D0; i < document.all.length; i++)
+	{
+		if (document.all[i].tagName =3D=3D "body")
+		{
+			document.all[i].scroll =3D "yes";
+		}
+		if (document.all[i].id =3D=3D "header")
+		{
+			document.all[i].style.margin =3D "0px 0px 0px 0px";
+			document.all[i].style.width =3D "100%";
+		}
+		if (document.all[i].id =3D=3D "mainSection")
+		{
+			document.all[i].style.overflow =3D "visible";
+			document.all[i].style.top =3D "5px";
+			document.all[i].style.width =3D "100%";
+			document.all[i].style.padding =3D "0px 10px 0px 30px";
+		}
+	}
+}
+
+function reset_form()
+{
+	//returns to the div nonscrolling region after print
+	 document.location.reload();
+}
+
+function Set_up_checkboxes()
+{
+	var checkbox;
+=09
+	checkbox =3D document.getElementById("vbDeclarationCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(vbDeclaration =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+=09
+	checkbox =3D document.getElementById("vbUsageCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(vbUsage =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+	=09
+	checkbox =3D document.getElementById("csCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(csLang =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+	=09
+	checkbox =3D document.getElementById("cCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(cLang =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+=09
+	checkbox =3D document.getElementById("jsharpCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(jsharpLang =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+	=09
+	checkbox =3D document.getElementById("jsCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(jsLang =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+=09
+	checkbox =3D document.getElementById("inheritedCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(inheritedMembers =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+=09
+	checkbox =3D document.getElementById("protectedCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(protectedMembers =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+=09
+	checkbox =3D document.getElementById("netcfCheckbox");
+	if(checkbox !=3D null)
+	{
+		if(netcfMembersOnly =3D=3D "on")
+			checkbox.checked =3D true;
+		else
+			checkbox.checked =3D false;
+	}
+}
+
+/*=09
+**********
+**********   End
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Language Filtering
+**********
+*/
+
+function SetLanguage(key)
+{
+	var i =3D 0;
+	if(vbDeclaration =3D=3D "on")
+		i++;
+	if(vbUsage =3D=3D "on")
+		i++;
+	if(csLang =3D=3D "on")
+		i++;
+	if(cLang =3D=3D "on")
+		i++;
+	if(jsharpLang =3D=3D "on")
+		i++;
+	if(jsLang =3D=3D "on")
+		i++;
+=09
+	if(key.id =3D=3D "vbDeclarationCheckbox")
+	{
+		if(vbDeclaration =3D=3D "on")
+		{
+			if(i =3D=3D 1)
+			{
+				key.checked =3D true;
+				return;
+			}
+			=09
+			vbDeclaration =3D "off";
+		}
+		else
+			vbDeclaration =3D "on";
+	}
+	if(key.id =3D=3D "vbUsageCheckbox")
+	{
+		if(vbUsage =3D=3D "on")
+		{
+			if(i =3D=3D 1)
+			{
+				key.checked =3D true;
+				return;
+			}
+			=09
+			vbUsage =3D "off";
+		}
+		else
+			vbUsage =3D "on";
+	}
+	if(key.id =3D=3D "csCheckbox")
+	{
+		if(csLang =3D=3D "on")
+		{
+			if(i =3D=3D 1)
+			{
+				key.checked =3D true;
+				return;
+			}
+		=09
+			csLang =3D "off";
+		}
+		else
+			csLang =3D "on";
+	}
+	if(key.id =3D=3D "cCheckbox")
+	{
+		if(cLang =3D=3D "on")
+		{
+			if(i =3D=3D 1)
+			{
+				key.checked =3D true;
+				return;
+			}
+			=09
+			cLang =3D "off";
+		}
+		else
+			cLang =3D "on";
+	}
+	if(key.id =3D=3D "jsharpCheckbox")
+	{
+		if(jsharpLang =3D=3D "on")
+		{
+			if(i =3D=3D 1)
+			{
+				key.checked =3D true;
+				return;
+			}
+			=09
+			jsharpLang =3D "off";
+		}
+		else
+			jsharpLang =3D "on";
+	}
+	if(key.id =3D=3D "jsCheckbox")
+	{
+		if(jsLang =3D=3D "on")
+		{
+			if(i =3D=3D 1)
+			{
+				key.checked =3D true;
+				return;
+			}
+			=09
+			jsLang =3D "off";
+		}
+		else
+			jsLang =3D "on";
+	}
+=09
+	DisplayLanguages();
+}
+
+function DisplayLanguages()
+{
+	var spanElements =3D document.all.tags("span");
+=09
+	var x =3D 0;
+	if(vbDeclaration =3D=3D "on")
+		x++;
+	if(vbUsage =3D=3D "on")
+		x++;
+	if(csLang =3D=3D "on")
+		x++;
+	if(cLang =3D=3D "on")
+		x++;
+	if(jsharpLang =3D=3D "on")
+		x++;
+	if(jsLang =3D=3D "on")
+		x++;
+=09
+	var i;
+	for(i =3D 0; i < spanElements.length; ++i)
+	{
+		if(spanElements[i].codeLanguage !=3D null)
+		{
+			if(spanElements[i].codeLanguage =3D=3D "VisualBasic")
+			{
+				if(vbDeclaration =3D=3D "on" || vbUsage =3D=3D "on")
+					spanElements[i].style.display =3D "";
+				else
+					spanElements[i].style.display =3D "none";
+			}
+			if(spanElements[i].codeLanguage =3D=3D "VisualBasicDeclaration")
+			{
+				if(vbDeclaration =3D=3D "on")
+					spanElements[i].style.display =3D "";
+				else
+					spanElements[i].style.display =3D "none";
+			}
+			if(spanElements[i].codeLanguage =3D=3D "VisualBasicUsage")
+			{
+				if(vbUsage =3D=3D "on")
+					spanElements[i].style.display =3D "";
+				else
+					spanElements[i].style.display =3D "none";
+			}
+			if(spanElements[i].codeLanguage =3D=3D "CSharp")
+			{
+				if(csLang =3D=3D "on")
+					spanElements[i].style.display =3D "";
+				else
+					spanElements[i].style.display =3D "none";
+			}
+			if(spanElements[i].codeLanguage =3D=3D "ManagedCPlusPlus")
+			{
+				if(cLang =3D=3D "on")
+					spanElements[i].style.display =3D "";
+				else
+					spanElements[i].style.display =3D "none";
+			}
+			if(spanElements[i].codeLanguage =3D=3D "JSharp")
+			{
+				if(jsharpLang =3D=3D "on")
+					spanElements[i].style.display =3D "";
+				else
+					spanElements[i].style.display =3D "none";
+			}
+			if(spanElements[i].codeLanguage =3D=3D "JScript")
+			{
+				if(jsLang =3D=3D "on")
+					spanElements[i].style.display =3D "";
+				else
+					spanElements[i].style.display =3D "none";
+			}
+		=09
+			if(spanElements[i].codeLanguage =3D=3D "NotVisualBasicUsage")
+			{
+				if((x =3D=3D 1) && (vbUsage =3D=3D "on"))
+				{
+					spanElements[i].style.display =3D "none";
+				}
+				else
+				{
+					spanElements[i].style.display =3D "";
+				}
+			}
+		}
+	}
+	ChangeLanguageFilterLabel();
+}
+
+function ChangeLanguageFilterLabel()
+{=09
+	var i =3D 0;
+	if(vbDeclaration =3D=3D "on")
+		i++;
+	if(vbUsage =3D=3D "on")
+		i++;
+	if(csLang =3D=3D "on")
+		i++;
+	if(cLang =3D=3D "on")
+		i++;
+	if(jsharpLang =3D=3D "on")
+		i++;
+	if(jsLang =3D=3D "on")
+		i++;
+	=09
+	var labelElement;
+=09
+	labelElement =3D document.getElementById("showAllLabel");
+=09
+	if(labelElement =3D=3D null)
+		return;
+	=09
+	labelElement.style.display =3D "none";
+=09
+	labelElement =3D document.getElementById("multipleLabel");
+	labelElement.style.display =3D "none";
+=09
+	labelElement =3D document.getElementById("vbLabel");
+	labelElement.style.display =3D "none";
+=09
+	labelElement =3D document.getElementById("csLabel");
+	labelElement.style.display =3D "none";
+=09
+	labelElement =3D document.getElementById("cLabel");
+	labelElement.style.display =3D "none";
+=09
+	labelElement =3D document.getElementById("jsharpLabel");
+	labelElement.style.display =3D "none";
+=09
+	labelElement =3D document.getElementById("jsLabel");
+	labelElement.style.display =3D "none";
+=09
+	if(i =3D=3D 6)
+	{
+		labelElement =3D document.getElementById("showAllLabel");
+		labelElement.style.display =3D "inline";
+	}
+	else if ((i > 1) && (i < 6))
+	{
+		if((i =3D=3D 2) && ((vbDeclaration =3D=3D "on") && (vbUsage =3D=3D =
+"on")))
+		{
+			labelElement =3D document.getElementById("vbLabel");
+			labelElement.style.display =3D "inline";
+		}
+		else
+		{
+			labelElement =3D document.getElementById("multipleLabel");
+			labelElement.style.display =3D "inline";
+		}
+	}
+	else if (i =3D=3D 1)
+	{
+		if(vbDeclaration =3D=3D "on" || vbUsage =3D=3D "on")
+		{
+			labelElement =3D document.getElementById("vbLabel");
+			labelElement.style.display =3D "inline";
+		}
+		if(csLang =3D=3D "on")
+		{
+			labelElement =3D document.getElementById("csLabel");
+			labelElement.style.display =3D "inline";
+		}
+		if(cLang =3D=3D "on")
+		{
+			labelElement =3D document.getElementById("cLabel");
+			labelElement.style.display =3D "inline";
+		}
+		if(jsharpLang =3D=3D "on")
+		{
+			labelElement =3D document.getElementById("jsharpLabel");
+			labelElement.style.display =3D "inline";
+		}
+		if(jsLang =3D=3D "on")
+		{
+			labelElement =3D document.getElementById("jsLabel");
+			labelElement.style.display =3D "inline";
+		}
+	}
+}
+
+function LoadLanguages()
+{
+	var value;
+	value =3D Load("vbDeclaration");
+	if(value =3D=3D null)
+		vbDeclaration =3D "on";
+	else
+		vbDeclaration =3D value;
+	=09
+	value =3D Load("vbUsage");
+	if(value =3D=3D null)
+		vbUsage =3D "on";
+	else
+		vbUsage =3D value;
+	=09
+	value =3D Load("csLang");
+	if(value =3D=3D null)
+		csLang =3D "on";
+	else
+		csLang =3D value;
+	=09
+	value =3D Load("cLang");
+	if(value =3D=3D null)
+		cLang =3D "on";
+	else
+		cLang =3D value;
+=09
+	value =3D Load("jsharpLang");
+	if(value =3D=3D null)
+		jsharpLang =3D "on";
+	else
+		jsharpLang =3D value;
+	=09
+	value =3D Load("jsLang");
+	if(value =3D=3D null)
+		jsLang =3D "on";
+	else
+		jsLang =3D value;
+}
+
+function SaveLanguages()
+{
+	Save("vbDeclaration", vbDeclaration);
+	Save("vbUsage", vbUsage);
+	Save("csLang", csLang);
+	Save("cLang", cLang);
+	Save("jsharpLang", jsharpLang);
+	Save("jsLang", jsLang);
+}
+
+/*=09
+**********
+**********   End Language Filtering
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Members Options Filtering
+**********
+*/
+
+function SetMembersOptions(key)
+{
+	if(key.id =3D=3D "inheritedCheckbox")
+	{
+		if(key.checked =3D=3D true)
+			inheritedMembers =3D "on";
+		else
+			inheritedMembers =3D "off";
+	=09
+		DisplayInheritedMembers();
+	}
+	if(key.id =3D=3D "protectedCheckbox")
+	{
+		if(key.checked =3D=3D true)
+			protectedMembers =3D "on";
+		else
+			protectedMembers =3D "off";
+	=09
+		DisplayProtectedMembers();
+	}
+	if(key.id =3D=3D "netcfCheckbox")
+	{
+		if(key.checked =3D=3D true)
+			netcfMembersOnly =3D "on";
+		else
+			netcfMembersOnly =3D "off";
+=09
+		DisplayNETCFMembers();
+	}
+=09
+	ChangeMembersOptionsFilterLabel();
+}
+
+function DisplayInheritedMembers()
+{
+	var iMembers =3D document.all.tags("tr");
+	var i;
+=09
+	if(inheritedMembers =3D=3D "off")
+	{=09
+		for(i =3D 0; i < iMembers.length; ++i)
+		{
+			if(iMembers[i].name =3D=3D "inheritedMember")
+				iMembers[i].style.display =3D "none";
+		}
+	}
+	else
+	{
+		for(i =3D 0; i < iMembers.length; ++i)
+		{
+			if(iMembers[i].name =3D=3D "inheritedMember")
+			{
+				if(netcfMembersOnly =3D=3D "on")
+				{
+					if(iMembers[i].notSupportedOn =3D=3D "netcf")
+					{
+						iMembers[i].style.display =3D "none";
+					}
+					else
+					{
+						iMembers[i].style.display =3D "";
+					}
+				}
+				else
+					iMembers[i].style.display =3D "";
+			}
+		}
+	}
+}
+
+function DisplayProtectedMembers()
+{
+	var imgElements =3D document.getElementsByName("toggleSwitch");
+	var i;
+=09
+	if(protectedMembers =3D=3D "off")
+	{
+		for(i =3D 0; i < imgElements.length; ++i)
+		{
+			if(imgElements[i].id.indexOf("Family", 0) =3D=3D 0)
+			{
+				if(ItemCollapsed(imgElements[i].id) =3D=3D false)
+				{
+					ExpandCollapse(imgElements[i]);
+				}
+			}
+		}
+	}
+	else
+	{
+		for(i =3D 0; i < imgElements.length; ++i)
+		{
+			if(imgElements[i].id.indexOf("Family", 0) =3D=3D 0)
+			{
+				if(ItemCollapsed(imgElements[i].id) =3D=3D true)
+				{
+					ExpandCollapse(imgElements[i]);
+				}
+			}
+		}
+	}
+	=09
+}
+
+function DisplayNETCFMembers()
+{
+	var netcfMembers =3D document.all.tags("tr");
+	var i;
+=09
+	if(netcfMembersOnly =3D=3D "off")
+	{=09
+		for(i =3D 0; i < netcfMembers.length; ++i)
+		{
+			if(netcfMembers[i].notSupportedOn =3D=3D "netcf")
+			{
+				netcfMembers[i].style.display =3D "";
+			}
+		}
+		DisplayInheritedMembers();
+	}
+	else
+	{
+		for(i =3D 0; i < netcfMembers.length; ++i)
+		{
+			if(netcfMembers[i].notSupportedOn =3D=3D "netcf")
+			{
+				netcfMembers[i].style.display =3D "none";
+			}
+		}
+	}
+}
+
+function ChangeMembersOptionsFilterLabel()
+{=09
+
+	var filtered =3D false;
+=09
+	if((inheritedMembers=3D=3D"off") || (protectedMembers=3D=3D"off") || =
+(netcfMembersOnly=3D=3D"on"))
+		filtered =3D true;
+	=09
+	var labelElement;
+=09
+	labelElement =3D document.getElementById("showAllMembersLabel");
+=09
+	if(labelElement =3D=3D null)
+		return;
+	=09
+	labelElement.style.display =3D "none";
+=09
+	labelElement =3D document.getElementById("filteredMembersLabel");
+	labelElement.style.display =3D "none";
+=09
+	if(filtered)
+	{
+		labelElement =3D document.getElementById("filteredMembersLabel");
+		labelElement.style.display =3D "inline";
+	}
+	else
+	{
+		labelElement =3D document.getElementById("showAllMembersLabel");
+		labelElement.style.display =3D "inline";
+	}
+}
+
+function LoadMembersOptions()
+{
+	var value;
+	value =3D Load("inheritedMembers");
+	if(value =3D=3D null)
+		inheritedMembers =3D "on";
+	else
+		inheritedMembers =3D value;
+	=09
+	value =3D Load("protectedMembers");
+	if(value =3D=3D null)
+		protectedMembers =3D "on";
+	else
+		protectedMembers =3D value;
+	=09
+	value =3D Load("netcfMembersOnly");
+	if(value =3D=3D null)
+		netcfMembersOnly =3D "off";
+	else
+		netcfMembersOnly =3D value;
+}
+
+function SaveMembersOptions()
+{
+	Save("inheritedMembers", inheritedMembers);
+	Save("protectedMembers", protectedMembers);
+	Save("netcfMembersOnly", netcfMembersOnly);
+}
+
+/*=09
+**********
+**********   End Members Options Filtering
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Expand/Collapse
+**********
+*/
+
+var collapsedItems =3D new Array();
+
+function ExpandCollapse(imageItem)
+{
+	if(ItemCollapsed(imageItem.id) =3D=3D true)
+	{
+		imageItem.src =3D collapseImage.src;
+		ExpandSection(imageItem);
+		RemoveCollapsedItem(imageItem.id);
+	=09
+		if(imageItem.id.indexOf("Family", 0) =3D=3D 0)
+		{
+			protectedMembers =3D "on";
+			Set_up_checkboxes();
+			ChangeMembersOptionsFilterLabel();
+		}
+	}
+	else
+	{
+		imageItem.src =3D expandImage.src;
+		CollapseSection(imageItem);
+		AddCollapsedItem(imageItem.id);
+	}
+=09
+	SetCollapseAll();
+}
+
+function ExpandCollapseAll(imageItem)
+{
+	var imgElements =3D document.getElementsByName("toggleSwitch");
+	var i;
+=09
+	if(ItemCollapsed(imageItem.id) =3D=3D true)
+	{
+		imageItem.src =3D collapseAllImage.src;
+		RemoveCollapsedItem(imageItem.id);
+		for(i =3D 0; i < imgElements.length; ++i)
+		{
+			imgElements[i].src =3D collapseImage.src;
+			ExpandSection(imgElements[i]);
+			RemoveCollapsedItem(imgElements[i].id);
+		=09
+			if(imgElements[i].id.indexOf("Family", 0) =3D=3D 0)
+				protectedMembers =3D "on";
+		}
+		SetToggleAllLabel(false);
+	}
+	else
+	{
+		imageItem.src =3D expandAllImage.src;
+		AddCollapsedItem(imageItem.id);
+		for(i =3D 0; i < imgElements.length; ++i)
+		{
+			imgElements[i].src =3D expandImage.src;
+			CollapseSection(imgElements[i]);
+			AddCollapsedItem(imgElements[i].id);
+		}
+		SetToggleAllLabel(true);
+	}
+}
+
+function ExpandCollapse_CheckKey(imageItem)
+{
+	if(window.event.keyCode =3D=3D 13)
+		ExpandCollapse(imageItem);
+}
+
+function ExpandCollapseAll_CheckKey(imageItem)
+{
+	if(window.event.keyCode =3D=3D 13)
+		ExpandCollapseAll(imageItem);
+}
+
+function ExpandSection(imageItem)
+{
+	imageItem.parentElement.parentElement.nextSibling.style.display	=3D "";
+}
+
+function CollapseSection(imageItem)
+{
+	imageItem.parentElement.parentElement.nextSibling.style.display	=3D =
+"none";
+}
+
+function SetCollapseAll()
+{
+	var imageElement =3D document.getElementById("toggleAllImage");
+=09
+	if(imageElement =3D=3D null)
+		return;
+	=09
+	var imgElements =3D document.getElementsByName("toggleSwitch");
+	var allCollapsed =3D true;
+	var i;
+	=09
+	for(i =3D 0; i < imgElements.length; ++i)
+	{
+		allCollapsed =3D allCollapsed && ItemCollapsed(imgElements[i].id)
+	}
+=09
+	if(allCollapsed)
+	{
+		imageElement.src =3D expandAllImage.src;
+		AddCollapsedItem(imageElement.id);
+	}
+	else
+	{
+		imageElement.src =3D collapseAllImage.src;
+		RemoveCollapsedItem(imageElement.id);
+	}
+=09
+	SetToggleAllLabel(allCollapsed);
+}
+
+function SetToggleAllLabel(allCollapsed)
+{
+	var labelElement;
+	labelElement =3D document.getElementById("collapseAllLabel");
+=09
+	if(labelElement =3D=3D null)
+		return;
+	=09
+	labelElement.style.display =3D "none";
+=09
+	labelElement =3D document.getElementById("expandAllLabel");
+	labelElement.style.display =3D "none";
+=09
+	if(allCollapsed)
+	{
+		labelElement =3D document.getElementById("expandAllLabel");
+		labelElement.style.display =3D "inline";
+	}
+	else
+	{
+		labelElement =3D document.getElementById("collapseAllLabel");
+		labelElement.style.display =3D "inline";
+	}
+}
+
+function ItemCollapsed(imageId)
+{
+	var i;
+=09
+	for(i =3D 0; i < collapsedItems.length; ++i)
+	{
+		if(imageId =3D=3D collapsedItems[i])
+			return true;
+	}
+=09
+	return false;
+}
+
+function AddCollapsedItem(imageId)
+{=09
+	if(ItemCollapsed(imageId) =3D=3D false)
+		collapsedItems[collapsedItems.length] =3D imageId;
+}
+
+function RemoveCollapsedItem(imageId)
+{
+	var i;
+=09
+	for(i =3D 0; i < collapsedItems.length; ++i)
+	{
+		if(imageId =3D=3D collapsedItems[i])
+			collapsedItems.splice(i, 1);
+	}
+}
+
+function SaveSections()
+{
+	var i;
+	var x =3D 0;
+=09
+	CleanUserDataStore();
+=09
+	for(i =3D 0; i < collapsedItems.length; ++i)
+	{
+		if(ShouldSave(collapsedItems[i]) =3D=3D true)
+		{
+			Save("imageValue" + x, collapsedItems[i]);
+			x++;
+		}
+	}
+}
+
+function LoadSections()
+{
+	var i =3D 0;
+	var imageId =3D Load("imageValue" + i);
+=09
+	while(imageId !=3D null)
+	{
+		var imageItem =3D document.getElementById(imageId);
+	=09
+		if(imageItem !=3D null)
+		{
+			if(imageItem.id.indexOf("Family", 0) =3D=3D 0)
+			{
+				if(protectedMembers =3D=3D "on")
+				{
+					ExpandCollapse(imageItem);
+				}
+			}
+			else
+				ExpandCollapse(imageItem);
+		}
+		else
+		{
+			AddCollapsedItem(imageId);
+		}
+=09
+		i++;
+		imageId =3D Load("imageValue" + i);
+	}
+=09
+	SetCollapseAll();
+}
+
+function CleanUserDataStore()
+{
+	var i =3D 0;
+	var imageId =3D Load("imageValue" + i);
+=09
+	while(imageId !=3D null)
+	{
+		RemoveAttribute("imageValue" + i);
+		i++;
+		imageId =3D Load("imageValue" + i);
+	}
+}
+
+function ShouldSave(imageId)
+{
+	var toggleName;
+=09
+	if(imageId =3D=3D "toggleAllImage")
+		return false;
+=09
+	toggleName =3D "procedureToggle";
+	if(imageId.indexOf(toggleName, 0) =3D=3D 0)
+		return false;
+	=09
+	toggleName =3D "sectionToggle";
+	if(imageId.indexOf(toggleName, 0) =3D=3D 0)
+		return false;
+=09
+	return true;
+}
+
+function OpenSection(imageItem)
+{
+	if(ItemCollapsed(imageItem.id) =3D=3D true)
+		ExpandCollapse(imageItem);
+}
+
+/*=09
+**********
+**********   End Expand/Collapse
+**********
+*/
+
+
+
+/*=09
+**********
+**********   Begin Copy Code
+**********
+*/
+
+function CopyCode(key)
+{
+	var trElements =3D document.all.tags("tr");
+	var i;
+	for(i =3D 0; i < trElements.length; ++i)
+	{
+		if(key.parentElement.parentElement.parentElement =3D=3D =
+trElements[i].parentElement)
+		{
+			window.clipboardData.setData("Text", trElements[i].innerText);
+		}
+	}
+}
+
+function ChangeCopyCodeIcon(key)
+{
+	var i;
+	var imageElements =3D document.getElementsByName("ccImage")
+	for(i=3D0; i<imageElements.length; ++i)
+	{
+		if(imageElements[i].parentElement =3D=3D key)
+		{
+			if(imageElements[i].src =3D=3D copyImage.src)
+				imageElements[i].src =3D copyHoverImage.src;
+			else
+				imageElements[i].src =3D copyImage.src;
+		}
+	}
+}
+
+function CopyCode_CheckKey(key)
+{
+	if(window.event.keyCode =3D=3D 13)
+		CopyCode(key);
+}
+
+/*=09
+**********
+**********   End Copy Code
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Maintain Scroll Position
+**********
+*/
+
+function loadAll(){
+	try=20
+	{
+		scrollPos =3D allHistory.getAttribute("Scroll");
+	}
+	catch(e){}
+}
+
+function saveAll(){
+	try
+	{
+		allHistory.setAttribute("Scroll", mainSection.scrollTop);
+	}
+	catch(e){}
+}
+
+/*=09
+**********
+**********   End Maintain Scroll Position
+**********
+*/
+
+
+/*=09
+**********
+**********   Begin Send Mail
+**********
+*/
+
+function formatMailToLink(anchor)
+{
+	var release =3D "Release: " + anchor.doc_Release;
+	var topicId =3D "Topic ID: " + anchor.doc_TopicID;
+	var topicTitle =3D "Topic Title: " + anchor.doc_TopicTitle;
+	var url =3D "URL: " + document.URL;
+	var browser =3D "Browser: " + window.navigator.userAgent;
+
+	var crlf =3D "%0d%0a";=20
+	var body =3D release + crlf + topicId + crlf + topicTitle + crlf + url =
++ crlf + browser + crlf + crlf + "Comments:" + crlf + crlf;
+=09
+	anchor.href =3D anchor.href + "&body=3D" + body;
+}
+
+/*=09
+**********
+**********   End Send Mail
+**********
+*/
+
+
+
+------=_NextPart_000_0017_01CB33C8.101F8CD0--

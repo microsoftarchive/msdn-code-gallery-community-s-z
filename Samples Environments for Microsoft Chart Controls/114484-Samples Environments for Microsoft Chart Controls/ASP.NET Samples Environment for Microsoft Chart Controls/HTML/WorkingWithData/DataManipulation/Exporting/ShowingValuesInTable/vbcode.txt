@@ -1,0 +1,64 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(sender As Object, e As System.EventArgs)
+   ' Populate series using random data
+   Dim yValues As Double() =  {23.67, 75.45, 60.45, 34.54, 85.62, 32.43, 55.98, 34.89}
+   Dim pointIndex As Integer
+   For pointIndex = 0 To yValues.Length - 1
+      Chart1.Series("Series1").Points.AddXY(2000 + pointIndex, yValues(pointIndex))
+   Next pointIndex
+End Sub 'Page_Load
+
+Private Sub Chart1_PostPaint(sender As Object, e As System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs)
+   If TypeOf sender Is ChartPicture Then
+      ' Calculate data cell width
+      Dim cellWidth As Integer = CInt(Chart1.ChartAreas("ChartArea1").AxisX.GetPosition(Chart1.Series("Series1").Points(1).XValue))
+      cellWidth -= CInt(Chart1.ChartAreas("ChartArea1").AxisX.GetPosition(Chart1.Series("Series1").Points(0).XValue))
+      cellWidth = CInt(e.ChartGraphics.GetAbsolutePoint(New PointF(cellWidth, 0)).X)
+      
+      ' Calculate first column width
+      Dim firstCellWidth As Integer = CInt(Chart1.ChartAreas("ChartArea1").AxisX.GetPosition((Chart1.Series("Series1").Points(0).XValue - 0.5)))
+      firstCellWidth = CInt(e.ChartGraphics.GetAbsolutePoint(New PointF(firstCellWidth, 0)).X)
+      
+      ' Show exported series values in the table
+      InitializeTable(ValuesTable, Chart1.DataManipulator.ExportSeriesValues(), "Series1", firstCellWidth + 9, cellWidth - 3)
+   End If
+End Sub 'Chart1_PostPaint
+
+' <summary>
+' Initialize table from the DataSet object.
+' </summary>
+' <param name="table">Table object to initialize.</param>
+' <param name="dataSet">Series data.</param>
+' <param name="tableName">Series name to be used.</param>
+' <param name="firstColumnWidth">First column width.</param>
+' <param name="otherColumnWidth">Other columns width.</param>
+Public Sub InitializeTable(table As Table, dataSet As DataSet, tableName As String, firstColumnWidth As Integer, otherColumnWidth As Integer)
+   Dim column As DataColumn
+   For Each column In  dataSet.Tables(tableName).Columns
+      ' Create new table row for each column
+      Dim row As New TableRow()
+      
+      ' Add title cell
+      Dim cell As New TableCell()
+      cell.Controls.Add(New LiteralControl(dataSet.Tables(tableName).TableName + " - " + column.ColumnName))
+      cell.Width = New Unit(firstColumnWidth, UnitType.Pixel)
+      row.Cells.Add(cell)
+      
+      ' Add data cells
+      Dim pointIndex As Integer = 0
+      Dim dataRow As DataRow
+      For Each dataRow In  dataSet.Tables(tableName).Rows
+         Dim dataCell As New TableCell()
+         dataCell.Controls.Add(New LiteralControl(dataRow(column).ToString()))
+         dataCell.Width = New Unit(otherColumnWidth, UnitType.Pixel)
+         dataCell.HorizontalAlign = HorizontalAlign.Center
+         row.Cells.Add(dataCell)
+      Next dataRow
+      
+      ' Add row into the table
+      table.Rows.Add(row)
+   Next column
+End Sub 'InitializeTable
+...

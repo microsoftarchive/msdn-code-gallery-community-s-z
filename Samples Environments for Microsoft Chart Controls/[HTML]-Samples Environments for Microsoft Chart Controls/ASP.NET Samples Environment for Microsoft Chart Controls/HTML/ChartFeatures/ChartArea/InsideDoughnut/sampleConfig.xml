@@ -1,0 +1,17 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "ChartArea">
+  <Title>Doughnuts Within Doughnuts</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Doughnuts Within Doughnuts</ShortBlurb> 
+  <Content>ChartInsideDoughnut.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+<Keywords>
+    <Keyword>Doughnut, Rings chart type</Keyword>
+  </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="BabyNames.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:MyNamespace="clr-namespace:BabyNames"
+    Title="Baby Names Popularity Search" Height="724.503" Width="1044.599" Background="Black" Name="MainWindow" Loaded="MainWindow_Loaded">
+    <Grid>
+        <Grid Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="18.577*" />
+                <ColumnDefinition Width="304.377*" />
+                <ColumnDefinition Width="107.175*" />
+                <ColumnDefinition Width="162.906*" />
+                <ColumnDefinition Width="107.175*" />
+                <ColumnDefinition Width="304.377*" />
+                <ColumnDefinition Width="18.577*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="441.561*" />
+                <RowDefinition Height="68.592*" />
+                <RowDefinition Height="42.87*" />
+                <RowDefinition Height="40.012*" />
+                <RowDefinition Height="53.569*" />
+                <RowDefinition Height="40.012*" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Name="btnRunLinq" Margin="0,0,107.099,0" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2" Click="btnRunLinq_Click" ClickMode="Press">
+                <Button.BitmapEffect>
+                    <OuterGlowBitmapEffect GlowColor="Crimson" GlowSize="20" />
+                </Button.BitmapEffect> LINQ</Button>
+            <Button Name="btnRunPlinq" Grid.Column="4" Grid.Row="1" Margin="107.013,0,0,0" FontSize="20" Grid.ColumnSpan="2" Click="btnRunPlinq_Click" ClickMode="Press">
+                <Button.BitmapEffect>
+                    <OuterGlowBitmapEffect GlowColor="LimeGreen" GlowSize="20" Noise="0" />
+                </Button.BitmapEffect> Parallel LINQ
+            </Button>
+            <Label Grid.Column="2" Grid.Row="1" Name="lblSpeedup" FontSize="32" FontWeight="Bold" Foreground="Yellow" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0.069,0">
+                <Label.BitmapEffect>
+                    <BevelBitmapEffect Smoothness="0.5" EdgeProfile="CurvedOut" BevelWidth="10" />
+                </Label.BitmapEffect> 24.00x Speedup</Label>
+            <TextBox Grid.Column="3" Grid.Row="2" Name="txtQueryName" FontSize="18" Margin="0" TextAlignment="Left" VerticalContentAlignment="Center">Stephen</TextBox>
+            <Label Grid.Column="2" Grid.Row="2" Name="lblQueryName" Foreground="White" FontSize="16" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">Name:</Label>
+            <TextBox Name="txtQueryState" Grid.Column="3" Grid.Row="3" FontSize="18" Margin="0" TextAlignment="Left" VerticalContentAlignment="Center">NH</TextBox>
+            <Label FontSize="16" Foreground="White" Name="lblQueryState" Grid.Column="2" Grid.Row="3" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">State:</Label>
+            <Slider Grid.Column="5" Name="slProcessorsToUse" TickPlacement="TopLeft" IsMoveToPointEnabled="False" IsSnapToTickEnabled="True" Grid.Row="5" Foreground="LightGreen" Maximum="16" IsDirectionReversed="False" AutoToolTipPlacement="BottomRight" Value="16" ValueChanged="slProcessorsToUse_ValueChanged" />
+            <Label FontSize="16" Foreground="White" HorizontalContentAlignment="Left" Name="lblProcessorsToUse" VerticalContentAlignment="Bottom" Grid.Column="5" Grid.Row="4">Processors To Use:</Label>
+            <Slider AutoToolTipPlacement="BottomRight" Foreground="LightGreen" IsDirectionReversed="False" IsMoveToPointEnabled="False" IsSnapToTickEnabled="False" Maximum="3500000" Name="slNumRecords" TickPlacement="TopLeft" Grid.Column="1" Grid.Row="5" TickFrequency="100" AutoToolTipPrecision="1" Value="3000000" Minimum="10" SmallChange="1" LargeChange="10" Interval="1"  ValueChanged="slSize_ValueChanged" Delay="500" />
+            <Label FontSize="16" Foreground="White" Height="34.032" HorizontalContentAlignment="Left" Name="lblSize" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Content="Data To Process (# of records):"></Label>
+            <Label Grid.Column="1" Grid.Row="2" Name="lblLinqTime" Foreground="Crimson" FontSize="36" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.RowSpan="2">24.00</Label>
+            <Label FontSize="36" FontWeight="Bold" Foreground="LimeGreen" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" Margin="0,68.58,18.566,0" Name="lblPlinqTime" VerticalContentAlignment="Center" Grid.Column="5" Grid.Row="1" Grid.RowSpan="3">1.00</Label>
+            <MyNamespace:Graph x:Name="graphLinq" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,15.719,0,27.151">
+                <MyNamespace:Graph.BitmapEffect>
+                    <OuterGlowBitmapEffect GlowColor="Red" GlowSize="15" Opacity="0" />
+                </MyNamespace:Graph.BitmapEffect>
+            </MyNamespace:Graph>
+            <MyNamespace:Graph x:Name="graphPlinq" Grid.ColumnSpan="2" Margin="0,15.719,0,27.151" Grid.Column="4">
+                <MyNamespace:Graph.BitmapEffect>
+                    <OuterGlowBitmapEffect GlowColor="Red" GlowSize="15" Opacity="100" />
+                </MyNamespace:Graph.BitmapEffect>
+            </MyNamespace:Graph>
+        </Grid>
+    </Grid>
+</Window>

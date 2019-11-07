@@ -1,0 +1,65 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series with random data
+    Random		random = new Random();
+    DateTime	dateCurrent = DateTime.Now.Date;
+    for(int pointIndex = 0; pointIndex < 50; pointIndex++)
+    {
+        Chart1.Series["Series1"].Points.AddXY(dateCurrent.AddDays(pointIndex), random.Next(100, 1000));
+    }
+
+    // Set interval and interval type for the Y axis
+    SetAxisInterval(Chart1.ChartAreas["ChartArea1"].AxisY, 100, DateTimeIntervalType.Number);
+    
+    // Set interval and interval type for the X axis
+    if(XAxisIntervalList.SelectedItem.Text == "Every Week (Starting Sunday)")
+    {
+        SetAxisInterval(Chart1.ChartAreas["ChartArea1"].AxisX, 1, DateTimeIntervalType.Weeks);
+    }
+    else if(XAxisIntervalList.SelectedItem.Text == "Every Week (Starting Monday)")
+    {
+        SetAxisInterval(Chart1.ChartAreas["ChartArea1"].AxisX, 1, DateTimeIntervalType.Weeks, 
+            1, DateTimeIntervalType.Days);
+    }
+    else if(XAxisIntervalList.SelectedItem.Text == "Every 2 Weeks")
+    {
+        SetAxisInterval(Chart1.ChartAreas["ChartArea1"].AxisX, 2, DateTimeIntervalType.Weeks);
+    }
+    else if(XAxisIntervalList.SelectedItem.Text == "Every Month (Starting at 1st)")
+    {
+        SetAxisInterval(Chart1.ChartAreas["ChartArea1"].AxisX, 1, DateTimeIntervalType.Months);
+    }
+    else if(XAxisIntervalList.SelectedItem.Text == "Every Month (Starting at 15th)")
+    {
+        SetAxisInterval(Chart1.ChartAreas["ChartArea1"].AxisX, 1, DateTimeIntervalType.Months, 
+            14, DateTimeIntervalType.Days);
+    }
+}
+
+/// <summary>
+/// Sets interval properties for the axis. 
+/// Note that we use the Axis object's interval properties, and not the properties of its label,
+/// and major tick mark and grid line objects
+/// </summary>
+public void SetAxisInterval(Axis axis, double interval, DateTimeIntervalType intervalType)
+{
+    SetAxisInterval(axis, interval, intervalType, 0, DateTimeIntervalType.Auto);
+}
+
+/// <summary>
+/// Sets interval properties for the axis. 
+/// Note that we use the Axis object's interval properties, and not the properties of its label,
+/// and major tick mark and grid line objects
+/// </summary>
+public void SetAxisInterval(Axis axis, double interval, DateTimeIntervalType intervalType, double intervalOffset, DateTimeIntervalType intervalOffsetType )
+{
+    // Set interval-related properties
+	axis.Interval = interval;
+	axis.IntervalType = intervalType;
+	axis.IntervalOffset = intervalOffset;
+	axis.IntervalOffsetType = intervalOffsetType;
+}
+...

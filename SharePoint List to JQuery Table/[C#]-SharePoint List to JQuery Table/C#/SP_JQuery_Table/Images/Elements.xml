@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Images">
+    <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\sort_asc.png" Url="Images/sort_asc.png" ReplaceContent="TRUE" />
+    <File Path="Images\sort_asc_disabled.png" Url="Images/sort_asc_disabled.png" ReplaceContent="TRUE" />
+    <File Path="Images\sort_both.png" Url="Images/sort_both.png" ReplaceContent="TRUE" />
+    <File Path="Images\sort_desc.png" Url="Images/sort_desc.png" ReplaceContent="TRUE" />
+    <File Path="Images\sort_desc_disabled.png" Url="Images/sort_desc_disabled.png" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

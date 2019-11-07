@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetProductsActivities", "WFMgrGettingStarted_Complete\GetProductsActivities\GetProductsActivities.csproj", "{98EC024C-6439-44B1-8B1E-29E457B2201F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Workflow.Samples.Common", "Microsoft.Workflow.Samples.Common\Microsoft.Workflow.Samples.Common.csproj", "{D84DD5CB-A971-4FAC-8F0B-1462CE49AAF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetProductsWorkflowClient", "WFMgrGettingStarted_Complete\GetProductsWorkflowClient\GetProductsWorkflowClient.csproj", "{3A9DB8F9-5ADE-4588-AFF3-4C1F5D247C91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98EC024C-6439-44B1-8B1E-29E457B2201F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98EC024C-6439-44B1-8B1E-29E457B2201F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98EC024C-6439-44B1-8B1E-29E457B2201F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98EC024C-6439-44B1-8B1E-29E457B2201F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D84DD5CB-A971-4FAC-8F0B-1462CE49AAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D84DD5CB-A971-4FAC-8F0B-1462CE49AAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D84DD5CB-A971-4FAC-8F0B-1462CE49AAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D84DD5CB-A971-4FAC-8F0B-1462CE49AAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A9DB8F9-5ADE-4588-AFF3-4C1F5D247C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A9DB8F9-5ADE-4588-AFF3-4C1F5D247C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A9DB8F9-5ADE-4588-AFF3-4C1F5D247C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A9DB8F9-5ADE-4588-AFF3-4C1F5D247C91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

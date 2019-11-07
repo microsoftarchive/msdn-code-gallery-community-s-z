@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/1c1e217c-1475-400e-91a7-b2be1bd6efa0Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Using the DropDownList and ListBox with ASP.NET MVC</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Using the DropDownList and ListBox with ASP.NET MVC</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            ASP.NET MVC, ASP.NET MVC 3, ASP.NET MVC 4
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            ASP.NET MVC
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/27/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Using-the-DropDownList-67f9367d">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Intro to the DropDownList helper</h1>
+<p>This tutorial will teach you the basics of working with <a href="http://msdn.microsoft.com/en-us/library/dd492948.aspx">
+DropDownList </a>&nbsp;and <a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.html.selectextensions.listbox.aspx">
+ListBox </a>helper in a ASP.NET MVC Web application. The complete tutorial can be found
+<a href="http://www.asp.net/mvc/tutorials/javascript/working-with-the-dropdownlist-box-and-jquery/using-the-dropdownlist-helper-with-aspnet-mvc" >
+here</a>.</p>
+<h1><span style="font-size:20px; font-weight:bold">What You'll Build</span></h1>
+<p>You'll create action methods and views that use the <a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.html.selectextensions.dropdownlist.aspx">
+DropDownList</a> helper to select a category. You will also use <strong>jQuery</strong> to add an insert category dialog that can be used when the a new category (such as genre or artist) is needed. Below is a screenshot of the Create view showing links to
+ add a new genre and add a new artist.&nbsp;&nbsp;</p>
+<p>&nbsp;<img src="description/p1FinishedProd.PNG" alt="" width="598" height="546"></p>
+<p>Press CTRL&#43;F5 to run the application and click the <strong>Test</strong> link, which takes you to the
+<code>Test </code>view of the Home controller.&nbsp;</p>
+<p>Select the <strong>Select Movie Category (Simple)</strong> link.&nbsp; A Movie Type Select list is diplayed, with Comedy the selected value.</p>
+<p><img src="description/p1-simple.PNG" alt="" width="439" height="339"></p>
+<p>Right click in the browser and select view source. The HTML for the page is displayed. The code below shows the HTML for the select element.</p>
+<pre>&lt;form action=&quot;/Home/CategoryChosen&quot; method=&quot;get&quot;&gt;
+	&lt;fieldset&gt;Movie Type &lt;select id=&quot;MovieType&quot; name=&quot;MovieType&quot;&gt;
+	&lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+	&lt;option value=&quot;0&quot;&gt;Action&lt;/option&gt;
+	&lt;option value=&quot;1&quot;&gt;Drama&lt;/option&gt;
+	&lt;option selected=&quot;selected&quot; value=&quot;2&quot;&gt;Comedy&lt;/option&gt;
+	&lt;option value=&quot;3&quot;&gt;Science Fiction&lt;/option&gt;
+	&lt;/select&gt;
+	&lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt; &lt;/p&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+<p>You can see that each item in the select list has a value (0 for Action, 1 <br>
+for Drama, 2 for Comedy and 3 for Science Fiction) and a display name (Action, <br>
+Drama, Comedy and Science Fiction). The code above is standard HTML for a select <br>
+list.<br>
+Change the select list to Drama and hit the <strong>Submit</strong> button.&nbsp; The URL in
+<br>
+the browser is http://localhost:2468/Home/CategoryChosen?MovieType=1&nbsp; and <br>
+the page displays You Selected: 1.</p>
+<p><br>
+<img src="description/p1-u-selected-1.PNG" alt="" width="569" height="230"></p>
+<p>&nbsp;</p>
+<h1>More Information</h1>
+<p><em>For more information on using the DropDownList, see </em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

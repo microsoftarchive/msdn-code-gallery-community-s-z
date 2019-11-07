@@ -1,0 +1,75 @@
+﻿/*
+//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF 
+//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
+//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A 
+//// PARTICULAR PURPOSE. 
+//// 
+//// Copyright (c) Microsoft Corporation. All rights reserved     
+////
+//// To see the topic that inspired this sample app, go to http://msdn.microsoft.com/en-us/library/windows/apps/dn163531
+*/
+
+.callout {
+    background-color: rgb(60, 70, 82);
+}
+
+/*========================
+Profile
+==========================*/
+
+.callout.profile-callout {
+}
+.profile-callout > dl {
+    padding: 10px;
+    margin: 0px;
+    line-height: 18px;
+    font-size: 16px;
+}
+    .profile-callout > dl > dt {
+        text-transform: uppercase;
+    }
+    .profile-callout > dl > dd {
+        margin: 0px 0px 20px 0px;
+    }
+
+/*========================
+Comments
+==========================*/
+
+.callout.comments-callout {
+    background: #0072B1;
+}
+.callout.comments-callout.negative {
+    background: #C24648;
+}
+.comments-callout .callout-value {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: none;
+    padding: 15px 20px;
+    text-align: left;
+}
+
+/*========================
+Loyalty Points
+==========================*/
+.loyaltyProgress-callout .callout-value {
+    right:20px;
+    text-align:right;
+    width:auto;
+}
+.loyaltyProgress-callout .callout-label {
+    bottom: auto;
+    line-height: 4px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+}
+
+/*========================
+Available Rewards
+==========================*/
+
+.availableRewards-callout {
+    background-color: #4099FF;
+}

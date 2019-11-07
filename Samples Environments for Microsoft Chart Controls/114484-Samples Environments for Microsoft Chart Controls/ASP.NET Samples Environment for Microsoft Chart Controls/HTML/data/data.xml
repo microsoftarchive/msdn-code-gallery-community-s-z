@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes" ?>
+<NewDataSet xmlns="http://tempuri.org/data.xsd">
+	<Customers>
+		<Name>Danny</Name>
+		<Sales>10440</Sales>
+	</Customers>
+	<Customers>
+		<Name>Larry</Name>
+		<Sales>17772</Sales>
+	</Customers>
+	<Customers>
+		<Name>Aaron</Name>
+		<Sales>23880</Sales>
+	</Customers>
+	<Customers>
+		<Name>Marry</Name>
+		<Sales>7663</Sales>
+	</Customers>
+	<Customers>
+		<Name>Sally</Name>
+		<Sales>21773</Sales>
+	</Customers>
+	<Customers>
+		<Name>Nguyen</Name>
+		<Sales>32294</Sales>
+	</Customers>
+</NewDataSet>

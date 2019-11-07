@@ -1,0 +1,16 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Loop through all series
+    foreach(Series series in Chart1.Series)
+    {
+        // Handle onMouseOver and onMouseOut events for series and legend
+        series.MapAreaAttributes = 
+            "onmouseover=\"DisplayTooltip('&lt;IMG SRC=CountryChart.aspx&gt;');\" onmouseout=\"DisplayTooltip('');\"";
+        series.LegendMapAreaAttributes = 
+            "onmouseover=\"DisplayTooltip('Total of #TOTAL #SER medals');\" onmouseout=\"DisplayTooltip('');\"";
+    }
+}
+...

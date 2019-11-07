@@ -1,0 +1,38 @@
+﻿@model VirtueBuild.Domain.Lookups.OrganizationType
+
+<form id="OrganizationType" enctype="multipart/form-data" method="POST" >
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>OrganizationType</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsActive)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsActive)
+            @Html.ValidationMessageFor(model => model.IsActive)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SortOrder)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SortOrder)
+            @Html.ValidationMessageFor(model => model.SortOrder)
+        </div>
+
+        <p>
+            <input type="submit" class="btn btn-primary" value="Create" />
+        </p>
+    </fieldset>
+</form>

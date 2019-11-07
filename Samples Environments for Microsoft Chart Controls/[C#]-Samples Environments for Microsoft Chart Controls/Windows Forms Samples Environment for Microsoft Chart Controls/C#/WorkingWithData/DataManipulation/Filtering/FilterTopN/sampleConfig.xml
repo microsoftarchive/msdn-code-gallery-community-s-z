@@ -1,0 +1,23 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Filtering" Priority="100">
+    <Title>Filtering Top N Values</Title>
+    <Thumbnail>thumbnail.jpg</Thumbnail>
+    <ShortBlurb>Filtering Top N Values</ShortBlurb>
+    <SampleControl>FilterTopN</SampleControl>
+
+    <InfoPages>
+      <InfoPage Title="Overview">Overview.htm</InfoPage>
+      <InfoPage Title="C# Source">cscode.txt</InfoPage>
+      <InfoPage Title="VB.NET Source">vbcode.txt</InfoPage>
+    </InfoPages>
+
+    <Keywords>
+      <Keyword>Data manipulation, Filtering Top N values</Keyword>
+      <Keyword>Filtering, Top N values</Keyword>
+    </Keywords>
+
+  </SampleConfig>
+	
+</SampleConfigs>

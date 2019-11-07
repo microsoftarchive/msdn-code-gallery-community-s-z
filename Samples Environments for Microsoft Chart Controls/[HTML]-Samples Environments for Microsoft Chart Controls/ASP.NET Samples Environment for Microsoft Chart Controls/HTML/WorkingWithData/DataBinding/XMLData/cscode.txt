@@ -1,0 +1,30 @@
+using System.Web.UI.DataVisualization.Charting;
+using System.Data;
+using System.Data.OleDb;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // resolve the address to the XML document
+    string fileNameString = this.MapPath(".");
+    string fileNameSchema = this.MapPath(".");
+    fileNameString += "..\\..\\..\\data\\data.xml";
+    fileNameSchema += "..\\..\\..\\data\\data.xsd";
+
+    // Initializes a new instance of the DataSet class
+    DataSet custDS = new DataSet();
+    	
+    // Read XML schema into the DataSet.
+    custDS.ReadXmlSchema( fileNameSchema );
+
+    // Read XML schema and data into the DataSet.
+    custDS.ReadXml( fileNameString );
+    		
+    // Initializes a new instance of the DataView class
+    DataView firstView = new DataView(custDS.Tables[0]);
+
+	// Since the DataView implements and IEnumerable, pass the reader directly into
+	// the DataBindTable method with the name of the column used for the X value.	
+	Chart1.DataBindTable(firstView, "Name");
+}
+...

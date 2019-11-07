@@ -1,0 +1,29 @@
+﻿<Page x:Class="SampleWpfApp.Pages.EditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="EditPage">
+
+    <StackPanel x:Name="mainPanel" d:DataContext="{d:DesignData /SampleData/SampleItemSampleData.xaml}">
+        <TextBlock x:Name="pageTitle" Text="EDIT" Height="40"  FontSize="24" />
+        <StackPanel Orientation="Horizontal" Height="40" Margin="10,10,10,10">
+            <TextBlock Text=" Id:" Width="100" VerticalAlignment="Center"/>
+            <TextBlock x:Name="id" VerticalAlignment="Center" Text="{Binding Id}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Margin="10,10,10,10">
+            <TextBlock Text=" Name:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="name" Width="200" Text="{Binding Name}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Margin="10,10,10,10">
+            <TextBlock Text=" Description:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="Description" Width="200" Text="{Binding Description}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="40" Margin="10,10,10,10">
+            <Button x:Name="OKButton" Content="OK" Width="100" Click="OKButton_Click"  />
+            <Button x:Name="CancelButton" Content="Cancel" Width="100" Margin="10,0,0,0" Click="CancelButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

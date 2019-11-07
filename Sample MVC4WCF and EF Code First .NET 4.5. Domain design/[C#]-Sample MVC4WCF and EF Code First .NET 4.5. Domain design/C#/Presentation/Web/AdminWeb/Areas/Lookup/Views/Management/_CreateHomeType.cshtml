@@ -1,0 +1,48 @@
+﻿@model VirtueBuild.Domain.Lookups.HomeType
+
+<form id="HomeType" enctype="multipart/form-data" method="POST">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(m => m.Id)
+
+
+    <table>
+        <tr>
+            <th>@Html.LabelFor(model => model.Name)</th>
+            <th>@Html.LabelFor(model => model.SortOrder)</th>
+            <th>@Html.LabelFor(model => model.IsActive)</th>
+        </tr>
+        <tr class="tr-middle">
+            <td>
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.SortOrder, new Dictionary<string, object>() { { "class", "input-mini" } })
+                @Html.ValidationMessageFor(model => model.SortOrder)
+            </td>
+            <td>@Html.EditorFor(model => model.IsActive)
+                @Html.ValidationMessageFor(model => model.IsActive)</td>
+        </tr>
+    </table>
+
+    <div>
+        <i class="icon-upload"></i>
+        <input type="file" name="file" id="file" class="btn input-xxlarge" />
+
+        @if (Model.Id == 0)
+        {
+            <input type="submit" class="btn btn-primary" value="Create" />
+        }
+        else
+        {
+            <input type="submit" class="btn btn-primary" value="Update" />
+        }
+        <div>
+            @Html.ValidationMessageFor(model => model.ImageGuid)
+        </div>
+    </div>
+</form>
+

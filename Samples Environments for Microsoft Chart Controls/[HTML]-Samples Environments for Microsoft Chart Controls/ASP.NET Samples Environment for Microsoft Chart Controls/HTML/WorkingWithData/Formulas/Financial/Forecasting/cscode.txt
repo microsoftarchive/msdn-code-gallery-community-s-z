@@ -1,0 +1,37 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+/// <summary>
+/// This method calculates Time series.
+/// </summary>
+private void Calculations()
+{
+    string typeRegression;
+
+    if( Type.SelectedItem.Value == "Linear" )
+        typeRegression = "2";
+    else
+        typeRegression = Order.SelectedItem.Value;
+
+    // The number of days for Forecasting
+    int forecasting = int.Parse( Forecasting.SelectedItem.Value );
+
+    // Show Error as a range chart
+    string error = Error1.Checked.ToString();
+
+    // Show Error as a range chart
+    string forecastingError = ForecastingError.Checked.ToString();
+
+    // Formula parameters
+    string parameters = typeRegression + ',' + forecasting + ',' + error + ',' + forecastingError;
+
+    Chart1.DataManipulator.FinancialFormula(FinancialFormula.Forecasting,parameters,"Input:Y","Forecasting:Y,Forecasting:Y2,Forecasting:Y3");
+
+    Chart1.Series["Range"].Enabled = false;
+    if( Error1.Checked || ForecastingError.Checked )
+    {
+        Chart1.Series["Range"].Enabled = true;
+        Chart1.DataManipulator.CopySeriesValues("Forecasting:Y2,Forecasting:Y3","Range:Y,Range:Y");
+    }
+}
+...

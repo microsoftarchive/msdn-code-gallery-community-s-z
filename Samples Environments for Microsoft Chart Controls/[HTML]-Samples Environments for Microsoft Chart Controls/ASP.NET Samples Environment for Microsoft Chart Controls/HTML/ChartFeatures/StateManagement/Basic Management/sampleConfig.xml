@@ -1,0 +1,21 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "StateManagement" Priority="100">
+	<Title>Basic State Management</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>State Management</ShortBlurb> 
+	<Content>StateManagement.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>		
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>State Management, Basics</Keyword>
+	</Keywords> 
+	</SampleConfig>	
+
+</SampleConfigs>

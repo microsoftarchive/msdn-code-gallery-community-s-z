@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcContacts", "MvcContacts\MvcContacts.csproj", "{042DB97E-6FB3-4EC5-A4D6-9E39246AEF1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcContacts.Tests", "MvcContacts.Tests\MvcContacts.Tests.csproj", "{D8D417BB-3F9A-46D6-B39E-B0AFED85468E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{042DB97E-6FB3-4EC5-A4D6-9E39246AEF1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042DB97E-6FB3-4EC5-A4D6-9E39246AEF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042DB97E-6FB3-4EC5-A4D6-9E39246AEF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042DB97E-6FB3-4EC5-A4D6-9E39246AEF1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D417BB-3F9A-46D6-B39E-B0AFED85468E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D417BB-3F9A-46D6-B39E-B0AFED85468E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D417BB-3F9A-46D6-B39E-B0AFED85468E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D417BB-3F9A-46D6-B39E-B0AFED85468E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

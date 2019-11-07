@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/1b88b18a-5268-4861-9da2-6c6e2539edaaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Skype Integration in WPF Applications</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Skype Integration in WPF Applications</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            COM, C#, WPF, ViewModel pattern (MVVM), XAML, MVVM
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Interop, COM Interop, WPF Data Binding
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">4/7/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Skype-Integration-in-WPF-6fc42a1e">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><strong><span style="font-size:medium">Introduction:</span></strong></p>
+<p><span style="font-size:small">Skype has become one of the prominent application for video calling, messaging etc. Intefacing skype with other application has become a necessary feature these days for application that involves the capability to chat, call
+ etc. Skype has a good support to integrate it with web applications. But when it comes to windows application the support is very minimal. This sample is developed to integrate skype with WPF application using a COM interface.</span></p>
+<p><span style="font-size:small"><br>
+</span></p>
+<p><strong style="font-size:medium">How to Run the Application:</strong></p>
+<p><span style="font-size:small">1.)&nbsp;&nbsp;&nbsp; Install Skype. You can Download Skype from the following url:</span></p>
+<p><span style="font-size:small"><a href="http://www.skype.com/en/download-skype/skype-for-computer/">http://www.skype.com/en/download-skype/skype-for-computer/</a></span></p>
+<p><span style="font-size:small">2.)&nbsp;&nbsp;&nbsp; After installing the Skype Application. Locate the COM Component
+<strong>Skype4Com</strong> in your machine. If you have Skype installed in C drive. It will be located in
+<em>&ldquo;<strong>C:\Program Files (x86)\Common Files\Skype&rdquo; </strong></em></span></p>
+<p><span style="font-size:small">3.)&nbsp;&nbsp;&nbsp; After Register the Component to Windows Machine using the following steps<strong><em>&nbsp;</em></strong></span></p>
+<p><span style="font-size:small">For 32-bits OS:</span></p>
+<ol>
+<li><span style="font-size:small">copy&nbsp;<strong>Skype4COM.dll to your&nbsp;c:\windows\system32&nbsp;folder</strong></span>
+</li><li><span style="font-size:small">Open an Elevated CMD.exe (right click cmd.exe and choose 'Run as Administrator')</span>
+</li><li><span style="font-size:small">Set current Path to&nbsp;<strong>C:\Windows\System32</strong></span>
+</li><li><span style="font-size:small">execute&nbsp;<strong>regsvr32.exe Skype4COM.dll</strong></span>
+</li></ol>
+<p><span style="font-size:small">For 64-bits OS:</span></p>
+<ol>
+<li><span style="font-size:small">Copy<strong> &nbsp;Skype4COM.dll to your&nbsp;c:\windows\SysWOW64&nbsp;folder</strong></span>
+</li><li><span style="font-size:small">Open an Elevated CMD.exe (right click cmd.exe and choose 'Run as Administrator')</span>
+</li><li><span style="font-size:small">Set current Path to&nbsp;<strong>C:\Windows\SysWOW64</strong></span>
+</li><li><span style="font-size:small">execute&nbsp;<strong>regsvr32.exe Skype4COM.dll</strong></span>
+</li></ol>
+<p><span style="font-size:small"><strong><em>&nbsp;</em></strong></span></p>
+<p><span style="font-size:small">4.)&nbsp;&nbsp;&nbsp; Now open the <strong>&ldquo;SkypeIntegration.sln&rdquo;</strong> in visual studio 2012. In the References section you will see the SKYPE4COMLib Missing. Now Right click &ldquo;<strong><em>References -&gt;
+ Add Reference&rdquo;</em></strong></span></p>
+<p><span style="font-size:small">5.)&nbsp;&nbsp;&nbsp; In the <strong><em>Reference Manager</em></strong> Dialog. Under
+<strong><em>&ldquo;COM -&gt; Type Libraries&rdquo;</em></strong> Section you can see Skype component registered. Select the
+<strong><em>&ldquo;Skype4Com 1.0 Type Library&rdquo; </em></strong>and Click <strong>
+<em>OK</em></strong>.</span></p>
+<p>&nbsp;</p>
+<p><img id="101595" src="description/Capture.PNG" alt="" width="793" height="546"></p>
+<p><span style="font-size:small"><br>
+</span></p>
+<p><span style="font-size:small">6.)&nbsp;&nbsp;&nbsp; Now Run the Application.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size:medium"><strong>Screenshot:</strong></span></p>
+<p><span style="font-size:medium"><strong><img id="101596" src="description/Capture123.PNG" alt="" width="861" height="528"></strong></span></p>
+<p><span style="font-size:small"><strong>You can read the related wiki article here</strong></span></p>
+<p><span style="font-size:medium"><span style="font-size:small"><a href="http://social.technet.microsoft.com/wiki/contents/articles/21733.skype-integration-in-wpf-applications.aspx">http://social.technet.microsoft.com/wiki/contents/articles/21733.skype-integration-in-wpf-applications.aspx</a></span><strong><br>
+</strong></span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

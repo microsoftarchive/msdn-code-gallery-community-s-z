@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/4f0db316-e33e-4e5c-b975-0f6de635f8e4Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Uploading large files using ASP.NET Web API and Azure Blob Storage</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Uploading large files using ASP.NET Web API and Azure Blob Storage</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            ASP.NET, Windows Azure Storage, ASP.NET Web API
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Azure Blob Storage, ASP.NET Web API
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        NuGet Package Manager
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">5/19/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Uploading-large-files-386ec0af">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>When you create a Web API service that needs to store large amount of unstructured data (pictures, videos, documents, etc.), one of the options you can consider is to use Windows Azure Blob Storage. It provides a fairly straightforward way of storing unstructured
+ data in the cloud. This sample illustrates how to create a simple file service using ASP.NET Web API backed by Azure Blob Storage. See this
+<a href="http://blogs.msdn.com/b/yaohuang1/archive/2012/07/02/asp-net-web-api-and-azure-blob-storage.aspx">
+blog</a> for more&nbsp;information about the sample.</p>
+<h1>Setup</h1>
+<p>1. Download and install <a href="http://www.asp.net/web-api">ASP.NET Web API</a>.</p>
+<p>2. Download and install <a href="http://code.msdn.microsoft.com/Uploading-large-files-386ec0af/https://www.windowsazure.com/en-us/develop/net/">
+Azure SDK for .NET</a>.</p>
+<p><strong>Update 05/19/13: The sample was built using Azure SDK that was released in June 2012, If you're installing a newer version, simply remove and re-add the following assemblies&nbsp;in the AzureBlobsFileUploadSample.csproj:</strong></p>
+<ul>
+<li><strong>Microsoft.WindowsAzure.Configuration</strong> </li><li><strong><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.WindowsAzure.StorageClient.aspx"  title="Auto generated link to Microsoft.WindowsAzure.StorageClient">Microsoft.WindowsAzure.StorageClient</a></strong> </li></ul>
+<p>3. Enable NuGet Package Restore. (Inside VS, go to Tools -&gt; Options... -&gt; Package Manager -&gt; check &quot;Allow NuGet to download missing packages during build&quot; option)</p>
+<h1>Running the sample</h1>
+<p>First you need to start the Azure Storage Emulator. You can do it by going to the &ldquo;Server Explorer&rdquo;. Under the &ldquo;Windows Azure Storage&rdquo;, just right click and Refresh the &ldquo;(Development)&rdquo; node. It will start the Azure Storage
+ Emulator.</p>
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/0121.image_5F00_00FEF111.png"><img title="image" src="description/5315.image_thumb_0ED1370C.png" border="0" alt="image" width="244" height="181" style="display:inline"></a></p>
+<p>Once the <strong>Azure</strong> <strong>storage</strong> <strong>emulator</strong> and the
+<strong>Web API service</strong> are up and running, you can start uploading files. Here I used
+<a href="http://www.fiddler2.com/fiddler2/">fiddler</a> to do that.</p>
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/6076.image_5F00_07B1FA94.png"><img title="image" src="description/2275.image_thumb_6796EDD6.png" border="0" alt="image" width="391" height="300" style="display:inline"></a></p>
+<p>After the upload is complete, we can issue a GET request to the FilesController to get a list of files that have been uploaded. From the result below we can see there&rsquo;s one file uploaded so far. And the file can be downloaded at Location:
+<a href="http://127.0.0.1:10000/devstoreaccount1/webapicontainer/samplePresentation.pptx">
+http://127.0.0.1:10000/devstoreaccount1/webapicontainer/samplePresentation.pptx</a>.</p>
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/1780.image_5F00_328A5EA6.png"><img title="image" src="description/1602.image_thumb_405CA4A1.png" border="0" alt="image" width="391" height="98" style="display:inline"></a></p>
+<p>Alternatively we can look through the Server Explorer to see that the file has in fact been upload to the blob storage.</p>
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/1373.image_5F00_4E2EEA9C.png"><img title="image" src="description/2843.image_thumb_19225B6C.png" border="0" alt="image" width="309" height="160" style="display:inline"></a></p>
+<h1>Switching to a real Azure Blob Storage</h1>
+<p>When everything is ready to be deployed, you can simply update the connection string in Web.config to use the real Azure Storage account. Here is an example of what the connection string would look like:</p>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;appSettings&gt;
+    &lt;add key=&quot;CloudStorageConnectionString&quot; value=&quot;DefaultEndpointsProtocol=http;AccountName=[your account name];AccountKey=[your account key]&quot;/&gt;
+&lt;/appSettings&gt;</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;appSettings</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;CloudStorageConnectionString&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;DefaultEndpointsProtocol=http;AccountName=[your&nbsp;account&nbsp;name];AccountKey=[your&nbsp;account&nbsp;key]&quot;</span><span class="xml__tag_start">/&gt;</span>&nbsp;
+<span class="xml__tag_end">&lt;/appSettings&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">The DefaultEndpointsProtocol=http will tell the CloudBlobClient to use the default http endpoint which is:
+<a href="http://[AccountName].blob.core.windows.net/">http://[AccountName].blob.core.windows.net/</a> for the blobs.</div>
+</div>
+<p>The AccountName is simply the name of the storage account.</p>
+<p>The AccountKey can be obtained from the Azure portal &ndash; just browse to the Storage section and click on &ldquo;MANAGE KEYS&rdquo;.</p>
+<h1>Increasing the maxRequestLength and maxAllowedContentLength</h1>
+<p>If you&rsquo;re uploading large files, you'll need to increasing the maxRequestLength setting in ASP.NET which is kept at 4MB by default. The following setting in Web.config should do the trick to increase it to 2GB.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;system.web&gt;
+    &lt;httpRuntime maxRequestLength=&quot;2097152&quot;/&gt;
+&lt;/system.web&gt;</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;system</span>.web<span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;httpRuntime</span>&nbsp;<span class="xml__attr_name">maxRequestLength</span>=<span class="xml__attr_value">&quot;2097152&quot;</span><span class="xml__tag_start">/&gt;</span>&nbsp;
+&lt;/system.web&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;If you&rsquo;re on IIS, you'll also need to increase the maxAllowedContentLength.&nbsp;Note that maxAllowedContentLength is in bytes whereas maxRequestLength is in kilobytes.</div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;system.webServer&gt;
+      &lt;security&gt;
+          &lt;requestFiltering&gt;
+             &lt;requestLimits maxAllowedContentLength=&quot;2147483648&quot; /&gt;
+          &lt;/requestFiltering&gt;
+      &lt;/security&gt;
+&lt;/system.webServer&gt;</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;system</span>.webServer<span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;security</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;requestFiltering</span><span class="xml__tag_start">&gt;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;requestLimits</span>&nbsp;<span class="xml__attr_name">maxAllowedContentLength</span>=<span class="xml__attr_value">&quot;2147483648&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_end">&lt;/requestFiltering&gt;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_end">&lt;/security&gt;</span>&nbsp;
+&lt;/system.webServer&gt;</pre>
+</div>
+</div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

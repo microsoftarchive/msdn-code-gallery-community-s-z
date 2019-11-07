@@ -1,0 +1,50 @@
+s" caret="6398" fromTop="27" />
+      <File id="102615C4-9B5F-42BD-91A1-7E85642F7C53/d:IO/f:FileSystem_TransferDirectory.cs" caret="103359" fromTop="27" />
+      <File id="736E521E-2B0C-4634-9CBF-B4937FEF6C3D/f:ArchiveManager.cs" caret="23896" fromTop="27" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:GZip/f:Gzip_PublicMethods.cs" caret="414" fromTop="8" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:GZip/f:GzipForge.cs" caret="3117" fromTop="42" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:GZip/f:Gzip_Events.cs" caret="137" fromTop="5" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:GZip/f:Gzip_FileComment.cs" caret="116" fromTop="4" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:GZip/f:Gzip_FileSystem.cs" caret="2570" fromTop="42" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:GZip/f:Gzip_Properties.cs" caret="140" fromTop="6" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:ITarHeader.cs" caret="4261" fromTop="100" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:LegacyTarWriter.cs" caret="11939" fromTop="224" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:LongPathExtraHeader.cs" caret="1506" fromTop="19" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Archiver/f:CompressionConst.cs" caret="1222" fromTop="20" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:ReadWriteHelper.cs" caret="0" fromTop="0" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Archiver/f:ArchiveItemInfo.cs" caret="10774" fromTop="17" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Zip/f:DirItem.cs" caret="46295" fromTop="25" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItem.cs" caret="21654" fromTop="35" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItemsHandler.cs" caret="4365" fromTop="104" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarReader.cs" caret="8973" fromTop="25" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarWriter.cs" caret="2649" fromTop="41" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/f:ArchiverMessage.cs" caret="347" fromTop="10" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:OldStyleHeader.cs" caret="10654" fromTop="17" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:UnixStandartHeader.cs" caret="3898" fromTop="17" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarForge.cs" caret="84" fromTop="3" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarBaseForge.cs" caret="834" fromTop="22" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItem.cs" caret="19751" fromTop="32" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItem.cs" caret="19221" fromTop="22" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItem.cs" caret="21966" fromTop="42" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItem.cs" caret="21683" fromTop="35" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItemsHandler.cs" caret="0" fromTop="0" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItemsHandler.cs" caret="723" fromTop="19" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItemsHandler.cs" caret="1457" fromTop="32" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItemsHandler.cs" caret="1959" fromTop="42" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItemsHandler.cs" caret="2999" fromTop="39" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarItemsHandler.cs" caret="4465" fromTop="36" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarReader.cs" caret="141" fromTop="4" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarReader.cs" caret="4936" fromTop="38" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarReader.cs" caret="5696" fromTop="36" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarReader.cs" caret="7085" fromTop="26" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarReader.cs" caret="8073" fromTop="26" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarReader.cs" caret="8307" fromTop="31" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarReader.cs" caret="9011" fromTop="25" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarWriter.cs" caret="31" fromTop="1" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarWriter.cs" caret="1375" fromTop="27" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarWriter.cs" caret="1512" fromTop="32" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:TarWriter.cs" caret="2724" fromTop="41" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/d:Tar/f:UnixStandartHeader.cs" caret="52" fromTop="2" />
+      <File id="CBBBC613-1799-4CB1-AFD7-838F2EAC05C0/f:ArchiverMessage.cs

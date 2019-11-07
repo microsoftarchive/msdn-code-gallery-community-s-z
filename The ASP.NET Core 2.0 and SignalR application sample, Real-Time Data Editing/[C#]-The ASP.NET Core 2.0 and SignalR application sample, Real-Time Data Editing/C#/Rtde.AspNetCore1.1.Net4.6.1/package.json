@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "@angular/common": "~4.3.0",
+    "@angular/compiler": "~4.3.0",
+    "@angular/core": "~4.3.0",
+    "@angular/forms": "~4.3.0",
+    "@angular/http": "~4.3.0",
+    "@angular/platform-browser": "~4.3.0",
+    "@angular/platform-browser-dynamic": "~4.3.0",
+    "@angular/router": "~4.3.0",
+    "bootstrap": "3.3.7",
+    "core-js": "^2.4.1",
+    "rxjs": "5.4.2",
+    "systemjs": "0.20.15",
+    "zone.js": "^0.8.13"
+  },
+  "devDependencies": {
+    "@types/node": "6.0.88",
+    "concurrently": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-typescript": "^3.2.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-cssmin": "0.2.0",
+    "gulp-rename": "1.2.2",
+    "gulp-plumber": "^1.1.0",
+    "typescript": "2.3.0"
+  },
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\"",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  }
+}

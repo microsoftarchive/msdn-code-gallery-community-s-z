@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFSampleDataService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFSampleDataService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="CustomerAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerAddress" nillable="true" type="tns:CustomerAddress" />
+  <xs:complexType name="CustomerInvoices">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Invoices" nillable="true" type="tns:ArrayOfCustomerInvoice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerInvoices" nillable="true" type="tns:CustomerInvoices" />
+  <xs:complexType name="ArrayOfCustomerInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerInvoice" nillable="true" type="tns:CustomerInvoice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerInvoice" nillable="true" type="tns:ArrayOfCustomerInvoice" />
+  <xs:complexType name="CustomerInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InvoiceDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InvoiceId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerInvoice" nillable="true" type="tns:CustomerInvoice" />
+</xs:schema>

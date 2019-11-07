@@ -1,0 +1,10 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Hide series "Series 1" 
+    Chart1.Series("Series 1").Enabled = false
+
+End Sub 'Page_Load
+...

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataSourceTypes">
+  <Title>Binding to Excel Files</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Binding to Excel Files</ShortBlurb> 
+  <Content>BindExcelData.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding to Excel file</Keyword>
+    <Keyword>Binding, Excel file</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

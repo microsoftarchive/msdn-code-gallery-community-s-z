@@ -1,0 +1,25 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+'/ <summary>
+'/ This method calculates Envelopes or Bollinger Bands 
+'/ formulas 
+'/ </summary>
+Private Sub Calculations()
+    ' Set Formula Name
+    Dim formulaName As String = FormulaName.SelectedItem.Value
+    Dim formula As FinancialFormula = Enum.Parse(typeof(FinancialFormula),formulaName,true)
+
+    ' Formulas with one input value
+    Chart1.DataManipulator.FinancialFormula(FinancialFormula.MovingAverage, "10", "Input:Y", "Moving Average")
+
+    ' Bollinger Bands
+    If formulaName = "BollingerBands" Then
+        Chart1.DataManipulator.FinancialFormula(formula, "10,2", "Input:Y", "Indicators,Indicators:Y2")            
+    Else
+    ' Envelopes
+		Chart1.DataManipulator.FinancialFormula(formula, "10,5", "Input:Y", "Indicators,Indicators:Y2")
+    End If
+    
+End Sub 'Calculations
+...

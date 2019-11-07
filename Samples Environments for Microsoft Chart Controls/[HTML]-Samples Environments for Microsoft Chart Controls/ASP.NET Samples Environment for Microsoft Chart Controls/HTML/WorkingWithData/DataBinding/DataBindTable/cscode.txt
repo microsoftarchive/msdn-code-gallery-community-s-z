@@ -1,0 +1,36 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Resolve the address to the Access database
+	string fileNameString = this.MapPath(".");
+	fileNameString += "..\\..\\..\\data\\chartdata.mdb";
+
+	// Initialize a connection string    
+	string myConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString;
+
+	// Define the database query	
+	string mySelectQuery="SELECT Name, Sales FROM REPS;";
+
+	// Create a database connection object using the connection string	
+	OleDbConnection myConnection = new OleDbConnection(myConnectionString);
+	
+	// Create a database command on the connection using query	
+	OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+	
+	// Open the connection	
+	myCommand.Connection.Open();
+	
+	// Create a database reader	
+	OleDbDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+	
+	// Since the reader implements and IEnumerable, pass the reader directly into
+	// the DataBindTable method with the name of the Column to be used as the XValue
+	Chart1.DataBindTable(myReader, "Name");
+
+	// Close the reader and the connection
+	myReader.Close();
+	myConnection.Close();    
+}
+...

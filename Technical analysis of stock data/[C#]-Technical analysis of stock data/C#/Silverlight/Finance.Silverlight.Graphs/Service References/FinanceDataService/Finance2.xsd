@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Finance.Web.DataWrappers" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Finance.Web.DataWrappers" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://silesiaresearch.com/Finance/Finance.Web.DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Finance.Common.Base" />
+  <xs:complexType name="ArrayOfElementWrapper">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ElementWrapper" nillable="true" type="tns:ElementWrapper" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfElementWrapper" nillable="true" type="tns:ArrayOfElementWrapper" />
+  <xs:complexType name="ElementWrapper">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Finance.Common.Base" minOccurs="0" name="ElementType" type="q1:ElementTypeDefs" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ticker" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ElementWrapper" nillable="true" type="tns:ElementWrapper" />
+  <xs:complexType name="ElementDailyDataRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DailyData" nillable="true" type="tns:ArrayOfDailyDataWrapper" />
+      <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ticker" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ElementDailyDataRange" nillable="true" type="tns:ElementDailyDataRange" />
+  <xs:complexType name="ArrayOfDailyDataWrapper">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DailyDataWrapper" nillable="true" type="tns:DailyDataWrapper" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDailyDataWrapper" nillable="true" type="tns:ArrayOfDailyDataWrapper" />
+  <xs:complexType name="DailyDataWrapper">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CloseValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Day" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DayAsDouble" type="xs:double" />
+      <xs:element minOccurs="0" name="MaxValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MinValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OpenValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Volume" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DailyDataWrapper" nillable="true" type="tns:DailyDataWrapper" />
+</xs:schema>

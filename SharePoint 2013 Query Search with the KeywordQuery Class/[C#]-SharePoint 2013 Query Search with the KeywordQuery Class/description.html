@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/9bf1b74c-1640-46af-84d3-e440c8f95162Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SharePoint 2013: Query Search with the KeywordQuery Class</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>SharePoint 2013: Query Search with the KeywordQuery Class</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            SharePoint Server 2013, SharePoint 2013
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Search, Enterprise Search
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">4/19/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Query-Search-with-the-372139b5">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><strong>Provided by:</strong><span>&nbsp;</span><a href="http://www.dotnetmafia.com/">Corey Roth</a><span>,&nbsp;</span><a href="http://www.sp2apps.com/">SP2 Apps</a></p>
+<h1>Introduction</h1>
+<p>This code sample provides details on how to query Search with the new SharePoint 2013 object model using the
+<a href="http://msdn.microsoft.com/en-us/library/microsoft.office.server.search.query.keywordquery.aspx">
+KeywordQuery</a> class. &nbsp;Typically, the KeywordQuery class is used directly inside SharePoint web parts or on other applications running directly on the SharePoint farm.</p>
+<p>For querying with the Client Object Model, see this <a href="http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1">
+sample</a>.</p>
+<h1><span>Building the Sample</span></h1>
+<p><span>The sample is a console application.&nbsp; Edit the server URL in the SPSite constructor for a site collection on your SharePoint 2013 server.&nbsp; Build the solution as normal.</span></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p>This example demonstrates how to query search using the SharePoint 2013 Search
+<strong>KeywordQuery </strong>class.&nbsp; To get started, create a console application and add references to the appropriate assemblies.&nbsp; These assemblies can be found in the ISAPI folder of the 15 hive.</p>
+<ul>
+<li><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.Office.Server.aspx"  title="Auto generated link to Microsoft.Office.Server">Microsoft.Office.Server</a> </li><li><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.Office.Server.Search.aspx"  title="Auto generated link to Microsoft.Office.Server.Search">Microsoft.Office.Server.Search</a> </li><li><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.SharePoint.aspx"  title="Auto generated link to Microsoft.SharePoint">Microsoft.SharePoint</a> </li><li><a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.SharePoint.Security.aspx"  title="Auto generated link to Microsoft.SharePoint.Security">Microsoft.SharePoint.Security</a> </li></ul>
+<p>Add the following references:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.SharePoint.aspx"  title="Auto generated link to Microsoft.SharePoint">Microsoft.SharePoint</a>;
+using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.Office.Server.Search.Query.aspx"  title="Auto generated link to Microsoft.Office.Server.Search.Query">Microsoft.Office.Server.Search.Query</a>;</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Data.aspx"  title="Auto generated link to System.Data">System.Data</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.SharePoint.aspx"  title="Auto generated link to Microsoft.SharePoint">Microsoft.SharePoint</a>;&nbsp;
+<span class="cs__keyword">using</span>&nbsp;<a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.Office.Server.Search.Query.aspx"  title="Auto generated link to Microsoft.Office.Server.Search.Query">Microsoft.Office.Server.Search.Query</a>;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Add a SPSite object for a site collection on your SharePoint farm.</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using (SPSite siteCollection = new SPSite(&quot;http://server/sitecollection&quot;))
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;(SPSite&nbsp;siteCollection&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SPSite(<span class="cs__string">&quot;http://server/sitecollection&quot;</span>))&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><span>Create a&nbsp;</span><strong>KeywordQuery</strong><span>&nbsp;object using that site collection.</span></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">KeywordQuery keywordQuery = new KeywordQuery(siteCollection);
+</pre>
+<div class="preview">
+<pre class="csharp">KeywordQuery&nbsp;keywordQuery&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;KeywordQuery(siteCollection);&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><span>Now, specify the query using the <em>QueryText</em> field. &nbsp;You can specify custom KQL queries here.&nbsp; See this
+<a href="http://msdn.microsoft.com/en-us/library/ee558911.aspx">post</a> for more on KQL.&nbsp;</span><span>&nbsp;For the example, we'll search on the term&nbsp;</span><em>SharePoint</em><span>.</span></div>
+</span></div>
+<div class="endscriptcode"><span><br>
+</span></div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">keywordQuery.QueryText = &quot;SharePoint&quot;;</pre>
+<div class="preview">
+<pre class="csharp">keywordQuery.QueryText&nbsp;=&nbsp;<span class="cs__string">&quot;SharePoint&quot;</span>;</pre>
+</div>
+</div>
+</div>
+Use the <a href="http://msdn.microsoft.com/en-us/library/jj250940.aspx">SearchExecutor</a> class to execute the query.</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">SearchExecutor searchExecutor = new SearchExecutor();
+</pre>
+<div class="preview">
+<pre class="csharp">SearchExecutor&nbsp;searchExecutor&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;SearchExecutor();&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Use the&nbsp;<em>ExecuteQuery</em>&nbsp;method by passing an instance of the&nbsp;<em>KeywordQuery</em>&nbsp;class.</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">ResultTableCollection resultTableCollection = searchExecutor.ExecuteQuery(keywordQuery);
+</pre>
+<div class="preview">
+<pre class="csharp">ResultTableCollection&nbsp;resultTableCollection&nbsp;=&nbsp;searchExecutor.ExecuteQuery(keywordQuery);&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><span>Assuming no exception occurs, you can now iterate through the results. &nbsp;Use the new&nbsp;<em>Filter&nbsp;</em>method on the
+<strong>ResultTableCollection </strong>to get the relevant results. For the first value, it needs a string with a value of&nbsp;<em>TableType</em>&nbsp;and the second value uses&nbsp;<em>KnownTableTypes.RelevantResults</em>.</span></div>
+</div>
+</div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">var resultTables = resultTableCollection.Filter(&quot;TableType&quot;, KnownTableTypes.RelevantResults);
+</pre>
+<div class="preview">
+<pre class="csharp">var&nbsp;resultTables&nbsp;=&nbsp;resultTableCollection.Filter(<span class="cs__string">&quot;TableType&quot;</span>,&nbsp;KnownTableTypes.RelevantResults);&nbsp;</pre>
+</div>
+</div>
+</div>
+<p>It returns an&nbsp;<strong>IEnumerable&lt;ResultType&gt;</strong>, so filter it with&nbsp;<em>FirstOrDefault()</em>&nbsp;to get the needed table.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">var resultTable = resultTables.FirstOrDefault();
+</pre>
+<div class="preview">
+<pre class="csharp">var&nbsp;resultTable&nbsp;=&nbsp;resultTables.FirstOrDefault();&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">The data can then be retrieved from the DataTable.</div>
+<div class="endscriptcode"></div>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">DataTable dataTable = resultTable.Table;
+</pre>
+<div class="preview">
+<pre class="csharp">DataTable&nbsp;dataTable&nbsp;=&nbsp;resultTable.Table;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">That's it.&nbsp; Review the code from the solution file for the complete listing.</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>Main.cs - console application which queries the Search Client Object Model.</em>
+</li></ul>
+<h1>More Information</h1>
+<p><em><em>For more information, see my blog entry at&nbsp;<a href="http://www.dotnetmafia.com/blogs/dotnettipoftheday/archive/2013/01/03/how-to-use-the-sharepoint-2013-search-keywordquery-class.aspx">DotNetMafia.com</a>.&nbsp; Follow me on twitter:&nbsp;<a href="http://twitter.com/coreyroth">@coreyroth</a>.</em></em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

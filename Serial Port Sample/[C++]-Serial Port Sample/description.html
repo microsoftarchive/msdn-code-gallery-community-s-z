@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:sprite;/Areas/Epx/Themes/Windows/Content:0&amp;amp;v=2127BA016FE2A342BD62CA9533CAAD4D" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Areas/Epx/Themes/Windows/Content/UhfHeader.css?v=636456760532126700" data-do-not-move="true" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" href="https://statics-uhf-eus.akamaized.net/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/66-41abaf/ad-ec92c6/98-847609/e9-c399ba/8e-9c6412/cc-c21898/9c-3df1cf?ver=2.0" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/Footer.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/sprite.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/UhfFooter.css" data-do-not-move="true" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Base/Content/SelectLocaleFromPopUp.css" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Serial Port Sample</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/f8a4baf3-5436-4281-8284-b8318b650652Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/windowsdesktop/content/windowsdesktop/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/windowsdesktop/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Serial Port Sample</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Win32
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Serial Port
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/14/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/windowsdesktop/Serial-Port-Sample-e8accf30">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1><span style="font-size:medium">Introduction</span></h1>
+<p><span style="font-size:medium"><em>This Sample program contains code which opens two UART COM port to send and recieve data via serial UART.&nbsp;</em><em>&nbsp;</em></span></p>
+<p><span style="font-size:medium"><strong><em><br>
+T</em>o know more about serial port communications and its software implementation details such as API calls in different platforms, you can vist the following links.</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size:medium"><strong><a href="http://gopinaths.gitlab.io/post/serial_uart/">http://gopinaths.gitlab.io/post/serial_uart/</a></strong></span></p>
+<p><span style="font-size:medium"><em><br>
+</em></span></p>
+<h1><span style="font-size:medium">Building the Sample</span></h1>
+<p><span style="font-size:medium">You can build the source code by selecting &quot;<a rel="noreferrer" href="http://msdn.microsoft.com/en-us/library/s2h6xst1.aspx">Rebuild solution</a>&quot;&nbsp;option in Visaual Studio.&nbsp;</span></p>
+<p>&nbsp;</p>
+<h1><span style="font-size:medium">Testing the Sample</span></h1>
+<p><span style="font-size:medium"><em>Once you have complied the this win32 application successfully, you can test this UART serial sample progarm by any one of the following method.</em></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size:medium"><em><strong>Method 1: </strong>You need two windows PC with this sample application running on the both side. Then you need to connect normal UART cable &nbsp;between two commputers. (You may need serial UART to USB converter
+ for this). Now open the corresponding COM port and configure the settings from the test application. T<em>ype any character in keyboard under particular port to transmit via other port.&nbsp;</em>&nbsp;</em></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size:medium"><em><em><strong>Method 2: &nbsp;</strong>This method you just need one PC. &nbsp;Connect the two end of UART cable using UART to USB converter to two USB ports of the PC.
+<strong>Make sure you are using UART cross over cable. </strong>(RX and TX swapped &amp; RTS and CTS swppped). Now open the application and open the corresponding COM port to send and receive data over UART.&nbsp;</em></em></span></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size:medium"><em><em>Note: </em></em></span></strong></p>
+<p><span style="font-size:medium"><em><em>This application is just a sample program to ddemonstrate serial UART programing in win32 . This is not fully optimized code. You may need to optimize it accosrindg to your use case like &nbsp;handling the send and
+ receive process &nbsp;in a separate threads for better perfomance.&nbsp;</em></em></span></p>
+<p><span style="font-size:medium"><em><em><br>
+</em></em></span></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

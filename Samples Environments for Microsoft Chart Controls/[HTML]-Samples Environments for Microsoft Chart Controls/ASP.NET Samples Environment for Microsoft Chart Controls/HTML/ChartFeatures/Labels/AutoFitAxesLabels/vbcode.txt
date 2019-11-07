@@ -1,0 +1,13 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' Enable X axis labels automatic fitting
+	Chart1.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = True
+
+	' Set X axis automatic fitting style
+	Chart1.ChartAreas("ChartArea1").AxisX.LabelAutoFitStyle = 
+		LabelAutoFitStyles.DecreaseFont Or LabelAutoFitStyles.IncreaseFont Or LabelAutoFitStyles.WordWrap
+   
+End Sub 'Page_Load

@@ -1,0 +1,51 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "ChartArea" Priority="200">
+  <Title>Series and Chart Areas</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Series and Chart Areas</ShortBlurb> 
+  <Content>Series and Chart Areas\SeriesAndChartAreas.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">Series and Chart Areas\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">Series and Chart Areas\vbcode.txt</InfoPage>
+  </InfoPages>
+<Keywords>
+    <Keyword>Series, Attaching to chart area</Keyword>
+	<Keyword>Chart area, Attaching series</Keyword>
+  </Keywords>
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "ChartArea" Priority="100">
+  <Title>Chart Area Appearance</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Chart Area Appearance</ShortBlurb> 
+  <Content>Appearance\Appearance.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">Appearance\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">Appearance\vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Appearance, Chart area</Keyword>
+	<Keyword>Chart area, Appearance</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "ChartArea" Priority = "150">
+  <Title>Chart Area and Plotting Area Positions</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Chart Area and Plotting Area Positions</ShortBlurb> 
+  <Content>ChartAreaPosition\ChartAreaPosition.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">ChartAreaPosition\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">ChartAreaPosition\vbcode.txt</InfoPage>
+  </InfoPages>
+<Keywords>
+    <Keyword>Position, Chart area</Keyword>
+    <Keyword>Chart area, Position</Keyword>
+    <Keyword>Inner plot position</Keyword>
+    <Keyword>Chart area, Inner plot position</Keyword>
+  </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

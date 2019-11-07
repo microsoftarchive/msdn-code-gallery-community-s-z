@@ -1,0 +1,14 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+TTestResult result;
+
+// Perform TTest with Equal Variances
+result = chart1.DataManipulator.Statistics.TTestEqualVariances( 0, 0.95, "FirstGroup", "SecondGroup" ); 
+
+// Perform TTest with Unequal Variances
+result = chart1.DataManipulator.Statistics.TTestUnequalVariances( 0, 0.95, "FirstGroup", "SecondGroup" ); 
+
+// Perform TTest Paired
+result = chart1.DataManipulator.Statistics.TTestPaired( 0, 0.95, "FirstGroup", "SecondGroup" ); 
+...

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "Labels" Priority="1000">
+	<Title>Using Smart Labels</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Smart Labels</ShortBlurb> 
+	<Content>SmartLabels.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>Labels, Overlapping</Keywords> 
+	</SampleConfig>
+
+</SampleConfigs>

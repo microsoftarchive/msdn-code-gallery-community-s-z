@@ -1,0 +1,111 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+'/ <summary>
+'/ Fill data points with values from Normal distribution
+'/ </summary>
+Private Sub FillNormalDistribution()
+   ' Remove all data points from series
+   chart1.Series(0).Points.Clear()
+   
+   ' Calculate coefficient
+   Dim y As Double
+   Dim coef As Double = 1.0 / Math.Sqrt((2 * Math.PI))
+   Dim doubleX As Double
+   
+   ' Fill data points with values from Normal distribution
+   Dim x As Integer
+   For x = - 50 To 50
+      doubleX = x / 10.0
+      y = coef * Math.Exp((doubleX * doubleX / - 2))
+      chart1.Series(0).Points.AddXY(doubleX - 0.05, y)
+   Next x
+End Sub 'FillNormalDistribution
+
+'/ <summary>
+'/ Fill Data points with values from F distribution
+'/ </summary>
+Private Sub FillFDistribution()
+   ' Clear all data points
+   chart1.Series(0).Points.Clear()
+   
+   ' Set degrees of freedom
+   Dim n As Double = 7
+   Dim m As Double = 2
+   
+   ' Calculate Beta function
+   Dim beta As Double = chart1.DataManipulator.Statistics.BetaFunction(n / 2.0, m / 2.0)
+   
+   ' Find coefficient
+   Dim y As Double
+   Dim coef As Double = Math.Pow(n / m, n / 2.0) / beta
+   Dim doubleX As Double
+   
+   ' Go through all data points and calculate values
+   Dim x As Double
+   For x = 0.01 To 15 Step 0.1
+      doubleX = x
+      y = coef * Math.Pow(doubleX, n / 2.0 - 1.0) / Math.Pow(1.0 + n * doubleX / m,(n + m) / 2.0)
+      
+      ' Add data point
+      chart1.Series(0).Points.AddXY(doubleX, y)
+   Next x
+End Sub 'FillFDistribution
+
+'/ <summary>
+'/ Fill Data points with T Distribution
+'/ </summary>
+Private Sub FillTDistribution()
+   ' Clear all existing data points
+   chart1.Series(0).Points.Clear()
+   
+   Dim n As Double = 5
+   
+   ' Calculate Beta function
+   Dim beta As Double = chart1.DataManipulator.Statistics.BetaFunction(0.5, n / 2.0)
+   
+   ' Calculate coefficient of T Distribution
+   Dim y As Double
+   Dim coef As Double = Math.Pow(n, - 0.5) / beta
+   Dim doubleX As Double
+   
+   ' Calculate Data Points
+   Dim x As Integer
+   For x = - 120 To 120
+      doubleX = x / 10.0
+      y = coef / Math.Pow(1.0 + doubleX * doubleX / n,(n + 1.0) / 2.0)
+      
+      ' Add X and Y values to data points
+      chart1.Series(0).Points.AddXY(doubleX, y)
+   Next x
+End Sub 'FillTDistribution
+
+...
+ 
+'/ <summary>
+'/ User defined sorting order logic
+'/ </summary>
+Public Class MyComparer
+   Implements IComparer
+   
+   'this function should return a value less than zero if the first object is less than the second,
+   '  zero if they are equal and a value greater than zero if the first object is greater than the second
+   Public Function Compare(a As Object, b As Object) As Integer Implements IComparer.Compare
+   
+      Dim pointA As DataPoint = CType(a, DataPoint)
+      Dim pointB As DataPoint = CType(b, DataPoint)
+      
+      ' Compare axis labels first
+      Dim result As Integer = pointA.AxisLabel.CompareTo(pointB.AxisLabel)
+      
+      ' If axis labels are equal - compare Y values
+      If result = 0 Then
+         result = pointA.YValues(0).CompareTo(pointB.YValues(0))
+      End If
+      
+      Return result
+      
+   End Function 'Compare
+   
+End Class 'MyComparer
+...

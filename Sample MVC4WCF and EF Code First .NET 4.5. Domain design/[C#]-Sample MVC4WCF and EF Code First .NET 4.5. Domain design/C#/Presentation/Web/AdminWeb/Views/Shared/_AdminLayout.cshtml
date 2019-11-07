@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css", "~/Content/bootstrap", "~/Content/virtue")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+    <body>
+        
+        <div data-role="page" data-theme="b" class="container">
+            <div data-role="header">
+                @if (IsSectionDefined("Header"))
+                {
+                    @RenderSection("Header")
+                }
+                else
+                {                    
+                    @Html.Partial("Toolbars/_AdminToolBar")                    
+                }
+            </div>
+            <div data-role="content" class="container-fluid page-min-size">
+                @RenderBody()
+            </div>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery", "~/bundles/bootstrap", "~/bundles/knockout")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

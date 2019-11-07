@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "BarColumnCharts">
+  <Title>3D Cylinder Chart</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>3D Cylinder Chart</ShortBlurb> 
+  <Content>Cylinder3D.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Cylinder</Keyword>
+    <Keyword>3D, Cylinder chart</Keyword>
+    <Keyword>Chart type, Cylinder 3D</Keyword>
+  </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

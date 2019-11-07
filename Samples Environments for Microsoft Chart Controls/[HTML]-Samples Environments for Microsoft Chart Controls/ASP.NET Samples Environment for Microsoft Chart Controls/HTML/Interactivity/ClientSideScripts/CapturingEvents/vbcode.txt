@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    
+   ' Set onClick event handlers for all series and legend items
+   Dim series As Series
+   For Each series In Chart1.Series 
+      series.MapAreaAttributes = _
+        "onclick=""javascript:alert('Mouse click event captured in the series! Series Name: #SER, Point Index: #INDEX');"""
+      series.LegendMapAreaAttributes = _
+        "onclick=""javascript:alert('Mouse click event captured in the legend! Series: #SER, Total Values: #TOTAL{C}');"""
+   Next
+   
+End Sub 'Page_Load '
+...

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "StockCharts" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Advanced Financial Chart Gallery</ShortBlurb> 
+  <Content>FinancialGallery.htm</Content>
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "FinancialChartingStock" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Advanced Financial Chart Gallery</ShortBlurb> 
+  <Content>FinancialGallery.htm</Content>
+</SampleConfig>
+
+</SampleConfigs>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Design";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+    @Scripts.Render("~/Scripts/kinetic-v4.4.3.js", "~/Scripts/app/design/designboard.js")
+}
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #container {
+        border: 1px navy solid;
+        height: 600px;
+        /*background-image: url("http://www.html5canvastutorials.com/demos/assets/lines.jpg");*/
+        width: 800px;
+    }
+</style>
+
+<h2>Design</h2>
+<button type="button" id="makeImg">Save Image</button>
+<div>
+    <div id="container"></div>
+</div>
+<div>
+    <img src="http://www.html5canvastutorials.com/demos/assets/yoda.jpg" id="myImg"/>
+    
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR2qumkXxCxWayaQLDmkMwPNRJ1KMZUfUuH3enxemWMtkQfYMvKmA" id="myImg3"/>
+</div>
+<img id="showImg" width="200"></img>

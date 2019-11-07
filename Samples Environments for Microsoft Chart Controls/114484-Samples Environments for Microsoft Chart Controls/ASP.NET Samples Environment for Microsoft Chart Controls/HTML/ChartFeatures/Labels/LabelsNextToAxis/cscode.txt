@@ -1,0 +1,16 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set X and Y axis crossing points
+    Chart1.ChartAreas["ChartArea1"].AxisX.Crossing = 0;
+    Chart1.ChartAreas["ChartArea1"].AxisY.Crossing = 0;
+
+    // Position the X axis labels and tick marks to the area border
+    Chart1.ChartAreas["ChartArea1"].AxisX.IsMarksNextToAxis = false;
+    
+    // Position the Y axis labels and tick marks next to the axis
+    Chart1.ChartAreas["ChartArea1"].AxisY.IsMarksNextToAxis = true;
+}
+...

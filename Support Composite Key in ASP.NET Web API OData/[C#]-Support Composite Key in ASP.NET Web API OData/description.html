@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/4f0db316-e33e-4e5c-b975-0f6de635f8e4Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Support Composite Key in ASP.NET Web API OData</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Support Composite Key in ASP.NET Web API OData</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            OData, ASP.NET Web API
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            OData, ASP.NET Web API
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">2/5/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Support-Composite-Key-in-d1d53161">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>The default EntitySetController&nbsp;doesn't support composite keys. So if you have composite key models, you need some additional work. Here is an example about how to do that.</p>
+<p>The model is simple:</p>
+<pre><code>public class Person
+{
+    [Key]
+    public string FirstName { get; set; }
+    [Key]
+    public string LastName { get; set; }
+
+    public int Age { get; set; }
+}
+</code></pre>
+<p>The odata url for this model will look like:</p>
+<pre><code>GET <a href="http://localhost:33051/People(FirstName=">http://localhost:33051/People(FirstName='Kate',LastName='Jones</a>') HTTP/1.1
+</code></pre>
+<p>And we want to have strong typed parameters in web api actions to this URL.</p>
+<pre><code>    public Person Get([FromODataUri] string firstName, [FromODataUri] string lastName)
+</code></pre>
+<p>Note that the FromODataUri model binder attribute is used to parse from odata uri representation to clr type. In odata, string value is &quot;'xxx'&quot; and we want it to be &quot;xxx&quot;.</p>
+<p>In order to make the route to work, you can add a custom routing convention to parse the key path. Here is a sample implementation:</p>
+<pre><code>public class CompositeKeyRoutingConvention : EntityRoutingConvention
+{
+    public override string SelectAction(System.Web.Http.OData.Routing.ODataPath odataPath, <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/System.Web.Http.Controllers.HttpControllerContext.aspx"  title="Auto generated link to System.Web.Http.Controllers.HttpControllerContext">System.Web.Http.Controllers.HttpControllerContext</a> controllerContext, ILookup&lt;string, System.Web.Http.Controllers.HttpActionDescriptor&gt; actionMap)
+    {
+        var action = base.SelectAction(odataPath, controllerContext, actionMap);
+        if (action != null)
+        {
+            var routeValues = controllerContext.RouteData.Values;
+            if (routeValues.ContainsKey(ODataRouteConstants.Key))
+            {
+                var keyRaw = routeValues[ODataRouteConstants.Key] as string;
+                IEnumerable&lt;string&gt; compoundKeyPairs = keyRaw.Split(',');
+                if (compoundKeyPairs == null || compoundKeyPairs.Count() == 0)
+                {
+                    return action;
+                }
+
+                foreach (var compoundKeyPair in compoundKeyPairs)
+                {
+                    string[] pair = compoundKeyPair.Split('=');
+                    if (pair == null || pair.Length != 2)
+                    {
+                        continue;
+                    }
+                    var keyName = pair[0].Trim();
+                    var keyValue = pair[1].Trim();
+
+                    routeValues.Add(keyName, keyValue);
+                }
+            }
+        }
+
+        return action;
+    }
+}
+</code></pre>
+<p>The convention is inherited from EntityRoutingConvention, which is the default convetion to handle entity key. By calling base.SelectAction, it will add the full key path into routeValues. The new convention will check if it contains &quot;,&quot; and seperate it
+ into multiple keys and set each of them into routeValues. So when web api select actions, it will use those values to determine which action to choose. If there is no &quot;,&quot; found, it behaves same as base convetion.</p>
+<p>To register the convetion, you need to set it when mapping odata route:</p>
+<pre><code>public static class WebApiConfig
+{
+    public static void Register(HttpConfiguration config)
+    {
+        config.EnableQuerySupport();
+
+        var mb = new ODataConventionModelBuilder(config);
+        mb.EntitySet&lt;Person&gt;(&quot;People&quot;);
+
+        var conventions = ODataRoutingConventions.CreateDefault();
+        conventions.Insert(0, new CompositeKeyRoutingConvention());
+
+        config.Routes.MapODataRoute(
+            routeName: &quot;OData&quot;, 
+            routePrefix: null, 
+            model: mb.GetEdmModel(), 
+            pathHandler: new DefaultODataPathHandler(), 
+            routingConventions: conventions);
+    }
+}
+</code></pre>
+<p>Register the route at the postion 0 is to make it be executed before other default routing convetions. So the default EntityRoutingConvetion won't be executed before it. After that, you should be able to get routing work.</p>
+<p>Then, how to build url for composite keys?&nbsp;<br>
+You don't need to do that for odata links include edit link and self link when using ODataConventionModelBuilder. It will automatically identify composite keys and build the uri for you.</p>
+<p>However, you need to build the link for location header. Here is a sample code from PeopleController.cs to handle post request:</p>
+<pre><code>public HttpResponseMessage PostPerson(Person person)
+{
+    if (ModelState.IsValid)
+    {
+        _repo.UpdateOrAdd(person);
+
+        HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, person);
+        string key = string.Format(
+            &quot;{0}={1},{2}={3}&quot;,
+            &quot;FirstName&quot;, ODataUriUtils.ConvertToUriLiteral(person.FirstName, Microsoft.Data.OData.ODataVersion.V3),
+            &quot;LastName&quot;, ODataUriUtils.ConvertToUriLiteral(person.LastName, Microsoft.Data.OData.ODataVersion.V3));
+        response.Headers.Location = new Uri(Url.ODataLink(
+            new EntitySetPathSegment(&quot;People&quot;),
+            new KeyValuePathSegment(key)));
+        return response;
+    }
+    else
+    {
+        return Request.CreateResponse(HttpStatusCode.BadRequest);
+    }
+}
+</code></pre>
+<p>Hope it helps.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

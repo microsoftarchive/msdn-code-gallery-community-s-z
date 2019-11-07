@@ -1,0 +1,266 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Legend" Priority="100">
+	<Title>Styles and Automatic Positioning</Title>
+	<Thumbnail>LegendStyleAndPosition\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Styles and Automatic Positioning</ShortBlurb> 
+	<Content>LegendStyleAndPosition\LegendStyleAndPosition.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">LegendStyleAndPosition\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">LegendStyleAndPosition\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendStyleAndPosition\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Style</Keyword>
+    <Keyword>Legend, Docking</Keyword>
+    <Keyword>Legend, Alignment</Keyword>
+    <Keyword>Legend, Disabling</Keyword>
+    <Keyword>Legend, Equally spaced items</Keyword>
+    <Keyword>Equally spaced legend items</Keyword>
+    <Keyword>Chart area, Legend inside</Keyword>
+  </Keywords>   
+	</SampleConfig>
+	
+<SampleConfig ParentNodeID = "Legend" Priority="2000">
+	<Title>Legend Cell Span</Title>
+	<Thumbnail>LegendCellSpan\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Legend Cell Span</ShortBlurb> 
+	<Content>LegendCellSpan\LegendCellSpan.aspx</Content> 	
+	<InfoPages>
+		<InfoPage Title="C# Source">LegendCellSpan\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendCellSpan\vbcode.txt</InfoPage>
+	</InfoPages>
+	<Keywords>
+    <Keyword>Legend, Cell Span</Keyword>
+    <Keyword>Legend, Span Cells</Keyword>
+  </Keywords>   
+</SampleConfig>
+	
+	<SampleConfig ParentNodeID = "Legend" Priority="400">
+	<Title>Legend Titles</Title>
+	<Thumbnail>LegendTitle\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Legend Titles</ShortBlurb> 
+	<Content>LegendTitle\LegendTitle.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">LegendTitle\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">LegendTitle\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendTitle\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Titles</Keyword>
+  </Keywords>   
+</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Titles" Priority="16000">
+	<Title>Legend Titles</Title>
+	<Thumbnail>LegendTitle\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Legend Titles</ShortBlurb> 
+	<Content>LegendTitle\LegendTitle.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">LegendTitle\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">LegendTitle\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendTitle\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Titles</Keyword>
+  </Keywords>   
+</SampleConfig>
+	
+<SampleConfig ParentNodeID = "Legend" Priority="900">
+	<Title>Legend Cells</Title>
+	<Thumbnail>LegendCells\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Legend Cells</ShortBlurb> 
+	<Content>LegendCells\LegendCells.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">LegendCells\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">LegendCells\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendCells\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Cells</Keyword>
+  </Keywords>   
+</SampleConfig>
+	
+		<SampleConfig ParentNodeID = "Legend" Priority="625">
+	<Title>Setting Multiple Columns</Title>
+	<Thumbnail>LegendCellColumns\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Setting Multiple Columns</ShortBlurb> 
+	<Content>LegendCellColumns\LegendCellColumns.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LegendCellColumns\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendCellColumns\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Cell Columns</Keyword>
+    <Keyword>Legend, Multi-Columns</Keyword>
+    <Keyword>Legend, Table Cells</Keyword>
+  </Keywords>   
+	</SampleConfig>
+		
+	<SampleConfig ParentNodeID = "Legend" Priority="200">
+		<Title>Series Legend Assignment</Title>
+		<Thumbnail>MultipleLegends\thumbnail.jpg</Thumbnail>
+		<ShortBlurb>Series Legend Assignment</ShortBlurb> 
+		<Content>MultipleLegends\MultipleLegends.aspx</Content> 
+		
+		<InfoPages>
+			<InfoPage Title="C# Source">MultipleLegends\cscode.txt</InfoPage>
+			<InfoPage Title="Visual Basic Source">MultipleLegends\vbcode.txt</InfoPage>
+		</InfoPages>
+
+		<Keywords>
+    <Keyword>Legend, Associating to Series </Keyword>
+    <Keyword>Series, Associating to Legend</Keyword>
+  </Keywords> 
+	</SampleConfig>
+
+	
+	<SampleConfig ParentNodeID = "Legend" Priority="500">
+		<Title>Multiple Legends</Title>
+		<Thumbnail>MultipleLegendsWithCheckBox\thumbnail.jpg</Thumbnail>
+		<ShortBlurb>Using Multiple Legends</ShortBlurb> 
+		<Content>MultipleLegendsWithCheckBox\MultipleLegendsWithCheckBox.aspx</Content> 
+		
+		<InfoPages>
+			<InfoPage Title="C# Source">MultipleLegendsWithCheckBox\cscode.txt</InfoPage>
+			<InfoPage Title="Visual Basic Source">MultipleLegendsWithCheckBox\vbcode.txt</InfoPage>
+		</InfoPages>
+
+		<Keywords>
+    <Keyword>Legend, Multiple legends</Keyword>
+  </Keywords> 
+	</SampleConfig>		
+		
+	<SampleConfig ParentNodeID = "Legend" Priority="50">
+	<Title>Appearance</Title> 
+	<Thumbnail>LegendAppearance\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Setting Legend Appearance</ShortBlurb> 
+	<Content>LegendAppearance\LegendAppearance.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LegendAppearance\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendAppearance\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Appearance</Keyword>
+    <Keyword>Appearance, Legend</Keyword>
+  </Keywords>  
+	</SampleConfig>
+	
+	<SampleConfig ParentNodeID = "Legend" Priority="600">
+	<Title>Explicit Positioning</Title> 
+	<Thumbnail>LegendCustomPosition\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Explicit Positioning</ShortBlurb> 
+	<Content>LegendCustomPosition\LegendCustomPosition.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">LegendCustomPosition\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">LegendCustomPosition\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendCustomPosition\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Custom position</Keyword>
+    <Keyword>Position, Legend</Keyword>
+  </Keywords>  
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "ChartDrillDown">
+	<Title>Server-Side Click Event</Title> 
+	<Thumbnail>LegendCustomPosition\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using the Server-Side Click Event</ShortBlurb> 
+	<Content>LegendCustomPosition\LegendCustomPosition.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LegendCustomPosition\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendCustomPosition\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    		<Keyword>Legend, Click event</Keyword>
+  	</Keywords> 
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Drill Down">
+	<Title>Server-Side Click Event</Title> 
+	<Thumbnail>LegendCustomPosition\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using the Server-Side Click Event</ShortBlurb> 
+	<Content>LegendCustomPosition\LegendCustomPosition.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LegendCustomPosition\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendCustomPosition\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    		<Keyword>Legend, Click event</Keyword>
+  	</Keywords>  
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "ChartAppearance" Priority="400">
+	<Title>Legend Appearance</Title> 
+	<Thumbnail>LegendAppearance\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Setting Legend Appearance</ShortBlurb> 
+	<Content>LegendAppearance\LegendAppearance.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LegendAppearance\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendAppearance\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Appearance</Keyword>
+    <Keyword>Appearance, Legend</Keyword>
+  </Keywords>  
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Legend" Priority="800">
+	<Title>Custom Legend Items</Title> 
+	<Thumbnail>LegendCustomItems\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Custom Legend Items</ShortBlurb> 
+	<Content>LegendCustomItems\LegendCustomItems.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">LegendCustomItems\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">LegendCustomItems\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendCustomItems\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Adding Custom Items </Keyword>
+    <Keyword>Legend, Disable Text</Keyword>
+    <Keyword>Legend, Modify Text</Keyword>
+  </Keywords> 
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Legend" Priority="300">
+	<Title>Legend Font</Title> 
+	<Thumbnail>LegendFont\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Setting Legend Font and Color</ShortBlurb> 
+	<Content>LegendFont\LegendFont.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">LegendFont\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">LegendFont\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Font</Keyword>
+  </Keywords>
+	</SampleConfig>	
+
+	
+</SampleConfigs>

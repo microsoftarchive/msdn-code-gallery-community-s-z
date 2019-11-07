@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfVTK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vtk="clr-namespace:Kitware.VTK;assembly=Kitware.VTK"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="480" Width="640">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TreeView ItemsSource="{Binding RenderActors}" Name="_treeView">
+            <!-- the style to bind to the view model's IsExpanded and IsSelected properties -->
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                    <Setter Property="FontWeight" Value="Normal" />
+                    <!-- display bold when selected -->
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="FontWeight" Value="Bold" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TreeView.ItemContainerStyle>
+            <TreeView.ItemTemplate>
+                <!-- the data template which binds the checkbox to the property Render and displays the name object-->
+                <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding Render}" Margin="2,0,2,0"/>
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>   
+        </TreeView>
+        <!-- put the 3D render control in a windows forms host -->
+        <WindowsFormsHost Grid.Column="1" Grid.RowSpan="2" Name="wfh">
+            <vtk:RenderWindowControl x:Name="_renderControl" />
+        </WindowsFormsHost> 
+        <!-- The stack panel has the datacontext of the selected item in the treeview -->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" DataContext="{Binding ElementName=_treeView, Path=SelectedItem}">
+            <!-- so that the commands are relayed to the selected object -->
+            <Button Content="Add Cone" Command="{Binding AddCommand}" CommandParameter="Cone"/>
+            <Button Content="Add Sphere" Command="{Binding AddCommand}" CommandParameter="Sphere"/>
+            <Button Content="Remove" Command="{Binding RemoveCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

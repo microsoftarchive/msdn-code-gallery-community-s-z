@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "JapanCharts">
+  <Title>Point And Figure Chart</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Point And Figure Chart</ShortBlurb> 
+  <Content>PointAndFigureChart.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+      <Keyword>Chart type, Point And Figure</Keyword>
+      <Keyword>Point And Figure chart</Keyword>
+      <Keyword>Reversal Amount, Point and Figure</Keyword>
+    </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

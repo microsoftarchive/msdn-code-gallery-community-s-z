@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=B84BDA93DB9A27FA6A79ADF8C850FB65" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=E081ED65358ED02E5393FE74C20E5B67" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>UWP Custom On Screen Keyboard for IoT</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>UWP Custom On Screen Keyboard for IoT</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows Univeral App, UWP, Windows IoT
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            On-screen keyboard
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">4/18/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/UWP-Custom-On-Screen-8fd8415e">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>As of April 2016, Windows 10 IoT does not include an on screen keyboard.<br>
+The <a href="https://code.msdn.microsoft.com/UWP-Custom-On-Screen-8fd8415e/https://ms-iot.github.io/content/en-US/win10/samples/DigitalSignage.htm" >
+DigitalSignage UWP sample</a> app contains a custom on screen keyboard, but I found that is has multiple bugs and is inconvenient to use in code.<br>
+In this sample, you can find an improved version of the on screen keyboard.</em></p>
+<p><span style="background-color:#ffff00"><em><strong>UPDATE:</strong> <span style="background-color:#ffffff">
+More information <a href="https://code.msdn.microsoft.com/UWP-Custom-On-Screen-8fd8415e/https://github.com/michaelosthege/TCD.Controls.Keyboard">
+now also on GitHub</a></span></em></span></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>You need Visual Studio 2015 with UWP support.</em></p>
+<p><em>If you want to modify the keyboard, be warned: It has a really nice look and behaviour, but the MVVM that powers it is a bit wtf.. Changing colors &amp; keyboard layout should be no problem though.<br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>The OnScreenKeyboard control from the DigitalSignage sample was taken and improved.<br>
+<br>
+<br>
+<strong>Bugs that were adressed:</strong><br>
+</em></p>
+<ul>
+<li><em>injects input directly into target TextBox/PasswordBox instead of OutputString property</em>
+</li><li><em>the Content property of the [ key was fixed</em> </li><li><em>symbols for Tab, Capslock, Shift, Backspace, Return</em> </li><li><em>spacing between keys subtituted with black margin to prevent unwanted unfocusing</em>
+</li><li><em>IsTabStop=&quot;False&quot; on all keys causes focus to remain at the TextBox</em> </li></ul>
+<p><em>&nbsp;<br>
+<strong>Shortcomings / known bugs:</strong><br>
+</em></p>
+<ul>
+<li><em>caret positioning &amp; selection does not work on PasswordBoxes (because the PasswordBox does not expose this property)</em>
+</li><li><em>the space between the keys is not transparent (adjust border color accordingly)</em>
+</li></ul>
+<p>&nbsp;</p>
+<p>This is what is looks like:</p>
+<p><img id="151009" src="description/ss1.PNG" alt="" width="494" height="309"></p>
+<p><em><br>
+</em></p>
+<p>For all TextBox and PasswordBox controls, you have to subscribe the keyboard:</p>
+<p><em>&nbsp; <br>
+</em></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Skript bearbeiten</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">// in your MainPage constructor
+keyboard.RegisterTarget(textBox1);
+keyboard.RegisterTarget(textBox2);
+keyboard.RegisterTarget(passwordBox1);
+// keyboard being the instance of the OnScreenKeyboard</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//&nbsp;in&nbsp;your&nbsp;MainPage&nbsp;constructor</span>&nbsp;
+keyboard.RegisterTarget(textBox1);&nbsp;
+keyboard.RegisterTarget(textBox2);&nbsp;
+keyboard.RegisterTarget(passwordBox1);&nbsp;
+<span class="cs__com">//&nbsp;keyboard&nbsp;being&nbsp;the&nbsp;instance&nbsp;of&nbsp;the&nbsp;OnScreenKeyboard</span></pre>
+</div>
+</div>
+</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>OSKSample.zip - source code of the sample application</em> </li></ul>
+<h1>More Information</h1>
+<p><em>https://code.msdn.microsoft.com/UWP-Custom-On-Screen-8fd8415e/https://github.com/michaelosthege/TCD.Controls.Keyboard</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

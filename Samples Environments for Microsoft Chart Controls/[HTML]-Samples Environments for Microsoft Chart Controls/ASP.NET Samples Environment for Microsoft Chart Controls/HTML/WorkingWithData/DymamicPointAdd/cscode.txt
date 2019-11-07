@@ -1,0 +1,27 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set primary x-axis properties
+    Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Interval = Math.PI;
+    Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Format = "##.##";
+    Chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Interval = Math.PI;
+    Chart1.ChartAreas["ChartArea1"].AxisX.MinorGrid.Interval = Math.PI/4;
+    Chart1.ChartAreas["ChartArea1"].AxisX.MinorTickMark.Interval = Math.PI/4;
+    Chart1.ChartAreas["ChartArea1"].AxisX.MajorTickMark.Interval = Math.PI;
+    Chart1.ChartAreas["ChartArea1"].AxisY.MinorGrid.Interval = 0.25;
+    Chart1.ChartAreas["ChartArea1"].AxisY.MajorGrid.Interval = 0.5;
+    Chart1.ChartAreas["ChartArea1"].AxisY.LabelStyle.Interval = 0.5;
+    	
+    double t;
+    // Add data points to the series that have the specified X and Y values
+    for(t = 0; t <= (2.5 * Math.PI); t += Math.PI/6)
+    {
+        double ch1 = Math.Sin(t);
+        double ch2 = Math.Sin(t-Math.PI/2);
+        Chart1.Series["Channel 1"].Points.AddXY(t, ch1);
+        Chart1.Series["Channel 2"].Points.AddXY(t, ch2);
+    }
+}
+...

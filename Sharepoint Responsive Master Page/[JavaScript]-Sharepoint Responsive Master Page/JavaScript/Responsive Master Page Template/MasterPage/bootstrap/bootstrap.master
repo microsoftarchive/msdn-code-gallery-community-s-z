@@ -1,0 +1,295 @@
+<%@Master language="C#"%>
+<!DOCTYPE html>
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %> <%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %> <%@ Import Namespace="Microsoft.SharePoint" %> <%@ Assembly Name="Microsoft.Web.CommandUI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="Welcome" src="~/_controltemplates/Welcome.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="MUISelector" src="~/_controltemplates/MUISelector.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="DesignModeConsole" src="~/_controltemplates/DesignModeConsole.ascx" %>
+<html  
+lang="<%$Resources:wss,language_value %>"
+ dir="<%$Resources:wss,multipages_direction_dir_value %>" 
+ runat="server" __expr-val-dir="ltr">
+<head runat="server">
+	<!--run in IE 9 mode-->
+	<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- robots -->
+	<SharePoint:RobotsMetaTag runat="server"/>
+
+	<!-- page title - can be overridden by <asp:Content ContentPlaceholderID="PlaceHolderPageTitle" > -->
+	<title id="onetidTitle"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"/></title>
+	<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true"/>
+	<!--fav icon-->
+	<SharePoint:SPShortcutIcon runat="server" IconUrl="../../../Style Library/bootstrap/img/FavIcon.ico"/>
+
+	<!--OOTB CSS-->
+	<SharePoint:CssLink runat="server" Version="4"/>
+	<SharePoint:Theme runat="server"/>
+	
+	<!-- page manager interacts with script and the sharepoint object model -->
+	<SharePoint:SPPageManager runat="server"/>
+	
+	<!-- unified logging service -->
+	<SharePoint:ULSClientConfig runat="server"/>
+	
+	<!-- identifies to scripting elements that this is a v4 master page. required for scrolling? -->
+	<script type="text/javascript">
+		var _fV4UI = true;
+	</script>
+	
+	<!-- load SharePoint javascript -->
+	<SharePoint:ScriptLink language="javascript" Defer="true" runat="server"/>
+	<SharePoint:CustomJSUrl runat="server"/>
+	
+	<!--bootstrap CSS-->
+	
+		<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap.min.css %>" After="corev4.css" runat="server"/>
+<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap-responsive.min.css %>" After="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap.min.css %>" runat="server"/>
+	<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap-custom.css %>" After="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap-responsive.min.css %>" runat="server"/>
+	
+	
+
+	
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/html5.js" runat="server"/>
+	<![endif]-->
+
+	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/jquery-1.8.3.min.js" runat="server"/>	
+	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/bootstrap.min.js" runat="server"/>
+	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/jquery.dragdrop.js" runat="server"/>	
+	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/bootstrap-custom.js" runat="server"/>
+	
+	
+	
+
+	
+	
+	
+	
+
+	<!-- javascript to override the active-x message in ie 
+		// See http://blog.drisgill.com/2010/02/removing-name-activex-control-warning.html for more info
+		// Remove if the IM pressence icons are needed in SharePoint
+	-->
+	<script type="text/javascript">
+		function ProcessImn() { }
+		function ProcessImnMarkers() { }	
+	</script>
+	
+	<!-- Optional - provides link that contains the SOAP definitions and WSDL --> 
+	<SharePoint:SoapDiscoveryLink runat="server"/>
+		
+	<!-- Optional - provides scripting for registering _registerHelpComponent within the ribbon-->
+	
+	<SharePoint:SPHelpPageComponent Visible="false" runat="server"/>
+	
+
+	<!--Additional Page Head Delegate Control so you can create your own custom CONTROLTEMPLATES -->
+	<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true"/>	
+
+	<!-- Additional Page Head Content - can be overridden by <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead"> -->
+	
+
+	<!--Additional content placeholders that should stay in head section.-->
+	
+	<asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" runat="server"/>
+	
+	<SharePoint:SPHelpPageComponent Visible="false" runat="server"/>
+	
+	
+
+
+	
+</head>
+<body>
+	<form runat="server">
+		<!--SharePoint Scripts-->
+		
+
+		<!--Ribbon-->
+		
+		
+		<!--Ribbon-->
+		
+		<!--end ribbon-->
+
+		
+		
+		
+		
+		<!--end ribbon-->
+
+
+
+
+
+
+		<!--primary content panel, provides scroll bars under ribbon, replacing the browser scrollbars-->
+		<!--
+		<div id="s4-workspace">
+			<div id="s4-bodyContainer">
+			-->
+				<!--page status bar including if a page is checked out, ready for publishing, etc-->
+				
+				<!--title row-->
+				<div class="masthead container-fluid s4-notdlg">
+					<div class="header clearfix">
+						<!--logo-->
+						
+						<div class="pull-left">
+							<SharePoint:SiteLogoImage name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="../../../Style Library/bootstrap/img/Logo.png" runat="server"/>
+							
+
+								
+							
+						</div>
+						
+						<!--page title-->
+						
+						<!--search-->
+						
+					</div>
+					<div id="topnavbar" class="navbar navbar-inverse" style="left: 0px; top: 0px;">
+						<div class="navbar-inner">
+							<div class="container">
+								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</a>
+								<div class="nav-collapse collapse">
+									<!--top nav-->
+									<asp:ContentPlaceHolder id="PlaceHolderTopNavBar" runat="server">
+										<asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" runat="server">
+										
+											<SharePoint:AspMenu ID="TopNavigationMenuV4" Runat="server" EnableViewState="false" DataSourceID="topSiteMap" 
+											AccessKey="<%$Resources:wss,navigation_accesskey%>" UseSimpleRendering="true" UseSeparateCss="false" 
+											Orientation="Horizontal" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="3" SkipLinkText="" CssClass="s4-tn"/>
+											
+											<!--top navigation delegrate control. Can be overwritten-->
+											<SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate">
+												<Template_Controls>
+													<!--or you can provide your own site map data source to modifcation navigation-->
+													<asp:SiteMapDataSource ShowStartingNode="False" SiteMapProvider="SPNavigationProvider" 
+													id="topSiteMap" runat="server" StartingNodeUrl="sid:1002"/>
+												</Template_Controls>
+											</SharePoint:DelegateControl>
+										</asp:ContentPlaceHolder>
+									</asp:ContentPlaceHolder>
+								</div>
+							</div>
+						
+					</div>
+					</div>
+						
+				<!--end title row-->
+				
+				<!--page layout-->
+				<div id="mainbody" class=" navbar" style="min-height:500px; width:90%" >
+					
+							<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server"   />
+
+						
+				
+			
+				</div>
+						
+				
+				<!--container-->
+			
+			<!-- end s4-bodycontainer-->
+		
+			<!--the contents of the developer dashboard will be placed here, if turned on-->
+			
+				
+				
+				<!-- custom code for footer..ADDED BY SASIKUMAR-- delete later if not needed -->
+					
+					<div class="masthead container-fluid s4-notdlg" >
+					<div class="header clearfix">
+
+	
+					<div id="topnavbar1" class="navbar navbar-inverse"  >
+					
+						<div class="navbar-inner">
+							<div class="container">
+								
+								<div style="text-align:center">
+								Copyright &copy  Company 2015
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					
+					
+	
+			</div>
+			
+		
+		<!--end workspace div-->
+		<div class="masthead container-fluid s4-notdlg" >
+					<div class="header clearfix">
+
+
+		<asp:Panel runat="server" Visible="false" EnableViewState="false" Width="100%" Enabled="false">
+			<!--hide a bunch of controls that are normally not used but are required for all pages to load correctly-->
+			<!-- hidden in the PlaceHolderGlobalNavigation content place holder. Could use to replace or augment Global nav dropdown nav-->
+			<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" runat="server" Visible="false" />
+			<!--top of left nav bar-->
+			<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" runat="server"/>
+			<!--top of quick launch, used for v3-->
+			<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" runat="server" />
+			<!--page icon found in top left of page-->
+			<asp:ContentPlaceHolder id="PlaceHolderPageImage" runat="server" Visible="false"/>
+			<!--left border for title area-->
+			<asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" runat="server" Visible="false" />
+			<!--mini console for extra buttons on some pages like wiki-->
+			<asp:ContentPlaceHolder id="PlaceHolderMiniConsole" runat="server" Visible="false"/>
+			<!--right margin for title area-->
+			<asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" runat="server" Visible="false"/>
+			<!--extra seperator for title-->
+			<asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" runat="server" Visible="false"/>
+			<!--extra spacer in nav-->
+			<asp:ContentPlaceHolder id="PlaceHolderNavSpacer" runat="server" Visible="false" />
+			<!--left nav border-->
+			<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" runat="server" Visible="false" />
+			<!--border for left of main body-->
+			<asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" runat="server" Visible="false" />
+			<!--v3 design console-->
+			<asp:ContentPlaceHolder id="WSSDesignConsole" runat="server" />
+			<!--right margin for main body-->
+			<asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" runat="server" />
+			
+			<asp:ContentPlaceHolder id="PlaceHolderSiteName" runat="server"></asp:ContentPlaceHolder>
+			
+		</asp:Panel>
+
+		<!--form digest secutiry control. Used for security and form validation-->
+		<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+			<SharePoint:FormDigest runat="server"/>
+		</asp:ContentPlaceHolder>
+
+
+		<!-- Handle Search "enter" key and back button -->
+		<input type="text" name="__spText1" title="text" style="display:none;" />
+		<input type="text" name="__spText2" title="text" style="display:none;" />
+		</div>
+		</div>
+	</form>
+
+	<!--extra form/utility content for certain pages-->
+	<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
+
+	<!-- old browser warning message-->
+	<SharePoint:WarnOnUnsupportedBrowsers runat="server"/>
+
+	
+	<!-- Credit not required -->
+</body>
+</html>

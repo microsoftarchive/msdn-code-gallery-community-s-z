@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.4.1.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=108612E2CC4F976C14444324F9F015F7" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=EB101E94E2F72F68528E12AC56A6D446" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Scientific Calculator</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Scientific Calculator</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Visual Basic .NET, Visual basic, VB.Net, Visual C#
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            C#, Calculator, Calculator Application, VB.Net, C# calculator, Advanced Calculator, Scientific Calculator, Visual Basic Calculator
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">4/3/2019</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Advanced-Calculator-bfab0b67">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1><strong>Preface</strong></h1>
+<p>In this chapter we want to write Scientific Calculator program .</p>
+<p>_______________________________________________________________________________________________</p>
+<h1><strong>Process</strong></h1>
+<p><strong>&nbsp;</strong><span style="font-size:small">The following steps show how to write a advanced Calculator:</span></p>
+<p>1. First, Click <strong><span style="font-size:x-small">New Project</span></strong> in
+<span style="font-size:x-small"><strong>Start Page</strong></span> Or On <strong>
+<span style="font-size:x-small">File </span></strong>Menu .</p>
+<p>2. In <strong>New Project</strong> Dialog , Click <strong>Windows</strong> On Left Pane And
+<strong>Windows Forms Application</strong> On Middle Pane .</p>
+<p>3. Change forms layout to this Mode :</p>
+<p>&nbsp;<img id="163864" src="description/Calc.jpg" alt="" width="369" height="325"></p>
+<p>_______________________________________________________________________________________________</p>
+<p>4. Now Declare This Public Variables :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">decimal num1;
+decimal num2;
+string operation;
+</pre>
+<pre class="hidden">Dim num1 As Decimal
+Dim num2 As Decimal
+Dim operation As String</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">decimal</span>&nbsp;num1;&nbsp;
+<span class="cs__keyword">decimal</span>&nbsp;num2;&nbsp;
+<span class="cs__keyword">string</span>&nbsp;operation;&nbsp;<br></pre>
+</div>
+</div>
+</div>
+<p>5. Then Add This Method for Number Buttons :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">private void input(string a)
+{
+    if (textBox1.Text == &quot;0&quot;)
+        textBox1.Text = a;
+    else
+        textBox1.Text &#43;= a;
+}</pre>
+<pre class="hidden">Private Sub input(a As String)
+    If textBox1.Text = &quot;0&quot; Then
+        textBox1.Text = a
+    Else
+        textBox1.Text &#43;= a
+    End If
+End Sub</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;input(<span class="cs__keyword">string</span>&nbsp;a)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(textBox1.Text&nbsp;==&nbsp;<span class="cs__string">&quot;0&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;a;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;&#43;=&nbsp;a;&nbsp;
+}</pre>
+</div>
+</div>
+</div>
+<p>6. Add This Code In Number Buttons(Click Event) :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">input(&quot;(Number Of Button)&quot;);</pre>
+<pre class="hidden">input(&quot;(Number Of Button)&quot;)</pre>
+<div class="preview">
+<pre class="csharp">input(<span class="cs__string">&quot;(Number&nbsp;Of&nbsp;Button)&quot;</span>);<br></pre>
+</div>
+</div>
+</div>
+<p>7. Now Add This Code For Operation Buttons(&#43;, -, /, *, ^ And Mod(%)) :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">num1 = decimal.Parse(textBox1.Text);
+operation = &quot;(Operation For Example &quot;&#43;&quot;)&quot;;
+textBox1.Text = &quot;0&quot;;</pre>
+<pre class="hidden">num1 = decimal.Parse(textBox1.Text)
+operation = &quot;(Operation For Example &quot;&#43;&quot;)&quot;
+textBox1.Text = &quot;0&quot;</pre>
+<div class="preview">
+<pre class="csharp">num1&nbsp;=&nbsp;<span class="cs__keyword">decimal</span>.Parse(textBox1.Text);&nbsp;
+operation&nbsp;=&nbsp;<span class="cs__string">&quot;(Operation&nbsp;For&nbsp;Example&nbsp;&quot;</span>&#43;<span class="cs__string">&quot;)&quot;</span>;&nbsp;
+textBox1.Text&nbsp;=&nbsp;<span class="cs__string">&quot;0&quot;</span>;<br></pre>
+</div>
+</div>
+</div>
+<p>8.Then Add&nbsp; This Code For Calculation Button(=) :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span><span class="hidden">csharp</span>
+<pre class="hidden">num2 = Decimal.Parse(textBox1.Text)
+'''''''''''''''''''''''''''''''''''
+Select Case operation
+    Case &quot;&#43;&quot;
+        textBox1.Text = (num1 &#43; num2).ToString()
+        Exit Select
+    Case &quot;-&quot;
+        textBox1.Text = (num1 - num2).ToString()
+        Exit Select
+    Case &quot;*&quot;
+        textBox1.Text = (num1 * num2).ToString()
+        Exit Select
+    Case &quot;/&quot;
+        textBox1.Text = (num1 / num2).ToString()
+        Exit Select
+    Case &quot;^&quot;
+        textBox1.Text = (Integer.Parse(num1.ToString()) Xor Integer.Parse(num2.ToString())).ToString()
+        Exit Select
+    Case &quot;%&quot;
+        textBox1.Text = (num1 Mod num2).ToString()
+        Exit Select
+End Select</pre>
+<pre class="hidden">num2 = decimal.Parse(textBox1.Text);
+////////////////////////////////
+switch (operation)
+{
+    case &quot;&#43;&quot;:
+        textBox1.Text = (num1 &#43; num2).ToString();
+        break;
+    case &quot;-&quot;:
+        textBox1.Text = (num1 - num2).ToString();
+        break;
+    case &quot;*&quot;:
+        textBox1.Text = (num1 * num2).ToString();
+        break;
+    case &quot;/&quot;:
+        textBox1.Text = (num1 / num2).ToString();
+        break;
+    case &quot;^&quot;:
+        textBox1.Text = (int.Parse(num1.ToString()) ^ int.Parse(num2.ToString())).ToString();
+        break;
+    case &quot;%&quot;:
+        textBox1.Text = (num1 % num2).ToString();
+        break;
+}</pre>
+<div class="preview">
+<pre class="vb">num2&nbsp;=&nbsp;<span class="visualBasic__keyword">Decimal</span>.Parse(textBox1.Text)&nbsp;
+<span class="visualBasic__com">'''''''''''''''''''''''''''''''''''</span>&nbsp;
+<span class="visualBasic__keyword">Select</span>&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;operation&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;&#43;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;&#43;&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;-&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;-&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;*&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;*&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;/&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;/&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;^&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(<span class="visualBasic__keyword">Integer</span>.Parse(num1.ToString())&nbsp;<span class="visualBasic__keyword">Xor</span>&nbsp;<span class="visualBasic__keyword">Integer</span>.Parse(num2.ToString())).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;%&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;<span class="visualBasic__keyword">Mod</span>&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Select</span></pre>
+</div>
+</div>
+</div>
+<p>9. Now Add This Code For Cosine Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">textBox1.Text = (Math.Cos(double.Parse(textBox1.Text))).ToString();</pre>
+<pre class="hidden">textBox1.Text = (Math.Cos(double.Parse(textBox1.Text))).ToString()</pre>
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Cos(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p>10. Then Add This Code For Sinus Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">textBox1.Text = (Math.Sin(double.Parse(textBox1.Text))).ToString();</pre>
+<pre class="hidden">textBox1.Text = (Math.Sin(double.Parse(textBox1.Text))).ToString()</pre>
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Sin(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p>11. Now Add This Code For Tangent Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">textBox1.Text = (Math.Tan(double.Parse(textBox1.Text))).ToString();</pre>
+<pre class="hidden">textBox1.Text = (Math.Tan(double.Parse(textBox1.Text))).ToString()</pre>
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Tan(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p>12. Then Add This Code For Logarithm Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">textBox1.Text = (Math.Log(double.Parse(textBox1.Text))).ToString();</pre>
+<pre class="hidden">textBox1.Text = (Math.Log(double.Parse(textBox1.Text))).ToString()</pre>
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Log(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p>13. Now Add This Code For Factorial Button :</p>
+<p><strong>&nbsp;</strong></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">long f = 1;
+for (long i = 1; i &lt;= long.Parse(textBox1.Text); i&#43;&#43;) { f = f * i; }
+textBox1.Text = f.ToString();</pre>
+<pre class="hidden">Dim f As Long = 1
+For i As Long = 1 To Long.Parse(textBox1.Text)
+    f = f * i
+Next
+textBox1.Text = f.ToString()</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">long</span>&nbsp;f&nbsp;=&nbsp;<span class="cs__number">1</span>;&nbsp;
+<span class="cs__keyword">for</span>&nbsp;(<span class="cs__keyword">long</span>&nbsp;i&nbsp;=&nbsp;<span class="cs__number">1</span>;&nbsp;i&nbsp;&lt;=&nbsp;<span class="cs__keyword">long</span>.Parse(textBox1.Text);&nbsp;i&#43;&#43;)&nbsp;{&nbsp;f&nbsp;=&nbsp;f&nbsp;*&nbsp;i;&nbsp;}&nbsp;
+textBox1.Text&nbsp;=&nbsp;f.ToString();</pre>
+</div>
+</div>
+</div>
+<p>14. Then Add This Code For Radical Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+<pre class="hidden">textBox1.Text = (Math.Sqrt(double.Parse(textBox1.Text))).ToString();</pre>
+<pre class="hidden">textBox1.Text = (Math.Sqrt(double.Parse(textBox1.Text))).ToString()</pre>
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Sqrt(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p><strong><span style="font-size:large">good luck &nbsp;!</span></strong></p>
+<p>_______________________________________________________________________________________________</p>
+<ul>
+</ul>
+<h1>More Information</h1>
+<p><em>My Email-Address is aryanmesgari@outlook.com</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

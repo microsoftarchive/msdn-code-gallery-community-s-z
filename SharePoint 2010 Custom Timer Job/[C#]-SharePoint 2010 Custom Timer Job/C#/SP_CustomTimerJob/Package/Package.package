@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a8f99fb5-4c5a-49e5-aee1-4493df2c5e12" solutionId="a8f99fb5-4c5a-49e5-aee1-4493df2c5e12" resetWebServer="false" name="DotNetFinder" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="0df09303-049d-4e4f-ade6-9506ab014ed4" />
+  </features>
+</package>

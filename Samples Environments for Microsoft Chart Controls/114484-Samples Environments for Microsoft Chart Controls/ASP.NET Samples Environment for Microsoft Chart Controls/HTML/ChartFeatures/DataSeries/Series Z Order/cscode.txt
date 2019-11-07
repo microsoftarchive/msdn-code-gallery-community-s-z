@@ -1,0 +1,20 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Create references to series
+    Series [] series = new Series[3];
+    series[0] = Chart1.Series["Series1"];
+    series[1] = Chart1.Series["Series2"];
+    series[2] = Chart1.Series["Series3"];
+
+    // Remove all series from the collection
+    Chart1.Series.Clear();
+
+    // Add chart series to the collection in the specified order
+    Chart1.Series.Add(series[2]);
+    Chart1.Series.Add(series[0]);
+    Chart1.Series.Add(series[1]);
+}
+...

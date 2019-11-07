@@ -1,0 +1,37 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Add series to the chart
+    Series series = Chart1.Series.Add("My series");
+
+    // Set series and legend tooltips
+    series.ToolTip = "#VALX: #VAL{C} million";
+    series.LegendToolTip = "#PERCENT";
+	series.PostBackValue = "#INDEX";
+	series.LegendPostBackValue = "#INDEX";
+        	
+    // Populate series data
+    double[]	yValues = {65.62, 75.54, 60.45, 34.73, 85.42, 32.12, 55.18, 67.15, 56.24, 23.65};
+    string[]	xValues = {"France", "Canada", "Germany", "USA", "Italy", "Russia", "China", "Japan", "Sweden", "Spain" };
+    series.Points.DataBindXY(xValues, yValues);
+
+    // Set series visual attributes
+    series.ChartType = SeriesChartType.Pie;
+    series.ShadowOffset = 2;
+    series.BorderColor = Color.DarkGray;
+    series.CustomAttributes = "LabelStyle=Outside";
+}
+
+protected void Chart1_Click(object sender, ImageMapEventArgs e)
+{
+    int pointIndex = int.Parse(e.PostBackValue);
+    Series series = Chart1.Series["My series"];
+    if (pointIndex >= 0 && pointIndex < series.Points.Count)
+    {
+        series.Points[pointIndex].CustomProperties += "Exploded=true";
+    }
+}
+
+...

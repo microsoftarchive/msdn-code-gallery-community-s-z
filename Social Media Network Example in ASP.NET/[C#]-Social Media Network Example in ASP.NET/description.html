@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/4f0db316-e33e-4e5c-b975-0f6de635f8e4Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Social Media Network Example in ASP.NET</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Social Media Network Example in ASP.NET</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Tecnologias">Tecnologias</label>
+                        <div id="Tecnologias">
+                            SQL Server, ASP.NET, Social Network
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="T&#243;picos">T&#243;picos</label>
+                        <div id="T&#243;picos">
+                            social network api
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">pt-BR</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">&#218;ltima Atualiza&#231;&#227;o</label>
+                    <div id="LastUpdated">24/01/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">Licen&#231;a</label>
+                    <div id="License">
+                        <a href="license.rtf">Licen&#231;a do Apache, Vers&#227;o 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Social-Network-Example-in-64db2088">Exiba este exemplo online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copiar c&#243;digo';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>This solution is one answer for this question:&nbsp;http://code.msdn.microsoft.com/site/requests/Social-Network-141af909/</em></p>
+<p>The Social Network is the actual phenomena. In Brazil the most popular example is Orkut, and now Facebook, but we know have more than one thousand social networks on the world, to see one list, see:&nbsp;<a href="http://pt.wikipedia.org/wiki/Lista_de_redes_sociais"><span>http://pt.wikipedia.org/wiki/Lista_de_redes_sociais</span></a></p>
+<p><span>In this article i show the ASP .NET aplication to social interaction network.</span></p>
+<p><span>I know is simple, and don't have all functions of other social networks on the market, but is the basic to you work, find and make friends, and share informations, the rest is with you.</span></p>
+<p><span><br>
+</span></p>
+<p><span style="font-family:'Trebuchet MS'">As redes sociais s&atilde;o um fen&ocirc;meno atual. Embora o&nbsp;<strong>ORKUT</strong>&nbsp;seja o exemplo mais p</span><span style="font-family:'Trebuchet MS'">opular (<em>no Brasil</em>) deste fen&ocirc;meno,
+ existem centenas de redes sociais. Para ver uma rela&ccedil;&atilde;o de redes sociais acesse o link:&nbsp;</span><a href="http://pt.wikipedia.org/wiki/Lista_de_redes_sociais"><span style="font-family:'Trebuchet MS'">http://pt.wikipedia.org/wiki/Lista_de_redes_sociais</span></a></p>
+<table border="0" width="1001">
+<tbody>
+<tr>
+<td width="995" bgcolor="#FFFFC6"><span style="font-family:'Trebuchet MS'; font-size:x-small"><img src="description/1_lampada.gif" border="0" alt="" width="15" height="15">O Orkut &eacute; uma rede social filiada ao Google, criada em 24 de Janeiro
+ de 2004 com o objetivo de ajudar seus membros a conhecer pessoas e manter relacionamentos. Seu nome &eacute; originado no projetista chefe,<span style="color:#0000ff">&nbsp;Orkut B&uuml;y&uuml;kkokten</span>, engenheiro turco do&nbsp;<span style="color:#0000ff">Google</span>.<br>
+O alvo inicial do orkut era os Estados Unidos, mas a maioria dos usu&aacute;rios s&atilde;o do Brasil e da &Iacute;ndia. No Brasil &eacute; a rede social com maior participa&ccedil;&atilde;o de brasileiros, com mais de 23 milh&otilde;es de usu&aacute;rios em
+ janeiro de 2008. Na &Iacute;ndia &eacute; o segundo mais visitado.<br>
+A Sede do orkut era na Calif&oacute;rnia at&eacute; agosto de 2008, quando o Google anunciou que o orkut ser&aacute; operado no Brasil pelo Google Brasil devido a grande quantidade de usu&aacute;rios brasileiros e o crescimento dos assuntos legais.</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family:'Trebuchet MS'">Neste artigo eu apresento uma aplica&ccedil;&atilde;o ASP .NET que tem como objetivo permitir o relacionamento entre pessoas para troca de informa&ccedil;&otilde;es.</span></p>
+<table border="0" width="996">
+<tbody>
+<tr>
+<td width="990" bgcolor="#FFFFC6"><span style="font-family:'Trebuchet MS'; font-size:x-small"><img src="description/1_lampada.gif" border="0" alt="" width="15" height="15">&nbsp;Rede Social &eacute; uma das formas de representa&ccedil;&atilde;o
+ dos relacionamentos afetivos ou profissionais dos seres entre si ou entre seus agrupamentos de interesses m&uacute;tuos. A rede &eacute; respons&aacute;vel pelo compartilhamento de id&eacute;ias entre pessoas que possuem interesses e objetivo em comum e tamb&eacute;m
+ valores a serem compartilhados. Assim, um grupo de discuss&atilde;o &eacute; composto por indiv&iacute;duos que possuem identidades semelhantes.&nbsp;<br>
+Essas redes sociais est&atilde;o hoje instaladas principalmente na Internet devido ao fato desta possibilitar uma acelera&ccedil;&atilde;o e ampla maneira das id&eacute;ias serem divulgadas e da absor&ccedil;&atilde;o de novos elementos em busca de algo em
+ comum.(</span><a href="http://pt.wikipedia.org/wiki/Rede_social"><span style="font-family:'Trebuchet MS'; font-size:x-small">http://pt.wikipedia.org/wiki/Rede_social</span></a><span style="font-family:'Trebuchet MS'; font-size:x-small">)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family:'Trebuchet MS'">Embora n&atilde;o tenha todas as funcionalidades do&nbsp;<strong>ORKUT</strong>&nbsp;essa pequena aplica&ccedil;&atilde;o permite que o usu&aacute;rio acesse a rede, localize e fa&ccedil;a amigos e compartilhe informa&ccedil;&otilde;es
+ que s&atilde;o na ess&ecirc;ncia o principal objetivo de uma rede social.</span></p>
+<p><span style="font-family:'Trebuchet MS'"><strong>Obs: Existe um programa gratuito chamado Dolphin 7 que permite que voc&ecirc; crie e configure a sua comunidade para saber mais visite a url:&nbsp;</strong></span><a href="http://www.boonex.com/dolphin/"><span style="font-family:'Trebuchet MS'"><strong>http://www.boonex.com/dolphin/</strong></span></a></p>
+<p><span style="font-family:'Trebuchet MS'">Feita esta pequena introdu&ccedil;&atilde;o vamos ao que interessa que &eacute; a apresenta&ccedil;&atilde;o da aplica&ccedil;&atilde;o ASP .NET.</span></p>
+<p><span style="font-family:'Trebuchet MS'">Ela n&atilde;o &eacute; de minha autoria eu apenas traduzi os textos para o portugu&ecirc;s e fiz pequenos ajustes para que ela funcionasse no&nbsp;<span style="color:#0000ff">Visual Web Developer 2008 Express Edition.</span></span></p>
+<p><em>&nbsp;</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>Visual Studio 2008</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>here you can see the share information controller (scrap in orkut):</em></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Editar Script</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">&lt;%@ Control Language=&quot;C#&quot; AutoEventWireup=&quot;true&quot; CodeFile=&quot;GetUserScraps.ascx.cs&quot;
+    Inherits=&quot;Controls_GetUserScraps&quot; %&gt;
+&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;1&quot; border=&quot;0&quot; width=&quot;100%&quot;&gt;
+    &lt;tr&gt;
+        &lt;td colspan=&quot;3&quot; align=&quot;left&quot;&gt;
+            &lt;asp:GridView ID=&quot;GridViewUserScraps&quot; ItemStyle-VerticalAlign=&quot;Top&quot; AutoGenerateColumns=&quot;False&quot;
+                GridLines=&quot;None&quot; Width=&quot;100%&quot; ShowHeader=&quot;False&quot; runat=&quot;server&quot; AlternatingRowStyle-BackColor=&quot;#A5A5A5&quot;
+                CellPadding=&quot;4&quot; ForeColor=&quot;#333333&quot;&gt;
+                &lt;Columns&gt;
+                    &lt;asp:TemplateField&gt;
+                        &lt;ItemTemplate&gt;
+                            &lt;table align=&quot;left&quot; cellpadding=&quot;1&quot; cellspacing=&quot;2&quot;&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;
+                                        &lt;a href='&lt;%#getUserHREF(Container.DataItem)%&gt;'&gt;
+                                            &lt;img align=&quot;middle&quot; src='&lt;%#getSRC(Container.DataItem)%&gt;' border=&quot;0&quot; width=&quot;50px&quot; /&gt;&lt;/a&gt;
+                                    &lt;/td&gt;
+                                    &lt;td&gt;
+                                        &amp;nbsp;&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;
+                            &lt;div align=&quot;justify&quot;&gt;
+                                &lt;%#DataBinder.Eval(Container.DataItem, &quot;Message&quot;)%&gt;
+                                &lt;br /&gt;
+                                &lt;br /&gt;
+                            &lt;/div&gt;
+                            &lt;span class=&quot;SmallBlackText&quot;&gt;Postado em: &amp;nbsp;&lt;/span&gt;
+                            &lt;asp:Label ID=&quot;lblSendDate&quot; runat=&quot;server&quot; Text='&lt;%#DataBinder.Eval(Container.DataItem,&quot;SendDate&quot;)%&gt;'&gt;&lt;/asp:Label&gt;
+                            &lt;/span&gt;
+                        &lt;/ItemTemplate&gt;
+                    &lt;/asp:TemplateField&gt;
+                &lt;/Columns&gt;
+                &lt;RowStyle BackColor=&quot;#EFF3FB&quot; /&gt;
+                &lt;FooterStyle BackColor=&quot;#507CD1&quot; Font-Bold=&quot;True&quot; ForeColor=&quot;White&quot; /&gt;
+                &lt;PagerStyle BackColor=&quot;#2461BF&quot; ForeColor=&quot;White&quot; HorizontalAlign=&quot;Center&quot; /&gt;
+                &lt;SelectedRowStyle BackColor=&quot;#D1DDF1&quot; Font-Bold=&quot;True&quot; ForeColor=&quot;#333333&quot; /&gt;
+                &lt;HeaderStyle BackColor=&quot;#507CD1&quot; Font-Bold=&quot;True&quot; ForeColor=&quot;White&quot; /&gt;
+                &lt;EditRowStyle BackColor=&quot;#2461BF&quot; /&gt;
+                &lt;AlternatingRowStyle BackColor=&quot;White&quot; /&gt;
+            &lt;/asp:GridView&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<div class="preview">
+<pre class="csharp">&lt;%@&nbsp;Control&nbsp;Language=<span class="cs__string">&quot;C#&quot;</span>&nbsp;AutoEventWireup=<span class="cs__string">&quot;true&quot;</span>&nbsp;CodeFile=<span class="cs__string">&quot;GetUserScraps.ascx.cs&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Inherits=<span class="cs__string">&quot;Controls_GetUserScraps&quot;</span>&nbsp;%&gt;&nbsp;
+&lt;table&nbsp;cellpadding=<span class="cs__string">&quot;0&quot;</span>&nbsp;cellspacing=<span class="cs__string">&quot;1&quot;</span>&nbsp;border=<span class="cs__string">&quot;0&quot;</span>&nbsp;width=<span class="cs__string">&quot;100%&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;colspan=<span class="cs__string">&quot;3&quot;</span>&nbsp;align=<span class="cs__string">&quot;left&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;asp:GridView&nbsp;ID=<span class="cs__string">&quot;GridViewUserScraps&quot;</span>&nbsp;ItemStyle-VerticalAlign=<span class="cs__string">&quot;Top&quot;</span>&nbsp;AutoGenerateColumns=<span class="cs__string">&quot;False&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GridLines=<span class="cs__string">&quot;None&quot;</span>&nbsp;Width=<span class="cs__string">&quot;100%&quot;</span>&nbsp;ShowHeader=<span class="cs__string">&quot;False&quot;</span>&nbsp;runat=<span class="cs__string">&quot;server&quot;</span>&nbsp;AlternatingRowStyle-BackColor=<span class="cs__string">&quot;#A5A5A5&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CellPadding=<span class="cs__string">&quot;4&quot;</span>&nbsp;ForeColor=<span class="cs__string">&quot;#333333&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Columns&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;asp:TemplateField&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;table&nbsp;align=<span class="cs__string">&quot;left&quot;</span>&nbsp;cellpadding=<span class="cs__string">&quot;1&quot;</span>&nbsp;cellspacing=<span class="cs__string">&quot;2&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=<span class="cs__string">'&lt;%#getUserHREF(Container.DataItem)%&gt;'</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;align=<span class="cs__string">&quot;middle&quot;</span>&nbsp;src=<span class="cs__string">'&lt;%#getSRC(Container.DataItem)%&gt;'</span>&nbsp;border=<span class="cs__string">&quot;0&quot;</span>&nbsp;width=<span class="cs__string">&quot;50px&quot;</span>&nbsp;/&gt;&lt;/a&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;nbsp;&lt;/td&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/table&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;align=<span class="cs__string">&quot;justify&quot;</span>&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%#DataBinder.Eval(Container.DataItem,&nbsp;<span class="cs__string">&quot;Message&quot;</span>)%&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;<span class="cs__keyword">class</span>=<span class="cs__string">&quot;SmallBlackText&quot;</span>&gt;Postado&nbsp;em:&nbsp;&amp;nbsp;&lt;/span&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;asp:Label&nbsp;ID=<span class="cs__string">&quot;lblSendDate&quot;</span>&nbsp;runat=<span class="cs__string">&quot;server&quot;</span>&nbsp;Text=<span class="cs__string">'&lt;%#DataBinder.Eval(Container.DataItem,&quot;SendDate&quot;)%&gt;'</span>&gt;&lt;/asp:Label&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemTemplate&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/asp:TemplateField&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Columns&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RowStyle&nbsp;BackColor=<span class="cs__string">&quot;#EFF3FB&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FooterStyle&nbsp;BackColor=<span class="cs__string">&quot;#507CD1&quot;</span>&nbsp;Font-Bold=<span class="cs__string">&quot;True&quot;</span>&nbsp;ForeColor=<span class="cs__string">&quot;White&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;PagerStyle&nbsp;BackColor=<span class="cs__string">&quot;#2461BF&quot;</span>&nbsp;ForeColor=<span class="cs__string">&quot;White&quot;</span>&nbsp;HorizontalAlign=<span class="cs__string">&quot;Center&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SelectedRowStyle&nbsp;BackColor=<span class="cs__string">&quot;#D1DDF1&quot;</span>&nbsp;Font-Bold=<span class="cs__string">&quot;True&quot;</span>&nbsp;ForeColor=<span class="cs__string">&quot;#333333&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;HeaderStyle&nbsp;BackColor=<span class="cs__string">&quot;#507CD1&quot;</span>&nbsp;Font-Bold=<span class="cs__string">&quot;True&quot;</span>&nbsp;ForeColor=<span class="cs__string">&quot;White&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;EditRowStyle&nbsp;BackColor=<span class="cs__string">&quot;#2461BF&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AlternatingRowStyle&nbsp;BackColor=<span class="cs__string">&quot;White&quot;</span>&nbsp;/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/asp:GridView&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;&nbsp;
+&lt;/table&gt;&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>After download remember delete de .sln and open like a webpage, after apply build to do a functional solution of social network example</em>
+</li><li><em>please, after download the source delete the solution and the folder of the same name of the solution, after open your visual studio and rebuild one solution to social network works fine.</em>
+</li></ul>
+<h1>More Information</h1>
+<p><em>for more information, ask me...</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

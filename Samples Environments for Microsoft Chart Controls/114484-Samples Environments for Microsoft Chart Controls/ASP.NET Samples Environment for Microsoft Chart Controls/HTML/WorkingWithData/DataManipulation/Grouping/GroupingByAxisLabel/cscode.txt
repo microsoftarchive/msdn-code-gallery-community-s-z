@@ -1,0 +1,24 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void PopulateData()
+{
+    // Populate series data
+    double[]	yValues = {645.62, 745.54, 360.45, 534.73, 285.42, 832.12, 455.18, 667.15, 256.24, 523.65, 356.56, 475.85, 156.78, 450.67};
+    string[]	xValues = {"John", "Peter", "Dave", "Alex", "Scott", "Peter", "Alex", "Dave", "John", "Peter", "Dave", "Scott", "Alex", "Peter"};
+    Chart1.Series["Sales"].Points.DataBindXY(xValues, yValues);
+
+    // Group series data points by Axis Label (sales person name)
+    Chart1.DataManipulator.GroupByAxisLabel("SUM", "Sales", "Total by Person");
+}
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    PopulateData();
+}
+
+private void GroupingFormulaList_SelectedIndexChanged(object sender, System.EventArgs e)
+{
+    PopulateData();
+}
+...

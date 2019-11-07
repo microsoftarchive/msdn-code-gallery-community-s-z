@@ -1,0 +1,126 @@
+﻿<Window
+    x:Class="WPFTimelineToggleBands.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="TimelineToolbarStyle.xaml" />
+                <ResourceDictionary
+                    Source="Themes\TimelineEventTemplateStyle.xaml" />
+                <ResourceDictionary
+                    Source="Themes\ColumnTemplateStyle.xaml" />
+                <ResourceDictionary
+                    Source="Themes\SecondaryColumnStyle.xaml" />
+                <ResourceDictionary
+                    Source="Themes\TimelineTemplateMainBand.xaml" />
+                <ResourceDictionary
+                    Source="Themes\ShortEventTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid
+        x:Name="LayoutRoot"
+        Background="White">
+        <!--<StackPanel Orientation="Vertical">-->
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid
+            x:Name="_grdTimeLine"
+            Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel
+                Orientation="Horizontal"
+                Grid.Row="1">
+                <ToggleButton
+                    x:Name="decades"
+                    Content="Decades"
+                    Click="ResetTimeBands"
+                    IsChecked="True" />
+                <ToggleButton
+                    x:Name="years"
+                    Content="Years"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="months"
+                    Content="Months"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="days"
+                    Content="Days"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="hours"
+                    Content="Hours"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="minutes10"
+                    Content="Minutes10"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="minutes"
+                    Content="Minutes"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="seconds"
+                    Content="Seconds"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="milliseconds100"
+                    Content="Milliseconds 100"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="milliseconds10"
+                    Content="Milliseconds 10"
+                    Click="ResetTimeBands" />
+                <ToggleButton
+                    x:Name="milliseconds"
+                    Content="Milliseconds"
+                    Click="ResetTimeBands" />
+            </StackPanel>
+
+        </Grid>
+        <Grid
+            Grid.Row="0">
+            <StackPanel
+                Orientation="Horizontal">
+                <Label
+                    Content="Start-Zeit" />
+                <TextBox
+                    x:Name="MinTime"
+                    Text="01/01/1766"
+                    TextChanged="DateRangeChanged" />
+                <Label
+                    Content="End-Zeit" />
+                <TextBox
+                    x:Name="MaxTime"
+                    Text="01/01/1966"
+                    TextChanged="DateRangeChanged" />
+                <Label
+                    Content="Aktuelle Zeit" />
+                <TextBox
+                    x:Name="CurrentDate"
+                    Text="01/01/1831"
+                    TextChanged="CurrentDateChanged" />
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

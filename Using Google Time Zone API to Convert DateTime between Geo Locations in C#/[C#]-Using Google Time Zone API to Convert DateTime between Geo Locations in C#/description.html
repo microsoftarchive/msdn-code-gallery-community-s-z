@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=535362C486571614CCA1B8A3C2E9DA1A" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=767FA1F2FD72542D532E6E1E2F77B0E8" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Using Google Time Zone API to Convert DateTime between Geo Locations in C#</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Using Google Time Zone API to Convert DateTime between Geo Locations in C#</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Google API
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Google Time Zone API
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/8/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Using-Google-Time-Zone-API-1ffa8ade">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div align="justify">It is extremely important that any application where the users are from different geographic locations handle date and time in a meaningful way. For an example, let&rsquo;s say the application has users ranging from United States to Australia
+ and right now, a user from Sydney, Australia creates a record in the database. So through out the application if we have only considered Sydney time, the created time for that particular record will be in Sydney time. If a user from Seattle, United States
+ sees that record created time, it definitely is confusing because that time has not yet arrived to Seattle.
+<br>
+<br>
+</div>
+<div align="justify">So in a world wide application, it is important to consider users&rsquo; time zones when maintaining date and times. There are variety of SDK for this such as
+<a href="http://nodatime.org/" >Noda Time</a>. But in this post, let&rsquo;s see how we can consider not the time zones, but the geographic locations when converting the date time. For that we can use
+<strong>Google Time Zone API</strong> to convert date and time between geographic locations considering locations&rsquo; geographic coordinates.<br>
+<br>
+</div>
+<div align="justify">Please note that to use Google Time Zone API, you will need to have a API key which can be acquired for free. Free API will have some request limitations, but it is more than enough to evaluate the functionality. In here, I am not going
+ to explain how you can obtain the API key, please read <a href="https://code.msdn.microsoft.com/Using-Google-Time-Zone-API-1ffa8ade/https://developers.google.com/maps/documentation/timezone/#api_key" >
+this</a> post to know how you can do it.<br>
+<br>
+</div>
+<div align="justify">After getting the API key, next is to use it. Google Time Zone API expects following parameters.</div>
+<ul>
+<li>
+<div align="justify">Timestamp</div>
+<ul>
+<li>
+<div align="justify">Timestamp specifies the given time as seconds since midnight, January 1, 1970 UTC. The Time Zone API uses the timestamp to determine whether or not Daylight Savings should be applied.</div>
+</li></ul>
+</li><li>
+<div align="justify">Location's geographic coordinates</div>
+</li><li>
+<div align="justify">API Key</div>
+</li><li>
+<div align="justify">Language (optional)</div>
+</li></ul>
+<div align="justify"><br>
+If the request to Google TimeZone API gets succeeded, it will return a result containing details such as the offset for daylight-savings time in seconds (<strong>dstOffset</strong>), the offset from UTC in seconds for the given location(<strong>rawOffset</strong>),&nbsp;
+ time zone name etc. The converted time of a given location is the sum of the <strong>
+timestamp</strong> parameter,&nbsp; <strong>dstOffset</strong> and <strong>rawOffset</strong>. Since it is again a Timestamp, we need to convert it back to DateTime value.<br>
+<br>
+</div>
+<div align="justify">I am creating a console application and I am creating a class named &ldquo;GoogleTimeZone&rdquo;. There I have couple of local variables.</div>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">public</span> <span style="color:blue">class</span> GoogleTimeZone</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">private</span> <span style="color:blue">string</span> apiKey;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">private</span> GeoLocation location;</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">private</span> <span style="color:blue">string</span> previousAddress = <span style="color:blue">string</span>.Empty;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">&nbsp;</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">public</span> GoogleTimeZone(<span style="color:blue">string</span> apiKey)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    {</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        <span style="color:blue">this</span>.apiKey = apiKey;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    }</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+</div>
+</div>
+<p>Now let's create following helper methods.<br>
+<br>
+First method is a method to return the Timestamp of a given DateTime.</p>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">private</span> <span style="color:blue">long</span> GetUnixTimeStampFromDateTime(DateTime dt)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    DateTime epochDate = <span style="color:blue">new</span> DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    TimeSpan ts = dt - epochDate;</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">return</span> (<span style="color:blue">int</span>)ts.TotalSeconds;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+</div>
+</div>
+<p>Then the following method will do the opposite which is converting of Timestamp to DateTime.</p>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">private</span> DateTime GetDateTimeFromUnixTimeStamp(<span style="color:blue">double</span> unixTimeStamp)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    DateTime dt = <span style="color:blue">new</span> DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    dt = dt.AddSeconds(unixTimeStamp);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">return</span> dt;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+</div>
+</div>
+<div align="justify"></div>
+<p>Now the following method will return the coordinates for a given location. We can get the geographic coordinates by calling the Google Geocoding API.</p>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">private</span> GeoLocation GetCoordinatesByLocationName(<span style="color:blue">string</span> address)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">string</span> requestUri = <span style="color:blue">string</span>.Format(<span style="color:#006080">&quot;https://maps.googleapis.com/maps/api/geocode/xml?address={0}&amp;key={1}&quot;</span>, Uri.EscapeDataString(address), <span style="color:blue">this</span>.apiKey);<span style="background-color:#f4f4f4; font-size:8pt; line-height:12pt">&nbsp;</span></pre>
+&lt;!--CRLF--&gt;<br>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XDocument xdoc = GetXmlResponse(requestUri);<span style="background-color:#f4f4f4; font-size:8pt; line-height:12pt">&nbsp;</span></pre>
+&lt;!--CRLF--&gt;<br>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement status = xdoc.Element(<span style="color:#006080">&quot;GeocodeResponse&quot;</span>).Element(<span style="color:#006080">&quot;status&quot;</span>);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement result = xdoc.Element(<span style="color:#006080">&quot;GeocodeResponse&quot;</span>).Element(<span style="color:#006080">&quot;result&quot;</span>);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement locationElement = result.Element(<span style="color:#006080">&quot;geometry&quot;</span>).Element(<span style="color:#006080">&quot;location&quot;</span>);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement lat = locationElement.Element(<span style="color:#006080">&quot;lat&quot;</span>);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement lng = locationElement.Element(<span style="color:#006080">&quot;lng&quot;</span>);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">&nbsp;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">return</span> <span style="color:blue">new</span> GeoLocation()</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    {</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        Latitude = Convert.ToDouble(lat.Value),</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        Longitude = Convert.ToDouble(lng.Value)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    };</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+</div>
+</div>
+<div align="justify">I have the following helper class to hold coordinates.</div>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">class</span> GeoLocation</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">public</span> <span style="color:blue">double</span> Latitude { get; set; }</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">public</span> <span style="color:blue">double</span> Longitude { get; set; }</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+</div>
+</div>
+<div align="justify">We now have the location and the time stamp. Following method will call the Google Time Zone API and get the converted time zone result.</div>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">private</span> GoogleTimeZoneResult GetConvertedDateTimeBasedOnAddress(GeoLocation location, <span style="color:blue">long</span> timestamp)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">string</span> requestUri = <span style="color:blue">string</span>.Format(<span style="color:#006080">&quot;https://maps.googleapis.com/maps/api/timezone/xml?location={0},{1}&amp;timestamp={2}&amp;key={3}&quot;</span>, location.Latitude, location.Longitude, timestamp, <span style="color:blue">this</span>.apiKey);<span style="background-color:#f4f4f4; font-size:8pt; line-height:12pt">&nbsp;</span></pre>
+&lt;!--CRLF--&gt;<br>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XDocument xdoc = GetXmlResponse(requestUri);<span style="background-color:#f4f4f4; font-size:8pt; line-height:12pt">&nbsp;</span></pre>
+&lt;!--CRLF--&gt;<br>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement result = xdoc.Element(<span style="color:#006080">&quot;TimeZoneResponse&quot;</span>);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement rawOffset = result.Element(<span style="color:#006080">&quot;raw_offset&quot;</span>);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement dstOfset = result.Element(<span style="color:#006080">&quot;dst_offset&quot;</span>);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement timeZoneId = result.Element(<span style="color:#006080">&quot;time_zone_id&quot;</span>);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    XElement timeZoneName = result.Element(<span style="color:#006080">&quot;time_zone_name&quot;</span>);<span style="background-color:#f4f4f4; font-size:8pt; line-height:12pt">&nbsp;</span></pre>
+&lt;!--CRLF--&gt;<br>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">return</span> <span style="color:blue">new</span> GoogleTimeZoneResult()</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    {</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        DateTime = GetDateTimeFromUnixTimeStamp(Convert.ToDouble(timestamp) &#43; Convert.ToDouble(rawOffset.Value) &#43; Convert.ToDouble(dstOfset.Value)),</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        TimeZoneId = timeZoneId.Value,</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        TimeZoneName = timeZoneName.Value</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    };</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+&lt;!--CRLF--&gt;</div>
+</div>
+<p>I am grouping up the result to a class named&nbsp;GoogleTimeZoneResult as follows.</p>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">public</span> <span style="color:blue">class</span> GoogleTimeZoneResult</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">public</span> DateTime DateTime { get; set; }</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">public</span> <span style="color:blue">string</span> TimeZoneId { get; set; }</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">public</span> <span style="color:blue">string</span> TimeZoneName { get; set; }</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+</div>
+</div>
+<div align="justify">Finally I have the following public method which will trigger all the above methods.</div>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">public</span> GoogleTimeZoneResult GetConvertedDateTimeBasedOnAddress(<span style="color:blue">string</span> address, DateTime dateTime)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">long</span> timestamp = GetUnixTimeStampFromDateTime(TimeZoneInfo.ConvertTimeToUtc(dateTime));</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">&nbsp;</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">if</span> (previousAddress != address)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    {</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        <span style="color:blue">this</span>.location = GetCoordinatesByLocationName(address);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">&nbsp;</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        previousAddress = address;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">&nbsp;</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        <span style="color:blue">if</span> (<span style="color:blue">this</span>.location == <span style="color:blue">null</span>)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        {</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">            <span style="color:blue">return</span> <span style="color:blue">null</span>;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">        }</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    }<span style="background-color:#f4f4f4; font-size:8pt; line-height:12pt">&nbsp;</span></pre>
+&lt;!--CRLF--&gt;<br>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">return</span> GetConvertedDateTimeBasedOnAddress(<span style="color:blue">this</span>.location, timestamp);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+</div>
+</div>
+<div style="text-align:justify">That&rsquo;s it. now let&rsquo;s test the functionality using some test DateTime and calling the above public method from the Main.</div>
+<div id="codeSnippetWrapper" style="background-color:#f4f4f4; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:20px 0px 10px; max-height:1000px; overflow:auto; text-align:left; width:97.5%; border:silver 1px solid; padding:4px">
+<div id="codeSnippet" style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px"><span style="color:blue">static</span> <span style="color:blue">void</span> Main(<span style="color:blue">string</span>[] args)</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">{</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    GoogleTimeZone googleTimeZone = <span style="color:blue">new</span> GoogleTimeZone(<span style="color:#006080">&quot;your api key&quot;</span>);<span style="background-color:#f4f4f4; font-size:8pt; line-height:12pt">&nbsp;</span></pre>
+&lt;!--CRLF--&gt;<br>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">string</span> timeString = <span style="color:#006080">&quot;2015-01-01T08:00:00.000&#43;05:30&quot;</span>;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    DateTime dt = DateTime.Parse(timeString);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">&nbsp;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:green">//string location = &quot;Colombo, Sri Lanka&quot;;</span></pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:green">//string location = &quot;Sydney, Australia&quot;;</span></pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    <span style="color:blue">string</span> location = <span style="color:#006080">&quot;Seattle, United States&quot;</span>;</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">&nbsp;</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    GoogleTimeZoneResult googleTimeZoneResult = googleTimeZone.GetConvertedDateTimeBasedOnAddress(location, dt);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    Console.WriteLine(<span style="color:#006080">&quot;DateTime on the server : &quot;</span> &#43; dt);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    Console.WriteLine(<span style="color:#006080">&quot;Server time in particular to : &quot;</span> &#43; location);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    Console.WriteLine(<span style="color:#006080">&quot;TimeZone Id : &quot;</span> &#43; googleTimeZoneResult.TimeZoneId);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    Console.WriteLine(<span style="color:#006080">&quot;TimeZone Name : &quot;</span> &#43; googleTimeZoneResult.TimeZoneName);</pre>
+<pre style="background-color:white; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">    Console.WriteLine(<span style="color:#006080">&quot;Converted DateTime : &quot;</span> &#43; googleTimeZoneResult.DateTime);</pre>
+<pre style="background-color:#f4f4f4; color:black; direction:ltr; font-family:'Courier New',courier,monospace; font-size:8pt; line-height:12pt; margin:0em; overflow:visible; text-align:left; width:100%; border-style:none; padding:0px">}</pre>
+&lt;!--CRLF--&gt;</div>
+</div>
+<p><br>
+<strong><span style="text-decoration:underline">Colombo, Sri Lanka</span></strong><br>
+<br>
+</p>
+<table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="margin-left:auto; margin-right:auto; text-align:center">
+<tbody>
+<tr>
+<td style="text-align:center"><a href="http://lh3.ggpht.com/-z96K_KxADAk/VLjjSB_mZ6I/AAAAAAAAC5g/3LcRmmreh5k/s1600-h/image10.png" style="margin-left:auto; margin-right:auto"><img title="image" src="description/image_thumb4.png" border="0" alt="image" width="502" height="104" style="border-width:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
+</tr>
+<tr>
+<td class="tr-caption" style="text-align:center">Colombo, Sri Lanka</td>
+</tr>
+</tbody>
+</table>
+<p><strong><span style="text-decoration:underline">Sydney, Australia</span></strong><br>
+<br>
+</p>
+<table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="margin-left:auto; margin-right:auto; text-align:center">
+<tbody>
+<tr>
+<td style="text-align:center"><a href="http://lh3.ggpht.com/-G4imld2BSlk/VLjjUd4tfSI/AAAAAAAAC5w/PMJT-0BIFUU/s1600-h/image12.png" style="margin-left:auto; margin-right:auto"><img title="image" src="description/image_thumb6.png" border="0" alt="image" width="505" height="104" style="border-width:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
+</tr>
+<tr>
+<td class="tr-caption" style="text-align:center">Sydney, Australia</td>
+</tr>
+</tbody>
+</table>
+<p><strong><span style="text-decoration:underline">Seattle, United States</span></strong><br>
+<br>
+</p>
+<table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="margin-left:auto; margin-right:auto; text-align:center">
+<tbody>
+<tr>
+<td style="text-align:center"><a href="http://lh4.ggpht.com/-caqXqvBmNvc/VLjjWM1ffnI/AAAAAAAAC6A/TjTnvkJHoD0/s1600-h/image%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="image" src="description/image_thumb%255B2%255D.png" border="0" alt="image" width="535" height="103" style="border:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
+</tr>
+<tr>
+<td class="tr-caption" style="text-align:center">Seattle, United States</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<div></div>
+<div>Happy Coding.</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

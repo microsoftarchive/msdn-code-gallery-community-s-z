@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_NUnit_Tests_Rhino_Mocks", "WCF_NUnit_Tests_Rhino_Mocks\WCF_NUnit_Tests_Rhino_Mocks.csproj", "{FCFB73EB-5305-4786-975A-3543FEC24E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.Service", "UnitTest.Service\UnitTest.Service.csproj", "{ED837018-94E1-40E8-A26E-5AB3D44FEC00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCFB73EB-5305-4786-975A-3543FEC24E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFB73EB-5305-4786-975A-3543FEC24E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFB73EB-5305-4786-975A-3543FEC24E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFB73EB-5305-4786-975A-3543FEC24E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED837018-94E1-40E8-A26E-5AB3D44FEC00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED837018-94E1-40E8-A26E-5AB3D44FEC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED837018-94E1-40E8-A26E-5AB3D44FEC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED837018-94E1-40E8-A26E-5AB3D44FEC00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

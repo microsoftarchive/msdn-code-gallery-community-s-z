@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Align series data by grouping points and then insert empty points daily
+    
+    ' Group series data by day
+    Chart1.DataManipulator.Group("AVE", 1, IntervalType.Days, "Series1, Series2", _
+        "Series3, Series4")
+
+    ' And then inserting Empty Points daily if point do not exsit
+    Chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Days, "Series3, Series4")
+
+End Sub 'Page_Load
+...

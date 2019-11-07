@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1bccdf64-7dca-4b23-829c-fbf611f38322"
+  name="Sample.TraditionalLayerArchitecture" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5cf2369c-a7b5-455f-b1d0-c06fa5481a22"
+        name="BaseControl"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dac5f997-2b52-419f-a11b-c63b76cab14f"
+        name="CompanyTouch"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="d0f9a13a-9ad2-48ac-a8a0-b1684b64c8e8"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5cf2369c-a7b5-455f-b1d0-c06fa5481a22"
+              LastKnownName="BaseControl"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="15636823-1330-421a-9857-b496bedf1766"
+        name="CompanyEditor"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="a1551666-5420-4aed-86b2-242018189273"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5cf2369c-a7b5-455f-b1d0-c06fa5481a22"
+              LastKnownName="BaseControl"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a26acc2b-323f-490c-8c77-4c45c0a6c556"
+        name="CompanyButton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="a0db05b6-2270-4cc3-b106-5301552fc972"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5cf2369c-a7b5-455f-b1d0-c06fa5481a22"
+              LastKnownName="BaseControl"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3b9e9354-f557-4ddd-b688-56863a7e64a6"
+        name="IBusinessEntity"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b0a3f97b-6358-4460-8f40-0307e23a4190"
+        name="Another"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="702ad058-8ee9-44e0-9892-33468837103b">
+            <interfaceMoniker
+              Id="3b9e9354-f557-4ddd-b688-56863a7e64a6"
+              LastKnownName="IBusinessEntity"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cc62219d-0737-46f0-bf66-11abcfa1dbb5"
+        name="Anyone"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="fbfd3cfd-d617-4b1c-960f-81b2afff7245">
+            <interfaceMoniker
+              Id="3b9e9354-f557-4ddd-b688-56863a7e64a6"
+              LastKnownName="IBusinessEntity"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="13ab55ef-ce60-4c8f-81ef-d652dd755fcb"
+        name="Sample"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0df0d6ac-86f9-4786-8520-ba67b834558b">
+            <interfaceMoniker
+              Id="3b9e9354-f557-4ddd-b688-56863a7e64a6"
+              LastKnownName="IBusinessEntity"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="54fed89a-06a3-4d0e-9068-1575933c58dc"
+        name="IOperation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f46f47c0-7aa9-497a-956a-8a67d15d2b47"
+        name="IOperation"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="4994f644-257c-469c-8bf2-f279e4cf35f9"
+            name="ReadAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1f0a689b-d7b2-42a8-b2ad-7ad1d04e0b70"
+            name="ReadById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c2531115-04f8-4f6c-b599-d93f471173bd"
+            name="Insert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="05b0fb68-a375-4dc4-9b22-207670e43f0f"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="bca6ade3-5e1a-4e31-901a-293736332c95"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a6aabb4c-ec69-4823-83ee-8a96566264e2"
+        name="AnotherOperation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="6963b022-6d51-487b-a8da-7119702aeb34">
+            <interfaceMoniker
+              Id="f46f47c0-7aa9-497a-956a-8a67d15d2b47"
+              LastKnownName="IOperation"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f7a46aa8-650a-4405-b903-f89e485a3cbf"
+            name="ReadAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="db020417-c3b0-49f4-9916-3b57e0931cdc"
+            name="ReadById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="75bd88fb-b463-46c1-884d-4f76e3511bad"
+            name="Insert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="59a5e986-a702-42a4-a6e8-2b9250cb80e6"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c024d361-d62f-4922-971a-9c9410424827"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e27c736d-b92d-4a8f-8fc8-a20fb2fe0d7a"
+        name="OtherOperation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="284a06cd-8329-43b3-8d48-32c72020d0aa">
+            <interfaceMoniker
+              Id="f46f47c0-7aa9-497a-956a-8a67d15d2b47"
+              LastKnownName="IOperation"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c74d5300-acd1-4754-a59c-d1c3ee9ff68e"
+            name="ReadAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="be60abd6-2a97-41d9-b5b8-52a1ef78a563"
+            name="ReadById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b6132811-51d6-4836-aa12-40a13f69ac7b"
+            name="Insert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5089130c-d669-42f2-b0d5-f6201f4899cd"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5c17424f-a3cf-4dc1-97ba-c225e90649a6"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9b4ba24a-8954-40f4-a7d2-b46f67654812"
+        name="SampleOperation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="deb3ffdc-1b4b-4040-9c5a-669321ac1da7">
+            <interfaceMoniker
+              Id="f46f47c0-7aa9-497a-956a-8a67d15d2b47"
+              LastKnownName="IOperation"
+              LastKnownLocation="Sample.TraditionalLayerArchitecture.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="fbd4be1e-b39a-4e8c-80d3-c05da9c6baaf"
+            name="ReadAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2f837694-86d4-4c9c-a46a-7c564c896c51"
+            name="ReadById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="cfe3683c-8ead-4562-a17e-5c333443ef4a"
+            name="Insert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="30c91508-743d-43de-a565-4dcb4e0f334c"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="28b32cb7-f7fa-4d25-9d9d-0a46446d719a"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"
+	  manifest="/cache.manifest">
+  <head>
+    <meta charset="utf-8" />
+    <title>storage prototype</title>
+
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <script type="text/javascript" src="data.js"></script>
+  </head>
+  <body>
+		<section>
+			<h1>Browser support</h1>
+			<hr />
+			
+			<div>
+				<span id="localstorage"></span>
+			</div>
+		</section>
+
+		<section>
+			<h1>Save data to local storage</h1>
+			<hr />
+
+			<form>
+				<div>
+					<label for="key">Key: </label>
+					<input type="text" id="key" name="key" placeholder="Key" />
+				</div>
+				<div>
+					<label for="value">Value: </label>
+					<input type="text" id="value" name="value" placeholder="Value" />
+				</div>
+
+				<button type="submit" onclick="sendData()">Send data</button>
+			</form>
+		</section>
+
+		<section>
+			<h1>Get data from local storage</h1>
+			<hr />
+
+			<div>
+				<label for="reqkey">Requested key: </label>
+				<input type="text" id="reqkey" name="reqkey" placeholder="Requested key" />
+			</div>
+
+			<button type="submit" onclick="getData()">Get data</button>
+
+			<div>
+				<label>Requested value: </label>
+				<span id="requestedValue"></span>
+			</div>
+		</section>
+
+		<section>
+			<h1>Save a custom object to local storage</h1>
+			<hr />
+
+			<form>
+				<div>
+					<label for="street">Street: </label>
+					<input type="text" id="street" name="street" placeholder="Street" />
+				</div>
+				<div>
+					<label for="number">Number: </label>
+					<input type="text" id="number" name="number" placeholder="Number" />
+				</div>
+				<div>
+					<label for="city">City: </label>
+					<input type="text" id="city" name="city" placeholder="City" />
+				</div>
+
+				<button type="submit" onclick="saveCustomObject()">Save custom object</button>
+			</form>
+		</section>
+
+		<section>
+			<h1>Get custom object from local storage</h1>
+			<hr />
+
+			<button onclick="getCustomObject()">Get custom object</button>
+
+			<div>
+				<label>Street: </label>
+				<span id="requestedStreet"></span>
+			</div>
+			<div>
+				<label>Number: </label>
+				<span id="requestedNumber"></span>
+			</div>
+			<div>
+				<label>City: </label>
+				<span id="requestedCity"></span>
+			</div>
+		</section>
+  </body>
+</html>

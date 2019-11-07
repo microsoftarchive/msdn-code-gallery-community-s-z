@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+  <SampleConfig ParentNodeID = "Filtering" Priority="400">
+    <Title>Custom Filtering Criteria</Title>
+    <Thumbnail>FilterWithCustomCriteria\thumbnail.jpg</Thumbnail>
+    <ShortBlurb>Custom Filtering Criteria</ShortBlurb>
+    <SampleControl>FilterWithCustomCriteria</SampleControl>
+    <InfoPages>
+      <InfoPage Title="Overview">Overview.htm</InfoPage>
+      <InfoPage Title="C# Source">cscode.txt</InfoPage>
+      <InfoPage Title="VB.NET Source">vbcode.txt</InfoPage>
+    </InfoPages>
+    <Keywords>
+      <Keyword>Data manipulation, Custom filtering</Keyword>
+      <Keyword>Filtering, Custom</Keyword>
+    </Keywords>
+  </SampleConfig>
+	
+</SampleConfigs>

@@ -1,0 +1,45 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    
+    ' Add series to the chart
+    Dim series As Series = Chart1.Series.Add("My series")
+    	
+    ' Set series and legend tooltips
+    series.ToolTip = "#VALX: #VAL{C} million"
+    series.LegendToolTip = "#PERCENT"
+	series.PostBackValue = "#INDEX";
+	series.LegendPostBackValue = "#INDEX";
+    	
+    ' Populate series data
+    Dim yValues As Double() =  {65.62, 75.54, 60.45, 34.73, 85.42, 32.12, 55.18, 67.15, 56.24, 23.65}
+    Dim xValues As String() =  {"France", "Canada", "Germany", "USA", "Italy", "Russia", "China", "Japan", "Sweden", "Spain"}
+    series.Points.DataBindXY(xValues, yValues)
+    	
+    ' Explode selected slice
+    If Not (Me.Page.Request("pointIndex") Is Nothing) Then
+        Dim pointIndex As Integer = Integer.Parse(Me.Page.Request("pointIndex"))
+        If pointIndex >= 0 And pointIndex < series.Points.Count Then
+            series.Points(pointIndex).CustomAttributes += "Exploded=true"
+        End If
+    End If
+    	
+    ' Set series visual attributes
+    series.ChartType = SeriesChartType.Pie
+    series.ShadowOffset = 2
+    series.BorderColor = Color.DarkGray
+    series.CustomAttributes = "LabelStyle=Outside"
+    
+End Sub 'Page_Load
+
+Private Sub Chart1_Click(ByVal sender As System.Object, ByVal e As ImageMapEventArgs) Handles Chart1.Click
+
+    Dim Int32 pointIndex = Int32.Parse(e.PostBackValue);
+    Dim series As Series = Chart1.Series["My series"];
+    If (pointIndex >= 0 && pointIndex < series.Points.Count)
+        series.Points[pointIndex].CustomProperties += "Exploded=true";
+    End If
+
+End Sub 'Chart1_Click
+...

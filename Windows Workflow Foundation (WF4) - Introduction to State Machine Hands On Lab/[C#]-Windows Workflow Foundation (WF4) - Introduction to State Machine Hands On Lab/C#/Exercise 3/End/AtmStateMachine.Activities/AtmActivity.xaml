@@ -1,0 +1,270 @@
+﻿<Activity mc:Ignorable="sap" x:Class="AtmStateMachine.Activities.AtmActivity" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:local="clr-namespace:AtmStateMachine.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:s4="clr-namespace:System;assembly=System.ServiceModel" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Settings" Type="InArgument(local:AtmSettings)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>678,676</sap:VirtualizedContainerService.HintSize>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
+  <StateMachine DisplayName="ATM StateMachine" sad:XamlDebuggerXmlReader.FileName="C:\wf.codeplex.com\src\wf\HOL\StateMachine\Exercise 3\End\AtmStateMachine.Activities\AtmActivity.xaml" sap:VirtualizedContainerService.HintSize="638,636">
+    <StateMachine.InitialState>
+      <State x:Name="__ReferenceID3" DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="114,61">
+        <State.Entry>
+          <Sequence sap:VirtualizedContainerService.HintSize="300,208">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <local:Prompt DisplayName="Prompt Please Wait" sap:VirtualizedContainerService.HintSize="200,22" Line="2" Text="[Prompts.PleaseWait]" Transition="None" />
+            <local:InitializeAtm DisplayName="Initialize ATM" sap:VirtualizedContainerService.HintSize="200,22" />
+          </Sequence>
+        </State.Entry>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">43,79.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <State.Exit>
+          <local:ClearView sap:VirtualizedContainerService.HintSize="300,150" />
+        </State.Exit>
+        <State.Transitions>
+          <Transition DisplayName="Auto" sap:VirtualizedContainerService.HintSize="430,485">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:PointCollection x:Key="ConnectorLocation">100,140.5 100,199.5</av:PointCollection>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Transition.To>
+              <State x:Name="__ReferenceID0" DisplayName="Insert Card" sap:VirtualizedContainerService.HintSize="114,61">
+                <State.Entry>
+                  <local:Prompt DisplayName="Prompt Insert Card" sap:VirtualizedContainerService.HintSize="300,150" Line="2" Text="[Prompts.InsertCard]" Transition="None" />
+                </State.Entry>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">43,199.5</av:Point>
+                    <av:Size x:Key="ShapeSize">114,61</av:Size>
+                  </scg3:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <State.Transitions>
+                  <Transition DisplayName="Power Off" sap:VirtualizedContainerService.HintSize="430,491">
+                    <Transition.Trigger>
+                      <local:WaitForTransition AtmTransition="PowerOff" DisplayName="Wait for Power Off" sap:VirtualizedContainerService.HintSize="388,100" />
+                    </Transition.Trigger>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:PointCollection x:Key="ConnectorLocation">100,260.5 100,359.5</av:PointCollection>
+                      </scg3:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID4" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="114,61" IsFinal="True">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">43,359.5</av:Point>
+                            <av:Size x:Key="ShapeSize">114,61</av:Size>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </State>
+                    </Transition.To>
+                  </Transition>
+                  <Transition DisplayName="Card Valid" sap:VirtualizedContainerService.HintSize="430,485">
+                    <Transition.Trigger>
+                      <local:WaitForCardReader x:Name="__ReferenceID2" CardReaderEvent="CardInserted" sap:VirtualizedContainerService.HintSize="388,100" Result="[CardResult]" />
+                    </Transition.Trigger>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:PointCollection x:Key="ConnectorLocation">157,230 187,230 187,340 373,340</av:PointCollection>
+                      </scg3:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID5" DisplayName="Enter PIN" sap:VirtualizedContainerService.HintSize="114,61">
+                        <State.Entry>
+                          <local:Prompt DisplayName="Prompt Enter PIN" sap:VirtualizedContainerService.HintSize="300,150" Line="2" Text="[Prompts.EnterYourPin]" Transition="None" />
+                        </State.Entry>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">373,309.5</av:Point>
+                            <av:Size x:Key="ShapeSize">114,61</av:Size>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <State.Exit>
+                          <local:ClearView sap:VirtualizedContainerService.HintSize="300,150" />
+                        </State.Exit>
+                        <State.Transitions>
+                          <Transition DisplayName="PIN Entered" sap:VirtualizedContainerService.HintSize="430,491">
+                            <Transition.Trigger>
+                              <local:WaitForTransition AtmTransition="KeypadEnter" DisplayName="Wait for PIN Entered" sap:VirtualizedContainerService.HintSize="388,100" />
+                            </Transition.Trigger>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:PointCollection x:Key="ConnectorLocation">390.1,370.5 390.1,409.5 407.2,409.5 407.2,439.5</av:PointCollection>
+                              </scg3:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Transition.To>
+                              <State x:Name="__ReferenceID6" DisplayName="Main Menu" sap:VirtualizedContainerService.HintSize="114,61">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">373,439.5</av:Point>
+                                    <av:Size x:Key="ShapeSize">114,61</av:Size>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg3:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <State.Transitions>
+                                  <Transition DisplayName="Completed">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:PointCollection x:Key="ConnectorLocation">487,470 517,470 517,183.9 487,183.9</av:PointCollection>
+                                      </scg3:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Transition.To>
+                                      <State x:Name="__ReferenceID1" DisplayName="Remove Card" sap:VirtualizedContainerService.HintSize="114,61">
+                                        <State.Entry>
+                                          <local:Prompt DisplayName="Prompt Remove Card" sap:VirtualizedContainerService.HintSize="300,150" Line="2" Text="[RemovePrompt]" Transition="None" />
+                                        </State.Entry>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <av:Point x:Key="ShapeLocation">373,159.5</av:Point>
+                                            <av:Size x:Key="ShapeSize">114,61</av:Size>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg3:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <State.Exit>
+                                          <local:ClearView sap:VirtualizedContainerService.HintSize="300,150" />
+                                        </State.Exit>
+                                        <State.Transitions>
+                                          <Transition DisplayName="Card Removed" sap:VirtualizedContainerService.HintSize="430,491">
+                                            <Transition.Trigger>
+                                              <local:WaitForTransition AtmTransition="CardRemoved" DisplayName="Wait for Card Removed" sap:VirtualizedContainerService.HintSize="388,100" />
+                                            </Transition.Trigger>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:PointCollection x:Key="ConnectorLocation">435.7,159.5 435.7,139.5 187,139.5 187,169.5 139.9,169.5 139.9,199.5</av:PointCollection>
+                                              </scg3:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Transition.To>
+                                              <x:Reference>__ReferenceID0</x:Reference>
+                                            </Transition.To>
+                                            <Transition.Action>
+                                              <local:ControlCamera DisplayName="Turn Camera Off" sap:VirtualizedContainerService.HintSize="347,150" Record="False" />
+                                            </Transition.Action>
+                                          </Transition>
+                                        </State.Transitions>
+                                      </State>
+                                    </Transition.To>
+                                  </Transition>
+                                </State.Transitions>
+                              </State>
+                            </Transition.To>
+                          </Transition>
+                          <Transition DisplayName="Cancelled" sap:VirtualizedContainerService.HintSize="430,491">
+                            <Transition.Trigger>
+                              <local:WaitForTransition AtmTransition="KeypadCancel" DisplayName="Wait For Keypad Cancel" sap:VirtualizedContainerService.HintSize="388,100" />
+                            </Transition.Trigger>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:PointCollection x:Key="ConnectorLocation">395.8,309.5 395.8,279.5 401.5,279.5 401.5,220.5</av:PointCollection>
+                              </scg3:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Transition.To>
+                              <x:Reference>__ReferenceID1</x:Reference>
+                            </Transition.To>
+                          </Transition>
+                          <Transition DisplayName="Timeout" sap:VirtualizedContainerService.HintSize="430,491">
+                            <Transition.Trigger>
+                              <Delay DisplayName="Wait for Timeout" Duration="[Settings.Timeout]" sap:VirtualizedContainerService.HintSize="388,100" />
+                            </Transition.Trigger>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:PointCollection x:Key="ConnectorLocation">464.2,309.5 464.2,220.5</av:PointCollection>
+                              </scg3:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Transition.To>
+                              <x:Reference>__ReferenceID1</x:Reference>
+                            </Transition.To>
+                          </Transition>
+                        </State.Transitions>
+                      </State>
+                    </Transition.To>
+                    <Transition.Action>
+                      <Sequence sap:VirtualizedContainerService.HintSize="347,244">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <local:ControlCamera DisplayName="Turn Camera On" sap:VirtualizedContainerService.HintSize="242,22" Record="True" />
+                        <Assign sap:VirtualizedContainerService.HintSize="242,58">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[RemovePrompt]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Prompts.RemoveCard]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </Transition.Action>
+                    <Transition.Condition>[CardResult.CardStatus = CardStatus.Valid]</Transition.Condition>
+                  </Transition>
+                  <Transition Trigger="{x:Reference __ReferenceID2}" DisplayName="Card Invalid" sap:VirtualizedContainerService.HintSize="430,880" To="{x:Reference __ReferenceID1}">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:PointCollection x:Key="ConnectorLocation">157,230 187,230 187,199.15 373,199.15</av:PointCollection>
+                      </scg3:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Transition.Action>
+                      <Sequence sap:VirtualizedContainerService.HintSize="347,150">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <local:ControlCamera DisplayName="Turn Camera On" sap:VirtualizedContainerService.HintSize="242,22" Record="True" />
+                        <Assign sap:VirtualizedContainerService.HintSize="242,58">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[RemovePrompt]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Prompts.ErrRemoveCard]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </Transition.Action>
+                    <Transition.Condition>[CardResult.CardStatus = CardStatus.Invalid]</Transition.Condition>
+                  </Transition>
+                </State.Transitions>
+                <State.Variables>
+                  <Variable x:TypeArguments="local:CardReaderResult" Name="CardResult" />
+                </State.Variables>
+              </State>
+            </Transition.To>
+          </Transition>
+        </State.Transitions>
+      </State>
+    </StateMachine.InitialState>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <x:Double x:Key="StateContainerWidth">624</x:Double>
+        <x:Double x:Key="StateContainerHeight">600</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">273,77.5 273,82.55 157,82.55</av:PointCollection>
+      </scg3:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <StateMachine.Variables>
+      <Variable x:TypeArguments="x:String" Name="RemovePrompt" />
+    </StateMachine.Variables>
+  </StateMachine>
+</Activity>

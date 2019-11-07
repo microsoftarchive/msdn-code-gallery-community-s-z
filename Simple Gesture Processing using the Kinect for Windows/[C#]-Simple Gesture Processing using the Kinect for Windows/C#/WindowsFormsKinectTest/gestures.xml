@@ -1,0 +1,8 @@
+﻿<Gestures GestureResetTimeout="500">
+    <Gesture Description="Previous Bullet" MaxExecutionTime="1000" MappedKeyCode="PRIOR">
+        <GestureComponent FirstJoint="WristLeft" SecondJoint="ShoulderLeft" EndingRelationship="BelowAndLeft" BeginningRelationship="AboveAndLeft" />
+    </Gesture>
+    <Gesture Description="Next Bullet" MaxExecutionTime="1000" MappedKeyCode="NEXT">
+        <GestureComponent FirstJoint="WristRight" SecondJoint="ShoulderRight" EndingRelationship="BelowAndRight" BeginningRelationship="AboveAndRight" />
+    </Gesture>
+</Gestures>

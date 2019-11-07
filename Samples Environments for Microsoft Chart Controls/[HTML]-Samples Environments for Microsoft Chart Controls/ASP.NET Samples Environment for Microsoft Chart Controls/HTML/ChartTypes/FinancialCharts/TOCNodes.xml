@@ -1,0 +1,7 @@
+<?xml version="1.0" ?> 
+<TOCNodes>
+
+  <TOCNode ID="StockCharts" ParentNodeID = "ChartTypes" Priority="650">
+    <Title>Advanced Financial Charts</Title>
+  </TOCNode>
+</TOCNodes>

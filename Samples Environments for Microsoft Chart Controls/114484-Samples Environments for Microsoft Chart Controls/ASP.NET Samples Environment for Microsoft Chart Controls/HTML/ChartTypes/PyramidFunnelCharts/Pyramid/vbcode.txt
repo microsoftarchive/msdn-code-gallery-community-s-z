@@ -1,0 +1,34 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' Set pyramid chart type
+	Chart1.Series("Default").ChartType = SeriesChartType.Pyramid
+
+	' Set pyramid Y values style
+	Chart1.Series("Default")("PyramidStyle") = "YIsHeight"
+
+	' Set pyramid data point labels style
+	Chart1.Series("Default")("PyramidLabelStyle") = "Outside"
+
+	' Place labels on the left side
+	Chart1.Series("Default")("PyramidOutsideLabelPlacement") = "Left"
+
+	' Set gap between points
+	Chart1.Series("Default")("PyramidPointGap") = "2"
+
+	' Set minimum point height
+	Chart1.Series("Default")("PyramidMinPointHeight") = "1"
+
+	' Set 3D mode
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
+
+	' Set 3D angle
+	Chart1.Series("Default")("Pyramid3DRotationAngle") = "7"
+
+	' Set 3D drawing style
+	Chart1.Series("Default")("Pyramid3DDrawingStyle") = "CircularBase"
+
+End Sub 'Page_Load
+...

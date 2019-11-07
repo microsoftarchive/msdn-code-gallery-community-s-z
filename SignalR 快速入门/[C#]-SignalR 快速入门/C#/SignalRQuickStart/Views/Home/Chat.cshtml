@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "聊天窗口";
+}
+
+<h2>Chat</h2>
+
+<div class="container">
+    <input type="text" id="message" />
+    <input type="button" id="sendmessage" value="Send" />
+    <input type="hidden" id="displayname" />
+    <ul id="discussion"></ul>
+</div>
+
+@section scripts
+{
+    <!--引用SignalR库. -->
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+     <!--引用自动生成的SignalR 集线器(Hub)脚本.在运行的时候在浏览器的Source下可看到 -->
+    <script src="~/signalr/hubs"></script>
+    
+    <script>
+        $(function () {
+            // 引用自动生成的集线器代理
+            var chat = $.connection.serverHub;
+            // 定义服务器端调用的客户端sendMessage来显示新消息
+           
+            chat.client.sendMessage = function (name, message) {
+                // 向页面添加消息
+                $('#discussion').append('<li><strong>' + htmlEncode(name)
+                    + '</strong>: ' + htmlEncode(message) + '</li>');
+            };
+           
+            // 设置焦点到输入框
+            $('#message').focus();
+            // 开始连接服务器
+            $.connection.hub.start().done(function () {
+                $('#sendmessage').click(function () {
+                    // 调用服务器端集线器的Send方法
+                    chat.server.send($('#message').val());
+                    // 清空输入框信息并获取焦点
+                    $('#message').val('').focus();
+                });
+            });
+        });
+        
+        // 为显示的消息进行Html编码
+        function htmlEncode(value) {
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+    </script>
+    }
+

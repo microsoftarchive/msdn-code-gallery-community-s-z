@@ -1,0 +1,87 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:TimelineLibrary="clr-namespace:TimelineLibrary;assembly=TimelineLibrary">
+    <!-- Resource dictionary entries should be defined here. -->
+    <Style
+        x:Key="TimelineTemplateMainBand"
+        TargetType="TimelineLibrary:TimelineBand">
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="TimelineLibrary:TimelineBand">
+                    <Grid
+                        x:Name="MainGrid"
+                        Height="{TemplateBinding Height}"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Width="{TemplateBinding Width}">
+                        <Canvas
+                            x:Name="CanvasPart"
+                            HorizontalAlignment="Stretch"
+                            MinHeight="20"
+                            MinWidth="20"
+                            VerticalAlignment="Stretch"
+                            Grid.Column="1"
+                            Background="#FFEFF2F3">
+                            <Canvas.Clip>
+                                <RectangleGeometry
+                                    x:Name="ClipRect" />
+                            </Canvas.Clip>
+                            <Border
+                                x:Name="VisibleDatesPart"
+                                BorderThickness="0"/>
+                        </Canvas>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="TimelineTemplateSecondaryBand"
+        TargetType="TimelineLibrary:TimelineBand">
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="TimelineLibrary:TimelineBand">
+                    <Grid
+                        x:Name="MainGrid"
+                        Height="{TemplateBinding Height}"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Width="{TemplateBinding Width}">
+                        <Canvas
+                            x:Name="CanvasPart"
+                            HorizontalAlignment="Stretch"
+                            MinHeight="20"
+                            MinWidth="20"
+                            VerticalAlignment="Stretch"
+                            Grid.Column="1"
+                            Background="#FFEFF2F3">
+                            <Canvas.Clip>
+                                <RectangleGeometry
+                                    x:Name="ClipRect" />
+                            </Canvas.Clip>
+                            <Border
+                                x:Name="VisibleDatesPart"
+                                BorderThickness="0"
+                                Margin="-1 0 -1 0"
+                                Padding="0 1 0 0">
+                                <Rectangle
+                                    Canvas.Left="0"
+                                    Canvas.Top="0"
+                                    Fill="#66F6F1F1"
+                                    StrokeThickness="1"
+                                    Stroke="#FF353A47" />
+                            </Border>
+
+                        </Canvas>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

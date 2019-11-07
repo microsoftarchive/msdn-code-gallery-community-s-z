@@ -1,0 +1,26 @@
+﻿<Page x:Class="Microsoft.Workflow.Explorer.Views.DictionaryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="Dictionary">
+
+    <Grid>
+        <ListBox ItemsSource="{Binding}" Grid.IsSharedSizeScope="True">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition SharedSizeGroup="Key" />
+                            <ColumnDefinition SharedSizeGroup="Value" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox IsReadOnly="True" IsReadOnlyCaretVisible="True" BorderBrush="{x:Null}" FontWeight="Bold" Margin="2" Text="{Binding Key, Mode=OneWay}" Grid.Column="0"/>
+                        <TextBox IsReadOnly="True" IsReadOnlyCaretVisible="True" BorderBrush="{x:Null}" Margin="2" Text="{Binding Value, Mode=OneWay}" Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

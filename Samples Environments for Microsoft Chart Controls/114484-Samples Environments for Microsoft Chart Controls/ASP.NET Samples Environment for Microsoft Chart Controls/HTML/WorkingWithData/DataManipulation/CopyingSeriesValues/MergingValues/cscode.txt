@@ -1,0 +1,15 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Merge data from 4 different series into one series that has 4 Y values
+    Chart1.DataManipulator.CopySeriesValues("High:Y,Low:Y,Open:Y,Close:Y", 
+        "Stock:Y1,Stock:Y2,Stock:Y3,Stock:Y4");
+
+    // Set stock series attributes
+    Chart1.Series["Stock"].ChartType = SeriesChartType.Stock;
+    Chart1.Series["Stock"].BorderWidth = 2;
+    Chart1.Series["Stock"].ShadowOffset = 2;
+}
+...

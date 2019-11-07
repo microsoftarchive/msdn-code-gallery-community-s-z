@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="130a2985-0d72-479d-a62a-0df5ae764c40" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="395e9c2e-af88-41a9-b718-2813cef74bd9" name="Comment1">
+      <body>(1) Request
+   Response</body>
+    </comment>
+    <comment Id="90f17c7f-7a1e-40d1-a65f-052289ed61a9" name="Comment11">
+      <body>(2) Request
+   Response</body>
+    </comment>
+    <comment Id="718b6829-3fb5-454b-8f05-07d0b3ebd01f" name="Comment12">
+      <body>(3) Request
+   Response</body>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="a0d4192b-6cec-4f9e-89bf-647550b385dd" name="Client Side">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="9f213136-675d-4d1c-83fd-26a8ce30c7c2" direction="Bidirectional">
+          <layerMoniker Id="7f5aecae-cca8-462e-b481-87f537c032ea" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="b6336915-d457-4aad-b0ce-7e9fcef0de8b" name="Server Side">
+      <childLayers>
+        <layer Id="7f5aecae-cca8-462e-b481-87f537c032ea" name="Web Server">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="17ce4ca2-efb6-420b-bd72-b80229208c76" direction="Bidirectional">
+              <layerMoniker Id="00b3418b-a1e8-48b6-b17c-1dd0d3d8599b" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="794a742c-f755-4dd3-8ca2-cb7fba596839" name="Database Server" />
+        <layer Id="00b3418b-a1e8-48b6-b17c-1dd0d3d8599b" name="Application Server">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="500e5569-4094-40ab-b41a-fc17e3b4dff7" direction="Bidirectional">
+              <layerMoniker Id="794a742c-f755-4dd3-8ca2-cb7fba596839" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

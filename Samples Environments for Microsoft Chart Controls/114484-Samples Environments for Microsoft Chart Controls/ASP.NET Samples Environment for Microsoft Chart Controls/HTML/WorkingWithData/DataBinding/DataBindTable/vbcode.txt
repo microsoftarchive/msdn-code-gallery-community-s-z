@@ -1,0 +1,37 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Resolve the address to the Access database
+   Dim fileNameString As String = Me.MapPath(".")
+   fileNameString += "..\..\..\data\chartdata.mdb"
+
+   ' Initialize a connection string	
+   Dim myConnectionString As String = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString
+   
+   ' Define the database query	
+   Dim mySelectQuery As String = "SELECT Name, Sales FROM REPS;"
+   
+   ' Create a database connection object using the connection string	
+   Dim myConnection As New OleDbConnection(myConnectionString)
+   
+   ' Create a database command on the connection using query	
+   Dim myCommand As New OleDbCommand(mySelectQuery, myConnection)
+   
+   ' Open the connection	
+   myCommand.Connection.Open()
+   
+   ' Create a database reader	
+   Dim myReader As OleDbDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection)
+   
+   ' Since the reader implements and IEnumerable, pass the reader directly into
+   ' the DataBindTable method with the name of the Column to be used as the XValue
+   Chart1.DataBindTable(myReader, "Name")
+   
+   ' Close the reader and the connection
+   myReader.Close()
+   myConnection.Close()
+   
+End Sub 'Page_Load
+...   

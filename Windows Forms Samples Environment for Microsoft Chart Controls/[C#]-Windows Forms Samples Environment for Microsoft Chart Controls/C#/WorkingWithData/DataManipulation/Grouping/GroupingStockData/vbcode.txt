@@ -1,0 +1,45 @@
+Imports System.Data.OleDb
+Imports System.Windows.Forms.DataVisualization.Charting
+...
+
+Private Sub PopulateData()
+   
+   ' Prepare database connection and query strings
+   Dim fileNameString As String = "c:\data\chartdata.mdb"
+   Dim myConnectionString As String = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString
+   Dim mySelectQuery As String = "SELECT * FROM STOCKDATA WHERE SymbolName = 'ABC' ORDER BY Date"
+   
+   ' Open database connection
+   Dim myConnection As New OleDbConnection(myConnectionString)
+   Dim myCommand As New OleDbCommand(mySelectQuery, myConnection)
+   myCommand.Connection.Open()
+   
+   ' Create a database reader	
+   Dim myReader As OleDbDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection)
+   
+   ' Data bind to the reader
+   Chart1.Series("StockPrice").Points.DataBindXY(myReader, "Date", myReader, "High,Low,Open,Close")
+   
+   ' Group series data points by interval. Different formulas are used for each Y value:
+   '   Y1 (High) - maximum of all Y1 points values in the group
+   '   Y2 (Low) - minimum of all Y2 points values in the group
+   '   Y3 (Open) - Y3 value of the first point in the group
+   '   Y4 (Close) - Y4 value of the last point in the group
+   If GroupingTypeList.Text = "Week" Then
+      Chart1.DataManipulator.Group("Y1:MAX,Y2:MIN,Y3:FIRST,Y4:LAST", 1, IntervalType.Weeks, "StockPrice", "GroupedStockPrice")
+   Else
+      If GroupingTypeList.Text = "Month" Then
+         Chart1.DataManipulator.Group("Y1:MAX,Y2:MIN,Y3:FIRST,Y4:LAST", 1, IntervalType.Months, "StockPrice", "GroupedStockPrice")
+      Else
+         If GroupingTypeList.Text = "Quarter" Then
+            Chart1.DataManipulator.Group("Y1:MAX,Y2:MIN,Y3:FIRST,Y4:LAST", 3, IntervalType.Months, "StockPrice", "GroupedStockPrice")
+         End If
+      End If
+   End If 
+
+   ' Close the reader and the connection
+   myReader.Close()
+   myConnection.Close()
+   
+End Sub 'PopulateData 
+...

@@ -1,0 +1,24 @@
+﻿@model MvcMusicStore.Models.Genre
+@using (Html.BeginForm("Create", "Genre", FormMethod.Post, new { id = "createGenreForm" }))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name)
+        <br /> 
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Name)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Description)
+        <br />
+        @Html.ValidationMessageFor(model => model.Description)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Description)
+    </div>
+}
+

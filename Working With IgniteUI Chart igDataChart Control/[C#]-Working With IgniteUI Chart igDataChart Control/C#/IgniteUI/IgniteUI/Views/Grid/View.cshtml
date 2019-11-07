@@ -1,0 +1,35 @@
+﻿@using Infragistics.Web.Mvc;
+@using IgniteUI.Models;
+@model IQueryable<IgniteUI.Models.Product>
+
+@(Html.Infragistics()
+    .Grid(Model)
+    .ID("igGrid")
+    .Width("100%")
+    .Height("500px")
+    .PrimaryKey("ProductID")
+    .AutoGenerateColumns(false)
+    .AutoGenerateLayouts(false)
+    .Columns(column =>
+    {
+        column.For(x => x.ProductID).HeaderText("Product ID").Width("130px");
+        column.For(x => x.Name).HeaderText("Name").Width("250px");
+        column.For(x => x.ProductNumber).HeaderText("Number").Width("150px");
+        column.For(x => x.SellEndDate).HeaderText("Sell End Date").Width("270px");
+        column.For(x => x.SellStartDate).HeaderText("Sell Start Date").Width("270px");
+        column.For(x => x.Size).HeaderText("Size").Width("130px");
+        column.For(x => x.ListPrice).HeaderText("List Price").Width("150px");
+    })
+    .Features(f =>
+    {
+        f.Filtering()
+            .Mode(FilterMode.Simple);
+        f.Paging()
+            .PageSize(5);
+        f.Sorting()
+            .Mode(SortingMode.Single);
+        f.ColumnFixing().FixingDirection(ColumnFixingDirection.Left);
+        f.ColumnFixing();
+    })
+    .DataBind()
+    .Render())

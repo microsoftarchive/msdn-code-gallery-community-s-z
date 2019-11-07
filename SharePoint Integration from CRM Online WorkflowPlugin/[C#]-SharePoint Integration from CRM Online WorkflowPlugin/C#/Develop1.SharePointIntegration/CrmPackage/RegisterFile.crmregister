@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
+  <Solutions>
+    <Solution Assembly="Develop1.SharePointIntegration.Workflow.dll" Id="7b86aad4-548f-e411-a142-d89d6763ef70" IsolationMode="Sandbox" SourceType="Database">
+      <WorkflowTypes>
+        <WorkflowType FriendlyName="Create SharePoint Folder" Name="Create SharePoint Folder" Description="Create SharePoint Folder" WorkflowActivityGroupName="Develop1" Id="6eda024b-568f-e411-9a45-d89d67631c3c" TypeName="Develop1.Workflow.SharePoint.CreateDocumentLocation" />
+      </WorkflowTypes>
+    </Solution>
+  </Solutions>
+  <XamlWorkflows />
+</Register>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Schedule>
+
+<div class="bg-primary panel-body">
+    <h4>
+        Schedules (Current User: @User?.Identity?.Name)
+    </h4>
+</div>
+
+<table class="table table-condensed table-bordered table-striped">
+    <tr>
+        <th>Department</th>
+        <th>Manager</th>
+        <th>Assistant</th>
+        <th></th>
+    </tr>
+    @if(!Model.Any())
+    {
+        <tr>
+            <td colspan="4" class="text-center">No schedules</td>
+        </tr>
+    }
+    else
+    {
+        foreach (var schedule in Model)
+        {
+            <tr>
+                <td>@schedule.Department</td>
+                <td>@schedule.Manager</td>
+                <td>@schedule.Assistant</td>
+                <td>
+                    <a class="btn btn-success" asp-controller="Schedule" asp-action="Edit" asp-route-department="@schedule.Department" asp-route-schedulelist="@Model">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+
+<a class="btn btn-primary" asp-controller="Home" asp-action="Index">
+    Home
+</a>

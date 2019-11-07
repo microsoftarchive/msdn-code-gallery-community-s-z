@@ -1,0 +1,61 @@
+<?xml version="1.0" ?> 
+<TOCNodes>
+
+  <TOCNode ID="PopulatingChartData" Priority="150">
+    <Title>Working with Data</Title>
+  </TOCNode>  
+  
+  <TOCNode ID="Data binding" ParentNodeID="PopulatingChartData" Priority="100">
+    <Title>Data Binding</Title>
+  </TOCNode>  
+  
+  <TOCNode ID="DataManipulation" ParentNodeID="PopulatingChartData" Priority="300">
+    <Title>Data Manipulation</Title>
+  </TOCNode>  
+ 
+    <TOCNode ID="DataSourceTypes" ParentNodeID="PopulatingChartData" Priority="200">
+    <Title>Data Source Types</Title>
+  </TOCNode>
+  
+    <TOCNode ID="DynamicPointAdd" ParentNodeID="PopulatingChartData" Priority="1000">
+    <Title>Adding Dynamic Points</Title>
+  </TOCNode>  
+  
+  <TOCNode ID="EmptyPoints" ParentNodeID="PopulatingChartData" Priority="400">
+    <Title>Empty Points</Title>
+  </TOCNode>   
+  
+  <TOCNode ID="Overview" ParentNodeID="PopulatingChartData" Priority="1">
+    <Title>Overview</Title>
+  </TOCNode>
+  
+    <TOCNode ID="CopyingSeriesValues" ParentNodeID="DataManipulation" Priority="100">
+    <Title>Copying Series Values</Title>
+  </TOCNode>
+  
+    <TOCNode ID="Exporting" ParentNodeID="DataManipulation" Priority="100">
+    <Title>Exporting</Title>
+  </TOCNode>
+  
+    <TOCNode ID="Filtering" ParentNodeID="DataManipulation" Priority="100">
+    <Title>Filtering</Title>
+  </TOCNode>  
+   
+     <TOCNode ID="Grouping" ParentNodeID="DataManipulation" Priority="100">
+    <Title>Grouping</Title>
+   </TOCNode>
+   
+     <TOCNode ID="SeriesAlignment" ParentNodeID="DataManipulation" Priority="100">
+    <Title>Series Alignment</Title>
+   </TOCNode>  
+  
+  <TOCNode ID="RealTimeData" ParentNodeID="PopulatingChartData" Priority="500">
+    <Title>Real Time Data</Title>
+   </TOCNode>
+   
+     <TOCNode ID="WorkingWithDates" ParentNodeID="PopulatingChartData" Priority="600">
+    <Title>Working with Dates</Title>
+   </TOCNode>
+    
+
+</TOCNodes>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Rendering">
+	<Title>Using With Legacy Websites</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using with Legacy Websites</ShortBlurb> 
+	<Content>UsingWithLegacy.htm</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">Overview.htm</InfoPage>
+		<InfoPage Title="HTML - UsingWithLegacy.htm">UsingWithLegacy._htm</InfoPage>
+		<InfoPage Title="HTML - UsingWithLegacyImage.aspx">UsingWithLegacyImage._aspx</InfoPage>
+	</InfoPages>
+
+        <Keywords>
+		<Keyword>Rendering, Legacy Websites</Keyword>
+		<Keyword>Legacy Websites</Keyword>
+		<Keyword>Binary Streaming, Legacy Websites</Keyword>
+  	</Keywords>
+	</SampleConfig>	
+	
+</SampleConfigs>

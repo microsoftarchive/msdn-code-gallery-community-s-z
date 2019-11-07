@@ -1,0 +1,12 @@
+﻿<Application x:Class="WpfMultiClick.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="ListView">
+            <Setter Property="Margin" Value="10"/>            
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,29 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Populate series data
+    Dim random As New Random()
+    Dim [date] As DateTime = DateTime.Now.Date
+    Dim pointIndex As Integer
+    For pointIndex = 0 To 7
+        Chart1.Series("Series1").Points.AddXY([date], random.Next(5, 95))
+        [date] = [date].AddDays(random.Next(1, 5))
+    Next
+
+    ' Use point index instead of the X value
+    If UseIndex.Checked Then
+        Chart1.Series("Series1").IsXValueIndexed = True
+        
+        ' Show labels every day
+        Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Interval = 1
+        Chart1.ChartAreas("ChartArea1").AxisX.MajorGrid.Interval = 1
+        Chart1.ChartAreas("ChartArea1").AxisX.MajorTickMark.Interval = 1
+    End If
+
+    ' Set series tooltips
+    Chart1.Series("Series1").ToolTip = "#VALX"
+
+End Sub 'Page_Load
+...

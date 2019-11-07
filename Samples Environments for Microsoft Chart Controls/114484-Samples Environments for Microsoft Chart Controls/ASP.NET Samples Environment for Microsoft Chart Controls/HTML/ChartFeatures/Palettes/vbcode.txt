@@ -1,0 +1,15 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+     ' Standard palette
+	Chart2.Palette = ChartColorPalette.BrightPastel
+
+	' Use a custom palette
+	Dim colorSet(4) As Color = {Color.FromArgb(Color.Red), Color.FromArgb(Color.Blue), Color.FromArgb(Color.Green), Color.FromArgb(Color.Purple)}
+	Chart2.PaletteCustomColors = colorSet
+	Chart2.Palette = ChartColorPalette.None
+
+End Sub 'Page_Load
+...

@@ -1,0 +1,4 @@
+// Microsoft Visual C++ generated Help ID include file.
+// Used by YUV Image Viewer.rc
+//
+#define HIDC_COMBO1                     0x808103eb    // IDD_DIALOG1

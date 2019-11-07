@@ -1,0 +1,17 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Set X and Y axis crossing points
+   Chart1.ChartAreas("ChartArea1").AxisX.Crossing = 0
+   Chart1.ChartAreas("ChartArea1").AxisY.Crossing = 0
+   
+   ' Position the X axis labels and tick marks to the area border
+   Chart1.ChartAreas("ChartArea1").AxisX.IsMarksNextToAxis = False
+   
+   ' Position the Y axis labels and tick marks next to the axis
+   Chart1.ChartAreas("ChartArea1").AxisY.IsMarksNextToAxis = True
+   
+End Sub 'Page_Load
+...

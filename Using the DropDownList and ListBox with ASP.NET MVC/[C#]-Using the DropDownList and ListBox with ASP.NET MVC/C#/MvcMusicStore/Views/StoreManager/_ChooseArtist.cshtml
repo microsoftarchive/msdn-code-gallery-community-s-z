@@ -1,0 +1,13 @@
+﻿@model MvcMusicStore.Models.Album
+ <div class="editor-label">
+    @Html.LabelFor(model => model.ArtistId, "Artist" )
+</div>
+@Html.DropDownList("ArtistId", ViewBag.Artists as SelectList,String.Empty)
+<a class="button" href="@Url.Content("~/Artist/Create")" 
+    id="artistAddLink">Add New Artist</a>
+@Html.ValidationMessageFor(model => model.ArtistId)
+<div id="artistDialog" class="hidden">
+</div>
+
+<script src="@Url.Content( "~/Scripts/ui/jquery.ui.combobox.js" )"></script>
+<script src="@Url.Content("~/Scripts/chooseArtist.js")"></script>

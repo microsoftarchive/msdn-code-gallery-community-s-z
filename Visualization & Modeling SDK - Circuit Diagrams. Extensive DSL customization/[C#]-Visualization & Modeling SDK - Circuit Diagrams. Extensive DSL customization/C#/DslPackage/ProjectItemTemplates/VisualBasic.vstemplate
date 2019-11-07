@@ -1,0 +1,16 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{9da50e81-6fd1-4659-91d6-46c69979b9be}" ID="103"/>
+		<Description Package="{9da50e81-6fd1-4659-91d6-46c69979b9be}" ID="102"/>
+		<Icon Package="{9da50e81-6fd1-4659-91d6-46c69979b9be}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>Circuits.circuit</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.circuit">circuit.circuit</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.circuit.diagram">circuit.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelTransitionSample", "ViewModelTransitionSample\ViewModelTransitionSample.csproj", "{422C537F-3F4F-41D0-937A-E5F3CA16699D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{422C537F-3F4F-41D0-937A-E5F3CA16699D}.Debug|x86.ActiveCfg = Debug|x86
+		{422C537F-3F4F-41D0-937A-E5F3CA16699D}.Debug|x86.Build.0 = Debug|x86
+		{422C537F-3F4F-41D0-937A-E5F3CA16699D}.Release|x86.ActiveCfg = Release|x86
+		{422C537F-3F4F-41D0-937A-E5F3CA16699D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

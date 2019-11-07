@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,1:ImageSprite;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Content/Css:1&amp;amp;hashKey=E7560C71640616C5057FAEACB58DCB00" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/2f95808e-ca34-4249-88ff-44fabe33cdc0Combined.css,1:LinkList,2:ImageSprite,2:SiteFeedbackLink;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Epx/Content/Css:2&amp;amp;hashKey=EEE39C2D6B93379FDAF50337BE99AF8C" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Synchronize Outlook contacts with MS SQL Database</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Synchronize Outlook contacts with MS SQL Database</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            SQL Server, Outlook
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Office Addin
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary Language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">9/6/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Synchronize-Outlook-03c22879">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1><span style="font-size:xx-large"><strong><em><span style="color:#253340; text-transform:none; line-height:19.01px; text-indent:0px; letter-spacing:normal; font-family:&quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; font-style:normal; font-variant:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">Introduction
+ - </span></em></strong></span></h1>
+<h1><em><span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">In
+ this application we have two features. One is to IMPORT all the contacts, second is export from Outlook to MS SQL database.<span class="Apple-converted-space">&nbsp;</span></span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">This is
+ useful for the first time. And the second time is for synchronizing between Outlook and Database.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">Features:</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">1. Import
+ Contacts to Outlook from Database.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">2. Export
+ Contacts from Outlook to Database.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">3. Synchronizing
+ Contacts between Outlook and Database. If any information changes in the backend or in the outlook contacts it will updates that info.<span class="Apple-converted-space">&nbsp;</span></span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">If a new
+ contact is found, then it will add that contact to outlook contacts or database while synchronizing.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">next release
+ will contain sending bulk emails to stored address in the database.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">keywords:</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">bulk email,
+ sync, synch, outlook, import contacts, export contacts, outlook contacts, mass mail, bulk mail, mass email, synchronization</span></em></h1>
+<h1><span style="font-size:xx-large"><strong><em><span style="color:#253340; text-transform:none; line-height:19.01px; text-indent:0px; letter-spacing:normal; font-family:&quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; font-style:normal; font-variant:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">Project
+ Details- </span></em></strong></span></h1>
+<h1><em><span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">In
+ this application we have two features. One is to IMPORT all the contacts, second is export from Outlook to MS SQL database.<span class="Apple-converted-space">
+</span></span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">This is
+ useful for the first time. And the second time is for synchronizing between Outlook and Database.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">Features:</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">1. Import
+ Contacts to Outlook from Database.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">2. Export
+ Contacts from Outlook to Database.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">3. Synchronizing
+ Contacts between Outlook and Database. If any information changes in the backend or in the outlook contacts it will updates that info.<span class="Apple-converted-space">
+</span></span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">If a new
+ contact is found, then it will add that contact to outlook contacts or database while synchronizing.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">next release
+ will contain sending bulk emails to stored address in the database.</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">keywords:</span><br style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; white-space:normal; orphans:2; widows:2">
+<span style="font:13px/19.01px &quot;Segoe UI&quot;,Tahoma,Arial,Helvetica,sans-serif; color:#253340; text-transform:none; text-indent:0px; letter-spacing:normal; word-spacing:0px; float:none; display:inline!important; white-space:normal; orphans:2; widows:2">bulk email,
+ sync, synch, outlook, import contacts, export contacts, outlook contacts, mass mail, bulk mail, mass email, synchronization</span></em></h1>
+
+</div>
+
+
+    </div>
+</body>
+</html>

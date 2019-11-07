@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=0F22413366F5977978C46D94D86B40A8" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=BA54336BC791F42AE754C419920C1AAE" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Serial Communication with arduino in c#</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Serial Communication with arduino in c#</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows Forms, .NET Framework, arduino, Visual C#, Visual Studio 2015
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            arduino, SerialPort, serial communication, arduino interfacing
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/4/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Serial-Communication-with-7ec9e1b6">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><span>This is just simple application that shows how you can communicate with other hardware device using serial port. Here I&rsquo;m using Arduino Uno. I had uploaded Arduino sketch (code) with the visual studio code file.</span><strong>&nbsp;</strong><em>&nbsp;</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><span>Just download this file.</span> </p>
+<li><span>Extract it</span> </li><li><span>Upload code to Arduino</span> </li><li><span>Open visual studio </span></li><li><span>Build windows form application </span></li><li><span>Write com port at which Arduino is connected and then click button to turn led on/ off,</span>
+<strong>&nbsp;</strong><em>&nbsp;</em>
+<p></p>
+<p><span><strong>Note: Led is connected to pin 13 by default</strong>.</span><strong></strong><em></em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><span>In visual c# windows form applictaion, we use following reference</span></p>
+<p><span>using <a class="libraryLink" href="https://code.msdn.microsoft.com/Serial-Communication-with-7ec9e1b6/https://code.msdn.microsoft.com/Serial-Communication-with-7ec9e1b6/https://msdn.microsoft.com/en-US/library/System.IO.Ports.aspx"  title="Auto generated link to System.IO.Ports">System.IO.Ports</a>;</span></p>
+<p><span>&nbsp;</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">using <a class="libraryLink" href="https://code.msdn.microsoft.com/Serial-Communication-with-7ec9e1b6/https://code.msdn.microsoft.com/Serial-Communication-with-7ec9e1b6/https://msdn.microsoft.com/en-US/library/System.IO.Ports.aspx"  title="Auto generated link to System.IO.Ports">System.IO.Ports</a>
+</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">using</span>&nbsp;System.IO.Ports&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><span>&nbsp;</span>&nbsp;</div>
+<p>&nbsp;</p>
+<p><span>In designer view add serialPort module</span></p>
+<p>&nbsp;</p>
+<p><span><img id="173998" src="/site/view/file/173998/1/s1.png" alt="" width="711" height="408"><br>
+</span></p>
+<p><span><br>
+</span></p>
+<p><span><span>then we</span> need to define following things while communicating via serialPort:</span></p>
+<ul>
+<li><span>PortName</span> </li><li><span>BaudRate</span> </li><li><span>DataBits</span> </li><li><span>Parity</span> </li><li><span>StopBits</span> </li><li><span>Handshake</span> </li><li><span>Encoding</span> </li></ul>
+<p>&nbsp;</p>
+<p><span>Port name can be different, you can check it from arduino IDE at which port your arduino is connected or you may check it from DeviceManager under ports option (this option is available when some device is connected to com port).</span></p>
+<p><span>Here in this sample i'm using foreach loop that finds all available com ports</span></p>
+<p>&nbsp;</p>
+<p><span>by default we use BaudRate 9600,</span></p>
+<p><span>databits 8,</span></p>
+<p><span>parity =None</span></p>
+<p><span>stopbits =1</span></p>
+<p><span>handshake =none</span></p>
+<p><span>and encoding to default encoding</span></p>
+<p>&nbsp;</p>
+<p><img id="173999" src="description/s2.PNG" alt="" width="382" height="121"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span>To send command ,let say we need to write in serialPort and which is to be read by other end</span></p>
+<p><span>We use following command:</span></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">serialPort1.Write(&quot;1&quot;);</pre>
+<div class="preview">
+<pre class="js">serialPort1.Write(<span class="js__string">&quot;1&quot;</span>);</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>&nbsp;</p>
+<p><span>But first we need to open port</span></p>
+<p><span>Then write</span></p>
+<p><span>And then close that port again</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">serialPort1.Open();
+serialPort1.Write(&quot;1&quot;);
+serialPort1.Close();</pre>
+<div class="preview">
+<pre class="csharp">serialPort1.Open();&nbsp;
+serialPort1.Write(<span class="cs__string">&quot;1&quot;</span>);&nbsp;
+serialPort1.Close();</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span>if you have any query,&nbsp; regarding this sample feel free to give feedback</span></div>
+<div class="endscriptcode"></div>
+<div class="endscriptcode"><span>umairnadeem20@hotmail.com</span></div>
+<div class="endscriptcode"></div>
+</li>
+</div>
+
+
+    </div>
+</body>
+</html>

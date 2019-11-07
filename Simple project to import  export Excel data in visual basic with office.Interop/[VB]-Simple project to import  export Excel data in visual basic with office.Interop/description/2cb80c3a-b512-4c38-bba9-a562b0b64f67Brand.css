@@ -1,0 +1,148 @@
+﻿
+/* Masthead */
+.Clear {
+    height: 0;
+}
+.LocalNavigation {
+    width: auto;
+    background:none;
+}
+/* End Masthead */
+a, a:link, a:visited {
+    color: #2186C6
+}
+
+a:hover {
+color: #0095C4;
+}
+
+#sideNav {
+}
+
+    #sideNav .section ul li {
+        margin-left: 5px;
+    }
+
+#searchPage {
+}
+
+    #searchPage h2, #searchPage h3 {
+        text-transform:none;
+        padding: 1px 5px 3px 5px;
+        font-size:1.25em !important;
+        font-weight:normal !important;
+    }
+
+#UploadPage {
+}
+
+    #UploadPage #uploadPageInstruction {
+        margin-top:10px;
+    }
+
+.tabHeaders {
+    color:#707070; 
+    overflow:hidden;
+    border-bottom:1px solid #707070;
+}
+
+    .tabHeaders div, .tabHeaders div+div {
+        background: white;
+        font-weight:normal;
+        margin: 0 0 0 0;
+    }
+
+    .tabHeaders div.current {
+        background: #F8F8F8;
+        color:#707070;
+        cursor: default;
+        font-weight:bold;
+        border:1px solid #707070;
+        border-bottom-width:0px;
+    }
+
+.tabContents {
+    border-top-width:0px;
+}
+
+span.Rating {
+    padding-top:5px;
+    margin-left:-1px;
+}
+
+.FilledRatingStar, .HalfRatingStar, .EmptyRatingStar, .FilledRatingStarHover
+{
+    width: 14px;
+    height: 14px;
+    padding: 0px;
+    margin-top:2px;
+}
+
+.FilledRatingStar
+{
+    background: url(../visualstudiosamples/fullStar.png) no-repeat;
+}
+
+.ownerRating .FilledRatingStar
+{
+    background: url(../visualstudiosamples/fullStar.png) no-repeat;
+}
+
+.FilledRatingStarHover
+{
+
+    background: url(../visualstudiosamples/fullStarHover.png) no-repeat;
+}
+
+.HalfRatingStar
+{
+    background: url(../visualstudiosamples/halfStar.png) no-repeat;
+}
+
+.EmptyRatingStar
+{
+    background: url(../visualstudiosamples/emptyStar.png) no-repeat;
+}
+
+
+#requestsPage .tabHeaders {
+    overflow: visible;
+}
+
+#sideNav #contributeSection h3, .sidebar #contributeSection h3, #contributeSection h3 {
+    background-color: white !important;
+    font-size:1.65em !important;
+    padding-left: 0px !important;
+}
+
+
+.sourceList
+{
+    border:none;
+}
+
+#UploadPage .projectTypeChoice > div {
+    min-height: 285px;
+}
+
+
+.IE7 .profile-inline-header .profile-userimage-large > img {
+    display: inline-block !important;
+}
+
+.IE8 .profile-inline-header .profile-userimage-large{
+   width: 135px !important; 
+}
+
+.IE8 .profile-inline-header .profile-userimage-large > img{
+   width: auto !important; 
+}
+
+#projectDetails {
+    position: static;
+}
+
+#projectDetails > div:first-child {
+    margin-top: -4px;
+}
+

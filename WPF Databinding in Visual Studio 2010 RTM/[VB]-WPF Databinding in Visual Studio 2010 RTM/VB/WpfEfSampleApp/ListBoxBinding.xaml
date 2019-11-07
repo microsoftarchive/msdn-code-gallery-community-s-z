@@ -1,0 +1,21 @@
+﻿<Window x:Class="ListBoxBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Simple ListBox Binding Example" Height="255" Width="317" Name="Window1">
+    <Window.Resources>
+        <CollectionViewSource x:Key="CustomerSource" />
+    </Window.Resources>
+    <Grid>
+        <ListBox Name="ListBox1" ItemsSource="{Binding Source={StaticResource CustomerSource}}" >
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="{Binding Path=LastName}"/>
+                        <TextBlock Text=", "/>
+                        <TextBlock Text="{Binding Path=FirstName}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

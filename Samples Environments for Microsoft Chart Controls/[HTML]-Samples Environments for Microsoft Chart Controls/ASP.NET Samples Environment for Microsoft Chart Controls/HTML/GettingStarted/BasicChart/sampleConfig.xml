@@ -1,0 +1,21 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Getting Started" Priority="600">
+	<Title>Basic Chart using Code-Behind</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Basic Chart using Code-Behind</ShortBlurb>
+	<Content>BasicChart.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="HTML">basicchart._aspx</InfoPage>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	  <Keyword>Basic Chart</Keyword>
+	</Keywords>
+	</SampleConfig>
+	
+</SampleConfigs>

@@ -1,0 +1,15 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set title position
+    Chart1.Titles[0].Position.Auto = false;
+    Chart1.Titles[0].Position.X = 35;
+    Chart1.Titles[0].Position.Y = 40;
+    Chart1.Titles[0].Position.Width = 35;
+    Chart1.Titles[0].Position.Height= 10;
+
+}
+...
+

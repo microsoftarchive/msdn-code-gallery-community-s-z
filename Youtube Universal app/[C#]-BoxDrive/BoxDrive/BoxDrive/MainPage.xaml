@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="BoxDrive.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BoxDrive"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView x:Name="lsvMain" VerticalAlignment="Center" HorizontalAlignment="Center" ItemsSource="{Binding TheResults}" SelectionChanged="lsvMain_SelectionChanged">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="3"></ItemsWrapGrid>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Width="90" BorderThickness="0.9" BorderBrush="#131313">
+                        <Image Source="{Binding img_url}" Height="30" Width="50"></Image>
+                        <TextBlock Text="{Binding Name}" FontSize="13" Foreground="#333333" HorizontalAlignment="Center" FontWeight="SemiLight"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>

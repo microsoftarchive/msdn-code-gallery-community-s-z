@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/Header.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/sprite.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="/Areas/Epx/Themes/Windows/Content/UhfHeader.css" data-do-not-move="true" />
+<link rel="stylesheet" href="https://statics-uhf-eus.akamaized.net/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/95-bebd50/fa-931df9/52-018a9f/1c-69bb10/e5-670c61/ce-1c4cee/34-6b9bf8/a6-1fffa6?ver=2.0" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:sprite,0:Footer,1:ImageSprite,2:SelectLocaleFromPopUp;/Areas/Epx/Themes/Windows/Content:0,/Areas/Epx/Themes/WindowsApps/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;amp;v=3A354D42E57BB372C53FC3E210C256E3" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Areas/Epx/Themes/Windows/Content/UhfFooter.css?v=636765551546130442" data-do-not-move="true" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>WebGl/Three.JS with TypeScript</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/a2847d66-d97b-44f0-8f29-3bb2f3e93543Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/windowsapps/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/windowsapps/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>WebGl/Three.JS with TypeScript</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            three js, TypeScript
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            three.js
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud, Phone, Data, Xbox, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/23/2018</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>Base on this JS example <a href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://github.com/mrdoob/three.js/blob/master/examples/webgl_shadowmap_pointlight.html">
+https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://github.com/mrdoob/three.js/blob/master/examples/webgl_shadowmap_pointlight.html</a></p>
+<p><a href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://threejs.org/examples/#webgl_shadowmap_pointlight">https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://threejs.org/examples/#webgl_shadowmap_pointlight</a></p>
+<p>was built <strong>TypeScript </strong>project which wrapped in Visual Studio 2017. (Please use Admin Mode for open this project) If you do not like it, just create
+<strong>indext.html</strong> file and copy content from <strong>Default.aspx</strong> and use it, reuse same folder structure and files.</p>
+<p>This project includes the full three.js library, OrbitControls.js library, and type definition &nbsp;<strong>three.d.ts</strong> (see folder).&nbsp; Inside file
+<strong>three-core.d.ts</strong> was added manually interface type and class for <strong>
+customDistanceMaterial.</strong></p>
+<h1><img id="217955" src="https://i1.code.msdn.s-msft.com/windowsapps/webglthreejs-with-83fed8a5/image/file/217955/1/ezgif.com-resize.gif" alt="" width="612" height="382"></h1>
+<h1><span>Building the Sample</span></h1>
+<p><em>Run VS2017 in Admin mode, VS automatically&nbsp;downloads one NuGet package.</em></p>
+<p><em>Go to properties and set web.application</em></p>
+<p><img id="217953" src="description/three.PNG" alt="" width="1269" height="409"></p>
+<p><em>&nbsp;</em></p>
+<p>Pay your attention to TypeScript properties. Name of the output file will be <strong>
+main.js&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><img id="217954" src="description/ThreeAMD.PNG" alt="" width="1248" height="558"></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>How does this sample solve the problem?</em></p>
+<p><em>You can include <em><strong>code snippets,&nbsp;</strong></em><strong>images</strong>,
+<strong>videos</strong>. &nbsp;&nbsp;</em></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">var sl: smpl.ShadowMapPointlight;
+
+window.onload = () =&gt; {
+    sl = new smpl.ShadowMapPointlight();
+    sl.animate();
+}
+
+window.onresize = function () {
+    sl.onWindowResize();
+}</pre>
+<div class="preview">
+<pre class="js"><span class="js__statement">var</span>&nbsp;sl:&nbsp;smpl.ShadowMapPointlight;&nbsp;
+&nbsp;
+window.onload&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;sl&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;smpl.ShadowMapPointlight();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;sl.animate();&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+window.onresize&nbsp;=&nbsp;<span class="js__operator">function</span>&nbsp;()&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;sl.onWindowResize();&nbsp;
+<span class="js__brace">}</span></pre>
+</div>
+</div>
+</div>
+<ul>
+<li>More Information </li></ul>
+<p>Three.js allows the creation of <a class="mw-redirect" title="Graphical Processing Unit" href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/Graphical_Processing_Unit">
+Graphical Processing Unit</a> (GPU)-accelerated 3D animations using the <a title="JavaScript" href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/JavaScript">
+JavaScript</a> language as part of a <a title="Website" href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/Website">
+website</a> without relying on proprietary <a class="mw-redirect" title="Browser plugin" href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/Browser_plugin">
+browser plugins</a>.<sup id="cite_ref-3" class="reference"><a href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/Three.js#cite_note-3">[3]</a></sup><sup id="cite_ref-4" class="reference"><a href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/Three.js#cite_note-4">[4]</a></sup> This
+ is possible due to the advent of <a title="WebGL" href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/WebGL">
+WebGL</a>.<sup id="cite_ref-5" class="reference"><a href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/Three.js#cite_note-5">[5]</a></sup></p>
+<p>High-level libraries such as Three.js or <a title="GLGE (programming library)" href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/GLGE_(programming_library)">
+GLGE</a>, SceneJS, PhiloGL or a number of other libraries make it possible to author complex 3D computer animations that display in the browser without the effort required for a traditional standalone application or a plugin.<sup id="cite_ref-6" class="reference"><a href="https://code.msdn.microsoft.com/windowsapps/WebGlThreeJS-with-83fed8a5/https://en.wikipedia.org/wiki/Three.js#cite_note-6">[6]</a></sup></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

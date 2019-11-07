@@ -1,0 +1,13 @@
+﻿@model Schedule
+
+<div class="bg-primary panel-body">
+    <h4>
+        Edit @Model.Department Schedule (Current User: @User?.Identity?.Name)
+    </h4>
+</div>
+
+<div class="panel-body">
+    Let's start editting...
+</div>
+
+<a class="btn btn-primary" asp-controller="Schedule" asp-action="Index">Save</a>

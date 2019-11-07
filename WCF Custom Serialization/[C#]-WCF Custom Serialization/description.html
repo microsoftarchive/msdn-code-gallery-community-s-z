@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/b79636be-b088-48b5-8a8d-c21645d26d2fCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>WCF Custom Serialization</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>WCF Custom Serialization</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            WCF
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            WCF Extensibility
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">4/4/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/WCF-Custom-Serialization-43b3ee7a">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p><em>This sample was provided as part of a blog series on WCF extensibility. The entry for this sample can be found at
+<a href="http://blogs.msdn.com/b/carlosfigueira/archive/2011/03/29/wcf-extensibility-icontractbehavior.aspx">
+http://blogs.msdn.com/b/carlosfigueira/archive/2011/03/29/wcf-extensibility-icontractbehavior.aspx</a>.</em></p>
+<p>This has come up a few times in the forums (<a href="http://social.msdn.microsoft.com/Forums/en-US/wcf/thread/dcd48a7f-4494-455f-8504-cbdc372badcf">1</a>,
+<a href="http://social.msdn.microsoft.com/forums/en-US/wcf/thread/e4d55f3f-86d1-441d-9187-64fbd8ab2b3d">
+2</a>, <a href="http://social.msdn.microsoft.com/forums/en-us/wcf/thread/9c1231ef-1c32-4a01-afcf-f7782a436e9b">
+3</a>, &hellip;). Most of the time it&rsquo;s about forcing WCF to use <a href="http://msdn.microsoft.com/en-us/library/system.xml.serialization.xmlserializer.aspx">
+XmlSerializer</a>, or replace the default <a href="http://msdn.microsoft.com/en-us/library/system.runtime.serialization.datacontractserializer.aspx">
+DataContractSerializer</a> with the <a href="http://msdn.microsoft.com/en-us/library/system.runtime.serialization.netdatacontractserializer.aspx">
+NetDataContractSerializer</a> (to avoid having to deal with known types in inheritance-heavy scenarios). Other times people really need a new way of serializing / deserializing objects &ndash; for performance or size reasons, for example. In this example I
+ have a custom serializer which knows how to serialize very compactly some data types which are tagged with a specific interface. The interface is a simple one with two methods: one for the object to serialize itself into a stream, and another for an object
+ to initialize itself from a stream.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public interface ICustomSerializable
+{
+ void WriteTo(Stream stream);
+ void InitializeFrom(Stream stream);
+}
+
+</pre>
+<div class="preview">
+<pre id="codePreview" class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">interface</span>&nbsp;ICustomSerializable&nbsp;<br>{&nbsp;<br>&nbsp;<span class="cs__keyword">void</span>&nbsp;WriteTo(Stream&nbsp;stream);&nbsp;<br>&nbsp;<span class="cs__keyword">void</span>&nbsp;InitializeFrom(Stream&nbsp;stream);&nbsp;<br>}&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">And before I go any further, here goes the usual disclaimer &ndash; this is a sample for illustrating the topic of this post, this is not production-ready code. I tested it for a few inputs and it worked, but I cannot guarantee
+ that it will work for all types (please let me know if you find a bug or something missing). Also, for simplicity sake it doesn&rsquo;t have a lot of error handling which a production-level code would. Finally, this sample (as well as most other samples in
+ this series) uses extensibility points other than the one for this post (e.g., operation behavior, custom serializers, etc.) which are necessary to get a realistic scenario going. I&rsquo;ll briefly describe what they do, and leave to their specific entries
+ a more detailed description of their behavior.</div>
+<p>Below are a few types which implement this interface. They use some helper functions to read/write data in a compact binary format (the code for the helper can be found in the [Code for this post] link at the end). This is a format similar to the one used
+ by the <a href="http://msdn.microsoft.com/en-us/library/cc219210(v=PROT.10).aspx">
+.NET XML Binary Format</a> (the one used by the binary encoding in WCF).</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class Product : ICustomSerializable 
+{ 
+    public string Name; 
+    public string Unit; 
+    public int UnitPrice; 
+  
+    public void WriteTo(Stream stream) 
+    { 
+        FormatHelper.WriteString(stream, this.Name); 
+        FormatHelper.WriteString(stream, this.Unit); 
+        FormatHelper.WriteInt(stream, this.UnitPrice); 
+    } 
+  
+    public void InitializeFrom(Stream stream) 
+    { 
+        this.Name = FormatHelper.ReadString(stream); 
+        this.Unit = FormatHelper.ReadString(stream); 
+        this.UnitPrice = FormatHelper.ReadInt(stream); 
+    } 
+} 
+  
+public class Order : ICustomSerializable 
+{ 
+    public int Id; 
+    public Product[] Items; 
+    public DateTime Date; 
+  
+    public void WriteTo(Stream stream) 
+    { 
+        FormatHelper.WriteInt(stream, this.Id); 
+        FormatHelper.WriteInt(stream, this.Items.Length); 
+        for (int i = 0; i &lt; this.Items.Length; i&#43;&#43;) 
+        { 
+            this.Items[i].WriteTo(stream); 
+        } 
+  
+        FormatHelper.WriteLong(stream, this.Date.ToBinary()); 
+    } 
+  
+    public void InitializeFrom(Stream stream) 
+    { 
+        this.Id = FormatHelper.ReadInt(stream); 
+        int itemCount = FormatHelper.ReadInt(stream); 
+        this.Items = new Product[itemCount]; 
+        for (int i = 0; i &lt; itemCount; i&#43;&#43;) 
+        { 
+            this.Items[i] = new Product(); 
+            this.Items[i].InitializeFrom(stream); 
+        } 
+  
+        this.Date = DateTime.FromBinary(FormatHelper.ReadLong(stream)); 
+    } 
+} </pre>
+<div class="preview">
+<pre id="codePreview" class="js">public&nbsp;class&nbsp;Product&nbsp;:&nbsp;ICustomSerializable&nbsp;&nbsp;<br><span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;Name;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;string&nbsp;Unit;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;int&nbsp;UnitPrice;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;WriteTo(Stream&nbsp;stream)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FormatHelper.WriteString(stream,&nbsp;<span class="js__operator">this</span>.Name);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FormatHelper.WriteString(stream,&nbsp;<span class="js__operator">this</span>.Unit);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FormatHelper.WriteInt(stream,&nbsp;<span class="js__operator">this</span>.UnitPrice);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;InitializeFrom(Stream&nbsp;stream)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Name&nbsp;=&nbsp;FormatHelper.ReadString(stream);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Unit&nbsp;=&nbsp;FormatHelper.ReadString(stream);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.UnitPrice&nbsp;=&nbsp;FormatHelper.ReadInt(stream);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br><span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>public&nbsp;class&nbsp;Order&nbsp;:&nbsp;ICustomSerializable&nbsp;&nbsp;<br><span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;int&nbsp;Id;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;Product[]&nbsp;Items;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;DateTime&nbsp;<span class="js__object">Date</span>;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;WriteTo(Stream&nbsp;stream)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FormatHelper.WriteInt(stream,&nbsp;<span class="js__operator">this</span>.Id);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FormatHelper.WriteInt(stream,&nbsp;<span class="js__operator">this</span>.Items.Length);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;i&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;i&nbsp;&lt;&nbsp;<span class="js__operator">this</span>.Items.Length;&nbsp;i&#43;&#43;)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Items[i].WriteTo(stream);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FormatHelper.WriteLong(stream,&nbsp;<span class="js__operator">this</span>.<span class="js__object">Date</span>.ToBinary());&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;InitializeFrom(Stream&nbsp;stream)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Id&nbsp;=&nbsp;FormatHelper.ReadInt(stream);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;itemCount&nbsp;=&nbsp;FormatHelper.ReadInt(stream);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Items&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;Product[itemCount];&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;i&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;i&nbsp;&lt;&nbsp;itemCount;&nbsp;i&#43;&#43;)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Items[i]&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;Product();&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.Items[i].InitializeFrom(stream);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.<span class="js__object">Date</span>&nbsp;=&nbsp;DateTime.FromBinary(FormatHelper.ReadLong(stream));&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br><span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;<br></pre>
+</div>
+</div>
+</div>
+<p>Now to the behavior. In order to easily share the behavior between client and server (after all, both sides need to agree on the serialization format), I&rsquo;m implementing it as an attribute, so we can share the contract definition between the parties
+ and it will be decorated with the behavior. The behavior will do two things: validate that all types which will use the new serializer can be created (i.e., they&rsquo;re public types with a public, parameter-less constructor), and replace a behavior in all
+ of the contract operations. The behavior which selects the serializer in WCF is the
+<a href="http://msdn.microsoft.com/en-us/library/system.servicemodel.description.datacontractserializeroperationbehavior.aspx">
+DataContractSerializerOperationBehavior</a> (DCSOB), whose task is to add a formatter to the runtime which knows how to convert between the incoming / outgoing message and the parameters in the operations. We could create a new formatter to do that, but inheriting
+ from DCSOB (even though we won&rsquo;t be using the DataContractSerializer for our custom serialization) will save us time, as it exposes two helper virtual methods that makes it easier to replace the serializer).</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class MyNewSerializerContractBehaviorAttribute : Attribute, IContractBehavior 
+{ 
+    public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) 
+    { 
+    } 
+  
+    public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) 
+    { 
+        this.ReplaceSerializerOperationBehavior(contractDescription); 
+    } 
+  
+    public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) 
+    { 
+        this.ReplaceSerializerOperationBehavior(contractDescription); 
+    } 
+  
+    public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) 
+    { 
+        foreach (OperationDescription operation in contractDescription.Operations) 
+        { 
+            foreach (MessageDescription message in operation.Messages) 
+            { 
+                this.ValidateMessagePartDescription(message.Body.ReturnValue); 
+                foreach (MessagePartDescription part in message.Body.Parts) 
+                { 
+                    this.ValidateMessagePartDescription(part); 
+                } 
+  
+                foreach (MessageHeaderDescription header in message.Headers) 
+                { 
+                    this.ValidateCustomSerializableType(header.Type); 
+                } 
+            } 
+        } 
+    } 
+  
+    private void ValidateMessagePartDescription(MessagePartDescription part) 
+    { 
+        if (part != null) 
+        { 
+            this.ValidateCustomSerializableType(part.Type); 
+        } 
+    } 
+  
+    private void ValidateCustomSerializableType(Type type) 
+    { 
+        if (typeof(ICustomSerializable).IsAssignableFrom(type)) 
+        { 
+            if (!type.IsPublic) 
+            { 
+                throw new InvalidOperationException(&quot;Custom serialization is supported in public types only&quot;); 
+            } 
+  
+            ConstructorInfo defaultConstructor = type.GetConstructor(new Type[0]); 
+            if (defaultConstructor == null) 
+            { 
+                throw new InvalidOperationException(&quot;Custom serializable types must have a public, parameterless constructor&quot;); 
+            } 
+        } 
+    } 
+  
+    private void ReplaceSerializerOperationBehavior(ContractDescription contract) 
+    { 
+        foreach (OperationDescription od in contract.Operations) 
+        { 
+            for (int i = 0; i &lt; od.Behaviors.Count; i&#43;&#43;) 
+            { 
+                DataContractSerializerOperationBehavior dcsob = od.Behaviors[i] as DataContractSerializerOperationBehavior; 
+                if (dcsob != null) 
+                { 
+                    od.Behaviors[i] = new MyNewSerializerOperationBehavior(od); 
+                } 
+            } 
+        } 
+    } 
+  
+    class MyNewSerializerOperationBehavior : DataContractSerializerOperationBehavior 
+    { 
+        public MyNewSerializerOperationBehavior(OperationDescription operation) : base(operation) { } 
+        public override XmlObjectSerializer CreateSerializer(Type type, string name, string ns, IList&lt;Type&gt; knownTypes) 
+        { 
+            return new MyNewSerializer(type, base.CreateSerializer(type, name, ns, knownTypes)); 
+        } 
+  
+        public override XmlObjectSerializer CreateSerializer(Type type, XmlDictionaryString name, XmlDictionaryString ns, IList&lt;Type&gt; knownTypes) 
+        { 
+            return new MyNewSerializer(type, base.CreateSerializer(type, name, ns, knownTypes)); 
+        } 
+    } 
+} </pre>
+<div class="preview">
+<pre id="codePreview" class="js">public&nbsp;class&nbsp;MyNewSerializerContractBehaviorAttribute&nbsp;:&nbsp;Attribute,&nbsp;IContractBehavior&nbsp;&nbsp;<br><span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;AddBindingParameters(ContractDescription&nbsp;contractDescription,&nbsp;ServiceEndpoint&nbsp;endpoint,&nbsp;BindingParameterCollection&nbsp;bindingParameters)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;ApplyClientBehavior(ContractDescription&nbsp;contractDescription,&nbsp;ServiceEndpoint&nbsp;endpoint,&nbsp;ClientRuntime&nbsp;clientRuntime)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.ReplaceSerializerOperationBehavior(contractDescription);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;ApplyDispatchBehavior(ContractDescription&nbsp;contractDescription,&nbsp;ServiceEndpoint&nbsp;endpoint,&nbsp;DispatchRuntime&nbsp;dispatchRuntime)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.ReplaceSerializerOperationBehavior(contractDescription);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;<span class="js__operator">void</span>&nbsp;Validate(ContractDescription&nbsp;contractDescription,&nbsp;ServiceEndpoint&nbsp;endpoint)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(OperationDescription&nbsp;operation&nbsp;<span class="js__operator">in</span>&nbsp;contractDescription.Operations)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(MessageDescription&nbsp;message&nbsp;<span class="js__operator">in</span>&nbsp;operation.Messages)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.ValidateMessagePartDescription(message.Body.ReturnValue);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(MessagePartDescription&nbsp;part&nbsp;<span class="js__operator">in</span>&nbsp;message.Body.Parts)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.ValidateMessagePartDescription(part);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(MessageHeaderDescription&nbsp;header&nbsp;<span class="js__operator">in</span>&nbsp;message.Headers)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.ValidateCustomSerializableType(header.Type);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;<span class="js__operator">void</span>&nbsp;ValidateMessagePartDescription(MessagePartDescription&nbsp;part)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(part&nbsp;!=&nbsp;null)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.ValidateCustomSerializableType(part.Type);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;<span class="js__operator">void</span>&nbsp;ValidateCustomSerializableType(Type&nbsp;type)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(<span class="js__operator">typeof</span>(ICustomSerializable).IsAssignableFrom(type))&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(!type.IsPublic)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">throw</span>&nbsp;<span class="js__operator">new</span>&nbsp;InvalidOperationException(<span class="js__string">&quot;Custom&nbsp;serialization&nbsp;is&nbsp;supported&nbsp;in&nbsp;public&nbsp;types&nbsp;only&quot;</span>);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConstructorInfo&nbsp;defaultConstructor&nbsp;=&nbsp;type.GetConstructor(<span class="js__operator">new</span>&nbsp;Type[<span class="js__num">0</span>]);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(defaultConstructor&nbsp;==&nbsp;null)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">throw</span>&nbsp;<span class="js__operator">new</span>&nbsp;InvalidOperationException(<span class="js__string">&quot;Custom&nbsp;serializable&nbsp;types&nbsp;must&nbsp;have&nbsp;a&nbsp;public,&nbsp;parameterless&nbsp;constructor&quot;</span>);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;<span class="js__operator">void</span>&nbsp;ReplaceSerializerOperationBehavior(ContractDescription&nbsp;contract)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(OperationDescription&nbsp;od&nbsp;<span class="js__operator">in</span>&nbsp;contract.Operations)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">for</span>&nbsp;(int&nbsp;i&nbsp;=&nbsp;<span class="js__num">0</span>;&nbsp;i&nbsp;&lt;&nbsp;od.Behaviors.Count;&nbsp;i&#43;&#43;)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataContractSerializerOperationBehavior&nbsp;dcsob&nbsp;=&nbsp;od.Behaviors[i]&nbsp;as&nbsp;DataContractSerializerOperationBehavior;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(dcsob&nbsp;!=&nbsp;null)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;od.Behaviors[i]&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;MyNewSerializerOperationBehavior(od);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;MyNewSerializerOperationBehavior&nbsp;:&nbsp;DataContractSerializerOperationBehavior&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;MyNewSerializerOperationBehavior(OperationDescription&nbsp;operation)&nbsp;:&nbsp;base(operation)&nbsp;<span class="js__brace">{</span>&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;override&nbsp;XmlObjectSerializer&nbsp;CreateSerializer(Type&nbsp;type,&nbsp;string&nbsp;name,&nbsp;string&nbsp;ns,&nbsp;IList&lt;Type&gt;&nbsp;knownTypes)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__operator">new</span>&nbsp;MyNewSerializer(type,&nbsp;base.CreateSerializer(type,&nbsp;name,&nbsp;ns,&nbsp;knownTypes));&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;override&nbsp;XmlObjectSerializer&nbsp;CreateSerializer(Type&nbsp;type,&nbsp;XmlDictionaryString&nbsp;name,&nbsp;XmlDictionaryString&nbsp;ns,&nbsp;IList&lt;Type&gt;&nbsp;knownTypes)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__operator">new</span>&nbsp;MyNewSerializer(type,&nbsp;base.CreateSerializer(type,&nbsp;name,&nbsp;ns,&nbsp;knownTypes));&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br><span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;<br></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p>Finally, the serializer. Implementing a new WCF serializer is a matter of finding a mapping between XML (the internal format used by WCF messages) and the format you want. For this optimized serialization, I&rsquo;ll use a very simple mapping which writes
+ the serialized object as binary data, wrapped inside a XML element. The mapping is done by subclassing
+<a href="http://msdn.microsoft.com/en-us/library/system.runtime.serialization.xmlobjectserializer.aspx">
+XmlObjectSerializer</a>, by overriding a few methods about reading / writing the object from / to XML reader / writers. Also, since there are types which can be used in the operation but aren&rsquo;t ready for optimized serialization, the serializer is holding
+ on to a reference to the original serializer from WCF, so that they can be used as well. So the implementation checks whether the type being serialized supports custom serialization; if it does, the new logic is used; otherwise it delegates the call to the
+ original serializer for that type.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public class MyNewSerializer : XmlObjectSerializer 
+{ 
+    const string MyPrefix = &quot;new&quot;; 
+    Type type; 
+    bool isCustomSerialization; 
+    XmlObjectSerializer fallbackSerializer; 
+    public MyNewSerializer(Type type, XmlObjectSerializer fallbackSerializer) 
+    { 
+        this.type = type; 
+        this.isCustomSerialization = typeof(ICustomSerializable).IsAssignableFrom(type); 
+        this.fallbackSerializer = fallbackSerializer; 
+    } 
+  
+    public override bool IsStartObject(XmlDictionaryReader reader) 
+    { 
+        if (this.isCustomSerialization) 
+        { 
+            return reader.LocalName == MyPrefix; 
+        } 
+        else 
+        { 
+            return this.fallbackSerializer.IsStartObject(reader); 
+        } 
+    } 
+  
+    public override object ReadObject(XmlDictionaryReader reader, bool verifyObjectName) 
+    { 
+        if (this.isCustomSerialization) 
+        { 
+            object result = Activator.CreateInstance(this.type); 
+            MemoryStream ms = new MemoryStream(reader.ReadElementContentAsBase64()); 
+            ((ICustomSerializable)result).InitializeFrom(ms); 
+            return result; 
+        } 
+        else 
+        { 
+            return this.fallbackSerializer.ReadObject(reader, verifyObjectName); 
+        } 
+    } 
+  
+    public override void WriteEndObject(XmlDictionaryWriter writer) 
+    { 
+        if (this.isCustomSerialization) 
+        { 
+            writer.WriteEndElement(); 
+        } 
+        else 
+        { 
+            this.fallbackSerializer.WriteEndObject(writer); 
+        } 
+    } 
+  
+    public override void WriteObjectContent(XmlDictionaryWriter writer, object graph) 
+    { 
+        if (this.isCustomSerialization) 
+        { 
+            MemoryStream ms = new MemoryStream(); 
+            ((ICustomSerializable)graph).WriteTo(ms); 
+            byte[] bytes = ms.ToArray(); 
+            writer.WriteBase64(bytes, 0, bytes.Length); 
+        } 
+        else 
+        { 
+            this.fallbackSerializer.WriteObjectContent(writer, graph); 
+        } 
+    } 
+  
+    public override void WriteStartObject(XmlDictionaryWriter writer, object graph) 
+    { 
+        if (this.isCustomSerialization) 
+        { 
+            writer.WriteStartElement(MyPrefix); 
+        } 
+        else 
+        { 
+            this.fallbackSerializer.WriteStartObject(writer, graph); 
+        } 
+    } 
+} 
+</pre>
+<div class="preview">
+<pre id="codePreview" class="js">public&nbsp;class&nbsp;MyNewSerializer&nbsp;:&nbsp;XmlObjectSerializer&nbsp;&nbsp;<br><span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">const</span>&nbsp;string&nbsp;MyPrefix&nbsp;=&nbsp;<span class="js__string">&quot;new&quot;</span>;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Type&nbsp;type;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;isCustomSerialization;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;XmlObjectSerializer&nbsp;fallbackSerializer;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;MyNewSerializer(Type&nbsp;type,&nbsp;XmlObjectSerializer&nbsp;fallbackSerializer)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.type&nbsp;=&nbsp;type;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.isCustomSerialization&nbsp;=&nbsp;<span class="js__operator">typeof</span>(ICustomSerializable).IsAssignableFrom(type);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.fallbackSerializer&nbsp;=&nbsp;fallbackSerializer;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;override&nbsp;bool&nbsp;IsStartObject(XmlDictionaryReader&nbsp;reader)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(<span class="js__operator">this</span>.isCustomSerialization)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;reader.LocalName&nbsp;==&nbsp;MyPrefix;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__operator">this</span>.fallbackSerializer.IsStartObject(reader);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;override&nbsp;object&nbsp;ReadObject(XmlDictionaryReader&nbsp;reader,&nbsp;bool&nbsp;verifyObjectName)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(<span class="js__operator">this</span>.isCustomSerialization)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;object&nbsp;result&nbsp;=&nbsp;Activator.CreateInstance(<span class="js__operator">this</span>.type);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MemoryStream&nbsp;ms&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;MemoryStream(reader.ReadElementContentAsBase64());&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((ICustomSerializable)result).InitializeFrom(ms);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;result;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__operator">this</span>.fallbackSerializer.ReadObject(reader,&nbsp;verifyObjectName);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;override&nbsp;<span class="js__operator">void</span>&nbsp;WriteEndObject(XmlDictionaryWriter&nbsp;writer)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(<span class="js__operator">this</span>.isCustomSerialization)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.WriteEndElement();&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.fallbackSerializer.WriteEndObject(writer);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;override&nbsp;<span class="js__operator">void</span>&nbsp;WriteObjectContent(XmlDictionaryWriter&nbsp;writer,&nbsp;object&nbsp;graph)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(<span class="js__operator">this</span>.isCustomSerialization)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MemoryStream&nbsp;ms&nbsp;=&nbsp;<span class="js__operator">new</span>&nbsp;MemoryStream();&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((ICustomSerializable)graph).WriteTo(ms);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;byte[]&nbsp;bytes&nbsp;=&nbsp;ms.ToArray();&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.WriteBase64(bytes,&nbsp;<span class="js__num">0</span>,&nbsp;bytes.Length);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.fallbackSerializer.WriteObjectContent(writer,&nbsp;graph);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;override&nbsp;<span class="js__operator">void</span>&nbsp;WriteStartObject(XmlDictionaryWriter&nbsp;writer,&nbsp;object&nbsp;graph)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(<span class="js__operator">this</span>.isCustomSerialization)&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.WriteStartElement(MyPrefix);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">else</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__operator">this</span>.fallbackSerializer.WriteStartObject(writer,&nbsp;graph);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;&nbsp;<br><span class="js__brace">}</span>&nbsp;&nbsp;<br>&nbsp;<br>&nbsp;<br></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<LINK href="../../../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<BODY>
+<p>
+    <br />
+    When&nbsp;a chart is rendered using using an IFrame, two&nbsp;web pages are 
+	used: one page that contains and renders the chart and another page that makes 
+	reference to the page that creates the chart.</p>
+<p>
+	The page that creates the chart is a simple ASPX page with a chart 
+	control.&nbsp;There are no special rendering options set and code-behind may 
+	still be used.&nbsp;This page may also contain other ASP.NET controls to 
+	manipulate the chart.</p>
+<p>
+	The second page that makes reference can be any webpage, including HTML and ASP, 
+    and contains 
+	an&nbsp;IFrame tag with its SRC attribute set to the name of the first page. For 
+    example, <b>&lt;IFrame src= 'UsingWithIFrame.aspx' ... &gt;</b>.</p>
+<p>This sample&nbsp;contains two web forms:</p>
+<p>#1 -&nbsp;UsingWithIFrame.aspx - contains the Chart control.<br />
+    #2 -&nbsp;UsingWithIFrame.htm - contains the&nbsp;IFrame tag.</BODY>
+</html>

@@ -1,0 +1,202 @@
+body
+{
+	font-size: 9pt;
+	color: #1a3b69;
+	font-family: Verdana, 'Trebuchet MS' , Arial;
+}
+
+.body
+{
+	margin: 0px;
+}
+
+p
+{
+	font-size: 9pt;
+	color: #1a3b69;
+}
+
+input
+{
+	font-family: Verdana, 'Trebuchet MS' , Arial;
+	font-size: 9pt;
+	color: black;
+}
+
+select 
+{
+	font-family: Verdana, 'Trebuchet MS' , Arial;
+	font-size: 9pt;
+	color: black;
+}
+ 
+td, .syminfo
+{
+	font-size: 9pt;
+	color: #1a3b69;
+}
+
+p.dscr
+{
+	font-size: 11pt;
+	width: 718px;
+	color: #1a3b69;
+    height: 18px;
+}
+
+H3, .h3
+{
+	color: #000080;
+	font-size: 11pt;
+}
+
+H4, .h4
+{
+	color: #000080;
+	font-size: 10pt;
+}
+
+H1, .h1
+{
+	color: #000080;
+	font-size: 14pt;
+}
+
+H2, .h2
+{
+	color: #000080;
+	font-size: 13pt;
+}
+
+H3, .h3
+{
+	color: #1a3b69;
+	font-size: 11pt;
+	font-weight:normal;
+
+}
+
+H6, .h6
+{
+	color: #000080;
+	font-weight:bold;
+}
+
+li
+{
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 8pt;
+	line-height:12pt;
+	color: black;
+}
+
+
+div
+{
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 8pt;
+	color: black;
+}
+
+a:hover
+{
+	text-decoration:underline ;
+}
+
+a:hover.light, a:active.light, a:visited.light, a:link.light
+{
+	color:WhiteSmoke;
+	text-decoration:none;
+}
+
+a:hover.light
+{
+	color: WhiteSmoke;
+	text-decoration: underline;
+}
+
+a:hover.black, a:active.black, a:visited.black, a:link.black, a:hover.black
+{
+	color: Black;
+	text-decoration:none;
+}
+
+.header
+{
+	font-weight: normal;
+	font-size: 16pt;
+	color: #000080;
+}
+
+.inputs
+{
+	left: 168px;
+	position: relative;
+}
+.labels
+{
+	left: 0px;
+	width: 168px;
+	position: relative;
+	text-align: right;
+}
+
+.sampleTable
+{
+	border-spacing:0px;
+	border-collapse:collapse;
+	margin: 0px;
+	padding: 2px;
+	width: 718px;
+	vertical-align:top;
+	text-align:left;
+}
+.controls
+{
+	border-spacing:0px;
+	border-collapse:collapse;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	width: 100%;
+	vertical-align:middle;
+}
+
+td.tdchart
+{
+	width:412px;
+}
+
+td.label
+{
+	width: 168px; 
+	text-align: right;
+	margin: 0px;
+	padding:0px;
+}
+
+td.label48
+{
+	width: 48px; 
+	text-align: right;
+	margin: 0px;
+	padding:0px;
+}
+
+span.validator
+{
+	margin-left:20px;
+}
+
+.spaceright
+{
+	position:relative;
+	left:4px;
+}
+
+.tdwhite
+{
+	color:White;
+}

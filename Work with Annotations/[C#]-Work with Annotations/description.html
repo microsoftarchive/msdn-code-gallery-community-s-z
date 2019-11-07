@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.css" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=3C7B146E4D24AB77A9D9006DC4F48F98" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=1070D4FA49BFA3C2DA44B1CB75FED7A7" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Work with Annotations</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Work with Annotations</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Microsoft Dynamics CRM, Dynamics 365 Customer Engagement
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            library assembly, Microsoft Dynamics CRM SDK
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Cloud, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">11/24/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div class="content">
+<div>
+<div class="topic">
+<h1 class="title">Sample: Upload, retrieve, and download an attachment</h1>
+<div id="mainSection">
+<div id="mainBody">
+<div class="introduction">
+<p>The annotations (notes) provide easy ways to append additional information to any record in the Microsoft Dynamics 365 database. An annotation (note) is a text entry that can be associated with any entity in Dynamics 365. However, you can associate annotations
+ with only those custom entities that are created with the HasNotes property set to true. You can update a custom entity, which is not enabled for notes, to have notes by setting the HasNotes property to true.</p>
+<p>An attached file can be any standard computer file format that includes Microsoft Office Word documents, Microsoft Office Excel spreadsheets, CAD files, and PDF files. An attachment can be associated with any object, other than an annotation (note), in Dynamics
+ 365.</p>
+<p>To upload or remove an attachment, use the&nbsp;<a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dynamics-general-ce-9" >IOrganizationService.Update</a>&nbsp;method or&nbsp;<a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.messages.updaterequest?view=dynamics-general-ce-9" >UpdateRequest</a>&nbsp;message,
+ setting the&nbsp;<strong>Annotation.Filename</strong>&nbsp;and&nbsp;<strong>Annotation.MimeType</strong>&nbsp;properties. This uploads an attachment that has been decoded into a base64 string format. The&nbsp;<a class="libraryLink" href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://msdn.microsoft.com/en-US/library/System.Convert.ToBase64String.aspx"  title="Auto generated link to System.Convert.ToBase64String">System.Convert.ToBase64String</a> method can be used
+ to convert the contents of a data file into a base64-formatted string. The maximum size of files that can be uploaded is determined by the&nbsp;<strong>Organization.MaxUploadFileSize</strong>&nbsp;property. This property is set in the&nbsp;<strong>Email</strong>&nbsp;tab
+ of the&nbsp;<strong>System Settings</strong>&nbsp;in the Dynamics 365 application. This setting limits the size of files that can be attached to email messages, notes, and web resources. The default setting is 5 MB.&nbsp;</p>
+<p>More information: <a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/annotation-note-entity">
+Annotation (note) entity</a>.</p>
+</div>
+<div class="section">
+<h2 class="heading">Requirements</h2>
+<div class="section">
+<p>For more information about the requirements for running the sample code provided in this SDK, see
+<a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-sample-helper-code" >
+Use the sample and helper code</a>.</p>
+</div>
+</div>
+<div class="section">
+<h2 class="heading">Demonstrates</h2>
+<div class="section">
+<p>This sample shows how to upload, retrieve, and download an attachment for an annotation using the
+<a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_IOrganizationService_Create_Microsoft_Xrm_Sdk_Entity_" >
+IOrganizationService.Create</a> and <a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve?view=dynamics-general-ce-9">
+IOrganizationService.Retrieve</a> methods.</p>
+<p>Click to see the <a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/sourcecode?fileId=182600&amp;pathId=1623756143">
+UploadAndDownloadAttachment.cs</a> sample file.</p>
+<p>More information: <a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-upload-retrieve-download-attachment">
+Sample: Upload, retrieve and download an attachment</a>.</p>
+</div>
+</div>
+<div class="section">
+<div class="codeSnippetContainer" id="code-snippet-1">
+<div class="code"></div>
+<hr class="codeDivider">
+</div>
+</div>
+<div class="LW_CollapsibleArea_Container">
+<div class="LW_CollapsibleArea_TitleDiv"><span class="LW_CollapsibleArea_Title">See Also</span>
+<div class="LW_CollapsibleArea_HrDiv">
+<hr class="LW_CollapsibleArea_Hr">
+</div>
+</div>
+<p><a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9" >IOrganizationService</a><br>
+<a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9" >Create</a><br>
+<a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrieve?view=dynamics-general-ce-9" >Retrieve</a><br>
+<a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/helper-code-serverconnection-class">Helper code: ServerConnection class</a><br>
+<a href="https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://code.msdn.microsoft.com/Annotation-Sample-9d797e21/https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/annotation-note-entity">Annotation (note) entity</a></p>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

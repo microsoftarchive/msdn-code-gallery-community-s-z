@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "my-quotes-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/myQuotes/MyQuotesWebPart.js",
+          "manifest": "./src/webparts/myQuotes/MyQuotesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MyQuotesWebPartStrings": "lib/webparts/myQuotes/loc/{locale}.js"
+  }
+}

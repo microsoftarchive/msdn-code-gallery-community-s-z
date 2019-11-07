@@ -1,0 +1,14 @@
+{
+  "name": "node_js_file_upload",
+  "version": "0.0.1",
+  "description": "Node_JS_File_Upload",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "multer": "^1.2.0"
+  },
+  "author": {
+    "name": "Sibeesh"
+  }
+}

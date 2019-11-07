@@ -1,0 +1,55 @@
+Imports System.Data.OleDb
+Imports System.Windows.Forms.DataVisualization.Charting
+...
+ 
+Private Sub PopulateData() 
+   ' Prepare database connection and query strings
+   Dim fileNameString As String = "c:\data\chartdata.mdb"
+   Dim myConnectionString As String = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString
+   Dim mySelectQuery As String = "SELECT * FROM DETAILEDSALES ORDER BY SaleDate"
+   
+   ' Open database connection
+   Dim myConnection As New OleDbConnection(myConnectionString)
+   Dim myCommand As New OleDbCommand(mySelectQuery, myConnection)
+   myCommand.Connection.Open()
+   
+   ' Create a database reader	
+   Dim myReader As OleDbDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection)
+   
+   ' Data bind to the reader
+   Chart1.Series("Sales").Points.DataBindXY(myReader, "SaleDate", myReader, "Net")
+   
+   ' Close the reader and the connection
+   myReader.Close()
+   myConnection.Close()
+   
+   ' Group series data points by interval.
+   Dim formula As String = "AVE, X:CENTER"
+   
+    If GroupingTypeList.Text = "Week" Then
+        Chart1.DataManipulator.Group(formula, 1, IntervalType.Weeks, _
+            "Sales", "Grouped Sales")
+    Else
+        If GroupingTypeList.Text = "2 Weeks" Then
+            Chart1.DataManipulator.Group(formula, 2, IntervalType.Weeks, _
+                "Sales", "Grouped Sales")
+        Else
+            If GroupingTypeList.Text = "Month" Then
+                Chart1.DataManipulator.Group(formula, 1, IntervalType.Months, _
+                    "Sales", "Grouped Sales")
+            End If
+        End If
+    End If
+   
+   ' Change chart type of the grouped series
+   If GroupingFormulaList.Text = "HiLoOpCl" Then
+      Chart1.Series("Grouped Sales").ChartType = SeriesChartType.Stock
+   Else
+      If GroupingFormulaList.Text = "HiLo" Then
+         Chart1.Series("Grouped Sales").ChartType = SeriesChartType.Spline;Range
+      Else
+         Chart1.Series("Grouped Sales").ChartType = SeriesChartType.Column
+      End If
+   End If
+End Sub 'PopulateData 
+...

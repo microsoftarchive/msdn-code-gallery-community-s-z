@@ -1,0 +1,114 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+// determine what content should be serialized in the browser.
+private SerializationContents Content;
+
+protected void Form_Init(object sender, System.EventArgs e)
+{
+    // Enabling or disabling the viewstate must be done very early in the loading of 
+    // a web page which is why it is done in the Page.Init event.  The preferred
+    // way to initialize the viewstate is done in the property browser so the 
+    // property value is persisted in the ASPX page.
+    Chart1.EnableViewState = false;
+}
+
+protected void Page_Load(object sender, System.EventArgs e)
+{
+    // enable or disable the control based on the selection of the check box
+	Persist.Enabled = EnableStateManagement.Checked;
+
+	// if no state managment is desired, reset the listbox to persist both
+	// appearance and data for when the enable SM checkbox is checked. This
+	// will prevent an exception from being thrown.
+	if(!Persist.Enabled)
+		Persist.SelectedIndex = 0;
+
+	if(Persist.SelectedItem.Value == "Default")
+		Content = SerializationContents.Default;
+	else
+		Content = SerializationContents.Data;
+
+	// if this is not a postback or if state management is not selected, then
+	// add the source chart data to the chart.
+	if(!EnableStateManagement.Checked || !IsPostBack)
+	{
+		// Load chart data from scratch
+		Data( Chart1.Series["Input"] );
+	}
+	else
+	{
+        // Read the persisted data from the browser.  Reading is only required when
+		// data has been explicitly written.
+        LoadChartState();
+	}
+
+	// Set chart types for input data series.  If this is not specified AND only
+	// Data is selected to be state managed, there will be no chart type set
+	// causing the default chart type, Column Chart, to be displayed.  When Data
+	// and Appearance is set, this is unneccessary.
+	if(Persist.SelectedItem.Value == "Data")
+		Chart1.Series["Input"].ChartType = SeriesChartType.Line;
+
+}
+
+/// <summary>
+/// Loads the state of the chart.
+/// </summary>
+private void LoadChartState()
+{
+    // Read the persisted data from the browser.  Reading is only required when
+    // data has been explicitly written.
+    if (this.ViewState["Chart"] is String)
+    {
+        StringReader sr = new StringReader(this.ViewState["Chart"] as String);
+        Chart1.Serializer.Content = Content;
+        if (Content == SerializationContents.Default)
+        {
+            Chart1.Serializer.IsResetWhenLoading = false;
+        }
+        Chart1.Serializer.Load(sr);
+        
+    }
+    if (Chart1.Series["Input"].Points.Count == 0)
+    {
+        Data(Chart1.Series["Input"]);
+    }
+}
+
+/// <summary>
+/// Saves the state of the chart.
+/// </summary>
+private void SaveChartState()
+{
+    // create a string writer to serialize only the data source series.
+    // If a selective serialization writing is used, a reader must also be
+    // used. If no selective serialization is required (all series data and 
+    // appearance), remove the reading and writing code.            
+    StringWriter sw = new StringWriter();
+    Chart1.Serializer.Content = Content;
+    Chart1.Serializer.Save(sw);
+
+    // Writing the content in page ViewState 
+
+    this.ViewState["Chart"] = sw.ToString();
+}
+
+/// <summary>
+/// Raises the Page.PreRenderComplete event before the page is rendered and 
+/// saves the chart state, if applicable.
+/// </summary>
+protected override void OnPreRenderComplete(EventArgs e)
+{
+
+    if (EnableStateManagement.Checked)
+        SaveChartState();
+    else
+    {
+        this.ViewState.Remove("Chart");
+    }
+    base.OnPreRenderComplete(e);
+}
+
+...	
+}
