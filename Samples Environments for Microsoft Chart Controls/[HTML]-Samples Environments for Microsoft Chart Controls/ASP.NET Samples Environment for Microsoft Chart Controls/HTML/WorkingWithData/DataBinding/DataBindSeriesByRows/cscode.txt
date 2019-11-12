@@ -1,0 +1,63 @@
+using System.Web.UI.DataVisualization.Charting;
+using System.Data;
+using System.Data.OleDb;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Resolve the address to the Access database
+	string fileNameString = this.MapPath(".");
+	fileNameString += "..\\..\\..\\data\\chartdata.mdb";
+
+	// Initialize a connection string    
+	string myConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString;
+
+	// Define the database query	
+	string mySelectQuery="SELECT * FROM SALESCOUNTS;";
+
+	// Create a database connection object using the connection string	
+	OleDbConnection myConnection = new OleDbConnection(myConnectionString);
+	
+	// Create a database command on the connection using query	
+	OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+	
+	// Open the connection	
+	myCommand.Connection.Open();
+	
+	// Initializes a new instance of the OleDbDataAdapter class
+	OleDbDataAdapter myDataAdapter = new OleDbDataAdapter();
+	myDataAdapter.SelectCommand = myCommand;
+
+	// Initializes a new instance of the DataSet class
+	DataSet myDataSet = new DataSet();
+
+	// Adds rows in the DataSet
+	myDataAdapter.Fill(myDataSet, "Query");	
+	
+	foreach(DataRow row in myDataSet.Tables["Query"].Rows)
+	{
+		// For each Row add a new series
+		string seriesName = row["SalesRep"].ToString();
+		Chart1.Series.Add(seriesName);
+		Chart1.Series[seriesName].ChartType = SeriesChartType.Line;
+		Chart1.Series[seriesName].BorderWidth = 2;
+
+		for(int colIndex = 1; colIndex < myDataSet.Tables["Query"].Columns.Count; colIndex++)
+		{
+			// For each column (column 1 and onward) add the value as a point
+			string columnName = myDataSet.Tables["Query"].Columns[colIndex].ColumnName;
+			int YVal = (int) row[columnName];
+
+			Chart1.Series[seriesName].Points.AddXY(columnName, YVal);
+		}
+	}
+
+	DataGrid.DataSource = myDataSet;
+	DataGrid.DataBind();
+
+	// Closes the connection to the data source. This is the preferred 
+	// method of closing any open connection.
+	myCommand.Connection.Close();
+
+}
+...

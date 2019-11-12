@@ -1,0 +1,13 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    ...
+    
+    // Set series tool tips
+    Chart1.Series["My series"].ToolTip = "X value \t= #VALX{d}\nY value \t= #VALY{C}\nRadius \t= #VALY2{P}";
+    ...	
+    	
+}
+...

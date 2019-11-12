@@ -1,0 +1,33 @@
+<%@ Register TagPrefix="asp" Namespace="System.Web.UI.DataVisualization.Charting" Assembly="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" %>
+<html>
+	<body>
+		<asp:chart ImageLocation="..\..\TempImages\ChartPic_#SEQ(300,38)" id="Chart1" runat="server" >
+			<series>
+				<asp:Series ChartTypeName="Bar" Name="Bar Chart" BorderColor="Black" ForeColor="Plum" ShadowOffset="2">
+					<points>
+						<asp:DataPoint YValues="45" />
+						<asp:DataPoint YValues="34" />
+						<asp:DataPoint YValues="67" />
+						<asp:DataPoint YValues="31" />
+						<asp:DataPoint YValues="27" />
+						<asp:DataPoint YValues="87" />
+						<asp:DataPoint YValues="45" />
+						<asp:DataPoint YValues="32" />
+					</points>
+				</asp:Series>
+			</series>
+			<borderskin BackColor="Plum" SkinStyle="FrameTitle7"></borderskin>
+			<chartareas>
+				<asp:ChartArea BorderColor="LightGray" Name="Default">
+					<axisy>
+						<MajorGrid LineColor="LightGray" />
+					</axisy>
+					<axisx Reverse="True">
+						<MajorGrid Enabled="False" />
+						<LabelStyle IsEndLabelVisible="False" />
+					</axisx>
+				</asp:ChartArea>
+			</chartareas>
+		</asp:chart>
+	</body>
+</html>

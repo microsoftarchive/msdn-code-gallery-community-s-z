@@ -1,0 +1,43 @@
+﻿@model IEnumerable<User>
+
+<div class="bg-primary panel-body">
+    <h4>
+        User Accounts
+    </h4>
+</div>
+
+<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+<table class="table table-condensed table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3" class="text-center">
+                No User Accounts
+            </td>
+        </tr>
+    }
+    else
+    {
+        foreach (User user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>
+                    <a class="btn btn-success" asp-controller="SuperAdmin" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                    <a class="btn btn-danger" asp-controller="SuperAdmin" asp-action="Delete" asp-route-id="@user.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<a class="btn btn-primary" asp-action="Create">Create</a>
+<a class="btn btn-primary" asp-controller="Home" asp-action="Index">Home</a>

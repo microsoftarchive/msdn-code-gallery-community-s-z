@@ -1,0 +1,17 @@
+<head></head>
+	<LINK href="../../../Styles.css" type="text/css" rel="stylesheet">
+<p><br>
+	The Customize event is triggered when all chart data has been added and all chart 
+	properties have been set.</p>
+<p>The most important use of this event is the adjustment 
+of automatically calculated property values (properties that have been set 
+to "Auto"). For example, Minimum and Maximum properties 
+	in the axis are set to "Auto" by default. Just before the chart is painted, the axis 
+	automatically calculates the maximum and minimum scale values by examining 
+	the series data.
+</p>
+<p>When the Customize event is triggered, all properties are already 
+	calculated and stored as explicit values. If you make any changes to an element 
+    in the chart area, you may need to recalculate the axis properties so that the 
+    chart area is rendered correctly. To do this, use the RecalculateAxesScale method.
+</p>

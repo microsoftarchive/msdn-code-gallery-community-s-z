@@ -1,0 +1,47 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Populate series
+   Dim valueY As Double() =  {120, 530, 670, 430, 860, 240, 350, 890, 540, 180}
+   Dim valueX As String() =  {"D", "A", "B", "A", "C", "C", "B", "A", "C", "B"}
+   Chart1.Series("Original").Points.DataBindXY(valueX, valueY)
+   Chart1.Series("Sorted").Points.DataBindXY(valueX, valueY)
+   
+   ' Sort series data points
+   Chart1.DataManipulator.Sort(New MyComparer(), "Sorted")
+   
+   ' Use point index for drawing the chart
+   Chart1.Series("Sorted").IsXValueIndexed = True
+   
+End Sub 'Page_Load 
+...
+
+'/ <summary>
+'/ User defined sorting order logic
+'/ </summary>
+Public Class MyComparer
+   Implements IComparer
+   
+   ' This function should return a value less than zero if the first object is less than the second,
+   '  zero if they are equal and a value greater than zero if the first object is greater than the second
+   Public Function Compare(a As Object, b As Object) As Integer Implements IComparer.Compare
+   
+      Dim pointA As DataPoint = CType(a, DataPoint)
+      Dim pointB As DataPoint = CType(b, DataPoint)
+      
+      ' Compare axis labels first
+      Dim result As Integer = pointA.AxisLabel.CompareTo(pointB.AxisLabel)
+      
+      ' If axis labels are equal - compare Y values
+      If result = 0 Then
+         result = pointA.YValues(0).CompareTo(pointB.YValues(0))
+      End If
+      
+      Return result
+      
+   End Function 'Compare
+   
+End Class 'MyComparer
+...

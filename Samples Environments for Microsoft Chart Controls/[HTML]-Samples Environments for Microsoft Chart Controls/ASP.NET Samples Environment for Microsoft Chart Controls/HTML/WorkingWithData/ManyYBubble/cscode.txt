@@ -1,0 +1,28 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e) Handles MyBase.Load
+{
+   
+    // Create a new random number generator
+    Random rnd = new Random();
+
+    // Data points X value is using current date
+    DateTime    date = DateTime.Now.Date;
+
+    // Add points to the stock chart series
+    for(int index = 0; index < 10; index++)
+    {
+        Chart1.Series["Series 1"].Points.AddXY(
+            date,                // X value is a date
+            rnd.Next(40, 50),    // High Y value
+            rnd.Next(10, 20),    // Low Y value
+            rnd.Next(20, 40),    // Open Y value
+            rnd.Next(20, 40) );    // Close Y value
+
+        // Add 1 day to our X value
+        date = date.AddDays(1);
+    }
+
+}
+...

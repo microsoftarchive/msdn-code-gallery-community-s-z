@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Approval" Url="wfsvc/73C27777198F43B4A7C0FE6753ADA4C4">
+    <File Url="Workflow.xaml" Type="GhostableInLibrary" Path="Approval\Workflow.xaml" Level="Published" DoGUIDFixUp="TRUE">
+      <Property Name="ContentTypeId" Value="0x01002A2479FF33DD4BC3B1533A012B653717004C4A72D4775DB04F8979AE7A4A568F20" />
+      <Property Name="ContentType" Value="WorkflowServiceDefinition" />
+      <Property Name="_ModerationStatus" Value="0" />
+      <Property Name="FileDirRef" Value="wfsvc/73C27777198F43B4A7C0FE6753ADA4C4" />
+      <Property Name="FSObjType" Value="0" />
+      <Property Name="FileLeafRef" Value="workflow.xaml" />
+
+      <Property Name="isReusable" Value="true" />
+      <Property Name="RequiresInitiationForm" Value="false" />
+      <Property Name="RequiresAssociationForm" Value="true" />
+
+      <Property Name="WSGUID" Value="{73C27777-198F-43B4-A7C0-FE6753ADA4C4}" />
+      <Property Name="WSPublishState" Value="3" />
+      <Property Name="WSDisplayName" Value="Approval" />
+      <Property Name="WSDescription" Value="Approval" />
+
+      <Property Name="RestrictToType" Value="List" />
+      <Property Name="DisableAutoStartCreate" Value="false" />
+      <Property Name="DisableManualStart" Value="false" />
+      <Property Name="AssociationUrl" Value="wfsvc/73C27777198F43B4A7C0FE6753ADA4C4/Approval/AssociationForm.aspx" />
+      <Property Name="InitiationUrl" Value="wfsvc/73C27777198F43B4A7C0FE6753ADA4C4/Approval/InitForm1.aspx" />
+    </File>
+    <File Path="Approval\AssociationForm.aspx" Url="Approval/AssociationForm.aspx" />
+  </Module>
+  <ListInstance FeatureId="{2c63df2b-ceab-42c6-aeff-b3968162d4b1}"
+                TemplateType="4501"
+                Title="wfsvc"
+                Description="This list instance is used by SharePoint to keep track of workflows. Do not modify."
+                Url="wfsvc"
+                RootWebOnly="FALSE" />
+</Elements>
+

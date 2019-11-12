@@ -1,0 +1,131 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Financial">
+  <Title>Moving Averages</Title> 
+  <Thumbnail>MovingAverages\thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Moving Averages</ShortBlurb> 
+  <Content>MovingAverages\MovingAverages.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">MovingAverages\Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">MovingAverages\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">MovingAverages\vbcode.txt</InfoPage>    
+  </InfoPages>
+  <Keywords>
+    <Keyword>Formulas, Moving Averages</Keyword>
+    <Keyword>Financial, Moving Averages formulas</Keyword>
+    <Keyword>Moving Average formulas</Keyword>
+    <Keyword>Exponential Moving Average formula</Keyword>
+    <Keyword>Triangular Moving Average formula</Keyword>
+    <Keyword>Weighted Moving Average formula</Keyword>
+  </Keywords>   
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "Financial">
+  <Title>Price Indicators</Title> 
+  <Thumbnail>PriceIndicators\thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Price Indicators</ShortBlurb> 
+  <Content>PriceIndicators\PriceIndicators.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">PriceIndicators\Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">PriceIndicators\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">PriceIndicators\vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Formulas, Price Indicators</Keyword>
+    <Keyword>Financial, Price Indicator formulas</Keyword>
+    <Keyword>Price Indicator  formulas</Keyword>
+    <Keyword>Typical Price formula</Keyword>
+    <Keyword>Median Price formula</Keyword>
+    <Keyword>Weighted Close formula</Keyword>
+  </Keywords>   
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "Financial">
+  <Title>Volume Indicators</Title> 
+  <Thumbnail>VolumeIndicators\thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Volume Indicators</ShortBlurb> 
+  <Content>VolumeIndicators\VolumeIndicators.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">VolumeIndicators\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">VolumeIndicators\vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Formulas, Volume Indicators</Keyword>
+    <Keyword>Financial, Volume Indicator formulas</Keyword>
+    <Keyword>Volume Indicator formulas</Keyword>
+    <Keyword>Accumulation Distribution formula</Keyword>
+    <Keyword>Chaikin Oscillator formula</Keyword>
+    <Keyword>Ease of Movement formula</Keyword>
+    <Keyword>Money Flow formula</Keyword>
+    <Keyword>Negative Volume Index formula</Keyword>
+    <Keyword>On Balance Volume formula</Keyword>
+    <Keyword>Positive Volume Index formula</Keyword>
+    <Keyword>Price Volume Trend formula</Keyword>
+  </Keywords> 
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "Financial">
+  <Title>Technical Price Indicators</Title> 
+  <Thumbnail>TechnicalPriceIndicators\thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Technical Price Indicators</ShortBlurb> 
+  <Content>TechnicalPriceIndicators\TechnicalPriceIndicators.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">TechnicalPriceIndicators\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">TechnicalPriceIndicators\vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Formulas, Technical Price Indicators</Keyword>
+    <Keyword>Financial, Technical Price Indicator formulas</Keyword>
+    <Keyword>Technical Price Indicator formulas</Keyword>
+    <Keyword>Average True Range formula</Keyword>
+    <Keyword>Commodity Channel Index formula</Keyword>
+    <Keyword>Detrended Price Oscillator formula</Keyword>
+    <Keyword>Mass Index formula</Keyword>
+    <Keyword>MACD formula</Keyword>
+    <Keyword>Performance formula</Keyword>
+    <Keyword>Rate of Change formula</Keyword>
+    <Keyword>Relative Strength Index formula</Keyword>
+    <Keyword>Standard Deviation formula</Keyword>
+    <Keyword>Stochastic Indicator formula</Keyword>
+    <Keyword>TRIX formula</Keyword>
+    <Keyword>Volatility Chaikins formula</Keyword>
+    <Keyword>William's %R formula</Keyword>
+  </Keywords>    
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "Financial">
+  <Title>Range Indicators</Title> 
+  <Thumbnail>RangeIndicators\thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Range Indicators</ShortBlurb> 
+  <Content>RangeIndicators\RangeIndicators.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">RangeIndicators\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">RangeIndicators\vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Formulas, Range Indicators</Keyword>
+    <Keyword>Financial, Range Indicator formulas</Keyword>
+    <Keyword>Range Indicator formulas</Keyword>
+    <Keyword>Bollinger Bands formula</Keyword>
+    <Keyword>Envelopes formula</Keyword>
+  </Keywords>    
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "Financial">
+  <Title>Forecasting</Title> 
+  <Thumbnail>Forecasting\thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Forecasting</ShortBlurb> 
+  <Content>Forecasting\Forecasting.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">Forecasting\cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">Forecasting\vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Formulas, Time Series/Forecasting</Keyword>
+    <Keyword>Financial, Time Series/Forecasting formulas</Keyword>
+    <Keyword>Time Series/Forecasting formulas</Keyword>
+    <Keyword>Regression Analysis formula</Keyword>
+    <Keyword>Trend analysis formula</Keyword>
+  </Keywords> 
+</SampleConfig>
+</SampleConfigs>

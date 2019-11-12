@@ -1,0 +1,52 @@
+<?xml version="1.0" ?> 
+<TOCNodes>
+
+  <TOCNode ID="ChartTypes" Priority="400">
+    <Title>Chart Types</Title>
+  </TOCNode>
+
+  <TOCNode ID="BarColumnCharts" ParentNodeID="ChartTypes" Priority="100">
+    <Title>Bar and Column Charts</Title>
+  </TOCNode>
+
+  <TOCNode ID="LineCharts" ParentNodeID="ChartTypes" Priority="150">
+    <Title>Line Charts</Title>
+  </TOCNode>
+
+  <TOCNode ID="AreaCharts" ParentNodeID="ChartTypes" Priority="200">
+    <Title>Area Charts</Title>
+  </TOCNode>
+
+  <TOCNode ID="PieDoughnutCharts" ParentNodeID="ChartTypes" Priority="250">
+    <Title>Pie and Doughnut Charts</Title>
+  </TOCNode>
+
+  <TOCNode ID="PointCharts" ParentNodeID="ChartTypes" Priority="300">
+    <Title>Point Charts</Title>
+  </TOCNode>
+
+  <TOCNode ID="RangeCharts" ParentNodeID="ChartTypes" Priority="350">
+    <Title>Range Charts</Title>
+  </TOCNode>
+
+  <TOCNode ID="CircularCharts" ParentNodeID="ChartTypes" Priority="400">
+    <Title>Circular Charts</Title>
+  </TOCNode>
+
+  <TOCNode ID="PyramidFunnelCharts" ParentNodeID="ChartTypes" Priority="450">
+    <Title>Accumulation Charts</Title>
+  </TOCNode>
+  
+  <TOCNode ID="DataDistributionCharts" ParentNodeID="ChartTypes" Priority="500">
+    <Title>Data Distribution Charts</Title>
+  </TOCNode>   
+
+  <TOCNode ID="JapanCharts" ParentNodeID="ChartTypes" Priority="600">
+    <Title>Price Change Financial Charts</Title>
+  </TOCNode>
+
+  <TOCNode ID="CombinationalCharts" ParentNodeID="ChartTypes" Priority="700">
+    <Title>Combinational Charts</Title>
+  </TOCNode>
+
+</TOCNodes>

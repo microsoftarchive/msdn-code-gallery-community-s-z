@@ -1,0 +1,21 @@
+<p>
+    <br />
+        When&nbsp;a chart is rendered using binary streaming,&nbsp;two&nbsp;web pages are 
+	used: one page that creates the Chart control and another that makes reference to 
+    the page with the Chart control.&nbsp;</p>
+<p>The page that that creates the Chart control is a simple ASPX page, and the Chart 
+    control&#39;s rendering method is set to <b>BinaryStreaming</b>.&nbsp;On this page, 
+	all HTML tags are removed, leaving only the Chart definition in XML.&nbsp;You 
+    can still use code-behind.</p>
+The second page that makes reference can be any webpage, including HTML and ASP, 
+    and contains 
+	an&nbsp;IMG tag with its SRC attribute set to the name of the first page. For 
+    example, <b>&lt;img src='UsingWithLegacyImage.aspx'&gt;</b>.&nbsp;&nbsp;This rendering 
+	method is fast because it does not require any disk space or security rights for 
+    writing data 
+	to the temporary image files.</p>
+<p>This sample&nbsp;uses a webform and a legacy HTML page:
+</p>
+<p>#1 -&nbsp;UsingWithLegacyImage.aspx - contains the Chart control.<br />
+    #2 -&nbsp;UsingWithILegacy.htm - contains the&nbsp;image tag.</p>
+

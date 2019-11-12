@@ -1,0 +1,17 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set Legend's visual attributes
+    Chart1.Legends("Default").BackColor = Color.MediumSeaGreen
+    Chart1.Legends("Default").BackSecondaryColor = Color.Green
+    Chart1.Legends("Default").BackGradientStyle = GradientStyle.DiagonalLeft
+    
+    Chart1.Legends("Default").BorderColor = Color.Black
+    Chart1.Legends("Default").BorderWidth = 2
+    Chart1.Legends("Default").BorderDashStyle = ChartDashStyle.Solid
+    
+    Chart1.Legends("Default").ShadowOffset = 2
+   
+End Sub 'Page_Load

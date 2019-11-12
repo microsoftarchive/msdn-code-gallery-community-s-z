@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" Title="Contact Details" BackgroundColor="#D5E7FA"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SQLiteSample.Views" x:Class="SQLiteSample.Views.DetailsPage">
+    <StackLayout Padding="20" Spacing="12">
+        <local:ContactView />
+         <Button Text="Update" BorderRadius="0" Margin="0,30,0,0" FontAttributes="Bold" TextColor="White" BackgroundColor="#5989B5" Command="{Binding UpdateContactCommand}" />  
+        <Button Text="Delete" BorderRadius="0" Margin="0,30,0,0" FontAttributes="Bold" TextColor="White" BackgroundColor="#5989B5" Command="{Binding DeleteContactCommand}" />  
+    </StackLayout>
+</ContentPage>

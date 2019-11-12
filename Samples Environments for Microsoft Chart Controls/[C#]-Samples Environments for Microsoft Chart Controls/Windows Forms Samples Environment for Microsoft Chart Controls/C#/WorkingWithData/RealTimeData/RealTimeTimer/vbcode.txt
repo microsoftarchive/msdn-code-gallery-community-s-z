@@ -1,0 +1,39 @@
+Imports System.Windows.Forms.DataVisualization.Charting
+...
+
+Private random As New Random()
+Private pointIndex As Integer = 0
+...
+
+Private Sub timerRealTimeData_Tick(sender As Object, e As System.EventArgs)
+   ' Define some variables
+   Dim numberOfPointsInChart As Integer = 200
+   Dim numberOfPointsAfterRemoval As Integer = 150
+   
+   ' Simulate adding new data points
+   Dim numberOfPointsAddedMin As Integer = 5
+   Dim numberOfPointsAddedMax As Integer = 10
+   Dim pointNumber As Integer
+   For pointNumber = 0 To (random.Next(numberOfPointsAddedMin, numberOfPointsAddedMax)) - 1
+      chart1.Series(0).Points.AddXY(pointIndex + 1, random.Next(1000, 5000))
+   Next pointNumber
+   
+   ' Adjust Y & X axis scale
+   chart1.ResetAutoValues()
+   
+   ' Keep a constant number of points by removing them from the left
+   While chart1.Series(0).Points.Count > numberOfPointsInChart
+      ' Remove data points on the left side
+      While chart1.Series(0).Points.Count > numberOfPointsAfterRemoval
+         chart1.Series(0).Points.RemoveAt(0)
+      End While
+      
+      ' Adjust X axis scale
+      chart1.ChartAreas("Default").AxisX.Minimum = pointIndex - numberOfPointsAfterRemoval
+      chart1.ChartAreas("Default").AxisX.Maximum = chart1.ChartAreas("Default").AxisX.Minimum + numberOfPointsInChart
+   End While
+   
+   ' Invalidate chart
+   chart1.Invalidate()
+End Sub 'timerRealTimeData_Tick
+...

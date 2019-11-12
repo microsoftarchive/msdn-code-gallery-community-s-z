@@ -1,0 +1,8 @@
+﻿.ui-igtreegrid-expandcell{display:inline-block;margin:0 6px 0 0;min-width:16px;cursor:pointer}
+.ui-igtreegrid-expansion-indicator{width:16px;height:16px;float:left;margin:0}
+.ui-igtreegrid-expansion-column-container{display:inline-block;min-width:10px;cursor:pointer}
+.ui-igtreegrid-record-not-matchfiltering{opacity:.5;-ms-filter:"alpha(opacity=50)";-moz-opacity:.5;filter:alpha(opacity=50)}
+.ui-igtreegrid-contextrow td{padding:4px;font-size:.8em}
+.ui-igtreegrid-contextrow-icon{display:inline-block;margin-right:5px;vertical-align:bottom}
+.ui-igtreegrid-contextrow-context{float:left}
+.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-checked .ui-icon-check,.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-checked .ui-icon-check-p,.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-checked .ui-icon-check-f,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-checked .ui-icon-check .ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-checked .ui-icon-check-p .ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-checked .ui-icon-check-f{opacity:1;filter:alpha(opacity=100)}

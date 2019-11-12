@@ -1,0 +1,15 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Disable auto-fitting of the legend text
+    Chart1.Legends["Default"].IsTextAutoFit = false;
+
+    // Set new legend text font
+    Chart1.Legends["Default"].Font = new Font("Arial", 10, FontStyle.Bold);
+
+    // Set legend text color
+    Chart1.Legends["Default"].ForeColor = Color.Black;
+}
+...

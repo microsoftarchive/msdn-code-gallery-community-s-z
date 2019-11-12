@@ -1,0 +1,9 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Perform FTest
+    FTestResult result = chart1.DataManipulator.Statistics.FTest( 0.95, "FirstGroup", "SecondGroup" ); 
+}
+...

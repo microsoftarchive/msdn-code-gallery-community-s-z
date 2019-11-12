@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<LINK href="../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<p>Data can be:</p>
+		<UL>
+			<LI>
+			added at either run-time or design-time (data binding is available at 
+			design-time).
+			<LI>
+			automatically adjusted for missing data using empty point support.
+			<LI>
+			manipulated using financial or statistical formulas.
+			<LI>
+			manipulated using copy, filter, group, merge, and split operations.
+			<LI>
+				displayed using true&nbsp;DateTime values.</LI></UL>
+		<H3>Chart Data Basics</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>All data is plotted as a series, and each series consists of a related group of 
+				data points.</p>
+			<p>Each data point consists of:</p>
+			<UL>
+				<LI>
+				one or more Y values, which are the value(s) of the data points;
+				<LI>
+					an optional X value that may determine where along the X axis a&nbsp;point is 
+					plotted.</LI></UL>
+			<p>Most chart types use one Y value.&nbsp; However, charts such as bubble, 
+				candlestick, range and stock chart types&nbsp;require more than one Y value 
+				since one data point consists of multiple values. For example, to plot one 
+				stock chart column four values are required: high, low, open and close.</p>
+		</BLOCKQUOTE>
+		<H3>Adding Data</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>There are two ways to add data to a chart: using data binding or non-data 
+				binding techniques.&nbsp;&nbsp;Both&nbsp;methods can be used at 
+				either&nbsp;design-time or run-time.</p>
+			<H4>Data Binding</H4>
+			<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+				<p>Data binding can be accomplished at design-time using the Data Source 
+                    Configuration Wizard. To use the Data Source Configuration Wizard, open the Chart 
+                    control&#39;s smart tag, and then select <b>&lt;New data source...&gt;</b> in the 
+                    drop-down list (see the figure below).</p>
+				<p align="left"><IMG alt="Data Binding" src="SmartTag.png" border="0"><BR>
+					</p>
+				<p>Data&nbsp;binding at run-time is very powerful.&nbsp;There are a variety of 
+					binding methods that can be used, starting from simple and ranging to more 
+					complex.</p>
+			</BLOCKQUOTE>
+			<H4>Data Sources</H4>
+			<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+				<p>The Chart control can bind to a variety of data sources, 
+					including all&nbsp;standard or custom objects that implement 
+					the&nbsp;IEnumerable interface. For example: DataView, DataReader,&nbsp;DataSet, DataRow, DataColumn, Array, 
+					List, SqlCommand, OleDbCommand, SqlDataAdapter, and OleDbDataAdapter objects. </p>
+			</BLOCKQUOTE></BLOCKQUOTE>
+		<H3>Missing and Empty Data</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>A data source may contain missing data.&nbsp;The Chart 
+				control handles this by optionally representing missing data with empty 
+				points (see the figure below).</p>
+			<p align="left"><IMG alt="Data Binding" src="MissingPoints.PNG" border="0"><BR>
+				</p>
+		</BLOCKQUOTE>
+		<H3>Data Manipulation</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>The Chart control can perform common data manipulation tasks, such as copying, filtering, grouping, merging, and splitting data. 
+                It also includes numerous statistical and financial 
+				formulas, enabling you to get the most out of your data.</p>
+		</BLOCKQUOTE>
+		<H3>DateTime Support</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>The Chart control can use DateTime 
+				objects for date/time values. It can then render the date/time format that you 
+                specify, making the rendered chart easy to read.</p>
+		</BLOCKQUOTE>
+	</body>
+</html>

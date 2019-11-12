@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Downloads";
+}
+
+<h2>Downloads</h2>
+
+
+@model List<string>
+<h2>Downloads</h2>
+<table>
+    <tr>
+        <th>File Name</th>
+        <th>Link</th>
+    </tr>
+    @for (var i = 0; i <= Model.Count - 1; i++)
+    { 
+        <tr>
+            <td>@Model[i].ToString() </td>
+            <td>@Html.ActionLink("Download", "Download", new { ImageName = @Model[i].ToString() }) </td>
+        </tr>
+    }
+</table>

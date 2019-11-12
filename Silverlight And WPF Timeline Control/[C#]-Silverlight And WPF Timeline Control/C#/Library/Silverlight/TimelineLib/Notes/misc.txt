@@ -1,0 +1,99 @@
+﻿Original:
+	http://www.simile-widgets.org/timeline/examples/index.html
+
+timeline screenshots:
+	http://stackoverflow.com/questions/4287646/how-can-i-mimic-inertial-scrolling-in-a-custom-uiview-when-i-cant-use-uiscrollvi
+
+timeline mix with menu:
+	http://cahokiamounds.org/explore/timeline
+
+Connections, Grouping, Ranges, Selections
+	http://www.appleinsider.com/articles/10/04/18/adobe_slips_mobile_flash_player_10_1_to_second_half_of_2010.html
+	http://docs.idvsolutions.com/vf/5.0/default.htm?turl=Documents%2Fworkingwithdatesandthevfxflashtimeline.htm
+	http://www.xtimeline.com/timeline/History-of-California-1
+
+	branches (software)
+		http://www.blackcj.com/blog/wp-content/uploads/2010/02/Web_development_timeline.png
+
+	Custom intervals:
+		http://science.nationalgeographic.com/science/prehistoric-world/prehistoric-time-line/
+
+	Selection and Grouping by Rows:
+		http://vis.mediaartresearch.at/webarchive/public/view/mid:47
+		http://www.simile-widgets.org/timeline/examples/religions/religions.html
+
+Hybrids (Mix with map and other controls):
+	http://www.idvsolutions.com/Demos/PiracyWatch.aspx
+	http://www.nasa.gov/externalflash/50th/main.html
+	http://www.trincoll.edu/depts/educ/css/demo/animated.html
+
+	Space & time
+		http://24timezones.com/
+
+Floating bands:
+	http://www.trincoll.edu/depts/educ/css/demo/animated.html
+
+Processes:
+	http://i.usatoday.net/tech/graphics/iss_timeline/flash.htm
+
+Art:
+	http://pingtalks.com/wp-content/uploads/2011/08/IMG_20110729_170226.jpg
+	http://royal.pingdom.com/2010/02/24/google-facts-and-figures-massive-infographic/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+RoyalPingdom+%28Royal+Pingdom%29
+	http://meme.yahoo.com/pennolson/p/NZmKb2l/
+	http://www.nike.com/jumpman23/historyofflight/
+
+	Simple, but nice:
+		http://www.npr.org/2011/01/26/4748778/timeline-americas-space-program
+		http://buzzaldrin.com/the-man/timeline/
+
+
+Zoom, Search, Mouse Tracking, Styling, Collapse/Expand:
+	http://www.bbc.co.uk/history/interactive/timelines/british/index_embed.shtml
+	http://www.similarsites.com/goto/dipity.comg
+
+	Scroll by X, preset intervals
+		http://www.americanstandard-us.com/companyinfo/history/
+
+	Dynamic scrolling:
+		http://macresearch.org/dynamics-scrolling
+
+3D (transforms, angles) & Animation
+	http://www.beedocs.com/timeline3D/
+	http://mac-antivirus-software-review.toptenreviews.com/history-of-macintosh-viruses.html
+	http://velluminous.org/portfolio/detail/?26
+	http://www.nike.com/jumpman23/historyofflight/
+	http://www.guardian.co.uk/world/interactive/2011/mar/22/middle-east-protest-interactive-timeline
+
+	Animation:
+		http://www.myflashxml.com/dynamic_photo_gallery/timeline2n/index.html
+		http://www.nike.com/jumpman23/historyofflight/
+		http://www.xtimeline.com/timeline/History-of-California-1
+		http://www.guardian.co.uk/world/interactive/2011/mar/22/middle-east-protest-interactive-timeline
+
+Static:
+	http://www.npr.org/2011/01/26/4748778/timeline-americas-space-program
+	http://buzzaldrin.com/the-man/timeline/
+	http://www.abc.net.au/innovation/gallipoli/gallipoli2.htm
+
+	Spirals and Curcles:
+		http://www.bing.com/images/search?q=3d+and+timeline&view=detail&id=B0FF8BAAE2C7B78C9EDF49517D1557D129BF885F&first=300&qpvt=3d+and+timeline&FORM=IDFRIR
+
+Manual:
+	(timeline of macs) http://en.wikipedia.org/wiki/Timeline_of_Apple_Macintosh_models
+	http://buzzaldrin.com/the-man/timeline/
+	http://www.nike.com/jumpman23/historyofflight/
+	http://www.abc.net.au/innovation/gallipoli/gallipoli2.htm
+	http://www.datavis.ca/gallery/timelines.php
+
+Timeline makers:
+	http://www.softschools.com/teacher_resources/timeline_maker/
+	http://www.dipity.com/
+	http://www.capzles.com/
+	http://www.xtimeline.com/index.aspx
+
+similar:
+	http://www.mauriciogiraldo.com/vgline/beta/#/19
+
+
+Other interesting controls:
+http://avalondock.codeplex.com/

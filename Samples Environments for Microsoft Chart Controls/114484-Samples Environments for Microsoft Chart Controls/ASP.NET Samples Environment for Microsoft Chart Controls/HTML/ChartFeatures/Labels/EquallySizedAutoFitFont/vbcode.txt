@@ -1,0 +1,8 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(sender As Object, e As System.EventArgs) Handles MyBase.Load
+    ' Equally sized auto-fit font for all axes
+    Chart1.ChartAreas("ChartArea1").IsSameFontSizeForAllAxes = true    
+End Sub 'Page_Load
+...

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="gestureDetector.h" />
+    <ClInclude Include="gl3stub.h" />
+    <ClInclude Include="GLContext.h" />
+    <ClInclude Include="interpolator.h" />
+    <ClInclude Include="JNIHelper.h" />
+    <ClInclude Include="NDKHelper.h" />
+    <ClInclude Include="perfMonitor.h" />
+    <ClInclude Include="shader.h" />
+    <ClInclude Include="tapCamera.h" />
+    <ClInclude Include="vecmath.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gestureDetector.cpp" />
+    <ClCompile Include="gl3stub.c" />
+    <ClCompile Include="GLContext.cpp" />
+    <ClCompile Include="interpolator.cpp" />
+    <ClCompile Include="JNIHelper.cpp" />
+    <ClCompile Include="perfMonitor.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="tapCamera.cpp" />
+    <ClCompile Include="vecmath.cpp" />
+  </ItemGroup>
+</Project>

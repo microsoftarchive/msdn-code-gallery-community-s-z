@@ -1,0 +1,13 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "PieDoughnutCharts" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Pie and Doughnut Chart Gallery</ShortBlurb> 
+  <Content>PieDoughnutGallery.htm</Content>
+
+</SampleConfig>
+
+
+</SampleConfigs>

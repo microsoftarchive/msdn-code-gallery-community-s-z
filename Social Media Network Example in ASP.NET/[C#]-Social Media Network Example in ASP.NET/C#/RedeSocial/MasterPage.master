@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Src="~/Controls/Header.ascx" TagName="Header" TagPrefix="Uc1" %>
+<%@ Register Src="~/Controls/Footer.ascx" TagName="Footer" TagPrefix="Uc2" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table cellpadding="1" cellspacing="1" align="center" class="BlueBorder"
+            style="background: White; height: 156px; width: 819px;">
+            <tr>
+                <td>
+                    <Uc1:Header ID="Header" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: solid 2px Green;">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <Uc2:Footer ID="Footer" runat="server" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+
+    <script>      
+
+        var flashcolor = "red"
+        var flashinterval = 1000 //flash interval in miliseconds (1000=1 sec)
+
+        var formcollect = document.getElementsByTagName ? document.getElementsByTagName("FORM") : document.all ? document.all.tags("FORM") : new Array()
+        var flashcollect = new Array()
+
+        for (i = 0; i < formcollect.length; i++) {
+            for (e = 0; e < formcollect[i].elements.length; e++) {
+                if (formcollect[i].elements[e].className == "flashit")
+                    flashcollect[flashcollect.length] = formcollect[i].elements[e]
+            }
+        }
+
+        function flashelements() {
+            for (f = 0; f < flashcollect.length; f++) {
+                if (flashcollect[f].style.color == '')
+                    flashcollect[f].style.color = flashcolor
+                else
+                    flashcollect[f].style.color = ""
+            }
+        }
+
+        if (flashcollect.length > 0)
+            setInterval("flashelements()", flashinterval)
+
+    </script>
+
+</body>
+</html>

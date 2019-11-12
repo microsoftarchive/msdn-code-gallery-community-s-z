@@ -1,0 +1,12 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "PointCharts" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Point and Bubble Chart Gallery</ShortBlurb> 
+  <Content>PointBubbleGallery.htm</Content>
+    
+</SampleConfig>
+
+</SampleConfigs>

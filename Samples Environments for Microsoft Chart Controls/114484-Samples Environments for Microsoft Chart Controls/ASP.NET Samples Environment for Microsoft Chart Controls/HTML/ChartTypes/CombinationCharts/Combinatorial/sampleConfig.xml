@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "CombinationalCharts">
+	<Title>Combination of Chart Types</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Combination of Chart Types</ShortBlurb> 
+	<Content>CombinatorialChart.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+<Keywords>
+      <Keyword>Chart type, Combination</Keyword>
+    </Keywords>
+	</SampleConfig>
+
+</SampleConfigs>

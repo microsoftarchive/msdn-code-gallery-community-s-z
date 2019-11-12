@@ -1,0 +1,34 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' Filename of the CSV file
+	Dim file As String = "DataFile.csv"
+
+	' Get the path of the CSV file
+	Dim path As String = Me.MapPath(".")
+	path += "..\..\..\data\"
+
+	' Create a select statement and a connection string.
+	Dim mySelectQuery As String = "Select * from " + file
+	Dim ConStr As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + ";Extended Properties=""Text;HDR=No;FMT=Delimited"""
+	Dim myConnection As New OleDbConnection(ConStr)
+
+	' Create a database command on the connection using query
+	Dim myCommand As New OleDbCommand(mySelectQuery, myConnection)
+
+	' Open the connection and create the reader
+	myCommand.Connection.Open()
+	Dim myReader As OleDbDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection)
+
+	' Column 1 is a time value, column 2 is a double
+	' Databind the reader to the chart using the DataBindXY method
+	Chart1.Series(0).Points.DataBindXY(myReader, "1", myReader, "2")
+
+	' Close connection and data reader    
+	myReader.Close()
+	myConnection.Close()
+
+End Sub 'Page_Load
+...   

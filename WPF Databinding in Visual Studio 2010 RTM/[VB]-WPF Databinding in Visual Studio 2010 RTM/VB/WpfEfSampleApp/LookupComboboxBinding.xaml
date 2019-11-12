@@ -1,0 +1,69 @@
+﻿<Window x:Class="LookupComboboxBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Lookup Combobox Binding" Height="307" Width="526" Name="Window1">
+    <Window.Resources>
+        <CollectionViewSource x:Key="OrdersSource" />
+        <CollectionViewSource x:Key="CustomerLookup" />
+    </Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource OrdersSource}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="90" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="200*" />
+        </Grid.RowDefinitions>
+        <Button Name="btnSave" HorizontalAlignment="Right" Width="75" Height="23" Grid.Column="2"  VerticalAlignment="Top" Margin="0,0,161.892,0">Save</Button>
+        <Button Margin="0,0,80.892,0" Name="btnAdd" HorizontalAlignment="Right" Width="75" Height="23" Grid.Column="2"  VerticalAlignment="Top">Add</Button>
+        <Button HorizontalAlignment="Right" Margin="0,0,-0.108,0" Name="btnDelete" Width="75" Height="23" Grid.Column="2"  VerticalAlignment="Top">Delete</Button>
+        <ListBox Grid.Row="1" Name="ListBox1" 
+                 IsSynchronizedWithCurrentItem="True" 
+                 ItemsSource="{Binding}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Width="60" Text="{Binding Path=OrderDate, StringFormat='d'}" />
+                        <TextBlock Text="{Binding Path=Customer.LastName}" />
+                        <TextBlock Text=", " />
+                        <TextBlock Text="{Binding Path=Customer.FirstName}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListBox>
+        <StackPanel Name="StackPanel1" Grid.Row="1" Grid.Column="1" >
+            <Label Height="28" Name="Label1" Width="Auto" HorizontalContentAlignment="Right" Margin="3">Order ID:</Label>
+            <Label Height="28" Name="Label2" Width="Auto" HorizontalContentAlignment="Right" Margin="3">Customer:</Label>
+            <Label Height="28" Name="Label3" Width="Auto" HorizontalContentAlignment="Right" Margin="3">Order Date:</Label>
+            <Label Height="28" Name="Label4" Width="Auto" HorizontalContentAlignment="Right" Margin="3">Ship Date:</Label>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Name="StackPanel2">
+            <TextBox 
+                Text="{Binding Path=OrderID, Mode=OneWay}"
+                IsReadOnly="True"
+                Height="28" Name="TextBox1" Width="Auto" Margin="3" />
+            <ComboBox Height="28" Name="ComboBox1" Width="Auto" Margin="3"
+                      ItemsSource="{Binding Source={StaticResource CustomerLookup}}"
+                      IsEditable="False"
+                      SelectedItem="{Binding Path=Customer}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="{Binding Path=LastName}"></TextBlock>
+                            <TextBlock Width="5">,</TextBlock>
+                            <TextBlock Text="{Binding Path=FirstName}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ComboBox>
+            <TextBox 
+                Text="{Binding Path=OrderDate}"
+                Height="28" Name="TextBox2" Width="Auto" Margin="3" />
+            <TextBox 
+                Text="{Binding Path=ShipDate}"
+                Height="28" Name="TextBox3" Width="Auto" Margin="3" />
+        </StackPanel>
+    </Grid>
+</Window>

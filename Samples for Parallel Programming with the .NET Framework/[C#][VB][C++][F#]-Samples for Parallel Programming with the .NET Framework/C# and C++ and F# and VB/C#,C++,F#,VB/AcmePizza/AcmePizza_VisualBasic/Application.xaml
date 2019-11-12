@@ -1,0 +1,49 @@
+﻿<Application x:Class="AcmePizza.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AcmePizza"
+    StartupUri="Window1.xaml">
+    <Application.Resources>
+        <!--A reusable data template when binding to a collection of pizza orders.  this template is used in both the main window and 
+        current order window, where it is scaled larger-->
+        <DataTemplate x:Key="PizzaOrderTemplate">
+            <Canvas Width="200" Height="200">
+                <Rectangle x:Name="orderRectangle" RadiusX="6" RadiusY="6" Width="200" Height="200" Fill="LightBlue" Opacity="60"/>
+                <TextBlock Margin="10,10,0,0" Text="Phone:"/>
+                        <TextBlock Margin="50,10,0,0" FontWeight="Bold"  Text="{Binding Path=PhoneNumber}"/>
+                        <local:PizzaSizeCircle x:Name="pizzaSize" Canvas.Right="5" Canvas.Bottom="5" PizzaSize="17"/> 
+                        <Image x:Name="sourceIcon" Source="phonesource.ico" Canvas.Left="5" Canvas.Bottom="5"/>
+                        <ItemsControl Canvas.Top="40" Canvas.Left="30" ItemsSource="{Binding Path=Toppings}"/>
+                    </Canvas>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=IsDelivery}" Value="true">
+                    <DataTrigger.Setters>
+                        <Setter Property="Fill" TargetName="orderRectangle" Value="Pink"/>
+                    </DataTrigger.Setters>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Size}" Value="11">
+                    <DataTrigger.Setters>
+                        <Setter Property="PizzaSize" TargetName="pizzaSize" Value="11"/>
+                    </DataTrigger.Setters>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Size}" Value="13">
+                    <DataTrigger.Setters>
+                        <Setter Property="PizzaSize" TargetName="pizzaSize" Value="13"/>
+                    </DataTrigger.Setters>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Source}" Value="{x:Static Member=local:OrderSource.Internet}">
+                    <Setter Property="Source" TargetName="sourceIcon" Value="internetsource.ico"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Source}" Value="{x:Static Member=local:OrderSource.Phone}">
+                    <Setter Property="Source" TargetName="sourceIcon" Value="phonesource.ico"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Source}" Value="{x:Static Member=local:OrderSource.Fax}">
+                    <Setter Property="Source" TargetName="sourceIcon" Value="faxsource.ico"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Source}" Value="{x:Static Member=local:OrderSource.WalkIn}">
+                    <Setter Property="Source" TargetName="sourceIcon" Value="walkinsource.ico"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

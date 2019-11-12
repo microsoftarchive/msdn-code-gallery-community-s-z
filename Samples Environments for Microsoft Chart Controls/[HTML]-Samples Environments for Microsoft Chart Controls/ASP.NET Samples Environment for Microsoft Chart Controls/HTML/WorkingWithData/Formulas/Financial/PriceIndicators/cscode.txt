@@ -1,0 +1,34 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+/// <summary>
+/// This method calculates Price indicators if 
+/// corresponding check box is selected.
+/// </summary>
+private void Checked()
+{
+    // Calculates Typical Price
+    if(TypicalPrice.Checked)
+    {
+        Chart1.DataManipulator.FinancialFormula(FinancialFormula.TypicalPrice,"Input:Y,Input:Y2,Input:Y3","Typical");
+        Chart1.Series["Typical"].Color = Color.Red;
+        Chart1.Series["Typical"].ChartType = SeriesChartType.Line;
+    }
+
+    // Calculates Median Price
+    if(MedianPrice.Checked)
+    {
+        Chart1.DataManipulator.FinancialFormula(FinancialFormula.MedianPrice,"Input:Y,Input:Y2","Median");
+        Chart1.Series["Median"].Color = Color.Blue;
+        Chart1.Series["Median"].ChartType = SeriesChartType.Line;
+    }
+
+    // Calculates Weighted Close Price
+    if(WeightedClose.Checked)
+    {
+        Chart1.DataManipulator.FinancialFormula(FinancialFormula.WeightedClose,"Input:Y,Input:Y2,Input:Y3","Weighted");
+        Chart1.Series["Weighted"].Color = Color.Yellow;
+        Chart1.Series["Weighted"].ChartType = SeriesChartType.Line;
+    }
+}
+...

@@ -1,0 +1,145 @@
+﻿<Page
+    x:Class="OAuthTwitter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OAuthTwitter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF56AAF3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="900"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Width="120" Height="140" HorizontalAlignment="Left" x:Name="cornerRectangle"/>
+        <Grid Grid.Row="1"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="56" Text="OAuthTwitter" Margin="0,48.544,0,0"/>
+        <StackPanel Grid.Column="1" Orientation="Vertical" Grid.Row="1">
+            <Grid Margin="0 0 0 20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition Width="450"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.ColumnSpan="2">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Consumer Key" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14.667"/>
+                    <TextBox x:Name="consumerKey" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" Width="400" Height="25" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Consumer Secret Key" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14.667"/>
+                    <TextBox x:Name="consumerSecretKey" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" Width="400" Height="25" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition Width="450"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.ColumnSpan="2">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Request Token (oauth_token)" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14.667"/>
+                    <TextBox x:Name="requestToken" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" Width="400" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Request Token Secret Key (oauth_token_reset)" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14.667"/>
+                    <TextBox x:Name="requestTokenSecretKey" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" Width="400" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="0 20 0 20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="750"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <HyperlinkButton x:Name="oAuthAuthorizeLink" HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="Authorize URL" Foreground="Blue"
+                                 Click="oAuthAuthorizeLink_Click_1" FontSize="14"/>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0 0 50 0">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="oauth_verifier" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14.667"/>
+                    <TextBox x:Name="oAuthVerifier" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" Width="80" Height="25" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition Width="450"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.ColumnSpan="2">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Access Token (oauth_token)" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14.667"/>
+                    <TextBox x:Name="accessToken" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" Width="400" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Access Token Secret Key (oauth_token_reset)" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14.667"/>
+                    <TextBox x:Name="accessTokenSecretKey" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" Width="400" FontFamily="Segoe UI Semibold"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Canvas Height="50">
+                <Rectangle Fill="#FF57F7FF" Height="10" Canvas.Top="25" Width="70"/>
+                <Rectangle Fill="#FF57F7FF" Height="15" Canvas.Left="60" Canvas.Top="25" Width="10"/>
+                <Path Data="M14.953339,0 L15,0 L15,15 L0,15 L0,14.953339 z" Fill="#FF57F7FF" Height="15" Canvas.Left="57.532" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="32.07" UseLayoutRounding="False" Width="15" d:LayoutRounding="Auto">
+                    <Path.RenderTransform>
+                        <CompositeTransform Rotation="45"/>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle Fill="#FF57F7FF" Height="15" Canvas.Left="60" Canvas.Top="90" Width="10" RenderTransformOrigin="0.5,3.16700005531311"/>
+                <Rectangle Fill="#FF57F7FF" Height="10" Canvas.Top="100.166" Width="62.833" Canvas.Left="7.136"/>
+                <Path Data="M14.953339,0 L15,0 L15,15 L0,15 L0,14.953339 z" Fill="#FF57F7FF" Height="15" Canvas.Left="3.036" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="97.44" UseLayoutRounding="False" Width="15" d:LayoutRounding="Auto">
+                    <Path.RenderTransform>
+                        <CompositeTransform Rotation="135"/>
+                    </Path.RenderTransform>
+                </Path>
+            </Canvas>
+            <Button Content="Get Request Token" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Blue" BorderThickness="0" x:Name="getRequestToken" Click="getRequestToken_Click_1"
+                FontFamily="Segoe UI Semibold" Margin="20,0,0,0" 
+                Height="40"/>
+            <Canvas Height="50" Margin="0 50 0 0">
+                <Rectangle Fill="#FF57F7FF" Height="10" Canvas.Top="25" Width="70"/>
+                <Rectangle Fill="#FF57F7FF" Height="15" Canvas.Left="60" Canvas.Top="25" Width="10"/>
+                <Path Data="M14.953339,0 L15,0 L15,15 L0,15 L0,14.953339 z" Fill="#FF57F7FF" Height="15" Canvas.Left="57.532" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="32.07" UseLayoutRounding="False" Width="15" d:LayoutRounding="Auto">
+                    <Path.RenderTransform>
+                        <CompositeTransform Rotation="45"/>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle Fill="#FF57F7FF" Height="15" Canvas.Left="60" Canvas.Top="90" Width="10" RenderTransformOrigin="0.5,3.16700005531311"/>
+                <Rectangle Fill="#FF57F7FF" Height="10" Canvas.Top="100.166" Width="62.833" Canvas.Left="7.136"/>
+                <Path Data="M14.953339,0 L15,0 L15,15 L0,15 L0,14.953339 z" Fill="#FF57F7FF" Height="15" Canvas.Left="3.036" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="97.44" UseLayoutRounding="False" Width="15" d:LayoutRounding="Auto">
+                    <Path.RenderTransform>
+                        <CompositeTransform Rotation="135"/>
+                    </Path.RenderTransform>
+                </Path>
+            </Canvas>
+            <Button Content="Get Access Token" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Blue" BorderThickness="0" 
+                FontFamily="Segoe UI Semibold" Margin="20,0,0,0" x:Name="getAccessToken" Click="getAccessToken_Click_1"
+                Height="40"/>
+        </StackPanel>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="QueryParams" Text="count=5"/>
+        <Grid Grid.Row="3" Grid.Column="1" Background="White" Margin="0 0 0 20">
+            <TextBox x:Name="TwitterResponse" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" IsReadOnly="True" TextWrapping="Wrap"/>
+            <WebView x:Name="WebViewHost" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed"/>
+        </Grid>
+        <StackPanel Grid.Row="3" Grid.Column="2" VerticalAlignment="Center">
+            <Button  HorizontalAlignment="Center"
+                     Content="Get Home Timeline" VerticalAlignment="Center"
+                     x:Name="getHomeTimeline" Click="getHomeTimeline_Click_1"
+                     BorderThickness="0" Background="Blue"
+                     Padding="10" Width="180"/>
+            <Button  HorizontalAlignment="Center"
+                     Content="Get Mentions" VerticalAlignment="Center"
+                     x:Name="getMentions" Click="getMentions_Click_1"
+                     BorderThickness="0" Background="Blue"
+                     Padding="10" Width="180"/>
+            <Button  HorizontalAlignment="Center"
+                     Content="Get Retweets Of Me" VerticalAlignment="Center"
+                     x:Name="getRetweetsOfMe" Click="getRetweetsOfMe_Click_1"
+                     BorderThickness="0" Background="Blue"
+                     Padding="10" Width="180"/>
+        </StackPanel>
+    </Grid>
+</Page>

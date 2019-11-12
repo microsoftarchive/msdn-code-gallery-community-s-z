@@ -1,0 +1,39 @@
+﻿<Page x:Class="Microsoft.Workflow.Explorer.Views.ActivitiesSummaryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:c="clr-namespace:Microsoft.Workflow.Explorer.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="454" d:DesignWidth="367"
+      Title="ActivitiesSummaryPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListBox 
+            Name="ActivitiesListBox"
+            Grid.Row="0"
+            ItemsSource="{Binding ActivityCollection.Activities}"
+            SelectedValue="{Binding SelectedActivity, Mode=TwoWay}"
+            Margin="10"/>
+        <Grid Grid.Row="1" Margin="10" DataContext="{Binding SelectedActivity}" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button c:MetroButtonProperties.Label="Activity XAML" Content="{Binding XamlSizeLabel}" Command="{Binding ShowXamlCommand}" Grid.Row="0" Grid.Column="0" Style="{StaticResource MetroButton}" Background="{StaticResource MetroButtonBlue}" Margin="5" Height="90"/>
+            <Label c:MetroButtonProperties.Label="Last Modified" Content="{Binding LastModified}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource MetroLabel}" Background="{StaticResource MetroButtonGreen}" Margin="5" Height="90"/>
+            <Label c:MetroButtonProperties.Label="Type" Content="{Binding RootActivityType}" Grid.Row="1" Grid.Column="0" Style="{StaticResource MetroLabel}" Background="{StaticResource MetroButtonRed}" Margin="5" Height="90"/>
+            <Label c:MetroButtonProperties.Label="Caching Enabled" Content="{Binding IsCachingEnabled}" Grid.Row="1" Grid.Column="1" Style="{StaticResource MetroLabel}" Background="{StaticResource MetroButtonPurple}" Margin="5" Height="90"/>
+            <Button c:MetroButtonProperties.Label="Metadata" Content="{Binding MetadataPairs}" Command="{Binding ShowMetadataCommand}" Grid.Row="1" Grid.Column="2" Style="{StaticResource MetroButton}" Background="{StaticResource MetroButtonBrown}" Margin="5" Height="90"/>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,9 @@
+{
+  "name": "my-node-app",
+  "version": "0.0.0",
+  "description": "MyNodeApp",
+  "main": "App.js",
+  "author": {
+    "name": "Sibeesh Venu"
+  }
+}

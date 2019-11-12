@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "SiteMonitR Dashboard";
+}
+
+<div class="row" ng-controller="SiteMonitRCtrl" ng-init="loadSites()">
+    <div>
+        <h2>SiteMonitR Dashboard</h2>
+        <p>
+            Watch the grid below to see your sites as they're checked, every 5 minutes. If you'd like to add a site, use the form below and SiteMonitR will start watching your site, too.
+        </p>
+    </div>
+
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th colspan="2">Site URL</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="site in sites">
+                    <td style="width:80px;">
+                        <a style="width:65px;" class="btn btn-danger" ng-click="deleteSite(site.Uri)">Delete</a>
+                    </td>
+                    <td class="lead">{{site.Uri}}</td>
+                    <td>
+                        <div style="width: 100px;" 
+                             ng-class="{'Unchecked':'btn btn-warning', 'Checking':'btn btn-warning', 'Up':'btn btn-success', 'Down':'btn btn-danger'}[site.Status]">{{site.Status}}</div>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="width:80px;">
+                        <a style="width:65px;" class="btn btn-info" ng-click="addSite()">Add</a>
+                    </td>
+                    <td colspan="2">
+                        <input type="text" ng-model="model.newSiteUrl" class="form-control" />
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+@section scripts
+{
+    <style type="text/css">
+    </style>
+    <script src="~/Scripts/jquery.signalR-2.0.2.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("SiteMonitR", []);
+        app.value('$', $);
+
+        app.factory('SignalRSvc', function ($, $rootScope) {
+            var hub = null;
+
+            return {
+                initialize: function () {
+                    connection = $.hubConnection();
+
+                    this.hub = connection.createHubProxy('siteMonitR');
+
+                    this.hub.on('siteStatusReceived', function (siteStatus) {
+                        $rootScope.$emit('siteStatusReceived', siteStatus);
+                    });
+
+                    this.hub.on('refreshDashboard', function () {
+                        $rootScope.$emit('refreshDashboardReceived');
+                    });
+
+                    connection.start(function () {
+                    });
+                }
+            };
+        });
+
+        app.controller("SiteMonitRCtrl", function ($scope, $http, SignalRSvc, $rootScope) {
+            $scope.model = { newSiteUrl: 'http://www.yoursite.com' };
+
+            $scope.loadSites = function () {
+                $http.get('/api/sites')
+                    .success(function (data) {
+                        $scope.sites = data;
+                    })
+                    .error(function () {
+                        alert("Something bad happened loading sites");
+                    });
+            };
+
+            $scope.addSite = function () {
+                $http.post('/api/sites',
+                    {
+                        Uri: $scope.model.newSiteUrl
+                    }).success(function () {
+                        for (i = 0; i < $scope.sites.length; i++) {
+                            if ($scope.sites[i].Uri == $scope.model.newSiteUrl) {
+                                return;
+                            }
+                        }
+
+                        $scope.sites.push({
+                            Uri: $scope.model.newSiteUrl,
+                            Status: 'Unchecked'
+                        });
+                    });
+            };
+
+            $scope.deleteSite = function (uri) {
+                $http({ url: '/api/sites', method: 'DELETE', data: { Uri: uri }, headers: { "Content-Type": "application/json" } })
+                    .success(function () {
+                        for (i = 0; i < $scope.sites.length; i++) {
+                            if ($scope.sites[i].Uri == uri) {
+                                $scope.sites.pop($scope.sites[i]);
+                            }
+                        }
+                    })
+                    .error(function () {
+                        alert('Site Delete Failed');
+                    });
+            };
+
+            $scope.$parent.$on('siteStatusReceived', function (e, siteStatus) {
+                $scope.$apply(function () {
+                    updateSiteStatus(siteStatus);
+                });
+            });
+
+            $scope.$parent.$on('refreshDashboardReceived', function (e) {
+                $scope.$apply(function () {
+                    $scope.loadSites();
+                });
+            });
+
+            updateSiteStatus = function (siteStatus) {
+                for (i = 0; i < $scope.sites.length; i++) {
+                    if ($scope.sites[i].Uri == siteStatus.Uri) {
+                        $scope.sites[i].Status = siteStatus.Status;
+                        return;
+                    }
+                }
+
+                $scope.sites.push(siteStatus);
+            };
+
+            SignalRSvc.initialize();
+        });
+    </script>
+}

@@ -1,0 +1,36 @@
+﻿.ui-chart-container{font-family:Arial,Helvetica,sans-serif;font-size:13px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.ui-chart-axis{border-color:#989EA3;background-color:#989EA3}
+.ui-chart-legend-items-list{padding:0;margin:5px}
+.ui-chart-legend-item-text{vertical-align:middle}
+.ui-chart-legend-item-badge{vertical-align:middle}
+.ui-chart-tooltip{-moz-box-shadow:0 0 2px #555;-webkit-box-shadow:0 0 2px #555;box-shadow:0 0 2px #555;padding:3px;font-size:inherit;font-family:inherit}
+.ui-chart-default-tooltip-content{white-space:nowrap}
+.ui-chart-pointer-tooltip-content-container{margin:3px}
+.ui-chart-pointer-tooltip{background-color:white;border-color:#4d4d4d;border-radius:4px;border-width:1px}
+.ui-chart-toolbar{position:absolute;width:100%;text-align:center}
+.ui-chart-toolbar li{list-style:none;display:table-cell;vertical-align:middle}
+.ui-chart-slider{width:40px;padding:5px 9px}
+.ui-chart-opd-button{position:absolute!important;top:5px;right:5px}
+.ui-chart-toolbar button{height:18px;width:18px;margin:2px}
+.ui-chart-toolbar button .ui-button-text{line-height:8px}
+.touch .ui-chart-opd-button,.touchevents .ui-chart-opd-button,.pointerevents .ui-chart-opd-button,.touch .ui-chart-toolbar,.touchevents .ui-chart-toolbar,.pointerevents .ui-chart-toolbar{font-size:20px}
+.touch .ui-chart-toolbar,.touchevents .ui-chart-toolbar,.pointerevents .ui-chart-toolbar{display:table;background-color:rgba(79,79,79,0.40)}
+.touch .ui-chart-toolbar ul,.touchevents .ui-chart-toolbar ul,.pointerevents .ui-chart-toolbar ul{display:table-row}
+.touch .ui-chart-toolbar li,.touchevents .ui-chart-toolbar li,.pointerevents .ui-chart-toolbar li{display:table-cell}
+.touch .ui-chart-toolbar .ui-chart-slider-holder,.touchevents .ui-chart-toolbar .ui-chart-slider-holder,.pointerevents .ui-chart-toolbar .ui-chart-slider-holder{width:100%}
+.touch .ui-chart-toolbar button,.touchevents .ui-chart-toolbar button,.pointerevents .ui-chart-toolbar button{width:44px;height:44px;margin:5px}
+.touch .ui-chart-toolbar button .ui-button-text,.touchevents .ui-chart-toolbar button .ui-button-text,.pointerevents .ui-chart-toolbar button .ui-button-text{line-height:35px}
+.touch .ui-chart-slider,.touchevents .ui-chart-slider,.pointerevents .ui-chart-slider{width:90%;padding:0 30px}
+.touch .ui-chart-toolbar .ui-slider-handle,.touchevents .ui-chart-toolbar .ui-slider-handle,.pointerevents .ui-chart-toolbar .ui-slider-handle{width:30px;height:30px}
+.ui-chart-title{font-family:Arial,Helvetica,sans-serif;font-size:16px;color:#696969;margin:5px 0 5px 0}
+.ui-chart-subtitle{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#696969;margin:0 0 5px 0}
+.ui-chart-horizontal-axis-title{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#696969;margin:0 0 5px 0}
+.ui-chart-vertical-axis-title{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#696969;margin:0 0 0 5px}
+.ui-horizontal-axis-labels{font-family:Arial,Helvetica,sans-serif;font-size:12px;vertical-align:top;margin:2px 0 2px 0;color:inherit}
+.ui-vertical-axis-labels{font-family:Arial,Helvetica,sans-serif;font-size:12px;text-align:left;margin:0 2px 0 2px;color:inherit}
+.ui-angular-axis-labels{margin:2px;color:inherit}
+.ui-radial-axis-labels{vertical-align:top;margin:2px 0 2px 0;color:inherit}
+.ui-chart-category-axis-tick{height:0;color:#989EA3}
+.ui-chart-area-fill-opacity{opacity:1.0}
+.ui-chart-aligned-gridlines{visibility:collapse}
+.ui-chart-axis-stroke,.ui-chart-axis-major-line{border-color:#989EA3}

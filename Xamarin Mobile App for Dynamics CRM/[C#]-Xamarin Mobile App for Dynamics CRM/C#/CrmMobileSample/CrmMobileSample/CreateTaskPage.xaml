@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrmMobileSample.CreateTaskPage">
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical">
+      <Label>Subject</Label>
+      <Entry x:Name="subject" />
+      <Label>Description</Label>
+      <Editor x:Name="description" VerticalOptions="FillAndExpand" />
+      <Button x:Name="btnCreate" Text="Create" Clicked="btnCreate_Click" />
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CE9F488-A293-4ED8-BEDE-8811CD860D41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.AzureCAT.Samples.InterRoleCommunication</RootNamespace>
+    <AssemblyName>Microsoft.AzureCAT.Samples.InterRoleCommunication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PERF_TEST</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ServiceBus, Version=1.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferencedAssemblies\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Microsoft.Experience.CAT.CAFE\ReferencedAssemblies\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CloudEnvironment.cs" />
+    <Compile Include="MessageClientEntityExtensionMethods.cs" />
+    <Compile Include="Contracts\Data\InterRoleCommunicationEvent.cs" />
+    <Compile Include="Contracts\Data\RoleConfigurationSectionRefreshEvent.cs" />
+    <Compile Include="Contracts\Data\RoleGracefulRecycleEvent.cs" />
+    <Compile Include="Contracts\Service\IInterRoleCommunicationServiceContract.cs" />
+    <Compile Include="Framework\Configuration\ServiceBusConfigurationSettings.cs" />
+    <Compile Include="Framework\Configuration\ServiceBusEndpointCollection.cs" />
+    <Compile Include="Framework\Configuration\ServiceBusEndpointInfo.cs" />
+    <Compile Include="Framework\Configuration\ServiceBusEndpointType.cs" />
+    <Compile Include="Framework\Configuration\ServiceEndpointConfiguration.cs" />
+    <Compile Include="Framework\FrameworkUtility.cs" />
+    <Compile Include="Framework\Guard.cs" />
+    <Compile Include="Framework\Instrumentation\DebugTraceEventProvider.cs" />
+    <Compile Include="Framework\Instrumentation\ExceptionTextFormatter.cs" />
+    <Compile Include="Framework\Instrumentation\HighResolutionTimer.cs" />
+    <Compile Include="Framework\Instrumentation\InstrumentationUtility.cs" />
+    <Compile Include="Framework\Instrumentation\ITraceEventProvider.cs" />
+    <Compile Include="Framework\Instrumentation\TraceManager.cs" />
+    <Compile Include="Framework\Instrumentation\WellKnownTraceCategory.cs" />
+    <Compile Include="Framework\ITransientErrorDetectionStrategy.cs" />
+    <Compile Include="Framework\ReliableServiceBusClient.cs" />
+    <Compile Include="Framework\ReliableServiceBusHost.cs" />
+    <Compile Include="Framework\RetryLimitExceededException.cs" />
+    <Compile Include="Framework\RetryPolicy.cs" />
+    <Compile Include="Framework\ServiceBusClientFactory.cs" />
+    <Compile Include="Framework\ServiceBusHostFactory.cs" />
+    <Compile Include="Framework\ServiceBusTransientErrorDetectionStrategy.cs" />
+    <Compile Include="IInterRoleCommunicationExtension.cs" />
+    <Compile Include="Internal\AnonymousDisposable.cs" />
+    <Compile Include="Internal\EventObjectSerializer.cs" />
+    <Compile Include="InterRoleEventRelayCommunicationExtension.cs" />
+    <Compile Include="InterRoleCommunicationService.cs" />
+    <Compile Include="InterRoleCommunicationSettings.cs" />
+    <Compile Include="InterRoleCommunicationEventSubscriber.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Framework\WellKnownNamespace.cs" />
+    <Compile Include="Properties\ExceptionMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceBusEntityExtensionMethods.cs" />
+    <Compile Include="InterRoleCommunicationExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\ExceptionMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="Framework\ReliableServiceBusClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

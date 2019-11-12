@@ -1,0 +1,21 @@
+using System.Web.UI.DataVisualization.Charting.Chart;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Disable end labels for the X axis
+    Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.IsEndLabelVisible = false;
+
+    // Set X axis labels format
+    Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Format = "D";
+
+    // Set Y axis labels format
+    Chart1.ChartAreas["ChartArea1"].AxisY.LabelStyle.Format = "C0";
+
+    // Set series point labels format
+    Chart1.Series["Series1"].LabelFormat = "P3";
+
+    // Set series point labels color
+    Chart1.Series["Series1"].Color = Color.Navy;
+}
+...

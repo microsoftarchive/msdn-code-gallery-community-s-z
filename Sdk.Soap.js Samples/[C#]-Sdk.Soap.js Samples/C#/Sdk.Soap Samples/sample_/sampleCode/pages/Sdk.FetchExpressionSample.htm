@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<!-- =====================================================================
+  This file is part of the Microsoft Dynamics CRM SDK code samples.
+
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+
+  This source code is intended only as a supplement to Microsoft
+  Development Tools and/or on-line documentation.  See these other
+  materials for detailed information regarding Microsoft code samples.
+
+  THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+  KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+  PARTICULAR PURPOSE.
+=====================================================================-->
+
+<html>
+<head>
+ <title>Sdk.FetchExpression Sample</title>
+ <script src="../../../ClientGlobalContext.js.aspx" type="text/javascript"></script>
+ <script src="../../min/Sdk.Soap.min.js"></script>
+ <script src="../../min/messages/Sdk.Retrieve.min.js"></script>
+ <script src="../../min/entities/Sdk.Account.min.js"></script>
+ <script src="../../min/entities/Sdk.Opportunity.min.js"></script>
+ <script src="../../min/entities/Sdk.Task.min.js"></script>
+ <script src="../../min/jquery_1.9.1.min.js"></script>
+ <script src="../scripts/Sdk.FetchExpressionSample.js"></script>
+ <script type="text/javascript">
+  "use strict";
+  document.onreadystatechange = function () {
+   if (document.readyState == "complete") {
+
+
+   }
+  }
+  function clearMessages() {
+   document.getElementById("messages").innerHTML = "";
+  }
+  function fetchExpressionSample() {
+   clearMessages();
+   writeToPage("Starting FetchExpression Sample");
+
+   startFetchExpressionSample();
+
+  }
+
+ </script>
+ <style type="text/css">
+  body
+  {
+   font-family: "Segoe UI";
+  }
+
+  table, th, td
+  {
+   border: solid 1px black;
+   border-collapse: collapse;
+  }
+ </style>
+</head>
+<body>
+ <button onclick="fetchExpressionSample()">Run FetchExpression Sample</button>
+ <ol id="messages" />
+</body>
+</html>

@@ -1,0 +1,15 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Standard palette
+	Chart2.Palette = ChartColorPalette.BrightPastel;
+
+	// Use a custom palette
+	Color[] colorSet = new Color[4] { Color.FromArgb(Color.Red), Color.FromArgb(Color.Blue), 
+								Color.FromArgb(Color.Green), Color.FromArgb(Color.Purple) };
+	Chart2.PaletteCustomColors = colorSet;    
+	Chart2.Palette = ChartColorPalette.None;
+}
+...

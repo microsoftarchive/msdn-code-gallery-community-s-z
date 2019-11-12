@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoAdsWeb", "ContosoAdsWeb\ContosoAdsWeb.csproj", "{1983D1A9-1DBE-41A5-A09E-764B767C071C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoAdsCommon", "ContosoAdsCommon\ContosoAdsCommon.csproj", "{DA8B60A3-DFBC-4205-8C5C-BA5AF545584B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoAdsWebJob", "ContosoAdsWebJob\ContosoAdsWebJob.csproj", "{55970867-D146-4F67-BCEE-116913AD9B24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1983D1A9-1DBE-41A5-A09E-764B767C071C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1983D1A9-1DBE-41A5-A09E-764B767C071C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1983D1A9-1DBE-41A5-A09E-764B767C071C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1983D1A9-1DBE-41A5-A09E-764B767C071C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8B60A3-DFBC-4205-8C5C-BA5AF545584B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8B60A3-DFBC-4205-8C5C-BA5AF545584B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8B60A3-DFBC-4205-8C5C-BA5AF545584B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8B60A3-DFBC-4205-8C5C-BA5AF545584B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55970867-D146-4F67-BCEE-116913AD9B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55970867-D146-4F67-BCEE-116913AD9B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55970867-D146-4F67-BCEE-116913AD9B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55970867-D146-4F67-BCEE-116913AD9B24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

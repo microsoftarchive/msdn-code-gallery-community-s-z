@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "BarColumnCharts">
+  <Title>Stacked Charts</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Stacked Charts</ShortBlurb> 
+  <Content>StackedChart.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+      <Keyword>Chart type, Stacked</Keyword>
+      <Keyword>Stacked charts</Keyword>
+      <Keyword>100% Stacked charts</Keyword>
+    </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

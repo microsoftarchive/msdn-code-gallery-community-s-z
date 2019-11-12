@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>DataView</title>
+    <link href="https://code.jquery.com/ui/1.11.4/themes/blitzer/jquery-ui.css" rel="stylesheet" />
+    <link href="css/slick.grid.css" rel="stylesheet" />
+    <link href="css/theme/slick-default-theme.css" rel="stylesheet" />
+    <link href="css/slick.pager.css" rel="stylesheet" />
+    <link href="css/pildorasgrid.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="Scripts/jquery.event.drag-2.2.js"></script>
+    <script src="Scripts/slick.core.js"></script>
+    <script src="Scripts/slick.grid.js"></script>
+    <script src="Scripts/gridformatters.js"></script>
+    <script src="Scripts/grideditors.js"></script>
+    <script src="data/productdatasource.js"></script>
+    <script src="Scripts/slick.dataview.js"></script>
+    <script src="Scripts/slick.pager.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var columns = [
+                { name: "ID", field: "ProductID", id: "ProductID", width: 60, resizable: false
+                    , headerCssClass: "prKeyHeadColumn", cssClass: "numericCell", editor: Slick.Editors.Text
+                    , sortable: true },
+                { name: "Nº Producto", field: "ProductNumber", id: "ProductNumber", width: 120, resizable: false
+                    , headerCssClass: "headColumn", editor: Slick.Editors.Text
+                    , sortable: true },
+                { name: "Denominación", field: "Name", id: "Name", width: 250, minWidth: 150, maxWidth: 400
+                    , headerCssClass: "headColumn", editor: Slick.Editors.Text
+                    , sortable: true },
+                { name: "Color", field: "Color", id: "Color", width: 80, minWidth: 60, maxWidth: 120
+                    , headerCssClass: "headColumn", formatter: Slick.Formatters.ColorFormatter
+                    , editor: Slick.Editors.Color },
+                { name: "Precio", field: "StandardCost", id: "StandardCost", width: 110, minWidth: 80, maxWidth: 170
+                    , headerCssClass: "headColumn", cssClass: "numericCell", formatter: Slick.Formatters.CurrencyFormatter
+                    , editor: Slick.Editors.Text, sortable: true },
+                { name: "Sub", field: "ProductSubcategoryID", id: "ProductSubcategoryID", width: 60, resizable: false
+                    , headerCssClass: "headColumn", cssClass: "numericCell", editor: subcategoryEditor
+                    , sortable: true },
+                { name: "Subcategoría", field: "ProductSubcategoryID", id: "SubcategoryName"
+                    , width: 200, minWidth: 150, maxWidth: 400, headerCssClass: "headColumn"
+                    , formatter: asyncSubcategoryNameFormatter, asyncPostRender: getSubcategoryName, cache: {} }
+            ];
+
+            var options = {
+                editable: true,
+                enableAsyncPostRender: true,
+                asyncPostRenderDelay: 10,
+                multiColumnSort: true
+            };
+
+            var dataProvider = new Slick.Data.DataView();
+
+            var grid = new Slick.Grid("#DataViewGrid", dataProvider, columns, options);
+
+            grid.onCellChange.subscribe(function (e, args) {
+                dataProvider.updateItem(args.item.ProductID, args.item);
+            });
+
+            grid.onSort.subscribe(function (e, args) {
+                var comparer, ascending;
+                if (args.multiColumnSort) {
+                    comparer = function (a, b) {
+                        var cols = args.sortCols;
+                        for (var i = 0, l = cols.length; i < l; i++) {
+                            var field = cols[i].sortCol.field;
+                            var sign = cols[i].sortAsc ? 1 : -1;
+                            var value1 = a[field], value2 = b[field];
+                            var result = (value1 == value2 ? 0 : (value1 > value2 ? 1 : -1)) * sign;
+                            if (result != 0) {
+                                return result;
+                            }
+                        }
+                        return 0;
+                    };
+                }
+                else {
+                    comparer = function (a, b) {
+                        return (a[args.sortCol.field] > b[args.sortCol.field]) ? 1 : -1;
+                    };
+                    ascending = args.sortAsc;
+                }
+                dataProvider.sort(comparer, ascending);
+            });
+
+            dataProvider.onRowCountChanged.subscribe(function (e, args) {
+                grid.updateRowCount();
+                grid.render();
+            });
+
+            dataProvider.onRowsChanged.subscribe(function (e, args) {
+                grid.invalidateRows(args.rows);
+                grid.render();
+            });
+
+            dataProvider.setItems(products, "ProductID");
+
+            function costFilter(item, args) {
+                if (args == null) return true;
+
+                return (item["StandardCost"] >= args.minCost);
+            }
+
+            dataProvider.setFilter(costFilter);
+
+            $("#costFilter").change(function (e) {
+                var value = $(this).val();
+                $("#minCost").text(value);
+                dataProvider.setFilterArgs({ minCost: value });
+                dataProvider.refresh();
+            });
+
+            $("[name=pagesize]").click(function () {
+                dataProvider.setPagingOptions(
+                    { pageSize: parseInt($("[name=pagesize]:checked").val())
+                        , pageNum: 0 });
+            });
+
+            $("#btnPrevious").click(function () {
+                var toPage = dataProvider.getPagingInfo().pageNum - 1;
+                if (toPage < 0) toPage = 0;
+                dataProvider.setPagingOptions({ pageNum: toPage });
+            });
+
+            $("#btnNext").click(function () {
+                var toPage = dataProvider.getPagingInfo().pageNum + 1;
+                var total = dataProvider.getPagingInfo().totalPages;
+                if (toPage >= total) toPage = total - 1;
+                dataProvider.setPagingOptions({ pageNum: toPage });
+            })
+
+            dataProvider.onPagingInfoChanged.subscribe(function (e, pagingInfo) {
+                $("[name=pagesize]").each(function () {
+                    var radio = $(this);
+                    radio.prop("checked"
+                        , pagingInfo.pageSize == parseInt(radio.val()));
+                });
+            });
+
+            var pager = new Slick.Controls.Pager(dataProvider, grid, $("#SlickPager"));
+
+        });
+    </script>
+</head>
+<body>
+    <div id="DataViewGrid" style="width:1024px; height:500px;"></div>
+    <div id="SlickPager" style="width:1024px;"></div>
+    <div style="padding:10px">
+        Filtro: Precio mínimo <span id="minCost">0</span><br />
+        <input id="costFilter" type="range" min="0" max="2500" step="10" value="0" />
+    </div>
+    <div id="pager" style="padding:10px">
+        Elementos por página:
+        <input type="radio" name="pagesize" value="0" checked /> Todos
+        <input type="radio" name="pagesize" value="25" /> 25
+        <input type="radio" name="pagesize" value="50" /> 50
+        <input type="radio" name="pagesize" value="100" /> 100<br />
+        <button id="btnPrevious">&lt;</button>
+        <button id="btnNext">&gt;</button>
+    </div>
+</body>
+</html>

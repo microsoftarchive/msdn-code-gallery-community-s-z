@@ -1,0 +1,18 @@
+﻿<Window x:Class="PrintingStuff.Window5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Landscape" Height="300" Width="300">
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Button Click="Button_Click" Content="Print Grid Landscape" Width="180" Margin="5"/>
+            <Button Click="Button_Click2" Content="Print TextBox Landscape" Width="180" Margin="5"/>
+        </StackPanel>
+        <ScrollViewer x:Name="sv1" Grid.Row="1" HorizontalScrollBarVisibility="Auto">
+            <TextBox Margin="40" Name="printBox" Text="Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah. THE END!"/>
+        </ScrollViewer>
+    </Grid>
+</Window>

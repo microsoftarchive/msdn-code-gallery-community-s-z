@@ -1,0 +1,59 @@
+﻿<div class="container-fluid">
+    <br />
+    <div class="row">
+        <div class="col-md-3">The list of all products.</div>
+        <div class="col-md-3"><span [innerText]="componentStatus"></span></div>
+        <div class="col-md-6">
+            <ul>
+                <li *ngFor="let message of allMessages">
+                    <span>{{message}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <table id="ProdTable" class="table">
+                <tr id="ProdTableHd">
+                    <th>Product Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr *ngFor="let product of products" [class.bg-info]="product.id === selectedProduct.id"
+                    (click)="setClickedRow(product)">
+                    <td>
+                        {{product.id}}
+                    </td>
+                    <td>
+                        {{product.name}}
+                    </td>
+                    <td>
+                        {{product.description}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <form class="form-group">
+                <label for="productId">Product Id</label>
+                <input type="text" class="form-control" name="productId" id="productId"
+                       [disabled]="addNewProductAllowed" [(ngModel)]="selectedProduct.id" />
+                <label for="productName">Name</label>
+                <input type="text" class="form-control" name="productName" id="productName" [(ngModel)]="selectedProduct.name" />
+                <label for="productDescription">Description</label>
+                <input type="text" class="form-control" name="productDescription" id="productDescription"
+                       [(ngModel)]="selectedProduct.description" />
+                <br />
+                <input class="btn" type="button" [disabled]="!addNewProductAllowed"
+                       (click)="addNewProduct()" value="Add record" />
+                <input class="btn" type="button" [disabled]="false"
+                       (click)="updateProduct()" value="Update record" />
+                <input class="btn" type="button" [disabled]="!addNewProductAllowed"
+                       (click)="deleteProduct()" value="Delete record" />
+            </form>
+        </div>
+    </div>
+</div>

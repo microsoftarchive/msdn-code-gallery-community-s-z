@@ -1,0 +1,14 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "RangeCharts" Priority = "1">
+  <Title>Gallery</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Range Chart Gallery</ShortBlurb> 
+  <Content>RangeGallery.htm</Content>
+
+    
+</SampleConfig>
+
+
+</SampleConfigs>

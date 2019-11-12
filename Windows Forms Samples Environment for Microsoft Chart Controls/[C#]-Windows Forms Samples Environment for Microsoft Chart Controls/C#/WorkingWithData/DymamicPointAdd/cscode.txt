@@ -1,0 +1,24 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+// Set primary x-axis properties
+chart1.ChartAreas["Default"].AxisX.LabelStyle.Interval = Math.PI;
+chart1.ChartAreas["Default"].AxisX.LabelStyle.Format = "##.##";
+chart1.ChartAreas["Default"].AxisX.MajorGrid.Interval = Math.PI;
+chart1.ChartAreas["Default"].AxisX.MinorGrid.Interval = Math.PI/4;
+chart1.ChartAreas["Default"].AxisX.MinorTickMark.Interval = Math.PI/4;
+chart1.ChartAreas["Default"].AxisX.MajorTickMark.Interval = Math.PI;
+chart1.ChartAreas["Default"].AxisY.MinorGrid.Interval = 0.25;
+chart1.ChartAreas["Default"].AxisY.MajorGrid.Interval = 0.5;
+chart1.ChartAreas["Default"].AxisY.LabelStyle.Interval = 0.5;
+    
+// Add data points to the series that have the specified X and Y values
+for(double t = 0; t <= (2.5 * Math.PI); t += Math.PI/6)
+{
+    double ch1 = Math.Sin(t);
+    double ch2 = Math.Sin(t-Math.PI/2);
+    chart1.Series["Channel 1"].Points.AddXY(t, ch1);
+    chart1.Series["Channel 2"].Points.AddXY(t, ch2);
+}
+
+...

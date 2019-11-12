@@ -1,0 +1,66 @@
+No.     Time        Source                Destination           Protocol Info
+      1 0.000000    192.168.2.131         192.168.2.128         TCP      spss-lm > commplex-main [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=3 TSV=0 TSER=0
+
+Frame 1 (78 bytes on wire, 78 bytes captured)
+Ethernet II, Src: Wistron_b4:7c:12 (00:0a:e4:b4:7c:12), Dst: Micro-St_67:26:a2 (00:24:21:67:26:a2)
+Internet Protocol, Src: 192.168.2.131 (192.168.2.131), Dst: 192.168.2.128 (192.168.2.128)
+Transmission Control Protocol, Src Port: spss-lm (1759), Dst Port: commplex-main (5000), Seq: 0, Len: 0
+
+No.     Time        Source                Destination           Protocol Info
+      2 0.000582    192.168.2.128         192.168.2.131         TCP      commplex-main > spss-lm [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 2 (78 bytes on wire, 78 bytes captured)
+Ethernet II, Src: Micro-St_67:26:a2 (00:24:21:67:26:a2), Dst: Wistron_b4:7c:12 (00:0a:e4:b4:7c:12)
+Internet Protocol, Src: 192.168.2.128 (192.168.2.128), Dst: 192.168.2.131 (192.168.2.131)
+Transmission Control Protocol, Src Port: commplex-main (5000), Dst Port: spss-lm (1759), Seq: 0, Ack: 1, Len: 0
+
+No.     Time        Source                Destination           Protocol Info
+      3 0.000614    192.168.2.131         192.168.2.128         TCP      spss-lm > commplex-main [ACK] Seq=1 Ack=1 Win=262144 Len=0 TSV=111746 TSER=0
+
+Frame 3 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: Wistron_b4:7c:12 (00:0a:e4:b4:7c:12), Dst: Micro-St_67:26:a2 (00:24:21:67:26:a2)
+Internet Protocol, Src: 192.168.2.131 (192.168.2.131), Dst: 192.168.2.128 (192.168.2.128)
+Transmission Control Protocol, Src Port: spss-lm (1759), Dst Port: commplex-main (5000), Seq: 1, Ack: 1, Len: 0
+
+No.     Time        Source                Destination           Protocol Info
+      4 0.000679    192.168.2.131         192.168.2.128         TCP      spss-lm > commplex-main [PSH, ACK] Seq=1 Ack=1 Win=262144 Len=11 TSV=111746 TSER=0
+
+Frame 4 (77 bytes on wire, 77 bytes captured)
+Ethernet II, Src: Wistron_b4:7c:12 (00:0a:e4:b4:7c:12), Dst: Micro-St_67:26:a2 (00:24:21:67:26:a2)
+Internet Protocol, Src: 192.168.2.131 (192.168.2.131), Dst: 192.168.2.128 (192.168.2.128)
+Transmission Control Protocol, Src Port: spss-lm (1759), Dst Port: commplex-main (5000), Seq: 1, Ack: 1, Len: 11
+Data (11 bytes)
+
+0000  68 65 6c 6c 6f 20 77 6f 72 6c 64                  hello world
+
+No.     Time        Source                Destination           Protocol Info
+      5 0.000724    192.168.2.131         192.168.2.128         TCP      spss-lm > commplex-main [FIN, ACK] Seq=12 Ack=1 Win=262144 Len=0 TSV=111746 TSER=0
+
+Frame 5 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: Wistron_b4:7c:12 (00:0a:e4:b4:7c:12), Dst: Micro-St_67:26:a2 (00:24:21:67:26:a2)
+Internet Protocol, Src: 192.168.2.131 (192.168.2.131), Dst: 192.168.2.128 (192.168.2.128)
+Transmission Control Protocol, Src Port: spss-lm (1759), Dst Port: commplex-main (5000), Seq: 12, Ack: 1, Len: 0
+
+No.     Time        Source                Destination           Protocol Info
+      6 0.001137    192.168.2.128         192.168.2.131         TCP      commplex-main > spss-lm [ACK] Seq=1 Ack=13 Win=65524 Len=0 TSV=6798 TSER=111746
+
+Frame 6 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: Micro-St_67:26:a2 (00:24:21:67:26:a2), Dst: Wistron_b4:7c:12 (00:0a:e4:b4:7c:12)
+Internet Protocol, Src: 192.168.2.128 (192.168.2.128), Dst: 192.168.2.131 (192.168.2.131)
+Transmission Control Protocol, Src Port: commplex-main (5000), Dst Port: spss-lm (1759), Seq: 1, Ack: 13, Len: 0
+
+No.     Time        Source                Destination           Protocol Info
+      7 0.001620    192.168.2.128         192.168.2.131         TCP      commplex-main > spss-lm [FIN, ACK] Seq=1 Ack=13 Win=65524 Len=0 TSV=6798 TSER=111746
+
+Frame 7 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: Micro-St_67:26:a2 (00:24:21:67:26:a2), Dst: Wistron_b4:7c:12 (00:0a:e4:b4:7c:12)
+Internet Protocol, Src: 192.168.2.128 (192.168.2.128), Dst: 192.168.2.131 (192.168.2.131)
+Transmission Control Protocol, Src Port: commplex-main (5000), Dst Port: spss-lm (1759), Seq: 1, Ack: 13, Len: 0
+
+No.     Time        Source                Destination           Protocol Info
+      8 0.001652    192.168.2.131         192.168.2.128         TCP      spss-lm > commplex-main [ACK] Seq=13 Ack=2 Win=262144 Len=0 TSV=111746 TSER=6798
+
+Frame 8 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: Wistron_b4:7c:12 (00:0a:e4:b4:7c:12), Dst: Micro-St_67:26:a2 (00:24:21:67:26:a2)
+Internet Protocol, Src: 192.168.2.131 (192.168.2.131), Dst: 192.168.2.128 (192.168.2.128)
+Transmission Control Protocol, Src Port: spss-lm (1759), Dst Port: commplex-main (5000), Seq: 13, Ack: 2, Len: 0

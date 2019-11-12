@@ -1,0 +1,102 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        x:Class="PrintingStuff.Window1" Title="Printing WPF controls" MinHeight="350" MinWidth="350" 
+        Height="350" Width="350" WindowStartupLocation="CenterScreen">
+	<Window.Resources>
+		<Storyboard x:Key="Storyboard1" RepeatBehavior="Forever">
+			<Rotation3DAnimationUsingKeyFrames Storyboard.TargetProperty="(Visual3D.Transform).(Transform3DGroup.Children)[2].(RotateTransform3D.Rotation)" Storyboard.TargetName="modelVisual3D">
+				<EasingRotation3DKeyFrame KeyTime="0">
+					<EasingRotation3DKeyFrame.Value>
+						<AxisAngleRotation3D Axis="0,1,0" Angle="0"/>
+					</EasingRotation3DKeyFrame.Value>
+				</EasingRotation3DKeyFrame>
+				<EasingRotation3DKeyFrame KeyTime="0:0:1">
+					<EasingRotation3DKeyFrame.Value>
+						<AxisAngleRotation3D Axis="0,0,1" Angle="180"/>
+					</EasingRotation3DKeyFrame.Value>
+				</EasingRotation3DKeyFrame>
+				<EasingRotation3DKeyFrame KeyTime="0:0:2">
+					<EasingRotation3DKeyFrame.Value>
+						<AxisAngleRotation3D Axis="0,0,-1" Angle="1"/>
+					</EasingRotation3DKeyFrame.Value>
+				</EasingRotation3DKeyFrame>
+			</Rotation3DAnimationUsingKeyFrames>
+		</Storyboard>
+	</Window.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="2 Printing WPF controls" FontWeight="Bold" FontSize="16" Margin="5"/>
+        <Grid Width="200" Height="200" x:Name="printGrid" Grid.Row="1" Background="AliceBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Viewport3D HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="100">
+                <Viewport3D.Camera>
+                    <PerspectiveCamera Position="-20,30,30" LookDirection="20,-20,-20" 
+                         UpDirection="0,0,1" FieldOfView="23" />
+                </Viewport3D.Camera>
+                <ModelVisual3D x:Name="modelVisual3D">
+                    <ModelVisual3D.Content>
+                        <Model3DGroup>
+                            <DirectionalLight Color="White" Direction="-1,-1,-3" />
+                            <GeometryModel3D>
+                                <GeometryModel3D.Geometry>
+                                    <MeshGeometry3D 
+                                        Positions="0,0,0 10,0,0 10,10,0 0,10,0 0,0,10 10,0,10 10,10,10 0,10,10"
+                                        TriangleIndices="0 1 3 1 2 3  0 4 3 4 7 3  4 6 7 4 5 6 0 4 1 1 4 5  1 2 6 6 5 1  2 3 7 7 6 2"/>
+                                </GeometryModel3D.Geometry>
+                                <GeometryModel3D.Material>
+                                    <DiffuseMaterial Brush="Red"/>
+                                </GeometryModel3D.Material>
+                            </GeometryModel3D>
+                        </Model3DGroup>
+                    </ModelVisual3D.Content>
+                	<ModelVisual3D.Transform>
+                		<Transform3DGroup>
+                			<TranslateTransform3D OffsetZ="0" OffsetX="-5" OffsetY="-5"/>
+                			<ScaleTransform3D ScaleZ="1" ScaleY="1" ScaleX="1"/>
+                			<RotateTransform3D >
+                				<RotateTransform3D.Rotation>
+                					<AxisAngleRotation3D Axis="0,1,0" Angle="0"/>
+                				</RotateTransform3D.Rotation>
+                			</RotateTransform3D>
+                			<TranslateTransform3D OffsetZ="0" OffsetX="5" OffsetY="5"/>
+                			<TranslateTransform3D OffsetZ="0" OffsetX="0" OffsetY="0"/>
+                		</Transform3DGroup>
+                	</ModelVisual3D.Transform>
+                </ModelVisual3D>
+            </Viewport3D>
+            <Button x:Name="btnAction" Content="{Binding ButtonContent}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="20" Height="20" Click="btnAction_Click" />
+
+            <Image Source="media/Xamlguy.png" Grid.Column="1" Width="70" Height="70"/>
+            <Rectangle Grid.Row="1" Stroke="Black" Margin="5">
+            	<Rectangle.Fill>
+            		<RadialGradientBrush GradientOrigin="0.206,0.213" Center="0.4,0.42">
+            			<GradientStop Color="#FFBEA116" Offset="0.591"/>
+            			<GradientStop Color="White"/>
+            		</RadialGradientBrush>
+            	</Rectangle.Fill>
+            </Rectangle>
+            <TextBox x:Name="textBox" Text="Type here" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Margin="10"/>
+            <Ellipse Grid.Column="1" Margin="8" Grid.Row="1" Stroke="Black">
+            	<Ellipse.Fill>
+            		<RadialGradientBrush GradientOrigin="0.306,0.293">
+            			<GradientStop Color="Black" Offset="1"/>
+            			<GradientStop Color="White"/>
+            		</RadialGradientBrush>
+            	</Ellipse.Fill>
+            </Ellipse>
+            <Button Content="Print" Grid.Column="1" Grid.Row="1" Width="50" VerticalAlignment="Center" Click="Print_Click"/>
+
+        </Grid>
+        <Button Grid.Row="2" Content="Next" Width="100" Click="Button_Click" Margin="10"/>
+    </Grid>
+</Window>

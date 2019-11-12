@@ -1,0 +1,96 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+/// <summary>
+/// This method calculates a different indicator if corresponding 
+/// item in the combo box is selected.
+/// </summary>
+private void Calculations()
+{
+    // Set Formula Name
+    string formulaName = FormulaName.SelectedItem.Value;
+	FinancialFormula formula = (FinancialFormula)Enum.Parse(typeof(FinancialFormula),formulaName,true);
+	
+    // Formulas with one input value
+    if( formulaName == "DetrendedPriceOscillator" || formulaName == "MACD" || formulaName == "Performance" || formulaName == "RateOfChange" 
+    || formulaName == "TRIX")
+    {
+        Chart1.DataManipulator.FinancialFormula(formula,"10","Input:Y4","Indicators");
+    }
+
+    // Relative Strength Index
+    else if( formulaName == "RelativeStrengthIndex" )
+    {
+    
+        Chart1.DataManipulator.FinancialFormula(formula,"10","Input:Y4","Indicators");
+
+        // Set minimum and maximum for Y axis
+        Chart1.ChartAreas["Indicator"].AxisY.Minimum = 0;
+        Chart1.ChartAreas["Indicator"].AxisY.Maximum = 100;
+
+        // Create strip lines used with Relative strength index.
+        StripLine stripLine = new StripLine();
+        Chart1.ChartAreas["Indicator"].AxisY.StripLines.Add(stripLine);
+        stripLine.Interval = 70;
+        stripLine.StripWidth = 30;
+        stripLine.BackColor = Color.FromArgb(128,255,255,0);
+        stripLine.BorderColor = Color.Teal;
+
+    }
+    
+    // Williams %R
+    else if( formulaName == "WilliamsR" )
+    {
+    
+        Chart1.DataManipulator.FinancialFormula(formula,"Input:Y,Input:Y2,Input:Y4","Indicators");
+
+        // Set minimum and maximum for Y axis
+        Chart1.ChartAreas["Indicator"].AxisY.Minimum = -100;
+        Chart1.ChartAreas["Indicator"].AxisY.Maximum = 0;
+
+        // Create strip lines used with Williams %R index.
+        StripLine stripLine = new StripLine();
+        Chart1.ChartAreas["Indicator"].AxisY.StripLines.Add(stripLine);
+        stripLine.Interval = 80;
+        stripLine.StripWidth = 20;
+        stripLine.BackColor = Color.FromArgb(128,255,255,0);
+        stripLine.BorderColor = Color.Teal;
+        
+    }
+    
+    // Formulas with two input value
+    else if( formulaName == "MassIndex" || formulaName == "VolatilityChaikins" || formulaName == "Performance" )
+    {
+        Chart1.DataManipulator.FinancialFormula(formula,"20","Input:Y,Input:Y2","Indicators");
+    }
+    
+    // Standard deviation
+    else if( formulaName == "StandardDeviation" )
+    {
+        Chart1.DataManipulator.FinancialFormula(formula,"15","Input:Y4","Indicators");
+    }
+    
+    // StochasticIndicator
+    else if( formulaName == "StochasticIndicator" )
+    {
+    
+        Chart1.DataManipulator.FinancialFormula(formula,"15","Input:Y,Input:Y2,Input:Y4","Indicators,SMA");
+
+        // Set attributes for Simple moving average series.
+        Chart1.Series["SMA"].ChartType = SeriesChartType.Line;
+        Chart1.Series["SMA"].Color = Color.Yellow;
+        Chart1.Series["SMA"].ChartArea = "Indicator";
+        Chart1.Series["SMA"].BorderWidth = 2;
+        
+    }
+    // All other formulas
+    else
+    {
+        Chart1.DataManipulator.FinancialFormula(formula,"Input:Y,Input:Y2,Input:Y4","Indicators");
+    }
+
+    // Set minimum for X axis
+    Chart1.ChartAreas["Indicator"].AxisX.Minimum = DateTime.Parse("1/1/2002").ToOADate();
+    
+}  
+...

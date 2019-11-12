@@ -1,0 +1,14 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set onClick event handlers for all series and legend items
+    foreach(Series series in Chart1.Series)
+    {
+        series.MapAreaAttributes = 
+            "onclick=\"javascript:alert('Mouse click event captured in the series! Series Name: #SER, Point Index: #INDEX');\"";
+        series.LegendMapAreaAttributes = 
+            "onclick=\"javascript:alert('Mouse click event captured in the legend! Series: #SER, Total Values: #TOTAL{C}');\"";
+    }    
+}

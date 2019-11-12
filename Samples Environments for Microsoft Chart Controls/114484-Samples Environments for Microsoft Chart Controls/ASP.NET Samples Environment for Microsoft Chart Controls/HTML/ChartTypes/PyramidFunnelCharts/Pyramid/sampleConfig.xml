@@ -1,0 +1,22 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "PyramidFunnelCharts">
+	<Title>Pyramid Chart</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Pyramid Chart</ShortBlurb> 
+	<Content>PyramidChart.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Chart type, Pyramid</Keyword>
+      <Keyword>Pyramid chart</Keyword>
+    </Keywords>
+	</SampleConfig>
+
+	
+
+</SampleConfigs>

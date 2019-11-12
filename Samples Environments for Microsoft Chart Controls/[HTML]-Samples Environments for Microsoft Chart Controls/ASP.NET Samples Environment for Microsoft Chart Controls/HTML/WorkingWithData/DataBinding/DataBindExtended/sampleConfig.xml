@@ -1,0 +1,33 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataBinding" Priority = "600">
+  <Title>Extended Data Binding</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Extended Data Binding</ShortBlurb> 
+  <Content>DataBindExtended.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Tooltip Binding</Keyword>
+    <Keyword>Data, Legend Binding</Keyword>
+    <Keyword>Data, Label Binding</Keyword>
+    <Keyword>Data, Custom Attribute Binding</Keyword>
+    <Keyword>Data, Tooltip Binding</Keyword>
+    
+    <Keyword>Binding, Tooltips</Keyword>
+    <Keyword>Binding, Legends</Keyword>
+    <Keyword>Binding, Labels</Keyword>
+    <Keyword>Binding, Custom Attributes</Keyword>
+    
+    <Keyword>Custom Attributes Data Binding</Keyword>
+    
+    <Keyword>Extended Data Binding</Keyword>
+    
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

@@ -1,0 +1,21 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+   ' Set Chart Area position
+   Chart1.ChartAreas("ChartArea1").Position.Auto = False
+   Chart1.ChartAreas("ChartArea1").Position.X = 10
+   Chart1.ChartAreas("ChartArea1").Position.Y = 10
+   Chart1.ChartAreas("ChartArea1").Position.Width = 80
+   Chart1.ChartAreas("ChartArea1").Position.Height = 80
+   
+   ' Set the plotting area position. Coordinates of a plotting 
+   ' area are relative to a chart area position.
+   Chart1.ChartAreas("ChartArea1").InnerPlotPosition.Auto = False
+   Chart1.ChartAreas("ChartArea1").InnerPlotPosition.X = 10
+   Chart1.ChartAreas("ChartArea1").InnerPlotPosition.Y = 10
+   Chart1.ChartAreas("ChartArea1").InnerPlotPosition.Width = 80
+   Chart1.ChartAreas("ChartArea1").InnerPlotPosition.Height = 80
+   
+End Sub 'Page_Load

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "WorkingWithDates">
+  <Title>Retrieving and Assigning Dates</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Retrieving and Assigning Dates</ShortBlurb> 
+  <SampleControl>RetrievingAssigningDates</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Working with Dates</Keyword>
+  </Keywords> 
+  </SampleConfig>
+
+</SampleConfigs>

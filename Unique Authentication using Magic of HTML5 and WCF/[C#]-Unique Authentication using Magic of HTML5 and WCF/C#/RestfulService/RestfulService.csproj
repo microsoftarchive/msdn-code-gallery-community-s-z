@@ -1,0 +1,329 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F489CF3D-A889-4DAE-865A-8B760B7F6F48}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RestfulService</RootNamespace>
+    <AssemblyName>RestfulService</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="flags\Afghanistan.png" />
+    <Content Include="flags\Albania.png" />
+    <Content Include="flags\Algeria.png" />
+    <Content Include="flags\American_Samoa.png" />
+    <Content Include="flags\Andorra.png" />
+    <Content Include="flags\Angola.png" />
+    <Content Include="flags\Anguilla.png" />
+    <Content Include="flags\Antigua_and_Barbuda.png" />
+    <Content Include="flags\Argentina.png" />
+    <Content Include="flags\Armenia.png" />
+    <Content Include="flags\Aruba.png" />
+    <Content Include="flags\Australia.png" />
+    <Content Include="flags\Austria.png" />
+    <Content Include="flags\Azerbaijan.png" />
+    <Content Include="flags\Bahamas.png" />
+    <Content Include="flags\Bahrain.png" />
+    <Content Include="flags\Bangladesh.png" />
+    <Content Include="flags\Barbados.png" />
+    <Content Include="flags\Belarus.png" />
+    <Content Include="flags\Belgium.png" />
+    <Content Include="flags\Belize.png" />
+    <Content Include="flags\Benin.png" />
+    <Content Include="flags\Bermuda.png" />
+    <Content Include="flags\Bhutan.png" />
+    <Content Include="flags\Bolivia.png" />
+    <Content Include="flags\Bosnia.png" />
+    <Content Include="flags\Botswana.png" />
+    <Content Include="flags\Brazil.png" />
+    <Content Include="flags\British_Virgin_Islands.png" />
+    <Content Include="flags\Brunei.png" />
+    <Content Include="flags\Bulgaria.png" />
+    <Content Include="flags\Burkina_Faso.png" />
+    <Content Include="flags\Burundi.png" />
+    <Content Include="flags\Cambodia.png" />
+    <Content Include="flags\Cameroon.png" />
+    <Content Include="flags\Canada.png" />
+    <Content Include="flags\Cape_Verde.png" />
+    <Content Include="flags\Cayman_Islands.png" />
+    <Content Include="flags\Central_African_Republic.png" />
+    <Content Include="flags\Chad.png" />
+    <Content Include="flags\Chile.png" />
+    <Content Include="flags\China.png" />
+    <Content Include="flags\Christmas_Island.png" />
+    <Content Include="flags\Colombia.png" />
+    <Content Include="flags\Comoros.png" />
+    <Content Include="flags\Cook_Islands.png" />
+    <Content Include="flags\Costa_Rica.png" />
+    <Content Include="flags\Croatia.png" />
+    <Content Include="flags\Cuba.png" />
+    <Content Include="flags\Cyprus.png" />
+    <Content Include="flags\Czech_Republic.png" />
+    <Content Include="flags\Côte_d%27Ivoire.png" />
+    <Content Include="flags\Democratic_Republic_of_the_Congo.png" />
+    <Content Include="flags\Denmark.png" />
+    <Content Include="flags\Djibouti.png" />
+    <Content Include="flags\Dominica.png" />
+    <Content Include="flags\Dominican_Republic.png" />
+    <Content Include="flags\Ecuador.png" />
+    <Content Include="flags\Egypt.png" />
+    <Content Include="flags\El_Salvador.png" />
+    <Content Include="flags\Equatorial_Guinea.png" />
+    <Content Include="flags\Eritrea.png" />
+    <Content Include="flags\Estonia.png" />
+    <Content Include="flags\Ethiopia.png" />
+    <Content Include="flags\Falkland_Islands.png" />
+    <Content Include="flags\Faroe_Islands.png" />
+    <Content Include="flags\Fiji.png" />
+    <Content Include="flags\Finland.png" />
+    <Content Include="flags\France.png" />
+    <Content Include="flags\French_Polynesia.png" />
+    <Content Include="flags\Gabon.png" />
+    <Content Include="flags\Gambia.png" />
+    <Content Include="flags\Georgia.png" />
+    <Content Include="flags\Germany.png" />
+    <Content Include="flags\Ghana.png" />
+    <Content Include="flags\Gibraltar.png" />
+    <Content Include="flags\Greece.png" />
+    <Content Include="flags\Greenland.png" />
+    <Content Include="flags\Grenada.png" />
+    <Content Include="flags\Guam.png" />
+    <Content Include="flags\Guatemala.png" />
+    <Content Include="flags\Guinea.png" />
+    <Content Include="flags\Guinea_Bissau.png" />
+    <Content Include="flags\Guyana.png" />
+    <Content Include="flags\Haiti.png" />
+    <Content Include="flags\Honduras.png" />
+    <Content Include="flags\Hong_Kong.png" />
+    <Content Include="flags\Hungary.png" />
+    <Content Include="flags\Iceland.png" />
+    <Content Include="flags\India.png" />
+    <Content Include="flags\Indonesia.png" />
+    <Content Include="flags\Iran.png" />
+    <Content Include="flags\Iraq.png" />
+    <Content Include="flags\Ireland.png" />
+    <Content Include="flags\Israel.png" />
+    <Content Include="flags\Italy.png" />
+    <Content Include="flags\Jamaica.png" />
+    <Content Include="flags\Japan.png" />
+    <Content Include="flags\Jordan.png" />
+    <Content Include="flags\Kazakhstan.png" />
+    <Content Include="flags\Kenya.png" />
+    <Content Include="flags\Kiribati.png" />
+    <Content Include="flags\Kuwait.png" />
+    <Content Include="flags\Kyrgyzstan.png" />
+    <Content Include="flags\Laos.png" />
+    <Content Include="flags\Latvia.png" />
+    <Content Include="flags\Lebanon.png" />
+    <Content Include="flags\Lesotho.png" />
+    <Content Include="flags\Liberia.png" />
+    <Content Include="flags\Libya.png" />
+    <Content Include="flags\Liechtenstein.png" />
+    <Content Include="flags\Lithuania.png" />
+    <Content Include="flags\Luxembourg.png" />
+    <Content Include="flags\Macao.png" />
+    <Content Include="flags\Macedonia.png" />
+    <Content Include="flags\Madagascar.png" />
+    <Content Include="flags\Malawi.png" />
+    <Content Include="flags\Malaysia.png" />
+    <Content Include="flags\Maldives.png" />
+    <Content Include="flags\Mali.png" />
+    <Content Include="flags\Malta.png" />
+    <Content Include="flags\Marshall_Islands.png" />
+    <Content Include="flags\Martinique.png" />
+    <Content Include="flags\Mauritania.png" />
+    <Content Include="flags\Mauritius.png" />
+    <Content Include="flags\Mexico.png" />
+    <Content Include="flags\Micronesia.png" />
+    <Content Include="flags\Moldova.png" />
+    <Content Include="flags\Monaco.png" />
+    <Content Include="flags\Mongolia.png" />
+    <Content Include="flags\Montserrat.png" />
+    <Content Include="flags\Morocco.png" />
+    <Content Include="flags\Mozambique.png" />
+    <Content Include="flags\Myanmar.png" />
+    <Content Include="flags\Namibia.png" />
+    <Content Include="flags\Nauru.png" />
+    <Content Include="flags\Nepal.png" />
+    <Content Include="flags\Netherlands.png" />
+    <Content Include="flags\Netherlands_Antilles.png" />
+    <Content Include="flags\New_Zealand.png" />
+    <Content Include="flags\Nicaragua.png" />
+    <Content Include="flags\Niger.png" />
+    <Content Include="flags\Nigeria.png" />
+    <Content Include="flags\Niue.png" />
+    <Content Include="flags\Norfolk_Island.png" />
+    <Content Include="flags\North_Korea.png" />
+    <Content Include="flags\Norway.png" />
+    <Content Include="flags\Oman.png" />
+    <Content Include="flags\Pakistan.png" />
+    <Content Include="flags\Palau.png" />
+    <Content Include="flags\Panama.png" />
+    <Content Include="flags\Papua_New_Guinea.png" />
+    <Content Include="flags\Paraguay.png" />
+    <Content Include="flags\Peru.png" />
+    <Content Include="flags\Philippines.png" />
+    <Content Include="flags\Pitcairn_Islands.png" />
+    <Content Include="flags\Poland.png" />
+    <Content Include="flags\Portugal.png" />
+    <Content Include="flags\Puerto_Rico.png" />
+    <Content Include="flags\Qatar.png" />
+    <Content Include="flags\Republic_of_the_Congo.png" />
+    <Content Include="flags\Romania.png" />
+    <Content Include="flags\Russian_Federation.png" />
+    <Content Include="flags\Rwanda.png" />
+    <Content Include="flags\Saint_Kitts_and_Nevis.png" />
+    <Content Include="flags\Saint_Lucia.png" />
+    <Content Include="flags\Saint_Pierre.png" />
+    <Content Include="flags\Saint_Vicent_and_the_Grenadines.png" />
+    <Content Include="flags\Samoa.png" />
+    <Content Include="flags\San_Marino.png" />
+    <Content Include="flags\Sao_Tomé_and_Príncipe.png" />
+    <Content Include="flags\Saudi_Arabia.png" />
+    <Content Include="flags\Senegal.png" />
+    <Content Include="flags\Serbia_and_Montenegro.png" />
+    <Content Include="flags\Seychelles.png" />
+    <Content Include="flags\Sierra_Leone.png" />
+    <Content Include="flags\Singapore.png" />
+    <Content Include="flags\Slovakia.png" />
+    <Content Include="flags\Slovenia.png" />
+    <Content Include="flags\Soloman_Islands.png" />
+    <Content Include="flags\Somalia.png" />
+    <Content Include="flags\South_Africa.png" />
+    <Content Include="flags\South_Georgia.png" />
+    <Content Include="flags\South_Korea.png" />
+    <Content Include="flags\Soviet_Union.png" />
+    <Content Include="flags\Spain.png" />
+    <Content Include="flags\Sri_Lanka.png" />
+    <Content Include="flags\Sudan.png" />
+    <Content Include="flags\Suriname.png" />
+    <Content Include="flags\Swaziland.png" />
+    <Content Include="flags\Sweden.png" />
+    <Content Include="flags\Switzerland.png" />
+    <Content Include="flags\Syria.png" />
+    <Content Include="flags\Taiwan.png" />
+    <Content Include="flags\Tajikistan.png" />
+    <Content Include="flags\Tanzania.png" />
+    <Content Include="flags\Thailand.png" />
+    <Content Include="flags\Tibet.png" />
+    <Content Include="flags\Timor-Leste.png" />
+    <Content Include="flags\Togo.png" />
+    <Content Include="flags\Tonga.png" />
+    <Content Include="flags\Trinidad_and_Tobago.png" />
+    <Content Include="flags\Tunisia.png" />
+    <Content Include="flags\Turkey.png" />
+    <Content Include="flags\Turkmenistan.png" />
+    <Content Include="flags\Turks_and_Caicos_Islands.png" />
+    <Content Include="flags\Tuvalu.png" />
+    <Content Include="flags\UAE.png" />
+    <Content Include="flags\Uganda.png" />
+    <Content Include="flags\Ukraine.png" />
+    <Content Include="flags\UK.png" />
+    <Content Include="flags\Uruguay.png" />
+    <Content Include="flags\US_Virgin_Islands.png" />
+    <Content Include="flags\Uzbekistan.png" />
+    <Content Include="flags\Vanuatu.png" />
+    <Content Include="flags\Vatican_City.png" />
+    <Content Include="flags\Venezuela.png" />
+    <Content Include="flags\Vietnam.png" />
+    <Content Include="flags\Wallis_and_Futuna.png" />
+    <Content Include="flags\Yemen.png" />
+    <Content Include="flags\Zambia.png" />
+    <Content Include="flags\Zimbabwe.png" />
+    <Content Include="JS\Signup.js" />
+    <Content Include="UI\latestLogin.htm" />
+    <Content Include="RestServiceImpl.svc" />
+    <Content Include="UI\SignUp.htm" />
+    <Content Include="UI\tic-tac-toe.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IRestServiceImpl.cs" />
+    <Compile Include="RestServiceImpl.svc.cs">
+      <DependentUpon>RestServiceImpl.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54976</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

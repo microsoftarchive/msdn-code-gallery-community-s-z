@@ -1,0 +1,60 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Client Side Scripts">
+	<Title>Capturing Mouse Events</Title> 
+	<Thumbnail>CapturingEvents\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Capturing Mouse Events</ShortBlurb> 
+
+	<Content>CapturingEvents\CapturingEvents.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">CapturingEvents\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">CapturingEvents\vbcode.txt</InfoPage>
+	</InfoPages>
+
+        <Keywords>
+		<Keyword>Mouse Events</Keyword>
+  	</Keywords>
+
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Client Side Scripts">
+	<Title>Displaying a Custom Tooltip</Title> 
+	<Thumbnail>CustomTooltips\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Displaying a Custom Tooltip</ShortBlurb> 
+
+	<Content>CustomTooltips\ImageMapCustomTooltip.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">CustomTooltips\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">CustomTooltips\vbcode.txt</InfoPage>
+		<InfoPage Title="HTML Source">CustomTooltips\HTMLcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Tooltips, Customizing</Keyword>
+  	</Keywords> 
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Customization">
+	<Title>Displaying a Custom Tooltip</Title> 
+	<Thumbnail>CustomTooltips\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Displaying a Custom Tooltip</ShortBlurb> 
+
+	<Content>CustomTooltips\ImageMapCustomTooltip.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">CustomTooltips\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">CustomTooltips\vbcode.txt</InfoPage>
+		<InfoPage Title="HTML Source">CustomTooltips\HTMLcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Tooltips, Customizing</Keyword>
+  	</Keywords> 
+
+	</SampleConfig>
+
+</SampleConfigs>

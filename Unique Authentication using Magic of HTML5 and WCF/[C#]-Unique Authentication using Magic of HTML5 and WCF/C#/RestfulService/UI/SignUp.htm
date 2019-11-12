@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SignUp Form</title>
+    <script type="text/javascript" src="../JS/Signup.js.js"></script>
+    <script type="text/javascript">
+    
+    </script>
+    <style type="text/css">
+        html, body, h1, form, fieldset, legend, ol, li
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#526ACE), to(#526ACE));
+            color: #526ACE;
+            font-family: Georgia, "Times New Roman" , Times, serif;
+            padding: 20px;
+            align: =="center";}
+        h1
+        {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        div#signup
+        {
+            background: #EAF3FC;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            border-radius: 5px;
+            counter-reset: fieldsets;
+            padding: 20px;
+            width: 400px;
+        }
+        div#signup fieldset
+        {
+            border: none;
+            margin-bottom: 10px;
+        }
+        div#signup fieldset:last-of-type
+        {
+            margin-bottom: 0;
+        }
+        div#signup legend
+        {
+            color: #384313;
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            text-shadow: 0 1px 1px #c0d576;
+        }
+        div#signup > fieldset > legend:before
+        {
+            content: "Step " counter(fieldsets) ": ";
+            counter-increment: fieldsets;
+        }
+        div#signup fieldset fieldset legend
+        {
+            color: #111111;
+            font-size: 13px;
+            font-weight: normal;
+            padding-bottom: 0;
+        }
+        div#signup ol li
+        {
+            background: #b9cf6a;
+            background: rgba(255,255,255,.3);
+            border-color: #e3ebc3;
+            border-color: rgba(255,255,255,.6);
+            border-style: solid;
+            border-width: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            border-radius: 5px;
+            line-height: 30px;
+            list-style: none;
+            padding: 5px 10px;
+            margin-bottom: 2px;
+        }
+        div#signup ol ol li
+        {
+            background: none;
+            border: none;
+            float: left;
+        }
+        div#signup label
+        {
+            float: left;
+            font-size: 13px;
+            width: 110px;
+        }
+        div#signup fieldset fieldset label
+        {
+            background: none no-repeat left 50%;
+            line-height: 20px;
+            padding: 0 0 0 30px;
+            width: auto;
+        }
+        div#signup label[for=visa]
+        {
+            background-image: url(visa.gif);
+        }
+        div#signup label[for=amex]
+        {
+            background-image: url(amex.gif);
+        }
+        div#signup label[for=mastercard]
+        {
+            background-image: url(mastercard.gif);
+        }
+        div#signup fieldset fieldset label:hover
+        {
+            cursor: pointer;
+        }
+        div#signup input:not([type=radio]), form#signup textarea
+        {
+            background: #ffffff;
+            border: none;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            border-radius: 3px;
+            font: italic 13px Georgia, "Times New Roman" , Times, serif;
+            outline: none;
+            padding: 5px;
+            width: 200px;
+        }
+        div#signup input:not([type=submit]):focus, form#signup textarea:focus
+        {
+            background: #eaeaea;
+        }
+        div#signup input[type=radio]
+        {
+            float: left;
+            margin-right: 5px;
+        }
+        div#signup button
+        {
+            background: #384313;
+            border: none;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -khtml-border-radius: 20px;
+            border-radius: 20px;
+            color: #ffffff;
+            display: block;
+            font: 18px Georgia, "Times New Roman" , Times, serif;
+            letter-spacing: 1px;
+            margin: 0 80px;
+            text-align:center;
+            padding: 7px 25px;
+            text-shadow: 0 1px 1px #000000;
+            text-transform: uppercase;
+        }
+        div#signup button:hover
+        {
+            background: #1e2506;
+            cursor: pointer;
+        }
+        #holder
+        {
+            border: 5px dashed #ccc;
+            width: 100px;
+            height: 100px;
+            margin: 20px 110px;
+           
+        }
+        #holder.hover
+        {
+            border: 5px dashed #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center; color:Black;" >
+        SignUp Details</h1>
+    <div id="signup" style="margin-left:30% " >
+    <fieldset>
+        <legend>Your details</legend>
+        <ol>
+            <li>
+                <label for="name">
+                    Name</label>
+                <input id="name" name="name" type="text" placeholder="First and last name" required
+                    autofocus>
+            </li>
+            <li>
+                <label for="email">
+                    Email</label>
+                <input id="email" name="email" type="email" placeholder="example@domain.com" required>
+            </li>
+            <li>
+                <label for="phone">
+                    Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Eg. +447500000000" required>
+            </li>
+            <li>
+                <label for="phone">
+                    Gender</label>
+                <input id="gender" name="Gender" type="text" placeholder="Male Or Female" required>
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Address Details</legend>
+        <ol>
+            <li>
+                <label for="address">
+                    Address</label>
+                <textarea id="address" placeholder="Enter your address" name="address" rows="5" required></textarea>
+            </li>
+            <li>
+                <label for="postcode">
+                    Language</label>
+                <input id="language" name="language"  placeholder="Language knows" type="text" required>
+            </li>
+            <li>
+                <label for="country">
+                    Country</label>
+                <Select id="country" name="country" required>
+                <option>India</option>
+                <option>UnitedStates</option>
+                <option>UK</option>
+                <option>France</option>
+                <option>Australia</option>
+                </Select>
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Image Load</legend>
+        <ol>
+            <li><legend>Drag and Drop your Image here<legend>
+                <div id="holder">
+                </div>
+                <div id="status">
+                </div>
+
+                <script>
+                    var y = null;
+                    var holder = document.getElementById('holder'),
+                    state = document.getElementById('status');
+
+                    if (typeof window.FileReader === 'undefined') {
+                        state.className = 'fail';
+                    } else {
+                    }
+                    holder.ondragover = function() { this.className = 'hover'; return false; };
+                    holder.ondragend = function() { this.className = ''; return false; };
+                    holder.ondrop = function(e) {
+                        this.className = '';
+                        e.preventDefault();
+                        var size = e.dataTransfer.files[0].size;
+                        if (size > 10000) {
+                            alert("Your image size is greater than 10 kb please Shrink image size");
+                            window.location.reload(true);
+                        }
+                        else {
+                            var file = e.dataTransfer.files[0],
+                            reader = new FileReader();
+
+                            reader.onload = function(event) {
+                                holder.style.background = 'url(' + event.target.result + ') no-repeat center';
+                                y = event.target.result;
+                                alert(y);
+                            };
+                            reader.readAsDataURL(file);
+                            //var x = document.getElementById(el);
+                            state.className = 'success';
+                            state.innerHTML = 'Image SuccessFully Uploaded';
+                            return false;
+                        }
+                    };
+                </script></li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <button id="Send" onclick="getDataFromthroughClass();">
+            Send Me ID!</button>
+    </fieldset>
+    </div>
+</body>
+</html>

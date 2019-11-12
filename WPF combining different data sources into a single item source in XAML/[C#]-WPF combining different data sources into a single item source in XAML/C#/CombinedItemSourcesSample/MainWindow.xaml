@@ -1,0 +1,122 @@
+﻿<Window x:Class="CombinedItemSourcesSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CombinedItemSourcesSample"
+        Title="Combining item sources in XAML" Height="430" Width="525">
+    <Window.Resources>
+        <!--Collection views for the ObservableCollections in the view model or code behind.-->
+        <CollectionViewSource x:Key="BooksViewSource" Source="{Binding Books}"/>
+        <CollectionViewSource x:Key="MoviesViewSource" Source="{Binding Movies}"/>
+        <CollectionViewSource x:Key="AlbumsViewSource" Source="{Binding Albums}"/>
+        
+        <!--Combine the colection views into a single composite collection-->
+        <CompositeCollection x:Key="CombinedCollection">            
+            <CollectionContainer Collection="{Binding Source={StaticResource BooksViewSource}}" />
+            <CollectionContainer Collection="{Binding Source={StaticResource MoviesViewSource}}" />
+            <CollectionContainer Collection="{Binding Source={StaticResource AlbumsViewSource}}" />
+        </CompositeCollection>             
+    </Window.Resources>
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="LbxExample" Header="ListBox example">
+                <ListBox ItemsSource="{StaticResource CombinedCollection}">
+                    <ListBox.Resources>
+                        <!-- data templates which will be applied by type (Album,Movie,Book) -->
+                        <DataTemplate DataType="{x:Type local:Album}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource AlbumImg}"/>
+                                <TextBlock Text="{Binding Path=Artist}"/>
+                                <TextBlock Text="{Binding Path=Title}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type local:Movie}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource MovieImg}"/>
+                                <TextBlock Text="{Binding Path=Director}"/>
+                                <TextBlock Text="{Binding Path=Title}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type local:Book}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource BookImg}"/>
+                                <TextBlock Text="{Binding Path=Author}"/>
+                                <TextBlock Text="{Binding Path=Title}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.Resources>
+                </ListBox>
+            </TabItem>
+            <TabItem Header="ListView example">
+                <ListView ItemsSource="{StaticResource CombinedCollection}">
+                    <ListView.Resources>
+                        <!-- data templates which will be applied by type (Album,Movie,Book) -->
+                        <DataTemplate DataType="{x:Type local:Album}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource AlbumImg}"/>
+                                <TextBlock Text="{Binding Path=Artist}"/>
+                                <TextBlock Text="{Binding Path=Title}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type local:Movie}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource MovieImg}"/>
+                                <TextBlock Text="{Binding Path=Director}"/>
+                                <TextBlock Text="{Binding Path=Title}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type local:Book}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource BookImg}"/>
+                                <TextBlock Text="{Binding Path=Author}"/>
+                                <TextBlock Text="{Binding Path=Title}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.Resources>
+                </ListView>
+            </TabItem>
+            <TabItem Header="GridView example">
+                <ListView ItemsSource="{StaticResource CombinedCollection}">                                        
+                    <ListView.Resources>
+                        <!-- data templates which will be applied by type (Album,Movie,Book) to show the icon -->
+                        <DataTemplate DataType="{x:Type local:Album}">
+                            <Image Source="{StaticResource AlbumImg}"/>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type local:Book}">
+                            <Image Source="{StaticResource BookImg}"/>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type local:Movie}">
+                            <Image Source="{StaticResource MovieImg}"/>
+                        </DataTemplate>
+
+                        <!--the cell template selector to choose the template to use when displaying: Artist, Author or Director-->
+                        <local:ByDataTemplateSelector x:Key="ByDataTemplateSelector"/>
+
+                        <!--the cell templates to select from-->
+                        <DataTemplate x:Key="AuthorTemplate">
+                            <TextBlock Text="{Binding Author}"/>
+                        </DataTemplate>
+                        <DataTemplate x:Key="DirectorTemplate">
+                            <TextBlock Text="{Binding Director}"/>
+                        </DataTemplate>
+                        <DataTemplate x:Key="ArtistTemplate">
+                            <TextBlock Text="{Binding Artist}"/>
+                        </DataTemplate>
+                    </ListView.Resources>
+                    <ListView.View>                    
+                        <GridView>                
+                            <GridViewColumn/>
+                            <GridViewColumn Header="Title">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Title}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="By" CellTemplateSelector="{StaticResource ByDataTemplateSelector}"/>
+                        </GridView>
+                </ListView.View>
+                </ListView>
+            </TabItem>
+        </TabControl>     
+    </Grid>
+</Window>

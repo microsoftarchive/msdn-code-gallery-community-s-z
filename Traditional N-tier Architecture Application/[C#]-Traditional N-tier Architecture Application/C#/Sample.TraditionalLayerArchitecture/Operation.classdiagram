@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6354c412-874a-4aa9-9dd5-805dcd6a3503" name="Operation" linkedPackageId="c203e2e0-9c3e-4e86-b2d4-2ecb731fb4e0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="49739c27-1103-453a-9c4c-8cc6ce37224d" name="IOperation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f46f47c0-7aa9-497a-956a-8a67d15d2b47" />
+        <ownedOperations>
+          <operation Id="170e6a91-6715-44b8-a845-a0705aedb0fa" name="ReadAll" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4994f644-257c-469c-8bf2-f279e4cf35f9" />
+          </operation>
+          <operation Id="bfb2ad2a-80e9-4e58-960f-0d25dccdbdce" name="ReadById" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f0a689b-d7b2-42a8-b2ad-7ad1d04e0b70" />
+          </operation>
+          <operation Id="218c916b-4868-4664-8ef3-fa499c55abb9" name="Insert" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c2531115-04f8-4f6c-b599-d93f471173bd" />
+          </operation>
+          <operation Id="96622b6a-7d8b-475c-9ed8-09d562c2ae38" name="Delete" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="05b0fb68-a375-4dc4-9b22-207670e43f0f" />
+          </operation>
+          <operation Id="dcc668ba-8b43-460c-888b-36c6faf697d0" name="Update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bca6ade3-5e1a-4e31-901a-293736332c95" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9842fe62-9a50-4056-bd5e-bbdfd93e4f21" name="AnotherOperation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a6aabb4c-ec69-4823-83ee-8a96566264e2" />
+        <suppliersInternal>
+          <interfaceRealization Id="585424a4-c1ae-4544-8108-79c39d5c7e0f">
+            <interfaceMoniker Id="49739c27-1103-453a-9c4c-8cc6ce37224d" LastKnownName="IOperation" />
+            <elementDefinition Id="6963b022-6d51-487b-a8da-7119702aeb34" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="b67ef834-007d-4ad1-807e-f07fa668cfd9" name="ReadAll" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f7a46aa8-650a-4405-b903-f89e485a3cbf" />
+          </operation>
+          <operation Id="5f94a0d9-089f-442b-b997-4f837d0d0b36" name="ReadById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="db020417-c3b0-49f4-9916-3b57e0931cdc" />
+          </operation>
+          <operation Id="828e9e38-991f-4cca-a651-7adbc00dcf83" name="Insert" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="75bd88fb-b463-46c1-884d-4f76e3511bad" />
+          </operation>
+          <operation Id="e116ac93-5ed9-4016-a71b-67159dbbb528" name="Delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="59a5e986-a702-42a4-a6e8-2b9250cb80e6" />
+          </operation>
+          <operation Id="c4822419-41ac-4f9e-92af-c81edb9ea8da" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c024d361-d62f-4922-971a-9c9410424827" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="50704762-3e0f-4f48-a1ab-b33878e03556" name="OtherOperation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e27c736d-b92d-4a8f-8fc8-a20fb2fe0d7a" />
+        <suppliersInternal>
+          <interfaceRealization Id="42f79b51-7bdf-4b10-920c-3e14c8abeef3">
+            <interfaceMoniker Id="49739c27-1103-453a-9c4c-8cc6ce37224d" LastKnownName="IOperation" />
+            <elementDefinition Id="284a06cd-8329-43b3-8d48-32c72020d0aa" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="2143f6f6-0192-45f7-bca7-92eeda211bc9" name="ReadAll" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c74d5300-acd1-4754-a59c-d1c3ee9ff68e" />
+          </operation>
+          <operation Id="278d6c66-f0f9-4eb2-91e9-f89998a5d3e1" name="ReadById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be60abd6-2a97-41d9-b5b8-52a1ef78a563" />
+          </operation>
+          <operation Id="6724cb1d-9928-47c9-aefa-b7d22301ac90" name="Insert" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b6132811-51d6-4836-aa12-40a13f69ac7b" />
+          </operation>
+          <operation Id="dde3b1cb-79f7-485a-b529-7a3dea452146" name="Delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5089130c-d669-42f2-b0d5-f6201f4899cd" />
+          </operation>
+          <operation Id="9b0a2f74-4a57-49b5-9e68-8dc15fcf2d45" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5c17424f-a3cf-4dc1-97ba-c225e90649a6" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a09da7c5-7d89-47b4-be20-6c5c5bfcb81c" name="SampleOperation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9b4ba24a-8954-40f4-a7d2-b46f67654812" />
+        <suppliersInternal>
+          <interfaceRealization Id="296a10bc-87ba-415e-9fc7-b70c3c2ca5b1">
+            <interfaceMoniker Id="49739c27-1103-453a-9c4c-8cc6ce37224d" LastKnownName="IOperation" />
+            <elementDefinition Id="deb3ffdc-1b4b-4040-9c5a-669321ac1da7" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="bdf64652-c802-481a-b11f-315796e14ab1" name="ReadAll" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fbd4be1e-b39a-4e8c-80d3-c05da9c6baaf" />
+          </operation>
+          <operation Id="24a01b2e-e2bb-4f05-8197-324f27a41b36" name="ReadById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f837694-86d4-4c9c-a46a-7c564c896c51" />
+          </operation>
+          <operation Id="3608e91b-d361-4765-81c9-5446830aef90" name="Insert" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cfe3683c-8ead-4562-a17e-5c333443ef4a" />
+          </operation>
+          <operation Id="9cca801c-fb66-4fdc-ac6b-e8ccdc3cdb13" name="Delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="30c91508-743d-43de-a565-4dcb4e0f334c" />
+          </operation>
+          <operation Id="99f7382d-2016-4684-aa9b-2d3d3e03a172" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="28b32cb7-f7fa-4d25-9d9d-0a46446d719a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="c203e2e0-9c3e-4e86-b2d4-2ecb731fb4e0" name="Sample.TraditionalLayerArchitecture">
+    <elementDefinition Id="1bccdf64-7dca-4b23-829c-fbf611f38322" />
+    <profileInstances>
+      <packageHasProfileInstances Id="34164ac1-fb52-45a9-8597-0966eb67ff48">
+        <profileInstance Id="5cb18be1-1f05-44a5-8553-de2b6d207221" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="afa71c2a-829c-43a6-a0d4-270b565b7740">
+        <profileInstance Id="6cf88ac4-924b-4ba6-a4fa-768547f7cc2f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

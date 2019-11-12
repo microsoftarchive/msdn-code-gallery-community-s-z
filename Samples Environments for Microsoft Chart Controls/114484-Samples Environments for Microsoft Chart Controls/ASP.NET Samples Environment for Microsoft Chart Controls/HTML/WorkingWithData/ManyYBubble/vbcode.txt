@@ -1,0 +1,27 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+  ' Create a new random number generator
+    Dim rnd As New Random()
+
+    ' Data points X value is using current date
+    Dim dateX As DateTime = DateTime.Now.Date
+
+    ' Add points to the stock chart series
+    Dim index As Integer
+    For index = 0 To 9
+        Chart1.Series("Series 1").Points.AddXY(
+            dateX,                ' X value is a date
+            rnd.Next(40, 50),    ' High Y value
+            rnd.Next(10, 20),    ' Low Y value
+            rnd.Next(20, 40),    ' Open Y value
+            rnd.Next(20, 40))    ' Close Y value
+
+        ' Add 1 day to our X value
+        dateX = dateX.AddDays(1)
+    Next index
+
+End Sub 'Page_Load
+...

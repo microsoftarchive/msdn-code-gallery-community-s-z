@@ -1,0 +1,1 @@
+﻿This application requires a word list.  The application expects the word list to be ASCII text, containing one valid word per line.  You might start with the word lists at http://wordlist.sourceforge.net/.

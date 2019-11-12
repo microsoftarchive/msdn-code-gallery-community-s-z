@@ -1,0 +1,21 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+
+	// Set series type
+	Chart1.Series["Default"].ChartType = SeriesChartType.ThreeLineBreak;
+
+	// Set the PriceUpColor attribute			
+	Chart1.Series["Default"]["PriceUpColor"] = "Aquamarine";
+
+	// Set the default color attribute			
+	Chart1.Series["Default"].Color = Color.Red;
+
+	// Set the NumberOfLinesInBreak attribute
+	Chart1.Series["Default"]["NumberOfLinesInBreak"] = "1";
+
+}
+...
+

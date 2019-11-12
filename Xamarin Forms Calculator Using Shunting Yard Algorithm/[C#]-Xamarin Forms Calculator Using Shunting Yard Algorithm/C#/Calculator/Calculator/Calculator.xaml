@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.Calculator">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+
+    <Grid x:Name="mainGrid" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" x:Name="infoGrid" BackgroundColor="LightBlue">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="FontSize" Value="Large" />
+                        <Setter Property="FontAttributes" Value="Bold"></Setter>
+                    </Style>
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0" />
+            </Grid.ColumnDefinitions>
+
+            <ScrollView Padding="5, 0" Grid.Row="0" Grid.Column="0">
+                <Label Text="{Binding HistoryString}"/>
+            </ScrollView>
+
+            <Label Text="{Binding ResultString}"
+                   Grid.Row="1" Grid.Column="0"
+                   LineBreakMode="HeadTruncation"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="End"/>
+        </Grid>
+
+        <Grid x:Name="keypadGrid"
+              Grid.Row="1" Grid.Column="0"
+              RowSpacing="2"
+              ColumnSpacing="2"
+              BackgroundColor="CornflowerBlue"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button">
+                        <Setter Property="FontSize" Value="Large" />
+                        <Setter Property="FontAttributes" Value="Bold"></Setter>
+                        <Setter Property="BorderWidth" Value="1" />
+                    </Style>
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="C"
+                    Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                    Command="{Binding ClearCommand}"/>
+
+            <Button Text="DEL"
+                    Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
+                    Command="{Binding BackspaceCommand}"/>
+
+            <Button Text="7"
+                    Grid.Row="1" Grid.Column="0"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="7"/>
+            <Button Text="8"
+                    Grid.Row="1" Grid.Column="1"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="8"/>
+            <Button Text="9"
+                    Grid.Row="1" Grid.Column="2"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="9"/>
+            <Button Text="+"
+                    Grid.Row="1" Grid.Column="3"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="+"/>
+
+            <Button Text="4"
+                    Grid.Row="2" Grid.Column="0"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="4"/>
+            <Button Text="5"
+                    Grid.Row="2" Grid.Column="1"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="5"/>
+            <Button Text="6"
+                    Grid.Row="2" Grid.Column="2"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="6"/>
+            <Button Text="-"
+                    Grid.Row="2" Grid.Column="3"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="-"/>
+
+            <Button Text="1"
+                    Grid.Row="3" Grid.Column="0"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="1"/>
+            <Button Text="2"
+                    Grid.Row="3" Grid.Column="1"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="2"/>
+            <Button Text="3"
+                    Grid.Row="3" Grid.Column="2"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="3"/>
+            <Button Text="*"
+                    Grid.Row="3" Grid.Column="3"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="*"/>
+
+            <Button Text="&#x00B7;"
+                    Grid.Row="4" Grid.Column="0"
+                    Command="{Binding DecimalCommand}"/>
+            <Button Text="0"
+                    Grid.Row="4" Grid.Column="1"
+                    Command="{Binding NumericCommand}"
+                    CommandParameter="0"/>
+            <Button Text="="
+                    Grid.Row="4" Grid.Column="2"
+                    Command="{Binding EqualCommand}"/>
+            <Button Text="/"
+                    Grid.Row="4" Grid.Column="3"
+                    Command="{Binding OperatorCommand}"
+                    CommandParameter="/"/>
+        </Grid>
+    </Grid>
+</ContentPage>

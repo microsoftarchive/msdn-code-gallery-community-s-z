@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<LINK href="../../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<p>Data can be manipulated by:</p>
+		<UL>
+			<LI>
+				Applying a statistical or financial formula.&nbsp;Depending on the type of 
+				formula being applied, new series of data can be created and existing series 
+				can be changed.<LI>
+			    Merging or splitting series.&nbsp; 			<LI>
+				Exporting series.<LI>
+				Filtering series.<LI>
+				Grouping series.<LI>
+				Sorting series.</UL>
+		<H3>
+			Using Formulas<p>Microsoft Chart Control for .NET Framework provides two types of formulas: financial 
+                and statistical.</p>
+			<H4>Financial Formulas</H4>
+			<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+				<p>The Chart control provides over&nbsp;thirty technical analysis formulas, such 
+					as&nbsp;moving averages, price indicators, volume indicators, 
+					oscillators, and forecasting 
+					formulas.</p>
+			</BLOCKQUOTE>
+			<H4>Statistical&nbsp;Formulas</H4>
+			<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+				<p>Statistical formulas in the Chart control can be&nbsp;organized into&nbsp;four general groups: 
+                    statistical 
+					tests, statistical distributions, basic statistical functions and utility 
+					functions.</p>
+			</BLOCKQUOTE>
+		<H3>Splitting, Copying, and Merging</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p><i>Splitting</i> refers to the&nbsp;copying of multiple Y values from a single source 
+				series to multiple destination series.&nbsp;The figure on the left shows a 
+                Bubble chart, which plots two Y values in a single series. The data is split 
+                into two different series and plotted in the figure on the right, and each 
+                series is plotted using a different chart type (Column and Line).</p>
+			<p><IMG alt="Filtering Data" src="BeforeSplitting.PNG" border="0"><EM><IMG alt="Filtering Data" src="AfterSplitting.PNG" border="0"></EM></p>
+			<p><i>Merging</i> refers to&nbsp;copying values from multiple source series to populate 
+				one destination series. In other words, it is the reverse of data splitting.</p>
+            <p><i>Copying </i>refers to&nbsp;all other copy operations.</p>
+		</BLOCKQUOTE>
+		<H3 dir="ltr">Exporting Series</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>When a series is <i>exported</i>, the X and Y values 
+				of all data points in the series are persisted in an in-memory cache, where 
+				they can be used for:</p>
+			<UL dir="ltr">
+				<LI>
+					<DIV style="MARGIN-RIGHT: 0px">Data binding.</DIV>
+				<LI>
+					<DIV style="MARGIN-RIGHT: 0px">Saving into the file or stream.</DIV>
+				<LI>
+					<DIV style="MARGIN-RIGHT: 0px">Converting to a different format, like XML.</DIV>
+				<LI>
+					<DIV style="MARGIN-RIGHT: 0px">Editing.</DIV>
+				</LI>
+			</UL>
+		</BLOCKQUOTE>
+		<H3>Filtering Series<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>Data is <i>filtered </i>on a series-by-series basis. When a series is filtered, its 
+				data points are either removed from the series&nbsp;or marked as empty. The 
+				points that are filtered depends on the specified filtering criteria.</p>
+			<p>
+				Filtering allows for the display of only useful data to chart readers. The figure below 
+                shows data points below the value of 400 removed after the series is filtered.</p>
+			<p><IMG alt="Filtering Data" src="FilteredSeries.png" border="0"><BR>
+				</p>
+		</BLOCKQUOTE>
+		<H3 dir="ltr">Grouping Series</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p><i>Grouping</i> replaces a sequence of data points in a series with one grouped point. 
+                The X and&nbsp;Y values of each grouped point are calculated using a 
+				specified formula and&nbsp;the original points' values.
+			</p>
+			<p>Grouping is especially useful when a large data set makes it difficult to&nbsp;spot trends in a chart.</p>
+		</BLOCKQUOTE>
+		</body>
+</html>

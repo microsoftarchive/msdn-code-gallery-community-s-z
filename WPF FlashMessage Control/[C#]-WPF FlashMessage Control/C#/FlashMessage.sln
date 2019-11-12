@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlashMessage", "FlashMessage\FlashMessage.csproj", "{5684E894-5274-4D6B-AC8D-C7DD68CC61D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.FlashMessage", "Sample.FlashMessage\Sample.FlashMessage.csproj", "{98A5F70C-A542-451B-A5D4-E2937A30DA05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5684E894-5274-4D6B-AC8D-C7DD68CC61D3}.Debug|x86.ActiveCfg = Debug|x86
+		{5684E894-5274-4D6B-AC8D-C7DD68CC61D3}.Debug|x86.Build.0 = Debug|x86
+		{5684E894-5274-4D6B-AC8D-C7DD68CC61D3}.Release|x86.ActiveCfg = Release|x86
+		{5684E894-5274-4D6B-AC8D-C7DD68CC61D3}.Release|x86.Build.0 = Release|x86
+		{98A5F70C-A542-451B-A5D4-E2937A30DA05}.Debug|x86.ActiveCfg = Debug|x86
+		{98A5F70C-A542-451B-A5D4-E2937A30DA05}.Debug|x86.Build.0 = Debug|x86
+		{98A5F70C-A542-451B-A5D4-E2937A30DA05}.Release|x86.ActiveCfg = Release|x86
+		{98A5F70C-A542-451B-A5D4-E2937A30DA05}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryMonitorWinForm", "DirectoryMonitorWinForm.csproj", "{705C5A63-ECEA-4588-93E2-2EFCB0788162}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{705C5A63-ECEA-4588-93E2-2EFCB0788162}.Debug.ActiveCfg = Debug|.NET
+		{705C5A63-ECEA-4588-93E2-2EFCB0788162}.Debug.Build.0 = Debug|.NET
+		{705C5A63-ECEA-4588-93E2-2EFCB0788162}.Release.ActiveCfg = Release|.NET
+		{705C5A63-ECEA-4588-93E2-2EFCB0788162}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

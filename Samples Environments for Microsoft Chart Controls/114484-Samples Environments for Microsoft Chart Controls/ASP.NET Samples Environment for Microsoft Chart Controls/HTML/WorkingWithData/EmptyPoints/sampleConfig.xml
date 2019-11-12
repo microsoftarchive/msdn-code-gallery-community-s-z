@@ -1,0 +1,71 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "EmptyPoints" Priority="10">
+	<Title>Empty Point Appearance</Title> 
+	<Thumbnail>EmptyPointsAppearance\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Setting Empty Point Appearance</ShortBlurb> 
+	<Content>EmptyPointsAppearance\EmptyPointsAppearance.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">InsertingEmptyPoints\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">EmptyPointsAppearance\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">EmptyPointsAppearance\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Empty points, Appearance</Keyword>
+		<Keyword>Appearance, Empty points</Keyword>
+		<Keyword>Empty points, Point value</Keyword>
+	</Keywords>     
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "ChartAppearance" Priority="625">
+	<Title>Empty Point Appearance</Title> 
+	<Thumbnail>EmptyPointsAppearance\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Setting Empty Point Appearance</ShortBlurb> 
+	<Content>EmptyPointsAppearance\EmptyPointsAppearance.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">EmptyPointsAppearance\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">EmptyPointsAppearance\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Empty points, Appearance</Keyword>
+		<Keyword>Appearance, Empty points</Keyword>
+		<Keyword>Empty points, Point value</Keyword>
+	</Keywords>  
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "EmptyPoints" Priority="11">
+	<Title>Inserting Empty Points</Title> 
+	<Thumbnail>InsertingEmptyPoints\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Inserting Empty Points</ShortBlurb> 
+	<Content>InsertingEmptyPoints\InsertingEmptyPoints.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">InsertingEmptyPoints\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">InsertingEmptyPoints\vbcode.txt</InfoPage>
+	</InfoPages>
+	<Keywords>
+		<Keyword>Empty points, Inserting</Keyword>
+	</Keywords> 
+	
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "DataSeries">
+	<Title>Inserting Empty Points</Title> 
+	<Thumbnail>InsertingEmptyPoints\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Inserting Empty Points</ShortBlurb> 
+	<Content>InsertingEmptyPoints\InsertingEmptyPoints.aspx</Content> 
+	<InfoPages>
+	<InfoPage Title="Overview">InsertingEmptyPoints\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">InsertingEmptyPoints\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">InsertingEmptyPoints\vbcode.txt</InfoPage>
+	</InfoPages>
+	<Keywords>
+		<Keyword>Empty points, Inserting</Keyword>
+	</Keywords>
+	</SampleConfig>
+
+</SampleConfigs>

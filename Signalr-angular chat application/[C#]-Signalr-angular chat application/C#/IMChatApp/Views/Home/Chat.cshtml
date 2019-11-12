@@ -1,0 +1,196 @@
+﻿@model IMChatApp.Models.Login
+@{
+    ViewBag.Title = "Chat";
+}
+
+
+<style>
+    .reveal .fa {
+        font-family: 'FontAwesome';
+        font-style: normal;
+    }
+    ul {
+        list-style:none;
+        padding-left:1px;
+    }
+    #PrivateChatArea {
+        z-index: 44;
+        max-height: 300px;
+        min-height: 300px;
+        width: 278px;
+        bottom: -2%;
+        position: fixed;
+        right: 170px;
+        opacity: 1;
+    }
+
+    #OnlineUsers {
+        z-index: 88;
+        height: auto;
+        width: 181px;
+        bottom: -3%;
+        position: fixed;
+        right: 0%;
+        opacity: 1;
+    }
+
+    .alertBox {
+        bottom: 0px;
+        right: 0px;
+        position: fixed;
+        z-index: 111;
+    }
+    h3.media-heading {
+        font-size:11px;
+        font-family:'Comic Sans MS';
+        float:left;
+
+    }
+   
+  
+</style>
+
+
+<p class="row">
+
+
+    <div class="alert-success " id="userNick" style="padding:8px; text-align:left ; text-wrap:initial; text-indent:each-line" >Welcome   <h4 id="userNick">  @ViewBag.Username !!</h4> </div>
+    <div ng-app="ChatApp" ng-controller="chatController">        
+            <div id="OnlineUsers">
+                <div class="container">
+                    <div class="row">                       
+                        <div>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <span class="fa fa-users"></span>&nbsp; &nbsp; Online[{{OnlineUsers.length}}]
+                                    <div class="btn-group pull-right">
+
+                                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                        </button>
+                                        <ul class="dropdown-menu slidedown">
+                                            <li>
+                                                <a href="" ng-click="ChangeStatus('Online')">
+                                                    <span class="glyphicon glyphicon-ok-sign">
+                                                    </span>Available
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" ng-click="ChangeStatus('Busy')">
+                                                    <span class="glyphicon glyphicon-remove">
+                                                    </span>Busy
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" ng-click="ChangeStatus('Away')">
+                                                    <span class="glyphicon glyphicon-time"></span>
+                                                    Away
+                                                </a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <a href="">
+                                                    <span class="glyphicon glyphicon-off"></span>
+                                                    Sign Out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-body" style=" min-height:100px; max-height:600px;" ng-class="">
+                                    <div class="media" ng-repeat="user in OnlineUsers track by $index">
+                                        <div class="media-body">
+                                            <h3 class="media-heading"><strong><a href="#" ng-click="PrivateMessage($index)">
+                                                <i class="fa fa-minus-circle" style="color:red" ng-show="user.status=='Busy'"></i>
+                                                                                  <i class="fa fa-circle" style="color:green" ng-show="user.status=='Online'"> </i> 
+                                                                                  <i class="fa fa-history" style="color:orange" ng-show="user.status=='Away'">  </i>
+                                                  {{user.name}}</a></strong></h3>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div id="PrivateChatArea" ng-show="ShowPrivateWindow">
+                <div class="container">
+                    <div class="row">
+
+                        <div>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <span class="glyphicon glyphicon-comment"></span> {{UserInPrivateChat.name}}
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn btn-default btn-xs" ng-click="ClosePrivateWindow()">
+                                            <span class="glyphicon glyphicon-remove"> </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="panel-body" style="overflow-y:scroll; min-height:200px; max-height:200px;">
+                                    <ul class="chat">                                       
+                                                <li ng-class="(msg.from == UserInPrivateChat.name )? 'left' : 'right'" class="clearfix" ng-repeat="msg in PrivateMessages | filter:({to: UserInPrivateChat.ConnectionId})">
+                                                    <span class="chat-img" ng-class="(msg.from == UserInPrivateChat.name )? 'pull-left' : 'pull-right'">
+                                                        <img ng-src="{{(msg.from == UserInPrivateChat.name )? 'http://placehold.it/40/FA6F57/fff&text=OT' : 'http://placehold.it/40/55C1E7/fff&text=ME' }} " alt="User Avatar" />
+                                                    </span>
+                                                    <div class="chat-body clearfix">
+                                                        <div class="header">
+                                                            <strong class="primary-font">{{msg.from}}</strong> <small ng-class="(msg.from == UserInPrivateChat.name )? 'pull-left' : 'pull-right'"
+                                                                                                                      class="text-muted">
+
+                                                            </small>
+                                                        </div>
+                                                        <p>
+                                                            {{msg.message}}
+                                                        </p>
+                                                    </div>
+                                                    <hr />
+                                                </li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer">
+
+                                    <div>
+                                        {{usertyping}}
+                                    </div>
+                                    <div class="input-group">
+                                        <input id="btn-input" type="text" class="form-control input-sm" ng-model="pvtmessage" placeholder="Type your message here..." ng-keypress="SkeyPress($event)" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-warning btn-sm" id="btn-chat" ng-click="SendPrivateMessage()">
+                                                Send
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+        <div flash-message="7000" style="z-index:400 ; position:absolute; bottom:0px; left:1px;"></div>
+
+       
+
+</div>
+
+          
+  </div>
+
+
+@section Scripts
+{
+<script src="~/Scripts/jquery.signalR-2.0.0.min.js"></script>
+<script src="~/signalr/hubs"></script>
+    <script src="~/ChatScripts/angular.min.js"></script>
+  <script src="~/Scripts/angular-flash.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("ChatApp", ["flash"]);
+    </script>
+
+    <script src="~/ChatScripts/Controlers.js"></script>
+    <script src="~/ChatScripts/Factories.js"></script>
+
+
+}

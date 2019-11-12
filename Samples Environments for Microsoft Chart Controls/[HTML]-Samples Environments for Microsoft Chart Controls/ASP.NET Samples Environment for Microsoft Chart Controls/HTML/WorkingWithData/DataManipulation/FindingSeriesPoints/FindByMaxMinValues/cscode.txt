@@ -1,0 +1,14 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Find point with maximum Y value and change color
+    DataPoint maxValuePoint = Chart1.Series["Series1"].Points.FindMaxValue();
+    maxValuePoint.Color = Color.FromArgb(255, 128, 128);
+    																							
+    // Find point with minimum Y value and change color
+    DataPoint minValuePoint = Chart1.Series["Series1"].Points.FindMinValue();
+    minValuePoint.Color = Color.FromArgb(128, 128, 255);
+}
+...

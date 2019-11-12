@@ -1,0 +1,79 @@
+﻿<Window x:Class="wpf_EntityFramework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:wpf_EntityFramework" 
+        Title="WPF Entity Framework MVVM WalkThrough - 2" Height="550" Width="800">
+    <Window.Resources>
+        <Storyboard x:Key="FadeUIMessage">
+            <DoubleAnimation 
+                Storyboard.TargetName="UIMessage"
+                Storyboard.TargetProperty="(TextBlock.Opacity)" 
+                From="1" To="0" Duration="0:0:6" />
+        </Storyboard>
+
+    </Window.Resources> 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" x:Name="CommandTab">
+            <TabItem Header="Navigate" FontSize="10">
+                <ListView ItemsSource="{Binding Views}" BorderBrush="Transparent" FontSize="12" FontWeight="Bold" 
+                          ScrollViewer.CanContentScroll="False"
+                          >
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                                <Button Command="{Binding Navigate}" 
+                                        BorderThickness="0" Height="32" Width="100" 
+                                        Background="{StaticResource LightBrightGradientBrush}"
+                                        Foreground="{StaticResource DarkDullBrush}"
+                                        >
+                                    <TextBlock Text="{Binding ViewDisplay}" 
+                                           TextAlignment="Center" 
+                                          />
+                                </Button>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </TabItem>
+            <TabItem Header="Edit" x:Name="EditTabItem" FontSize="10">
+                <ListView ItemsSource="{Binding Commands}" BorderBrush="Transparent" FontSize="12" FontWeight="Bold" 
+                          ScrollViewer.CanContentScroll="False" 
+                          >
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                                <Button Command="{Binding Send}" 
+                                        BorderThickness="0" 
+                                        Margin="0" Padding="0" 
+                                        >
+                                    <Path Data="{Binding IconGeometry}" Stretch="Uniform" 
+                                            Style="{StaticResource PathOpacityStyle}"
+                                            Fill="{StaticResource MidDullBrush}" Width="32" Height="32"/>
+                                    <Button.ToolTip>
+                                        <TextBlock Text="{Binding CommandDisplay}"/>
+                                    </Button.ToolTip>
+                                </Button>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </TabItem>
+        </TabControl>
+        <TextBlock x:Name="UIMessage" Text="" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,8,0" Foreground="{StaticResource DarkBrightBrush}"/>
+        <ContentControl x:Name="Holder" Grid.Row="1" />
+    </Grid>
+</Window>

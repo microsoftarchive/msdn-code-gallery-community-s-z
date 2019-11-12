@@ -1,0 +1,95 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Xaml Exporter for Blender</title>
+</head>
+
+<body>
+
+<h1 align="center">Xaml Exporter Script for Blender</h1>
+<p align="center">Daniel Lehenbauer<br>
+<a href="http://blogs.msdn.com/danlehen">http://blogs.msdn.com/danlehen</a></p>
+<h2>Introduction</h2>
+<p>This script allows Blender to be used as an authoring tool for 3D Windows 
+Presentation Foundation (WPF) content.&nbsp; 3D scenes created in Blender are 
+exported to .xaml files which can be dynamically loaded or compiled into your 
+WPF applications.&nbsp; This script currently works with Blender 2.40.&nbsp; 
+Exported Xaml is compatible with the December CTP of the Windows Presentation 
+Foundation.&nbsp; For licensing information and to get the latest version go to:
+<a __designer:dtid="281474976710662" href="http://workspaces.gotdotnet.com/3dtools">
+http://workspaces.gotdotnet.com/3dtools</a>.</p>
+<table border="0" width="59%" id="table1" cellspacing="1">
+	<tr>
+		<td width="301">
+		<a href="ReadMe_files/ReadMe1.jpg">
+		<img border="0" src="ReadMe_files/ReadMe1.jpg" width="300" height="223"></a></td>
+		<td>
+		<a href="ReadMe_files/ReadMe2.jpg">
+		<img border="0" src="ReadMe_files/ReadMe2.jpg" width="300" height="222"></a></td>
+	</tr>
+	<tr>
+		<td width="301" align="left" valign="top"><b>Figure 1a<br>
+		</b><i>The 3D scene* is authored in Blender and then exported to Xaml.</i></td>
+		<td align="left" valign="top"><b>Figure 1b<br>
+		</b><i>The final scene as it appears in the WPF Model Viewer (included 
+		in the <a href="http://workspaces.gotdotnet.com/3DTools">3D Tools 
+		workspace</a>)</i></td>
+	</tr>
+</table>
+<h2>Installation</h2>
+<ol>
+	<li>Ensure you have Blender v2.40 or later installed.&nbsp; You can view 
+	your Blender version via the ~Help~About menu.&nbsp; The latest version of 
+	Blender can be dowloaded from <a href="http://www.blender.org">
+	http://www.blender.org</a>.<br>
+&nbsp;</li>
+	<li>Copy the xaml_export.py in the XamlExporter directory to Blender's 
+	scripts directory.&nbsp; On Windows this is typically located at one of:<br>
+	<br>
+	<span style="FONT-WEIGHT: bold">C:\Program Files\Blender 
+	Foundation\Blender\.blender\scripts<br>
+	C:\Documents and Settings\&lt;YourUserName&gt;\Application Data\Blender 
+	Foundation\Blender\.blender\scripts<br>
+	<br>
+	</span>depending on the options you chose during installation.&nbsp; There 
+	should be similarly named import and export scripts in this directory.<br>
+&nbsp;</li>
+	<li>Restart Blender.&nbsp; If the installation was successful &quot;Xaml (.xaml)...&quot; 
+	should now appear in Blender's ~File~Export menu.</li>
+</ol>
+<p>(Note: The Xaml Exporter script for Blender works with the Python runtime 
+included with Blender.&nbsp; A full Python installation is not required.)</p>
+<h2>Usage</h2>
+<p>After composing your 3D scene is Blender choose the ~File~Export~Xaml menu.&nbsp; 
+This will display Blender's standard file dialog.&nbsp; Enter the name of your 
+scene and press the &quot;Export Xaml&quot; button.</p>
+<p>The exported Xaml can be viewed in the WPF Model Viewer (also included in the
+<a href="http://workspaces.gotdotnet.com/3DTools">3D Tools workspace</a>).&nbsp; 
+You can dynamically load the Xaml into your WPF application using 
+XamlReader.Load(fileStream).</p>
+<h2>Known Issues</h2>
+<ul>
+	<li>The ImageSource property is exported as a fully qualified path as it 
+	appears in Blender (e.g., &quot;D:\MyModels\Ballmer.png&quot;).</li>
+	<li>The Windows Presentation Foundation does not have an image codec for 
+	Targa (*.tga) files.&nbsp; If you export a model which uses Targa files you 
+	will need to convert these by hand to a format supported by the WPF (e.g., 
+	PNG) and fix the exported .xaml by hand.</li>
+	<li>Diffuse materials are exported as a simple texture if applicable or a 
+	solid color if no texture is available.&nbsp; Other types of materials are 
+	not currently supported.</li>
+	<li>Blender uses different lighting equations than the WPF.&nbsp; As a 
+	result, exported lighting is approximate.&nbsp; Only &quot;Sun&quot;, &quot;Lamp&quot;, and 
+	&quot;Spot&quot; light types are supported.</li>
+	<li>There is currently no support for animation or support for geometry 
+	types other than meshes.</li>
+</ul>
+<p>Please report any issues to the author.&nbsp; Daniel may be contact through 
+his blog (<a href="http://blogs.msdn.com/danlehen">http://blogs.msdn.com/danlehen</a>).</p>
+<p><i>* Steve Ballmer model courtesy of Bonnie Lehenbauer</i></p>
+
+</body>
+
+</html>

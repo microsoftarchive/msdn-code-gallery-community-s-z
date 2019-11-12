@@ -1,0 +1,22 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "Rendering" Priority="1000">
+	<Title>Rendering in HTML IFrame</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Rendering in HTML IFrame</ShortBlurb>
+	<Content>UsingWithIFrame.htm</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">Overview.htm</InfoPage>
+		<InfoPage Title="HTML - UsingWithIFrame.aspx">HTMLcode1.txt</InfoPage>
+    <InfoPage Title="HTML - UsingWithIFrame.htm">HTMLcode2.txt</InfoPage>
+  </InfoPages>
+
+        <Keywords>
+		<Keyword>IFrames</Keyword>
+		<Keyword>Legacy Websites, Rendering Using IFrame</Keyword>
+  	</Keywords>
+	</SampleConfig>	
+	
+</SampleConfigs>

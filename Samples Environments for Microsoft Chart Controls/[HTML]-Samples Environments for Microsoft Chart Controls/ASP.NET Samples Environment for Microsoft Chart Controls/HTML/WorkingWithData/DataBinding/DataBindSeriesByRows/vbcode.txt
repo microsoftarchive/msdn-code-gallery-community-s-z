@@ -1,0 +1,63 @@
+Imports System.Web.UI.DataVisualization.Charting
+Imports System.Data
+Imports System.Data.OleDb
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Resolve the address to the Access database
+   Dim fileNameString As String = Me.MapPath(".")
+   fileNameString += "..\..\..\data\chartdata.mdb"
+   
+   ' Initialize a connection string    
+   Dim myConnectionString As String = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString
+   
+   ' Define the database query	
+   Dim mySelectQuery As String = "SELECT * FROM SALESCOUNTS;"
+   
+   ' Create a database connection object using the connection string	
+   Dim myConnection As New OleDbConnection(myConnectionString)
+   
+   ' Create a database command on the connection using query	
+   Dim myCommand As New OleDbCommand(mySelectQuery, myConnection)
+   
+   ' Open the connection	
+   myCommand.Connection.Open()
+   
+   ' Initializes a new instance of the OleDbDataAdapter class
+   Dim myDataAdapter As New OleDbDataAdapter()
+   myDataAdapter.SelectCommand = myCommand
+   
+   ' Initializes a new instance of the DataSet class
+   Dim myDataSet As New DataSet()
+   
+   ' Adds rows in the DataSet
+   myDataAdapter.Fill(myDataSet, "Query")   
+   
+   Dim row As DataRow
+   For Each row In  myDataSet.Tables("Query").Rows
+      ' for each Row, add a new series
+      Dim seriesName As String = row("SalesRep").ToString()
+      Chart1.Series.Add(seriesName)
+      Chart1.Series(seriesName).ChartType = SeriesChartType.Line
+      Chart1.Series(seriesName).BorderWidth = 2      
+      
+      Dim colIndex As Integer
+      For colIndex = 1 To (myDataSet.Tables("Query").Columns.Count) - 1
+         ' for each column (column 1 and onward), add the value as a point
+         Dim columnName As String = myDataSet.Tables("Query").Columns(colIndex).ColumnName
+         Dim YVal As Integer = CInt(row(columnName))
+         
+         Chart1.Series(seriesName).Points.AddXY(columnName, YVal)
+      Next colIndex
+   Next row
+   
+   DataGrid.DataSource = myDataSet
+   DataGrid.DataBind()
+   
+   ' Closes the connection to the data source. This is the preferred 
+   ' method of closing any open connection.
+   myCommand.Connection.Close()
+   
+End Sub 'Page_Load 
+...   

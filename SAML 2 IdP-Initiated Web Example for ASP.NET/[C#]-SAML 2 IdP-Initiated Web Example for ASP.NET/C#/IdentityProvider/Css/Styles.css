@@ -1,0 +1,132 @@
+﻿.templatecontent
+{
+	margin:auto;
+	width: 700px;
+	background-color: White;
+	border: #999999 1px solid;
+	padding: 20px;
+}
+
+.content
+{
+	margin: auto;
+	width: 480px;
+}
+
+.header
+{
+	padding-bottom: 10px;
+	border-bottom: #999999 1px solid;
+	margin-bottom: 10px;
+}
+
+.header img
+{
+	border: 0px;
+	margin-top: -8px;
+}
+
+body 
+{
+	font: 11px Tahoma;	
+	margin: auto;	
+	background-color: #f5f5f5;
+	padding: 10px;
+}
+
+ul
+{	
+	margin-top: 2px;	
+}
+
+li
+{
+	padding-left: 0px;	
+}
+
+.bodytext
+{
+	font: 11px Tahoma;	
+}
+
+.button, .button:hover,
+.okbutton, .okbutton:hover,
+.cancelbutton, .cancelbutton:hover
+{
+	padding: 0px;
+	border: 0px;
+	margin: 1px;
+	width: 92px;
+	color: black;
+	font-weight: normal;
+	height: 26px;
+	background-color: transparent;
+	text-align: center;
+	font-size: 11px;
+	vertical-align: middle;
+}
+
+.button, .okbutton, .cancelbutton
+{
+	background-image: url(btn.png);	
+}
+
+.button:hover, .okbutton:hover, .cancelbutton:hover
+{
+	background-image: url(btnact.png);
+}
+
+.textbox,.password,.dropdown,.listbox
+{
+	font: 11px Verdana;
+	width: 160px;
+}
+
+.textbox,.password,.dropdown,.listbox{
+    margin-left: 2px;
+    background-color: #F7F7F7;
+    border:1px solid;
+    border-color: #AFD1FF;
+}
+
+.textbox:focus,.password:focus,.dropdown:focus{
+	background-color: #FFFFFF;
+    border-color: #AFD1FF;
+}
+
+.checkbox
+{
+	font: 11px Tahoma;
+	color: black;
+}
+
+.radio
+{
+	font: 11px Tahoma;
+	color: black;
+}
+
+.bodytext
+{
+	font: 11px Tahoma;	
+	color: #000000;	
+}
+
+.bodytextb
+{
+	font: bold 11px Tahoma;
+	color: #000000;
+}
+
+.bodytexti
+{
+	font: italic 11px Tahoma;	
+	color: #000000;
+}
+
+.error-1
+{
+	font: 9px Tahoma;
+	color: red;
+	padding-left: 3px;
+}

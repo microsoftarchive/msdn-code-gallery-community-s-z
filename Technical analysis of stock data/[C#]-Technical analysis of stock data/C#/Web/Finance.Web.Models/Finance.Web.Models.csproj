@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CEFB205-D3C9-4486-93A9-2D15B87E5273}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Finance.Web.Models</RootNamespace>
+    <AssemblyName>Finance.Web.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountModels.cs" />
+    <Compile Include="GraphDescriptionModel.cs" />
+    <Compile Include="Graphs\Entities.cs" />
+    <Compile Include="Graphs\Enums.cs" />
+    <Compile Include="Infrastracture\DateRangeAttribute.cs" />
+    <Compile Include="FunctionDescriptionModel.cs" />
+    <Compile Include="Infrastracture\ModelClientValidationRangeDateRule.cs" />
+    <Compile Include="Infrastracture\StocksListSingleton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GraphModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Finance.Common.Base\Finance.Common.Base.csproj">
+      <Project>{87A81847-415D-43C7-85FF-12ECB9EA509A}</Project>
+      <Name>Finance.Common.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Finance.DataProvider\Finance.DataProvider.csproj">
+      <Project>{2453AEF8-FCB0-4C72-AC46-6C99DD17DEF7}</Project>
+      <Name>Finance.DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance.Web.DataWrappers\Finance.Web.DataWrappers.csproj">
+      <Project>{42942F97-8EA3-4499-ACFD-48CE0C5A808D}</Project>
+      <Name>Finance.Web.DataWrappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance.Web.Resources\Finance.Web.Resources.csproj">
+      <Project>{8C1D29F1-1B73-4187-A43B-B06C343B341C}</Project>
+      <Name>Finance.Web.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Finance.Web.DataWrappers.ElementDailyDataRange.datasource" />
+    <None Include="Properties\DataSources\Finance.Web.DataWrappers.ElementWrapper.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Infrastracture\StocksList.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

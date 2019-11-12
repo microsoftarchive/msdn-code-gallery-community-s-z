@@ -1,0 +1,29 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "EmptyPoints" Priority="11">
+  <Title>Inserting Empty Points</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Inserting Empty Points</ShortBlurb> 
+  <SampleControl>InsertingEmptyPoints</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>Labels, Text Style</Keywords> 
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "DataSeries">
+  <Title>Inserting Empty Points</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Inserting Empty Points</ShortBlurb> 
+  <SampleControl>InsertingEmptyPoints</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Labels, Text Style</Keyword> 
+  </Keywords> 
+</SampleConfig>
+
+</SampleConfigs>

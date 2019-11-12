@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataBinding" Priority = "400">
+  <Title>Data Binding Y Values</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Binding Y Values</ShortBlurb> 
+  <Content>DataBindingY.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding Y Values</Keyword>
+    <Keyword>Binding, Y Values</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

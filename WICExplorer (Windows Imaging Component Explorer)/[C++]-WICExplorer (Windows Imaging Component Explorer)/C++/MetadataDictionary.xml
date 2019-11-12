@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dictionary>
+
+    <!-- APP0 -->
+    <format guid="{79007028-268D-45D6-A3C2-354E6A504BC9}">
+        <entry id="0" value="Version"></entry>
+        <entry id="1" value="Units"></entry>
+        <entry id="2" value="XDensity"></entry>
+        <entry id="3" value="YDensity"></entry>
+        <entry id="4" value="XThumbnail"></entry>
+        <entry id="5" value="YThumbnail"></entry>
+        <entry id="6" value="ThumbnailData"></entry>
+    </format>
+
+    <!-- EXIF -->
+    <format guid="{1C3C4F9D-B84A-467D-9493-36CFBD59EA57}">
+        <entry id="36864" value="ExifVersion" />
+        <entry id="40960" value="FlashpixVersion" />
+        <entry id="40961" value="ColorSpace" />
+        <entry id="37121" value="ComponentsConfiguration" />
+        <entry id="37122" value="CompressedBitsPerPixel" />
+        <entry id="40962" value="PixelXDimension" />
+        <entry id="40963" value="PixelYDimension" />
+        <entry id="37500" value="MakerNote" />
+        <entry id="37510" value="UserComment" />
+        <entry id="40964" value="RelatedSoundFile" />
+        <entry id="36867" value="DateTimeOriginal" />
+        <entry id="36868" value="DateTimeDigitized" />
+        <entry id="37520" value="SubSecTime" />
+        <entry id="37521" value="SubSecTimeOriginal" />
+        <entry id="37522" value="SubSecTimeDigitized" />
+        <entry id="42016" value="ImageUniqueID" />
+        <entry id="33434" value="ExposureTime" />
+        <entry id="33437" value="FNumber" />
+        <entry id="34850" value="ExposureProgram" />
+        <entry id="34852" value="SpectralSensitivity" />
+        <entry id="34855" value="ISOSpeedRatings" />
+        <entry id="34856" value="OECF" />
+        <entry id="37377" value="ShutterSpeedValue" />
+        <entry id="37378" value="ApertureValue" />
+        <entry id="37379" value="BrightnessValue" />
+        <entry id="37380" value="ExposureBiasValue" />
+        <entry id="37381" value="MaxApertureValue" />
+        <entry id="37382" value="SubjectDistance" />
+        <entry id="37383" value="MeteringMode" />
+        <entry id="37384" value="LightSource" />
+        <entry id="37385" value="Flash" />
+        <entry id="37386" value="FocalLength" />
+        <entry id="37396" value="SubjectArea" />
+        <entry id="41483" value="FlashEnergy" />
+        <entry id="41484" value="SpatialFrequencyResponse" />
+        <entry id="41486" value="FocalPlaneXResolution" />
+        <entry id="41487" value="FocalPlaneYResolution" />
+        <entry id="41488" value="FocalPlaneResolutionUnit" />
+        <entry id="41492" value="SubjectLocation" />
+        <entry id="41493" value="ExposureIndex" />
+        <entry id="41495" value="SensingMethod" />
+        <entry id="41728" value="FileSource" />
+        <entry id="41729" value="SceneType" />
+        <entry id="41730" value="CFAPattern" />
+        <entry id="41985" value="CustomRendered" />
+        <entry id="41986" value="ExposureMode" />
+        <entry id="41987" value="WhiteBalance" />
+        <entry id="41988" value="DigitalZoomRatio" />
+        <entry id="41989" value="FocalLengthIn35mmFilm" />
+        <entry id="41990" value="SceneCaptureType" />
+        <entry id="41991" value="GainControl" />
+        <entry id="41992" value="Contrast" />
+        <entry id="41993" value="Saturation" />
+        <entry id="41994" value="Sharpness" />
+        <entry id="41995" value="DeviceSettingDescription" />
+        <entry id="41996" value="SubjectDistanceRange" />
+    </format>
+
+    <!-- Thumbnail -->
+    <format guid="{243DCEE9-8703-40EE-8EF0-22A600B8058C}">
+        <entry id="256" value="ImageWidth" />
+        <entry id="257" value="ImageLength" />
+        <entry id="258" value="BitsPerSample" />
+        <entry id="259" value="Compression" />
+        <entry id="282" value="XResolution" />
+        <entry id="283" value="YResolution" />
+        <entry id="296" value="ResolutionUnit" />
+        <entry id="513" value="JPEGInterchangeFormat" />
+        <entry id="514" value="JPEGInterchangeFormatLength" />
+    </format>
+    
+    <!-- IFD -->
+    <format guid="{537396C6-2D8A-4BB6-9BF8-2F0A8E2A3ADF}">
+        <entry id="254" value="NewSubfileType" />
+        <entry id="255" value="SubfileType" />
+        <entry id="256" value="ImageWidth" />
+        <entry id="257" value="ImageLength" />
+        <entry id="258" value="BitsPerSample" />
+        <entry id="259" value="Compression" />
+        <entry id="262" value="PhotometricInterpretation" />
+        <entry id="263" value="Threshholding" />
+        <entry id="264" value="CellWidth" />
+        <entry id="265" value="CellHeight" />
+        <entry id="266" value="FillOrder" />
+        <entry id="269" value="DocumentName" />
+        <entry id="270" value="ImageDescription" />
+        <entry id="271" value="Make" />
+        <entry id="272" value="Model" />
+        <entry id="273" value="StripOffsets" />
+        <entry id="274" value="Orientation" />
+        <entry id="277" value="SamplesPerPixel" />
+        <entry id="278" value="RowsPerStrip" />
+        <entry id="279" value="StripByteCounts" />
+        <entry id="280" value="MinSampleValue" />
+        <entry id="281" value="MaxSampleValue" />
+        <entry id="282" value="XResolution" />
+        <entry id="283" value="YResolution" />
+        <entry id="284" value="PlanarConfiguration" />
+        <entry id="285" value="PageName" />
+        <entry id="286" value="XPosition" />
+        <entry id="287" value="YPosition" />
+        <entry id="288" value="FreeOffsets" />
+        <entry id="289" value="FreeByteCounts" />
+        <entry id="290" value="GrayResponseUnit" />
+        <entry id="291" value="GrayResponseCurve" />
+        <entry id="292" value="T4Options" />
+        <entry id="293" value="T6Options" />
+        <entry id="296" value="ResolutionUnit" />
+        <entry id="297" value="PageNumber" />
+        <entry id="301" value="TransferFunction" />
+        <entry id="305" value="Software" />
+        <entry id="306" value="DateTime" />
+        <entry id="315" value="Artist" />
+        <entry id="316" value="HostComputer" />
+        <entry id="317" value="Predictor" />
+        <entry id="318" value="WhitePoint" />
+        <entry id="319" value="PrimaryChromaticities" />
+        <entry id="320" value="ColorMap" />
+        <entry id="321" value="HalftoneHints" />
+        <entry id="322" value="TileWidth" />
+        <entry id="323" value="TileLength" />
+        <entry id="324" value="TileOffsets" />
+        <entry id="325" value="TileByteCounts" />
+        <entry id="326" value="BadFaxLines" />
+        <entry id="327" value="CleanFaxData" />
+        <entry id="328" value="ConsecutiveBadFaxLines" />
+        <entry id="332" value="InkSet" />
+        <entry id="333" value="InkNames" />
+        <entry id="334" value="NumberOfInks" />
+        <entry id="336" value="DotRange" />
+        <entry id="337" value="TargetPrinter" />
+        <entry id="338" value="ExtraSamples" />
+        <entry id="339" value="SampleFormat" />
+        <entry id="340" value="SMinSampleValue" />
+        <entry id="341" value="SMaxSampleValue" />
+        <entry id="342" value="TransferRange" />
+        <entry id="512" value="JPEGProc" />
+        <entry id="513" value="JPEGInterchangeFormat" />
+        <entry id="514" value="JPEGInterchangeFormatLength" />
+        <entry id="515" value="JPEGRestartInterval" />
+        <entry id="517" value="JPEGLosslessPredictors" />
+        <entry id="518" value="JPEGPointTransforms" />
+        <entry id="519" value="JPEGQTables" />
+        <entry id="520" value="JPEGDCTables" />
+        <entry id="521" value="JPEGACTables" />
+        <entry id="529" value="YCbCrCoefficients" />
+        <entry id="530" value="YCbCrSubSampling" />
+        <entry id="531" value="YCbCrPositioning" />
+        <entry id="532" value="ReferenceBlackWhite" />
+        <entry id="33432" value="Copyright" />
+        <entry id="34377" value="PhotoshopResourceBlocks" />
+        <entry id="34665" value="ExifIFDPointer" />
+        <entry id="34675" value="ICCProfile" />
+        <entry id="34853" value="GPSInfoIFDPointer" />
+        <entry id="40965" value="InteropIFDPointer" />        
+    </format>
+    
+</dictionary>

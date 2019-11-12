@@ -1,0 +1,33 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Sub UpdateChartButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles UpdateChartButton.Click
+    
+    ' Set a web site link for all series
+    Chart1.Series("Brand1").Url = TextBoxFord.Text
+    Chart1.Series("Brand2").Url = TextBoxToyota.Text
+    Chart1.Series("Brand3").Url = TextBoxMazda.Text
+    Chart1.Series("Brand4").Url = TextBoxPontiac.Text
+
+    ' Set a web site link for all series legend items
+    Chart1.Series("Brand1").LegendUrl = TextBoxFord.Text
+    Chart1.Series("Brand2").LegendUrl = TextBoxToyota.Text
+    Chart1.Series("Brand3").LegendUrl = TextBoxMazda.Text
+    Chart1.Series("Brand4").LegendUrl = TextBoxPontiac.Text
+
+    ' Setting attribute to "target='_blank'" will open a link in the new window
+    Dim attrib As String = ""
+    If CheckBoxNewWindow.Checked Then
+        attrib = "target='_blank'"
+    End If
+
+    ' Set series and series legend item map area attributes which determine
+    '   if the web site is opened in existing or new window
+    Dim series As Series
+    For Each series In  Chart1.Series
+        series.MapAreaAttributes = attrib
+        series.LegendMapAreaAttributes = attrib
+    Next series
+    
+End Sub 'UpdateChartButton_Click
+...

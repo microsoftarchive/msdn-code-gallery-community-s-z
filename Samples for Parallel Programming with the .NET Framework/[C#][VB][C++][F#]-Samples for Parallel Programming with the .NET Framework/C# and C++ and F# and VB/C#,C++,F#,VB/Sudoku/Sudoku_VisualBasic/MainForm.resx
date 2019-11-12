@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="mainTooltips.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblPlaySavedGame.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblPlaySavedGame.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPlaySavedGame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 12</value>
+  </data>
+  <data name="lblPlaySavedGame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 28</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblPlaySavedGame.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblPlaySavedGame.Text" xml:space="preserve">
+    <value>Play the saved game</value>
+  </data>
+  <data name="lblPlaySavedGame.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblPlaySavedGame.Name" xml:space="preserve">
+    <value>lblPlaySavedGame</value>
+  </data>
+  <data name="&gt;&gt;lblPlaySavedGame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPlaySavedGame.Parent" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;lblPlaySavedGame.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblDeleteSavedGameWarning.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt</value>
+  </data>
+  <data name="lblDeleteSavedGameWarning.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDeleteSavedGameWarning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 134</value>
+  </data>
+  <data name="lblDeleteSavedGameWarning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 21</value>
+  </data>
+  <data name="lblDeleteSavedGameWarning.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblDeleteSavedGameWarning.Text" xml:space="preserve">
+    <value>(saved game will be deleted)</value>
+  </data>
+  <data name="lblDeleteSavedGameWarning.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblDeleteSavedGameWarning.Name" xml:space="preserve">
+    <value>lblDeleteSavedGameWarning</value>
+  </data>
+  <data name="&gt;&gt;lblDeleteSavedGameWarning.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDeleteSavedGameWarning.Parent" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;lblDeleteSavedGameWarning.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblNewGameSavedDeleted.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="lblNewGameSavedDeleted.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNewGameSavedDeleted.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 108</value>
+  </data>
+  <data name="lblNewGameSavedDeleted.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 28</value>
+  </data>
+  <data name="lblNewGameSavedDeleted.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblNewGameSavedDeleted.Text" xml:space="preserve">
+    <value>Play a new game</value>
+  </data>
+  <data name="lblNewGameSavedDeleted.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblNewGameSavedDeleted.Name" xml:space="preserve">
+    <value>lblNewGameSavedDeleted</value>
+  </data>
+  <data name="&gt;&gt;lblNewGameSavedDeleted.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNewGameSavedDeleted.Parent" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;lblNewGameSavedDeleted.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tsbLoadPreviousGame.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="tsbLoadPreviousGame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 44</value>
+  </data>
+  <data name="tsbLoadPreviousGame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbLoadPreviousGame.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tsbLoadPreviousGame.Text" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="tsbLoadPreviousGame.ToolTip" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="&gt;&gt;tsbLoadPreviousGame.Name" xml:space="preserve">
+    <value>tsbLoadPreviousGame</value>
+  </data>
+  <data name="&gt;&gt;tsbLoadPreviousGame.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbLoadPreviousGame.Parent" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbLoadPreviousGame.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tsbBeginner2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="tsbBeginner2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 164</value>
+  </data>
+  <data name="tsbBeginner2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbBeginner2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tsbBeginner2.Text" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="tsbBeginner2.ToolTip" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="&gt;&gt;tsbBeginner2.Name" xml:space="preserve">
+    <value>tsbBeginner2</value>
+  </data>
+  <data name="&gt;&gt;tsbBeginner2.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbBeginner2.Parent" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbBeginner2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tsbIntermediate2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="tsbIntermediate2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 220</value>
+  </data>
+  <data name="tsbIntermediate2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbIntermediate2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tsbIntermediate2.Text" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="tsbIntermediate2.ToolTip" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="&gt;&gt;tsbIntermediate2.Name" xml:space="preserve">
+    <value>tsbIntermediate2</value>
+  </data>
+  <data name="&gt;&gt;tsbIntermediate2.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbIntermediate2.Parent" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbIntermediate2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tsbAdvanced2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="tsbAdvanced2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 276</value>
+  </data>
+  <data name="tsbAdvanced2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbAdvanced2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tsbAdvanced2.Text" xml:space="preserve">
+    <value>Difficult</value>
+  </data>
+  <data name="tsbAdvanced2.ToolTip" xml:space="preserve">
+    <value>Difficult</value>
+  </data>
+  <data name="&gt;&gt;tsbAdvanced2.Name" xml:space="preserve">
+    <value>tsbAdvanced2</value>
+  </data>
+  <data name="&gt;&gt;tsbAdvanced2.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbAdvanced2.Parent" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbAdvanced2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tsbExpert2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 332</value>
+  </data>
+  <data name="tsbExpert2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbExpert2.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="tsbExpert2.Text" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="tsbExpert2.ToolTip" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="&gt;&gt;tsbExpert2.Name" xml:space="preserve">
+    <value>tsbExpert2</value>
+  </data>
+  <data name="&gt;&gt;tsbExpert2.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbExpert2.Parent" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbExpert2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pnlSavedOrNewPuzzle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="pnlSavedOrNewPuzzle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 6</value>
+  </data>
+  <data name="pnlSavedOrNewPuzzle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 389</value>
+  </data>
+  <data name="pnlSavedOrNewPuzzle.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="pnlSavedOrNewPuzzle.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlSavedOrNewPuzzle.Name" xml:space="preserve">
+    <value>pnlSavedOrNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;pnlSavedOrNewPuzzle.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.ImagePanel, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnlSavedOrNewPuzzle.Parent" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlSavedOrNewPuzzle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblDifficultyLevel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="lblDifficultyLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDifficultyLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 16</value>
+  </data>
+  <data name="lblDifficultyLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 28</value>
+  </data>
+  <data name="lblDifficultyLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblDifficultyLevel.Text" xml:space="preserve">
+    <value>Select a level</value>
+  </data>
+  <data name="lblDifficultyLevel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblDifficultyLevel.Name" xml:space="preserve">
+    <value>lblDifficultyLevel</value>
+  </data>
+  <data name="&gt;&gt;lblDifficultyLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDifficultyLevel.Parent" xml:space="preserve">
+    <value>pnlNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;lblDifficultyLevel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tsbBeginner.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="tsbBeginner.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="tsbBeginner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 69</value>
+  </data>
+  <data name="tsbBeginner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbBeginner.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tsbBeginner.Text" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="tsbBeginner.ToolTip" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="&gt;&gt;tsbBeginner.Name" xml:space="preserve">
+    <value>tsbBeginner</value>
+  </data>
+  <data name="&gt;&gt;tsbBeginner.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbBeginner.Parent" xml:space="preserve">
+    <value>pnlNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbBeginner.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tsbIntermediate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="tsbIntermediate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="tsbIntermediate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 121</value>
+  </data>
+  <data name="tsbIntermediate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbIntermediate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tsbIntermediate.Text" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="tsbIntermediate.ToolTip" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="&gt;&gt;tsbIntermediate.Name" xml:space="preserve">
+    <value>tsbIntermediate</value>
+  </data>
+  <data name="&gt;&gt;tsbIntermediate.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbIntermediate.Parent" xml:space="preserve">
+    <value>pnlNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbIntermediate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tsbAdvanced.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="tsbAdvanced.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 176</value>
+  </data>
+  <data name="tsbAdvanced.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbAdvanced.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tsbAdvanced.Text" xml:space="preserve">
+    <value>Difficult</value>
+  </data>
+  <data name="tsbAdvanced.ToolTip" xml:space="preserve">
+    <value>Difficult</value>
+  </data>
+  <data name="&gt;&gt;tsbAdvanced.Name" xml:space="preserve">
+    <value>tsbAdvanced</value>
+  </data>
+  <data name="&gt;&gt;tsbAdvanced.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbAdvanced.Parent" xml:space="preserve">
+    <value>pnlNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbAdvanced.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tsbExpert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 232</value>
+  </data>
+  <data name="tsbExpert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
+  </data>
+  <data name="tsbExpert.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="tsbExpert.Text" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="tsbExpert.ToolTip" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="&gt;&gt;tsbExpert.Name" xml:space="preserve">
+    <value>tsbExpert</value>
+  </data>
+  <data name="&gt;&gt;tsbExpert.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tsbExpert.Parent" xml:space="preserve">
+    <value>pnlNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;tsbExpert.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pnlNewPuzzle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="pnlNewPuzzle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pnlNewPuzzle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 293</value>
+  </data>
+  <data name="pnlNewPuzzle.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="pnlNewPuzzle.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlNewPuzzle.Name" xml:space="preserve">
+    <value>pnlNewPuzzle</value>
+  </data>
+  <data name="&gt;&gt;pnlNewPuzzle.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.ImagePanel, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnlNewPuzzle.Parent" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlNewPuzzle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="thePuzzleGrid.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="thePuzzleGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="thePuzzleGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 352</value>
+  </data>
+  <data name="thePuzzleGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="thePuzzleGrid.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;thePuzzleGrid.Name" xml:space="preserve">
+    <value>thePuzzleGrid</value>
+  </data>
+  <data name="&gt;&gt;thePuzzleGrid.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.PuzzleGrid, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;thePuzzleGrid.Parent" xml:space="preserve">
+    <value>pnlGrid</value>
+  </data>
+  <data name="&gt;&gt;thePuzzleGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnlGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 384</value>
+  </data>
+  <data name="pnlGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="pnlGrid.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlGrid.Name" xml:space="preserve">
+    <value>pnlGrid</value>
+  </data>
+  <data name="&gt;&gt;pnlGrid.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.NoFlickerPanel, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnlGrid.Parent" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlGrid.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="optionsButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="optionsButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 8.25pt</value>
+  </data>
+  <data name="optionsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 129</value>
+  </data>
+  <data name="optionsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 51</value>
+  </data>
+  <data name="optionsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="optionsButton.ToolTip" xml:space="preserve">
+    <value>Change game settings</value>
+  </data>
+  <data name="&gt;&gt;optionsButton.Name" xml:space="preserve">
+    <value>optionsButton</value>
+  </data>
+  <data name="&gt;&gt;optionsButton.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;optionsButton.Parent" xml:space="preserve">
+    <value>pnlControls</value>
+  </data>
+  <data name="&gt;&gt;optionsButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="newGameButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="newGameButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 8.25pt</value>
+  </data>
+  <data name="newGameButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 72</value>
+  </data>
+  <data name="newGameButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 51</value>
+  </data>
+  <data name="newGameButton.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="newGameButton.ToolTip" xml:space="preserve">
+    <value>Start a new game</value>
+  </data>
+  <data name="&gt;&gt;newGameButton.Name" xml:space="preserve">
+    <value>newGameButton</value>
+  </data>
+  <data name="&gt;&gt;newGameButton.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;newGameButton.Parent" xml:space="preserve">
+    <value>pnlControls</value>
+  </data>
+  <data name="&gt;&gt;newGameButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="undoButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="undoButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 8.25pt</value>
+  </data>
+  <data name="undoButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 15</value>
+  </data>
+  <data name="undoButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 51</value>
+  </data>
+  <data name="undoButton.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="undoButton.ToolTip" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="&gt;&gt;undoButton.Name" xml:space="preserve">
+    <value>undoButton</value>
+  </data>
+  <data name="&gt;&gt;undoButton.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.TextStatefulButton, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;undoButton.Parent" xml:space="preserve">
+    <value>pnlControls</value>
+  </data>
+  <data name="&gt;&gt;undoButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlControls.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="pnlControls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 0</value>
+  </data>
+  <data name="pnlControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 384</value>
+  </data>
+  <data name="pnlControls.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="pnlControls.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlControls.Name" xml:space="preserve">
+    <value>pnlControls</value>
+  </data>
+  <data name="&gt;&gt;pnlControls.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.ScalingPanel, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnlControls.Parent" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;pnlControls.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="marqueeBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="marqueeBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 536</value>
+  </data>
+  <data name="marqueeBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 16</value>
+  </data>
+  <data name="marqueeBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="marqueeBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;marqueeBar.Name" xml:space="preserve">
+    <value>marqueeBar</value>
+  </data>
+  <data name="&gt;&gt;marqueeBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;marqueeBar.Parent" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;marqueeBar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="backgroundPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="backgroundPanel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="backgroundPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="backgroundPanel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="backgroundPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 384</value>
+  </data>
+  <data name="backgroundPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Name" xml:space="preserve">
+    <value>backgroundPanel</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Type" xml:space="preserve">
+    <value>Microsoft.ParallelComputingPlatform.ParallelExtensions.Samples.Sudoku.Controls.ImagePanel, Sudoku, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;backgroundPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>11, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>471, 384</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 16pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAYAMDAAAAEACACoDgAAZgAAACAgAAABAAgAqAgAAA4PAAAQEAAAAQAIAGgFAAC2FwAAMDAAAAEA
+        IACoJQAAHh0AACAgAAABACAAqBAAAMZCAAAQEAAAAQAgAGgEAABuUwAAKAAAADAAAABgAAAAAQAIAAAA
+        AAAACQAAAAAAAAAAAAAAAQAAAAEAAAAAAABhZTkAamo7AH57OQBJbEwATG1PAFx1TABNclAAT3VSAFB2
+        UwBRdlQAUXhUAFN8VwBcdV4AVX1ZAGlwQQBoeE8AZH9nAKo/KgCbZBwAnWsbALBtCAC3cgoAvHkNAKZr
+        GQCkbBwAunkTALt7HgCwTDgAn2ggAIF7NwCkbSQApnEmAK57LwCtdzMArHY0AK15NACidTkAo3s+AMN9
+        AwDBfxgAtVlGAIluTACRcEAAjHJVAKp7QAC7ZVUAwXJjAC+vRwAzqEcAM6hIAC+wRwAvtUgAMLVKAD+q
+        VAA+tVcAVoFaAFmCXQBahl4AW4hfAFyIXwBemVEAe4JBAECqVQBIp1oAT6FeAEasWgBHrFwASa1dAEyt
+        XwBUrlkAQLVXAESxWgBHt14AQbxaAES9XgBnplsAYKxdAF2DYQBdiGEAX45jAGGJZABij2YAZI9oAGGQ
+        ZQBlkWkAbYtwAHiFeQBzmXcAd557AEm4YQBNuWUAULhlAGqyYAB5oX0AT8FpAFDBaQBUwm0AVMRuAFzB
+        cABZxnMAWsZ0AIKNPwCvgDkAr4c+ALyDOwDHgAAAy4oMAMCAFADJhxQAxYMbAMyNGgDNjRwA0pIYAMOG
+        LADFiC0AzpAiAM2SLwDFiTYAyo4yAMWOPQDOkzIAzJA0AM+UNQDIkDsA1Zo0ANOePQCKlEYAhIZaAJqX
+        WgC7hUMAtplfAJuEagCPhn4AnIhxAJCGewDHkkgA159BANKbSgDKn1oA0JlQANigQwDao0gA26RJANul
+        TQDKolsA16FWANulUwDYolUA3KZWAN2pVQDWpF0A3qlYAMyMfwDPqG8A06RhAN6sYQDCpH8A0KNxANOo
+        cgDRrH4A1q9/ANu0egDhr2IA4LBnAOGwaADjtmsA4bJtAOO1cQDltXEA5Ld1AOS4dgDgt30A57x7AOC4
+        fgDmu3wAi4uLAIyMjAC3noEAuJ+CAIaoiACJrIwAvaSHANKZjQDBqIsAxauOAMWsjwDZt4wA16WcAMy3
+        nQDjvIUA6L6BAOG7iQDTvKIA076nAN2yqgDjv7gA3cGUAOrBggDowYUA6sSKAOzGiwDqxo0A7MaNAOTE
+        kgDryJAA7MmRAOzLlQDuzJcA4sSbAOzMmQDu0ZoA8tKeANzCpADfyK8A38mwAOfMpADjyqwA8dWkAPHY
+        pwDy16gA89msAObPtQDs2boA892xAPXgugDOzs4A3NPKANLf1ADd2dUA3NzcAOjMxgDq18AA49fLAO7Z
+        1ADT4NQA1ODVAPfqyQD57csA+OzNAPjs0wD6898A4+LiAOXl5QDt7e0A9OXjAP335QD08O0A8fLxAPP3
+        9AD19fUA+fTxAPb49gD///sA//7+AP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARBQUFBQUFBQUFBQUFBQUFBQUF
+        BQUFBQUFBQUFBQUFBQUFBQ1XAAAAAAAAAAAAADkOODg4ODg4ODg5OU45OTg4ODg4ODg4OTlOOTk4ODg4
+        ODg4DAcFVwAAAAAAAAAAtFBZ6/n8/Pz8/Pz587ExMDQ1NTU1NTU0MzKx8/n8/Pz8/Pz55FgKDQAAAAAA
+        AAAAVVTr///////////587E2N0pKSkpKSkpKRz+x8/n//////////+s4BwAAAAAAAAAAVFT5////////
+        ///587FDWl9iYmJiYmJiWkSx8/n///////////k5BwAAAAAAAAAAVFT8///////////587FEWmJkZGRk
+        ZGRiWkSx8/n///////////w5CgAAAAAAAAAAVFT8///////////587FEWmJkZBACTGRiWkSx8/n/////
+        //////w7CgAAAAAAAAAAVFT8///////////587FEWmJkZIArJgNNXESx8/n///////////w7CgAAAAAA
+        AAAAVFT8///////////587FEWmJkZIGal2clPj2x8/n///////////w7CgAAAAAAAAAAVFT8////////
+        ///587FEWmJkZF2RraiMZxQq8/n///////////w7CgAAAAAAAAAAVFT8///////////587FDWl9iYmJ/
+        rauokGwYs/n///////////w7CgAAAAAAAAAAVFT5+fn5+fn5+fn05rFASEhaWlpGi8bSpnB7Irb5+fn5
+        +fn5+flQCgAAAAAAAAAAVFPz8/Pz8/Pz8/Pm4rFAQENEREREZs/t0qamlCKy8/Pz8/Pz8/NQCgAAAAAA
+        AAAAUlWxsbGxsbGxsbGxsbGxsbGxsbGxh6DuyqimpJIiLLGxsbGxsbFSCgAAAAAAAAAAVFPz8/Pz8/Pz
+        8/Pm4rHi5vPz8/Pz88LM28qopqaUIrPz8/Pz8/NQCgAAAAAAAAAAVFT5+fn5+fn5+fn05rHm9Pn5+fn5
+        +fnXrdvKqKamlCK4+fn5+flQCgAAAAAAAAAAVFT8///////////587Hz+f//////////1q3cyqimppQi
+        uP////w7CgAAAAAAAAAAVFT8///////////587Hz+f/7LxIp5///+cKi28qopqSSJLjp9/w7CgAAAAAA
+        AAAAVFT8///////////587Hz+f/qL+eZHP//+fOErNzKqKamlIItJb07CgAAAAAAAAAAVFT8////////
+        ///587Hz+f//xOqZEv//+fOxwqzcz6imppSKdh0PCgAAAAAAAAAAVFT8///////////587Hz+f//EhIc
+        xP//+fOx89at3M+oppyYkHMTAQAAAAAAAAAAVFT8///////////587Hz+f//Erfq9f//+fOx8/nerdzP
+        q6aclJByE4YAAAAAAAAAVFT8///////////587Hz+f//EhISLv//+fOx8/n/2b7cxqumnJSQcx8AAAAA
+        AAAAVFT8///////////587Hz+f//////////+fOx8/n/+8DUyr+rppyUkHcgAAAAAAAAVFT5+fn5+fn5
+        +fn05rHm9Pn5+fn5+fn59Oax5vT597vd1Mq/q6aclJB3IAAAAAAAVFPz8/Pz8/Pz8/Pm4rHi5vPz8/Pz
+        8/Pz5uKx4ubz5b2f4NzKv6umnJSQeyAAAAAAUlWxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxhSEX
+        m+Dcyr+rppyUkHsYAAAAVFPz8/Pz8/Pz8/Pm4rHi5vPz8/Pz8/Pz5uKx4ubz43xxG6Dg3Mq/q6aclH1u
+        HwAAVFT5+fn5+fn5+fn05rHm9Pn5+fn5+fn59Oax5vT5+dV1cGmg4N3Kv6imjWtqGh8AVFT8////////
+        ///587Hz+f//////////+fOx8/n////Ze3CCnuDdyr/GpolrJxUAVFT8//8SEhIS///587Hz+f//////
+        ////+fOx8/n/////2XtwKH7T3dzcz6h9JxYAVFT8//8vEuf1///587Hz+f//////////+fOx8/n/////
+        /9l7cWp03O7w4cqWbXgAVFT8////Lxzq///587Hz+f//////////+fOx8/n////////o0cUeg/H/9tyj
+        iAAAVFT8/////y8u///587Hz+f//////////+fOx8/n///////////w7Bp3f2L6fAAAAVFT8//8pvLwS
+        ///587Hz+f//////////+fOx8/n///////////w7CgAAAAAAAAAAVFT5///DEhK8///587Hz+f//////
+        ////+fOx8/n///////////w7DAAAAAAAAAAAVFTr///////////587Hz+f//////////+fOx8/n/////
+        /////+tQDgAAAAAAAAAAtVRe6/z8/Pz8/Pz587Hz+fz8/Pz8/Pz8+fOx8/n8/Pz8/Pz5615QVgAAAAAA
+        AAAAAFVUVFRUVFRUVFRUU1VTVFRUVFRUVFRUVFNVU1RUVFRUVFRUVFRUAAAAAAAAAAAAAAC1VVRUVFRU
+        VFRUVFJUVFRUVFRUVFRUVFRSVFRUVFRUVFRUVbQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////8AAP//
+        /////wAA////////AAD///////8AAOAAAAAA/wAAwAAAAAB/AACAAAAAAH8AAIAAAAAAfwAAgAAAAAB/
+        AACAAAAAAH8AAIAAAAAAfwAAgAAAAAB/AACAAAAAAH8AAIAAAAAAfwAAgAAAAAB/AACAAAAAAH8AAIAA
+        AAAAfwAAgAAAAAB/AACAAAAAAH8AAIAAAAAAfwAAgAAAAAB/AACAAAAAAH8AAIAAAAAAfwAAgAAAAAB/
+        AACAAAAAAH8AAIAAAAAAPwAAgAAAAAA/AACAAAAAAB8AAIAAAAAADwAAgAAAAAAHAACAAAAAAAMAAIAA
+        AAAAAQAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAACAAAAAAAEAAIAAAAAAAwAAgAAAAAB/
+        AACAAAAAAH8AAIAAAAAAfwAAgAAAAAB/AADAAAAAAP8AAOAAAAAB/wAA////////AAD///////8AAP//
+        /////wAA////////AAAoAAAAIAAAAEAAAAABAAgAAAAAAAAEAAAAAAAAAAAAAAABAAAAAQAAAAAAADRh
+        NwA9YTUANmU6ADlmPQA4ajwAclAYAHlYLAB7WjUAU2s1AF50PABrdjoAPm1CAEVvSABBdUUATm1QAFBu
+        UgBSclUAqj8qAL94BAC4dA0AtHETAL18FgC9exwAgF0oAIZfKwCOZjEAgGwyAIltPACSaTMAnm8yAJRs
+        OACuficAtHopAMB9FwC1WUYAjm1GAI5vSgCOcEoAk3JMALtlVQDBcmMAMq1IADauTQA9ulcAP7tZAEWB
+        SgBKgk8ASoRPAEuFUABPg1QAeYFVAEOiUwBFoVYAS6pdAEyrXwBTr18AQLtaAEW9XgBlpU0AX4pjAGOE
+        ZgBii2YAZY5oAGiZbABvm3MAdZx4AE2rYABWrmcAVq5oAFyvawBIvmIAW7BtAGO5ZwBvp3oAdaF5AHii
+        fAB7pn8AT8FoAFDCagBZxXQAu4MZAL6AKQC8gTMAx4MKAMWDFADOjRIAy44lAMCBKwDEhSgAyYsqAMuN
+        KADNjygAxYcwAMCENQDHiTEAyo02AM6RNwDSljoA0Zs/AJOJWACSl1MAt4tDALaGTACyl00Amol0AJKI
+        fQCvn2EAwIpCAMOMRgDEjkYAxY9IAMyTSADQlEEA0JdNANWdTwDSm1AA05xQANOdVQDapUgA3adTANyp
+        UwDeqVYA3alYAOCsWADMjH8A0KNlANCqYwDdqmAA369nAN+uaADftWoAzadyAM+sewDSpnIA1atxANev
+        dgDWrnwA2bF+AN+2fwDgrmcA4bFqAOKzbADjtG0A5Ld2AOW4dgDluXkA5bt9AOe8fwB+ooEAiIaDAIqI
+        hgCNjY0Ajp2GAIipiwCKq40AjaaQAI6ukQCXrpkAk7OWAJK1lQCUtpcAnLKRAJawmACVtZgAnbWfAJm5
+        nACevaAA0pmNAN+3ggDXpZwA4LyDANG7oQDTvqMA47+4AKLApQDswoIA68OHAOPAigDrxIkA7ciMAOzI
+        kgDwz5gA79GeAPDSngDx06AA8dWhAPTaqgD23a4A6dO5AOnUugD13LEAxsbGANjOwwDYz8QAzNzOANXT
+        0ADY2tgA29zbANzc2wDd3d0A6MzGAO7Z1ADS4NMA2ubbAPjoxADx5MwA8+jdAPvw2QDf6eAA9OXjAOvy
+        7AD99+MA8/HvAPj07QD18/EA8vbyAPny8QD1+PUA+fr5APr8+gD+/v4AAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPREBAQEBAQEBAQEBAQEBAQEBAQEBAQEQ
+        AAAAAAAAAEIOPJWbnZ2cmDUqKioqKio1mJydnZ2bPgQPAAAAAAAALkDD09ra2sWYNyw6Ojo6LTeYxdra
+        2tjLPwMAAAAAAAAuoNr/////xZhFTlAzHAs4RJjF/////9qgBQAAAAAAAC6m///////FmEVPUGRnZhsK
+        l8X//////6YFAAAAAAAALqb//////8WYRU9QZX52ciAHxP//////pgUAAAAAAAAupv//////xZhFTlBJ
+        aLCAWl4l1f////+mBQAAAAAAAC6m///////FmEM6R0c7k7p3cW8n2P///6YFAAAAAAAAL6PFxcXFxcCY
+        SkVISEZrzZOOdm4mxMXFngwAAAAAAAAymJiYmJiYmJiYmJiYmGqFuJOOdm4IlpiYDQAAAAAAAC+jxcXF
+        xcXAmMDFxcXFxcGJuJOOdm4kaZkMAAAAAAAALqb//////8WYxf/KEiP//8GEuJOOdnBuGAIAAAAAAAAu
+        pv//////xZjF///JEtn/xWqKupOOc2BYBgAAAAAAAC6m///////FmMX/0hJ9///FmMGpuJOOfGFSGAAA
+        AAAALqb//////8WYxf/SEhL//8WYxc+KtpCMemFeGgAAAAAupv//////xZjF////////xZjF/4a7sJGC
+        emJfHwAAAC+jxcXFxcXAmMDFxcXFxcXAmMDFU6u7sJGAemJYHQAAMpiYmJiYmJiYmJiYmJiYmJiYmJgh
+        VYi7s5CMeFoUHgAvo8XFxcXFwJjAxcXFxcXFwJjAxaxXF4i/s5N7VhMVAC6m/xISKf/FmMX////////F
+        mMX//75aIoO7t7V6VBYALqb/yiPS/8WYxf///////8WYxf///75jUX/U0LRaiAAupv+uqij/xZjF////
+        ////xZjF/////9aiCazOsgAAAC6g2qoSqP/FmMX////////FmMX//////6MFAAAAAAAALkvM2v///8WY
+        xf///////8WYxf/////RTAwAAAAAAABML0ugp6+vpZilr6+vr6+vpZilr6+vp0wyPgAAAAAAAABLQS4u
+        Li4vMi8uLi4uLi4vMi8uLi4uLkEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD////////////////AAAA/gAAAH4AAAB+AAAAfgAAAH4AAAB+AAAAfgAAAH4AAAB+AAAAfgAAAH4AA
+        AB+AAAAfgAAAD4AAAAeAAAADgAAAAYAAAACAAAAAgAAAAIAAAACAAAADgAAAH4AAAB+AAAAfwAAAP///
+        /////////////ygAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAARnpEAKo/
+        KgClbS4AmGZLAJJtSQCQclAARYFKAFODVgBcjF8AcIVLAGyKbgBkk2gAZ5drAFrGdAC7gS8AtoQ/AMSB
+        GADSlTEAkoh9AMCKQADTmkUA155HAM+ZUQDNmlUA16xxAOa4cwDluHQA5rx1AIuLiwCWtJkAn72iAK/D
+        rQCwx7IA38KhAPTevQD248YA9uTHAPflygD3580A+evTAPTq3wD06+EA/Pn3AP/+/gAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkHBwcHBwcHBwcIAAAAAAwh
+        //8dDg4OHf//IQgAAAAH////HQ4GBQT///8HAAAAB////x0ODyUQBP//BwAAAAcdHR0dHR0PJhQEHQcA
+        AAAH////Hf//Kg8mGAQBAAAAB////x3/Av8TDyUYBAQAAAf///8d////HSkPIxUDBAAHHR0dHR0dHR0d
+        DyYaFQMEB////x3///8d/yIPJhoSAwf/Av8d////Hf8rGQ8oGhEMIf//Hf///x3//yAKAwMAAAwHBwcH
+        BwcHBwcMAAAAAP//AAD//wAA//8AAIAPAAAABwAAAAcAAAAHAAAABwAAAAcAAAADAAAAAQAAAAAAAAAA
+        AAAAAAAAAAEAAIAPAAAoAAAAMAAAAGAAAAABACAAAAAAAIAlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAACwAAABQAAAAaAAAAHAAAAB0AAAAdAAAAHQAA
+        AB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAA
+        AB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAABwAAAAaAAAAFAAA
+        AAsAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAASAAAALQAAAEUAAABRAAAAVgAA
+        AFYAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAVgAA
+        AFYAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAVgAA
+        AFYAAABRAAAARQAAAC0AAAASAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAs/XUJ8QmNF0Ehq
+        S/lJbEz/SWxM/0lsTP9JbEz/SWxM/0lsTP9JbEz/Sm1N/0ttTv9LbU7/S21O/0ptTf9JbEz/SWxM/0ls
+        TP9JbEz/SWxM/0lsTP9JbEz/SWxM/0ptTf9LbU7/S21O/0ttTv9KbU3/SWxM/0lsTP9JbEz/SWxM/0ls
+        TP9JbEz/SWxM/0hqS/o+XEHXK0AtogAAAFUAAAAtAAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFJ5
+        VWxWgFr6VX5Z/1aAWv9XgVv/V4Jb/1eCW/9Xglv/V4Jb/1eCW/9Xglv/WYJd/1uCX/9dg2H/W4Jf/1mC
+        Xf9Xglv/V4Jb/1eCW/9Xglv/V4Jb/1eCW/9Xglv/V4Jb/1mCXf9bgl//XYNh/1uCX/9Zgl3/V4Jb/1eC
+        W/9Xglv/V4Jb/1eCW/9Xglv/VoBa/1N8V/9Nc1D/SGtL+ytALaIAAABFAAAAFAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAF6LYb9fjmP/d557/9Pg1P/z9/T/9vj2//b49v/2+Pb/9vj2//b49v/2+Pb/8fLx/+Xm
+        5f+MjIz/M6hH/y+vR/8vtUj/MLVK/zG1Sv8xtUr/MbVK/zG1Sv8wtUr/L7VI/y+wR/8zqEj/jIyM/+Xm
+        5f/x8vH/9vj2//b49v/2+Pb/9vj2//b49v/2+Pb/8/f0/9Lf1P9zmXf/UHdU/z5dQdcAAABRAAAAGgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGPZfZhkGX/1OHV////////////////////////////////////
+        ////////9vb2/+Xl5f+MjIz/P6pU/z61V/9BvFr/RL1e/0W9X/9FvV//Rb1f/0W9X/9FvV//Qbxb/0C1
+        V/9AqlX/jIyM/+Xl5f/29vb////////////////////////////////////////////U4NX/V4Fa/0tw
+        TvoAAABWAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9Pf0////////////////////
+        ////////////////////////9fX1/+Pj4/+NjY3/R6xc/0m4YP9PwWn/VMNu/1XEb/9VxG//VcRv/1XE
+        b/9Uw27/UMFp/0u5Yv9KrV7/jY2N/+Pj4//19fX/////////////////////////////////////////
+        ///09/T/WoZe/091Uv8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9vj2////
+        ////////////////////////////////////////9fX1/+Pj4/+NjY3/Sq1e/025Zf9UxG7/WcZz/1rG
+        dP9axnT/WsZ0/1rGdP9ZxnP/VcRu/0+6Zv9MrV//jY2N/+Pj4//19fX/////////////////////////
+        ///////////////////2+Pb/W4df/1B2U/8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQ
+        Zf9hkGX/9vj2////////////////////////////////////////////9fX1/+Pj4/+NjY3/Sq1e/026
+        Zf9VxG//WcZz/1rGdP9oeE//amo7/2emW/9cwXD/VcRv/0+6Z/9MrV//jY2N/+Pj4//19fX/////////
+        ///////////////////////////////////2+Pb/W4hf/1B2U/8AAABWAAAAHQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAGGQZf9hkGX/9vj2////////////////////////////////////////////9fX1/+Pj
+        4/+NjY3/Sq1e/026Zf9VxG//WcZz/1rGdP+Ehlr/kXBA/6N7Pv9+ezn/YKxd/1C4Zf9MrV//jY2N/+Pj
+        4//19fX////////////////////////////////////////////2+Pb/W4hf/1B2U/8AAABWAAAAHQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9vj2////////////////////////////////////
+        ////////9fX1/+Pj4/+NjY3/Sq1e/026Zf9VxG//WcZz/1rGdP+al1r/z6hv/9akXf+vgDn/oXU4/3uC
+        Qf9emVH/jY2N/+Pj4//19fX////////////////////////////////////////////2+Pb/W4hf/1B2
+        U/8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9vj2////////////////////
+        ////////////////////////9fX1/+Pj4/+NjY3/Sq1e/025Zf9UxG7/WcZz/1rGdP9qsmD/yqJb/+e8
+        e//jtXD/0JlQ/6+HPv+daxv/iW5M/+Pj4//19fX/////////////////////////////////////////
+        ///2+Pb/W4hf/1B2U/8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9vj2////
+        ////////////////////////////////////////9fX1/+Pj4/+NjY3/R61c/0m4YP9PwWn/VMNu/1XE
+        b/9Wwm3/ipRG/+a7fP/luHb/5bVx/9ulTf/AgBT/pmsZ/7ifgv/19fX/////////////////////////
+        ///////////////////2+Pb/W4hf/1B2U/8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGKQ
+        Zv9ikGb/8fLx//b29v/19fX/9fX1//X19f/19fX/9fX1//X19f/19fX/7e3t/9zc3P+MjIz/SKda/0Sx
+        Wv9Ht17/Sbhh/0q4Yv9KuGL/VK5Z/8qfWv/qwYL/7cyY/+O2a//Ojxv/z5Q3/613M/+9pIf/9fT0//X1
+        9f/19fX/9fX1//X19f/19fX/9fX1//b29v/x8vH/XYhg/1F3VP8AAABWAAAAHQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAGKQZv9kj2j/5ebl/+Xl5f/j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4//j4+P/3Nzc/87O
+        zv+Li4v/T6Fe/0inWv9GrFr/SK1c/0itXP9IrVz/SK1c/4KNP//sy5b/9+rJ/+zNmv/ismz/4bBo/9ii
+        Vf+sdjT/t56B/+Pi4v/j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Xl5f/l5uX/X4hi/1F3VP8AAABWAAAAHQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGKPZv9mkGr/jIyM/4yMjP+NjY3/jY2N/42Njf+NjY3/jY2N/42N
+        jf+NjY3/jIyM/4uLi/+MjIz/i4uL/4yMjP+NjY3/jY2N/42Njf+NjY3/jY2N/5CGe//RrX3/+e3L/+rG
+        jv/kt3X/4rNu/+CwZ//XoVb/rXcz/4xyVf+NjY3/jY2N/42Njf+NjY3/jY2N/4yMjP+MjIz/YYlk/1J2
+        VP8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGKQZv9kj2j/5ebl/+Xl5f/j4+P/4+Pj/+Pj
+        4//j4+P/4+Pj/+Pj4//j4+P/3Nzc/87Ozv+Li4v/zs7O/9zc3P/j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj
+        4//Tvqf/5MSS//HYp//qxIr/5Ld2/+Kzbv/hsWn/2KJW/613NP+4n4L/4+Pj/+Pj4//j4+P/4+Pj/+Xl
+        5f/l5uX/X4hi/1F3VP8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGKQZv9ikGb/8fLx//b2
+        9v/19fX/9fX1//X19f/19fX/9fX1//X19f/19fX/7e3t/9zc3P+MjIz/3Nzc/+3t7f/19fX/9fX1//X1
+        9f/19fX/9fX1//X19f/19fX/38mw/+G5f//y2Kf/6sWM/+S3df/is27/4bFp/9iiV/+tdzP/waiL//X0
+        9P/19fX/9fX1//b29v/x8vH/XYhg/1F3VP8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQ
+        Zf9hkGX/9vj2////////////////////////////////////////////9fX1/+Pj4/+NjY3/4+Pj//X1
+        9f///////////////////////////////////////////9/Ir//guX7/8ten/+rGjP/kt3b/4rNu/+Gw
+        aP/YolX/rHc0/8Wsj////v7////////////2+Pb/W4hf/1B2U/8AAABWAAAAHQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAGGQZf9hkGX/9vj2////////////////////////////////////////////9fX1/+Pj
+        4/+NjY3/4+Pj//X19f//////+fLx/8FyY/+qPyr/tVlG/+jMxv////////////X19f/TvKP/27R6//LY
+        p//rx43/5bd2/+Kzbv/gsGf/16FW/615NP/Fq47/49fL//Xw7P/2+Pb/W4hf/1B2U/8AAABWAAAAHQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9vj2////////////////////////////////////
+        ////////9fX1/+Pj4/+NjY3/4+Pj//X19f//////7tnU/8FyY//ozMb/zIx//7BMOP////////////X1
+        9f/j4+P/m4Rq/+C3ff/x16b/68aO/+S3dv/is27/4bFp/9ijVv+4hUf/qntA/6N2Ov/Kt5//W4hf/1B2
+        U/8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9vj2////////////////////
+        ////////////////////////9fX1/+Pj4/+NjY3/4+Pj//X19f///////////+O/uP/u2dT/zIx//6o/
+        Kv////////////X19f/j4+P/jY2N/9O8ov/ht33/8tem/+vIkP/kt3X/4rNu/+GxaP/YolT/0ptK/8WJ
+        Nv+faCD/aXBB/1B2U/8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9vj2////
+        ////////////////////////////////////////9fX1/+Pj4/+NjY3/4+Pj//X19f///////////6o/
+        Kv+qPyr/sEw4/+O/uP////////////X19f/j4+P/jY2N/+Pj4//fyK//4bh8//LXpv/syZH/5Ld2/+Gy
+        bf/frWP/3qlY/9qjSP/GiS7/m2Qc/2FlOf8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQ
+        Zf9hkGX/9vj2////////////////////////////////////////////9fX1/+Pj4/+NjY3/4+Pj//X1
+        9f///////////6o/Kv/SmY3/7tnU//Tl4/////////////X19f/j4+P/jY2N/+Pj4//19fX/5s+1/+G4
+        f//x1qX/7cuU/+W4d//ism3/3qxh/9ynVv/ao0j/w4Ys/5xlHf9VMwuUAAAAHQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAGGQZf9hkGX/9vj2////////////////////////////////////////////9fX1/+Pj
+        4/+NjY3/4+Pj//X19f///////////6o/Kv+qPyr/qj8q/7tlVf////////////X19f/j4+P/jY2N/+Pj
+        4//19fX//////+PKr//kvof/8tal/+nChv/kuHf/4bJt/96sYv/cp1f/2qNI/8WILf+iayD7ckYQcQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9vj2////////////////////////////////////
+        ////////9fX1/+Pj4/+NjY3/4+Pj//X19f////////////////////////////////////////////X1
+        9f/j4+P/jY2N/+Pj4//19fX///////r28v/hu4n/89Oe/+zGi//ov4H/5bh3/+Kybf/erGL/3KdW/9qj
+        SP/KjjH9o20g+YhTE14AAAAAAAAAAAAAAAAAAAAAAAAAAGKQZv9ikGb/8fLx//b29v/19fX/9fX1//X1
+        9f/19fX/9fX1//X19f/19fX/7e3t/9zc3P+MjIz/3Nzc/+3t7f/19fX/9fX1//X19f/19fX/9fX1//X1
+        9f/19fX/9fX1/+3t7f/c3Nz/jIyM/9zc3P/t7e3/9fX1//Px7//Zt4z/89qs//HSn//sxov/6L+B/+S4
+        d//hsm3/3qxi/9ynVv/ao0j/y44w+6RtIPaIUxNcAAAAAAAAAAAAAAAAAAAAAGKQZv9kj2j/5ebl/+Xl
+        5f/j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4//j4+P/3Nzc/87Ozv+Li4v/zs7O/9zc3P/j4+P/4+Pj/+Pj
+        4//j4+P/4+Pj/+Pj4//j4+P/4+Pj/9zc3P/Ozs7/i4uL/87Ozv/c3Nz/4+Pj/93Z1f/Ot5z/06ly//Te
+        tP/x06D/7MaL/+i/gf/luHf/4rJt/96sYf/cplb/2qNI/8uOMPqkbSH3iVUUXgAAAAAAAAAAAAAAAGKP
+        Zv9mkGr/jIyM/4yMjP+NjY3/jY2N/42Njf+NjY3/jY2N/42Njf+NjY3/jIyM/4uLi/+MjIz/i4uL/4yM
+        jP+NjY3/jY2N/42Njf+NjY3/jY2N/42Njf+NjY3/jY2N/4yMjP+Li4v/jIyM/4uLi/+MjIz/jY2N/4+G
+        fv+uey//vHkN/9OkYf/03rL/8tSj/+zGi//ov4H/5Lh3/+Gybf/erGL/3KZW/9ukSf/MjzL7omgW+IVO
+        DlR+RQsGAAAAAGKQZv9kj2j/5ebl/+Xl5f/j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4//j4+P/3Nzc/87O
+        zv+Li4v/zs7O/9zc3P/j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4//j4+P/4+Pj/9zc3P/Ozs7/i4uL/87O
+        zv/c3Nz/4+Pj/9zTyv/IkDv/05MY/7t7Hv/SrH//9N6x//PXpv/sxov/6L+B/+W4d//ism3/36xi/9ul
+        U//UmTP/xYIY+5pdCuSESwloAAAAAGKQZv9ikGb/8fLx//b29v/19fX/9fX1//X19f/19fX/9fX1//X1
+        9f/19fX/7e3t/9zc3P+MjIz/3Nzc/+3t7f/19fX/9fX1//X19f/19fX/9fX1//X19f/19fX/9fX1/+3t
+        7f/c3Nz/jIyM/9zc3P/t7e3/9fX1//X09P/cwqT/zZIv/8yMGv+8gzv/1q9///TdsP/z2Kn/7MaM/+i+
+        gf/kt3f/4rJt/9igQ//LiQz/x4EA/7dyBvGaWgjfAAAAAGGQZf9hkGX/9vj2////////////////////
+        ////////////////////////9fX1/+Pj4/+NjY3/4+Pj//X19f//////////////////////////////
+        //////////////X19f/j4+P/jY2N/+Pj4//19fX/////////////////5Mus/86TMv/NjRz/v4ZA/9Cj
+        cf/y27H/89qs/+zGjP/ov4L/6MCE/+KybP/Xn0H/zIsN/8J7AP+vawX7AAAAAGGQZf9hkGX/9vj2////
+        ////////qj8q/6o/Kv+qPyr/qj8q////////////9fX1/+Pj4/+NjY3/4+Pj//X19f//////////////
+        //////////////////////////////X19f/j4+P/jY2N/+Pj4//19fX//////////////////////+TL
+        rf/PlDT/zIwb/8F/GP/Tnj3/7tGa//Tbr//w1KT/8tep/+7Ml//jtnP/1ps1/8R/Bv+2bwX5AAAAAGGQ
+        Zf9hkGX/9vj2////////////wXJj/6o/Kv/ozMb/9OXj////////////9fX1/+Pj4/+NjY3/4+Pj//X1
+        9f////////////////////////////////////////////X19f/j4+P/jY2N/+Pj4//19fX/////////
+        ///////////////////kyqv/zpMz/9KSGP/HgAD/zpAi//DWpP/47M3/+OzT//Xguv/sx4//3alV/8mH
+        E/20bgXFAAAAAGGQZf9hkGX/9vj2/////////////////8FyY/+wTDj/7tnU////////////9fX1/+Pj
+        4/+NjY3/4+Pj//X19f////////////////////////////////////////////X19f/j4+P/jY2N/+Pj
+        4//19fX/////////////////////////////////6tfA/+LEm//dwZT/gXs3/7aZX//689/////7//33
+        5f/z16j/4a9i/7l2GcqqXgxBAAAAAGGQZf9hkGX/9vj2///////////////////////BcmP/u2VV////
+        ////////9fX1/+Pj4/+NjY3/4+Pj//X19f////////////////////////////////////////////X1
+        9f/j4+P/jY2N/+Pj4//19fX////////////////////////////////////////////2+Pb/W4hf/1x1
+        TP+0j2HN7Nm6/OfMpP/iu4L8w4Y7t6lfEDAAAAAAAAAAAGGQZf9hkGX/9vj2////////////tVlG/9el
+        nP/XpZz/qj8q////////////9fX1/+Pj4/+NjY3/4+Pj//X19f//////////////////////////////
+        //////////////X19f/j4+P/jY2N/+Pj4//19fX/////////////////////////////////////////
+        ///2+Pb/W4hf/1B2U/8AAABWAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQZf9hkGX/9Pf0////
+        ////////3bKq/6o/Kv+qPyr/16Wc////////////9fX1/+Pj4/+NjY3/4+Pj//X19f//////////////
+        //////////////////////////////X19f/j4+P/jY2N/+Pj4//19fX/////////////////////////
+        ///////////////////2+Pb/XIhf/1F4VP8AAABRAAAAGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGQ
+        Zf9hkGX/1OHV////////////////////////////////////////////9vb2/+Xl5f+MjIz/5eXl//b2
+        9v////////////////////////////////////////////b29v/l5eX/jIyM/+Xl5f/29vb/////////
+        ///////////////////////////////////V4db/XIlg/1J5VfkAAABFAAAAFAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAF+OY7thkGX/eaF9/9Th1f/2+Pb/9vj2//b49v/2+Pb/9vj2//b49v/2+Pb/8fLx/+Xm
+        5f+MjIz/5ebl//Hy8f/2+Pb/9vj2//b49v/2+Pb/9vj2//b49v/2+Pb/9vj2//Hy8f/l5uX/jIyM/+Xm
+        5f/x8vH/9vj2//b49v/2+Pb/9vj2//b49v/2+Pb/8/f0/9Pg1P95oX3/Xoti/01yUNAAAAAtAAAACwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAF+NY2JhkGX4YZBl/2GQZf9hkGX/YZBl/2GQZf9hkGX/YZBl/2GQ
+        Zf9hkGX/YpBm/2SPaP9mkGr/ZI9o/2KQZv9hkGX/YZBl/2GQZf9hkGX/YZBl/2GQZf9hkGX/YZBl/2KQ
+        Zv9kj2j/ZpBq/2SPaP9ikGb/YZBl/2GQZf9hkGX/YZBl/2GQZf9hkGX/YZBl/2GQZf9hkGX/YI9k+klr
+        S3wAAAASAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfjWNiX45ju2GPZfZhkGX/YZBl/2GQ
+        Zf9hkGX/YZBl/2GQZf9hkGX/YpBm/2KQZv9ij2b/YpBm/2KQZv9hkGX/YZBl/2GQZf9hkGX/YZBl/2GQ
+        Zf9hkGX/YZBl/2KQZv9ikGb/Yo9m/2KQZv9ikGb/YZBl/2GQZf9hkGX/YZBl/2GQZf9hkGX/YZBl/2GP
+        ZfZei2G/VoBabAAAAAsAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////AAD///////8AAMAAAAAAPwAAgAAAAAAf
+        AACAAAAAAB8AAIAAAAAAHwAAgAAAAAAfAACAAAAAAB8AAIAAAAAAHwAAgAAAAAAfAACAAAAAAB8AAIAA
+        AAAAHwAAgAAAAAAfAACAAAAAAB8AAIAAAAAAHwAAgAAAAAAfAACAAAAAAB8AAIAAAAAAHwAAgAAAAAAf
+        AACAAAAAAB8AAIAAAAAAHwAAgAAAAAAfAACAAAAAAB8AAIAAAAAAHwAAgAAAAAAfAACAAAAAAB8AAIAA
+        AAAAHwAAgAAAAAAPAACAAAAAAAcAAIAAAAAAAwAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAAgAAAAAAA
+        AACAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAACAAAAAAAEAAIAAAAAAHwAAgAAAAAAfAACAAAAAAB8AAIAA
+        AAAAHwAAgAAAAAAfAADAAAAAAD8AAP///////wAA////////AAD///////8AAP///////wAAKAAAACAA
+        AABAAAAAAQAgAAAAAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAHAAAAEAAA
+        ABcAAAAbAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAA
+        AB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAABsAAAASAAAABwAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABwAA
+        AB8AAAA6AAAASgAAAFIAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAVgAA
+        AFYAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAUgAAAD8AAAAgAAAABwAAAAAAAAAAAAAAAAAA
+        AAAsUi8zMl01wS1UMdI0YTf/NGE3/zRhN/80YTf/NGE3/zRhN/80YTf/NGE3/zRhN/80YTf/NGE3/zRh
+        N/80YTf/NGE3/zRhN/80YTf/NGE3/zRhN/80YTf/NGE3/zRhN/8rUC7SEB4RewAAAD8AAAASAAAAAAAA
+        AAAAAAAAAAAAAD92RLdBdUX/X4pj/36igf+Kq43/jq6R/46ukf+NppD/jY2N/0WhVv8yrUj/Nq5N/zeu
+        Tf83rk3/N65N/zOtSf9DolP/jY2N/42mkP+OrpH/jq6R/46ukf+IqYv/Y4tn/zlmPf8sUS7VAAAAUgAA
+        ABsAAAAAAAAAAAAAAAAAAAAARYFK/2iZbP/M3M7/6/Ls//T49P/2+fb/9vn2/9ja2P+NjY3/TKtf/z26
+        V/9FvV7/Rb1f/0W9X/9FvV//P7tZ/0uqXf+NjY3/2NrY//b59v/2+fb/9vn2//L28v/S4NP/ZY5o/zZl
+        Ov8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAABFgUr/krWV//T49P//////////////////////3t7e/42N
+        jf9Wrmn/T8Fo/1nFdP95gVX/iW08/2t2Ov9Tr1//Vq5n/42Njf/e3t7///////////////////////f6
+        9/+Ts5b/OGk8/wAAAFYAAAAdAAAAAAAAAAAAAAAAAAAAAEWBSv+Zupz/+/z7////////////////////
+        ///e3t7/jY2N/1euaf9Qwmr/WsZ0/5OJWP+2hkz/t4tD/4BsMv9edDz/ioiG/97e3v//////////////
+        /////////f79/5q4nP85aj3/AAAAVgAAAB0AAAAAAAAAAAAAAAAAAAAARYFK/5m6nP/7/Pv/////////
+        /////////////97e3v+NjY3/V65p/1DCav9axnT/kpdT/9CjZf/TnVX/0JdN/65+J/95WCz/1dPR////
+        ///////////////////9/v3/mrid/zlqPf8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAABFgUr/mbqc//v8
+        +///////////////////////3t7e/42Njf9Xrmn/T8Fp/1nGdP9juWf/spdN/+zCgv/dqmD/yYsq/8CE
+        Nf+Ob0r/8/Hv//////////////////3+/f+auJ3/OWo9/wAAAFYAAAAdAAAAAAAAAAAAAAAAAAAAAEWB
+        Sv+Zupz/+/z7///////////////////////e3t7/jY2N/02rYP9Au1r/SL5i/0i/Yv9lpU3/5Lt+//HV
+        of/apUj/0JRB/8WPSP+Tckz/9fPx/////////////f79/5q4nf85aj3/AAAAVgAAAB0AAAAAAAAAAAAA
+        AAAAAAAASoJP/5awmP/b3Nv/3t7e/97e3v/e3t7/3t7e/8bGxv+NjY3/b6d6/1euaP9bsG3/W7Bt/1yv
+        a/+vn2H/+OjE/+e8f//js2z/0ptQ/8SNRf+OcEr/1dPQ/97e3v/d3d3/l66Z/z9tQ/8AAABWAAAAHQAA
+        AAAAAAAAAAAAAAAAAABPg1T/jY2N/42Njf+NjY3/jY2N/42Njf+NjY3/jY2N/46Ojv+NjY3/jY2N/42N
+        jf+NjY3/jY2N/5KIff/PrHv/8NKd/+W6ev/jtG3/05xQ/8OMRv97WjX/iIaD/42Njf+NjY3/RW9I/wAA
+        AFYAAAAdAAAAAAAAAAAAAAAAAAAAAEqCT/+WsJj/29zb/97e3v/e3t7/3t7e/97e3v/Gxsb/jY2N/8bG
+        xv/e3t7/3t7e/97e3v/e3t7/3t7e/9jOw//Wrnz/8dOf/+a6ev/js2z/05xR/8SPR/+ObUb/mol0/46d
+        hv8/bUP/AAAAVgAAAB0AAAAAAAAAAAAAAAAAAAAARYFK/5m6nP/7/Pv//////////////////////97e
+        3v+NjY3/3t7e///////u2dT/qj8q/7VZRv///////////9jOw//Np3L/8dOf/+a6e//is2z/051R/8yT
+        SP/AikL/gF0o/z1hNf8AAABWAAAAHQAAAAAAAAAAAAAAAAAAAABFgUr/mbqc//v8+///////////////
+        ////////3t7e/42Njf/e3t7////////////ozMb/qj8q//ny8f//////3t7e/5OJfv/ZsX7/8dOg/+a7
+        ev/ismv/1Z1P/8qNNv/AgSv/clAY/x0SA3AAAAAdAAAAAAAAAAAAAAAAAAAAAEWBSv+Zupz/+/z7////
+        ///////////////////e3t7/jY2N/97e3v//////9OXj/6o/Kv/MjH/////////////e3t7/jY2N/9jP
+        xP/ft4L/8NKe/+a7fP/hsWn/4KxY/86RN/++gCn/e1AW6DYgB0AAAAAAAAAAAAAAAAAAAAAARYFK/5m6
+        nP/7/Pv//////////////////////97e3v+NjY3/3t7e///////05eP/qj8q/6o/Kv///////////97e
+        3v+NjY3/3t7e//Po3f/ftn//8M+Y/+S3dv/grmf/3qlX/86SN//Fhi78f1IW4VY1DCgAAAAAAAAAAAAA
+        AABFgUr/mbqc//v8+///////////////////////3t7e/42Njf/e3t7/////////////////////////
+        ////////3t7e/42Njf/e3t7/+/r5/9Kmcv/226v/68OH/+W4dv/frmj/3qpW/9KWOv/HiC77g1UZ3FQy
+        CicAAAAAAAAAAEqCT/+WsJj/29zb/97e3v/e3t7/3t7e/97e3v/Gxsb/jY2N/8bGxv/e3t7/3t7e/97e
+        3v/e3t7/3t7e/97e3v/Gxsb/jY2N/8bGxv/c3Nv/vIEz/+C8g//02qr/68OH/+W4d//fr2f/3qhW/9KX
+        Ov/EhCX7fUsK1FQvBkYAAAAAT4NU/42Njf+NjY3/jY2N/42Njf+NjY3/jY2N/42Njf+Ojo7/jY2N/42N
+        jf+NjY3/jY2N/42Njf+NjY3/jY2N/42Njf+Ojo7/jY2N/42NjP+0ein/xYMU/9evdv/23a7/68SI/+S3
+        dv/gr2f/3adT/82PKP+3cQj5ilEH0gAAAABKgk//lrCY/9vc2//e3t7/3t7e/97e3v/e3t7/xsbG/42N
+        jf/Gxsb/3t7e/97e3v/e3t7/3t7e/97e3v/e3t7/xsbG/42Njf/Gxsb/3t7e/9G7of/LjiX/vXsc/9ar
+        cv/13LH/68SK/+S4eP/dqVj/zo0S/794BP+waQbxAAAAAEWBSv+Zupz/+/z7/6o/Kv+qPyr/wXJj////
+        ///e3t7/jY2N/97e3v/////////////////////////////////e3t7/jY2N/97e3v///////////+nU
+        uv/Ljin/wH0X/9+1av/02an/79Ge/+zIkv/cqVP/x4MK/7hxAuoAAAAARYFK/5m6nP/7/Pv/7tnU/7VZ
+        Rv/05eP//////97e3v+NjY3/3t7e/////////////////////////////////97e3v+NjY3/3t7e////
+        /////////////+nTuf/Rmz//u4MZ/9CqY//99+P/+/DZ/+3IjP/LjCX7tWsFkAAAAABFgUr/mbqc//v8
+        +//jv7j/16Wc/7tlVf//////3t7e/42Njf/e3t7/////////////////////////////////3t7e/42N
+        jf/e3t7///////////////////////j07f+cspH/U2s1/8uyktfx48nt4Lh74bVuHWqoWwoPAAAAAEWB
+        Sv+Utpf/9vn2/9elnP+qPyr/0pmN///////e3t7/jY2N/97e3v//////////////////////////////
+        ///e3t7/jY2N/97e3v//////////////////////+Pv5/5W1mP85az3/AAAAUwAAABsAAAAAAAAAAAAA
+        AAAAAAAARYFK/3aiev/a5tv/9Pj0//v9+//+/v7//v7+/93d3f+NjY3/3d3d//7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+/93d3f+NjY3/3d3d//7+/v/+/v7//v7+//r8+v/f6eD/eKJ8/zxvQP8AAABBAAAAEwAA
+        AAAAAAAAAAAAAAAAAABEf0m3SoRP/3SheP+Vt5f/n76h/6LApf+iwKX/nbWf/42Njf+dtZ//osCl/6LA
+        pf+iwKX/osCl/6LApf+iwKX/nbWf/42Njf+dtZ//osCl/6LApf+iwKX/nb2g/3umf/9LhVD/O24/ywAA
+        ACIAAAAIAAAAAAAAAAAAAAAAAAAAAER+SS9Ef0m7RH5JxEWBSv9FgUr/RYFK/0WBSv9Kgk//T4NU/0qC
+        T/9FgUr/RYFK/0WBSv9FgUr/RYFK/0WBSv9Kgk//T4NU/0qCT/9FgUr/RYFK/0WBSv9FgUr/RYFK/0N8
+        R8I1YzlAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////gAAAB4AA
+        AAeAAAAHgAAAB4AAAAeAAAAHgAAAB4AAAAeAAAAHgAAAB4AAAAeAAAAHgAAAB4AAAAeAAAAHgAAAB4AA
+        AAOAAAABgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAB4AAAAeAAAAHgAAAB////////////////ygA
+        AAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA0AAAAWAAAAHAAA
+        AB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAcAAAAFgAAAA0AAAAEAAAAAAAAAA0AAAAtAAAASAAA
+        AFMAAABWAAAAVgAAAFYAAABWAAAAVgAAAFYAAABWAAAAUwAAAEgAAAAtAAAADQAAAABAd0SLQXlF2kWB
+        Sv9FgUr/RYFK/0WBSv9FgUr/RYFK/0WBSv9FgUr/RYFK/z50QuMxWzS1AAAASAAAABYAAAAAQ31I0rDH
+        sv///////////4uLi/9axnT/WsZ0/1rGdP+Li4v///////////+wx7L/PnRC4wAAAFMAAAAcAAAAAEWB
+        Sv////////////////+Li4v/WsZ0/5ByUP+SbUn/mGZL//////////////39/0WBSv8AAABWAAAAHQAA
+        AABFgUr/////////////////i4uL/1rGdP+7gS//9uTH/7aEP/+YZkv////////9/f9FgUr/AAAAVgAA
+        AB0AAAAARYFK/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/7uBL//35sr/wIpA/5hmS/+Li4v/RYFK/wAA
+        AFYAAAAdAAAAAEWBSv////////////////+Li4v////////////06+H/u4Ev//flyv/NmlX/mGZL/0Z6
+        RP8AAABWAAAAHQAAAABFgUr/////////////////i4uL//////+qPyr//////5KIff+7gS//9uPG/8+Z
+        Uf+YZkv/mGZL/wAAAB0AAAAARYFK/////////////////4uLi/////////////////+Li4v/9Orf/7uB
+        L//03r3/05pF/6VtLv6YZkv/AAAAAEWBSv+Li4v/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/4uL
+        i/+7gS//9+fN/+a4c//Xnkf/pW0u/5hmS/9FgUr/////////////////i4uL/////////////////4uL
+        i///////38Kh/7uBL//3587/5bh0/9KVMf+lbS7/RYFK//////+qPyr//////4uLi///////////////
+        //+Li4v///////z59//XrHH/u4Ev//nr0//mvHX/wHkI7kR/Sc+wx7L///////////+Li4v/////////
+        ////////i4uL////////////r8Ot/152NeKlbS7/pW0u/7VsFk9Ef0mCRH9Jz0WBSv9FgUr/RYFK/0WB
+        Sv9FgUr/RYFK/0WBSv9FgUr/RYFK/0N9SNJAd0SLAAAADQAAAAQAAAAA//8AAAABAAAAAQAAAAEAAAAB
+        AAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA==
+</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>370, 389</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="&gt;&gt;mainTooltips.Name" xml:space="preserve">
+    <value>mainTooltips</value>
+  </data>
+  <data name="&gt;&gt;mainTooltips.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

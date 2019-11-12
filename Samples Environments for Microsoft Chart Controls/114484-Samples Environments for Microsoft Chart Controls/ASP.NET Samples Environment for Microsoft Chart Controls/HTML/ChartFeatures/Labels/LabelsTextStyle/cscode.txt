@@ -1,0 +1,25 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Disable axis labels auto fitting of text
+    Chart1.ChartAreas["ChartArea1"].AxisX.IsLabelAutoFit = false;
+
+    // Set axis labels font
+    Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Font = new Font("Arial", 10);
+
+    // Set axis labels angle
+    Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Angle = 30;
+
+    // Disable offset labels style
+    Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.IsStaggered = false;
+
+    // Enable X axis labels
+    Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Enabled = true;
+    
+	// Enable AntiAliasing for either Text and Graphics or just Graphics
+	Chart1.AntiAliasing = AntiAliasingStyles.All; // AntiAliasingStyles.Graphics and AntiAliasingStyles.Text
+    
+}
+...

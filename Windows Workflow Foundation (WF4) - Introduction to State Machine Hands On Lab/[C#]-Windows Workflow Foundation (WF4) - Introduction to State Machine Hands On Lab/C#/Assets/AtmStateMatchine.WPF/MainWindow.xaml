@@ -1,0 +1,101 @@
+﻿<Window x:Class="AtmStateMatchine.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ATM State Machine Simulator" Height="600" Width="800" FontSize="14" FontWeight="Bold" Icon="/AtmStateMachine.WPF;component/Images/ATMIcon.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="400" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="100" />
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6"  Margin="0,0,5,5" Source="/AtmStateMachine.WPF;component/Images/NET-WWF_rgb.png" />
+        <Grid Grid.Row="0" Grid.Column="6">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Camera</TextBlock>
+            <Ellipse Width="40" Height="40" Grid.Column="1" Fill="{Binding Path=CameraBrush, Mode=OneWay}"  />
+            <Button Grid.Row="1" Grid.Column="0" Command="{Binding Path=PowerOnCommand}">Power On</Button>
+            <Button Grid.Row="1" Grid.Column="1" Command="{Binding Path=PowerOffCommand}">Power Off</Button>
+            <Button Grid.Row="1" Grid.Column="2" Command="{Binding Path=ClearDebugEvents}">Clear Events</Button>
+        </Grid>
+        <Button Grid.Row="1" Command="{Binding Path=SideButtonCommand}" CommandParameter="1" >Button 1</Button>
+        <Button Grid.Row="2" Command="{Binding Path=SideButtonCommand}" CommandParameter="2" >Button 2</Button>
+        <Button Grid.Row="3" Command="{Binding Path=SideButtonCommand}" CommandParameter="3" >Button 3</Button>
+        <Button Grid.Row="4" Command="{Binding Path=SideButtonCommand}" CommandParameter="4" >Button 4</Button>
+        <TextBlock Margin="5" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Text="{Binding Path=DisplayRow1, Mode=OneWay}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" FontFamily="Lucida Console" />
+        <TextBlock Margin="5" TextWrapping="Wrap" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" Text="{Binding Path=DisplayRow2, Mode=OneWay}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" FontFamily="Lucida Console" />
+        <TextBlock Margin="5" TextWrapping="Wrap" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Text="{Binding Path=DisplayRow3, Mode=OneWay}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" FontFamily="Lucida Console" />
+        <TextBlock Margin="5" TextWrapping="Wrap" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5" Text="{Binding Path=DisplayRow4, Mode=OneWay}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" FontFamily="Lucida Console" />
+        <Grid Grid.Row="5" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16" TextAlignment="Center" VerticalAlignment="Center">Card Reader</TextBlock>
+            <Button Grid.Row="1" Command="{Binding Path=InsertCardCommand}" CommandParameter="True" >Valid Card</Button>
+            <Button Grid.Row="2" Command="{Binding Path=InsertCardCommand}" CommandParameter="False" >Invalid Card</Button>
+            <Button Grid.Row="3" Command="{Binding Path=RemoveCardCommand}">Remove Card</Button>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition />
+
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >1</Button>
+            <Button Grid.Row="0" Grid.Column="1" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >2</Button >
+            <Button Grid.Row="0" Grid.Column="2" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >3</Button >
+            <Button Grid.Row="0" Grid.Column="4" Background="Red" Command="{Binding Path=KeyPadCommand}" CommandParameter="KeypadCancel" >Cancel</Button >
+            <Button Grid.Row="1" Grid.Column="0" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >4</Button >
+            <Button Grid.Row="1" Grid.Column="1" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >5</Button >
+            <Button Grid.Row="1" Grid.Column="2" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >6</Button >
+            <Button Grid.Row="1" Grid.Column="4" Background="Yellow" Command="{Binding Path=KeyPadCommand}" CommandParameter="KeypadClear" >Clear</Button >
+            <Button Grid.Row="2" Grid.Column="0" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >7</Button >
+            <Button Grid.Row="2" Grid.Column="1" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >8</Button >
+            <Button Grid.Row="2" Grid.Column="2" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >9</Button >
+            <Button Grid.Row="2" Grid.Column="4" Background="Green" Command="{Binding Path=KeyPadCommand}" CommandParameter="KeypadEnter" >Enter</Button >
+            <Button Grid.Row="3" Grid.Column="1" Command="{Binding Path=KeyPadCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" >0</Button >
+
+        </Grid>
+        <ListView Name="ListBoxEvents" Grid.Column="6" Grid.Row="1" Grid.RowSpan="5" ItemsSource="{Binding DebugEvents, Mode=OneWay}" FontSize="14" FontWeight="Normal">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Thread" DisplayMemberBinding="{Binding Path=Item1}" />
+                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Path=Item2}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Border BorderBrush="Silver" BorderThickness="1" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Row="1" />
+        <Border BorderBrush="Silver" BorderThickness="1" Grid.Column="6" Grid.Row="1" Grid.RowSpan="5" />
+    </Grid>
+</Window>

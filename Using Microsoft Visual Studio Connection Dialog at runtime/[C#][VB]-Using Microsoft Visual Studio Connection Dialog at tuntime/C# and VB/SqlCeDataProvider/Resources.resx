@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+   <data name="SqlCeConnectionUIControl_InvalidConnectionProperties" xml:space="preserve">
+    <value>The connection properties object must be of type SqlCeConnectionProperties.</value>
+  </data>
+
+  <data name="Reg_NotifyService" xml:space="preserve">
+    <value>PlatformService:          {0}</value>
+  </data>
+  <data name="SqlConnectionProperties_DataSource" xml:space="preserve">
+    <value>The file path and name of the SQL Server Compact database.</value>
+  </data>
+  <data name="SqlConnectionProperties_Password" xml:space="preserve">
+    <value>The database password, which can be up to 40 characters in length.</value>
+  </data>
+  <data name="SqlConnectionProperties_Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="SqlConnectionProperties_Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="SqlConnectionSupport_UnrecognizedProviderObject" xml:space="preserve">
+    <value>The specified provider object is not a System.Data.SqlClient.SqlConnection.</value>
+  </data>
+  <data name="SqlConnectionUIControl_BrowseFileTitle" xml:space="preserve">
+    <value>Select SQL Server Compact 3.5 Database File</value>
+  </data>
+  <data name="SqlConnectionUIControl_BrowseFileFilter" xml:space="preserve">
+    <value>SQL Server Compact 3.5 Databases (*.sdf)|*.sdf|All Files (*.*)|*.*</value>
+  </data>
+  <data name="SqlConnectionUIControl_BrowseFileDefaultExt" xml:space="preserve">
+    <value>sdf;</value>
+  </data>
+  <data name="SqlConnectionUIControl_ConnectionFailed" xml:space="preserve">
+    <value>Connection Failed</value>
+  </data>
+  <data name="SqlDataParameter_ParseNotImplemented" xml:space="preserve">
+    <value>Parsing values of SqlDbType {0} is not implemented.</value>
+  </data>
+  <data name="BadSite" xml:space="preserve">
+    <value>The {0} object was incorrectly sited.</value>
+  </data>
+  <data name="SqlCeConnectionProperties_FileNeedsUpgrading" xml:space="preserve">
+    <value>The selected database was created with an earlier version of SQL Server Compact and needs to be upgraded to SQL Server Compact 3.5 before the connection can be opened or tested.  Upgrade the database by creating a new data connection and completing the Add Connection dialog box.</value>
+  </data>
+  <data name="SqlCeConnectionProperties_FileNeedsRepair" xml:space="preserve">
+    <value>The selected database file may be corrupted. Run the repair ultility to check the database or repair the database by creating a new data connection and completing the Add Connection dialog box.</value>
+  </data>
+  <data name="SqlCeConnectionProperties_MustSpecifyDataSource" xml:space="preserve">
+    <value>This connection cannot be tested because no database file has been specified.</value>
+  </data>
+  <data name="SqlCeConnectionProperties_DeviceNotSupported" xml:space="preserve">
+    <value>This version of Visual Studio does not support creating connection to the database files on a mobile device.</value>
+  </data>
+  <data name="SqlCeConnectionProperties_DatabaseCorruptNeedsRepair" xml:space="preserve">
+    <value>The specified file is either not a valid SQL Server Compact file or it is corrupted. Would you like to repair it?</value>
+  </data>
+  <data name="SqlCeConnectionProperties_DatabaseCorruptNeedsRepairTitle" xml:space="preserve">
+    <value>Repair SQL Server Compact Database</value>
+  </data>
+  <data name="SqlCeObjectEnumerator_InvalidParameters" xml:space="preserve">
+    <value>The parameters to EnumerateObjects are invalid.</value>
+  </data>
+  <data name="SqlCeDataObjectIdentifierConverter_InvalidIdentifier" xml:space="preserve">
+    <value>The specified identifier is in an invalid format.</value>
+  </data>
+  <data name="SqlCeDataObjectIdentifierConverter_InvalidType" xml:space="preserve">
+    <value>The type "{0}" was not found.</value>
+  </data>
+  <data name="DataProvider_SqlEverywhere" xml:space="preserve">
+    <value>.NET Framework Data Provider for Microsoft SQL Server Compact 3.5</value>
+  </data>
+  <data name="DataProvider_SqlEverywhere_Description" xml:space="preserve">
+    <value>Use this data provider to connect to a Microsoft SQL Server Compact 3.5 database file.</value>
+  </data>
+  <data name="SqlConnectionProperties_PersistSecurityInfo" xml:space="preserve">
+    <value>Returns security-sensitive information like password as part of the connection (Default is false).</value>
+  </data>
+  <data name="SqlConnectionProperties_MaxDatabaseSize" xml:space="preserve">
+    <value>The maximum size of the database, in MB (Default 128).</value>
+  </data>
+  <data name="SqlConnectionProperties_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="SqlConnectionProperties_Initialization" xml:space="preserve">
+    <value>Initialization</value>
+  </data>
+  <data name="SqlConnectionProperties_EncryptionMode" xml:space="preserve">
+    <value>Specifies the encryption of the database file (Default mode is platform default).</value>
+  </data>
+  <data name="SqlConnectionProperties_AutoshrinkThreshold" xml:space="preserve">
+    <value>The percent of free space in the database file that is allowed before autoshrink begins (Default is 60).</value>
+  </data>
+  <data name="SqlConnectionProperties_DefaultLockEscalation" xml:space="preserve">
+    <value>The number of locks a transaction will acquire before attempting escalation from row to page, or from page to table (Default is 100).</value>
+  </data>
+  <data name="SqlConnectionProperties_LocaleIdentifier" xml:space="preserve">
+    <value>The locale ID (LCID) to use with the database.</value>
+  </data>
+  <data name="SqlConnectionProperties_TempFileDirectory" xml:space="preserve">
+    <value>The location of the temporary database.</value>
+  </data>
+</root>

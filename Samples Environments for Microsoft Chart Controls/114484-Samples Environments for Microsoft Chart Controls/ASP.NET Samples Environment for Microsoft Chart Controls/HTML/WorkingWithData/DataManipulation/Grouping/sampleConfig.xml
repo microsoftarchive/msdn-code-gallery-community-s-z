@@ -1,0 +1,60 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Grouping">
+	<Title>Grouping Stock Prices</Title> 
+	<Thumbnail>GroupingStockData\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Grouping Stock Prices</ShortBlurb> 
+	<Content>GroupingStockData\GroupingStockData.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">GroupingStockData\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">GroupingStockData\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">GroupingStockData\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Data manipulation, Grouping data</Keyword>
+		<Keyword>Grouping, Stock data</Keyword>
+	</Keywords> 
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Grouping">
+	<Title>Grouping Formulas</Title> 
+	<Thumbnail>GroupingFormulas\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Grouping Formulas</ShortBlurb> 
+	<Content>GroupingFormulas\GroupingFormulas.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">GroupingFormulas\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">GroupingFormulas\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">GroupingFormulas\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Grouping, Formulas</Keyword>
+		<Keyword>Interval, Grouping</Keyword>
+	</Keywords>  
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Grouping">
+	<Title>Grouping by Axis Label</Title> 
+	<Thumbnail>GroupingByAxisLabel\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Grouping by Axis Label</ShortBlurb> 
+	<Content>GroupingByAxisLabel\GroupingByAxisLabel.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">GroupingByAxisLabel\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">GroupingByAxisLabel\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">GroupingByAxisLabel\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Grouping, By axis labels</Keyword>
+	</Keywords> 
+	</SampleConfig>
+	
+	
+</SampleConfigs>

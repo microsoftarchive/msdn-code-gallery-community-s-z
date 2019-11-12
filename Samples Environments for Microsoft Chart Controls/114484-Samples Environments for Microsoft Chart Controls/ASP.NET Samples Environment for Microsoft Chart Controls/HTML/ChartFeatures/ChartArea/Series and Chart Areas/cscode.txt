@@ -1,0 +1,14 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Attach the first series to a chart area.
+    Chart1.Series["Series1"].ChartArea = "ChartArea1";
+    
+    // Attach the second series to a chart area.
+    Chart1.Series["Series2"].ChartArea = "Chart Area 2";
+    
+    // Remove series from chart areas.
+    Chart1.Series["Series3"].ChartArea = "";
+}

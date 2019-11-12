@@ -1,0 +1,22 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataSourceTypes">
+  <Title>Binding to CSV Files</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Binding to CSV Files</ShortBlurb> 
+  <Content>DataBindCSVFile.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding to Comma Separated Volume</Keyword>
+    <Keyword>Binding, Comma Separated Volume</Keyword>
+    <Keyword>Comma Separated Volume Data Binding</Keyword>
+    <Keyword>CSV Data Binding</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

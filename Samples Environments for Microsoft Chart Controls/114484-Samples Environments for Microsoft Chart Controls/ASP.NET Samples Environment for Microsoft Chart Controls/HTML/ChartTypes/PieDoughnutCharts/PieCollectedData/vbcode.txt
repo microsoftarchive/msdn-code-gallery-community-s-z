@@ -1,0 +1,30 @@
+Imports System.Web.UI.DataVisualization.Charting
+Imports System.Web.UI.DataVisualization.Charting.Utilities
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' PieCollectedDataHelper is a helper class found in the samples Utilities folder. 
+	Dim pieHelper As New PieCollectedDataHelper()
+
+	' Set the percentage of the total series values. This value determines 
+	' if the data point value is a "small" value and should be shown as collected.
+	pieHelper.CollectedPercentage = 5
+
+	' Indicates if small segments should be shown as one "collected" segment in 
+	' the original series.
+	pieHelper.ShowCollectedDataAsOneSlice = False
+
+	' Size ratio between the original and supplemental chart areas.
+	' Value of 1.0f indicates that same area size will be used.
+	pieHelper.SupplementedAreaSizeRatio = 0.9F
+
+	' Set position in relative coordinates ( 0,0 - top left corner; 100,100 - bottom right corner)
+	' where original and supplemental pie charts should be placed.
+	pieHelper.ChartAreaPosition = New RectangleF(5F, 5F, 90F, 90F)
+
+	' Show supplemental pie for the "Default" series
+	pieHelper.ShowSmallSegmentsAsSupplementalPie("Default")
+
+End Sub 'Page_Load
+...

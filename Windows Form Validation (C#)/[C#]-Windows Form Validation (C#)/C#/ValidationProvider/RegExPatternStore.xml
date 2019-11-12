@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRegExPattern xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RegExPattern>
+    <PatternName>Phone Number</PatternName>
+    <ErrorMessage>%ControlName% is not a valid phone number, ###-###-###</ErrorMessage>
+    <Pattern>^\d{3}-\d{3}-\d{4}$</Pattern>
+    <TestValue>777-666-6969</TestValue>
+  </RegExPattern>
+  <RegExPattern>
+    <PatternName>US Zip Code</PatternName>
+    <ErrorMessage>%ControlName% is not a valid 5 digits US zipcode, #####</ErrorMessage>
+    <Pattern>^\d{5}$</Pattern>
+    <TestValue>55555</TestValue>
+  </RegExPattern>
+  <RegExPattern>
+    <PatternName>US Zip Code +4</PatternName>
+    <ErrorMessage>%ControlName% is not a valid US zipcode + 4 digits, #####-####</ErrorMessage>
+    <Pattern>^\d{5}-\d{4}$</Pattern>
+    <TestValue>55555-6969</TestValue>
+  </RegExPattern>
+  <RegExPattern>
+    <PatternName>Email</PatternName>
+    <ErrorMessage>%ControlName% is not a valid email address, mailbox@domain</ErrorMessage>
+    <Pattern>^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$</Pattern>
+    <TestValue>tom@noogen.com</TestValue>
+  </RegExPattern>
+</ArrayOfRegExPattern>

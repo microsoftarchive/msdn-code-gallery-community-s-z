@@ -1,0 +1,62 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    
+    ' Populate chart with random sales data
+    Dim random As New Random()
+    Dim xTime As New DateTime(2000, 8, 1, 0, 0, 0)
+    Dim pointIndex As Integer
+    For pointIndex = 0 To (Integer.Parse(DayNumberLst.SelectedItem.Value)) - 1
+        ' Simulate lower sales on the weekends	
+        Dim yValue As Double = random.Next(600, 950)
+        If xTime.DayOfWeek = DayOfWeek.Sunday Or xTime.DayOfWeek = DayOfWeek.Saturday Then
+            yValue = random.Next(100, 400)
+        End If
+        Chart1.Series("Series Input").Points.AddXY(xTime, yValue)
+        xTime = xTime.AddDays(1)
+    Next pointIndex
+
+    ' Show data points using point's index
+    If ShowAsIndexedList.SelectedItem.Text = "True" Then
+        Chart1.Series("Series Output").IsXValueIndexed = True
+        Chart1.ChartAreas("FilteredData").AxisX.Minimum = Double.NaN
+        Chart1.ChartAreas("FilteredData").AxisX.Maximum = Double.NaN
+    Else
+        Chart1.DataManipulator.FilterSetEmptyPoints = True
+    End If
+
+    ' Filter series data 
+    If FilterValuesList.SelectedItem.Value = "Weekends" Then
+        Chart1.DataManipulator.Filter(DateRangeType.DayOfWeek, "0,6", _
+            "Series Input", "Series Output")
+    Else
+        If FilterValuesList.SelectedItem.Value = "Weekdays" Then
+            Chart1.DataManipulator.Filter(DateRangeType.DayOfWeek, "1-5", _
+                "Series Input", "Series Output")
+        Else
+            If FilterValuesList.SelectedItem.Value = "Except 15" Then
+            Chart1.DataManipulator.Filter(DateRangeType.DayOfMonth, "1-14,16-31", _
+                "Series Input", "Series Output")
+            Else
+				If FilterValuesList.SelectedItem.Value = "Except 1-15" Then
+					Chart1.DataManipulator.Filter(DateRangeType.DayOfMonth, "16-31", _
+						"Series Input", "Series Output")
+				End If
+            End If
+        End If 
+    End If 
+    
+    ' Create strip lines for the weekends
+    Dim stripLine As New StripLine()
+    stripLine.BackColor = Color.FromArgb(120, Color.Gray)
+    stripLine.IntervalOffset = - 1.5
+    stripLine.IntervalOffsetType = DateTimeIntervalType.Days
+    stripLine.Interval = 1
+    stripLine.IntervalType = DateTimeIntervalType.Weeks
+    stripLine.StripWidth = 2
+    stripLine.StripWidthType = DateTimeIntervalType.Days
+    Chart1.ChartAreas("ChartArea1").AxisX.StripLines.Add(stripLine)
+    
+End Sub 'Page_Load
+...

@@ -1,0 +1,26 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' Initialize arrays for series 1
+	Dim yval1 As Double() =  {2, 6, 5}
+	Dim xval1 As String() =  {"Peter", "Andrew", "Julie"}
+
+	' Initialize arrays for series 2
+	Dim yval2 As Double() =  {4, 5, 3}
+	Dim xval2 As String() =  {"Peter", "Andrew", "Dave"}
+
+	' Initialize arrays for series 3
+	Dim yval3 As Double() =  {6, 5}
+	Dim xval3 As String() =  {"Julie", "Mary"}
+
+	' Bind the arrays to each data series
+	Chart1.Series("Series1").Points.DataBindXY(xval1, yval1)
+	Chart1.Series("Series2").Points.DataBindXY(xval2, yval2)
+	Chart1.Series("Series3").Points.DataBindXY(xval3, yval3)
+
+	' Align series using their X axis labels
+	Chart1.AlignDataPointsByAxisLabel()
+
+End Sub 'Page_Load
+...   

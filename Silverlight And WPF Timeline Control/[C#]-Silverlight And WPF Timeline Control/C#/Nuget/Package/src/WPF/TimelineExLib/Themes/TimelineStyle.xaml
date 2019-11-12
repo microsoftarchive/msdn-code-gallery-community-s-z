@@ -1,0 +1,1097 @@
+﻿<!--
+ * Copyright (c) 2010, Andriy Syrov
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, are permitted provided 
+ * that the following conditions are met:
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of conditions and the 
+ * following disclaimer.
+ * 
+ * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and 
+ * the following disclaimer in the documentation and/or other materials provided with the distribution.
+ *
+ * Neither the name of Andriy Syrov nor the names of his contributors may be used to endorse or promote 
+ * products derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED 
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+ * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY 
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED 
+ * TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN 
+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *   
+ -->
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:TimelineLibrary;assembly=TimelineLibrary"
+    xmlns:timeline="clr-namespace:TimelineLibrary;assembly=TimelineLibrary"
+    xmlns:me="clr-namespace:TimelineEx"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ex="clr-namespace:TimelineEx"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary
+            Source="/TimelineExLib;Component/Themes/Constants.xaml" />
+        <ResourceDictionary
+            Source="/TimelineExLib;Component/Themes/NavigationStyle.xaml" />
+        <ResourceDictionary
+            Source="/TimelineExLib;Component/Themes/ToolboxButtonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <timeline:NullToUnsetConverter
+        x:Key="NullToUnsetConverter" />
+
+    <me:BoolToVisibilityConverter
+        x:Key="BoolToVisibilityConverter" />
+
+    <ControlTemplate
+        x:Key="EventTooltipStyle"
+        TargetType="ToolTip">
+        <Border
+            BorderBrush="Silver"
+            BorderThickness="1"
+            Background="{StaticResource EventTooltipBackground}">
+            <StackPanel
+                Margin="5"
+                MaxWidth="400">
+
+                <TextBlock
+                    Margin="0,0,0,0"
+                    Text="{Binding Event.Title, Mode=OneWay}"
+                    MinWidth="{Binding EventPixelWidth}"
+                    TextWrapping="NoWrap"
+                    Foreground="{StaticResource EventTooltipTitleForeground}"
+                    HorizontalAlignment="Left">
+                </TextBlock>
+
+                <TextBlock
+                    Margin="0,0,0,0"
+                    Text="{Binding Event.Description, Mode=OneWay}"
+                    TextWrapping="Wrap"
+                    Foreground="{StaticResource EventTooltipDescriptionForeground}"
+                    FontStyle="italic"
+                    HorizontalAlignment="Left"
+                    FontSize="11">
+                </TextBlock>
+            </StackPanel>
+        </Border>
+    </ControlTemplate>
+
+    <SolidColorBrush
+        x:Key="StandardBorderBrush"
+        Color="DarkGray"></SolidColorBrush>
+    <SolidColorBrush
+        x:Key="StandardBrush"
+        Color="LightGray"></SolidColorBrush>
+    <SolidColorBrush
+        x:Key="PressedBrush"
+        Color="Gray"></SolidColorBrush>
+    <SolidColorBrush
+        x:Key="HoverBrush"
+        Color="#fefefe"></SolidColorBrush>
+    <SolidColorBrush
+        x:Key="GlyphBrush"
+        Color="#333333"></SolidColorBrush>
+
+    <Style
+        x:Key="VerticalScrollBarThumbStyle"
+        TargetType="{x:Type Thumb}">
+        <Setter
+            Property="IsTabStop"
+            Value="False" />
+        <Setter
+            Property="Focusable"
+            Value="False" />
+        <Setter
+            Property="Margin"
+            Value="1,0,1,0" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource StandardBorderBrush}" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type Thumb}">
+                    <Rectangle
+                        Width="8"
+                        Name="ellipse"
+                        Stroke="{StaticResource StandardBorderBrush}"
+                        Fill="{StaticResource StandardBrush}"
+                        RadiusX="5"
+                        RadiusY="5"></Rectangle>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="true">
+                            <Setter
+                                TargetName="ellipse"
+                                Property="Fill"
+                                Value="{StaticResource HoverBrush}"></Setter>
+                        </Trigger>
+                        <Trigger
+                            Property="IsDragging"
+                            Value="True">
+                            <Setter
+                                TargetName="ellipse"
+                                Property="Fill"
+                                Value="{StaticResource PressedBrush}"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        x:Key="HorizontalScrollBarThumbStyle"
+        TargetType="{x:Type Thumb}">
+        <Setter
+            Property="IsTabStop"
+            Value="False" />
+        <Setter
+            Property="Focusable"
+            Value="False" />
+        <Setter
+            Property="Margin"
+            Value="0,1,0,1" />
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource StandardBorderBrush}" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type Thumb}">
+                    <Rectangle
+                        Height="8"
+                        Name="ellipse"
+                        Stroke="{StaticResource StandardBorderBrush}"
+                        Fill="{StaticResource StandardBrush}"
+                        RadiusX="5"
+                        RadiusY="5"></Rectangle>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="true">
+                            <Setter
+                                TargetName="ellipse"
+                                Property="Fill"
+                                Value="{StaticResource HoverBrush}"></Setter>
+                        </Trigger>
+                        <Trigger
+                            Property="IsDragging"
+                            Value="True">
+                            <Setter
+                                TargetName="ellipse"
+                                Property="Fill"
+                                Value="{StaticResource PressedBrush}"></Setter>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        x:Key="LineButtonUpStyle"
+        TargetType="{x:Type RepeatButton}">
+        <Setter
+            Property="Focusable"
+            Value="False" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type RepeatButton}">
+                    <Grid
+                        Margin="1"
+                        Height="18">
+                        <Path
+                            Stretch="None"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Name="Path"
+                            Fill="{StaticResource StandardBrush}"
+                            Data="M 0 8 L 8 8 L 4 0 Z"></Path>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="true">
+                            <Setter
+                                TargetName="Path"
+                                Property="Fill"
+                                Value="{StaticResource HoverBrush}" />
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="true">
+                            <Setter
+                                TargetName="Path"
+                                Property="Fill"
+                                Value="{StaticResource PressedBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        x:Key="LineButtonDownStyle"
+        TargetType="{x:Type RepeatButton}">
+        <Setter
+            Property="Focusable"
+            Value="False" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type RepeatButton}">
+                    <Grid
+                        Margin="1"
+                        Height="18">
+                        <Path
+                            Stretch="None"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Name="Path"
+                            Fill="{StaticResource StandardBrush}"
+                            Data="M 0 0 L 4 8 L 8 0 Z"></Path>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="true">
+                            <Setter
+                                TargetName="Path"
+                                Property="Fill"
+                                Value="{StaticResource HoverBrush}" />
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="true">
+                            <Setter
+                                TargetName="Path"
+                                Property="Fill"
+                                Value="{StaticResource PressedBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        x:Key="LineButtonLeftStyle"
+        TargetType="{x:Type RepeatButton}">
+        <Setter
+            Property="Focusable"
+            Value="False" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type RepeatButton}">
+                    <Grid
+                        Margin="1"
+                        Width="18">
+                        <Path
+                            Stretch="None"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Name="Path"
+                            Fill="{StaticResource StandardBrush}"
+                            Data="M 0 0 L -8 4 L 0 8 Z"></Path>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="true">
+                            <Setter
+                                TargetName="Path"
+                                Property="Fill"
+                                Value="{StaticResource HoverBrush}" />
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="true">
+                            <Setter
+                                TargetName="Path"
+                                Property="Fill"
+                                Value="{StaticResource PressedBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        x:Key="LineButtonRightStyle"
+        TargetType="{x:Type RepeatButton}">
+        <Setter
+            Property="Focusable"
+            Value="False" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type RepeatButton}">
+                    <Grid
+                        Margin="1"
+                        Width="18">
+                        <Path
+                            Stretch="None"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Name="Path"
+                            Fill="{StaticResource StandardBrush}"
+                            Data="M 0 0 L 8 4 L 0 8 Z"></Path>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="true">
+                            <Setter
+                                TargetName="Path"
+                                Property="Fill"
+                                Value="{StaticResource HoverBrush}" />
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="true">
+                            <Setter
+                                TargetName="Path"
+                                Property="Fill"
+                                Value="{StaticResource PressedBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        x:Key="ScrollBarPageButtonStyle"
+        TargetType="{x:Type RepeatButton}">
+        <Setter
+            Property="IsTabStop"
+            Value="False" />
+        <Setter
+            Property="Focusable"
+            Value="False" />
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type RepeatButton}">
+                    <Border
+                        Background="Transparent" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <ControlTemplate
+        x:Key="VerticalScrollBar"
+        TargetType="{x:Type ScrollBar}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    MaxHeight="18" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    MaxHeight="18" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush
+                    StartPoint="0,0"
+                    EndPoint="0,1">
+                    <GradientStop
+                        Offset="0"
+                        Color="#4c4c4c"></GradientStop>
+                    <GradientStop
+                        Offset="1"
+                        Color="#434343"></GradientStop>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <RepeatButton
+                Grid.Row="0"
+                Height="18"
+                Style="{StaticResource LineButtonUpStyle}"
+                Command="ScrollBar.LineUpCommand">
+
+            </RepeatButton>
+
+            <Track
+                Name="PART_Track"
+                Grid.Row="1"
+                IsDirectionReversed="True">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton
+                        Command="ScrollBar.PageUpCommand"
+                        Style="{StaticResource ScrollBarPageButtonStyle}">
+                    </RepeatButton>
+                </Track.DecreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb
+                        Style="{StaticResource VerticalScrollBarThumbStyle}">
+                    </Thumb>
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton
+                        Command="ScrollBar.PageDownCommand"
+                        Style="{StaticResource ScrollBarPageButtonStyle}">
+                    </RepeatButton>
+                </Track.IncreaseRepeatButton>
+            </Track>
+
+            <RepeatButton
+                Grid.Row="2"
+                Height="18"
+                Style="{StaticResource LineButtonDownStyle}"
+                Command="ScrollBar.LineDownCommand">
+            </RepeatButton>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate
+        x:Key="HorizontalScrollBar"
+        TargetType="{x:Type ScrollBar}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    MaxWidth="18"></ColumnDefinition>
+                <ColumnDefinition
+                    Width="*"></ColumnDefinition>
+                <ColumnDefinition
+                    MaxWidth="18"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush
+                    StartPoint="0,0"
+                    EndPoint="1,0">
+                    <GradientStop
+                        Offset="0"
+                        Color="#4c4c4c"></GradientStop>
+                    <GradientStop
+                        Offset="1"
+                        Color="#434343"></GradientStop>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <RepeatButton
+                Grid.Column="0"
+                Width="18"
+                Style="{StaticResource LineButtonLeftStyle}"
+                Command="ScrollBar.LineLeftCommand">
+            </RepeatButton>
+
+            <Track
+                Name="PART_Track"
+                Grid.Column="1"
+                IsDirectionReversed="False">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton
+                        Command="ScrollBar.PageLeftCommand"
+                        Style="{StaticResource ScrollBarPageButtonStyle}">
+                    </RepeatButton>
+                </Track.DecreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb
+                        Style="{StaticResource HorizontalScrollBarThumbStyle}">
+                    </Thumb>
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton
+                        Command="ScrollBar.PageRightCommand"
+                        Style="{StaticResource ScrollBarPageButtonStyle}">
+                    </RepeatButton>
+                </Track.IncreaseRepeatButton>
+            </Track>
+            <RepeatButton
+                Grid.Column="2"
+                Width="18"
+                Style="{StaticResource LineButtonRightStyle}"
+                Command="ScrollBar.LineRightCommand">
+            </RepeatButton>
+        </Grid>
+    </ControlTemplate>
+    
+    <Style
+        x:Key="TimelineScrollBarStyle"
+        TargetType="{x:Type ScrollBar}">
+        <Setter
+            Property="SnapsToDevicePixels"
+            Value="True" />
+        <Setter
+            Property="OverridesDefaultStyle"
+            Value="true" />
+        <Style.Triggers>
+            <Trigger
+                Property="Orientation"
+                Value="Vertical">
+                <Setter
+                    Property="Width"
+                    Value="18" />
+                <Setter
+                    Property="Height"
+                    Value="Auto" />
+                <Setter
+                    Property="Template"
+                    Value="{StaticResource VerticalScrollBar}" />
+            </Trigger>
+            <Trigger
+                Property="Orientation"
+                Value="Horizontal">
+                <Setter
+                    Property="Width"
+                    Value="Auto" />
+                <Setter
+                    Property="Height"
+                    Value="18" />
+                <Setter
+                    Property="Template"
+                    Value="{StaticResource HorizontalScrollBar}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style
+        TargetType="me:TimelineBandEx">
+        <Setter 
+            Property="ScrollBarStyle"
+            Value="{StaticResource TimelineScrollBarStyle}" />
+        
+        <Setter
+            Property="DefaultShortEventTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Grid>
+                        <Rectangle
+                            Margin="0"
+                            RadiusX="1"
+                            RadiusY="1"
+                            MinWidth="4"
+                            Width="{Binding EventPixelWidth}"
+                            Fill="{Binding EventColorBrush, Mode=OneWay}"
+                            StrokeThickness="0"
+                            VerticalAlignment="Top"
+                            Height="3">
+
+                            <local:TooltipServiceEx.ToolTipEx>
+                                <local:ToolTipEx
+                                    HideToolTipTimeout="60" />
+                            </local:TooltipServiceEx.ToolTipEx>
+                            <ToolTipService.ToolTip>
+                                <ToolTip
+                                    Template="{StaticResource EventTooltipStyle}" />
+                            </ToolTipService.ToolTip>
+
+                        </Rectangle>
+                    </Grid>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter
+            Property="DefaultEventTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Grid
+                        Background="{StaticResource EventToolsBackground}"
+                        Canvas.Top="{Binding Top, Mode=TwoWay}"
+                        x:Name="EventTemplateRoot"
+                        Height="{Binding DescriptionHeight, Mode=TwoWay}"
+                        Width="{Binding DescriptionWidth, Mode=TwoWay}">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="9"></RowDefinition>
+                            <RowDefinition
+                                Height="*"></RowDefinition>
+                            <RowDefinition
+                                Height="8"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Canvas
+                            Grid.Row="0"
+                            Height="9"
+                            Background="{StaticResource EventToolsBackground}"
+                            Margin="-6 0 0 0"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch">
+
+                            <StackPanel
+                                Canvas.Top="1"
+                                Canvas.Left="0"
+                                Height="8"
+                                Background="{StaticResource EventToolsBackground}"
+                                Orientation="Horizontal">
+
+                                <Rectangle
+                                    x:Name="EventDurationRect"
+                                    Canvas.Left="0"
+                                    Canvas.Top="0"
+                                    Margin="0"
+                                    VerticalAlignment="Top"
+                                    Height="6"
+                                    MinWidth="6"
+                                    Width="{Binding EventPixelWidth, Mode=OneWay}"
+                                    Fill="{Binding EventColorBrush, Mode=OneWay}"
+                                    RadiusX="3"
+                                    RadiusY="3">
+                                    <local:TooltipServiceEx.ToolTipEx>
+                                        <local:ToolTipEx
+                                            HideToolTipTimeout="{StaticResource TooltipTimeout}" />
+                                    </local:TooltipServiceEx.ToolTipEx>
+                                    <ToolTipService.ToolTip>
+                                        <ToolTip
+                                            Template="{StaticResource EventTooltipStyle}" />
+                                    </ToolTipService.ToolTip>
+                                </Rectangle>
+                                <Border
+                                    x:Name="DurationChangeBorder"
+                                    Width="8"
+                                    Height="8"
+                                    VerticalAlignment="Top"
+                                    Visibility="{Binding TimelineTray.AllowEditDates, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}"
+                                    Margin="2 0 0 0"
+                                    BorderThickness="1"
+                                    BorderBrush="{StaticResource EventBorderLineBrush}"
+                                    Background="{StaticResource EventBackground}">
+                                    <Border
+                                        Width="4"
+                                        Height="4"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top"
+                                        BorderThickness="0 0 1 1"
+                                        BorderBrush="{StaticResource EventBorderLineBrush}"
+                                        Background="{StaticResource EventBackground}">
+                                    </Border>
+                                </Border>
+                            </StackPanel>
+
+                            <Border
+                                x:Name="BorderLine"
+                                Canvas.ZIndex="-1"
+                                VerticalAlignment="Stretch"
+                                Height="200000"
+                                Width="1"
+                                Margin="2 1 0 0"
+                                Background="{Binding EventColorBrush, Mode=OneWay}" />
+
+                        </Canvas>
+
+                        <Border
+                            x:Name="EventDescriptionBorder"
+                            Width="{Binding DescriptionWidth, Mode=TwoWay}"
+                            Grid.Row="1"
+                            BorderThickness="{Binding SelectionBorder, Mode=OneWay}"
+                            Visibility="{Binding BorderVisibility, Mode=OneWay}"
+                            Padding="2 2 2 2"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch"
+                            BorderBrush="{StaticResource EventBorderLineBrush}"
+                            Background="{StaticResource EventBackground}">
+
+                            <StackPanel>
+                                <Grid
+                                    MinHeight="110"
+                                    MinWidth="220"
+                                    x:Name="MediaElementGrid"
+                                    Background="Black">
+
+                                    <MediaElement
+                                        Source="{Binding Event.Video, Mode=OneWay, Converter={StaticResource NullToUnsetConverter}}"
+                                        x:Name="MediaPlayer"
+                                        VerticalAlignment="Stretch"
+                                        LoadedBehavior="Manual"
+                                        UnloadedBehavior="Stop"
+                                        Height="Auto"
+                                        Stretch="UniformToFill">
+                                    </MediaElement>
+                                    
+                                </Grid>
+                                <Grid
+                                    Margin="0 5 0 0"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch">
+                                    <local:Hyperlink
+                                        HorizontalAlignment="Left"
+                                        x:Name="StopPlayButton"
+                                        Content="Play/Stop">
+                                    </local:Hyperlink>
+                                    <local:Hyperlink
+                                        Visibility="{Binding TimelineTray.EditMode, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}"
+                                        HorizontalAlignment="Right"
+                                        x:Name="EditButton"
+                                        Content="Edit">
+                                    </local:Hyperlink>
+                                </Grid>
+                                <StackPanel
+                                    Margin="0 5 0 0"
+                                    Orientation="Vertical"
+                                    VerticalAlignment="Stretch"
+                                    HorizontalAlignment="Stretch">
+
+                                    <Image
+                                        x:Name="EventImage"
+                                        Source="{Binding Event.TeaserEventImage, Converter={StaticResource NullToUnsetConverter}, Mode=OneWay}"
+                                        Width="Auto"
+                                        Height="Auto"
+                                        Stretch="None"
+                                        Margin="0 1 0 0"
+                                        HorizontalAlignment="Left">
+                                        <local:TooltipServiceEx.ToolTipEx>
+                                            <local:ToolTipEx
+                                                HideToolTipTimeout="{StaticResource TooltipTimeout}" />
+                                        </local:TooltipServiceEx.ToolTipEx>
+                                        <ToolTipService.ToolTip>
+                                            <ToolTip
+                                                Template="{StaticResource EventTooltipStyle}" />
+                                        </ToolTipService.ToolTip>
+                                    </Image>
+
+                                    <TextBlock
+                                        Foreground="{StaticResource BandTeaserForeground}"
+                                        Margin="0 2 0 0"
+                                        Text="{Binding EventTime, Mode=OneWay}">
+                                    </TextBlock>
+
+                                    <TextBlock
+                                        x:Name="EventTitleTextBlock"
+                                        Margin="0,2,0,0"
+                                        Text="{Binding Event.Title, Mode=OneWay}"
+                                        TextWrapping="Wrap"
+                                        Foreground="{StaticResource BandEventTitleForeground}"
+                                        MaxHeight="24"
+                                        HorizontalAlignment="Left"
+                                        Width="Auto">
+                                        <local:TooltipServiceEx.ToolTipEx>
+                                            <local:ToolTipEx
+                                                HideToolTipTimeout="{StaticResource TooltipTimeout}" />
+                                        </local:TooltipServiceEx.ToolTipEx>
+                                        <ToolTipService.ToolTip>
+                                            <ToolTip
+                                                Template="{StaticResource EventTooltipStyle}" />
+                                        </ToolTipService.ToolTip>
+                                    </TextBlock>
+
+                                    <TextBlock
+                                        x:Name="EventTeaserBlock"
+                                        Margin="0,2,0,0"
+                                        Text="{Binding Teaser, Mode=OneWay}"
+                                        TextWrapping="Wrap"
+                                        Foreground="{StaticResource BandTeaserForeground}"
+                                        FontStyle="italic"
+                                        MaxHeight="48"
+                                        HorizontalAlignment="Left"
+                                        FontSize="9.25">
+                                    </TextBlock>
+
+                                    <local:Hyperlink
+                                        x:Name="EventLinkTextBlock"
+                                        Margin="0,2,0,0"
+                                        Content="{Binding LinkText, Mode=OneWay}"
+                                        HorizontalAlignment="Left"
+                                        FontStyle="italic"
+                                        FontSize="9.25">
+                                    </local:Hyperlink>
+
+
+                                </StackPanel>
+                            </StackPanel>
+
+                        </Border>
+
+                        <Border
+                            HorizontalAlignment="Stretch"
+                            Height="8"
+                            Background="{StaticResource EventToolsBackground}"
+                            Grid.Row="2">
+                            <Border
+                                Visibility="{Binding TimelineTray.EditMode, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}"
+                                x:Name="ResizeButton"
+                                Width="8"
+                                Height="8"
+                                Margin="0 0 0 0"
+                                HorizontalAlignment="Right"
+                                BorderThickness="1"
+                                BorderBrush="{StaticResource EventBorderLineBrush}"
+                                Background="{StaticResource EventBackground}">
+                                <Border
+                                    Width="4"
+                                    Height="4"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    BorderThickness="0 0 1 1"
+                                    BorderBrush="{StaticResource EventBorderLineBrush}"
+                                    Background="{StaticResource EventBackground}">
+                                </Border>
+                            </Border>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter
+            Property="DefaultItemTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Grid
+                        Background="Transparent"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch">
+
+                        <Rectangle
+                            Fill="{StaticResource ItemBackground}" />
+
+                        <Rectangle
+                            HorizontalAlignment="Left"
+                            Margin="0,0,3,0"
+                            Width="1"
+                            Fill="{StaticResource ItemLineBrush}" />
+                    </Grid>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter
+            Property="DefaultTextItemTemplate">
+            <Setter.Value>
+                <DataTemplate>
+
+                    <Border
+                        Canvas.ZIndex="20000"
+                        Height="18"
+                        Margin="0"
+                        BorderThickness="1 1 0 2"
+                        BorderBrush="{StaticResource ItemLineBrush}"
+                        Background="{StaticResource ItemBackground}">
+
+                        <TextBlock
+                            FontFamily="Arial"
+                            TextWrapping="Wrap"
+                            Margin="0"
+                            HorizontalAlignment="Stretch"
+                            TextAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource ItemForeground}">
+                            
+                            <TextBlock.Text>
+                                <Binding />
+                            </TextBlock.Text>
+
+                        </TextBlock>
+                    </Border>
+
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="me:TimelineBandEx">
+
+                    <Grid
+                        x:Name="MainGrid"
+                        HorizontalAlignment="Stretch"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        VerticalAlignment="Stretch">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="10" />
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="10" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid
+                            x:Name="NavigateLeft"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Grid.Column="0"
+                            Background="{StaticResource ItemBackground}">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="*" />
+                                <RowDefinition
+                                    Height="20" />
+                            </Grid.RowDefinitions>
+
+                            <Button
+                                x:Name="NavigateLeftButton"
+                                Height="20"
+                                HorizontalAlignment="Center"
+                                Margin="0"
+                                Grid.Row="1"
+                                Style="{StaticResource NavigateLeftButtonStyle}"
+                                VerticalAlignment="Center"
+                                Width="9"
+                                Content="Button"
+                                Grid.Column="1" />
+                        </Grid>
+
+                        <Grid
+                            x:Name="NavigateRight"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Grid.Column="2"
+                            Background="{StaticResource ItemBackground}">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="*" />
+                                <RowDefinition
+                                    Height="20" />
+                            </Grid.RowDefinitions>
+
+                            <Button
+                                x:Name="NavigateRightButton"
+                                Height="20"
+                                HorizontalAlignment="Center"
+                                Margin="0"
+                                Grid.Row="1"
+                                Style="{StaticResource NavigateRightButtonStype}"
+                                VerticalAlignment="Bottom"
+                                Width="9"
+                                Grid.Column="1"
+                                Content="Button" />
+                        </Grid>
+
+                        <Canvas
+                            x:Name="CanvasPart"
+                            Grid.Column="1"
+                            MinHeight="30"
+                            MinWidth="30"
+                            Background="{StaticResource ItemBackground}"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch">
+
+                            <Canvas.Clip>
+                                <RectangleGeometry
+                                    x:Name="ClipRect" />
+                            </Canvas.Clip>
+
+                            <Rectangle
+                                x:Name="VisibleDatesPart"
+                                Canvas.Left="0"
+                                Canvas.Top="0"
+                                Fill="{StaticResource BandVisibleWindowBackground}">
+
+                            </Rectangle>
+
+                        </Canvas>
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        TargetType="local:TimelineToolbox">
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="local:TimelineToolbox">
+                    <Border
+                        Background="{StaticResource ItemBackground}"
+                        BorderBrush="{StaticResource ItemLineBrush}"
+                        Height="20"
+                        BorderThickness="0 0 0 1">
+
+                        <Grid
+                            x:Name="MainGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel
+                                Orientation="Horizontal"
+                                Grid.Column="1">
+
+                                <Button
+                                    x:Name="zoomIn"
+                                    FontSize="12"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Arial DarkGray"
+                                    Margin="5 2 2 2"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Right"
+                                    Content=" + " />
+                                <Button
+                                    x:Name="zoomOut"
+                                    FontSize="12"
+                                    FontFamily="Arial DarkGray"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    Margin="5 2 2 2"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Right"
+                                    Content=" - " />
+                                <Button
+                                    x:Name="findFirst"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="15 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content="9" />
+                                <Button
+                                    x:Name="moveLeft"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="5 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content="3" />
+                                <Button
+                                    x:Name="moveRight"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="5 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content="4" />
+                                <Button
+                                    x:Name="findLast"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="5 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content=":" />
+                                <Button
+                                    x:Name="fullScreen"
+                                    FontSize="15"
+                                    Style="{StaticResource ToolboxButtonStyle}"
+                                    FontFamily="Webdings"
+                                    Margin="5 2 2 2"
+                                    HorizontalAlignment="Right"
+                                    Content="1" />
+                            </StackPanel>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

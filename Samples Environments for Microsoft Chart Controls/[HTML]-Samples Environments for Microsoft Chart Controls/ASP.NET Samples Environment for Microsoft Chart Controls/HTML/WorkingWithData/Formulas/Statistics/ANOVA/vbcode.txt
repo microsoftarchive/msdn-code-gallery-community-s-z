@@ -1,0 +1,10 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Perform ANOVA Test
+    Dim result As AnovaResult = chart1.DataManipulator.Statistics.Anova(0.6, "Group1,Group2,Group3")
+   
+End Sub 'Page_Load
+...

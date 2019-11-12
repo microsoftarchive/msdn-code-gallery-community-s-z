@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D0CB858-E8CB-469F-9BBC-EB6F6E1766C3}"
+	ProjectSection(SolutionItems) = preProject
+		CreateDatabaseOMS.sql = CreateDatabaseOMS.sql
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfEfSampleApp", "WpfEfSampleApp\WpfEfSampleApp.vbproj", "{A7A5B359-F570-40FA-809F-221085FC180B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfEfDAL", "WpfEfDAL\WpfEfDAL.vbproj", "{E260C748-868B-4782-A8E1-3037F2E5F458}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7A5B359-F570-40FA-809F-221085FC180B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A5B359-F570-40FA-809F-221085FC180B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A5B359-F570-40FA-809F-221085FC180B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A5B359-F570-40FA-809F-221085FC180B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E260C748-868B-4782-A8E1-3037F2E5F458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E260C748-868B-4782-A8E1-3037F2E5F458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E260C748-868B-4782-A8E1-3037F2E5F458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E260C748-868B-4782-A8E1-3037F2E5F458}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

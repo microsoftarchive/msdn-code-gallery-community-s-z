@@ -1,0 +1,64 @@
+using System.Data.OleDb;
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate chart series data
+    if(!this.IsPostBack)
+    {
+        PopulateData();
+    }
+}
+
+private void GroupingTypeList_SelectedIndexChanged(object sender, System.EventArgs e)
+{
+    PopulateData();
+}
+
+private void PopulateData()
+{
+    // Prepare database connection and query strings
+    string fileNameString = this.MapPath(".");
+    fileNameString += "..\\..\\..\\..\\data\\chartdata.mdb";
+    string myConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString;
+    string mySelectQuery="SELECT * FROM STOCKDATA WHERE SymbolName = 'ABC' ORDER BY Date";
+
+    // Open database connection
+    OleDbConnection myConnection = new OleDbConnection(myConnectionString);
+    OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+    myCommand.Connection.Open();
+
+    // Create a database reader	
+    OleDbDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+    // Data bind to the reader
+    Chart1.Series["StockPrice"].Points.DataBindXY(myReader, "Date", myReader, "High,Low,Open,Close");
+
+    // Group series data points by interval. Different formulas are used for each Y value:
+    //   Y1 (High) - maximum of all Y1 points values in the group
+    //   Y2 (Low) - minimum of all Y2 points values in the group
+    //   Y3 (Open) - Y3 value of the first point in the group
+    //   Y4 (Close) - Y4 value of the last point in the group
+
+    if(GroupingTypeList.SelectedItem.Text == "Week")
+    {
+        Chart1.DataManipulator.Group("Y1:MAX,Y2:MIN,Y3:FIRST,Y4:LAST", 
+            1, IntervalType.Weeks, "StockPrice", "GroupedStockPrice");
+    }
+    else if(GroupingTypeList.SelectedItem.Text == "Month")
+    {
+        Chart1.DataManipulator.Group("Y1:MAX,Y2:MIN,Y3:FIRST,Y4:LAST", 
+            1, IntervalType.Months, "StockPrice", "GroupedStockPrice");
+    }
+    else if(GroupingTypeList.SelectedItem.Text == "Quarter")
+    {
+        Chart1.DataManipulator.Group("Y1:MAX,Y2:MIN,Y3:FIRST,Y4:LAST", 
+            3, IntervalType.Months, "StockPrice", "GroupedStockPrice");
+    }
+
+    // Close the reader and the connection
+    myReader.Close();
+    myConnection.Close();   
+}
+...

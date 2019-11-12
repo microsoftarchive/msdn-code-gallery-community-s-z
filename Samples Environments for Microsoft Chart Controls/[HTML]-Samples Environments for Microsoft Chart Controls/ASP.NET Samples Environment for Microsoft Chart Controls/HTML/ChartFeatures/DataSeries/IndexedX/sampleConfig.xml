@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataSeries" Priority="400">
+  <Title>Indexed X Values</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Indexed X Values</ShortBlurb> 
+  <Content>IndexedX.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Series, Indexed X values</Keyword>
+    <Keyword>Indexed X values</Keyword>
+  </Keywords>  
+
+</SampleConfig>
+
+</SampleConfigs>

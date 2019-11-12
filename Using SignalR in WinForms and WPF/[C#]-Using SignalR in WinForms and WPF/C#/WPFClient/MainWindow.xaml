@@ -1,0 +1,23 @@
+﻿<Window x:Name="WPFClient" x:Class="WPFClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF SignalR Client" Height="552" Width="517" MinWidth="517" MinHeight="552" ResizeMode="CanMinimize" Closing="WPFClient_Closing">
+    <Grid>
+        <StackPanel x:Name="SignInPanel" Margin="10,0" MaxWidth="550">
+            <Label Content="Enter user name:"/>
+            <Grid>
+                <TextBox x:Name="UserNameTextBox" Height="20" Margin="0,0,80,0"/>
+                <Button x:Name="SignInButton" Content="Sign In" Width="75" Click="SignInButton_Click" HorizontalAlignment="Right"/>
+            </Grid>
+
+            <Label x:Name="StatusText" Visibility="Collapsed" HorizontalAlignment="Center" Margin="0,10"/>
+        </StackPanel>
+        <StackPanel x:Name="ChatPanel" Margin="10" MaxWidth="550" Visibility="Collapsed">
+            <Grid>
+                <TextBox x:Name="TextBoxMessage" Height="20" TextWrapping="Wrap" Margin="0,0,80,0"/>
+                <Button x:Name="ButtonSend" Content="Send" Width="75" Height="20" Click="ButtonSend_Click" IsDefault="True" IsEnabled="False" HorizontalAlignment="Right"/>
+            </Grid>
+            <RichTextBox x:Name="RichTextBoxConsole" HorizontalAlignment="Left" Height="461" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,10" IsReadOnly="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

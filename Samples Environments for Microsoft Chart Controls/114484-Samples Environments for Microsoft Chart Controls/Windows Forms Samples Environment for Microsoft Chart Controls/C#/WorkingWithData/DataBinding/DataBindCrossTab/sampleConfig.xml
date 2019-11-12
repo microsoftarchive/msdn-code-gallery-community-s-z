@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Data binding" Priority = "700">
+  <Title>Cross-Table Data Binding</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Cross-Table Data Binding</ShortBlurb> 
+  <SampleControl>DataBindCrosstab</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Data, Cross table</Keyword>
+    <Keyword>Binding, cross table</Keyword>
+  </Keywords>    
+
+</SampleConfig>
+
+</SampleConfigs>

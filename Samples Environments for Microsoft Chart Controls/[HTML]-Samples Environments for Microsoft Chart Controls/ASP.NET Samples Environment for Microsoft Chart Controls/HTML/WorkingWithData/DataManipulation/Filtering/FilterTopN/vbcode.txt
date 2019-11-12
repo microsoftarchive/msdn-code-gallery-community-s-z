@@ -1,0 +1,22 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+   Dim yValues As Double() =  {945.62, 545.54, 760.45, 834.73, 1385.42, 932.12, 855.18, 1207.15, 1299.24, 1023.65, 956.56, 1455.85}
+   Dim xValues As Double() =  {1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001}
+   Chart1.Series("Sales").Points.DataBindXY(xValues, yValues)
+   
+   ' Show data points using point's index
+   If ShowAsIndexedList.SelectedItem.Text = "True" Then
+      Chart1.Series("TopSales").IsXValueIndexed = True
+   ' Filter only marks points as empty
+   Else
+      Chart1.DataManipulator.FilterSetEmptyPoints = True
+   End If
+   
+   ' Filter Top 5 points
+   Chart1.DataManipulator.FilterTopN(5, "Sales", "TopSales", "Y", True)
+   
+End Sub 'Page_Load
+...

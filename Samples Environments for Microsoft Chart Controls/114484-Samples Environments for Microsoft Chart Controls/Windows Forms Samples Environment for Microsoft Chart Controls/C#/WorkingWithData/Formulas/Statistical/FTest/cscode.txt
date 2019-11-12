@@ -1,0 +1,7 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+// Make FTest
+FTestResult result = chart1.DataManipulator.Statistics.FTest( 0.95, "FirstGroup", "SecondGroup" ); 
+
+...

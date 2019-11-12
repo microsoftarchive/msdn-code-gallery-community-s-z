@@ -1,0 +1,63 @@
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Windows.Forms.DataVisualization.Charting.Utilities;
+...
+
+	private System.Windows.Forms.DataVisualization.Charting.Utilities.FIRFilters.FIRFilters firFilter = new System.Windows.Forms.DataVisualization.Charting.Utilities.FIRFilters();
+
+...
+
+	private void FilterCalculation()
+	{
+		//Check what kind of algorithm the user wanted to use
+		switch (ComboBoxAlgorithm.Text)
+		{
+			case "Kaiser":
+				firFilter.CurrentAlgorithm = FFT.Algorithm.Kaiser;
+
+				//For kaiser window function we need to set the attentuation
+				firFilter.StopBandAttenuation = 60;
+
+				//Kaiser also requires transition band
+				firFilter.TransitionBand = 500;
+				break;
+			case "Blackman":
+				firFilter.CurrentAlgorithm = FFT.Algorithm.Blackman;
+				break;
+
+			case "Hann":
+				firFilter.CurrentAlgorithm = FFT.Algorithm.Hann;
+				break;
+
+			case "Hamming":
+				firFilter.CurrentAlgorithm = FFT.Algorithm.Hamming;
+				break;
+
+			case "Rectangular":
+				firFilter.CurrentAlgorithm = FFT.Algorithm.Rectangular;
+				break;
+
+			default:
+				//nothing
+				break;
+		}
+		
+		//Check what kind of filter the user wanted and filter accordingly
+        switch (ComboBoxFilter.Text)
+        {
+            case "High Pass Filter":
+                firFilter.HighPassFilter(chart1.Series["Input"], chart1.Series["Filter"]);
+                break;
+
+            case "Low Pass Filter":
+                firFilter.LowPassFilter(chart1.Series["Input"], chart1.Series["Filter"]);
+                break;
+
+            case "Band Pass Filter":
+                firFilter.BandPassFilter(chart1.Series["Input"], chart1.Series["Filter"]);
+                break;
+
+            default:
+                //nothing
+                break;
+        }
+...

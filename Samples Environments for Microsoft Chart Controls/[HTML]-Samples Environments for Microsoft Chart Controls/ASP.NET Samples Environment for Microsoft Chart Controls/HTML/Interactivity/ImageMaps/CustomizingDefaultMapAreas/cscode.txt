@@ -1,0 +1,23 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set series points tooltips
+    Chart1.Series["Series1"].ToolTip = "#VALY";
+}
+...
+
+private void Chart1_CustomizeMapAreas(System.Web.UI.DataVisualization.Charting.Chart sender, 
+            System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs e)
+{
+    // Remove all tooltips of the data points with negative Y values
+    foreach(MapArea item in e.MapAreaItems)
+    {
+        if(item.ToolTip.StartsWith("-"))
+        {
+            item.ToolTip = "(" + item.ToolTip.Substring(1) + ")";
+        }
+    }
+}
+...

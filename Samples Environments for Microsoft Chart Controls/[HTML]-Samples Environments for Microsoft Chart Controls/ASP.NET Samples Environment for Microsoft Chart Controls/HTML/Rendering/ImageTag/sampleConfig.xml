@@ -1,0 +1,21 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+	<SampleConfig ParentNodeID = "Rendering" Priority="20">
+	<Title>Image URL Rendering</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Image URL Rendering</ShortBlurb> 
+	<Content>ImageURLChart.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="HTML">HTMLcode.txt</InfoPage>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+        <Keywords>
+		<Keyword>Image URL</Keyword>
+  	</Keywords>
+ 
+	</SampleConfig>
+	
+</SampleConfigs>

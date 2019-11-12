@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8AE0EB86-A553-4425-8393-AACD0A66B8F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{04D3BDBB-CBB7-45B2-9FA0-9C8F79CBE111}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SMSApp", "src\SMSApp\SMSApp.xproj", "{6EB3C271-0502-4B92-B8D7-0DA924A2FBDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EB3C271-0502-4B92-B8D7-0DA924A2FBDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB3C271-0502-4B92-B8D7-0DA924A2FBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB3C271-0502-4B92-B8D7-0DA924A2FBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB3C271-0502-4B92-B8D7-0DA924A2FBDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6EB3C271-0502-4B92-B8D7-0DA924A2FBDD} = {8AE0EB86-A553-4425-8393-AACD0A66B8F1}
+	EndGlobalSection
+EndGlobal

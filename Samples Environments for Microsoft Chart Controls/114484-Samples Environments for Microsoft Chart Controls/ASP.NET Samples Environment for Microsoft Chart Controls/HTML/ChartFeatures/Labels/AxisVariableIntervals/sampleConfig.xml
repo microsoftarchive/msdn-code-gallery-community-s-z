@@ -1,0 +1,38 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+  <SampleConfig ParentNodeID = "Labels" Priority="700">
+    <Title>Variable Label Intervals</Title>
+    <Thumbnail>AxisVariableIntervals\thumbnail.jpg</Thumbnail>
+    <ShortBlurb>Variable Label Intervals</ShortBlurb>
+    <Content>AxisVariableIntervals.aspx</Content>
+
+    <InfoPages>
+      <InfoPage Title="C# Source">cscode.txt</InfoPage>
+      <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+    </InfoPages>
+
+    <Keywords>
+      <Keyword>Labels, Variable</Keyword>
+      <Keyword>Axis, Dynamic Interval</Keyword>
+    </Keywords>
+  </SampleConfig>
+
+  <SampleConfig ParentNodeID = "Axis" Priority="700">
+    <Title>Variable Label Intervals</Title>
+    <Thumbnail>thumbnail.jpg</Thumbnail>
+    <ShortBlurb>Variable Label Intervals</ShortBlurb>
+    <Content>AxisVariableIntervals.aspx</Content>
+
+    <InfoPages>
+      <InfoPage Title="C# Source">cscode.txt</InfoPage>
+      <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+    </InfoPages>
+
+    <Keywords>
+      <Keyword>Labels, Variable</Keyword>
+      <Keyword>Axis, Dynamic Interval</Keyword>
+    </Keywords>
+  </SampleConfig>
+
+</SampleConfigs>

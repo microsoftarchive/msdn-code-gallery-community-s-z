@@ -1,0 +1,23 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Protected Sub Form_Init(ByVal sender As Object, ByVal e As System.EventArgs)
+    ' Enabling or disabling the viewstate must be done very early in the loading of 
+    ' a web page which is why it is done in the Page.Init event. The preferred
+    ' way to initialize the viewstate is done in the property browser so the 
+    ' property value is persisted in the ASPX page.
+    Chart1.EnableViewState = True
+End Sub
+
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs)
+    ' determine what content should be serialized in the browser.
+    Chart1.ViewStateContent = SerializationContents.Default
+    
+    ' Load chart data from scratch if none is loaded from the view state
+    If Chart1.Series("Input").Points.Count = 0 Then
+        Chart1.Series("Input").ChartType = SeriesChartType.Line
+        Data(Chart1.Series("Input"))
+    End If
+End Sub
+
+...

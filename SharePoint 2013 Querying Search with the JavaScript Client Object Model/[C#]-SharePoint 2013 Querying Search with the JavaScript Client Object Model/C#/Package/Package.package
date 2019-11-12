@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="91dcf0e4-b467-4468-bc52-212c9fc18794" 
+        solutionId="91dcf0e4-b467-4468-bc52-212c9fc18794" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SearchCSOMApp"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="2f967351-d7c4-40f4-8018-dd9ac6520f53" />
+  </features>
+</package>

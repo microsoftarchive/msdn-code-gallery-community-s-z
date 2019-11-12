@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataBinding" Priority= "200">
+  <Title>Data Binding a Table</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Binding a Table</ShortBlurb>
+  <Content>DataBindTable.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Binding from a Table</Keyword>
+    <Keyword>Binding, From a Table</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

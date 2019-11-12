@@ -1,0 +1,75 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Titles" Priority="100">
+	<Title>Chart Titles</Title> 
+	<Thumbnail>ChartTitle\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Chart Titles</ShortBlurb> 
+	<Content>ChartTitle\ChartTitle.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">ChartTitle\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">ChartTitle\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	<Keyword>Title, Chart</Keyword>
+	<Keyword>Appearance, Chart title</Keyword>
+  	</Keywords>
+	</SampleConfig>
+	
+	<SampleConfig ParentNodeID = "Titles">
+	<Title>Multiple Titles</Title> 
+	<Thumbnail>Multiple Titles\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Multiple Chart Titles</ShortBlurb> 
+	<Content>Multiple Titles\MultipleTitles.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">Multiple Titles\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">Multiple Titles\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	<Keyword>Title, Multiple titles</Keyword>
+	<Keyword>Multiple titles</Keyword>
+	</Keywords>
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Titles">
+	<Title>Axis Titles</Title> 
+	<Thumbnail>..\Axis\Axis Title\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Axis Title</ShortBlurb> 
+	<Content>..\Axis\Axis Title\AxisTitle.aspx</Content> 
+	
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">..\Axis\Axis Title\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">..\Axis\Axis Title\vbcode.txt</InfoPage>
+	</InfoPages>
+
+<Keywords>
+	<Keyword>Title, Axis</Keyword>
+	<Keyword>Axis, Title</Keyword>
+  </Keywords> 
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Titles" Priority="5000000">
+	<Title>Custom Chart Title Positioning</Title> 
+	<Thumbnail>TitleCustomPosition\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Custom Chart Title Positioning</ShortBlurb> 
+	<Content>TitleCustomPosition\TitleCustomPosition.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">TitleCustomPosition\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">TitleCustomPosition\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">TitleCustomPosition\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Title, Position</Keyword>
+		<Keyword>Position, Title</Keyword>
+  	</Keywords> 
+	</SampleConfig>
+	
+</SampleConfigs>

@@ -1,0 +1,63 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+ 
+// Populate chart with random sales data
+Random		random = new Random();
+DateTime	xTime = new DateTime(2000, 8, 1, 0, 0, 0);
+for(int pointIndex = 0; pointIndex < int.Parse(DayNumberLst.SelectedItem.Value); pointIndex++)
+{
+    // Simulate lower sales on the weekends	
+    double	yValue = random.Next(600, 950);
+    if(xTime.DayOfWeek == DayOfWeek.Sunday || xTime.DayOfWeek == DayOfWeek.Saturday)
+    {
+        yValue = random.Next(100, 400);
+    }
+    chart1.Series["Series Input"].Points.AddXY(xTime, yValue);
+    xTime = xTime.AddDays(1);
+}
+
+// Show data points using point's index
+if(ShowAsIndexedList.SelectedItem.Text == "True")
+{
+    chart1.Series["Series Output"].XValueIndexed = true;
+    chart1.ChartAreas["FilteredData"].AxisX.Minimum = double.NaN;
+    chart1.ChartAreas["FilteredData"].AxisX.Maximum = double.NaN;
+}
+else
+{
+    chart1.DataManipulator.FilterSetEmptyPoints = true;
+}
+
+// Filter series data 
+if(FilterValuesList.SelectedItem.Value == "Weekends")
+{
+    chart1.DataManipulator.Filter(DateRangeType.DayOfWeek, "0,6", 
+        "Series Input", "Series Output");
+}
+else if(FilterValuesList.SelectedItem.Value == "Weekdays")
+{
+    chart1.DataManipulator.Filter(DateRangeType.DayOfWeek, "1-5", 
+        "Series Input", "Series Output");
+}
+else if(FilterValuesList.SelectedItem.Value == "Except 15")
+{
+    chart1.DataManipulator.Filter(DateRangeType.DayOfMonth, "1-14,16-31", 
+        "Series Input", "Series Output");
+}
+else if(FilterValuesList.SelectedItem.Value == "Except 1-15")
+{
+    chart1.DataManipulator.Filter(DateRangeType.DayOfMonth, "16-31", 
+        "Series Input", "Series Output");
+}
+
+// Create strip lines on the weekends
+StripLine stripLine = new StripLine();
+stripLine.BackColor = Color.FromArgb(120, Color.Gray);
+stripLine.IntervalOffset = -1.5;
+stripLine.IntervalOffsetType = DateTimeIntervalType.Days; 
+stripLine.Interval = 1;
+stripLine.IntervalType = DateTimeIntervalType.Weeks; 
+stripLine.StripWidth = 2;
+stripLine.StripWidthType =  DateTimeIntervalType.Days; 
+chart1.ChartAreas["Default"].AxisX.StripLines.Add(stripLine);
+...

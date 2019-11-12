@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<LINK href="../../../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<p>Financial formulas help you analyze data,&nbsp;identify the nature of a 
+			sequence of observations, and predict future values using historical 
+			observations.</p>
+		<p>The Chart control provides over&nbsp;thirty technical analysis formulas, such 
+					as&nbsp;moving averages, price indicators, volume indicators, 
+					oscillators, and forecasting 
+					formulas. The figure below shows three series: the input series, the an 
+            output series after applying a moving average formula, and an output series 
+            after applying a range indicator formula.</p>
+		<p><IMG alt="Filtering Data" src="RangeIndicator.png" border="0"><BR>
+			</p>
+		<H3>How to Apply a Financial Formula</H3>
+		<p>To apply a financial formula perform the following:</p>
+		<OL>
+			<LI>
+			    Group and filter the data, if applicable.
+			<LI>
+				<b>(For averaging formulas only)</b> Set the DataManipulator object's 
+					IsStartedFromFirst
+			property to the desired value, if applicable.
+			<LI>
+				Use the DataManipulator.FinancialFormula method to apply the formula.<BR>
+				&nbsp;&nbsp;
+				<BR>
+				Note: all formulas have specific requirements, including input, output, and additional 
+                parameters. Each formula is implemented differently with different default 
+                values.</LI></OL>
+		</body>
+</html>

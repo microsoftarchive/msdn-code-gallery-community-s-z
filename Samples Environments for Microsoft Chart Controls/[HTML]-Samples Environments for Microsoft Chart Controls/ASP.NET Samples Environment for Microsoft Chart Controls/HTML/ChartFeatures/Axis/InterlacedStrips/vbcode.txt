@@ -1,0 +1,12 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+    ' Enable interlaced strip lines
+    Chart1.ChartAreas("ChartArea1").AxisY.IsInterlaced = true
+       
+    ' Set Strips Color
+    Chart1.ChartAreas("ChartArea1").AxisY.InterlacedColor = Color.FromArgb(120, Color.Red)
+   
+End Sub 'Page_Load 

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCEC9BB6-58EC-4157-A3DD-E67A6BC36620}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomApprovalWorkflows</RootNamespace>
+    <AssemblyName>CustomApprovalWorkflows4Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.DesignTime.Activities, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.sharepoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.SharePoint.WorkflowActions\v4.0_15.0.0.0__71e9bce111e9429c\microsoft.sharepoint.WorkflowActions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.SharePoint.WorkflowServices\v4.0_15.0.0.0__71e9bce111e9429c\Microsoft.SharePoint.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowServicesBase, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.SharePoint.WorkflowServicesBase\v4.0_15.0.0.0__71e9bce111e9429c\Microsoft.SharePoint.WorkflowServicesBase.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventReceivers\ApprovalWorkflowItemsEventReceivers\ApprovalWorkflowItemsEventReceivers.cs" />
+    <Compile Include="Features\PublishingApprovalWorkflows\PublishingApprovalWorkflows.EventReceiver.cs">
+      <DependentUpon>PublishingApprovalWorkflows.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\WorkflowInfraSite\WorkflowInfraSite.EventReceiver.cs">
+      <DependentUpon>WorkflowInfraSite.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\GlobalSettingsHelper.cs" />
+    <Compile Include="Helpers\CommonHelper.cs" />
+    <Compile Include="Helpers\ResourcesHelper.cs" />
+    <Compile Include="Helpers\WorkflowHelper2013.cs" />
+    <Compile Include="ListConstants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\CustomApprovalWorkflows.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomApprovalWorkflows.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WCF\ConfigRequest.cs" />
+    <Compile Include="WCF\ConfigResponse.cs" />
+    <Compile Include="WCF\EnsureUserRequest.cs" />
+    <Compile Include="WCF\IWorkflowService.cs" />
+    <Compile Include="WCF\User.cs" />
+    <Compile Include="WCF\WorkflowItemInfo.cs" />
+    <Compile Include="WCF\WorkflowService.cs" />
+    <Compile Include="WCF\WorkflowServiceRequest.cs" />
+    <Compile Include="WCF\WorkflowServiceResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ConfigurationGlobalSettingsList\ConfigurationGlobalSettingsListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{75a6f3b1-17da-4960-b6e2-25c180c2e321}</SharePointProjectItemId>
+    </None>
+    <None Include="ConfigurationGlobalSettingsList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f9d55f78-166b-48a8-9493-f11e63994b8b}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceivers\ApprovalWorkflowItemsEventReceivers\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e77e0d19-c22b-473a-9250-0934c0b7018b}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\PublishingApprovalWorkflows\PublishingApprovalWorkflows.feature">
+      <FeatureId>{c2f21989-b8ae-43a1-adbc-5386798b2346}</FeatureId>
+    </None>
+    <None Include="Features\WorkflowInfraSite\WorkflowInfraSite.feature">
+      <FeatureId>{b8f73c59-5ea9-4461-af2d-1e6effc1ce21}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{831524f0-253a-4104-955a-fc0e3428324d}</SharePointProjectItemId>
+    </None>
+    <None Include="ISAPI\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0c187706-3d1b-41a6-82c3-956006c97926}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\WorkflowInfraWeb\WorkflowInfraWeb.feature">
+      <FeatureId>{3a6bb9bf-2bbf-4fba-80fb-2fb97bf3c6b7}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5c60ee59-4f4c-4d01-bbef-495e8c5e72fa}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{e3375dce-043e-415d-84c5-88a4166f90b8}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Workflows\Approval\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7b088f7c-2718-4a00-bcec-03aff0d97117}</SharePointProjectItemId>
+    </None>
+    <None Include="Resources\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b69b1059-6233-4899-ad1f-c48534b6d7cc}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfigurationGlobalSettingsList\ConfigurationGlobalSettingsListInstance\Elements.xml" />
+    <Content Include="ConfigurationGlobalSettingsList\Elements.xml" />
+    <Content Include="ConfigurationGlobalSettingsList\Schema.xml" />
+    <Content Include="Features\PublishingApprovalWorkflows\PublishingApprovalWorkflows.Template.xml">
+      <DependentUpon>PublishingApprovalWorkflows.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\WorkflowInfraSite\WorkflowInfraSite.Template.xml">
+      <DependentUpon>WorkflowInfraSite.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\CustomApprovalWorkflows\T-logo.jpg" />
+    <Content Include="ISAPI\WorkflowServices\WorkflowServices.svc" />
+    <Content Include="Features\WorkflowInfraWeb\WorkflowInfraWeb.Template.xml">
+      <DependentUpon>WorkflowInfraWeb.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\CustomApprovalWorkflows\Scripts\jquery-1.8.2.js" />
+    <Content Include="Layouts\CustomApprovalWorkflows\Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Layouts\CustomApprovalWorkflows\Scripts\jquery-1.8.2.txt" />
+    <Content Include="Readme.txt" />
+    <Content Include="Workflows\Approval\AssociationForm.aspx" />
+    <Content Include="Workflows\Approval\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="Workflows\Approval\Workflow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\CustomApprovalWorkflows.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomApprovalWorkflows.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Getting Started" Priority = "400">
+  <Title>Coordinate System</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Coordinate System</ShortBlurb> 
+  <Content>Overview.htm</Content> 
+    <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+  </InfoPages>  
+</SampleConfig>
+
+</SampleConfigs>

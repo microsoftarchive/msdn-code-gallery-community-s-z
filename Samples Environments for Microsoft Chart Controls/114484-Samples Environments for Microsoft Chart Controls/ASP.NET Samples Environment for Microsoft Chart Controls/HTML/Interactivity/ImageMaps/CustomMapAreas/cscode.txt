@@ -1,0 +1,59 @@
+using System.Drawing.Text;
+using System.Drawing.Imaging;
+using System.Web.UI.DataVisualization.Charting;
+...
+
+//IMPORTANT: For this event to work the event handler must be added to the InitializeComponent()
+//  method. We recommend that you add the event using the Properties window in the IDE  
+private void Chart1_PostPaint(object sender, ChartPaintEventArgs e)
+{
+	// Painting series object
+	if(e.ChartElement is Series)
+	{
+		// Add custom painting only to the series with name "Series2"
+        Series series = (Series)e.ChartElement;
+		if(series.Name == "Series2" && series.Tag == null)
+		{
+			// Find data point with maximum Y value
+			DataPoint	dataPoint = series.Points.FindMaxByValue();
+			
+			// Load bitmap from file 
+			System.Drawing.Image bitmap = Bitmap.FromFile(this.Page.MapPath("logo.png"));
+
+			// Set White color as transparent
+			ImageAttributes attrib = new ImageAttributes();
+            attrib.SetColorKey(Color.White, Color.White, ColorAdjustType.Default);
+
+			// Calculates marker position depending on the data point X and Y values
+			RectangleF	imagePosition = RectangleF.Empty;
+			imagePosition.X = (float)e.ChartGraphics.GetPositionFromAxis(
+                "Chart Area 1", AxisName.X, dataPoint.XValue);
+			imagePosition.Y = (float)e.ChartGraphics.GetPositionFromAxis(
+                "Chart Area 1", AxisName.Y, dataPoint.YValues[0]);
+			imagePosition = e.ChartGraphics.GetAbsoluteRectangle(imagePosition);
+			imagePosition.Width = bitmap.Width;
+			imagePosition.Height = bitmap.Height;
+			imagePosition.Y -= bitmap.Height;
+			imagePosition.X -= bitmap.Width /2;
+
+			// Draw image
+			e.ChartGraphics.Graphics.DrawImage(bitmap, 
+				Rectangle.Round(imagePosition),
+				0, 0, bitmap.Width, bitmap.Height,
+				GraphicsUnit.Pixel, 
+				attrib);
+
+			// Add a custom map area in the coordinates of the image
+			RectangleF	rect = e.ChartGraphics.GetRelativeRectangle(imagePosition);
+            
+            MapArea area = new MapArea("Maximum Y value marker. Y = " + dataPoint.YValues[0], "http://www.microsoft.com", "target=\"_blank\"", String.Empty, rect, null);
+            Chart1.MapAreas.Add(area);
+			// Dispose image object
+			bitmap.Dispose();
+
+            series.Tag = true;
+		}
+	}
+}
+
+...

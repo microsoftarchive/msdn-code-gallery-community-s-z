@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Using With Legacy</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio 7.0" />
+		<meta name="CODE_LANGUAGE" content="C#" />
+		<meta name="vs_defaultClientScript" content="JavaScript" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+	</head>
+	<body>
+		<form id="Form1" method="post">
+			<p>
+				This sample demonstrates how to use the chart within an IFrame of an existing 
+				Legacy web page.
+			</p>
+			<p><IFRAME style="WIDTH: 360px; HEIGHT: 260px" marginWidth="0" marginHeight="0" src="UsingWithIFrame.aspx" frameBorder="NO" width="600" scrolling="no" height="500"></IFRAME>
+			</p>
+			<p>&nbsp;</p>
+		</form>
+	</body>
+</html>

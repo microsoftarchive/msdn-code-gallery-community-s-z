@@ -1,0 +1,65 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="LoginApp.Views.UserDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0" Background="White">
+            <TextBlock Text="User details:" Margin="0,10,0,20" HorizontalAlignment="Center" FontSize="30" Foreground="Black" />
+            <Image Stretch="None" HorizontalAlignment="Right" Source="/Images/SignOut.jpg" Width="51" Tap="ImgSignOut_Tap"/>
+            <Image Visibility="Collapsed" Width="43" Stretch="Fill" HorizontalAlignment="Left" Source="/Images/Profile.png" Tap="ImgUserProfile_Tap" Margin="0,0,0,11"/>
+        </Grid>
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel  Name="StckUserDetailsUI"  Grid.Row="0" Margin="12,17,0,28">
+                <!--<TextBlock Text="Your Account Details :" Foreground="Black" FontSize="30" TextDecorations="Underline"/>-->
+                <TextBlock Name="TxtUserName" Text="{Binding UserName}" Foreground="Black"/>
+                <TextBlock Name="TxtAddress" Text="{Binding Address}" Foreground="Black"/>
+                <TextBlock Name="TxtGender" Text="{Binding Gender}" Foreground="Black"/>
+                <TextBlock Name="TxtPhoneNo" Text="{Binding PhoneNo}" Foreground="Black"/>
+                <TextBlock Name="TxtEmaiID" Text="{Binding Email}" Foreground="Black"/>
+                <!--<Button Content="SignOut" Click="LogOut_Click"/>-->
+            </StackPanel>
+
+            <ListBox BorderThickness="1" Visibility="Collapsed" Grid.Row="1" BorderBrush="#FFEA96DA" Name="ListBoxDetails" SelectionChanged="ListBoxDetails_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Background="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="{Binding Name}" Foreground="#FF20D2DA" TextTrimming="WordEllipsis"/>
+                            <TextBlock Grid.Row="1" Text="{Binding Desc}" Foreground="Gray" Height="60" TextTrimming="WordEllipsis" TextWrapping="Wrap"/>
+                            <Rectangle Width="500" Grid.Row="3" Fill="Black" Height="0.5"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

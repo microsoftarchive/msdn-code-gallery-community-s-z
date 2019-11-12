@@ -1,0 +1,38 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+	<SampleConfig ParentNodeID = "Customizations">
+	<Title>Customizing Default Legend Items</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Customizing Default Legend Items</ShortBlurb> 
+	<Content>LegendCustomizeDefault.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	    <Keyword>Legend, Customizing</Keyword>
+	</Keywords>
+
+	</SampleConfig>
+
+
+	
+	<SampleConfig ParentNodeID = "Legend" Priority = "650">
+	<Title>Customizing Default Legend Items</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Customizing Default Legend Items</ShortBlurb> 
+	<Content>LegendCustomizeDefault.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+    <Keyword>Legend, Customize Existing Items</Keyword>
+  </Keywords>  
+	</SampleConfig>
+
+</SampleConfigs>

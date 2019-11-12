@@ -1,0 +1,16 @@
+Imports System.Windows.Forms.DataVisualization.Charting
+...
+
+' Set Minimum value for X axis
+Chart1.ChartAreas("Default").AxisX.Minimum = New DateTime(1998, 3, 5).ToOADate()
+
+' Set Maximum value for X axis
+Chart1.ChartAreas("Default").AxisX.Maximum = New DateTime(2001, 1, 1).ToOADate()
+
+' Convert Double to DateTime.
+Dim dateTime As DateTime = DateTime.FromOADate(35977)
+
+' Convert DateTime to string.
+Label1.Text = dateTime.ToLongDateString()
+
+...

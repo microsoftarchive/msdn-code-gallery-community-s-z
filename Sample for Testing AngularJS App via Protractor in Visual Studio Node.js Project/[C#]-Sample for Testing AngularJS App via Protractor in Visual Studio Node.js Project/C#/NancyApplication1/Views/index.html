@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8" />
+    <title>NancyApplication1</title>
+    <link href="/content/styles/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin-top: 25px;
+        }
+
+        .done-true {
+            text-decoration: line-through;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <div class="well">
+                    <div class="form-inline">
+                        <label>Name:</label>
+                        <input class="form-control" type="text" ng-model="yourName" placeholder="Enter a name here">
+                    </div>
+                    <hr>
+                    <h1>Hello {{yourName}}!</h1>
+                </div>
+
+                <div class="well">
+                    <h2>Todo</h2>
+                    <div ng-controller="TodoCtrl">
+                        <span>{{remaining()}} of {{todos.length}} remaining</span>
+                        [ <a href="" ng-click="archive()">archive</a> ]
+                        <ul class="unstyled">
+                            <li ng-repeat="todo in todos">
+                                <input type="checkbox" ng-model="todo.done">
+                                <span class="done-{{todo.done}}">{{todo.text}}</span>
+                            </li>
+                        </ul>
+                        <form ng-submit="addTodo()" class="form-inline">
+                            <input class="form-control" type="text" ng-model="todoText" placeholder="add new todo here">
+                            <input class="btn btn-primary" type="submit" value="add">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/content/scripts/angular.min.js" type="text/javascript"></script>
+    <script src="/content/scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+        function TodoCtrl($scope) {
+            $scope.todos = [
+              { text: 'learn angular', done: true },
+              { text: 'build an angular app', done: false }];
+
+            $scope.addTodo = function () {
+                $scope.todos.push({ text: $scope.todoText, done: false });
+                $scope.todoText = '';
+            };
+
+            $scope.remaining = function () {
+                var count = 0;
+                angular.forEach($scope.todos, function (todo) {
+                    count += todo.done ? 0 : 1;
+                });
+                return count;
+            };
+
+            $scope.archive = function () {
+                var oldTodos = $scope.todos;
+                $scope.todos = [];
+                angular.forEach(oldTodos, function (todo) {
+                    if (!todo.done) $scope.todos.push(todo);
+                });
+            };
+        }
+    </script>
+</body>
+</html>

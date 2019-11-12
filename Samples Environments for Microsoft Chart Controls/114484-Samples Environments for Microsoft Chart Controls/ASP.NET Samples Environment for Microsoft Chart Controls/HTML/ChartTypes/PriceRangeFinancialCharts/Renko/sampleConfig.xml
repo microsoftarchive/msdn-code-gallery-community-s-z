@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "JapanCharts">
+  <Title>Renko Chart</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Renko Chart</ShortBlurb> 
+  <Content>RenkoChart.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+      <Keyword>Chart type, Renko</Keyword>
+      <Keyword>Renko chart</Keyword>
+      <Keyword>Box size</Keyword>
+    </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

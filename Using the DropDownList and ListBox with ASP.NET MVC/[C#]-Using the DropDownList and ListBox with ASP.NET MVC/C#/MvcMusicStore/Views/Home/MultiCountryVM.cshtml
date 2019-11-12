@@ -1,0 +1,34 @@
+﻿@model MvcMusicStore.ViewModels.CountryViewModel
+
+@{
+    ViewBag.Title = "MultiCountryVM";
+    Layout = "~/Views/Shared/_Simple_Layout.cshtml";
+}
+
+<h2>MultiSelect ViewModel Country</h2>
+
+
+@if (ViewBag.YouSelected != null) {
+    <div> You Selected:  @ViewBag.YouSelected</div>
+}
+
+@using (Html.BeginForm()) {
+
+    <fieldset>
+        <legend>harvesthq/Chosen Demo</legend>
+
+        <div class="editor-field">
+            @Html.ListBoxFor(x => Model.Countries, Model.CountryList, 
+                new { @class = "chzn-select", data_placeholder = "Choose  Countries...", style="width:350px;" })
+        </div>
+        <p>
+            <input type="submit" value="Post" />
+        </p>
+    </fieldset>
+}
+ <a href="http://harvesthq.github.com/chosen/" >Harvest Chosen</a>
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.js")"></script>
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet"  type="text/css" />
+<script src="@Url.Content("~/chosen/chosen.jquery.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/chosen/chosen.css")" rel="stylesheet"  type="text/css" />
+<script >    $(".chzn-select").chosen(); </script>

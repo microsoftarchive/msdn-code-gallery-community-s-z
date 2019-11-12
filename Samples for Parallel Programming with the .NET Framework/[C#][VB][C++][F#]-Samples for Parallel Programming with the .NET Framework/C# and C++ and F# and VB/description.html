@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,1:ImageSprite;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Content/Css:1&amp;amp;hashKey=E7560C71640616C5057FAEACB58DCB00" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/2f95808e-ca34-4249-88ff-44fabe33cdc0Combined.css,1:LinkList,2:ImageSprite,2:SiteFeedbackLink;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Epx/Content/Css:2&amp;amp;hashKey=EEE39C2D6B93379FDAF50337BE99AF8C" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Samples for Parallel Programming with the .NET Framework</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Samples for Parallel Programming with the .NET Framework</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            PLINQ, .NET Framework, Parallel Programming, Parallel Computing Platform, Parallel Extensions, Task Parallel Library
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Parallel Programming
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary Language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">9/27/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>The .NET Framework 4 includes significant advancements for developers writing parallel and concurrent applications, including Parallel LINQ (PLINQ), the Task Parallel Library (TPL), new thread-safe collections, and a variety of new coordination and synchronization
+ data structures.</p>
+<p>This sample includes example applications and library functionality that demonstrate, utilize, and augment this support (it is not production quality). This sample is a single .zip containing a single Visual Studio .sln file, which then contains multiple
+ Visual Studio projects that highlight key capabilities provided by the .NET Framework 4 and the parallel programming support it provides. Below are descriptions of the included examples.</p>
+<p>(For discussions of Parallel Extensions and/or these samples, visit the forums at
+<a href="http://social.msdn.microsoft.com/Forums/en-US/parallelextensions/threads">
+http://social.msdn.microsoft.com/Forums/en-US/parallelextensions/threads</a>. For documentation on the parallelism constructs in .NET 4, see
+<a href="http://msdn.microsoft.com/en-us/library/dd460693(VS.100).aspx">http://msdn.microsoft.com/en-us/library/dd460693(VS.100).aspx</a>. For information direct from the Parallel Extensions team, subscribe to the team blog at
+<a href="http://blogs.msdn.com/pfxteam">http://blogs.msdn.com/pfxteam</a>. For videos/articles on parallelism and Parallel Extensions, visit the Parallel Computing Developer Center at
+<a href="http://msdn.com/concurrency">http://msdn.com/concurrency</a>.)</p>
+<table border="0" cellspacing="0" cellpadding="2" width="525">
+<tbody>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_2.png"><img title="image" src="description/image_thumb.png" border="0" alt="image" width="147" height="117" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>AcmePizza&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This simple and somewhat silly application demonstrates using concurrent collections with WPF.&nbsp; The collections are wrapped with observable facades, such that multiple threads may modify the collections concurrently, and those
+ updates are safely propagated to UI controls.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_B06A/image_2.png"><img title="image" src="description/665454eb-ba63-44d9-bc90-4bc15f8a5d6fimage_thumb.png" border="0" alt="image" width="147" height="118" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>Antisocial Robots&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> Demonstrates doing a computationally-intensive operation many times per second, as a bunch of &ldquo;robots&rdquo; try to get as far away from each other as possible.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_4.png"><img title="image" src="description/image_thumb_1.png" border="0" alt="image" width="146" height="100" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>BabyNames&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This is one of the first applications we ever built to use Parallel LINQ.&nbsp; Using LINQ and PLINQ, it queries a data set of baby name popularity information, sorts the results, and displays the results in a simplistic WPF user
+ interface.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_6.png"><img title="image" src="description/image_thumb_2.png" border="0" alt="image" width="147" height="57" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>BlendImages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> A demo of very simple image manipulation using a Parallel.For loop.&nbsp; The application allows the user to load up two images and blends them together into a single, new image.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_B06A/image_10.png"><img title="image" src="description/image_thumb_4.png" border="0" alt="image" width="145" height="102" style="border:0px currentColor; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>Boids&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> An implementation of a classic flocking algorithm, utilizing WPF for pretty 3D visualization of the &ldquo;boids&rdquo;, whose next positions and velocities are computing in parallel.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_8.png"><img title="image" src="description/image_thumb_3.png" border="0" alt="image" width="146" height="91" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>ComputePi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> A console application that estimates the value of <a href="http://en.wikipedia.org/wiki/Pi">
+PI</a> using a variety of both serial and parallel implementations, the latter done with both PLINQ and the Parallel class.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_10.png"><img title="image" src="description/24d53040-2f00-4124-9107-59844d7e9932image_thumb_4.png" border="0" alt="image" width="147" height="149" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>DiningPhilosophers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> A WPF application that demonstrates the classic &ldquo;<a href="http://en.wikipedia.org/wiki/Dining_philosophers">Dining Philosophers</a>&rdquo; synchronization problem.&nbsp; The application implements several solutions, including
+ one based on asynchronous techniques using Tasks.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_12.png"><img title="image" src="description/image_thumb_5.png" border="0" alt="image" width="147" height="78" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>EditDistance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> A console application that uses Tasks to parallelize a dynamic programming problem, that of computing the &ldquo;<a href="http://en.wikipedia.org/wiki/Edit_distance">edit distance</a>&rdquo; between two strings.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_14.png"><img title="image" src="description/image_thumb_6.png" border="0" alt="image" width="148" height="126" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>GameOfLife&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This application provides an implementation of <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">
+Conway&rsquo;s Game of Life</a>, using the Parallel class to parallelize the processing of the cellular automata.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_16.png"><img title="image" src="description/image_thumb_7.png" border="0" alt="image" width="148" height="127" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>ImageColorizer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This application manipulates an image by converting the majority of the image to grayscale, except for portions of the image containing user-selected hues.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_18.png"><img title="image" src="description/image_thumb_8.png" border="0" alt="image" width="148" height="112" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>LINQRayTracer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> Based on <a href="http://blogs.msdn.com/lukeh/archive/2007/10/01/taking-linq-to-objects-to-extremes-a-fully-linqified-raytracer.aspx">
+Luke Hoban</a>&rsquo;s LINQ implementation of a ray tracer, this application parallelizes a computationally intensive LINQ query using PLINQ.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_20.png"><img title="image" src="description/image_thumb_9.png" border="0" alt="image" width="148" height="115" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>MandelbrotFractals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, C&#43;&#43;/CLI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This application provides an implementation of the classic
+<a href="http://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot</a> fractal, parallelizing the processing of the fractal using the Parallel class.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_22.png"><img title="image" src="description/image_thumb_10.png" border="0" alt="image" width="148" height="102" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>Morph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> Implements a <a href="http://en.wikipedia.org/wiki/Morphing">
+morphing</a> algorithm between two images.&nbsp; Parallelization is done using the Parallel class.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_B06A/image_8.png"><img title="image" src="description/bd4f8ccb-07cf-4998-8e03-11d7440c33aaimage_thumb_3.png" border="0" alt="image" width="149" height="119" style="border:0px currentColor; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>NBodySimulation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, F#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> Implements a classic n-body simulation using C# and WPF for the UI and using F# for the core computation. Parallelism is achieved using the Parallel class.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_24.png"><img title="image" src="description/image_thumb_11.png" border="0" alt="image" width="149" height="108" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>NQueens&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This application implements a solution to the <a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle">
+N-Queens</a> problem, using both LINQ and PLINQ.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_42.png"><img title="image" src="description/image_thumb_20.png" border="0" alt="image" width="149" height="68" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>OptionPricing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This Excel <a href="http://msdn.microsoft.com/en-us/vsto/default.aspx">
+VSTO</a> application utilizes PLINQ to price <a href="http://en.wikipedia.org/wiki/Asian_option">
+Asian Options</a>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_26.png"><img title="image" src="description/image_thumb_12.png" border="0" alt="image" width="148" height="89" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>ParallelGrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This console application implements &ldquo;<a href="http://en.wikipedia.org/wiki/Grep">grep</a>&rdquo; functionality across a file system using PLINQ.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_B06A/image_12.png"><img title="image" src="description/af1dd6e1-dbda-43aa-a601-8d4d8abc3e01image_thumb_5.png" border="0" alt="image" width="149" height="77" style="border:0px currentColor; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>PlinqKnobs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> A simple console application that demonstrates some of the ways execution of a PLINQ query may be controlled and configured.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_28.png"><img title="image" src="description/image_thumb_13.png" border="0" alt="image" width="148" height="125" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>Raytracer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic, F#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This Windows application provides an animated, ray-traced bouncing ball.&nbsp; Sequential and parallel implementations are provided, as is a special parallel implementation that colors the animated image based on which thread was
+ used to calculate which regions.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><img src="description/reversi-thumnail.jpg" alt="" width="148" height="98"></td>
+<td width="375" valign="top"><strong><strong>Project Name: </strong></strong>Raytracer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<strong><br>
+<strong>Languages:</strong> </strong>C#<strong>&nbsp;&nbsp;&nbsp;&nbsp; <br>
+<strong>Description:</strong> </strong>This WPF application is a Reversi game.&nbsp; The AI algorithms are minimax with alpha-beta pruning, and the parallel AI (light player) uses Tasks and CancellationTokens to achieve speedup via parallelism.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_30.png"><img title="image" src="description/image_thumb_14.png" border="0" alt="image" width="149" height="89" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>ShakespeareanMonkeys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This application implements and parallelizes a <a href="http://en.wikipedia.org/wiki/Genetic_algorithm">
+genetic algorithm</a> for breeding monkeys able to speak text from Hamlet.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_32.png"><img title="image" src="description/image_thumb_15.png" border="0" alt="image" width="148" height="110" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>SpellChecker&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This application implements and parallelizes a spellchecking algorithm based on the same edit distance calculation in the Edit Distance sample.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_34.png"><img title="image" src="description/image_thumb_16.png" border="0" alt="image" width="148" height="116" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>Strassens&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This application implements several algorithms for performing and parallelizing matrix multiplication, including the
+<a href="http://en.wikipedia.org/wiki/Strassen_algorithm">Strassen algorithm</a>.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_36.png"><img title="image" src="description/image_thumb_17.png" border="0" alt="image" width="149" height="129" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>Sudoku&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This is a fun application that provides a full Sudoku experience, including on-demand puzzle generation and solving.&nbsp; Unlike many Sudoku demos which parallelize the solver, this implementation parallelizes the generator, using
+ PLINQ.&nbsp; It also demonstrates a use for speculative execution.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_38.png"><img title="image" src="description/image_thumb_18.png" border="0" alt="image" width="149" height="123" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong>VisualizePartitioning&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Languages:</strong> C#, Visual Basic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This application demonstrates various approaches to partitioning as employed by both Parallel and PLINQ.</td>
+</tr>
+<tr>
+<td width="148" valign="top"><a href="http://blogs.msdn.com/blogfiles/pfxteam/WindowsLiveWriter/ATourThroughtheParallelProgrammingS.NET4_A55F/image_40.png"><img title="image" src="description/image_thumb_19.png" border="0" alt="image" width="148" height="125" style="border-width:0px; display:inline"></a></td>
+<td width="375" valign="top"><strong>Project Name: </strong><a href="http://blogs.msdn.com/pfxteam/archive/2010/04/04/9990342.aspx">ParallelExtensionsExtras</a><br>
+<strong>Languages:</strong> C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<strong>Description:</strong> This class library provides a plethora of interesting and useful extensions to take advantage of and complement the functionality available in the .NET Framework 4 for parallel programming.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+    </div>
+</body>
+</html>

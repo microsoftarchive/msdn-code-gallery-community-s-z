@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="bbe93638-32e9-4699-bdbe-bbb8da173bfa" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="c4d35951-8094-490f-b6b6-361a8abcb371" name="Server Side">
+      <childLayers>
+        <layer Id="28a699e9-e159-455b-86fc-71c4c43fbbb3" name="Web Server">
+          <childLayers>
+            <layer Id="5891ef3c-36fc-414e-b009-9853dff7769e" name="Cross Cutting">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="32869441-29c0-4c7f-b45a-d6870e728584" direction="Bidirectional">
+                  <layerMoniker Id="d3991614-54bd-40a0-9cdb-9ef262cfeff0" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="0fabdef0-ba9e-4186-9296-acb8ecb71967" direction="Bidirectional">
+                  <layerMoniker Id="d9b27aed-4154-448b-bdd4-1c2706b07612" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="3bde367e-bbf2-41fe-89cc-13bd4a344b82" direction="Bidirectional">
+                  <layerMoniker Id="9b6b0451-bdaf-451b-8bb0-7c08b736ecd3" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="d3991614-54bd-40a0-9cdb-9ef262cfeff0" name="Presentation Layer">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="ef8312bc-a1f7-40c0-8ade-59d95b0aad4b" direction="Forward">
+                  <layerMoniker Id="d9b27aed-4154-448b-bdd4-1c2706b07612" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="d9b27aed-4154-448b-bdd4-1c2706b07612" name="Business Layer">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="32ced6ef-b0d6-40fa-be5c-b9ce662c770d" direction="Forward">
+                  <layerMoniker Id="d3991614-54bd-40a0-9cdb-9ef262cfeff0" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="99a96f8a-1a28-41f3-9984-21f4ad331cfa" direction="Forward">
+                  <layerMoniker Id="9b6b0451-bdaf-451b-8bb0-7c08b736ecd3" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+            <layer Id="9b6b0451-bdaf-451b-8bb0-7c08b736ecd3" name="Data Access Layer">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="df2fbd75-c8b3-4536-b3bb-4128eadcb46b" direction="Forward">
+                  <layerMoniker Id="d9b27aed-4154-448b-bdd4-1c2706b07612" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="372c6365-a271-4d5b-85c0-581b22e75d4a" direction="Forward">
+                  <layerMoniker Id="656103ac-20b5-4c5e-9ff2-cec9b0782416" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="656103ac-20b5-4c5e-9ff2-cec9b0782416" name="Database Server ">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="b586d902-3e7a-47f9-9593-78e91c74a001" direction="Forward">
+              <layerMoniker Id="9b6b0451-bdaf-451b-8bb0-7c08b736ecd3" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="14e15073-9269-4db4-82d0-b1bdad6efcf7" name="Client Side">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d66200d8-df65-4c23-8575-88f4684afd74" direction="Bidirectional">
+          <layerMoniker Id="d3991614-54bd-40a0-9cdb-9ef262cfeff0" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+  </layers>
+</layerModel>

@@ -1,0 +1,37 @@
+﻿@model MsSqlCe.Models.Manga
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Manga</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mangaka)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mangaka)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pages)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pages)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

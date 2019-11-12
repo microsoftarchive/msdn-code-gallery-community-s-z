@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- -->
+  <!-- This file contains custom command definitions. -->
+  <!-- -->
+  <!-- NOTE: Each time commands are added or changed, the "version" parameter to the -->
+  <!-- ProvideMenuResource attribute in Shell\Package.tt should be incremented. -->
+  <!-- This causes Visual Studio to re-merge the menu definitions for the package. -->
+  <!-- Otherwise, changes won't take effect until the next time devenv /setup is run. -->
+  <!-- -->
+  <!-- For information about adding commands see http://msdn.microsoft.com/library/dd820681.aspx -->
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Extern href="msobtnid.h"/>
+  <Extern href="virtkeys.h"/>
+  <Extern href="DSLToolsCmdID.h"/>
+  <Include href="GeneratedCode\GeneratedVsct.vsct"/>
+  <Commands package="guidPkg">
+    <!-- Define a group - a section in the menu -->
+    <Groups>
+      <Group guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup" priority="0x0100">
+        <!-- These symbols are defined in GeneratedVSCT.vsct -->
+        <Parent guid="guidCmdSet" id="menuidContext" />
+      </Group>
+    </Groups>
+    <!-- Define a button - a menu item - inside the Group -->
+    <Buttons>
+      <Button guid="guidStdCommands" id="cmdidCopy" priority="0x0100" type="Button">
+        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Copy</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidStdCommands" id="cmdidCut" priority="0x0100" type="Button">
+        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Cut</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidStdCommands" id="cmdidPaste" priority="0x0100" type="Button">
+        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Paste</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidCustomMenuCmdSet" id="cmdidAlignComponentCommand"
+        priority="0x0100" type="Button">
+        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup"/>
+        <!-- If you do not want to place the command in your own Group, 
+         use Parent guid="guidCmdSet" id="grpidContextMain".
+         These symbols are defined in GeneratedVSCT.vsct -->
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Align</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidCustomMenuCmdSet" id="cmdidRotateComponentCommand"
+        priority="0x0100" type="Button">
+        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup"/>
+        <!-- If you do not want to place the command in your own Group, 
+         use Parent guid="guidCmdSet" id="grpidContextMain".
+         These symbols are defined in GeneratedVSCT.vsct -->
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Rotate Component</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidCustomMenuCmdSet" id="cmdidFlipComponentCommand"
+        priority="0x0100" type="Button">
+        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup"/>
+        <!-- If you do not want to place the command in your own Group, 
+         use Parent guid="guidCmdSet" id="grpidContextMain".
+         These symbols are defined in GeneratedVSCT.vsct -->
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Flip Component</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidCustomMenuCmdSet" id="cmdidPolarityComponentCommand"
+        priority="0x0100" type="Button">
+        <Parent guid="guidCustomMenuCmdSet" id="grpidMyMenuGroup"/>
+        <!-- If you do not want to place the command in your own Group, 
+         use Parent guid="guidCmdSet" id="grpidContextMain".
+         These symbols are defined in GeneratedVSCT.vsct -->
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Reverse Polarity</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+  <VisibilityConstraints>
+    <!-- Ensures the command is only loaded for this DSL -->
+    <VisibilityItem guid="guidCustomMenuCmdSet" id="cmdidRotateComponentCommand"
+      context="guidEditor"/>
+    <VisibilityItem guid="guidCustomMenuCmdSet" id="cmdidFlipComponentCommand"
+      context="guidEditor"/>
+    <VisibilityItem guid="guidCustomMenuCmdSet" id="cmdidPolarityComponentCommand"
+      context="guidEditor"/>
+  </VisibilityConstraints>
+  <Symbols>
+    <!-- Substitute a unique GUID for the placeholder: -->
+    <GuidSymbol name="guidCustomMenuCmdSet"
+      value="{a0068e7d-b565-4482-9aaf-43e0f18dec29}" >
+      <IDSymbol name="grpidMyMenuGroup" value="0x01001"/>
+      <IDSymbol name="cmdidRotateComponentCommand" value="0x801"/>
+      <IDSymbol name="cmdidFlipComponentCommand" value="0x802"/>
+      <IDSymbol name="cmdidPolarityComponentCommand" value="0x803"/>
+      <IDSymbol name="cmdidAlignComponentCommand" value="0x804"/>
+    </GuidSymbol>
+    <GuidSymbol name ="guidStdCommands" value="{5efc7975-14bc-11cf-9b2b-00aa00573819}">
+      <IDSymbol name="cmdidCopy" value="15"/>
+      <IDSymbol name="cmdidCut" value="16"/>
+      <IDSymbol name="cmdidPaste" value="26"/>
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

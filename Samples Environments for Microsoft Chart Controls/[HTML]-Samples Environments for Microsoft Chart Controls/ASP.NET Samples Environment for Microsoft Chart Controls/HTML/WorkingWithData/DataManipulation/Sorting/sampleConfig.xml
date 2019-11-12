@@ -1,0 +1,41 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Sorting">
+	<Title>Ascending and Descending Sorts</Title> 
+	<Thumbnail>Sorting\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Ascending and Descending Sorts</ShortBlurb> 
+	<Content>Sorting\Sorting.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">Sorting\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">Sorting\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Sorting data</Keyword>
+		<Keyword>Series, Sorting data</Keyword>
+		<Keyword>Data manipulation, Sorting data</Keyword>
+	</Keywords>  
+	</SampleConfig>
+
+
+	<SampleConfig ParentNodeID = "Sorting">
+	<Title>Custom Sort Orders</Title> 
+	<Thumbnail>CustomSortingOrder\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Custom Sort Orders</ShortBlurb> 
+	<Content>CustomSortingOrder\CustomSortingOrder.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">CustomSortingOrder\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">CustomSortingOrder\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Series, Custom data sorting</Keyword>
+		<Keyword>Data manipulation, Custom data sorting</Keyword>
+	</Keywords>  
+	</SampleConfig>
+
+
+</SampleConfigs>

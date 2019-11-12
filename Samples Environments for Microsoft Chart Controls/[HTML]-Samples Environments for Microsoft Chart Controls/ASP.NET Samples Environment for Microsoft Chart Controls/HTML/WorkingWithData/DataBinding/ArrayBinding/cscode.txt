@@ -1,0 +1,15 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Initialize an array of doubles
+    double [] yval = { 2,6,4,5,3};
+
+    // Initialize an array of strings
+    string [] xval = { "Peter", "Andrew", "Julie", "Mary", "Dave"};
+
+    // Bind the double array to the Y axis points of the Default data series
+    Chart1.Series["Series 1"].Points.DataBindXY(xval,yval);
+}
+...

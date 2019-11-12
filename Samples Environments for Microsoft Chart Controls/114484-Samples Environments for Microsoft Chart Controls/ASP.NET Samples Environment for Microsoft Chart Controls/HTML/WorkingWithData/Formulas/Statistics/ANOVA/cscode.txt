@@ -1,0 +1,9 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Perform ANOVA Test
+    AnovaResult result = chart1.DataManipulator.Statistics.Anova( 0.6, "Group1,Group2,Group3" );
+}
+...

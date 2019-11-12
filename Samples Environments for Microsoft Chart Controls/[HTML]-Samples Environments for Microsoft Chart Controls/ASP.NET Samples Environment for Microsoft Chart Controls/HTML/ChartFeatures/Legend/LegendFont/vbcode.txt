@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Disable auto-fitting of the legend text
+    Chart1.Legends("Default").IsTextAutoFit = false
+
+    ' Set new legend text font
+    Chart1.Legends("Default").Font = New Font("Arial", 10, FontStyle.Bold)
+
+    ' Set legend text color
+    Chart1.Legends("Default").ForeColor = Color.Black
+
+End Sub 'Page_Load
+...

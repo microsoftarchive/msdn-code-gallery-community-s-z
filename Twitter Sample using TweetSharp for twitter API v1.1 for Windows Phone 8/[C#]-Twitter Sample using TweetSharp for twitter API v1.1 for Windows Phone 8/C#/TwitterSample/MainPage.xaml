@@ -1,0 +1,118 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TwitterSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="clr-namespace:TwitterSample.Converters"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <converters:TwitterScreenNameConverter x:Key="TwitterScreenNameConverter"/>
+    </phone:PhoneApplicationPage.Resources>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="TWITTER SAMPLE" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <TextBlock x:Name="Header" Text="Header" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+
+                <phone:LongListSelector Grid.Row="0" x:Name="llsSearchTwitterResults"
+                             ItemsSource="{Binding}">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+
+                            <Grid  Margin="2,0,2,8" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="{Binding User.ProfileImageUrl}"
+                                    Grid.Column="0" 
+                                    Margin="0" Width="75" Height="75"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch"/>
+
+                                <StackPanel Margin="0,4,0,0" 
+                                        Grid.Column="1" 
+                                        VerticalAlignment="Top" 
+                                        HorizontalAlignment="Left">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="0">
+                                            <TextBlock Text="{Binding User.Name}"
+                                                TextWrapping="Wrap"
+                                                HorizontalAlignment="Left"
+                                                Style="{StaticResource PhoneTextSmallStyle}" 
+                                                FontSize="{StaticResource PhoneFontSizeNormal}" FontWeight="Bold"
+                                                Foreground="White">
+                                            </TextBlock>
+
+                                            <TextBlock Text="{Binding Mode=OneWay,Path=User.ScreenName,Converter={StaticResource TwitterScreenNameConverter}}"
+                                                TextWrapping="Wrap" Margin="12,0,0,0"
+                                                HorizontalAlignment="Left"
+                                                Style="{StaticResource PhoneTextSmallStyle}" 
+                                                FontSize="{StaticResource PhoneFontSizeNormal}" FontWeight="Bold"
+                                                Foreground="White">
+                                            </TextBlock>
+                                        </StackPanel>
+
+
+                                        <TextBlock Text="{Binding Text}"
+                                                Grid.Row="1"
+                                                TextWrapping="Wrap"
+                                                Style="{StaticResource PhoneTextSmallStyle}"
+                                                Foreground="White">
+                                        </TextBlock>
+
+                                        <TextBlock Grid.Row="2" Style="{StaticResource PhoneTextSmallStyle}" 
+                                               HorizontalAlignment="Left"
+                                               Text="{Binding CreatedDate}"
+                                               Foreground="White">
+                                        </TextBlock>
+                                    </Grid>
+                                </StackPanel>
+                            </Grid>
+
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+
+                </phone:LongListSelector>
+                
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="1" HorizontalAlignment="Center">
+                    <Button x:Name="GetUser" Content="Get User Name" Tap="GetUser_Tap"></Button>
+                    <Button x:Name="GetHashTag" Content="Get #Hash Tag" Tap="GetHashTag_Tap"></Button>
+                </StackPanel>
+            </Grid>
+            </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<DataSet1 xmlns="http://tempuri.org/DataSet1.xsd">
+  <xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:MainDataTable="http_x003A__x002F__x002F_tempuri.org_x002F_DataSet1.xsd_x003A_Orders" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Orders">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OrderID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="OrderDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="RequiredDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ShippedDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ShipVia" type="xs:int" minOccurs="0" />
+                <xs:element name="Freight" type="xs:decimal" minOccurs="0" />
+                <xs:element name="ShipName" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="40" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ShipAddress" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="60" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ShipCity" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ShipRegion" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ShipPostalCode" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="10" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ShipCountry" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CompanyName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="40" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ContactName" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="30" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ContactTitle" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="30" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Address" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="60" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="City" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Region" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="PostalCode" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="10" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Country" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Phone" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="24" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Fax" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="24" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Orders" />
+        <xs:field xpath="mstns:OrderID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Orders>
+    <OrderID>10643</OrderID>
+    <OrderDate>1997-08-25T00:00:00.0000000-07:00</OrderDate>
+    <RequiredDate>1997-09-22T00:00:00.0000000-07:00</RequiredDate>
+    <ShippedDate>1997-09-02T00:00:00.0000000-07:00</ShippedDate>
+    <ShipVia>1</ShipVia>
+    <Freight>29.4600</Freight>
+    <ShipName>Alfreds Futterkiste</ShipName>
+    <ShipAddress>Obere Str. 57</ShipAddress>
+    <ShipCity>Berlin</ShipCity>
+    <ShipPostalCode>12209</ShipPostalCode>
+    <ShipCountry>Germany</ShipCountry>
+    <CompanyName>Alfreds Futterkiste</CompanyName>
+    <ContactName>Maria Anders</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>Obere Str. 57</Address>
+    <City>Berlin</City>
+    <PostalCode>12209</PostalCode>
+    <Country>Germany</Country>
+    <Phone>030-0074321</Phone>
+    <Fax>030-0076545</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>10692</OrderID>
+    <OrderDate>1997-10-03T00:00:00.0000000-07:00</OrderDate>
+    <RequiredDate>1997-10-31T00:00:00.0000000-08:00</RequiredDate>
+    <ShippedDate>1997-10-13T00:00:00.0000000-07:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>61.0200</Freight>
+    <ShipName>Alfred's Futterkiste</ShipName>
+    <ShipAddress>Obere Str. 57</ShipAddress>
+    <ShipCity>Berlin</ShipCity>
+    <ShipPostalCode>12209</ShipPostalCode>
+    <ShipCountry>Germany</ShipCountry>
+    <CompanyName>Alfreds Futterkiste</CompanyName>
+    <ContactName>Maria Anders</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>Obere Str. 57</Address>
+    <City>Berlin</City>
+    <PostalCode>12209</PostalCode>
+    <Country>Germany</Country>
+    <Phone>030-0074321</Phone>
+    <Fax>030-0076545</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>10668</OrderID>
+    <OrderDate>1997-09-15T00:00:00.0000000-07:00</OrderDate>
+    <RequiredDate>1997-10-13T00:00:00.0000000-07:00</RequiredDate>
+    <ShippedDate>1997-09-23T00:00:00.0000000-07:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>47.2200</Freight>
+    <ShipName>Die Wandernde Kuh</ShipName>
+    <ShipAddress>Adenauerallee 900</ShipAddress>
+    <ShipCity>Stuttgart</ShipCity>
+    <ShipPostalCode>70563</ShipPostalCode>
+    <ShipCountry>Germany</ShipCountry>
+    <CompanyName>Die Wandernde Kuh</CompanyName>
+    <ContactName>Rita Müller</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>Adenauerallee 900</Address>
+    <City>Stuttgart</City>
+    <PostalCode>70563</PostalCode>
+    <Country>Germany</Country>
+    <Phone>0711-020361</Phone>
+    <Fax>0711-035428</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>11046</OrderID>
+    <OrderDate>1998-04-23T00:00:00.0000000-07:00</OrderDate>
+    <RequiredDate>1998-05-21T00:00:00.0000000-07:00</RequiredDate>
+    <ShippedDate>1998-04-24T00:00:00.0000000-07:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>71.6400</Freight>
+    <ShipName>Die Wandernde Kuh</ShipName>
+    <ShipAddress>Adenauerallee 900</ShipAddress>
+    <ShipCity>Stuttgart</ShipCity>
+    <ShipPostalCode>70563</ShipPostalCode>
+    <ShipCountry>Germany</ShipCountry>
+    <CompanyName>Die Wandernde Kuh</CompanyName>
+    <ContactName>Rita Müller</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>Adenauerallee 900</Address>
+    <City>Stuttgart</City>
+    <PostalCode>70563</PostalCode>
+    <Country>Germany</Country>
+    <Phone>0711-020361</Phone>
+    <Fax>0711-035428</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>10266</OrderID>
+    <OrderDate>1996-07-26T00:00:00.0000000-07:00</OrderDate>
+    <RequiredDate>1996-09-06T00:00:00.0000000-07:00</RequiredDate>
+    <ShippedDate>1996-07-31T00:00:00.0000000-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>25.7300</Freight>
+    <ShipName>Wartian Herkku</ShipName>
+    <ShipAddress>Torikatu 38</ShipAddress>
+    <ShipCity>Oulu</ShipCity>
+    <ShipPostalCode>90110</ShipPostalCode>
+    <ShipCountry>Finland</ShipCountry>
+    <CompanyName>Wartian Herkku</CompanyName>
+    <ContactName>Pirkko Koskitalo</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+    <Address>Torikatu 38</Address>
+    <City>Oulu</City>
+    <PostalCode>90110</PostalCode>
+    <Country>Finland</Country>
+    <Phone>981-443655</Phone>
+    <Fax>981-443655</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>10270</OrderID>
+    <OrderDate>1996-08-01T00:00:00.0000000-07:00</OrderDate>
+    <RequiredDate>1996-08-29T00:00:00.0000000-07:00</RequiredDate>
+    <ShippedDate>1996-08-02T00:00:00.0000000-07:00</ShippedDate>
+    <ShipVia>1</ShipVia>
+    <Freight>136.5400</Freight>
+    <ShipName>Wartian Herkku</ShipName>
+    <ShipAddress>Torikatu 38</ShipAddress>
+    <ShipCity>Oulu</ShipCity>
+    <ShipPostalCode>90110</ShipPostalCode>
+    <ShipCountry>Finland</ShipCountry>
+    <CompanyName>Wartian Herkku</CompanyName>
+    <ContactName>Pirkko Koskitalo</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+    <Address>Torikatu 38</Address>
+    <City>Oulu</City>
+    <PostalCode>90110</PostalCode>
+    <Country>Finland</Country>
+    <Phone>981-443655</Phone>
+    <Fax>981-443655</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>10320</OrderID>
+    <OrderDate>1996-10-03T00:00:00.0000000-07:00</OrderDate>
+    <RequiredDate>1996-10-17T00:00:00.0000000-07:00</RequiredDate>
+    <ShippedDate>1996-10-18T00:00:00.0000000-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>34.5700</Freight>
+    <ShipName>Wartian Herkku</ShipName>
+    <ShipAddress>Torikatu 38</ShipAddress>
+    <ShipCity>Oulu</ShipCity>
+    <ShipPostalCode>90110</ShipPostalCode>
+    <ShipCountry>Finland</ShipCountry>
+    <CompanyName>Wartian Herkku</CompanyName>
+    <ContactName>Pirkko Koskitalo</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+    <Address>Torikatu 38</Address>
+    <City>Oulu</City>
+    <PostalCode>90110</PostalCode>
+    <Country>Finland</Country>
+    <Phone>981-443655</Phone>
+    <Fax>981-443655</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>10333</OrderID>
+    <OrderDate>1996-10-18T00:00:00.0000000-07:00</OrderDate>
+    <RequiredDate>1996-11-15T00:00:00.0000000-08:00</RequiredDate>
+    <ShippedDate>1996-10-25T00:00:00.0000000-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>0.5900</Freight>
+    <ShipName>Wartian Herkku</ShipName>
+    <ShipAddress>Torikatu 38</ShipAddress>
+    <ShipCity>Oulu</ShipCity>
+    <ShipPostalCode>90110</ShipPostalCode>
+    <ShipCountry>Finland</ShipCountry>
+    <CompanyName>Wartian Herkku</CompanyName>
+    <ContactName>Pirkko Koskitalo</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+    <Address>Torikatu 38</Address>
+    <City>Oulu</City>
+    <PostalCode>90110</PostalCode>
+    <Country>Finland</Country>
+    <Phone>981-443655</Phone>
+    <Fax>981-443655</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>10412</OrderID>
+    <OrderDate>1997-01-13T00:00:00.0000000-08:00</OrderDate>
+    <RequiredDate>1997-02-10T00:00:00.0000000-08:00</RequiredDate>
+    <ShippedDate>1997-01-15T00:00:00.0000000-08:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>3.7700</Freight>
+    <ShipName>Wartian Herkku</ShipName>
+    <ShipAddress>Torikatu 38</ShipAddress>
+    <ShipCity>Oulu</ShipCity>
+    <ShipPostalCode>90110</ShipPostalCode>
+    <ShipCountry>Finland</ShipCountry>
+    <CompanyName>Wartian Herkku</CompanyName>
+    <ContactName>Pirkko Koskitalo</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+    <Address>Torikatu 38</Address>
+    <City>Oulu</City>
+    <PostalCode>90110</PostalCode>
+    <Country>Finland</Country>
+    <Phone>981-443655</Phone>
+    <Fax>981-443655</Fax>
+  </Orders>
+  <Orders>
+    <OrderID>10416</OrderID>
+    <OrderDate>1997-01-16T00:00:00.0000000-08:00</OrderDate>
+    <RequiredDate>1997-02-13T00:00:00.0000000-08:00</RequiredDate>
+    <ShippedDate>1997-01-27T00:00:00.0000000-08:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>22.7200</Freight>
+    <ShipName>Wartian Herkku</ShipName>
+    <ShipAddress>Torikatu 38</ShipAddress>
+    <ShipCity>Oulu</ShipCity>
+    <ShipPostalCode>90110</ShipPostalCode>
+    <ShipCountry>Finland</ShipCountry>
+    <CompanyName>Wartian Herkku</CompanyName>
+    <ContactName>Pirkko Koskitalo</ContactName>
+    <ContactTitle>Accounting Manager</ContactTitle>
+    <Address>Torikatu 38</Address>
+    <City>Oulu</City>
+    <PostalCode>90110</PostalCode>
+    <Country>Finland</Country>
+    <Phone>981-443655</Phone>
+    <Fax>981-443655</Fax>
+  </Orders>
+</DataSet1>

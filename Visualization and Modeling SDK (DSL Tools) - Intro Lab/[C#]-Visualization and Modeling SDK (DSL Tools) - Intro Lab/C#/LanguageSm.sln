@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl", "Dsl\Dsl.csproj", "{A0E90AAD-E381-4D5F-9801-4D9994DAEAAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DslPackage", "DslPackage\DslPackage.csproj", "{A1100DEE-000C-4132-8158-AB8C1354798D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{EE52B176-803A-461A-A748-1B0D7C425A2D}"
+	ProjectSection(SolutionItems) = preProject
+		_READ_ME.txt = _READ_ME.txt
+		VMSDK_Lab_1.pdf = VMSDK_Lab_1.pdf
+		VMSDK_Lab_2.pdf = VMSDK_Lab_2.pdf
+		VMSDK_Lab_3.pdf = VMSDK_Lab_3.pdf
+		VMSDK_Lab_4.pdf = VMSDK_Lab_4.pdf
+		VMSDK_Lab_5.pdf = VMSDK_Lab_5.pdf
+		VMSDK_Lab_6.pdf = VMSDK_Lab_6.pdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0E90AAD-E381-4D5F-9801-4D9994DAEAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E90AAD-E381-4D5F-9801-4D9994DAEAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E90AAD-E381-4D5F-9801-4D9994DAEAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E90AAD-E381-4D5F-9801-4D9994DAEAAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1100DEE-000C-4132-8158-AB8C1354798D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1100DEE-000C-4132-8158-AB8C1354798D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1100DEE-000C-4132-8158-AB8C1354798D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1100DEE-000C-4132-8158-AB8C1354798D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

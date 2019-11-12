@@ -1,0 +1,17 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set series visual attributes
+    Chart1.Series["Default"].Color = Color.MediumSeaGreen;
+    Chart1.Series["Default"].BackSecondaryColor = Color.Green;
+    Chart1.Series["Default"].BackGradientStyle = GradientStyle.DiagonalLeft;
+
+    Chart1.Series["Default"].BorderColor = Color.Black;
+    Chart1.Series["Default"].BorderWidth = 2;
+    Chart1.Series["Default"].BorderDashStyle = ChartDashStyle.Solid;
+
+    Chart1.Series["Default"].ShadowOffset = 2;
+}
+...

@@ -1,0 +1,49 @@
+<?xml version="1.0" ?> 
+<TOCNodes>
+
+
+  <TOCNode ID="Data Manipulation" ParentNodeID="PopulatingData" Priority="200">
+    <Title>Data Manipulation</Title>
+  </TOCNode>
+
+  <TOCNode ID="Sorting" ParentNodeID="Data Manipulation" Priority="100">
+		<Title>Sorting</Title>
+  </TOCNode>
+  
+  <TOCNode ID="FindingSeriesPoints" ParentNodeID="Data Manipulation" Priority="100">
+    <Title>Finding Data Points</Title>
+  </TOCNode>
+
+  <TOCNode ID="Formulas" ParentNodeID="PopulatingData" Priority="300">
+    <Title>Formulas</Title>
+  </TOCNode>
+
+  <TOCNode ID="Financial" ParentNodeID="Formulas" Priority="100">
+    <Title>Financial</Title>
+  </TOCNode>
+
+  <TOCNode ID="Statistical" ParentNodeID="Formulas" Priority="100">
+    <Title>Statistical</Title>
+  </TOCNode>
+
+  <TOCNode ID="Filtering" ParentNodeID="Data Manipulation" Priority="100">
+    <Title>Filtering</Title>
+  </TOCNode>
+
+  <TOCNode ID="Grouping" ParentNodeID="Data Manipulation" Priority="100">
+    <Title>Grouping</Title>
+  </TOCNode>
+
+  <TOCNode ID="Exporting" ParentNodeID="Data Manipulation" Priority="100">
+    <Title>Exporting</Title>
+  </TOCNode>
+
+  <TOCNode ID="CopyingSeriesValues" ParentNodeID="Data Manipulation" Priority="100">
+    <Title>Copying, Splitting, Merging Values</Title>
+  </TOCNode>
+
+  <TOCNode ID="SeriesAlignment" ParentNodeID="Data Manipulation" Priority="100">
+    <Title>Series Alignment</Title>
+  </TOCNode>
+
+</TOCNodes>

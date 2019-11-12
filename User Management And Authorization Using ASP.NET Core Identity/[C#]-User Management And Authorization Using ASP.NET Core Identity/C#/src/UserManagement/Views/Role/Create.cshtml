@@ -1,0 +1,26 @@
+﻿@model string
+
+<div class="bg-primary panel-body">
+    <h4>
+        Create Role
+    </h4>
+</div>
+
+<div class="text-danger" asp-validation-summary="All"></div>
+
+<form method="post" asp-controller="Role" asp-action="Create" asp-antiforgery="true" class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Name:</label>
+        <div class="col-sm-4">
+            <input class="form-control" name="name"/>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
+            <a class="btn btn-primary" asp-controller="Role" asp-action="Index">Cancel</a>
+        </div>
+    </div>
+</form>

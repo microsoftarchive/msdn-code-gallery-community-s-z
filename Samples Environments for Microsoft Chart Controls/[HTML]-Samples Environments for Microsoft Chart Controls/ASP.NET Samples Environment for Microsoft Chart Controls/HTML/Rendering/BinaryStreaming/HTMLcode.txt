@@ -1,0 +1,16 @@
+<%@ Page language="c#" Codebehind="BinaryStreaming.aspx.cs" AutoEventWireup="false" Inherits="System.Web.UI.DataVisualization.Charting.Samples.BinaryStreaming" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<title>BinaryStreaming</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio 7.0" />
+		<meta name="CODE_LANGUAGE" content="C#" />
+		<meta name="vs_defaultClientScript" content="JavaScript" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+	</head>
+	<body>
+		<form id="BinaryStreaming" method="post" runat="server">
+			<asp:Image id="Image1" runat="server" ImageLocation="BinaryStreamingImage.aspx"></asp:Image>
+		</form>
+	</body>
+</html>

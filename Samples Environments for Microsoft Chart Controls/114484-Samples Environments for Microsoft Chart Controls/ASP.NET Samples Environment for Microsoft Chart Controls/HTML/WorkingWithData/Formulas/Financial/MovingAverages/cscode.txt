@@ -1,0 +1,60 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+/// <summary>
+/// This method calculates different Moving Averages.
+/// </summary>
+private void Calculate()
+{
+    string period = Period.SelectedItem.Value;
+
+    // Calculates simple moving average
+    if(SimpleMovingAverage.Checked)
+    {
+        Chart1.DataManipulator.FinancialFormula(FinancialFormula.MovingAverage,period,"Input","Simple");
+        Chart1.Series["Simple"].Color = Color.Red;
+        Chart1.Series["Simple"].ChartType = SeriesChartType.Line;
+        Chart1.Series["Simple"].BorderWidth = 2;
+        Chart1.Series["Simple"].ShadowOffset = 1;
+    }
+
+    // Calculates exponential moving average
+    if(ExponentialMovingAverage.Checked)
+    {
+        Chart1.DataManipulator.FinancialFormula(FinancialFormula.ExponentialMovingAverage,period,"Input","Exponential");
+        Chart1.Series["Exponential"].Color = Color.Blue;
+        Chart1.Series["Exponential"].ChartType = SeriesChartType.Line;
+        Chart1.Series["Exponential"].BorderWidth = 2;
+        Chart1.Series["Exponential"].ShadowOffset = 1;
+    }
+    
+    // Calculates triangular moving average
+    if(TriangularMovingAverage.Checked)
+    {
+        Chart1.DataManipulator.FinancialFormula(FinancialFormula.TriangularMovingAverage,period,"Input","Triangular");
+        Chart1.Series["Triangular"].Color = Color.Green;
+        Chart1.Series["Triangular"].ChartType = SeriesChartType.Line;
+        Chart1.Series["Triangular"].BorderWidth = 2;
+        Chart1.Series["Triangular"].ShadowOffset = 1;
+
+        // Remove historical data
+        if( HistoricalData.Checked && !IsStartedFromFirst.Checked )
+        Chart1.DataManipulator.Filter( CompareMethod.LessThanOrEqualTo, Double.Parse(period)-1.0, "Triangular", "Triangular", "X" );
+    }
+    
+    // Calculates weighted moving average
+    if(WeightedMovingAverage.Checked)
+    {
+        Chart1.DataManipulator.FinancialFormula(FinancialFormula.WeightedMovingAverage,period,"Input","Weighted");
+        Chart1.Series["Weighted"].Color = Color.Yellow;
+        Chart1.Series["Weighted"].ChartType = SeriesChartType.Line;
+        Chart1.Series["Weighted"].BorderWidth = 2;
+        Chart1.Series["Weighted"].ShadowOffset = 1;
+    }
+
+    // Remove historical data
+    if( HistoricalData.Checked && !IsStartedFromFirst.Checked )
+        Chart1.DataManipulator.Filter( CompareMethod.LessThanOrEqualTo, Double.Parse(period)-1.0, "Input", "Input", "X" );
+
+}
+...

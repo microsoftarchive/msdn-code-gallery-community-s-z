@@ -1,0 +1,220 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/knockout-2.2.0.js"></script>
+    <script src="~/Scripts/knockout.mapping-latest.js"></script>
+    <script src="~/Scripts/knockout.debug.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+
+    @*<script src="~/Scripts/knockout-2.2.0.js"></script>
+    <script src="@Url.Content("~/Scripts/knockout-2.2.0.debug.js")" type="text/javascript"></script>*@
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <!--Bind the TextBoxes in the Table to the observable properties defined into the ViewModel -->
+                    <table id="tbldml">
+                        <tr>
+                            <td>Doctor Id</td>
+                            <td>
+                                <input type="text" id="txtid" data-bind="value: $root.id" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>user_id</td>
+                            <td>
+                                <input type="text" id="txtuserid" data-bind="value: $root.user_id" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>phone</td>
+                            <td>
+                                <input type="text" id="txtphone" data-bind="value: $root.phone" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>address</td>
+                            <td>
+                                <input type="text" id="txtaddress" data-bind="value: $root.address" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>
+                                <input type="text" id="txtemail" data-bind="value: $root.email" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <!--The click binding has the JavaScirpt methods passed to it-->
+                            <td>
+                                <button data-bind="click :$root.save">Save</button>
+                            </td>
+                            <td>
+                                <button data-bind="click: $root.update">Update</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <div class="FixedContainer">
+                        <!--If the lenght of the Employees is greater than 0 then visible the Table-->
+                        <table data-bind="visible:  doctors().length>0" style="border: double">
+                            <thead>
+                                <tr>
+                                    <td>id</td>
+                                    <td>user_id</td>
+                                    <td>phone</td>
+                                    <td>address</td>
+                                    <td>email</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <!--Iterate through an observableArray using foreach-->
+                            <tbody data-bind="foreach:  doctors">
+                                <tr style="border: solid" data-bind="click: $root.getselecteddoctor" id="updtr">
+                                    <td><span data-bind="text:  id"></span></td>
+                                    <td><span data-bind="text:  user_id"></span></td>
+                                    <td><span data-bind="text: phone"></span></td>
+                                    <td><span data-bind="text: address"></span></td>
+                                    <td><span data-bind="text: email"></span></td>
+                                    <td>
+                                        <button data-bind="click: $root.deleterec">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script type="text/javascript">
+        var doctorVM = function () {
+            //Make the self as 'this' reference
+            var self = this;
+            //Declare observable which will be bind with UI
+            self.id = ko.observable("0");
+            self.user_id = ko.observable("");
+            self.phone = ko.observable("");
+            self.address = ko.observable("");
+            self.email = ko.observable("");
+
+            //The Object which stored data entered in the observables
+            var DoctorData = {
+                id: self.id,
+                user_id: self.user_id,
+                phone: self.phone,
+                address: self.address,
+                email: self.email
+            };
+
+            //Declare an ObservableArray for Storing the JSON Response
+            self.doctors = ko.observableArray([]);
+            //alert('before getDoctors');
+            GetDoctors(); //Call the Function which gets all records using ajax call
+            // alert('after getDoctors');
+            //Function to perform POST (insert Employee) operation
+            self.save = function () {
+                //Ajax call to Insert the Employee
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:55537/api/doctors/DoctorInfo/",
+                    data: ko.toJSON(DoctorData), //Convert the Observable Data into JSON
+                    contentType: "application/json",
+                    success: function (data) {
+                        alert("Record Added Successfully");
+                        self.id(data.id);
+                        alert("The New Employee Id :" + self.id());
+                        GetDoctors();
+                    },
+                    error: function () {
+                        alert("Failed");
+                    }
+                });
+                //Ends Here
+            };
+
+            self.update = function () {
+                var url = "http://localhost:55537/api/doctors/DoctorInfo?id=" + self.id();
+                alert(url);
+                $.ajax({
+                    type: "PUT",
+                    url: url,
+                    data: ko.toJSON(DoctorData),
+                    contentType: "application/json",
+                    success: function (data) {
+                        alert("Record Updated Successfully");
+                        GetDoctors();
+                    },
+                    error: function (error) {
+                        alert(error.status + "<!----!>" + error.statusText);
+                    }
+                });
+            };
+
+            //Function to perform DELETE Operation
+            self.deleterec = function (doctor) {
+                $.ajax({
+                    type: "DELETE",
+                    url: "http://localhost:55537/api/doctors/Delete?id=" + doctor.id,
+                    success: function (data) {
+                        alert("Record Deleted Successfully");
+                        GetDoctors();//Refresh the Table
+                    },
+                    error: function (error) {
+                        alert(error.status + "<--and--> " + error.statusText);
+                    }
+                });
+                // alert("Clicked" + employee.EmpNo)
+            };
+
+            //Function to Read All Employees
+            function GetDoctors() {
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:55537/api/doctors/',
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        alert('hello');
+                        self.doctors(data); //Put the response in ObservableArray
+                        //alert(data.email);
+                    }
+                    //error: function (error) {
+                    //    alert(error.status + "<--and--> " + error.statusText+'prao'+error.getAllResponseHeaders());
+                    //}
+                }).fail(
+                 function (xhr, textStatus, err) {
+                     alert(err.toString());
+                 });
+            }
+
+            //Function to Display record to be updated
+            self.getselecteddoctor = function (doctor) {
+                self.id(doctor.id),
+                self.user_id(doctor.user_id),
+                self.phone(doctor.phone),
+                self.address(doctor.address),
+                self.email(doctor.email)
+            };
+
+
+        };
+        ko.applyBindings(new doctorVM());
+    </script>
+</body>
+</html>

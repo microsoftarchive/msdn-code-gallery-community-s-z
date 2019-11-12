@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UiManagerOutlookAddIn.AddinUtilities", "UiManagerOutlookAddIn.AddinUtilities\UiManagerOutlookAddIn.AddinUtilities.vbproj", "{CD2AAFC8-7BAA-4C2B-898F-CE48B923F732}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UiManagerOutlookAddIn", "UiManagerOutlookAddIn\UiManagerOutlookAddIn.vbproj", "{AA03369F-2AE3-49E3-8C0F-7ABA95482CFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA03369F-2AE3-49E3-8C0F-7ABA95482CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA03369F-2AE3-49E3-8C0F-7ABA95482CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA03369F-2AE3-49E3-8C0F-7ABA95482CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA03369F-2AE3-49E3-8C0F-7ABA95482CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2AAFC8-7BAA-4C2B-898F-CE48B923F732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2AAFC8-7BAA-4C2B-898F-CE48B923F732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2AAFC8-7BAA-4C2B-898F-CE48B923F732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2AAFC8-7BAA-4C2B-898F-CE48B923F732}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

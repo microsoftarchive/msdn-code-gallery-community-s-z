@@ -1,0 +1,41 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+   Dim stripLine As New StripLine()
+   
+   ' Set Strip lines interval
+   stripLine.Interval = 2
+   
+   ' Set Strip Border Line Color
+   stripLine.BorderColor = Color.Black
+   
+   ' Set Strip Width
+   stripLine.StripWidth = 1.0
+   
+   ' Set Strip Back Color
+   stripLine.BackColor = Color.Wheat
+   
+   ' Set Strip Lines Title Alignment
+   stripLine.TextAlignment = StringAlignment.Center
+   
+   ' Set Strip Lines Title Line Alignment
+   stripLine.TextLineAlignment = StringAlignment.Far
+   
+   ' Set Strip Lines Title text
+   stripLine.Text = "Strip lines title"
+   
+   ' Set Strip Lines Title Angle
+   stripLine.TextOrientation = TextOrientation.Rotated180
+   
+   ' Set Strip Lines Title Color
+   stripLine.ForeColor = Color.Red
+   
+   ' Set Strip Lines Title Font
+   stripLine.Font = New Font("Times New Roman", 12, FontStyle.Bold Or FontStyle.Italic)
+   
+   ' Add the strip line to the collection.
+   Chart1.ChartAreas("ChartArea1").AxisX.StripLines.Add(stripLine)
+   
+End Sub 'Page_Load 

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestfulApplication.XamarinForms.Views.MainPageView">
+
+
+   <!--<ContentPage.ToolbarItems>
+      <ToolbarItem Name="Log Out"
+                   
+                   Order="Primary"
+                   Priority="0">
+         -->
+   <!--Command="{Binding LogOut}"-->
+   <!--
+         <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource"
+                        WinPhone="Assets/Logout.png"
+                        Android="ic_action_logout.png" />
+         </ToolbarItem.Icon>
+      </ToolbarItem>
+   </ContentPage.ToolbarItems>-->
+
+   <StackLayout VerticalOptions="FillAndExpand">
+
+      <ListView ItemsSource="{Binding EmployeesList}"
+                ItemTapped="NavigateToDetailsPageView">
+         <ListView.RowHeight>
+            <OnPlatform x:TypeArguments="x:Int32"
+                        iOS="60"
+                        Android="80"
+                        WinPhone="120" />
+         </ListView.RowHeight>
+
+         <ListView.ItemTemplate>
+            <DataTemplate>
+               <ViewCell>
+                  <ViewCell.View>
+                     <Grid Padding="6,4,12,4"
+                           BackgroundColor="Transparent">
+                        <Grid.ColumnDefinitions>
+                           <ColumnDefinition Width="Auto" />
+                           <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--<Image Source="{Binding FullName}"
+                            VerticalOptions="Start"
+                            HorizontalOptions="StartAndExpand">
+                        <Image.WidthRequest>
+                           <OnPlatform x:TypeArguments="x:Double"
+                                       iOS="50"
+                                       Android="50"
+                                       WinPhone="100" />
+                        </Image.WidthRequest>
+
+                        <Image.HeightRequest>
+                           <OnPlatform x:TypeArguments="x:Double"
+                                       iOS="50"
+                                       Android="50"
+                                       WinPhone="100" />
+                        </Image.HeightRequest>
+                     </Image>-->
+
+                        <StackLayout Grid.Column="1"
+                                     BackgroundColor="Teal"
+                                     HorizontalOptions="FillAndExpand"
+                                     Padding="12,12,12,6">
+
+                           <Label Text="{Binding FullName}"
+                                  TextColor="#fffa28d4"
+                                  Font="Large">
+                              <Label.TextColor>
+                                 <OnPlatform x:TypeArguments="Color"
+                                             iOS="#fffa28d4"
+                                             Android="#ffffffff"
+                                             WinPhone="#ffffffff"/>
+                              </Label.TextColor>
+                           </Label>
+
+                           <Label Text="{Binding Department}"
+                                  Font="Medium"
+                                  LineBreakMode="TailTruncation"
+                                  HorizontalOptions="End"/>
+                        </StackLayout>
+                     </Grid>
+                  </ViewCell.View>
+               </ViewCell>
+            </DataTemplate>
+         </ListView.ItemTemplate>
+      </ListView>
+
+      <Button Text="Refresh"
+              Command="{Binding RefreshCommand}"/>
+
+      <Button Text="New"
+              Clicked="NavigateToDetailsPage"/>
+
+   </StackLayout>
+
+</ContentPage>

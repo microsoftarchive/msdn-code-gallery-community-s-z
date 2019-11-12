@@ -1,0 +1,12 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+// Initialize an array of doubles
+double [] yval = { 2,6,4,5,3};
+
+// Initialize an array of string
+string [] xval = { "Peter", "Andrew", "Julie", "Mary", "Dave"};
+
+// Bind the double array to the Y axis points of the Default data series
+chart1.Series["Series 1"].Points.DataBindXY(xval,yval);
+...

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Products page</title>
+    <script src="/angular1-app/lib/jquery-2.1.1.js"></script>
+    <script src="/angular1-app/lib/jquery.signalR-2.2.2.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="/angular1-app/lib/angular.js"></script>
+    <script src="/angular1-app/app.module.js"></script>
+    <script src="/angular1-app/products/products.service.js"></script>
+    <script src="/angular1-app/products/products.controller.js"></script>
+    <link rel="stylesheet" href="/angular1-app/css/productspage.css" />
+</head>
+<body ng-app="application" ng-controller="productsController as prodCtrl">
+    <form id="form1">
+        <div class="tdiv">
+            <span id="webSocketStatusSpan"></span>
+            <table id="ProdTable" class="itable">
+                <tr id="ProdTableHd">
+                    <th>Product Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr ng-model="product" ng-repeat="product in prodCtrl.products"
+                    ng-click="prodCtrl.tableRowClick(product)"
+                    ng-class="{srow: product.id === prodCtrl.selectedProduct.id}">
+                    <td>
+                        {{product.id}}
+                    </td>
+                    <td>
+                        {{product.name}}
+                    </td>
+                    <td>
+                        {{product.description}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="ediv">
+            <ul class="elist">
+                <li>
+                    <span>Product Id</span>
+                    <input type="text" ng-disabled="!prodCtrl.newProductAdded"
+                           ng-model="prodCtrl.selectedProduct.id" />
+                </li>
+                <li>
+                    <span>Name</span>
+                    <input type="text" ng-model="prodCtrl.selectedProduct.name"
+                           id="ProductNameText" />
+                </li>
+                <li>
+                    <span>Description</span>
+                    <input type="text" ng-model="prodCtrl.selectedProduct.description"
+                           id="ProductDescriptionText" />
+                </li>
+            </ul>
+            <input type="button" ng-disabled="prodCtrl.newProductAdded == true"
+                   ng-click="prodCtrl.addNewProduct()"
+                   value="Add record" />
+            <input type="button" ng-disabled="!prodCtrl.selectedProduct"
+                   ng-click="prodCtrl.saveProduct()"
+                   value="Save record" />
+            <input type="button" ng-disabled="prodCtrl.selectedProduct == null"
+                   ng-click="prodCtrl.deleteProduct()"
+                   value="Delete record" />
+        </div>
+        <br />
+        <div class="mdiv">
+            <ul>
+                <li ng-model="prodCtrl.message" ng-repeat="message in prodCtrl.messagesList">
+                    {{message.dateString + ' ' + message.statusString}}
+                </li>
+            </ul>
+        </div>
+    </form>
+    <div ng-class="{updprocess: prodCtrl.applicationBlocked}"></div>
+</body>
+</html>

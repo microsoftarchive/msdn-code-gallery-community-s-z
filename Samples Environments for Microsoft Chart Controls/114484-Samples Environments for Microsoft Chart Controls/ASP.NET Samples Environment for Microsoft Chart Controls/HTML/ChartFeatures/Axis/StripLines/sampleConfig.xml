@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Axis" Priority="750">
+  <Title>Strip Line Appearance</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Using Strip Line Appearance</ShortBlurb> 
+  <Content>StripLines.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+	<Keyword>Strip Lines</Keyword>
+	<Keyword>Strip Lines, Appearance</Keyword>
+	<Keyword>Appearance, Strip Lines</Keyword>
+  </Keywords>
+</SampleConfig>
+</SampleConfigs>

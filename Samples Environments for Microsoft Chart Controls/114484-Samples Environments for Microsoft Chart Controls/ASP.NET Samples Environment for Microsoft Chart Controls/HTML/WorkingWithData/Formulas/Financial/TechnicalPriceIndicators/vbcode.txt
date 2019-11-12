@@ -1,0 +1,88 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+'/ <summary>
+'/ This method calculates a different indicator if corresponding 
+'/ item in the combo box is selected.
+'/ </summary>
+Private Sub Calculations()
+   ' Set Formula Name
+   Dim formulaName As String = FormulaName.SelectedItem.Value
+   Dim formula As FinancialFormula = Enum.Parse(typeof(FinancialFormula),formulaName,true)
+
+   ' Formulas with one input value
+   If formulaName = "DetrendedPriceOscillator" Or formulaName = "MACD" Or formulaName = "Performance" Or formulaName = "RateOfChange" Or formulaName = "TRIX" Then
+      Chart1.DataManipulator.FinancialFormula(formula, "10", "Input:Y4", "Indicators")
+   
+   ' Relative Strength Index
+   Else
+      If formulaName = "RelativeStrengthIndex" Then
+         
+         Chart1.DataManipulator.FinancialFormula(formula, "10", "Input:Y4", "Indicators")
+         
+         ' Set minimum and maximum for Y axis
+         Chart1.ChartAreas("Indicator").AxisY.Minimum = 0
+         Chart1.ChartAreas("Indicator").AxisY.Maximum = 100
+         
+         ' Create strip lines used with Relative strength index.
+         Dim stripLine As New StripLine()
+         Chart1.ChartAreas("Indicator").AxisY.StripLines.Add(stripLine)
+         stripLine.Interval = 70
+         stripLine.StripWidth = 30
+         stripLine.BackColor = Color.FromArgb(128, 255, 255, 0)
+         stripLine.BorderColor = Color.Teal
+      
+      
+      ' Williams %R
+      Else
+         If formulaName = "WilliamsR" Then
+            
+            Chart1.DataManipulator.FinancialFormula(formula, "Input:Y,Input:Y2,Input:Y4", "Indicators")
+            
+            ' Set minimum and maximum for Y axis
+            Chart1.ChartAreas("Indicator").AxisY.Minimum = - 100
+            Chart1.ChartAreas("Indicator").AxisY.Maximum = 0
+            
+            ' Create strip lines used with Williams %R index.
+            Dim stripLine As New StripLine()
+            Chart1.ChartAreas("Indicator").AxisY.StripLines.Add(stripLine)
+            stripLine.Interval = 80
+            stripLine.StripWidth = 20
+            stripLine.BackColor = Color.FromArgb(128, 255, 255, 0)
+            stripLine.BorderColor = Color.Teal
+         
+         
+         ' Formulas with two input value
+         Else
+            If formulaName = "MassIndex" Or formulaName = "VolatilityChaikins" Or formulaName = "Performance" Then
+               Chart1.DataManipulator.FinancialFormula(formula, "20", "Input:Y,Input:Y2", "Indicators")
+            
+            ' Standard deviation
+            Else
+               If formulaName = "StandardDeviation" Then
+                  Chart1.DataManipulator.FinancialFormula(formula, "15", "Input:Y4", "Indicators")
+               
+               ' StochasticIndicator
+               Else
+                  If formulaName = "StochasticIndicator" Then
+                     
+                     Chart1.DataManipulator.FinancialFormula(formula, "15", "Input:Y,Input:Y2,Input:Y4", "Indicators,SMA")
+                     
+                     ' Set attributes for Simple moving average series.
+                     Chart1.Series("SMA").ChartType = SeriesChartType.Line
+                     Chart1.Series("SMA").Color = Color.Yellow
+                     Chart1.Series("SMA").ChartArea = "Indicator"
+                     Chart1.Series("SMA").BorderWidth = 2
+                  
+                  ' All other formulas
+                  Else
+                     Chart1.DataManipulator.FinancialFormula(formula, "Input:Y,Input:Y2,Input:Y4", "Indicators")
+                  End If
+               End If 
+            End If ' Set minimum for X axis
+         End If
+      End If 
+   End If
+   Chart1.ChartAreas("Indicator").AxisX.Minimum = DateTime.Parse("1/1/2002").ToOADate()
+End Sub 'Calculations
+...

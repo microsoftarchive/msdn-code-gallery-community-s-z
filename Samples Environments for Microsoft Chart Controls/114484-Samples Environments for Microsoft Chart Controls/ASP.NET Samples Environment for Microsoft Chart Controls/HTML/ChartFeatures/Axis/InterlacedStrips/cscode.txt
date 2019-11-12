@@ -1,0 +1,13 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    
+    // Enable interlaced strip lines
+    Chart1.ChartAreas["ChartArea1"].AxisY.IsInterlaced = true;
+       
+    // Set Strips Color
+    Chart1.ChartAreas["ChartArea1"].AxisY.InterlacedColor = Color.FromArgb(120, Color.Red);
+
+}

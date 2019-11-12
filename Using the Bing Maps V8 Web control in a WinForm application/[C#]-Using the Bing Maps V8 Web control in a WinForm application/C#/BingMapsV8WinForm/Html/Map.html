@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <!-- Force the browser to use the latest version of IE available on the computer. -->
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Reference to the Bing Maps SDK -->
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+
+    <script type='text/javascript'>
+    var map, searchManager;
+
+    function GetMap()
+    {
+        map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'Your Bing Maps Key'
+        });
+
+        //As the map view changes, update the WinForm app of the center and zoom level of the map.
+        Microsoft.Maps.Events.addHandler(map, 'viewchange', updateMapViewInfo);
+        
+        //Update the map view info with the inital map view.
+        updateMapViewInfo();
+    }
+
+    function updateMapViewInfo() {
+        //Make sure that there is an external endpoint that can be accessed.
+        if (window.external) {
+            var center = map.getCenter();
+
+            //Call the UpdateMapViewInfo method in the Form1 class.
+            window.external.UpdateMapViewInfo(center.latitude, center.longitude, map.getZoom());
+        }
+    }
+
+    //A function that takes in a search query, geocodes it and displays it on the map.
+    function search(query) {
+        //If search manager is not defined, load the search module.
+        if (!searchManager) {
+            //Create an instance of the search manager and call the geocodeQuery function again.
+            Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
+                searchManager = new Microsoft.Maps.Search.SearchManager(map);
+                search(query);
+            });
+        } else {
+            var searchRequest = {
+                where: query,
+                callback: function (r) {
+                    //Add the first result to the map and zoom into it.
+                    if (r && r.results && r.results.length > 0) {
+                        var pin = new Microsoft.Maps.Pushpin(r.results[0].location);
+                        map.entities.push(pin);
+
+                        map.setView({ bounds: r.results[0].bestView });
+                    }
+                },
+                errorCallback: function (e) {
+                    //If there is an error, alert the user about it.
+                    alert("No results found.");
+                }
+            };
+
+            //Make the geocode request.
+            searchManager.geocode(searchRequest);
+        }
+    }
+    </script>
+    <style>
+        body, html {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myMap"></div>
+</body>
+</html>

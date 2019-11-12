@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIAClientSample.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Highlight.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkProcessor.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Highlight.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkProcessor.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIAClientSample.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UIAClientSample.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIAClientSample.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="UIAClientSample.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{891ba98c-5024-465b-9744-6fb78897bb30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{9d063219-a0bf-44ea-9724-f7f976e5e75e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

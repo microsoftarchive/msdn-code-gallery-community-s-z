@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<LINK href="../../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<p>
+			&nbsp;<br />
+			Serialization involves the saving of chart properties, usually to disk.&nbsp; 
+			Deserialization&nbsp;involves&nbsp;the&nbsp;retrieval of&nbsp;serialized data, 
+			followed by the&nbsp;loading of this data&nbsp;into the Chart control.</p>
+		<p>Serialization enables you to persist and reuse a chart's appearance 
+			properties and data. This can save you time when you regularly create charts 
+            with the same appearance settings or from a specific data set.</p>
+		<p>
+                        Serialization&nbsp;is 
+				accomplished using a ChartSerializer object. You can access it via the Chart.Serializer property.</p>
+        <h3>
+            Format of Serialized Data</h3>
+        <BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+            <p>
+                                The format of serialized data can be either XML or Binary. The advantage of XML 
+					is that serialized data is readable, while the advantage of binary is that the 
+					serialized data takes less storage space.</p>
+        </BLOCKQUOTE>
+        <h3>
+            Saving and Loading Data</h3>
+        <BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+            <p>
+                Save chart data by the Save method, and load the the serialized data into a Chart control using the Load method.</p>
+            <p>
+                When serializing chart data, note that only properties with 
+						nvalues are serialized.</p>
+        </BLOCKQUOTE>
+						<b>
+        <h3>
+            Serializable Chart Properties</h3>
+        </b>
+        <BLOCKQUOTE>
+            <p>
+                There are three methods by which chart data can be marked as serializable:</p>
+            <OL>
+                <LI>Without explicitly specifying any serializable properties. This causes all chart properties with non-default values (including chart data) 
+                        to be serialized.</LI>
+                <LI>Setting the Content property. This groups the chart properties to be serialized 
+						into categories (data, appearance, and so on).</LI>
+     </LI>
+                <LI>Set the SerializableContent property, which is a comma-separated list of all 
+						chart properties to be serialized.</LI>
+            </OL>
+        </BLOCKQUOTE>
+						<b>
+        <h3>
+            Non-Serializable Chart Properties</h3>
+        </b>
+        <BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+            <p>
+                Non-serializable properties are set using the NonSerializableContent property. 
+					This is a comma-separated listing of all chart properties not to be serialized, 
+					and wildcards can be used in the string expression (in the same manner as the 
+					SerializableContent property).</p>
+        </BLOCKQUOTE>
+	</body>
+</html>

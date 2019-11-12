@@ -1,0 +1,10 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+	
+    ' Plot series points using their index instead of their X values
+    Chart1.Series("Default").IsXValueIndexed = true
+
+End Sub 'Page_Load 
+...

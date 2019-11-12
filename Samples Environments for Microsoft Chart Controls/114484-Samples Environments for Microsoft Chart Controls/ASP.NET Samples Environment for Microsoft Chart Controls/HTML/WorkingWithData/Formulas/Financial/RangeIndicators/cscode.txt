@@ -1,0 +1,24 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+/// <summary>
+/// This method calculates Envelopes or Bollinger Bands 
+/// formulas 
+/// </summary>
+private void Calculations()
+{
+    // Set Formula Name
+    string formulaName = FormulaName.SelectedItem.Value;
+
+    // Formulas with one input value
+    Chart1.DataManipulator.FinancialFormula(FinancialFormula.MovingAverage,"10","Input:Y","Moving Average");
+
+    // Bollinger Bands
+    if( formulaName == "BollingerBands" )
+        Chart1.DataManipulator.FinancialFormula(formula,"10,2","Input:Y","Indicators,Indicators:Y2");
+        
+    // Envelopes
+    else if ( formulaName == "Envelopes" )
+        Chart1.DataManipulator.FinancialFormula(formula,"10,5","Input:Y","Indicators,Indicators:Y2");
+    }  
+...

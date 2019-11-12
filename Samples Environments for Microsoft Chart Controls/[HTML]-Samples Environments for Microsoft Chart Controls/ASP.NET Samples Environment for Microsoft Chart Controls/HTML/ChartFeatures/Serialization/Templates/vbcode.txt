@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(object sender, System.EventArgs e)
+
+    If Template.SelectedItem.Value = "None" Then
+        ' Reset chart appearance
+        Chart1.Serializer.Content = SerializationContents.Appearance
+        Chart1.Serializer.Reset()
+    Else
+        ' Load template		
+        Chart1.LoadTemplate(Template.SelectedItem.Value + ".xml")
+    End If
+
+End Sub
+...

@@ -1,0 +1,25 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+	' Set chart title font
+	FontStyle fontStyle = FontStyle.Regular
+	Chart1.Annotations(0).Font = New Font("Arial", 12, fontStyle)
+	
+	' Set chart title color
+	Chart1.Annotations(0).ForeColor = Color.Black
+
+	' Set chart title back color
+	Chart1.Annotations(0).BackColor = Color.PaleYellow
+
+	' Set chart title border color
+	Chart1.Annotations(0).LineColor = Color.DimGray
+
+	' Set chart title Tooltips color
+	Chart1.Annotations(0).ToolTip = "I am a Chart Annotation!"
+
+	' Set the Shadow Offset
+	Chart1.Annotations(0).ShadowOffset = 4
+
+End Sub 'Page_Load 

@@ -1,0 +1,12 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+ 
+// Merge data from 4 different series into one series that uses 4 Y values
+chart1.DataManipulator.CopySeriesValues("High:Y,Low:Y,Open:Y,Close:Y", 
+    "Stock:Y1,Stock:Y2,Stock:Y3,Stock:Y4");
+
+// Set stock series attributes
+chart1.Series["Stock"].ChartType = SeriesChartType.Stock;
+chart1.Series["Stock"].BorderWidth = 2;
+chart1.Series["Stock"].ShadowOffset = 2; 
+...

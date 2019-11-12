@@ -1,0 +1,41 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+private void Calculations()
+{
+    // Set Formula Name
+    string formulaName = FormulaName.Text;
+	FinancialFormula formula = (FinancialFormula) Enum.Parse(typeof(FinancialFormula),formulaName,true);
+
+    // Easy of movement
+    if( formulaName == "EaseOfMovement" )
+    {
+        chart1.DataManipulator.FinancialFormula(formula,"Input:Y,Input:Y2,Volume","Indicators");
+    }
+    
+    // Money Flow
+    else if( formulaName == "MoneyFlow" )
+    {
+        chart1.DataManipulator.FinancialFormula(formula,"20","Input:Y,Input:Y2,Input:Y4,Volume","Indicators");
+        chart1.ChartAreas["Indicator"].AxisX.Minimum = DateTime.Parse("1/1/2002").ToOADate();
+    }
+    
+    // Chaikin Oscillator
+    else if( formulaName == "ChaikinOscillator" )
+    {
+        chart1.DataManipulator.FinancialFormula(formula,"5,12","Input:Y,Input:Y2,Input:Y4,Volume","Indicators");
+        chart1.ChartAreas["Indicator"].AxisX.Minimum = DateTime.Parse("1/1/2002").ToOADate();
+    }
+    
+    // Formulas which use one price and volume.
+    else if( formulaName == "NegativeVolumeIndex" || formulaName == "OnBalanceVolume" || formulaName == "PositiveVolumeIndex" || formulaName == "PriceVolumeTrend" )
+    {
+        chart1.DataManipulator.FinancialFormula(formula,"100","Input:Y4,Volume","Indicators");
+    }
+    // All other formulas.
+    else
+    {
+        chart1.DataManipulator.FinancialFormula(formula,"Input:Y,Input:Y2,Input:Y4,Volume","Indicators");
+    }
+}
+...

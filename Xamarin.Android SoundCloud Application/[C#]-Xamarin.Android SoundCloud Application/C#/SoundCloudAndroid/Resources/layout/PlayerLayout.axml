@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/textTitlePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="19dp"
+            android:gravity="center_horizontal"
+            android:textColor="#212121" />
+        <TextView
+            android:id="@+id/textSubTitlePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:gravity="center_horizontal"
+            android:textColor="#9E9E9E" />
+        <FFImageLoading.Views.ImageViewAsync
+            android:id="@+id/imgThumbail"
+            android:layout_height="300dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:keepScreenOn="true" />
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="#7B1FA2"
+            android:thumbTint="#7B1FA2" />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/currentDuration"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#616161"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:textSize="7dp" />
+            <TextView
+                android:id="@+id/totalDuration"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#616161"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:textSize="7dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/imgDownloadPlayer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mybuttonshape"
+                android:layout_gravity="top"
+                android:tint="#757575"
+                android:layout_marginBottom="10dp" />
+            <ImageButton
+                android:id="@+id/imgPreviousPlayer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/mybuttonshape"
+                android:layout_gravity="center_vertical"
+                android:tint="#757575"
+                android:layout_marginRight="40dp" />
+            <ImageButton
+                android:id="@+id/imgPlayorPausePlayer"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/mybuttonshape"
+                android:layout_gravity="top"
+                android:tint="#757575"
+                android:layout_marginRight="40dp" />
+            <ImageButton
+                android:id="@+id/imgNextPlayer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/mybuttonshape"
+                android:layout_gravity="center_vertical"
+                android:tint="#757575" />
+            <ImageButton
+                android:id="@+id/imgRepeatPlayer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mybuttonshape"
+                android:layout_gravity="top"
+                android:tint="#757575"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

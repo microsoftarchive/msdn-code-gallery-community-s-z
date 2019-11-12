@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Illusion.Sales.Views.StoreView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+               Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="490"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="gridCustomer" CanUserAddRows="False" ItemsSource="{Binding StoreCollection}" Grid.Row="1"
+              CanUserDeleteRows="False" SelectionMode="Single" AutoGenerateColumns="False"
+              HorizontalAlignment="Stretch">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="1*" Header="Store ID" Binding="{Binding StoreID}"/>
+                <DataGridTextColumn Width="1*" Header="Name"  Binding="{Binding Name}"/>
+                <DataGridTextColumn Width="1*" Header="SalesOrderNumber"  Binding="{Binding SalesOrderNumber}"/>
+                <DataGridTextColumn Width="1*" Header="Order Date"  Binding="{Binding OrderDate}"/>
+                <DataGridTextColumn Width="1*" Header="Total Due"  Binding="{Binding TotalDue}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

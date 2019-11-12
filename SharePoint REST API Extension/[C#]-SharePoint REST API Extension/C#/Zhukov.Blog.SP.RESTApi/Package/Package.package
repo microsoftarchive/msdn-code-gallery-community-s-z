@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c4016f6d-f0f0-4df2-9cbd-8241e8c93426" solutionId="c4016f6d-f0f0-4df2-9cbd-8241e8c93426" resetWebServer="false" sharePointProductVersion="15.0" name="Zhukov.Blog.SP.RESTApi" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="a5203a66-f0c8-4e4e-996f-d260ce97e4e0" />
+  </projectItems>
+</package>

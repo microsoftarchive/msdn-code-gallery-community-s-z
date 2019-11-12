@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WCF_NUnit_Tests_Rheno_Mocks.MyService" CodeBehind="MyService.svc.cs" %>

@@ -1,0 +1,9 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+// Calculate Covariance
+double covariance = chart1.DataManipulator.Statistics.Covariance( "FirstGroup", "SecondGroup" ); 
+
+// Calculate Correlation
+double correlation = chart1.DataManipulator.Statistics.Correlation( "FirstGroup", "SecondGroup" ); 
+...

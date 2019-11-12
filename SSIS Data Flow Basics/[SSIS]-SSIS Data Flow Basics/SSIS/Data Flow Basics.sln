@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Data Flow Basics", "Data Flow Basics\Data Flow Basics.dtproj", "{BFDE54BC-BAF0-4461-8AFF-FE05BD3CB03B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFDE54BC-BAF0-4461-8AFF-FE05BD3CB03B}.Development|Default.ActiveCfg = Development
+		{BFDE54BC-BAF0-4461-8AFF-FE05BD3CB03B}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

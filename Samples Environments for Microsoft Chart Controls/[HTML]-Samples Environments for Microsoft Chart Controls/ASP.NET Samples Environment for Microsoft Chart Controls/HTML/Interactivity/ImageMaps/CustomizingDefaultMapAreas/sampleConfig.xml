@@ -1,0 +1,39 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "ImageMaps">
+	<Title>Customizing Default Image Maps</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Customizing Default Image Maps</ShortBlurb> 
+
+	<Content>CustomizingDefaultMapAreas.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Image Map, Customizing Default</Keyword>
+  	</Keywords> 
+ 
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "Customizations">
+	<Title>Customizing Default Image Maps</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Customizing Default Image Maps</ShortBlurb> 
+
+	<Content>CustomizingDefaultMapAreas.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Image Map, Customizing Default</Keyword>
+  	</Keywords> 
+	</SampleConfig>
+
+</SampleConfigs>

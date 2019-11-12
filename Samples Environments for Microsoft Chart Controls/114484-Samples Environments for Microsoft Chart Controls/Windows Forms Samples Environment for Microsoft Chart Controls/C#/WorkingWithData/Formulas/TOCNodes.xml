@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" ?> 
+<TOCNodes>
+
+  
+       <TOCNode ID="Formulas" ParentNodeID="PopulatingChartData" Priority="300">
+    <Title>Formulas</Title>
+  </TOCNode>  
+   
+   <TOCNode ID="Statistical" ParentNodeID="Formulas" Priority="100">
+		<Title>Statistical</Title>
+   </TOCNode>
+   
+      <TOCNode ID="FinancialFormulas" ParentNodeID="Formulas" Priority="100">
+		<Title>Financial</Title>
+   </TOCNode>
+
+
+</TOCNodes>

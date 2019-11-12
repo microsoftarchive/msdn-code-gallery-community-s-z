@@ -1,0 +1,24 @@
+﻿<!--
+// (c) Copyright Microsoft Corporation.
+// This source is subject to the Microsoft Public License (Ms-PL).
+// Please see http://go.microsoft.com/fwlink/?LinkID=131993 for details.
+// All other rights reserved.
+-->
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/client/2007"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:charting="clr-namespace:Microsoft.Windows.Controls.DataVisualization.Charting">
+    <Style TargetType="charting:ScatterSeries">
+        <Setter Property="MarkerHeight" Value="8"/>
+        <Setter Property="MarkerWidth" Value="8"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="charting:ScatterSeries">
+                    <Canvas x:Name="PlotArea"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,161 @@
+﻿@*
+// -----------------------------------------------------------------------------------------
+// <copyright file="InsertTableEntities.cshtml" company="Microsoft">
+//    Copyright 2014 Microsoft Corporation
+// 
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//      http://www.apache.org/licenses/LICENSE-2.0
+// 
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+// </copyright>
+// -----------------------------------------------------------------------------------------
+*@
+
+@{
+    ViewBag.Title = "InsertTableEntities";
+}
+
+<body>
+    <p>Enter a table name to create</p>
+    <input type="text" id="TableName" />
+    <br />
+    <input type="button" id="CreateTable" value="CreateTable" />
+    <p>Note that table creation is proxied through the service and is not a direct Windows Azure Storage request from JavaScript.</p>
+    <br />
+    <label id="tableStatus" style="background-color:lightyellow"></label>
+    <br />
+    <p>Enter Entity Details:</p>
+    <table id="dataTable" width="350" border="1">
+        <tr>
+            <td> 1 </td>
+            <td><input type="text" id="key1" value="PartitionKey" disabled /></td>
+            <td> <input type="text" id="val1" /> </td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><input type="text" id="key2" value="RowKey" disabled /></td>
+            <td> <input type="text" id="val2" /> </td>
+        </tr>
+    </table>
+    
+    <input type="button" value="Add a new property" onclick="addEntity('dataTable')" />
+    <br />
+    <input type="button" id="SaveChanges" value="Insert Entity" onclick="saveChanges('dataTable')" />
+    <br />
+    <p>Insert Entity is done through an AJAX request directly against Windows Azure Storage using SAS.</p>
+</body>
+
+<script>
+    var inputcount = 3;
+    function addEntity(tableID) {
+        var table = document.getElementById(tableID);
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+
+        var cell2 = row.insertCell(0);
+        cell2.innerHTML = rowCount + 1;
+
+        var cell1 = row.insertCell(1);
+        var element1 = document.createElement("input");
+        element1.type = "text";
+        element1.name = "name";
+        element1.id = "key" + inputcount;
+        cell1.appendChild(element1);
+
+        var cell3 = row.insertCell(2);
+        var element2 = document.createElement("input");
+        element2.type = "text";
+        element2.name = "value";
+        element2.id = "val" + inputcount;
+        cell3.appendChild(element2);
+
+        inputcount++;
+    }
+
+    function createTableIfNotExists() {
+        var createTableUri = "@Url.Action("CreateTableIfNotExists", "Home")" + "?tableName=" + document.getElementById("TableName").value;
+
+        // This ajax call goes to the server side of the website to create the table.
+        $.ajax({
+            type: 'POST',
+            url: createTableUri,
+            success: function (res, status, xhr) {
+                document.getElementById("tableStatus").innerHTML = xhr.responseText;
+            },
+            error: function (res, status, xhr) {
+                document.getElementById("tableStatus").innerHTML = xhr.responseText;
+            }
+        });
+    }
+
+    // Saves the changes by adding the required table entity to the table or changing the existing entity
+    function saveChanges(tableID) {
+
+        var tableName = document.getElementById("TableName").value;
+        var tableSasActionUri = "@Url.Action("GetTableSasUrl", "Home")" + "?tableName=" + tableName;
+        if (tableName == "") {
+            alert("please enter table name");
+            return;
+        }
+
+        function setHeader(xhr) {
+            xhr.setRequestHeader('x-ms-version', '2013-08-15');
+            xhr.setRequestHeader('MaxDataServiceVersion', '3.0');
+            xhr.setRequestHeader('Accept', 'application/json;odata=nometadata');
+            xhr.setRequestHeader('Content-Type', 'application/json;odata=nometadata');
+        }
+
+        // This function sends a request to windows azure storage to add table entities
+        // using table SAS, this request is a CORS request.
+        function addTableEntity(jsonString, tableSasUrl) {
+            $.ajax({
+                type: 'POST',
+                datatype: "json",
+                data: jsonString,
+                url: tableSasUrl,
+                beforeSend: setHeader,
+                success: function (res, status, xhr) {
+                    alert("Updated the table using ajax");
+                },
+                error: function (res, status, xhr) {
+                    alert("Failed in updating the table");
+                }
+            });
+        }
+
+        var table = document.getElementById(tableID);
+        var rowCount = table.rows.length;
+        var dict = {};
+
+        for (var i = 1; i < rowCount + 1; i++) {
+            var key = document.getElementById("key" + i).value;
+            var value = document.getElementById("val" + i).value;
+            dict[key] = value;
+        }
+
+        $.ajax({
+            type: 'GET',
+            url: tableSasActionUri,
+            success: function (res, status, xhr) {
+                // Called into GetTableSas to generate the SAS for the specified table with all pk and rk ranges 
+                if (xhr.responseText != "") {
+                    addTableEntity(JSON.stringify(dict), xhr.responseText);
+                }
+                else {
+                    alert("failed to generate the SAS for the specified table");
+                }
+            }
+        });
+
+
+    }
+
+    document.getElementById('CreateTable').addEventListener('click', createTableIfNotExists, false);
+
+</script>

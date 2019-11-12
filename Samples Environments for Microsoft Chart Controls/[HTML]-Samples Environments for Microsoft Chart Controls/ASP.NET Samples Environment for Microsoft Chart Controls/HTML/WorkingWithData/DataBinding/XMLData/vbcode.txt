@@ -1,0 +1,31 @@
+Imports System.Web.UI.DataVisualization.Charting
+Imports System.Data
+Imports System.Data.OleDb
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' resolve the address to the XML document
+    Dim fileNameString As String = Me.MapPath(".")
+    Dim fileNameSchema As String = Me.MapPath(".")
+    fileNameString += "..\..\..\data\data.xml"
+    fileNameSchema += "..\..\..\data\data.xsd"
+
+    ' Initializes a new instance of the DataSet class
+    Dim custDS As New DataSet()
+
+    ' Read XML schema into the DataSet.
+    custDS.ReadXmlSchema(fileNameSchema)
+
+    ' Read XML schema and data into the DataSet.
+    custDS.ReadXml(fileNameString)
+
+    ' Initializes a new instance of the DataView class
+    Dim firstView As New DataView(custDS.Tables(0))
+
+	' Since the DataView implements and IEnumerable, pass the reader directly into
+	' the DataBindTable method with the name of the column used for the X value.	
+	Chart1.DataBindTable(firstView, "Name")
+
+End Sub 'Page_Load
+...

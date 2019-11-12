@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<LINK href="../../Styles.css" type="text/css" rel="stylesheet"></head>
+	<body>
+		<H3>Rendering Basics</H3>
+		<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+			<p>The easiest way to render a chart is as a static image in one of several 
+				standard formats.&nbsp;This is appropriate for&nbsp;most purposes. However, if 
+				chart data changes frequently at the server, use 
+				binary streaming to efficiently store images.</p>
+			<p>When binary streaming is used, the chart image is sent directly to the client. 
+					When the browser requests the image of the chart, it does this in the same manner as when it 
+					requests a static image from the web server.&nbsp;This is&nbsp;particularly 
+					useful when the chart image is frequently&nbsp;modified at run time or 
+					when a web farm used.
+				</p>
+		</BLOCKQUOTE>
+		<H3 dir="ltr">
+            Image File Management</H3>
+        <BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">
+            <p>
+                                When rendering a chart picture as an image,&nbsp;the chart picture is 
+				automatically saved to a file. The <STRONG>ImageLocation</STRONG>
+			property determines the absolute or relative location and name of this file (see the 
+                figure below), 
+			and the file extension is automatically added, depending on the image type 
+			specified.
+            <p>
+                <IMG src="ImgLocation.PNG"></p>
+            <p>
+                By managing the location and name of the file using the  <STRONG>ImageLocation</STRONG>
+				property, you can:&nbsp;
+            <UL>
+                <LI>Manage the maximum allowable number of image files that are generated.
+                <LI>Insert a warning into the system event log if these temporary image files are overwritten within a specified 
+                    length of time.
+                <LI>Name files with a UID extension. </LI>
+            </UL>
+        </BLOCKQUOTE>
+	</body>
+</html>

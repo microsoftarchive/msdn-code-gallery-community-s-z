@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <FFImageLoading.Views.ImageViewAsync
+        android:id="@+id/image"
+        android:layout_height="70dp"
+        android:layout_width="70dp"
+        android:padding="14dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <TextView
+            android:id="@+id/textviewSubItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="left"
+            android:textStyle="normal"
+            android:textSize="9dp"
+            android:textColor="#ff393939"
+            android:paddingLeft="10dp"
+            android:paddingBottom="1dp"
+            android:paddingTop="3dp"
+            android:fontFamily="sans-serif-light" />
+        <TextView
+            android:id="@+id/textviewItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            android:textColor="#ff393939"
+            android:paddingLeft="10dp"
+            android:fontFamily="sans-serif-light" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl">
+            <ImageView
+                android:id="@+id/imgIconPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="7dp" />
+            <TextView
+                android:id="@+id/textviewPlayingCount"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:gravity="left"
+                android:textStyle="normal"
+                android:textSize="9dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

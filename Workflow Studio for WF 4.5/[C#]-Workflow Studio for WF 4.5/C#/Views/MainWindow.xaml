@@ -1,0 +1,104 @@
+﻿<!--
+ Copyright (c) Microsoft Corporation. All rights reserved.
+ THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, 
+ INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+ Third Party Code: This file is based on or incorporates material from the projects listed below (collectively, “Third Party Code”).
+ Microsoft is not the original author of the Third Party Code. The original copyright notice, as well as the license under which 
+ Microsoft received such Third Party Code, are set forth below. Such licenses and notices are provided for informational purposes only.
+ Microsoft, not the third party, licenses the Third Party Code to you under the terms set forth in the EULA for AvalonDock.
+ Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted under this agreement,
+ whether by implication, estoppel or otherwise.  
+
+ AvalonDock project, available at http://avalondock.codeplex.com. Copyright (c) 2007-2009, Adolfo Marinucci. All rights reserved.
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+ IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, 
+ OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+!-->
+<Window x:Class="Microsoft.Consulting.WorkflowStudio.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+        xmlns:sapt="clr-namespace:System.Activities.Presentation.Toolbox;assembly=System.Activities.Presentation"
+        xmlns:properties="clr-namespace:Microsoft.Consulting.WorkflowStudio.Properties"
+        Title="{x:Static properties:Resources.MainWindowTitle}" Height="550" Width="825">
+    
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding Path=NewWorkflowCommand}" Modifiers="Control" Key="N"/>
+        <KeyBinding Command="{Binding Path=NewServiceCommand}" Modifiers="Shift+Control" Key="N"/>
+        <KeyBinding Command="{Binding Path=OpenWorkflowCommand}" Modifiers="Control" Key="O"/>
+        <KeyBinding Command="{Binding Path=SaveWorkflowCommand}" Modifiers="Control" Key="S"/>
+        <KeyBinding Command="{Binding Path=SaveAllWorkflowsCommand}" Modifiers="Shift+Control" Key="S"/>
+        <KeyBinding Command="{Binding Path=ExitCommand}" Modifiers="Shift+Alt" Key="F4"/>
+        <KeyBinding Command="{Binding Path=StartWithDebuggingCommand}" Modifiers="" Key="F5"/>
+        <KeyBinding Command="{Binding Path=StartWithoutDebuggingCommand}" Modifiers="Control" Key="F5"/>
+        <KeyBinding Command="{Binding Path=AbortCommand}" Modifiers="Shift" Key="F5"/>
+    </Window.InputBindings>
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition/>
+            <RowDefinition Height="32"/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="{x:Static properties:Resources.FileMenu}">
+                <MenuItem Header="{x:Static properties:Resources.FileMenuNewWorkflow}" Command="{Binding Path=NewWorkflowCommand}" InputGestureText="Ctrl+N"/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuNewService}" Command="{Binding Path=NewServiceCommand}" InputGestureText="Shift+Ctrl+N"/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuOpen}" Command="{Binding Path=OpenWorkflowCommand}" InputGestureText="Ctrl+O"/>
+                <Separator/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuSave}" Command="{Binding Path=SaveWorkflowCommand}" InputGestureText="Ctrl+S"/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuSaveAs}" Command="{Binding Path=SaveAsWorkflowCommand}"/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuSaveAll}" Command="{Binding Path=SaveAllWorkflowsCommand}" InputGestureText="Shift+Ctrl+S"/>
+                <Separator/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuAddReference}" Command="{Binding Path=AddReferenceCommand}"/>
+                <Separator/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuClose}" Command="{Binding Path=CloseWorkflowCommand}"/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuCloseAll}" Command="{Binding Path=CloseAllWorkflowsCommand}"/>
+                <Separator/>
+                <MenuItem Header="{x:Static properties:Resources.FileMenuExit}" Command="{Binding Path=ExitCommand}" InputGestureText="Shift+Alt+F4"/>
+            </MenuItem>
+            <MenuItem Header="{x:Static properties:Resources.ViewMenu}">
+                <MenuItem Header="{x:Static properties:Resources.ViewMenuToolbox}" Command="{Binding Path=ViewToolboxCommand}"/>
+                <MenuItem Header="{x:Static properties:Resources.ViewMenuProperties}" Command="{Binding Path=ViewPropertyInspectorCommand}"/>
+                <MenuItem Header="{x:Static properties:Resources.ViewMenuOutline}" Command="{Binding Path=ViewOutlineCommand}"/>
+                <MenuItem Header="{x:Static properties:Resources.ViewMenuErrors}" Command="{Binding Path=ViewErrorsCommand}"/>
+                <MenuItem Header="{x:Static properties:Resources.ViewMenuOutput}" Command="{Binding Path=ViewOutputCommand}"/>
+                <MenuItem Header="{x:Static properties:Resources.ViewMenuDebug}" Command="{Binding Path=ViewDebugCommand}"/>
+            </MenuItem>
+            <MenuItem Header="{x:Static properties:Resources.DebugMenu}">
+                <MenuItem Header="{x:Static properties:Resources.DebugMenuStartDebugging}" Command="{Binding Path=StartWithDebuggingCommand}" InputGestureText="F5"/>
+                <MenuItem Header="{x:Static properties:Resources.DebugMenuStartWithoutDebugging}" Command="{Binding Path=StartWithoutDebuggingCommand}" InputGestureText="Ctrl+F5"/>
+                <MenuItem Header="{x:Static properties:Resources.DebugMenuAbort}" Command="{Binding Path=AbortCommand}" InputGestureText="Shift+F5"/>
+            </MenuItem>
+            <MenuItem Header="{x:Static properties:Resources.HelpMenu}">
+                <MenuItem Header="{x:Static properties:Resources.HelpMenuAbout}" Command="{Binding Path=AboutCommand}"/>
+            </MenuItem>
+        </Menu>
+
+        <ad:DockingManager x:Name="DockManager" IsAnimationEnabled="True" Grid.Row="1" Margin="0,4,0,0">
+            <ad:ResizingPanel Orientation="Vertical" x:Name="VerticalResizingPanel">
+                <ad:ResizingPanel Orientation="Horizontal" x:Name="HorizontalResizingPanel">
+                    <ad:DocumentPane x:Name="DesignerDockablePane" />
+                    <ad:DockablePane x:Name="Placeholder1" Visibility="Hidden"/>
+                </ad:ResizingPanel>
+                <ad:DockablePane x:Name="Placeholder2" Visibility="Hidden"/>
+                <ad:DockablePane x:Name="TabsPane" />
+            </ad:ResizingPanel>
+        </ad:DockingManager>
+
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="{Binding Path=StatusText}" Name="Status" VerticalAlignment="Center" />
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
+        
+    </Grid>
+    
+</Window>

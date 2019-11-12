@@ -1,0 +1,24 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+
+    // Set Logarithmic scale
+    Chart1.ChartAreas["ChartArea1"].AxisY.IsLogarithmic = true;
+    
+   // Set Auto scale.
+    if( AutoScale.Checked )
+    {
+        // Set auto minimum and maximum values.
+        Chart1.ChartAreas["ChartArea1"].AxisY.Minimum = Double.NaN;
+        Chart1.ChartAreas["ChartArea1"].AxisY.Maximum = Double.NaN;
+    }
+    else
+    {
+        // Set manual minimum and maximum values.
+        Chart1.ChartAreas["ChartArea1"].AxisY.Minimum = 10;
+        Chart1.ChartAreas["ChartArea1"].AxisY.Maximum = 1000;
+    }	
+    
+}

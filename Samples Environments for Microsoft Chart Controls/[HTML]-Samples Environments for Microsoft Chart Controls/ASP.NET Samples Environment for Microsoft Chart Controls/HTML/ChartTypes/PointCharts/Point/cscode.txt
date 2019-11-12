@@ -1,0 +1,30 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series data with random data
+    Random	random = new Random();
+    for(int pointIndex = 0; pointIndex < 10; pointIndex++)
+    {
+        Chart1.Series["Series1"].Points.AddY(random.Next(5, 60));
+    }
+
+    // Set point chart type
+    Chart1.Series["Series1"].ChartType = SeriesChartType.Point;
+
+    // Enable data points labels
+    Chart1.Series["Series1"].IsValueShownAsLabel = true;
+    Chart1.Series["Series1"]["LabelStyle"] = "Center";
+
+    // Set marker size
+    Chart1.Series["Series1"].MarkerSize = 15;
+
+    // Set marker shape
+    Chart1.Series["Series1"].MarkerStyle = MarkerStyle.Diamond;
+    
+    // Enable 3D
+	Chart1.ChartAreas["ChartArea1"].Area3DStyle.Enable3D = true;
+    
+}
+...

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<actions>
+  <add path="configuration" id="{24E2107B-6288-4C54-912D-3D5CE7BEEDE0}">
+    <location path="_vti_bin/spdisco.aspx">
+      <system.webServer>
+        <handlers>
+          <add name="DemoWSHandler" verb="*" path="*_vti_bin/spdisco.aspx" type="DemoWS.HttpHandler, DemoWS , Version=1.0.0.0, Culture=neutral, PublicKeyToken=293c0f6de57e7690" />
+        </handlers>
+      </system.webServer>
+    </location>
+  </add>
+</actions>

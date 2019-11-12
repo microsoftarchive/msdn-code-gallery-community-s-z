@@ -1,0 +1,80 @@
+﻿<Activity mc:Ignorable="sap" x:Class="Workflow1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:local="clr-namespace:MvcMusicStore.Models" xmlns:local1="clr-namespace:MvcMusicStore.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:s4="clr-namespace:System;assembly=System.ServiceModel" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:swm="clr-namespace:System.Web.Mvc;assembly=System.Web.Mvc" xmlns:t="clr-namespace:Test" xmlns:wa="clr-namespace:WizardActivityPack.Activities;assembly=WizardActivityPack.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Action" Type="InArgument(wa:Command)" />
+    <x:Property Name="Bookmark" Type="InArgument(wa:CustomBookmark)" />
+    <x:Property Name="BookmarkHistory" Type="InOutArgument(scg:List(wa:CustomBookmark))" />
+    <x:Property Name="Context" Type="InOutArgument(local:WorkFlowContext)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>908.8,976</sap:VirtualizedContainerService.HintSize>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
+  <wa:WizardContainer Action="[Action]" Bookmark="[Bookmark]" BookmarkHistory="[BookmarkHistory]" sad:XamlDebuggerXmlReader.FileName="C:\Usman\endpoint-demo\MvcMusicStore-Completed\MvcMusicStore\Workflow\Workflow1.xaml" sap:VirtualizedContainerService.HintSize="868.8,936">
+    <wa:WizardContainer.Body>
+      <wa:Wizard DisplayName="Check Out Wizard" sap:VirtualizedContainerService.HintSize="844.8,889.6">
+        <wa:Wizard.Activities>
+          <wa:Step DisplayName="Shipping Address" sap:VirtualizedContainerService.HintSize="830.4,62.4">
+            <wa:Step.Body>
+              <local1:ShippingAddressActivity sap:VirtualizedContainerService.HintSize="200,25.6" WFContext="[Context]" />
+            </wa:Step.Body>
+          </wa:Step>
+          <wa:Step DisplayName="Shipping Method" sap:VirtualizedContainerService.HintSize="830.4,62.4">
+            <wa:Step.Body>
+              <local1:ShippingMethodActivity sap:VirtualizedContainerService.HintSize="200,25.6" WFContext="[Context]" />
+            </wa:Step.Body>
+          </wa:Step>
+          <wa:Step DisplayName="PromoCode" sap:VirtualizedContainerService.HintSize="830.4,62.4">
+            <wa:Step.Body>
+              <local1:PromoCodeActivity sap:VirtualizedContainerService.HintSize="200,25.6" WFContext="[Context]" />
+            </wa:Step.Body>
+          </wa:Step>
+          <wa:Step DisplayName="CheckPromoCode" sap:VirtualizedContainerService.HintSize="830.4,542.4">
+            <wa:Step.Body>
+              <If Condition="[Context.Request.Get(Of String)(&quot;PromoCode&quot;) = &quot;FREE&quot;]" sap:VirtualizedContainerService.HintSize="772.8,505.6">
+                <If.Then>
+                  <local1:ConfirmationActivity sap:VirtualizedContainerService.HintSize="200,396.8" WFContext="[Context]" />
+                </If.Then>
+                <If.Else>
+                  <wa:Wizard sap:VirtualizedContainerService.HintSize="548.8,396.8">
+                    <wa:Wizard.Activities>
+                      <wa:Step DisplayName="Payment Options" sap:VirtualizedContainerService.HintSize="534.4,62.4">
+                        <wa:Step.Body>
+                          <local1:PaymentOptionsActivity sap:VirtualizedContainerService.HintSize="200,25.6" WFContext="[Context]" />
+                        </wa:Step.Body>
+                      </wa:Step>
+                      <wa:Step DisplayName="Process Payment" sap:VirtualizedContainerService.HintSize="534.4,224">
+                        <wa:Step.Body>
+                          <Switch x:TypeArguments="x:String" Expression="[Context.Request.Get(Of String)(&quot;PaymentOption&quot;)]" sap:VirtualizedContainerService.HintSize="476.8,187.2">
+                            <wa:Wizard x:Key="CreditCard" DisplayName="Process Credit Card Wizard" sap:VirtualizedContainerService.HintSize="457.6,321.6">
+                              <wa:Wizard.Activities>
+                                <wa:Step DisplayName="Billing  Address" sap:VirtualizedContainerService.HintSize="257.6,62.4">
+                                  <wa:Step.Body>
+                                    <local1:BillingAddressActivity sap:VirtualizedContainerService.HintSize="200,25.6" WFContext="[Context]" />
+                                  </wa:Step.Body>
+                                </wa:Step>
+                                <wa:Step DisplayName="Process Credit Card" sap:VirtualizedContainerService.HintSize="257.6,62.4">
+                                  <wa:Step.Body>
+                                    <local1:CreditCardActivity sap:VirtualizedContainerService.HintSize="200,25.6" WFContext="[Context]" />
+                                  </wa:Step.Body>
+                                </wa:Step>
+                                <wa:Step DisplayName="Confirmation" sap:VirtualizedContainerService.HintSize="257,61">
+                                  <wa:Step.Body>
+                                    <local1:ConfirmationActivity sap:VirtualizedContainerService.HintSize="200,25" WFContext="[Context]" />
+                                  </wa:Step.Body>
+                                </wa:Step>
+                              </wa:Wizard.Activities>
+                            </wa:Wizard>
+                            <local1:RedirectActivity x:Key="GoogleCheckOut" sap:VirtualizedContainerService.HintSize="457.6,99.2" WFContext="[Context]" />
+                            <local1:RedirectActivity x:Key="PayPal" sap:VirtualizedContainerService.HintSize="457.6,99.2" WFContext="[Context]" />
+                          </Switch>
+                        </wa:Step.Body>
+                      </wa:Step>
+                    </wa:Wizard.Activities>
+                  </wa:Wizard>
+                </If.Else>
+              </If>
+            </wa:Step.Body>
+          </wa:Step>
+        </wa:Wizard.Activities>
+      </wa:Wizard>
+    </wa:WizardContainer.Body>
+  </wa:WizardContainer>
+</Activity>

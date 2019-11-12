@@ -1,0 +1,21 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Anchor to a DataPoint
+	Chart1.Annotations[0].AnchorDataPoint = Chart1.Series[0].Points[3];
+
+
+	// Or anchor to a X,Y coordinate
+	// set the Annotation Anchor point to Null
+	Chart1.Annotations[0].AnchorDataPoint = null;
+
+	// Set annotation anchor X and Y coordinates
+	Chart1.Annotations[0].AnchorX = 5;
+	Chart1.Annotations[0].AnchorY = 20;
+
+	// Attach the annotation to the X and Y axis
+	Chart1.Annotations[0].AxisX = Chart1.ChartAreas["ChartArea1"].AxisX;
+	Chart1.Annotations[0].AxisY = Chart1.ChartAreas["ChartArea1"].AxisY;
+}

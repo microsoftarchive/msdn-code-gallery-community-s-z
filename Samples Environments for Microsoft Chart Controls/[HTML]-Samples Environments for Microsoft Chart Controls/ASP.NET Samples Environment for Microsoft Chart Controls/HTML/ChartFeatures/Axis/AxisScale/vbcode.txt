@@ -1,0 +1,20 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+   ' Set Logarithmic scale
+   Chart1.ChartAreas("ChartArea1").AxisY.IsLogarithmic = True
+   
+   ' Set Auto scale.
+   If AutoScale.Checked Then
+      ' Set auto minimum and maximum values.
+      Chart1.ChartAreas("ChartArea1").AxisY.Minimum = [Double].NaN
+      Chart1.ChartAreas("ChartArea1").AxisY.Maximum = [Double].NaN
+   Else
+      ' Set manual minimum and maximum values.
+      Chart1.ChartAreas("ChartArea1").AxisY.Minimum = 10
+      Chart1.ChartAreas("ChartArea1").AxisY.Maximum = 1000
+   End If
+   
+End Sub 'Page_Load 

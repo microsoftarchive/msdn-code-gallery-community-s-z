@@ -1,0 +1,243 @@
+﻿
+ 
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Login to System</title> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> 
+		<style> 
+			* {
+				padding:0;
+				margin:0;
+				}
+			body, html {
+				height:100%;
+				width:100%;
+			}
+			body {
+				background: #111;
+				font-family: Verdana, sans-serif;
+				font-size:11px;
+				color: #444;
+			}
+			.expander {
+				height: 150px;
+			}
+			.rounded {
+				-moz-border-radius: 6px;
+				-webkit-border-radius: 6px;
+				border-radius: 6px;
+			}
+			#loginWindow {
+				width: 340px;
+				margin:0 auto;
+			}
+			#loginWindowInner {
+				background: white;
+				overflow:hidden;
+			}
+			#idBox {
+				height: 186px;
+				background: -moz-element(#idBoxBg) center center no-repeat;
+				background: -webkit-element(#idBoxBg) center center no-repeat;
+				margin: 20px 20px 0 20px;
+				-moz-box-shadow: 0 0 5px #000 inset;
+				-moz-transition:all 0.2s ease-in; 
+				-webkit-box-shadow: 0 0 5px #000;
+				-webkit-transition:all 0.2s ease-in;  
+			}
+			#idBox.drophover {
+				-moz-box-shadow: 0 0 10px #000 inset;
+				-webkit-box-shadow: 0 0 10px #000;
+				background: -moz-element(#idBoxBg) center center no-repeat, rgba(0,0,0,.1);
+				background: -webkit-element(#idBoxBg) center center no-repeat, rgba(0,0,0,.1);
+			}
+			#idBoxBgWrapper {
+				height:0;
+				overflow: hidden;
+				text-align: center;
+				font-family: sans-serif;
+				font-size: 25px;
+				font-weight: bold;
+				color: #CCC;
+			}
+			
+			input[type=password] {
+				float:right;
+				width:135px;
+				background: #FFF;
+				border:thin solid #CCC;
+				font-size: 25px;
+				height: 31px;
+			}
+			label {
+				font-weight: bold;
+				font-style: normal;
+				float:left;
+				line-height: 31px;
+			}
+			#pinBox {
+				padding: 20px 20px 0 20px;
+				height:31px;
+				display:none;
+			}
+			#txtMain {
+				background: #F4F4F4;
+				padding: 3px 20px;
+				margin: 20px 0;
+				
+			}
+			
+			
+			.idCard {
+				background: #e0ecf6 url(patt.png);
+				padding: 10px;
+				height: 164px;
+				position: relative;
+				border:thin solid #CCC;
+			}
+			.idCardLeft {
+				height: 166px;
+				width:105px;
+				float:left;
+			}
+			.idCardRight h2 {margin-bottom: 20px;}
+			.idCardRight ul {list-style: none;}
+			.idCardRight li {margin-bottom: 5px;}
+			.idCardRight li span {
+				margin-left: 10px;
+				font-size: 9px;
+				color:#888;
+			}
+			.countryCode {
+				font-size: 24px;
+				font-weight: bold;
+				color: rgba(0,0,0,.1);
+				position: absolute;
+				bottom:0;
+				right: 3px;
+			}
+		</style> 
+		<script type="text/javascript"> 
+		//Globals
+		var objData;
+
+		$(document).ready(function() {
+
+		    var $droptarget = $('#idBox'), $idCardSrc = $('#idCardSrc'), $idBoxBg = $('#idBoxBg'),
+			$pinBox = $('#pinBox'), $pinInput = $('input', $pinBox);
+
+		    $droptarget.bind('dragenter', function(e) {
+		        e.stopPropagation();
+		        e.preventDefault();
+		        $droptarget.addClass('drophover');
+		        $idBoxBg.text('Drop it now');
+		        return false;
+		    });
+		    $droptarget.bind('dragleave', function(e) {
+		        e.stopPropagation();
+		        e.preventDefault();
+		        $droptarget.removeClass('drophover');
+		        $idBoxBg.text('Drop ID file here');
+		        return false;
+		    });
+		    $droptarget.bind('dragover', function(e) {
+		        e.stopPropagation();
+		        e.preventDefault();
+		    });
+		    document.getElementById('idBox').addEventListener('drop', function(e) {
+		        e.stopPropagation();
+		        e.preventDefault();
+
+		        var dt = e.dataTransfer;
+		        var files = dt.files;
+		        var reader = new FileReader();
+		        reader.onload = function(e) {
+		            try {
+		                objData = $.parseJSON(e.target.result);
+		            } catch (exception) {
+		                alert('Invalid file');
+		                $droptarget.removeClass('drophover');
+		                $idBoxBg.text('Drop ID file here');
+		                return true;
+		            }
+		            if (typeof objData === "undefined") {
+		                alert('Invalid file');
+		                return true;
+		            }
+		            // Insert the data in the file into the page
+		            $idCardSrc.find('img:eq(1)').attr('src', objData.userdata.image);
+		            $idCardSrc.find('img:eq(0)').attr('src', objData.userdata.countryImage);
+		            $idCardSrc.find('.countryCode').text(objData.userdata.country);
+		            var tmp = "<li><b>" + objData.userdata.name + "</b><span>Name</span></li>" +
+					"<li><b>" + objData.userdata.phone + "</b><span>MobileNo</span></li>" +
+					"<li><b>" + objData.userdata.gender + "</b><span>Gender</span></li>" +
+					"<li><b>" + objData.userdata.language + "</b><span>Language</span></li>" +
+					"<li><b>" + objData.userdata.country + "</b><span>Country</span></li>";
+		            $idCardSrc.find('.idCardValues').html(tmp);
+		            $droptarget.unbind().html($idCardSrc.html());
+		            $pinBox.slideDown();
+		            return false;
+		        };
+		        reader.readAsText(files[0]);
+		        return false;
+		    }, false);
+
+		    $pinInput.keyup(function(e) {
+		        var key = document.getElementById("txtPin").value;
+		        if (key.length == 4) {
+		            if (key == "1234") {
+		                alert('Success! If this was a real website you\'d be redirected to the protected area');
+
+		            } else {
+		                alert("Not Authorized");
+		            }
+		        }
+
+
+		    });
+
+		});
+		</script> 
+	</head> 
+	<body > 
+		<div class="expander"></div> 
+		<div id="loginWindow"> 
+			<div id="loginWindowInner" class="rounded"> 
+				<div id="idBoxBgWrapper"> 
+					<div id="idBoxBg"> 
+						Drop ID file here
+					</div> 
+					<div id="idCardSrc"> 
+					<div class="idCard rounded"> 
+						<div class="idCardLeft"> 
+						<img src="" style="margin-bottom:14px; width:85; height:36;"/>
+							<img src="" width="85"/> 
+						</div> 
+						<div class="idCardRight"> 
+							<h2 >eIdcard</h2> 
+							<ul class="idCardValues"> 
+								
+							</ul> 
+						</div> 
+						<div class="countryCode">US</div> 
+						
+					</div> 
+					</div> 
+				</div> 
+				<div id="idBox" class="rounded"> 
+					
+				</div> 
+				<div id="pinBox"> 
+					<label for="txtPin">Please enter your PIN</label> 
+					<input type="password" name="pin" id="txtPin" class="rounded" maxlength="4" /> 
+					<div style="clear:both"></div> 
+				</div> 
+				<div id="txtMain"> 
+					<h1>System Login</h1> 
+					<p>Use a valid webID file and PIN code to gain access to the system.</p> 
+				</div> 
+			</div> 
+		</div> 
+	</body> 
+</html>

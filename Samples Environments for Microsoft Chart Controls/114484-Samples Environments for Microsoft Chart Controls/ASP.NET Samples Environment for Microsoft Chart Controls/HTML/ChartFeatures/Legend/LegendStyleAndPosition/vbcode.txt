@@ -1,0 +1,40 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+	' Set legend style
+	chart1.Legends("Default").LegendStyle = LegendStyle.Table
+
+	' Set table style if legend style is Table
+	chart1.Legend("Default").TableStyle = TableStyle.Auto
+
+	' Set legend docking
+	chart1.Legends("Default").Docking = LegendDocking.Right
+
+	' Set legend alignment
+	chart1.Legends("Default").Alignment = StringAlignment.Center
+
+	If InsideChartArea.Checked Then
+	
+		' Display legend inside the "Default" chart area
+		chart1.Legends("Default").InsideChartArea = "Default"		
+		
+	Else
+		'do not display legend inside chart area
+		chart1.Legends("Default").InsideChartArea = ""
+		
+	End If	
+	
+	If LegendDisabled.Checked Then
+		
+		' Disable legend
+		chart1.Legends("Default").Enabled = False
+	
+	End If
+
+	' Set legend to always be reversed
+	chart1.Legends("Default").Reversed = AutoBool.True
+   
+End Sub
+...

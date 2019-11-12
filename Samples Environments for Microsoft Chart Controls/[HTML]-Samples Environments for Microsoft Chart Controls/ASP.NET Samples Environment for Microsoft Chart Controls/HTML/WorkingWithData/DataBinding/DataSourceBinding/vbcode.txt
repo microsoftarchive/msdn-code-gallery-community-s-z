@@ -1,0 +1,35 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+	' Resolve the address to the Access database
+	Dim fileNameString As String = Me.MapPath(".")
+	fileNameString += "..\..\..\data\chartdata.mdb"
+
+	' Initialize a connection string	
+	Dim myConnectionString As String = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString
+
+	' Define the database query	
+	Dim mySelectQuery As String = "SELECT * FROM REPS;"
+
+	' Create a database connection object using the connection string	
+	Dim myConnection As New OleDbConnection(myConnectionString)
+
+	' Create a database command on the connection using query	
+	Dim myCommand As New OleDbCommand(mySelectQuery, myConnection)
+
+	myConnection.Open()
+
+	// set chart data source - the data source must implement IEnumerable
+	Chart1.DataSource = myCommand.ExecuteReader(CommandBehavior.CloseConnection)
+
+	' Set series members names for the X and Y values 
+	Chart1.Series("Series 1").XValueMember = "Name"
+	Chart1.Series("Series 1").YValueMembers = "Sales"
+
+	' Data bind to the selected data source
+	Chart1.DataBind()
+
+End Sub 'Page_Load
+...   

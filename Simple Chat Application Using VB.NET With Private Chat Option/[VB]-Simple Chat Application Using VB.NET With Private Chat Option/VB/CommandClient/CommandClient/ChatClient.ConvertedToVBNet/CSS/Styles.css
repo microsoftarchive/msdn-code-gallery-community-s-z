@@ -1,0 +1,18 @@
+BODY
+{
+	background-color:#05547A;
+}
+
+.Header
+{
+	font-family:Tahoma;
+	font-size:small;
+	color:Yellow;
+}
+TD
+{
+	font-family:Tahoma;
+	color:White;
+	font-size:xx-small;
+	text-align:justify;
+}

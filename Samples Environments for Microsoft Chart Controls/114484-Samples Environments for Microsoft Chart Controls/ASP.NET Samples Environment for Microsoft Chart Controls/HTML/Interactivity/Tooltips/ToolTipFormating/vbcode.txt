@@ -1,0 +1,15 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    ...
+    
+    ' Set series tool tips
+    Chart1.Series("My series").ToolTip = _
+        "X value " + ControlChars.Tab + "= #VALX{d}" + ControlChars.Lf + _
+        "Y value " + ControlChars.Tab + "= #VALY{C}" + ControlChars.Lf + _
+        "Radius " + ControlChars.Tab + "= #VALY2{P}" 
+    ...
+    
+End Sub 'Page_Load 
+...

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "LineCharts">
+	<Title>Fast Line Chart</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Fast Line Chart</ShortBlurb> 
+	<Content>FastLineChart.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Chart type, Fast Line</Keyword>
+      <Keyword>Fast Line chart</Keyword>
+    </Keywords>
+	</SampleConfig>
+	
+<SampleConfig ParentNodeID = "PointCharts">
+	<Title>Fast Point Chart</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Fast Point Chart</ShortBlurb> 
+	<Content>FastLineChart.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Chart type, Fast Point</Keyword>
+      <Keyword>Fast Point chart</Keyword>
+    </Keywords>
+	</SampleConfig>
+	
+</SampleConfigs>

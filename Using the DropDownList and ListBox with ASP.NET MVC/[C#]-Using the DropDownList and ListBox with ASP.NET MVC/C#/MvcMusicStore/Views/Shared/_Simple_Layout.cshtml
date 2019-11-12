@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <a href="@Url.Content("~")" id="current">Home</a>     | 
+    <a href="@Url.Content("~/StoreManager/")">Admin</a>   | 
+    <a href="@Url.Content("~/Home/Test")">Test</a>
+
+    <br />
+
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "ChartArea">
+  <Title>Multiple Chart Areas and Z-Order</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Multiple Chart Areas and Z-Order</ShortBlurb> 
+  <Content>ZOrder.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Z Order, Chart Areas</Keyword>
+	<Keyword>Chart area, Z Order</Keyword>
+	<Keyword>Series, Z Order with Multiple Chart Areas</Keyword>
+  </Keywords>
+</SampleConfig>
+</SampleConfigs>

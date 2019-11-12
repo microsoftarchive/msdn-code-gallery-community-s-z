@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FinanceDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="FinanceDBModelStoreContainer">
+          <EntitySet Name="DistributionRange" EntityType="FinanceDBModel.Store.DistributionRange" store:Type="Tables" Schema="Config" />
+          <EntitySet Name="Domain" EntityType="FinanceDBModel.Store.Domain" store:Type="Tables" Schema="Config" />
+          <EntitySet Name="Element" EntityType="FinanceDBModel.Store.Element" store:Type="Tables" Schema="Config" />
+          <EntitySet Name="ElementType" EntityType="FinanceDBModel.Store.ElementType" store:Type="Tables" Schema="Config" />
+          <EntitySet Name="Parameters" EntityType="FinanceDBModel.Store.Parameters" store:Type="Tables" Schema="Config" />
+          <EntitySet Name="Version" EntityType="FinanceDBModel.Store.Version" store:Type="Tables" Schema="Config" />
+          <EntitySet Name="DailyData" EntityType="FinanceDBModel.Store.DailyData" store:Type="Tables" Schema="Data" />
+          <EntitySet Name="ElementCorrelation" EntityType="FinanceDBModel.Store.ElementCorrelation" store:Type="Tables" Schema="Data" />
+          <EntitySet Name="ElementMovementDistribution" EntityType="FinanceDBModel.Store.ElementMovementDistribution" store:Type="Tables" Schema="Data" />
+          <EntitySet Name="FilesToProcess" EntityType="FinanceDBModel.Store.FilesToProcess" store:Type="Tables" Schema="Data" />
+          <AssociationSet Name="FK_ElementCorrelationElementA" Association="FinanceDBModel.Store.FK_ElementCorrelationElementA">
+            <End Role="Element" EntitySet="Element" />
+            <End Role="ElementCorrelation" EntitySet="ElementCorrelation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElementCorrelationElementB" Association="FinanceDBModel.Store.FK_ElementCorrelationElementB">
+            <End Role="Element" EntitySet="Element" />
+            <End Role="ElementCorrelation" EntitySet="ElementCorrelation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElementElementDomain" Association="FinanceDBModel.Store.FK_ElementElementDomain">
+            <End Role="Domain" EntitySet="Domain" />
+            <End Role="Element" EntitySet="Element" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElementElementType" Association="FinanceDBModel.Store.FK_ElementElementType">
+            <End Role="ElementType" EntitySet="ElementType" />
+            <End Role="Element" EntitySet="Element" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElementMovementDistributionElement" Association="FinanceDBModel.Store.FK_ElementMovementDistributionElement">
+            <End Role="Element" EntitySet="Element" />
+            <End Role="ElementMovementDistribution" EntitySet="ElementMovementDistribution" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElementMovementDistributionRange" Association="FinanceDBModel.Store.FK_ElementMovementDistributionRange">
+            <End Role="DistributionRange" EntitySet="DistributionRange" />
+            <End Role="ElementMovementDistribution" EntitySet="ElementMovementDistribution" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DistributionRange">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="DateFrom" Type="datetime" Nullable="false" />
+          <Property Name="DateTo" Type="datetime" Nullable="false" />
+          <Property Name="Density" Type="decimal" Nullable="false" Precision="15" Scale="4" />
+        </EntityType>
+        <EntityType Name="Domain">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="smallint" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Element">
+          <Key>
+            <PropertyRef Name="Symbol" />
+          </Key>
+          <Property Name="Symbol" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="512" />
+          <Property Name="Type" Type="smallint" Nullable="false" />
+          <Property Name="Domain" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ElementType">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="smallint" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Parameters">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Value" Type="varchar" Nullable="false" MaxLength="7800" />
+        </EntityType>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="RecID" />
+          </Key>
+          <Property Name="RecID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="512" />
+          <Property Name="Upd" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DailyData">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ticker" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Day" Type="date" Nullable="false" />
+          <Property Name="OpenValue" Type="decimal" Precision="28" Scale="4" />
+          <Property Name="CloseValue" Type="decimal" Precision="28" Scale="4" />
+          <Property Name="MinValue" Type="decimal" Precision="28" Scale="4" />
+          <Property Name="MaxValue" Type="decimal" Precision="28" Scale="4" />
+          <Property Name="Volume" Type="decimal" Nullable="false" Precision="28" Scale="4" />
+          <Property Name="VolumeValue" Type="decimal" Nullable="false" Precision="28" Scale="4" />
+        </EntityType>
+        <EntityType Name="ElementCorrelation">
+          <Key>
+            <PropertyRef Name="TickerA" />
+            <PropertyRef Name="TickerB" />
+            <PropertyRef Name="PeriodType" />
+          </Key>
+          <Property Name="TickerA" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="TickerB" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Correlation" Type="decimal" Nullable="false" Precision="28" Scale="4" />
+          <Property Name="Upd" Type="datetime" Nullable="false" />
+          <Property Name="PeriodType" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ElementMovementDistribution">
+          <Key>
+            <PropertyRef Name="Ticker" />
+            <PropertyRef Name="RangeId" />
+          </Key>
+          <Property Name="Ticker" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="RangeId" Type="int" Nullable="false" />
+          <Property Name="DistributionData" Type="varbinary(max)" Nullable="false" />
+          <Property Name="Upd" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FilesToProcess">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Source" Type="varchar" Nullable="false" MaxLength="512" />
+          <Property Name="FileData" Type="varbinary(max)" Nullable="false" />
+          <Property Name="FileType" Type="tinyint" Nullable="false" />
+          <Property Name="Upd" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ElementCorrelationElementA">
+          <End Role="Element" Type="FinanceDBModel.Store.Element" Multiplicity="1" />
+          <End Role="ElementCorrelation" Type="FinanceDBModel.Store.ElementCorrelation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Element">
+              <PropertyRef Name="Symbol" />
+            </Principal>
+            <Dependent Role="ElementCorrelation">
+              <PropertyRef Name="TickerA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElementCorrelationElementB">
+          <End Role="Element" Type="FinanceDBModel.Store.Element" Multiplicity="1" />
+          <End Role="ElementCorrelation" Type="FinanceDBModel.Store.ElementCorrelation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Element">
+              <PropertyRef Name="Symbol" />
+            </Principal>
+            <Dependent Role="ElementCorrelation">
+              <PropertyRef Name="TickerB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElementElementDomain">
+          <End Role="Domain" Type="FinanceDBModel.Store.Domain" Multiplicity="1" />
+          <End Role="Element" Type="FinanceDBModel.Store.Element" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Domain">
+              <PropertyRef Name="RecId" />
+            </Principal>
+            <Dependent Role="Element">
+              <PropertyRef Name="Domain" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElementElementType">
+          <End Role="ElementType" Type="FinanceDBModel.Store.ElementType" Multiplicity="1" />
+          <End Role="Element" Type="FinanceDBModel.Store.Element" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ElementType">
+              <PropertyRef Name="RecId" />
+            </Principal>
+            <Dependent Role="Element">
+              <PropertyRef Name="Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElementMovementDistributionElement">
+          <End Role="Element" Type="FinanceDBModel.Store.Element" Multiplicity="1" />
+          <End Role="ElementMovementDistribution" Type="FinanceDBModel.Store.ElementMovementDistribution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Element">
+              <PropertyRef Name="Symbol" />
+            </Principal>
+            <Dependent Role="ElementMovementDistribution">
+              <PropertyRef Name="Ticker" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElementMovementDistributionRange">
+          <End Role="DistributionRange" Type="FinanceDBModel.Store.DistributionRange" Multiplicity="1" />
+          <End Role="ElementMovementDistribution" Type="FinanceDBModel.Store.ElementMovementDistribution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DistributionRange">
+              <PropertyRef Name="RecId" />
+            </Principal>
+            <Dependent Role="ElementMovementDistribution">
+              <PropertyRef Name="RangeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="SelectCorrelationResults" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Data">
+          <Parameter Name="itemTypeA" Type="smallint" Mode="In" />
+          <Parameter Name="itemTypeB" Type="smallint" Mode="In" />
+          <Parameter Name="periodType" Type="tinyint" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FinanceDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FinanceDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Domains" EntityType="FinanceDBModel.Domain" />
+          <EntitySet Name="Elements" EntityType="FinanceDBModel.Element" />
+          <EntitySet Name="ElementTypes" EntityType="FinanceDBModel.ElementType" />
+          <EntitySet Name="Versions" EntityType="FinanceDBModel.Version" />
+          <EntitySet Name="DailyDatas" EntityType="FinanceDBModel.DailyData" />
+          <AssociationSet Name="FK_ElementElementDomain" Association="FinanceDBModel.FK_ElementElementDomain">
+            <End Role="Domain" EntitySet="Domains" />
+            <End Role="Element" EntitySet="Elements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElementElementType" Association="FinanceDBModel.FK_ElementElementType">
+            <End Role="ElementType" EntitySet="ElementTypes" />
+            <End Role="Element" EntitySet="Elements" />
+          </AssociationSet>
+          <EntitySet Name="Parameters" EntityType="FinanceDBModel.Parameters" />
+          <EntitySet Name="FilesToProcess" EntityType="FinanceDBModel.FilesToProcess" />
+          <EntitySet Name="ElementCorrelation" EntityType="FinanceDBModel.ElementCorrelation" />
+          <AssociationSet Name="FK_ElementCorrelationElementA" Association="FinanceDBModel.FK_ElementCorrelationElementA">
+            <End Role="Element" EntitySet="Elements" />
+            <End Role="ElementCorrelation" EntitySet="ElementCorrelation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElementCorrelationElementB" Association="FinanceDBModel.FK_ElementCorrelationElementB">
+            <End Role="Element" EntitySet="Elements" />
+            <End Role="ElementCorrelation" EntitySet="ElementCorrelation" />
+          </AssociationSet>
+          <FunctionImport Name="SelectCorrelationResults" EntitySet="ElementCorrelation" ReturnType="Collection(FinanceDBModel.ElementCorrelation)">
+            <Parameter Name="itemTypeA" Mode="In" Type="Int16" />
+            <Parameter Name="itemTypeB" Mode="In" Type="Int16" />
+            <Parameter Name="periodType" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <EntitySet Name="DistributionRanges" EntityType="FinanceDBModel.DistributionRange" />
+          <EntitySet Name="ElementMovementDistributions" EntityType="FinanceDBModel.ElementMovementDistribution" />
+          <AssociationSet Name="FK_ElementMovementDistributionRange" Association="FinanceDBModel.FK_ElementMovementDistributionRange">
+            <End Role="DistributionRange" EntitySet="DistributionRanges" />
+            <End Role="ElementMovementDistribution" EntitySet="ElementMovementDistributions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElementMovementDistributionElement" Association="FinanceDBModel.FK_ElementMovementDistributionElement">
+            <End Role="Element" EntitySet="Elements" />
+            <End Role="ElementMovementDistribution" EntitySet="ElementMovementDistributions" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Domain">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="Int16" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Elements" Relationship="FinanceDBModel.FK_ElementElementDomain" FromRole="Domain" ToRole="Element" />
+        </EntityType>
+        <EntityType Name="Element">
+          <Key>
+            <PropertyRef Name="Symbol" />
+          </Key>
+          <Property Name="Symbol" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="Type" Type="Int16" Nullable="false" />
+          <Property Name="Domain" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Domain1" Relationship="FinanceDBModel.FK_ElementElementDomain" FromRole="Element" ToRole="Domain" />
+          <NavigationProperty Name="ElementType" Relationship="FinanceDBModel.FK_ElementElementType" FromRole="Element" ToRole="ElementType" />
+          <NavigationProperty Name="ElementCorrelation" Relationship="FinanceDBModel.FK_ElementCorrelationElementA" FromRole="Element" ToRole="ElementCorrelation" />
+          <NavigationProperty Name="ElementCorrelation1" Relationship="FinanceDBModel.FK_ElementCorrelationElementB" FromRole="Element" ToRole="ElementCorrelation" />
+          <NavigationProperty Name="ElementMovementDistributions" Relationship="FinanceDBModel.FK_ElementMovementDistributionElement" FromRole="Element" ToRole="ElementMovementDistribution" />
+        </EntityType>
+        <EntityType Name="ElementType">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="Int16" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Elements" Relationship="FinanceDBModel.FK_ElementElementType" FromRole="ElementType" ToRole="Element" />
+        </EntityType>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="RecID" />
+          </Key>
+          <Property Name="RecID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version1" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="512" Unicode="false" FixedLength="false" />
+          <Property Name="Upd" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DailyData">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ticker" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="Day" Type="DateTime" Nullable="false" />
+          <Property Name="OpenValue" Type="Decimal" Precision="28" Scale="4" />
+          <Property Name="CloseValue" Type="Decimal" Precision="28" Scale="4" />
+          <Property Name="MinValue" Type="Decimal" Precision="28" Scale="4" />
+          <Property Name="MaxValue" Type="Decimal" Precision="28" Scale="4" />
+          <Property Name="Volume" Type="Decimal" Nullable="false" Precision="28" Scale="4" />
+          <Property Name="VolumeValue" Type="Decimal" Precision="28" Scale="4" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ElementElementDomain">
+          <End Role="Domain" Type="FinanceDBModel.Domain" Multiplicity="1" />
+          <End Role="Element" Type="FinanceDBModel.Element" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Domain">
+              <PropertyRef Name="RecId" />
+            </Principal>
+            <Dependent Role="Element">
+              <PropertyRef Name="Domain" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElementElementType">
+          <End Role="ElementType" Type="FinanceDBModel.ElementType" Multiplicity="1" />
+          <End Role="Element" Type="FinanceDBModel.Element" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ElementType">
+              <PropertyRef Name="RecId" />
+            </Principal>
+            <Dependent Role="Element">
+              <PropertyRef Name="Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Parameters">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Value" Nullable="false" MaxLength="7800" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FilesToProcess">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Type="Int32" Name="RecId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Source" Nullable="false" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="FileData" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="DateTime" Name="Upd" Nullable="false" />
+          <Property Type="Byte" Name="FileType" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ElementCorrelation">
+          <Key>
+            <PropertyRef Name="TickerA" />
+            <PropertyRef Name="TickerB" />
+            <PropertyRef Name="PeriodType" />
+          </Key>
+          <Property Type="String" Name="TickerA" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TickerB" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Correlation" Nullable="false" Precision="28" Scale="4" />
+          <Property Type="DateTime" Name="Upd" Nullable="false" />
+          <NavigationProperty Name="Element" Relationship="FinanceDBModel.FK_ElementCorrelationElementA" FromRole="ElementCorrelation" ToRole="Element" />
+          <NavigationProperty Name="Element1" Relationship="FinanceDBModel.FK_ElementCorrelationElementB" FromRole="ElementCorrelation" ToRole="Element" />
+          <Property Type="Byte" Name="PeriodType" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ElementCorrelationElementA">
+          <End Type="FinanceDBModel.Element" Role="Element" Multiplicity="1" />
+          <End Type="FinanceDBModel.ElementCorrelation" Role="ElementCorrelation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Element">
+              <PropertyRef Name="Symbol" />
+            </Principal>
+            <Dependent Role="ElementCorrelation">
+              <PropertyRef Name="TickerA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElementCorrelationElementB">
+          <End Type="FinanceDBModel.Element" Role="Element" Multiplicity="1" />
+          <End Type="FinanceDBModel.ElementCorrelation" Role="ElementCorrelation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Element">
+              <PropertyRef Name="Symbol" />
+            </Principal>
+            <Dependent Role="ElementCorrelation">
+              <PropertyRef Name="TickerB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DistributionRange">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Type="Int32" Name="RecId" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DateFrom" Nullable="false" />
+          <Property Type="DateTime" Name="DateTo" Nullable="false" />
+          <Property Type="Decimal" Name="Density" Nullable="false" Precision="15" Scale="4" />
+          <NavigationProperty Name="ElementMovementDistributions" Relationship="FinanceDBModel.FK_ElementMovementDistributionRange" FromRole="DistributionRange" ToRole="ElementMovementDistribution" />
+        </EntityType>
+        <EntityType Name="ElementMovementDistribution">
+          <Key>
+            <PropertyRef Name="Ticker" />
+            <PropertyRef Name="RangeId" />
+          </Key>
+          <Property Type="String" Name="Ticker" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="RangeId" Nullable="false" />
+          <Property Type="Binary" Name="DistributionData" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="DateTime" Name="Upd" Nullable="false" />
+          <NavigationProperty Name="DistributionRange" Relationship="FinanceDBModel.FK_ElementMovementDistributionRange" FromRole="ElementMovementDistribution" ToRole="DistributionRange" />
+          <NavigationProperty Name="Element" Relationship="FinanceDBModel.FK_ElementMovementDistributionElement" FromRole="ElementMovementDistribution" ToRole="Element" />
+        </EntityType>
+        <Association Name="FK_ElementMovementDistributionRange">
+          <End Type="FinanceDBModel.DistributionRange" Role="DistributionRange" Multiplicity="1" />
+          <End Type="FinanceDBModel.ElementMovementDistribution" Role="ElementMovementDistribution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DistributionRange">
+              <PropertyRef Name="RecId" />
+            </Principal>
+            <Dependent Role="ElementMovementDistribution">
+              <PropertyRef Name="RangeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElementMovementDistributionElement">
+          <End Type="FinanceDBModel.Element" Role="Element" Multiplicity="1" />
+          <End Type="FinanceDBModel.ElementMovementDistribution" Role="ElementMovementDistribution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Element">
+              <PropertyRef Name="Symbol" />
+            </Principal>
+            <Dependent Role="ElementMovementDistribution">
+              <PropertyRef Name="Ticker" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FinanceDBModelStoreContainer" CdmEntityContainer="FinanceDBEntities">
+          <EntitySetMapping Name="Domains"><EntityTypeMapping TypeName="FinanceDBModel.Domain"><MappingFragment StoreEntitySet="Domain">
+            <ScalarProperty Name="RecId" ColumnName="RecId" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Elements"><EntityTypeMapping TypeName="FinanceDBModel.Element"><MappingFragment StoreEntitySet="Element">
+            <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Type" ColumnName="Type" />
+            <ScalarProperty Name="Domain" ColumnName="Domain" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ElementTypes"><EntityTypeMapping TypeName="FinanceDBModel.ElementType"><MappingFragment StoreEntitySet="ElementType">
+            <ScalarProperty Name="RecId" ColumnName="RecId" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Versions"><EntityTypeMapping TypeName="FinanceDBModel.Version"><MappingFragment StoreEntitySet="Version">
+            <ScalarProperty Name="RecID" ColumnName="RecID" />
+            <ScalarProperty Name="Version1" ColumnName="Version" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Upd" ColumnName="Upd" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DailyDatas"><EntityTypeMapping TypeName="FinanceDBModel.DailyData"><MappingFragment StoreEntitySet="DailyData">
+            <ScalarProperty Name="RecId" ColumnName="RecId" />
+            <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+            <ScalarProperty Name="Day" ColumnName="Day" />
+            <ScalarProperty Name="OpenValue" ColumnName="OpenValue" />
+            <ScalarProperty Name="CloseValue" ColumnName="CloseValue" />
+            <ScalarProperty Name="MinValue" ColumnName="MinValue" />
+            <ScalarProperty Name="MaxValue" ColumnName="MaxValue" />
+            <ScalarProperty Name="Volume" ColumnName="Volume" />
+            <ScalarProperty Name="VolumeValue" ColumnName="VolumeValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Parameters">
+            <EntityTypeMapping TypeName="FinanceDBModel.Parameters">
+              <MappingFragment StoreEntitySet="Parameters">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FilesToProcess">
+            <EntityTypeMapping TypeName="FinanceDBModel.FilesToProcess">
+              <MappingFragment StoreEntitySet="FilesToProcess">
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="Upd" ColumnName="Upd" />
+                <ScalarProperty Name="FileData" ColumnName="FileData" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="RecId" ColumnName="RecId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ElementCorrelation">
+            <EntityTypeMapping TypeName="FinanceDBModel.ElementCorrelation">
+              <MappingFragment StoreEntitySet="ElementCorrelation">
+                <ScalarProperty Name="PeriodType" ColumnName="PeriodType" />
+                <ScalarProperty Name="Upd" ColumnName="Upd" />
+                <ScalarProperty Name="Correlation" ColumnName="Correlation" />
+                <ScalarProperty Name="TickerB" ColumnName="TickerB" />
+                <ScalarProperty Name="TickerA" ColumnName="TickerA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SelectCorrelationResults" FunctionName="FinanceDBModel.Store.SelectCorrelationResults" />
+          <EntitySetMapping Name="DistributionRanges">
+            <EntityTypeMapping TypeName="FinanceDBModel.DistributionRange">
+              <MappingFragment StoreEntitySet="DistributionRange">
+                <ScalarProperty Name="Density" ColumnName="Density" />
+                <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="RecId" ColumnName="RecId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ElementMovementDistributions">
+            <EntityTypeMapping TypeName="FinanceDBModel.ElementMovementDistribution">
+              <MappingFragment StoreEntitySet="ElementMovementDistribution">
+                <ScalarProperty Name="Upd" ColumnName="Upd" />
+                <ScalarProperty Name="DistributionData" ColumnName="DistributionData" />
+                <ScalarProperty Name="RangeId" ColumnName="RangeId" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="FinanceDB">
+        <EntityTypeShape EntityType="FinanceDBModel.Domain" Width="1.5" PointX="0.75" PointY="1.125" Height="1.427958984375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceDBModel.Element" Width="1.5" PointX="3" PointY="0.875" Height="1.9210009765625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceDBModel.ElementType" Width="1.5" PointX="0.75" PointY="4.125" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceDBModel.Version" Width="1.5" PointX="2.75" PointY="3.75" Height="1.5923063151041657" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceDBModel.DailyData" Width="1.5" PointX="4.75" PointY="3.75" Height="2.4140429687499996" IsExpanded="true" />
+        <AssociationConnector Association="FinanceDBModel.FK_ElementElementDomain" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.8389794921875" />
+          <ConnectorPoint PointX="3" PointY="1.8389794921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="FinanceDBModel.FK_ElementElementType" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.4788826497395826" />
+          <ConnectorPoint PointX="4.40625" PointY="5.4788826497395826" />
+          <ConnectorPoint PointX="4.40625" PointY="3.28904296875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FinanceDBModel.Parameters" Width="1.5" PointX="5.375" PointY="0.75" Height="1.2636116536458326" />
+        <EntityTypeShape EntityType="FinanceDBModel.FilesToProcess" Width="1.5" PointX="0.75" PointY="6.75" Height="1.5923063151041674" />
+        <EntityTypeShape EntityType="FinanceDBModel.ElementCorrelation" Width="1.5" PointX="5.25" PointY="7" Height="1.9210009765625005" />
+        <AssociationConnector Association="FinanceDBModel.FK_ElementCorrelationElementA" >
+          <ConnectorPoint PointX="4.4375025" PointY="3.28904296875" />
+          <ConnectorPoint PointX="4.4375025" PointY="8.4109099943681578" />
+          <ConnectorPoint PointX="5.25" PointY="8.4109099943681578" />
+        </AssociationConnector>
+        <AssociationConnector Association="FinanceDBModel.FK_ElementCorrelationElementB" >
+          <ConnectorPoint PointX="4.3749975" PointY="3.28904296875" />
+          <ConnectorPoint PointX="4.3749975" PointY="7.6742024971840781" />
+          <ConnectorPoint PointX="5.25" PointY="7.6742024971840781" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FinanceDBModel.DistributionRange" Width="1.5" PointX="5" PointY="10.125" Height="1.9210009765625031" />
+        <EntityTypeShape EntityType="FinanceDBModel.ElementMovementDistribution" Width="1.5" PointX="7.25" PointY="3.125" Height="1.921000976562496" />
+        <AssociationConnector Association="FinanceDBModel.FK_ElementMovementDistributionRange" >
+          <ConnectorPoint PointX="6.5" PointY="11.085500488281252" />
+          <ConnectorPoint PointX="8" PointY="11.085500488281252" />
+          <ConnectorPoint PointX="8" PointY="5.046000976562496" />
+        </AssociationConnector>
+        <AssociationConnector Association="FinanceDBModel.FK_ElementMovementDistributionElement" >
+          <ConnectorPoint PointX="4.5" PointY="2.6005553268229162" />
+          <ConnectorPoint PointX="8" PointY="2.6005553268229162" />
+          <ConnectorPoint PointX="8" PointY="3.125" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

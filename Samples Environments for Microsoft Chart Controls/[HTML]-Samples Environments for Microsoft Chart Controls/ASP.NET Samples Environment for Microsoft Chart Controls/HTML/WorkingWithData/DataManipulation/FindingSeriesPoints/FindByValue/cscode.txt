@@ -1,0 +1,15 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Find all points with second Y value equal to 10 and change their color
+    DataPoint   dataPoint = null;
+    int         index = 0;
+    while( (dataPoint = Chart1.Series["Series1"].Points.FindValue(10, "Y2", ref index)) != null)
+    {
+        dataPoint.Color = Color.FromArgb(255, 128, 128);
+        index++;
+    }
+}
+...

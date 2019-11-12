@@ -1,0 +1,19 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(sender As Object, e As System.EventArgs)
+   
+   ' Set series chart type
+   Chart1.Series("Default").ChartType = SeriesChartType.Kagi
+   
+   ' Set the PriceUpColor attribute			
+   Chart1.Series("Default")("PriceUpColor") = "SkyBlue"
+   
+   ' Set the default color - price-down
+   Chart1.Series("Default").Color = Color.Tomato
+   
+   ' Set the reversal amount attribute
+   Chart1.Series("Default")("ReversalAmount") = "1"
+   
+End Sub 'Page_Load 
+...

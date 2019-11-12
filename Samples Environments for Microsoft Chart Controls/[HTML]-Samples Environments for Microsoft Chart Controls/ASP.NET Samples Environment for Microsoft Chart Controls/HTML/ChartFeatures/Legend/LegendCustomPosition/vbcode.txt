@@ -1,0 +1,29 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set legend position
+    Chart1.Legends("Default").Position.Auto = False
+    Chart1.Legends("Default").Position.X = 35
+    Chart1.Legends("Default").Position.Y = 40
+    Chart1.Legends("Default").Position.Width = 35
+    Chart1.Legends("Default").Position.Height = 10
+    
+   ' Set InputTag rendering type
+   Chart1.RenderType = RenderType.InputTag
+    
+End Sub 'Page_Load
+...
+
+Private Sub Chart1_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles Chart1.Click
+
+	' read coordinates from postback value 
+	Dim point As Point = DirectCast((New PointConverter()).ConvertFromInvariantString(e.PostBackValue), Point) 
+    
+    ' Convert pixels to percentage coordinates and set legend position
+    Chart1.Legends("Default").Position.X = e.X * 100F / CSng(Chart1.Width.Value - 1)
+    Chart1.Legends("Default").Position.Y = e.Y * 100F / CSng(Chart1.Height.Value - 1)
+
+End Sub 'Chart1_Click
+...

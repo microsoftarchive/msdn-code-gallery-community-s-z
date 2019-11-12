@@ -1,0 +1,57 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataTemplate
+        x:Key="SecondaryColumnStyle">
+
+		<Grid
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch">
+			<Grid.Background>
+                <LinearGradientBrush
+                    EndPoint="0.5,1"
+                    StartPoint="0.5,0">
+                    <GradientStop
+                        Color="White" />
+                    <GradientStop
+                        Color="LightGray"
+                        Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Border
+                BorderBrush="#FF9EA8B2"
+                BorderThickness="0,1,0,0">
+                <Grid>
+                    <TextBlock
+                        FontFamily="Arial"
+                        TextWrapping="Wrap"
+                        FontSize="11"
+                        Margin="5,0,2,2"
+                        FontWeight="Bold"
+                        VerticalAlignment="Bottom"
+                        Foreground="DarkBlue"
+                        Text="{Binding Mode=OneWay}">
+                    </TextBlock>
+                    <Rectangle
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Margin="1.25,0,3,0"
+                        Height="30"
+                        Width="1"
+                        Fill="#FF4E525B" />
+                    <Rectangle
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Margin="2.25,0,3,0"
+                        Height="29"
+                        Width="1"
+                        Fill="#FF60676F" />
+                </Grid>
+            </Border>
+
+        </Grid>
+
+
+    </DataTemplate>
+</ResourceDictionary>

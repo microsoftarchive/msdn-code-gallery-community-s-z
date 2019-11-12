@@ -1,0 +1,17 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataSourceTypes" Priority = "100">
+  <Title>Overview</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Sources</ShortBlurb> 
+  <Content>Overview.htm</Content> 
+  
+  <Keywords>
+    <Keyword>Data, Data Source Overview</Keyword>
+    <Keyword>Overview, Data Source Types</Keyword>
+    <Keyword>Data Source Types</Keyword>
+  </Keywords> 
+  
+</SampleConfig>
+
+</SampleConfigs>

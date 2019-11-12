@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!-- 
+	Token attributes
+		(note: generally Value, Pos, and Default are used independantly)
+		Value -		A string that represents the token to be matched
+		Pos -		The index number (0 based) of the tokens position within the current 
+					block.
+		NextBlock - once the current block finishes, the next block used for processing 
+					the code is the one specified (before returning to the parent block)
+		SwitchToBlock - once this token is finished, the specified block will be used
+					immediately for processing the code.
+					
+	Token child elements
+		PreData -	the data the will be inserted before the matching token in the input
+					source code. Used for inserting HTML, RTF or other tags
+		PostData -	the data the will be inserted after the matching token in the input
+					source code. Used for inserting HTML, RTF or other tags
+					
+	TokenDefault -	used as the default token if there is no match. Has the same attributes as
+					the Token tag
+	
+	EndDelimiter -	used to define the end of a block
+-->
+
+<Languages>
+	<Block ID="C#">
+		<TokenDelimiters>[ (){}\[\]\t\r\n\.]</TokenDelimiters>	
+
+		<PreData>&lt;PRE&gt;</PreData>
+		<PostData>&lt;/PRE&gt;</PostData>
+		
+		<Token Value="(#if|#else|#elif|#endif|#define|#undef|#warning|#error|#line|#region|#endregion)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+
+		<Token Value="(abstract|event|new|struct|as|explicit|null|switch|base|extern|object|this|bool|false|operator|throw|break|finally|out|true|byte|fixed|override|try|case|float|params|typeof|catch|for|private|uint|char|foreach|protected|ulong|checked|goto)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+
+		<Token Value="(public|unchecked|class|if|readonly|unsafe|const|implicit|ref|ushort|continue|in|return|using|decimal|int|sbyte|virtual|default|interface|sealed|volatile|delegate|internal|short|void|do|is|sizeof|while|double|lock|stackalloc|else|long|static|enum|namespace|string)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+		
+		<Token Value="//" Delimited="False" SwitchToBlock="Comment1" >
+			<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>
+
+		<Token Value="/\*" Delimited="False" SwitchToBlock="Comment2" >
+			<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>
+		
+		<Token Value="///" Delimited="False" SwitchToBlock="Comment3" >
+			<PreData>&lt;font COLOR=&quot;#808080&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>
+	
+		<Token Value="&quot;" Delimited="False" SwitchToBlock="Quote1" >
+			<PreData></PreData>
+			<PostData></PostData>
+		</Token>
+
+		<Token Value="@&quot;" Delimited="False" SwitchToBlock="Quote2" >
+			<PreData></PreData>
+			<PostData></PostData>
+		</Token>		
+
+	</Block>
+		
+	<Block ID="VB.NET">
+		<TokenDelimiters>[ (){}\[\]\t\r\n\.]</TokenDelimiters>	
+
+		<PreData>&lt;PRE&gt;</PreData>
+		<PostData>&lt;/PRE&gt;</PostData>
+
+		<Token IgnoreCase="True" Value="(AddHandler|AddressOf|AndAlso|Alias|And|Ansi|As|Assembly|Auto|Boolean|ByRef|Byte|ByVal|Call|Case|Catch|CBool|CByte|CChar|CDate|CDec|CDbl|Char|CInt|Class|CLng|CObj|Const|CShort|CSng|CStr|CType|Date|Decimal|Declare|Default|Delegate|Dim)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+		<Token IgnoreCase="True" Value="(DirectCast|Do|Double|Each|Else|ElseIf|End|Enum|Erase|Error|Event|Exit|False|Finally|For|Friend|Function|Get|GetType|GoTo|Handles|If|Implements|Imports|In|Inherits|Integer|Interface|Is|Let|Lib|Like|Long|Loop|Me|Mod|Module|MustInherit|MustOverride)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+		<Token IgnoreCase="True" Value="(MyBase|MyClass|Namespace|New|Next|Not|Nothing|NotInheritable|NotOverridable|Object|On|Option|Optional|Or|OrElse|Overloads|Overridable|Overrides|ParamArray|Preserve|Private|Property|Protected|Public|RaiseEvent|ReadOnly|ReDim|REM|RemoveHandler)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+		<Token IgnoreCase="True" Value="(Resume|Return|Select|Set|Shadows|Shared|Short|Single|Static|Step|Stop|String|Structure|Sub|SyncLock|Then|Throw|To|True|Try|TypeOf|Unicode|Until|Variant|When|While|With|WithEvents|WriteOnly|Xor)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+		<Token IgnoreCase="True" Value="(#region|#define|#if|#end|#endregion)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+		
+		<Token Value="'" Delimited="False" SwitchToBlock="Comment1" >
+			<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>
+
+		<Token Value="&quot;" Delimited="False" SwitchToBlock="Quote2" >
+			<PreData></PreData>
+			<PostData></PostData>
+		</Token>		
+
+	</Block>
+
+	<Block ID="JavaScript">
+		<TokenDelimiters>[ (){}\[\]\t\r\n\.]</TokenDelimiters>	
+		
+		<Token Value="(abstract|false|private|boolean|final|protected|break|finally|public|byte|float|return|case|for|short|catch|function|static|char|goto|switch|class|if|synchronized|const|implements|this|continue|import|throw)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+
+		<Token Value="(debugger|in|throws|default|instanceof|transient|delete|int|true|do|interface|try|double|long|typeof|else|native|var|enum|new|void|export|null|while|extends|package|with)">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>
+		
+		<Token Value="//" Delimited="False" SwitchToBlock="Comment1" >
+			<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>
+
+		<Token Value="/\*" Delimited="False" SwitchToBlock="Comment2" >
+			<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>
+		
+		<Token Value="&quot;" Delimited="False" SwitchToBlock="Quote1" >
+			<PreData></PreData>
+			<PostData></PostData>
+		</Token>		
+		<Token Value="&lt;/" Delimited="False" SwitchToBlock="XmlTag" >
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>		
+		<EndDelimiter>&lt;/</EndDelimiter>
+	</Block>
+
+	<Block ID="Comment1">
+		<!-- // or ' -->
+		<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+		<PostData>&lt;/font&gt;</PostData>
+		<EndDelimiter>(\n|\r)</EndDelimiter>
+	</Block>
+	<Block ID="Comment2">
+		<!-- /* */ -->
+		<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+		<PostData>&lt;/font&gt;</PostData>
+		<EndDelimiter>*/</EndDelimiter>
+	</Block>
+	<Block ID="Comment3">
+		<!-- /// -->
+		<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+		<PostData>&lt;/font&gt;</PostData>
+		<EndDelimiter>(\n|\r)</EndDelimiter>
+	</Block>
+	
+	<Block ID="Quote1">
+		<!-- "" C++/C# style -->
+		<TokenDelimiters>\\&quot;</TokenDelimiters>
+		<EndDelimiter>&quot;</EndDelimiter>
+	</Block>
+	
+	<Block ID="Quote2">
+		<!-- @"" C# style or "" VB style-->
+		<TokenDelimiters>&quot;&quot;</TokenDelimiters>
+		<EndDelimiter>&quot;</EndDelimiter>
+	</Block>	
+
+	<Block ID="Xml">
+		<!-- XMLTag-->
+		<TokenDelimiters>[ \t\r\n]</TokenDelimiters>
+
+		<PreData>&lt;PRE&gt;</PreData>
+		<PostData>&lt;/PRE&gt;</PostData>
+
+		<Token Value="(&amp;quot;|&amp;lt;|&amp;gt;|&amp;amp;)" Delimited="False">
+			<PreData>&lt;font COLOR=&quot;#ff0000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>		
+		
+		<Token Value="&lt;%@" Delimited="False" SwitchToBlock="ASPX@" >
+			<PreData>&lt;span style=&quot;background-color: #FFFF00&quot;&gt;</PreData>
+			<PostData>&lt;/span&gt;</PostData>
+		</Token>		
+
+		<Token Value="&lt;%" Delimited="False" SwitchToBlock="ASPXCode" >
+			<PreData>&lt;span style=&quot;background-color: #FFFF00&quot;&gt;</PreData>
+			<PostData>&lt;/span&gt;</PostData>
+		</Token>		
+
+		<Token Value="&lt;!--" Delimited="False" SwitchToBlock="XmlCommentTag" >
+			<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>		
+
+		<Token Value="&lt;" Delimited="False" SwitchToBlock="XmlTag" >
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>		
+		
+	</Block>	
+
+	<Block ID="XmlTag">
+		<!-- XMLTag-->
+		<TokenDelimiters>[ =\t\r\n]</TokenDelimiters>
+
+		<Token Value="Script" Pos="1" IgnoreCase="True" NextBlock="JavaScript">
+		</Token>		
+
+		<Token Pos="1">
+			<PreData>&lt;font COLOR=&quot;#800000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>
+
+		<Token Value="(\?|&gt;|/)" Delimited="False">
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>
+
+		<Token Value="&quot;" Delimited="False" SwitchToBlock="XmlQuote" >
+			<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>
+		</Token>		
+
+		<Token Value="(&amp;quot;|&amp;lt;|&amp;gt;|&amp;amp;)" Delimited="False">
+			<PreData>&lt;font COLOR=&quot;#ff0000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</Token>		
+
+		<TokenDefault>
+			<PreData>&lt;font COLOR=&quot;#ff0000&quot;&gt;</PreData>
+			<PostData>&lt;/font&gt;</PostData>		
+		</TokenDefault>
+		<EndDelimiter>&gt;</EndDelimiter>
+	</Block>	
+
+	<Block ID="XmlCommentTag">
+		<!-- XML Comment Tag -->
+		<PreData>&lt;font COLOR=&quot;#008000&quot;&gt;</PreData>
+		<PostData>&lt;/font&gt;</PostData>		
+		<EndDelimiter>--&gt;</EndDelimiter>
+	</Block>	
+	
+	<Block ID="XmlQuote">
+		<!-- "" Xml style -->		
+		<PreData>&lt;font COLOR=&quot;#0000ff&quot;&gt;</PreData>
+		<PostData>&lt;/font&gt;</PostData>
+		<EndDelimiter>&quot;</EndDelimiter>
+	</Block>
+
+	<Block ID="ASPXCode">
+		<!-- ASPX code -->
+		<Token Value="%&gt;" Delimited="False" >
+			<PreData>&lt;span style=&quot;background-color: #FFFF00&quot;&gt;</PreData>
+			<PostData>&lt;/span&gt;</PostData>
+		</Token>		
+		<EndDelimiter>%&gt;</EndDelimiter>
+	</Block>
+
+	<Block ID="ASPX@">
+		<!-- ASPX code -->
+		<PreData>&lt;span style=&quot;background-color: #FFFF00&quot;&gt;</PreData>
+		<PostData>&lt;/span&gt;</PostData>
+		<EndDelimiter>%&gt;</EndDelimiter>
+	</Block>
+</Languages>

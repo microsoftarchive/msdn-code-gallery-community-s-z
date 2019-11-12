@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<!-- =====================================================================
+  This file is part of the Microsoft Dynamics CRM SDK code samples.
+
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+
+  This source code is intended only as a supplement to Microsoft
+  Development Tools and/or on-line documentation.  See these other
+  materials for detailed information regarding Microsoft code samples.
+
+  THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+  KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+  PARTICULAR PURPOSE.
+=====================================================================-->
+
+<html>
+<head>
+ <title>Simple Action Sample</title>
+ <script src="../../../ClientGlobalContext.js.aspx" type="text/javascript"></script>
+ <script src="../../min/Sdk.Soap.min.js"></script>
+ <script src="../../min/actions/Sdk.sample_SimpleAction.min.js"></script>
+ <script src="../scripts/SimpleAction.js"></script>
+ <script type="text/javascript">
+  "use strict";
+  document.onreadystatechange = function () {
+   if (document.readyState == "complete") {
+
+   }
+  }
+
+  function startSimpleActionSample() {
+   document.getElementById("messages").innerHTML = "";
+   writeToPage("Starting Test Action Sample");
+   verifyValidSimpleActionMessage();
+  }
+
+ </script>
+ <style type="text/css">
+  body
+  {
+   font-family: "Segoe UI";
+  }
+ </style>
+</head>
+<body>
+ <button onclick="startSimpleActionSample()">Run Simple Action Sample</button>
+ <ol id="messages" />
+ <p>This sample requires that you manually create and activate an Action that matches the following before you can run it.</p>
+ <img src="../images/SimpleAction.PNG" />
+ 
+</body>
+</html>

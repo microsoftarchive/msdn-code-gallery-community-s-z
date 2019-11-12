@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85EEF330-CDFC-452D-841F-984DC985F50C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sdk.Soap.js</RootNamespace>
+    <AssemblyName>Sdk.Soap.js</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="messages\Sdk.AddItemCampaign.js" />
+    <Content Include="messages\Sdk.AddItemCampaignActivity.js" />
+    <Content Include="messages\Sdk.AddListMembersList.js" />
+    <Content Include="messages\Sdk.AddMemberList.js" />
+    <Content Include="messages\Sdk.AddMembersTeam.js" />
+    <Content Include="messages\Sdk.AddPrivilegesRole.js" />
+    <Content Include="messages\Sdk.AddProductToKit.js" />
+    <Content Include="messages\Sdk.AddRecurrence.js" />
+    <Content Include="messages\Sdk.AddSolutionComponent.js" />
+    <Content Include="messages\Sdk.AddToQueue.js" />
+    <Content Include="messages\Sdk.AddUserToRecordTeam.js" />
+    <Content Include="messages\Sdk.Assign.js" />
+    <Content Include="messages\Sdk.Associate.js" />
+    <Content Include="messages\Sdk.AutoMapEntity.js" />
+    <Content Include="messages\Sdk.BackgroundSendEmail.js" />
+    <Content Include="messages\Sdk.Book.js" />
+    <Content Include="messages\Sdk.BulkDelete.js" />
+    <Content Include="messages\Sdk.BulkDetectDuplicates.js" />
+    <Content Include="messages\Sdk.CalculateActualValueOpportunity.js" />
+    <Content Include="messages\Sdk.CalculateTotalTimeIncident.js" />
+    <Content Include="messages\Sdk.CanBeReferenced.js" />
+    <Content Include="messages\Sdk.CanBeReferencing.js" />
+    <Content Include="messages\Sdk.CancelContract.js" />
+    <Content Include="messages\Sdk.CancelSalesOrder.js" />
+    <Content Include="messages\Sdk.CanManyToMany.js" />
+    <Content Include="messages\Sdk.CheckIncomingEmail.js" />
+    <Content Include="messages\Sdk.CheckPromoteEmail.js" />
+    <Content Include="messages\Sdk.CloneContract.js" />
+    <Content Include="messages\Sdk.CloseIncident.js" />
+    <Content Include="messages\Sdk.CloseQuote.js" />
+    <Content Include="messages\Sdk.CompoundUpdateDuplicateDetectionRule.js" />
+    <Content Include="messages\Sdk.ConvertKitToProduct.js" />
+    <Content Include="messages\Sdk.ConvertOwnerTeamToAccessTeam.js" />
+    <Content Include="messages\Sdk.ConvertProductToKit.js" />
+    <Content Include="messages\Sdk.ConvertQuoteToSalesOrder.js" />
+    <Content Include="messages\Sdk.ConvertSalesOrderToInvoice.js" />
+    <Content Include="messages\Sdk.CopyCampaign.js" />
+    <Content Include="messages\Sdk.CopyCampaignResponse.js" />
+    <Content Include="messages\Sdk.CopyDynamicListToStatic.js" />
+    <Content Include="messages\Sdk.CopyMembersList.js" />
+    <Content Include="messages\Sdk.CopySystemForm.js" />
+    <Content Include="messages\Sdk.Create.js" />
+    <Content Include="messages\Sdk.CreateActivitiesList.js" />
+    <Content Include="messages\Sdk.CreateException.js" />
+    <Content Include="messages\Sdk.CreateInstance.js" />
+    <Content Include="messages\Sdk.CreateWorkflowFromTemplate.js" />
+    <Content Include="messages\Sdk.Delete.js" />
+    <Content Include="messages\Sdk.DeleteAuditData.js" />
+    <Content Include="messages\Sdk.DeleteOpenInstances.js" />
+    <Content Include="messages\Sdk.DeliverIncomingEmail.js" />
+    <Content Include="messages\Sdk.DeliverPromoteEmail.js" />
+    <Content Include="messages\Sdk.DeprovisionLanguage.js" />
+    <Content Include="messages\Sdk.Disassociate.js" />
+    <Content Include="messages\Sdk.DistributeCampaignActivity.js" />
+    <Content Include="messages\Sdk.DownloadReportDefinition.js" />
+    <Content Include="messages\Sdk.ExecuteByIdSavedQuery.js" />
+    <Content Include="messages\Sdk.ExecuteByIdUserQuery.js" />
+    <Content Include="messages\Sdk.ExecuteMultiple.js" />
+    <Content Include="messages\Sdk.ExecuteWorkflow.js" />
+    <Content Include="messages\Sdk.ExpandCalendar.js" />
+    <Content Include="messages\Sdk.ExportMappingsImportMap.js" />
+    <Content Include="messages\Sdk.FetchXmlToQueryExpression.js" />
+    <Content Include="messages\Sdk.FindParentResourceGroup.js" />
+    <Content Include="messages\Sdk.FulfillSalesOrder.js" />
+    <Content Include="messages\Sdk.GenerateInvoiceFromOpportunity.js" />
+    <Content Include="messages\Sdk.GenerateQuoteFromOpportunity.js" />
+    <Content Include="messages\Sdk.GenerateSalesOrderFromOpportunity.js" />
+    <Content Include="messages\Sdk.GetAllTimeZonesWithDisplayName.js" />
+    <Content Include="messages\Sdk.GetInvoiceProductsFromOpportunity.js" />
+    <Content Include="messages\Sdk.GetQuantityDecimal.js" />
+    <Content Include="messages\Sdk.GetQuoteProductsFromOpportunity.js" />
+    <Content Include="messages\Sdk.GetReportHistoryLimit.js" />
+    <Content Include="messages\Sdk.GetSalesOrderProductsFromOpportunity.js" />
+    <Content Include="messages\Sdk.GetTimeZoneCodeByLocalizedName.js" />
+    <Content Include="messages\Sdk.GetTrackingTokenEmail.js" />
+    <Content Include="messages\Sdk.GrantAccess.js" />
+    <Content Include="messages\Sdk.ImportMappingsImportMap.js" />
+    <Content Include="messages\Sdk.ImportRecordsImport.js" />
+    <Content Include="messages\Sdk.InitializeFrom.js" />
+    <Content Include="messages\Sdk.InstallSampleData.js" />
+    <Content Include="messages\Sdk.InstantiateFilters.js" />
+    <Content Include="messages\Sdk.InstantiateTemplate.js" />
+    <Content Include="messages\Sdk.IsComponentCustomizable.js" />
+    <Content Include="messages\Sdk.IsDataEncryptionActive.js" />
+    <Content Include="messages\Sdk.IsValidStateTransition.js" />
+    <Content Include="messages\Sdk.LocalTimeFromUtcTime.js" />
+    <Content Include="messages\Sdk.LockInvoicePricing.js" />
+    <Content Include="messages\Sdk.LockSalesOrderPricing.js" />
+    <Content Include="messages\Sdk.LoseOpportunity.js" />
+    <Content Include="messages\Sdk.Merge.js" />
+    <Content Include="messages\Sdk.ModifyAccess.js" />
+    <Content Include="messages\Sdk.ParseImport.js" />
+    <Content Include="messages\Sdk.ProcessInboundEmail.js" />
+    <Content Include="messages\Sdk.PropagateByExpression.js" />
+    <Content Include="messages\Sdk.ProvisionLanguage.js" />
+    <Content Include="messages\Sdk.PublishAllXml.js" />
+    <Content Include="messages\Sdk.PublishDuplicateRule.js" />
+    <Content Include="messages\Sdk.PublishXml.js" />
+    <Content Include="messages\Sdk.QualifyLead.js" />
+    <Content Include="messages\Sdk.QualifyMemberList.js" />
+    <Content Include="messages\Sdk.QueryExpressionToFetchXml.js" />
+    <Content Include="messages\Sdk.QueryMultipleSchedules.js" />
+    <Content Include="messages\Sdk.QuerySchedule.js" />
+    <Content Include="messages\Sdk.ReassignObjectsOwner.js" />
+    <Content Include="messages\Sdk.ReassignObjectsSystemUser.js" />
+    <Content Include="messages\Sdk.Recalculate.js" />
+    <Content Include="messages\Sdk.RemoveItemCampaign.js" />
+    <Content Include="messages\Sdk.RemoveItemCampaignActivity.js" />
+    <Content Include="messages\Sdk.RemoveMemberList.js" />
+    <Content Include="messages\Sdk.RemoveMembersTeam.js" />
+    <Content Include="messages\Sdk.RemoveParent.js" />
+    <Content Include="messages\Sdk.RemovePrivilegeRole.js" />
+    <Content Include="messages\Sdk.RemoveProductFromKit.js" />
+    <Content Include="messages\Sdk.RemoveSolutionComponent.js" />
+    <Content Include="messages\Sdk.RemoveUserFromRecordTeam.js" />
+    <Content Include="messages\Sdk.RenewContract.js" />
+    <Content Include="messages\Sdk.ReplacePrivilegesRole.js" />
+    <Content Include="messages\Sdk.Reschedule.js" />
+    <Content Include="messages\Sdk.ResetUserFilters.js" />
+    <Content Include="messages\Sdk.Retrieve.js" />
+    <Content Include="messages\Sdk.RetrieveAbsoluteAndSiteCollectionUrl.js" />
+    <Content Include="messages\Sdk.RetrieveAllChildUsersSystemUser.js" />
+    <Content Include="messages\Sdk.RetrieveAttributeChangeHistory.js" />
+    <Content Include="messages\Sdk.RetrieveAuditDetails.js" />
+    <Content Include="messages\Sdk.RetrieveAvailableLanguages.js" />
+    <Content Include="messages\Sdk.RetrieveBusinessHierarchyBusinessUnit.js" />
+    <Content Include="messages\Sdk.RetrieveByGroupResource.js" />
+    <Content Include="messages\Sdk.RetrieveByResourceResourceGroup.js" />
+    <Content Include="messages\Sdk.RetrieveByResourcesService.js" />
+    <Content Include="messages\Sdk.RetrieveByTopIncidentProductKbArticle.js" />
+    <Content Include="messages\Sdk.RetrieveByTopIncidentSubjectKbArticle.js" />
+    <Content Include="messages\Sdk.RetrieveDataEncryptionKey.js" />
+    <Content Include="messages\Sdk.RetrieveDependenciesForDelete.js" />
+    <Content Include="messages\Sdk.RetrieveDependenciesForUninstall.js" />
+    <Content Include="messages\Sdk.RetrieveDependentComponents.js" />
+    <Content Include="messages\Sdk.RetrieveDeploymentLicenseType.js" />
+    <Content Include="messages\Sdk.RetrieveDeprovisionedLanguages.js" />
+    <Content Include="messages\Sdk.RetrieveDuplicates.js" />
+    <Content Include="messages\Sdk.RetrieveExchangeRate.js" />
+    <Content Include="messages\Sdk.RetrieveFilteredForms.js" />
+    <Content Include="messages\Sdk.RetrieveFormattedImportJobResults.js" />
+    <Content Include="messages\Sdk.RetrieveInstalledLanguagePacks.js" />
+    <Content Include="messages\Sdk.RetrieveInstalledLanguagePackVersion.js" />
+    <Content Include="messages\Sdk.RetrieveLicenseInfo.js" />
+    <Content Include="messages\Sdk.RetrieveLocLabels.js" />
+    <Content Include="messages\Sdk.RetrieveMembersBulkOperation.js" />
+    <Content Include="messages\Sdk.RetrieveMetadataChanges.js" />
+    <Content Include="messages\Sdk.RetrieveMissingDependencies.js" />
+    <Content Include="messages\Sdk.RetrieveMultiple.js" />
+    <Content Include="messages\Sdk.RetrieveOrganizationResources.js" />
+    <Content Include="messages\Sdk.RetrieveParentGroupsResourceGroup.js" />
+    <Content Include="messages\Sdk.RetrievePersonalWall.js" />
+    <Content Include="messages\Sdk.RetrievePrincipalAccess.js" />
+    <Content Include="messages\Sdk.RetrievePrincipalAttributePrivileges.js" />
+    <Content Include="messages\Sdk.RetrievePrivilegeSet.js" />
+    <Content Include="messages\Sdk.RetrieveProvisionedLanguagePackVersion.js" />
+    <Content Include="messages\Sdk.RetrieveProvisionedLanguages.js" />
+    <Content Include="messages\Sdk.RetrieveRecordChangeHistory.js" />
+    <Content Include="messages\Sdk.RetrieveRecordWall.js" />
+    <Content Include="messages\Sdk.RetrieveRequiredComponents.js" />
+    <Content Include="messages\Sdk.RetrieveRolePrivilegesRole.js" />
+    <Content Include="messages\Sdk.RetrieveSharedPrincipalsAndAccess.js" />
+    <Content Include="messages\Sdk.RetrieveSubGroupsResourceGroup.js" />
+    <Content Include="messages\Sdk.RetrieveTeamPrivileges.js" />
+    <Content Include="messages\Sdk.RetrieveTimestamp.js" />
+    <Content Include="messages\Sdk.RetrieveUnpublished.js" />
+    <Content Include="messages\Sdk.RetrieveUserPrivileges.js" />
+    <Content Include="messages\Sdk.RetrieveVersion.js" />
+    <Content Include="messages\Sdk.ReviseQuote.js" />
+    <Content Include="messages\Sdk.RevokeAccess.js" />
+    <Content Include="messages\Sdk.Rollup.js" />
+    <Content Include="messages\Sdk.Search.js" />
+    <Content Include="messages\Sdk.SearchByBodyKbArticle.js" />
+    <Content Include="messages\Sdk.SearchByKeywordsKbArticle.js" />
+    <Content Include="messages\Sdk.SearchByTitleKbArticle.js" />
+    <Content Include="messages\Sdk.SendBulkMail.js" />
+    <Content Include="messages\Sdk.SendEmail.js" />
+    <Content Include="messages\Sdk.SendEmailFromTemplate.js" />
+    <Content Include="messages\Sdk.SendFax.js" />
+    <Content Include="messages\Sdk.SendTemplate.js" />
+    <Content Include="messages\Sdk.SetBusinessEquipment.js" />
+    <Content Include="messages\Sdk.SetBusinessSystemUser.js" />
+    <Content Include="messages\Sdk.SetDataEncryptionKey.js" />
+    <Content Include="messages\Sdk.SetParentBusinessUnit.js" />
+    <Content Include="messages\Sdk.SetParentSystemUser.js" />
+    <Content Include="messages\Sdk.SetParentTeam.js" />
+    <Content Include="messages\Sdk.SetReportRelated.js" />
+    <Content Include="messages\Sdk.SetState.js" />
+    <Content Include="messages\Sdk.TransformImport.js" />
+    <Content Include="messages\Sdk.TriggerServiceEndpointCheck.js" />
+    <Content Include="messages\Sdk.UninstallSampleData.js" />
+    <Content Include="messages\Sdk.UnlockInvoicePricing.js" />
+    <Content Include="messages\Sdk.UnlockSalesOrderPricing.js" />
+    <Content Include="messages\Sdk.UnpublishDuplicateRule.js" />
+    <Content Include="messages\Sdk.Update.js" />
+    <Content Include="messages\Sdk.UtcTimeFromLocalTime.js" />
+    <Content Include="messages\Sdk.Validate.js" />
+    <Content Include="messages\Sdk.ValidateRecurrenceRule.js" />
+    <Content Include="messages\Sdk.ValidateSavedQuery.js" />
+    <Content Include="messages\Sdk.WhoAmI.js" />
+    <Content Include="messages\Sdk.WinOpportunity.js" />
+    <Content Include="messages\Sdk.WinQuote.js" />
+    <Content Include="Sdk.Soap.min.js" />
+    <Content Include="Sdk.Soap.vsdoc.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3230</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3230/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,25 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
+   ' Enable all elements
+   Chart1.ChartAreas("ChartArea1").AxisX.MinorGrid.Enabled = True
+   Chart1.ChartAreas("ChartArea1").AxisX.MinorTickMark.Enabled = True
+   
+   ' Set Grid lines and tick marks interval
+   Chart1.ChartAreas("ChartArea1").AxisX.MajorGrid.Interval = 1
+   Chart1.ChartAreas("ChartArea1").AxisX.MajorTickMark.Interval = 1
+   Chart1.ChartAreas("ChartArea1").AxisX.MinorGrid.Interval = 0.5
+   Chart1.ChartAreas("ChartArea1").AxisX.MinorTickMark.Interval = 0.5
+   
+   ' Set Line Color
+   Chart1.ChartAreas("ChartArea1").AxisX.MinorGrid.LineColor = Color.Blue
+   
+   ' Set Line Style
+   Chart1.ChartAreas("ChartArea1").AxisX.MajorTickMark.LineDashStyle = ChartDashStyle.Solid
+   
+   ' Set Line Width
+   Chart1.ChartAreas("ChartArea1").AxisX.MajorGrid.LineWidth = 1
+   
+End Sub 'Page_Load

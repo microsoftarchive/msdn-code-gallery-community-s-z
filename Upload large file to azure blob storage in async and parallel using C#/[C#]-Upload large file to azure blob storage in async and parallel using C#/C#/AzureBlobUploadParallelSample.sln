@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlobUploadParallelSample", "AzureBlobUploadParallelSample\AzureBlobUploadParallelSample.csproj", "{8E3D0065-5174-4330-8A9E-9CF50F9EF0ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlobOperationsManager", "AzureBlobOperationsManager\AzureBlobOperationsManager.csproj", "{0F4D9B70-0E25-4C81-9EB2-6E12FBBEB1F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E3D0065-5174-4330-8A9E-9CF50F9EF0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3D0065-5174-4330-8A9E-9CF50F9EF0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3D0065-5174-4330-8A9E-9CF50F9EF0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E3D0065-5174-4330-8A9E-9CF50F9EF0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F4D9B70-0E25-4C81-9EB2-6E12FBBEB1F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F4D9B70-0E25-4C81-9EB2-6E12FBBEB1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F4D9B70-0E25-4C81-9EB2-6E12FBBEB1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F4D9B70-0E25-4C81-9EB2-6E12FBBEB1F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

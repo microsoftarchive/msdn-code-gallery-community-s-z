@@ -1,0 +1,22 @@
+<HEAD>
+	<LINK href="../../../../Styles.css" type="text/css" rel="stylesheet">
+</HEAD>
+<P><br>
+	Standard tooltips are implemented by the Chart control using two properties:
+</P>
+<OL>
+	<LI>
+		ToolTip: allows for both design-time and run-time tooltips for 
+		DataPoint, Series and LegendItem objects. Special 
+		formatting can be used for these tooltips.
+	</LI>
+	<LI>
+		LegendToolTip: used to set or get the tooltips of 
+		default legend items created for DataPoint or Series objects, depending on the 
+		chart type displayed. Special formatting can also be used for these tooltips.
+	</LI>
+</OL>
+<P>Custom tooltips are implemented via the GetToolTipText event, which can be 
+	used to display a tooltip for a chart element that doesn&#39;t have a tooltip 
+    property and also to override the tooltip for a chart element that does 
+	have a tooltip property.</P>

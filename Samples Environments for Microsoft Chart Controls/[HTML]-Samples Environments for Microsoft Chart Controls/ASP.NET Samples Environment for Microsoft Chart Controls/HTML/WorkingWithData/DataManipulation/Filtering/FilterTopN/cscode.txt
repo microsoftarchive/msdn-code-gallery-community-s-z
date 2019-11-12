@@ -1,0 +1,25 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series with random data
+    double[]	yValues = {945.62, 545.54, 760.45, 834.73, 1385.42, 932.12, 855.18, 1207.15, 1299.24, 1023.65, 956.56, 1455.85};
+    double[]	xValues = {1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001};
+    Chart1.Series["Sales"].Points.DataBindXY(xValues, yValues);
+
+    // Show data points using point's index
+    if(ShowAsIndexedList.SelectedItem.Text == "True")
+    {
+        Chart1.Series["TopSales"].IsXValueIndexed = true;
+    }
+    // Filtering only marks points as empty
+    else
+    {
+        Chart1.DataManipulator.FilterSetEmptyPoints = true;
+    }
+
+    // Filter Top 5 points
+    Chart1.DataManipulator.FilterTopN(5, "Sales", "TopSales", "Y", true);
+}
+...

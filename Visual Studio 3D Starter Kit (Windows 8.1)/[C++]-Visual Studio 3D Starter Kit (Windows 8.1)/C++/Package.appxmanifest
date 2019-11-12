@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+
+  <Identity Name="VS3DStarterKit"
+            Publisher="CN=VS3DStarterKit"
+            Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>VS 3D Starter Kit</DisplayName>
+    <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="StarterKit.App">
+        <VisualElements
+            DisplayName="VS 3D Starter Kit"
+            Logo="Assets\Logo.png"
+            SmallLogo="Assets\SmallLogo.png"
+            Description="This sample contains the starting point for a basic game. It demonstrates using the Visual Studio Graphics tools for asset manipulation, along with using an MSBUILD task for converting the included assets to a format suitable for runtime consumption. The sample contains a “Starter Kit” which provides basic support for consuming the runtime assets produced by the MSBUILD task. This includes loading and rendering assets, along with other functionality to enabled developers to work with the assets at runtime. The sample also demonstrates using XAML to implement a simple 2D HUD over the 3D scene."
+            ForegroundText="light"
+            BackgroundColor="#742894">
+            <DefaultTile ShowName="allLogos" />
+            <SplashScreen Image="Assets\SplashScreen.png" />
+        </VisualElements>
+    </Application>
+  </Applications>
+</Package>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestfulApplication.XamarinForms.Views.DetailsPageView">
+
+<StackLayout VerticalOptions="CenterAndExpand"
+             Padding="10,10,10,10">
+   <Label Text="FullName"
+          VerticalOptions="Center"
+          HorizontalOptions="Start"
+          FontSize="30"/>
+   <Entry Text="{Binding SelectedEmployee.FullName, Mode=TwoWay}"
+          Placeholder="FullName"/>
+   <Label Text="Department"
+          VerticalOptions="Center"
+          HorizontalOptions="Start"
+          FontSize="30"/>
+   <Entry Text="{Binding SelectedEmployee.Department, Mode=TwoWay}"
+          Placeholder="Department"/>
+
+   <Button Command="{Binding AddEmployeeCommand}"
+           Text="Add"/>
+
+   <Button Command="{Binding EditEmployeeCommand}"
+           Text="Edit"/>
+
+   <Button Command="{Binding DeleteEmployeeCommand}"
+           Text="Delete"/>
+
+</StackLayout>
+
+</ContentPage>

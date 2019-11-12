@@ -1,0 +1,37 @@
+﻿<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    For licensing information and to get the latest version go to:
+    http://workspaces.gotdotnet.com/3dtools
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY
+    OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+    LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR
+    FITNESS FOR A PARTICULAR PURPOSE.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<Window x:Class="ModelViewer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:tools="clr-namespace:_3DTools;assembly=3DTools"
+    Title="WPF Model Viewer"
+    >
+  <DockPanel>
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="File">
+        <MenuItem Header="Open..." Click="OnOpen"/>
+        <Separator />
+        <MenuItem Header="Exit" Click="OnExit"/>
+      </MenuItem>
+      <MenuItem Header="View">
+        <MenuItem Header="Headlight" IsChecked="True" IsCheckable="True" Checked="OnHeadlightChecked" Unchecked="OnHeadlightUnchecked" />
+        <MenuItem Header="AmbientLight" IsCheckable="True" Checked="OnAmbientLightChecked" Unchecked="OnAmbientLightUnchecked"/>
+        <Separator />
+        <MenuItem Header="Wireframe" IsCheckable="True" Checked="OnWireframeChecked" Unchecked="OnWireframeUnchecked"/>
+      </MenuItem>
+    </Menu>
+    <Border Background="AliceBlue">
+      <tools:Trackport3D x:Name="_trackport"/>
+    </Border>
+  </DockPanel>
+</Window>

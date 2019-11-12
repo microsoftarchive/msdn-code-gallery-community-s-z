@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NorthwindEFModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+
+  <EntityContainer Name="NorthwindEntities">
+    <EntitySet Name="Employees" EntityType="NorthwindEFModel.Employee" />
+
+    <EntitySet Name="Territories" EntityType="NorthwindEFModel.Territory" />
+
+    <!-- AssociationSet for Territories/Region relationship -->
+    <AssociationSet Name="TerritoriesRegion" Association="NorthwindEFModel.TerritoriesRegion">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="Territories" EntitySet="Territories" />
+    </AssociationSet>
+    <EntitySet Name="Regions" EntityType="NorthwindEFModel.Region" />
+
+    <!-- AssociationSet for Employees/Territores relationship -->
+    <AssociationSet Name="EmployeesTerritories" Association="NorthwindEFModel.EmployeesTerritories">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Territories" EntitySet="Territories" />
+    </AssociationSet>
+
+    <!-- AssociationSet for Products/Supplier relationship -->
+    <AssociationSet Name="Products_Supplier" Association="NorthwindEFModel.Products_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    
+    <EntitySet Name="Suppliers" EntityType="NorthwindEFModel.Supplier" />    
+    <EntitySet Name="Products" EntityType="NorthwindEFModel.Product" />
+    <EntitySet Name="Categories" EntityType="NorthwindEFModel.Category" />
+    
+    <!-- AssociationSet for Products/Category relationship -->
+    <AssociationSet Name="Products_Category" Association="NorthwindEFModel.Products_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+
+
+    <EntitySet Name="Customers" EntityType="NorthwindEFModel.Customer" />
+
+    <AssociationSet Name="CustomerOrders" Association="NorthwindEFModel.CustomerOrders">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <EntitySet Name="Orders" EntityType="NorthwindEFModel.Order" />
+    <EntitySet Name="OrderDetails" EntityType="NorthwindEFModel.OrderDetail" />
+
+    <!-- AssociationSet for Products/Category relationship -->
+    <AssociationSet Name="Order_Details_Order" Association="NorthwindEFModel.Order_Details_Order">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    
+    <!-- AssociationSet for Products/Order Details relationship -->
+    <AssociationSet Name="Order_Details_Product" Association="NorthwindEFModel.Order_Details_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+
+  </EntityContainer>
+
+  
+  <!-- TPT  -->
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" />
+    <Property Name="RequiredDate" Type="DateTime" />
+    <Property Name="ShippedDate" Type="DateTime" />
+    <Property Name="Freight" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ShipName" Type="String" MaxLength="40" />
+    <Property Name="ShipAddress" Type="String" MaxLength="60" />
+    <Property Name="ShipCity" Type="String" MaxLength="15" />
+    <Property Name="ShipRegion" Type="String" MaxLength="15" />
+    <Property Name="ShipPostalCode" Type="String" MaxLength="10" />
+    <Property Name="ShipCountry" Type="String" MaxLength="15" />
+    <NavigationProperty Name="Customer" Relationship="NorthwindEFModel.CustomerOrders" FromRole="Orders" ToRole="Customer" />
+    <NavigationProperty Name="OrderDetails" Relationship="NorthwindEFModel.Order_Details_Order" FromRole="Order" ToRole="OrderDetails" />
+  </EntityType>
+  <EntityType Name="InternationalOrder" BaseType ="NorthwindEFModel.Order">
+    <Property Name="CustomsDescription" Type="String" Nullable="false" MaxLength="100" />
+    <Property Name="ExciseTax" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <!-- End of TPT  -->
+  
+  <!-- TPC -->
+  <EntityType Name="Employee" Abstract="true">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="10" />
+    <Property Name="Title" Type="String" MaxLength="30" />
+    <Property Name="TitleOfCourtesy" Type="String" MaxLength="25" />
+    <Property Name="BirthDate" Type="DateTime" />
+    <Property Name="HireDate" Type="DateTime" />
+    <Property Name="Address" Type="NorthwindEFModel.CommonAddress" Nullable ="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="24" />
+    <Property Name="Extension" Type="String" MaxLength="4" />
+    <Property Name="Photo" Type="Binary" MaxLength="2147483647" />
+    <Property Name="Notes" Type="String" MaxLength="1073741823" />
+    <Property Name="PhotoPath" Type="String" MaxLength="255" />
+    <NavigationProperty Name="Territories" Relationship="NorthwindEFModel.EmployeesTerritories" FromRole="Employees" ToRole="Territories" />
+  </EntityType>
+  <EntityType Name="CurrentEmployee" BaseType ="NorthwindEFModel.Employee" ></EntityType>
+  <EntityType Name="PreviousEmployee" BaseType ="NorthwindEFModel.Employee" ></EntityType>
+  <!-- End of TPC example -->
+
+  <!-- TPH -->
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" />
+    <Property Name="QuantityPerUnit" Type="String" MaxLength="20" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UnitsInStock" Type="Int16" />
+    <Property Name="UnitsOnOrder" Type="Int16" />
+    <Property Name="ReorderLevel" Type="Int16" />
+    <NavigationProperty Name="Category" Relationship="NorthwindEFModel.Products_Category" FromRole="Products" ToRole="Category" />
+    <NavigationProperty Name="OrderDetails" Relationship="NorthwindEFModel.Order_Details_Product" FromRole="Product" ToRole="OrderDetails" />
+    <NavigationProperty Name="Supplier" Relationship="NorthwindEFModel.Products_Supplier" FromRole="Products" ToRole="Supplier" />
+  </EntityType>
+
+  <EntityType Name ="DiscontinuedProduct" BaseType ="NorthwindEFModel.Product">
+    <Property Name="DiscontinuedDate" Type="DateTime" />
+  </EntityType>
+  <!-- End of TPH -->
+
+
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="5" FixedLength="true" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" />
+    <Property Name="ContactName" Type="String" MaxLength="30" />
+    <Property Name="ContactTitle" Type="String" MaxLength="30" />
+    <Property Name="Address" Type="NorthwindEFModel.CommonAddress" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="24" />
+    <Property Name="Fax" Type="String" MaxLength="24" />
+    <NavigationProperty Name="Orders" Relationship="NorthwindEFModel.CustomerOrders" FromRole="Customer" ToRole="Orders" />
+  </EntityType>
+
+  <Association Name="CustomerOrders">
+    <End Role="Customer" Type="NorthwindEFModel.Customer" Multiplicity="0..1" />
+    <End Role="Orders" Type="NorthwindEFModel.Order" Multiplicity="*" />
+  </Association>
+
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" />
+    <Property Name="Description" Type="String" MaxLength="1073741823" />
+    <Property Name="Picture" Type="Binary" MaxLength="2147483647" />
+    <NavigationProperty Name="Products" Relationship="NorthwindEFModel.Products_Category" FromRole="Category" ToRole="Products" />
+  </EntityType>
+
+  <Association Name="Products_Category">
+    <End Role="Category" Type="NorthwindEFModel.Category" Multiplicity="0..1" />
+    <End Role="Products" Type="NorthwindEFModel.Product" Multiplicity="*" />
+  </Association>
+
+
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" />
+    <Property Name="ContactName" Type="String" MaxLength="30" />
+    <Property Name="ContactTitle" Type="String" MaxLength="30" />
+    <Property Name="Address" Type="NorthwindEFModel.CommonAddress" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="24" />
+    <Property Name="Fax" Type="String" MaxLength="24" />
+    <Property Name="HomePage" Type="String" MaxLength="1073741823" />
+    <NavigationProperty Name="Products" Relationship="NorthwindEFModel.Products_Supplier" FromRole="Supplier" ToRole="Products" />
+  </EntityType>
+
+  <Association Name="Products_Supplier">
+    <End Role="Supplier" Type="NorthwindEFModel.Supplier" Multiplicity="0..1" />
+    <End Role="Products" Type="NorthwindEFModel.Product" Multiplicity="*" />
+  </Association>
+
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Quantity" Type="Int16" Nullable="false" />
+    <Property Name="Discount" Type="Single" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="NorthwindEFModel.Order_Details_Order" FromRole="OrderDetails" ToRole="Order" />
+    <NavigationProperty Name="Product" Relationship="NorthwindEFModel.Order_Details_Product" FromRole="OrderDetails" ToRole="Product" />
+  </EntityType>
+
+  <Association Name="Order_Details_Product">
+    <End Role="Product" Type="NorthwindEFModel.Product" Multiplicity="1" />
+    <End Role="OrderDetails" Type="NorthwindEFModel.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  
+  <Association Name="Order_Details_Order">
+    <End Role="Order" Type="NorthwindEFModel.Order" Multiplicity="1" />
+    <End Role="OrderDetails" Type="NorthwindEFModel.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  
+  <!-- Complex type -->
+  <ComplexType Name="CommonAddress" >
+    <Property Name ="Address" Type="String" MaxLength="60" />
+    <Property Name ="City" Type="String" MaxLength="15" />
+    <Property Name ="Region" Type="String" MaxLength="15" />
+    <Property Name ="PostalCode" Type="String" MaxLength="10" />
+    <Property Name ="Country" Type="String" MaxLength="15" />
+  </ComplexType>
+
+  <!-- Start of Employees sub graph -->
+  <Association Name="EmployeesTerritories">
+    <End Role="Employees" Type="NorthwindEFModel.Employee" Multiplicity="*" />
+    <End Role="Territories" Type="NorthwindEFModel.Territory" Multiplicity="*" />
+  </Association> 
+  
+  <EntityType Name="Territory">
+    <Key>
+      <PropertyRef Name="TerritoryID" />
+    </Key>
+    <Property Name="TerritoryID" Type="Int32" Nullable="false" />
+    <Property Name="TerritoryDescription" Type="String" Nullable="false" MaxLength="50" />
+  </EntityType>
+
+  <Association Name="TerritoriesRegion">
+    <End Role="Region" Type="NorthwindEFModel.Region" Multiplicity="1" />
+    <End Role="Territories" Type="NorthwindEFModel.Territory" Multiplicity="*" />
+  </Association>
+
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="Int32" Nullable="false" />
+    <Property Name="RegionDescription" Type="String" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <!-- End of Employees sub graph -->
+
+</Schema>

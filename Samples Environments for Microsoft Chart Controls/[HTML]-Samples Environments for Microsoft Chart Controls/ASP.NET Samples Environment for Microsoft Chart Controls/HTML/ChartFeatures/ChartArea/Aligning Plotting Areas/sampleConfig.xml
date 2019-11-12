@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "ChartArea" Priority="350">
+  <Title>Aligning Plot Areas</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Aligning Plot Areas</ShortBlurb> 
+  <Content>AligningPlotAreas.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+	<Keyword>Chart area, Alignment</Keyword>
+	<Keyword>Alignment, Chart area</Keyword>
+  </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "PopulatingData" Priority="150">
+  <Title>Adding Dynamic Data</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Adding Dynamic Data</ShortBlurb> 
+  <Content>DynamicAddData.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Adding using API</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

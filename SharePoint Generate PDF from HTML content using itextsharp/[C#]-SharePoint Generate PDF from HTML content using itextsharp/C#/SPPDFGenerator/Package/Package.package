@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2452544c-80ce-4a07-9615-13b7540926e7" solutionId="2452544c-80ce-4a07-9615-13b7540926e7" resetWebServer="false" sharePointProductVersion="15.0" name="SPPDFGenerator" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="itextsharp.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="Dll\itextsharp.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="4c5d7114-072e-4824-ad61-2a921e2924a5" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="dd584e3e-a025-496a-a627-ffe5ddc425ce" />
+  </projectItems>
+</package>

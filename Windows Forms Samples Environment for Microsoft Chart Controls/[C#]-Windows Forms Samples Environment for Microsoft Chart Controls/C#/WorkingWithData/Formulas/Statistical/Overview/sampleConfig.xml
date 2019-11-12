@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Statistical" Priority = "1">
+  <Title>Overview</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Statistical Formulas</ShortBlurb> 
+  <SampleControl>Overview</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Data, Manipulation</Keyword>
+    <Keyword>Statistical Formulas</Keyword>
+    <Keyword>Formulas, Statistical</Keyword>
+  </Keywords>    
+
+</SampleConfig>
+
+</SampleConfigs>

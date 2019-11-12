@@ -1,0 +1,35 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+//IMPORTANT: For this event to work the event handler must be added to the InitializeComponent()
+//  method. We recommend that you add the event using the Properties window in the IDE  
+private void UpdateChartButton_Click(object sender, System.EventArgs e)
+{
+    // Set a web site link for all series
+    Chart1.Series["Brand1"].Url = TextBoxFord.Text;
+    Chart1.Series["Brand2"].Url = TextBoxToyota.Text;
+    Chart1.Series["Brand3"].Url = TextBoxMazda.Text;
+    Chart1.Series["Brand4"].Url = TextBoxPontiac.Text;
+
+    // Set a web site link for all series' legend items
+    Chart1.Series["Brand1"].LegendUrl = TextBoxFord.Text;
+    Chart1.Series["Brand2"].LegendUrl = TextBoxToyota.Text;
+    Chart1.Series["Brand3"].LegendUrl = TextBoxMazda.Text;
+    Chart1.Series["Brand4"].LegendUrl = TextBoxPontiac.Text;
+
+    // Setting attribute to "target='_blank'" will open a web site in a new window
+    string attrib = "";
+    if(CheckBoxNewWindow.Checked)
+    {
+        attrib = "target='_blank'";
+    }
+
+    // Set series and series legend item map area attributes which will determine
+    //   if the web site is opened in existing or new window
+    foreach(Series series in Chart1.Series)
+    {
+        series.MapAreaAttributes = attrib;
+        series.LegendMapAreaAttributes = attrib;
+    }
+}
+...

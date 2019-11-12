@@ -1,0 +1,48 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DataTemplate
+        x:Key="ColumnTemplateStyle">
+
+		<Grid
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch">
+
+			<!-- Main Background of Timeline -->
+			<!--<Rectangle
+                            Fill="#FF2F2F2F" />-->
+			<Rectangle
+                            Fill="White" />
+
+
+			<!-- Label of Time Units at the bottom -->
+			<TextBlock
+                            FontFamily="Arial"
+                            TextWrapping="Wrap"
+                            Margin="5.5,0,2,2"
+                            VerticalAlignment="Bottom"
+                            Foreground="DarkBlue">
+                            
+                                <TextBlock.Text>
+                                    <Binding />
+                                </TextBlock.Text>
+
+			</TextBlock>
+			<!-- Vertical Separator Lines of Time Units -->
+			<Rectangle
+                            HorizontalAlignment="Left"
+                            Margin="1.25,0,3,0"
+                            Width="1"
+                            >
+				<Rectangle.Fill>
+					<LinearGradientBrush StartPoint="0,0.01" EndPoint="0,0.02" SpreadMethod="Repeat">
+						<GradientStop Color="White" Offset="0.0"/>
+						<GradientStop Color="Silver" Offset="1"/>
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+		</Grid>
+
+
+	</DataTemplate>
+</ResourceDictionary>

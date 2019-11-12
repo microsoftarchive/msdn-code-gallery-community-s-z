@@ -1,0 +1,16 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+protected void Page_Load(object sender, System.EventArgs e)
+{
+    this.Chart1.Series[0].PostBackValue = "#AXISLABEL";
+    this.Chart1.Series[0].ToolTip = "#AXISLABEL Region: #VAL{C}"; 
+}
+
+
+
+protected void Chart1_Click(object sender, ImageMapEventArgs e)
+{
+    this.DetailSource.SelectParameters["RegionName"].DefaultValue = e.PostBackValue;
+    this.GridView.Caption = String.Format("{0} Region", e.PostBackValue);
+}

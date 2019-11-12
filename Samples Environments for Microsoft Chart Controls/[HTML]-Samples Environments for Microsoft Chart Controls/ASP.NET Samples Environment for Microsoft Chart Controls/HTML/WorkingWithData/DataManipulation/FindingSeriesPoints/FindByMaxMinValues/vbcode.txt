@@ -1,0 +1,15 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Find point with maximum Y value and change color
+    Dim maxValuePoint As DataPoint = Chart1.Series("Series1").Points.FindMaxValue()
+    maxValuePoint.Color = Color.FromArgb(255, 128, 128)
+
+    ' Find point with minimum Y value and change color
+    Dim minValuePoint As DataPoint = Chart1.Series("Series1").Points.FindMinValue()
+    minValuePoint.Color = Color.FromArgb(128, 128, 255)
+
+End Sub 'Page_Load
+...

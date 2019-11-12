@@ -1,0 +1,84 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Protected Chart1 As System.Web.UI.DataVisualization.Charting.Chart
+Protected SeriesValuesDataGrid As System.Web.UI.WebControls.DataGrid
+Protected seriesDataSet As System.Data.DataSet
+Protected SeriesValuesDataTable As System.Data.DataTable
+Protected ChartData As System.Web.UI.WebControls.Label
+Protected ChartDataSchema As System.Web.UI.WebControls.Label
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   ' Populate series using random data
+   If ChartData.Text = [String].IsEmpty Then
+      Dim yValues As Double() =  {23.67, 75.45, 60.45, 34.54, 85.62, 32.43, 55.98, 67.23, 56.34, 23.14, 45.24, 67.41, 13.45, 56.36, 45.29}
+      Dim pointIndex As Integer
+      For pointIndex = 0 To yValues.Length - 1
+         Chart1.Series("Series1").Points.AddXY(1990 + pointIndex, yValues(pointIndex))
+      Next pointIndex
+   
+   ' Populate series from the hidden text fields
+   Else
+      Dim dataSet As New DataSet()
+      dataSet.ReadXmlSchema(New StringReader(ChartDataSchema.Text))
+      dataSet.ReadXml(New StringReader(ChartData.Text))
+      Dim dataView As New DataView(dataSet.Tables(0))
+      Chart1.Series("Series1").Points.DataBindXY(dataView, "X", dataView, "Y")
+   End If
+   
+   ' Data bind grid control to the series data
+   If Not IsPostBack Then
+      DataBindGrid()
+   End If
+End Sub 'Page_Load
+
+Private Sub DataBindGrid()
+   ' Export series values into DataSet object
+   seriesDataSet = Chart1.DataManipulator.ExportSeriesValues("Series1")
+   
+   ' Data bind DataGrid control. 
+   SeriesValuesDataGrid.DataSource = seriesDataSet
+   SeriesValuesDataGrid.DataBind()
+End Sub 'DataBindGrid
+
+Private Sub SeriesValuesDataGrid_UpdateCommand(ByVal source As Object, ByVal e As System.Web.UI.WebControls.DataGridCommandEventArgs) Handles DataGrid1.UpdateCommand
+   Try
+      ' Get X and Y values
+      Dim xValue As Double = Double.Parse(e.Item.Cells(1).Text)
+      Dim textBox As TextBox = CType(e.Item.Cells(2).Controls(0), TextBox)
+      Dim yValue As Double = Double.Parse(textBox.Text)
+      
+      ' Find edited point by X value
+      Dim dataPoint As DataPoint = Chart1.Series("Series1").Points.FindValue(xValue, "X")
+      If Not (dataPoint Is Nothing) Then
+         ' Update Y value of the point
+         dataPoint.YValues(0) = yValue
+      End If
+      
+      ' Export series values and schema into hidden text fields
+      ChartDataSchema.Text = Chart1.DataManipulator.ExportSeriesValues().GetXmlSchema()
+      ChartData.Text = Chart1.DataManipulator.ExportSeriesValues().GetXml()
+      
+      ' Data bind the grid
+      SeriesValuesDataGrid.EditItemIndex = - 1
+      DataBindGrid()
+   Catch
+   End Try
+End Sub 'SeriesValuesDataGrid_UpdateCommand
+
+Private Sub SeriesValuesDataGrid_PageIndexChanged(ByVal source As Object, ByVal e As System.Web.UI.WebControls.DataGridPageChangedEventArgs) Handles DataGrid1.PageIndexChanged
+   SeriesValuesDataGrid.CurrentPageIndex = e.NewPageIndex
+   DataBindGrid()
+End Sub 'SeriesValuesDataGrid_PageIndexChanged
+
+Private Sub SeriesValuesDataGrid_EditCommand(ByVal source As Object, ByVal e As System.Web.UI.WebControls.DataGridCommandEventArgs) Handles DataGrid1.EditCommand
+   SeriesValuesDataGrid.EditItemIndex = e.Item.ItemIndex
+   DataBindGrid()
+End Sub 'SeriesValuesDataGrid_EditCommand
+
+Private Sub SeriesValuesDataGrid_CancelCommand(ByVal source As Object, ByVal e As System.Web.UI.WebControls.DataGridCommandEventArgs) Handles DataGrid1.CancelCommand
+   SeriesValuesDataGrid.EditItemIndex = - 1
+   DataBindGrid()
+End Sub 'SeriesValuesDataGrid_CancelCommand
+...

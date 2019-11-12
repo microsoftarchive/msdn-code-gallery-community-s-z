@@ -1,0 +1,25 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set series points tool tips
+    Chart1.Series("Series1").ToolTip = "#VALY"
+
+End Sub 'Page_Load
+...
+
+Private Sub Chart1_CustomizeMapAreas(sender As System.Web.UI.DataVisualization.Charting.Chart, _
+            e As System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs) _
+            Handles Chart1.CustomizeMapAreas
+
+    ' Remove all tool tips of the data points with negative Y values
+    Dim item As MapArea
+    For Each item In  e.MapAreaItems
+        If item.ToolTip.StartsWith("-") Then
+            item.ToolTip = "(" + item.ToolTip.Substring(1) + ")"
+        End If
+    Next
+
+End Sub 'Chart1_CustomizeMapAreas
+...

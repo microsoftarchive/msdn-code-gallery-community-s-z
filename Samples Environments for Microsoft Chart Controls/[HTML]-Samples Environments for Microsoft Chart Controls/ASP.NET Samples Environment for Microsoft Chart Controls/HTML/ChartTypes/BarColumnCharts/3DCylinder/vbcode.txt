@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set series chart type
+    Chart1.Series("Default").ChartType = SeriesChartType.Bar
+
+    ' Show as 3D
+	Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = true
+	
+    ' Draw as 3D Cylinder
+    Chart1.Series("Default")("DrawingStyle") = "Cylinder"
+
+End Sub 'Page_Load
+...

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataManipulation" Priority="5000">
+  <Title>Spike Removal</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Spike Removal</ShortBlurb> 
+  <SampleControl>SpikeRemoval</SampleControl> 
+  <InfoPages>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Spike Removal</Keyword>
+    <Keyword>Remove Data Spikes</Keyword>
+    <Keyword>Data, Remove Spikes</Keyword>
+  </Keywords>    
+</SampleConfig>
+
+</SampleConfigs>

@@ -1,0 +1,13 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private  Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set series axis type
+    Chart1.Series("Series 1").XAxisType = AxisType.Primary
+    Chart1.Series("Series 1").YAxisType = AxisType.Secondary
+    Chart1.Series("Series 2").XAxisType = AxisType.Secondary
+    Chart1.Series("Series 2").YAxisType = AxisType.Primary
+ 
+End Sub
+...

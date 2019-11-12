@@ -1,0 +1,35 @@
+Imports System.Windows.Forms.DataVisualization.Charting
+Imports System.Data
+...
+      
+Private Sub DataGridBinding_Load(sender As Object, e As System.EventArgs) Handles MyBase.DataGridBinding_Load
+    ' Populate series data using random data
+    Dim yValues As Double() =  {23.67, 75.45, 60.45, 34.54, 85.62, 32.43, 55.98, 67.23, 56.34, 23.14, 45.24, 67.41, 13.45, 56.36, 45.29}
+    Dim pointIndex As Integer
+    For pointIndex = 0 To yValues.Length - 1
+    Chart1.Series("Series1").Points.AddXY(1990 + pointIndex, yValues(pointIndex))
+    Next pointIndex
+    
+    ' Export series values into DataSet object
+    dataSet1 = Chart1.DataManipulator.ExportSeriesValues("Series1")
+    
+    ' Data bind DataGrid control. 
+    SeriesValuesDataGrid.DataSource = dataSet1
+    
+    ' Set Series name for data
+    SeriesValuesDataGrid.DataMember = "Series1"
+End Sub 'DataGridBinding_Load
+
+Private Sub SeriesValuesDataGrid_CurrentCellChanged(sender As Object, e As System.EventArgs) Handles Me.SeriesValuesDataGrid.CurrentCellChanged
+    ' Initializes a new instance of the DataView class
+    Dim firstView As New DataView(dataSet1.Tables(0))
+    
+    ' Since the DataView implements IEnumerable, pass the reader directly into
+    '   the DataBind method with the name of the Columns selected in the query    
+    Chart1.Series("Series1").Points.DataBindXY(firstView, "X", firstView, "Y")
+    
+    ' Invalidate Chart
+    Chart1.Invalidate()
+    
+End Sub 'SeriesValuesDataGrid_CurrentCellChanged
+...

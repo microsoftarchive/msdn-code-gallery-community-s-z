@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "RealTimeData">
+  <Title>Real Time Data (Timer)</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Real Time Data (Timer)</ShortBlurb> 
+  <SampleControl>RealTimeData</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Data, Real time</Keyword>
+    <Keyword>Real Time Data, Using Timers</Keyword>
+  </Keywords>    
+
+</SampleConfig>
+
+</SampleConfigs>

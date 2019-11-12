@@ -1,0 +1,26 @@
+24th of January 2014
+By Dave Gordon <davesama@hotmail.co.uk>
+Alpha Release For MSDN License: MS-LPL
+Client		: Added Constants for the Command
+Client		: Add Resources for the output - can be localized later
+Bug	#3		: Server Does not close down properly - needs to be killed in TaskManager.
+Client		: Refactored & Tidied the code into Regions
+Client		: Added the ability to Add Friends - and Prevented User from adding themselves as a friend
+Server		: Added the ability for friends to be added
+Server		: Added Command Not Implemented Yet
+AzureSQL	: Added Add Friend
+AzureSQL	: Added ClientIsLoggedIn
+Server		: Added a Close Down button - Needs Validation before close down
+
+23rd of January 2014
+By Dave Gordon <davesama@hotmail.co.uk>
+Alpha Release For MSDN License: MS-LPL
+Added		: This Document
+Added		: NetComm Source so we can do changes to it later.
+Changed		: Startup application to Server (Allows us to run multiple Clients)
+Client		: Disabled Add Friend button until logged in
+Client		: Changed NetComm Reference to the included NetComm Code
+Client		: Recognizes Logged on Message from Server
+Server		: Changed NetComm Reference to the included NetComm Code
+BUG	#1		: After Registering Client needs to manually close and then login
+BUG #2		: Total Counters on Server not calculating correctly

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e3375dce-043e-415d-84c5-88a4166f90b8" solutionId="e3375dce-043e-415d-84c5-88a4166f90b8" resetWebServer="false" sharePointProductVersion="15.0" name="CustomApprovalWorkflows" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="b8f73c59-5ea9-4461-af2d-1e6effc1ce21" />
+    <featureReference itemId="3a6bb9bf-2bbf-4fba-80fb-2fb97bf3c6b7" />
+    <featureReference itemId="c2f21989-b8ae-43a1-adbc-5386798b2346" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="0c187706-3d1b-41a6-82c3-956006c97926" />
+    <projectItemReference itemId="b69b1059-6233-4899-ad1f-c48534b6d7cc" />
+    <projectItemReference itemId="831524f0-253a-4104-955a-fc0e3428324d" />
+    <projectItemReference itemId="5c60ee59-4f4c-4d01-bbef-495e8c5e72fa" />
+  </projectItems>
+</package>

@@ -1,0 +1,85 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+/// <summary>
+/// Fill data points with values from Normal distribution
+/// </summary>
+private void FillNormalDistribution( )
+{
+	// Remove all data points from series
+	chart1.Series[0].Points.Clear();
+
+	// Calculate coefficient
+	double y;
+	double coef = 1.0 / Math.Sqrt( 2 * Math.PI );
+	double doubleX;
+
+	// Fill data points with values from Normal distribution
+	for( int x = -50; x <= 50; x ++ )
+	{
+		doubleX = x / 10.0;
+		y = coef * Math.Exp( doubleX * doubleX / -2 );
+		chart1.Series[0].Points.AddXY( doubleX - 0.05, y );
+	}
+}
+
+/// <summary>
+/// Fill Data points with values from F distribution
+/// </summary>
+private void FillFDistribution( )
+{
+	// Clear all data points
+	chart1.Series[0].Points.Clear();
+
+	// Set degrees of freedom
+	double n = 7;
+	double m = 2;
+	
+	// Calculate Beta function
+	double beta = chart1.DataManipulator.Statistics.BetaFunction( n/2.0, m/2.0 );
+
+	// Find coefficient
+	double y;
+	double coef = Math.Pow( n / m, n / 2.0 ) / beta;
+	double doubleX;
+
+	// Go through all data points and calculate values
+	for( double x = 0.01; x <= 15; x += 0.1 )
+	{
+		doubleX = x;
+		y = coef * Math.Pow( doubleX, n / 2.0 - 1.0 ) / Math.Pow(1.0 + n*doubleX/m,(n+m)/2.0);
+
+		// Add data point
+		chart1.Series[0].Points.AddXY( doubleX, y );
+	}
+}
+
+/// <summary>
+/// Fill Data points with T Distribution
+/// </summary>
+private void FillTDistribution( )
+{
+	// Clear all existing data points
+	chart1.Series[0].Points.Clear();
+
+	double n = 5;
+	
+	// Calculate Beta function
+	double beta = chart1.DataManipulator.Statistics.BetaFunction( 0.5, n/2.0 );
+
+	// Calculate coefficient of T Distribution
+	double y;
+	double coef = Math.Pow( n , -0.5 ) / beta;
+	double doubleX;
+
+	// Calculate Data Points
+	for( int x = -120; x <= 120; x ++ )
+	{
+		doubleX = x / 10.0;
+		y = coef / Math.Pow( 1.0 + doubleX * doubleX / n , ( n + 1.0 ) / 2.0 );
+
+		// Add X and Y values to data points
+		chart1.Series[0].Points.AddXY( doubleX, y );
+	}
+}
+...

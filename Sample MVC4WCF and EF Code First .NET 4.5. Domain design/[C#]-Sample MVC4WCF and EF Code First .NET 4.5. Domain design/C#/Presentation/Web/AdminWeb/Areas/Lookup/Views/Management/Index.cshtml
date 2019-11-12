@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Lookup Types Management";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // used for design only
+    Layout = ViewBag.Layout;
+}
+
+@section scripts {
+    @Scripts.Render("~/Scripts/lib/jquery.form.js", "~/Scripts/app/lookup/management/typeManagement.js");
+}
+<h2>Application Types</h2>
+<div class="container-fluid">
+    <div class="row-fluid" style="border: whitesmoke solid 1px;">
+        <div class="span2 text-center tiny-padding">
+            <div class="btn-group-vertical">
+                <button id="HomeTypes" class="btn btn-inverse btn-primary btn-type">Home</button>
+                <button id="RoomTypes" class="btn btn-inverse btn-primary btn-type">Room</button>
+                <button id="MaterialTypes" class="btn btn-inverse btn-primary btn-type">Material</button>
+                <button id="ProductTypes" class="btn btn-inverse btn-primary btn-type">Product</button>
+                <button id="BrandTypes" class="btn btn-inverse btn-primary btn-type">Brand</button>
+                <button id="ContactTypes" class="btn btn-inverse btn-primary btn-type">Contact</button>
+                <button id="DeliveryTypes" class="btn btn-inverse btn-primary btn-type">Delivery</button>
+                <button id="OrganizationTypes" class="btn btn-inverse btn-primary btn-type">Organization</button>
+                <button id="PaymentTypes" class="btn btn-inverse btn-primary btn-type">Payment</button>
+                <button id="PhoneTypes" class="btn btn-inverse btn-primary btn-type">Phone</button>
+                <button id="CategoryTypes" class="btn btn-inverse btn-primary btn-type">Category</button>
+                <button id="SupplierTypes" class="btn btn-inverse btn-primary btn-type">Supplier</button>
+                <button id="TextureTypes" class="btn btn-inverse btn-primary btn-type">Texture</button>
+                <button id="VendorTypes" class="btn btn-inverse btn-primary btn-type">Vendor</button>
+                <button id="MeasureTypes" class="btn btn-inverse btn-primary btn-type">Measure Unit</button>
+            </div>
+        </div>
+        <div class="span10 tiny-padding">
+            <div id="typeContext"></div>
+            <div class="modal hide fade in" style="display: none;" id="img-preview-modal">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal" aria-hidden="true">close &nbsp;X&nbsp;</a>                    
+                </div>
+                <div id="imgPreview"></div>
+            </div>
+        </div>
+    </div>
+</div>

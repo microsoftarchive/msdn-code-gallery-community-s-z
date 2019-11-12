@@ -1,0 +1,21 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "Rendering" Priority="25">
+	<Title>Image Types for Image URL Rendering</Title>
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Image Types for Image URL Rendering</ShortBlurb> 
+	<Content>ImageType.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+        <Keywords>
+		<Keyword>Image Types</Keyword>
+  	</Keywords>
+ 
+	</SampleConfig>
+	
+</SampleConfigs>

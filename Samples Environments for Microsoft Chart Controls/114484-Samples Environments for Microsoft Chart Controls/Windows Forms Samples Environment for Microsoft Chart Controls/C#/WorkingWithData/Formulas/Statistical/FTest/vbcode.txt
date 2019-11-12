@@ -1,0 +1,7 @@
+Imports System.Windows.Forms.DataVisualization.Charting
+...
+
+' Make FTest
+Dim result As FTestResult = chart1.DataManipulator.Statistics.FTest(0.95, "FirstGroup", "SecondGroup")
+
+...

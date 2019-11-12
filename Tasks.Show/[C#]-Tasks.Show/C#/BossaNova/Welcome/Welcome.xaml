@@ -1,0 +1,152 @@
+﻿<UserControl x:Class="Tasks.Show.Welcome" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c="clr-namespace:Tasks.Show.Controls">
+    <UserControl.Resources>
+        <Storyboard x:Key="GotoPageStoryboard">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ImageHost" Storyboard.TargetProperty="(Canvas.Left)">
+                <SplineDoubleKeyFrame KeySpline="0.7,0,0.3,1" KeyTime="00:00:00.5000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="HideFirstPageControls">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="stackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="grid" Storyboard.TargetProperty="(FrameworkElement.MinHeight)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="65" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="50" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="BackButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="BackButton" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}" />
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="stackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Collapsed}" />
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ShowFirstPageControls">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="stackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="stackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Visible}" />
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="grid" Storyboard.TargetProperty="(FrameworkElement.MinHeight)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="50" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="65" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="BackButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="InvisibleButton" TargetType="{x:Type Button}">
+                <Setter Property="OverridesDefaultStyle" Value="True" />
+                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                <Setter Property="Cursor" Value="Hand" />
+                <Setter Property="Padding" Value="12,3,12,4" />
+                <Setter Property="FontWeight" Value="Light" />
+                <Setter Property="Foreground" Value="#565e63" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="Border" Background="White">
+                                <ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="#2d3234" />
+                                    <Setter Property="Foreground" Value="#FFFFFF" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
+        <Border Background="#90131516" CornerRadius="8" />
+        <Viewbox MaxWidth="760" MaxHeight="540" Stretch="Uniform" Margin="20" SnapsToDevicePixels="True">
+            <Grid Width="760" Height="540" SnapsToDevicePixels="True">
+                <Border CornerRadius="0" Background="#131516" Margin="1">
+                    <Border.BitmapEffect>
+                        <DropShadowBitmapEffect ShadowDepth="40" Softness="45" Direction="-60" Opacity="0.5" />
+                    </Border.BitmapEffect>
+                </Border>
+                <Canvas Clip="M0,0L760,0 760,540 0,540z">
+
+                    <StackPanel x:Name="ImageHost" Orientation="Horizontal" Height="540" Canvas.Left="0">
+                        <c:PixelAlignedImage Source="welcome_01.png" />
+                        <c:PixelAlignedImage Source="welcome_02.png" />
+                        <c:PixelAlignedImage Source="welcome_03.png" />
+                        <c:PixelAlignedImage Source="welcome_04.png" />
+                        <c:PixelAlignedImage Source="welcome_05.png" />
+                    </StackPanel>
+
+                </Canvas>
+
+                <Grid x:Name="grid" VerticalAlignment="Bottom" MinHeight="65">
+
+                    <Button x:Name="BackButton" Style="{StaticResource InvisibleButton}" FontFamily="{DynamicResource primary_font}" FontSize="17" FontWeight="Light" VerticalAlignment="Top" Margin="15,0" HorizontalAlignment="Left" Click="BackButton_Click" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <StackPanel Orientation="Horizontal">
+                            <Path Data="M1,0 L0,0.5 L1,1" StrokeThickness="0" Fill="{Binding ElementName=BackButton, Path=Foreground}" Stretch="Fill" Width="6" Height="9" Margin="0,1,10,-1" />
+                            <TextBlock>Back</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="NextButton" Style="{StaticResource InvisibleButton}" FontSize="17" FontWeight="Light" VerticalAlignment="Top" Margin="15,0" HorizontalAlignment="Right" Click="NextButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock x:Name="NextTextBlock">Next</TextBlock>
+                            <Path x:Name="NextArrow" Data="M0,0 L1,0.5 L0,1" StrokeThickness="0" Fill="{Binding ElementName=NextButton, Path=Foreground}" Stretch="Fill" Width="6" Height="9" Margin="10,1,0,-1" />
+                        </StackPanel>
+                    </Button>
+
+                    <StackPanel x:Name="stackPanel" VerticalAlignment="Top" Margin="15,0" HorizontalAlignment="Left">
+                        <Button x:Name="NoThanksButton" Style="{StaticResource InvisibleButton}" FontSize="17" FontWeight="Light" HorizontalAlignment="Left" Click="NoThanksButton_Click">
+                            <TextBlock VerticalAlignment="Center">No Thanks</TextBlock>
+                        </Button>
+
+                        <CheckBox x:Name="ShowWelcomeCheckBox" Content="But please show this again next time I run the app." Foreground="#ffffff" FontSize="14" FontWeight="Light" Margin="0,5,0,0" FocusVisualStyle="{x:Null}">
+                            <CheckBox.Template>
+                                <ControlTemplate TargetType="CheckBox">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border BorderBrush="#FFFFFF" BorderThickness="1" Background="Transparent" Width="11" Height="11">
+                                            <Path x:Name="CheckMark" Visibility="Collapsed" StrokeThickness="1" Stroke="#FFFFFF" Data="M0,0 L1,1 M0,1 L1,0" Stretch="Fill" Margin="1" />
+                                        </Border>
+                                        <ContentPresenter VerticalAlignment="Center" Margin="6,-1,0,1" />
+                                    </StackPanel>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsChecked" Value="True">
+                                            <Setter TargetName="CheckMark" Property="Visibility" Value="Visible" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+
+                            </CheckBox.Template>
+                        </CheckBox>
+
+                    </StackPanel>
+
+                </Grid>
+
+                <Button x:Name="CloseButton" Style="{StaticResource InvisibleButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,15,0" Click="NoThanksButton_Click" Width="18" Height="18" Padding="3">
+                    <Path StrokeThickness="1" StrokeEndLineCap="Flat" StrokeStartLineCap="Flat" Stroke="{Binding ElementName=CloseButton, Path=Foreground}" Data="M0,0 L1,1 M0,1 L1,0" Stretch="Fill" />
+                </Button>
+
+            </Grid>
+        </Viewbox>
+    </Grid>
+</UserControl>

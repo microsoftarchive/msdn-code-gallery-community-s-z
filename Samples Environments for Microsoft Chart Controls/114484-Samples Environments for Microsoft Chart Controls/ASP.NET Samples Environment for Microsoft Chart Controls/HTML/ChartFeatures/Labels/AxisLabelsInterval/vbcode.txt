@@ -1,0 +1,68 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Populate series with random data
+   Dim random As New Random()
+   Dim dateCurrent As DateTime = DateTime.Now.Date
+   Dim pointIndex As Integer
+   For pointIndex = 0 To 49
+      Chart1.Series("Series1").Points.AddXY(dateCurrent.AddDays(pointIndex), random.Next(100, 1000))
+   Next pointIndex
+   
+   ' Set interval and interval type for the Y axis
+   SetAxisInterval(Chart1.ChartAreas("ChartArea1").AxisY, 100, DateTimeIntervalType.Number)
+   
+   ' Set interval and interval type for the X axis
+   If XAxisIntervalList.SelectedItem.Text = "Every Week (Starting Sunday)" Then
+      SetAxisInterval(Chart1.ChartAreas("ChartArea1").AxisX, 1, DateTimeIntervalType.Weeks)
+   Else
+      If XAxisIntervalList.SelectedItem.Text = "Every Week (Starting Monday)" Then
+         SetAxisInterval(Chart1.ChartAreas("ChartArea1").AxisX, 1, DateTimeIntervalType.Weeks, _
+            1, DateTimeIntervalType.Days)
+      Else
+         If XAxisIntervalList.SelectedItem.Text = "Every 2 Weeks" Then
+            SetAxisInterval(Chart1.ChartAreas("ChartArea1").AxisX, 2, DateTimeIntervalType.Weeks)
+         Else
+            If XAxisIntervalList.SelectedItem.Text = "Every Month (Starting at 1st)" Then
+               SetAxisInterval(Chart1.ChartAreas("ChartArea1").AxisX, 1, DateTimeIntervalType.Months)
+            Else
+               If XAxisIntervalList.SelectedItem.Text = "Every Month (Starting at 15th)" Then
+                  SetAxisInterval(Chart1.ChartAreas("ChartArea1").AxisX, 1, DateTimeIntervalType.Months, _
+                    14, DateTimeIntervalType.Days)
+               End If
+            End If
+         End If
+      End If 
+   End If
+   
+End Sub 'Page_Load
+
+'/ <summary>
+'/ Sets interval properties for the axis. 
+'/ Note that we use the Axis object's interval properties, and not the properties of its label,
+'/ and major tick mark and grid line objects
+'/ </summary>
+Public Sub SetAxisInterval(axis As Axis, interval As Double, intervalType As DateTimeIntervalType)
+
+   SetAxisInterval(axis, interval, intervalType, 0, DateTimeIntervalType.Auto)
+   
+End Sub 'SetAxisInterval
+
+'/ <summary>
+'/ Sets interval properties for the axis. 
+'/ Note that we use the Axis object's interval properties, and not the properties of its label,
+'/ and major tick mark and grid line objects
+'/ </summary>
+Public Sub SetAxisInterval(axis As Axis, interval As Double, intervalType As DateTimeIntervalType, _
+    intervalOffset As Double, intervalOffsetType As DateTimeIntervalType)
+
+   ' Set interval-related properties
+	axis.Interval = interval
+	axis.IntervalType = intervalType
+	axis.IntervalOffset = intervalOffset
+	axis.IntervalOffsetType = intervalOffsetType
+   
+End Sub 'SetAxisInterval
+...

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daenet.WcfWebSocketListener", "Daenet.WcfWebSocketListener\Daenet.WcfWebSocketListener.csproj", "{83777DA2-FEE0-49D5-84AB-24EAA52FF170}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daenet.WebSocketConsumer", "Daenet.WebSocketConsumer\Daenet.WebSocketConsumer.csproj", "{847DFF11-4F40-4080-A32F-9CA925EE4ED1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83777DA2-FEE0-49D5-84AB-24EAA52FF170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83777DA2-FEE0-49D5-84AB-24EAA52FF170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83777DA2-FEE0-49D5-84AB-24EAA52FF170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83777DA2-FEE0-49D5-84AB-24EAA52FF170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{847DFF11-4F40-4080-A32F-9CA925EE4ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847DFF11-4F40-4080-A32F-9CA925EE4ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847DFF11-4F40-4080-A32F-9CA925EE4ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847DFF11-4F40-4080-A32F-9CA925EE4ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

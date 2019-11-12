@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{898B02F0-EFC1-43B1-86F6-88D582F6DD38}</ProjectGuid>
+    <RootNamespace>Application123</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Application123.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/Application123.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <CompileAsManaged>false</CompileAsManaged>
+      <AdditionalOptions />
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Debug/Application123.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/Application123.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/Application123.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/Application123.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/Application123.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Release/Application123.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/Application123.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/Application123.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application123.cpp" />
+    <ClCompile Include="Application123Doc.cpp" />
+    <ClCompile Include="Application123View.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCTL.RC" />
+    <ResourceCompile Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDB.RC" />
+    <ResourceCompile Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXISAPI.RC" />
+    <ResourceCompile Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXOLECL.RC" />
+    <ResourceCompile Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXOLESV.RC" />
+    <ResourceCompile Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXPRINT.RC" />
+    <ResourceCompile Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXRES.RC" />
+    <ResourceCompile Include="Application123.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFX.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXADV.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXBLD_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCMN.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCOLL.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCOM_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCONV.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCTL.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCVIEW.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDAO.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDB.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDB_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDD_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDISP.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDLGS.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDLLX.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDLL_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDOCOB.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDTCTL.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXEXT.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXHTML.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXINET.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXISAPI.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXMSG_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXMT.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXODLGS.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXOLE.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXOLEDB.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXPLEX_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXPRIV.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXPRIV2.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXRES.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXRICH.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXSOCK.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXSTAT_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXTEMPL.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXTLS_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXVER_.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXV_CFG.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXV_CPU.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXV_DLL.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXV_W32.H" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXWIN.H" />
+    <ClInclude Include="Application123.h" />
+    <ClInclude Include="Application123Doc.h" />
+    <ClInclude Include="Application123View.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Application123.ico" />
+    <Image Include="res\Application123Doc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFX.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCMN.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCMN2.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCOLL.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCTL.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXCVIEW.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDAO.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDB.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDLGS.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXDTCTL.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXEXT.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXHELP.HM" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXHTML.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXINET.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXISAPI.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXMT.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXOLE.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXRICH.INL" />
+    <None Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\MFC\Include\AFXSOCK.INL" />
+    <None Include="res\Application123.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Application123.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Filtering" Priority="300">
+    <Title>Filtering by Y or X Values</Title>
+    <Thumbnail>thumbnail.jpg</Thumbnail>
+    <ShortBlurb>Filtering by Y or X Values</ShortBlurb>
+    <SampleControl>FilterYValuesRange</SampleControl>
+    <InfoPages>
+      <InfoPage Title="Overview">Overview.htm</InfoPage>
+      <InfoPage Title="C# Source">cscode.txt</InfoPage>
+      <InfoPage Title="VB.NET Source">vbcode.txt</InfoPage>
+    </InfoPages>
+    <Keywords>
+      <Keyword>Data manipulation, Filtering Y values</Keyword>
+      <Keyword>Filtering, Y values</Keyword>
+    </Keywords>
+  </SampleConfig>
+	
+</SampleConfigs>

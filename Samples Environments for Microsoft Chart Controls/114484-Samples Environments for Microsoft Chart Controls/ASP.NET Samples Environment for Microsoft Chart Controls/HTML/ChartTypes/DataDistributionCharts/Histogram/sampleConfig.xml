@@ -1,0 +1,23 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "DataDistributionCharts">
+	<Title>Histogram Chart</Title> 
+	<Thumbnail></Thumbnail>
+	<ShortBlurb>Histogram Chart</ShortBlurb> 
+	<Content>Histogram.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Chart type, Histogram</Keyword>
+      <Keyword>Histogram</Keyword>
+    </Keywords>
+    
+	</SampleConfig>
+	
+		
+
+</SampleConfigs>

@@ -1,0 +1,93 @@
+﻿@*
+// -----------------------------------------------------------------------------------------
+// <copyright file="ListBlobs.cshtml" company="Microsoft">
+//    Copyright 2014 Microsoft Corporation
+// 
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//      http://www.apache.org/licenses/LICENSE-2.0
+// 
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+// </copyright>
+// -----------------------------------------------------------------------------------------
+*@
+
+
+@{
+    ViewBag.Title = "ListBlobs";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ListBlobContainer</title>
+</head>
+<body>
+    <p><b>List all Blobs (as Images) in the container '@CorsBlogSample.AzureCommon.ImageContainerName' using AJAX and CORS</b></p>
+    <input type="button" id="ListContainerBlobs" value="List Blobs" />
+    <br />
+    <p>Once you click on the button, Javascript will issue a <a target="_blank" href="http://msdn.microsoft.com/en-us/library/windowsazure/dd135734.aspx">List Blobs</a> request, parses the result and displays the images below</p>
+    <br />
+    <div id="ImageContainer">
+    </div>
+
+    @*<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js" type="text/javascript"></script>*@
+
+    <script>
+        function ListBlobs() {
+            var urlBase = "@CorsBlogSample.AzureCommon.BlobClient.BaseUri.AbsoluteUri" + "/@CorsBlogSample.AzureCommon.ImageContainerName";
+            var listBlobUrl = urlBase + "?restype=container&comp=list";
+            $.ajax({
+                type: 'GET',
+                url: listBlobUrl,
+                success: function (res, status, xhr) {
+                    imageDiv = document.getElementById("ImageContainer");
+
+                    // remove the current pictures if any.
+                    while (imageDiv.firstChild) {
+                        imageDiv.removeChild(imageDiv.firstChild);
+                    }
+                    try {
+                        // We use XMLDOM for internet explorer
+                        var dom = new ActiveXObject("Microsoft.XMLDOM");
+                        dom.loadXML(xhr.responseText);
+                        picArray = dom.selectNodes("//Name");
+
+                        // iterate through the pictures and display them accordingly.
+                        for (var i = 0; i < picArray.length; i++) {
+                            var newImg = document.createElement("img");
+                            newImg.src = urlBase + "/" + picArray[i].text;
+                            imageDiv.appendChild(newImg);
+                        }
+                    }
+                    catch (e) {
+                        // We fallback to xml document evaluation logic if XMLDOC is not supported
+                        blobNameXmlLocation = "/EnumerationResults/Blobs/Blob/Name";
+                        xmlDoc = xhr.responseXML;
+                        var result = xmlDoc.evaluate(blobNameXmlLocation, xmlDoc, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
+                        var link;
+                        while (link = result.iterateNext()) {
+                            var newImg = document.createElement("img");
+                            newImg.src = urlBase + "/" + link.textContent;
+                            imageDiv.appendChild(newImg);
+                        }
+                    }
+
+                },
+                error: function (res, status, xhr) {
+                    alert("Couldn't get blob list");
+                }
+            });
+        }
+
+        document.getElementById('ListContainerBlobs').addEventListener('click', ListBlobs, false);
+    </script>
+
+</body>
+</html>

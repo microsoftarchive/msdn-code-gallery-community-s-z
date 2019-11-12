@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<TITLE></TITLE>
+	</head>
+	<SCRIPT>
+		function ensureVisible(sequenceID, tocNodeID)
+		{
+			// Expand parent node ID
+			expandNode(tocNodeID);
+			
+			// Select sample tree item
+			var linkID = "Link" + sequenceID;
+			var sampleLink = contentTreeFrame.document.getElementById(linkID);
+			if(sampleLink != null)
+			{
+				onMouseDown(sampleLink);
+			
+				// Ensure the sample link is visible	
+				sampleLink.scrollIntoView(true);
+			}
+		}
+		
+		function expandNode(tocNodeID)
+		{
+			var ImgID = tocNodeID + "Img";
+			var ImgID2 = tocNodeID + "Img2";
+			if(contentTreeFrame.document.getElementById(tocNodeID) != null)
+			{
+				// Expand specified table
+				contentTreeFrame.document.getElementById(tocNodeID).style.display = "";
+				if(contentTreeFrame.document.getElementById(ImgID) != null)
+				{
+					contentTreeFrame.document.getElementById(ImgID).src = "images/minus.gif";
+				}
+				if(contentTreeFrame.document.getElementById(ImgID2) != null)
+				{
+					contentTreeFrame.document.getElementById(ImgID2).src = "images/Folder-Open.bmp";
+				}
+				
+				// Expand parent tables
+				var currentTable = contentTreeFrame.document.getElementById(tocNodeID);
+				if(currentTable != null)
+				{
+					var parentNodeID = currentTable.ParentFolderID;
+					if(parentNodeID != "")
+					{
+						expandNode(parentNodeID);
+					}
+				}
+			}
+		}
+		
+		var selectedElementID = "Link1";
+		
+		function onMouseDown(element)
+		{
+			if(selectedElementID != "")
+			{
+				var selectedElement = contentTreeFrame.document.getElementById(selectedElementID);
+				if(selectedElement != null)
+				{
+					selectedElement.style.backgroundColor="#FFFFFF";
+					selectedElement.style.color="#000000";
+				}
+			}
+			
+			if(element != null)
+			{
+				element.style.backgroundColor="#000080";
+				element.style.color="#FFFFFF";
+				selectedElementID = element.id;
+			}
+		}
+		
+	</SCRIPT>
+	<frameset rows="23,*" ID="contentNavigationFrameset" frameSpacing="0" frameBorder="0">
+		<frame noresize scrolling="no" ID="contentTabFrame" src="DynTOCTab.htm">
+		<frame noresize scrolling="auto" name="contentTreeFrame" ID="contentTreeFrame" src="DynTOC.htm" style="border-right-style:solid; border-right-width:1px; border-right-color:#BFBFBF; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:#BFBFBF; border-left-style:solid; border-left-width:1px; border-left-color:#BFBFBF;">
+	</frameset>
+</html>

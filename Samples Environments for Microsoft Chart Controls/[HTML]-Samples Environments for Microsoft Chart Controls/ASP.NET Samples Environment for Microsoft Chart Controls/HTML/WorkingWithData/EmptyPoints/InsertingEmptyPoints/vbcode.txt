@@ -1,0 +1,45 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Check point existence for every day
+    If EmptyPointIntervalList.SelectedItem.Text = "Every Day" Then
+        Chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Days, "Series1")
+
+    ' Check point existance for every 12 hours
+    Else
+        If EmptyPointIntervalList.SelectedItem.Text = "Every 12 Hours" Then
+            Chart1.DataManipulator.InsertEmptyPoints(12, IntervalType.Hours, "Series1")
+        
+        ' Check point existance for every week day
+        Else
+            If EmptyPointIntervalList.SelectedItem.Text = "Every Week Day" Then
+            Chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, _
+                1, IntervalType.Days, "Series1")
+            Chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, _
+                2, IntervalType.Days, "Series1")
+            Chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, _
+                3, IntervalType.Days, "Series1")
+            Chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, _
+                4, IntervalType.Days, "Series1")
+            Chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, _
+                5, IntervalType.Days, "Series1")
+            
+            ' Check point existance for every Monday
+            Else
+                If EmptyPointIntervalList.SelectedItem.Text = "Every Monday" Then
+                    Chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Weeks, _
+                        1, IntervalType.Days, "Series1")
+                End If
+            End If
+        End If 
+    End If 
+    
+    ' Use point index instead of the X value
+    If ShowAsIndexedList.SelectedItem.Text = "True" Then
+        Chart1.Series("Series1").IsXValueIndexed = True
+    End If
+
+End Sub 'Page_Load
+...

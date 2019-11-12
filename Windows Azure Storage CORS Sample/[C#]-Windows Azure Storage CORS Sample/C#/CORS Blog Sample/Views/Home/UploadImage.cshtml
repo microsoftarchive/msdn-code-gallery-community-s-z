@@ -1,0 +1,119 @@
+﻿@*
+// -----------------------------------------------------------------------------------------
+// <copyright file="UploadImage.cshtml" company="Microsoft">
+//    Copyright 2014 Microsoft Corporation
+// 
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//      http://www.apache.org/licenses/LICENSE-2.0
+// 
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+// </copyright>
+// -----------------------------------------------------------------------------------------
+*@
+
+@{
+    ViewBag.Title = "Upload Image";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Upload Image</title>
+</head>
+
+<body>
+    <p><b>Select image files that you would like to upload</b></p>
+    <input type="file" id="files" name="files[]" multiple />
+    <p>The files will be uploaded as BlockBlob into your Windows Azure Storage account '@CorsBlogSample.AzureCommon.BlobClient.Credentials.AccountName'
+        and container '@CorsBlogSample.AzureCommon.ImageContainerName'.<br />
+        The upload is done through Javascript where the code will first request a SAS token from the service for the container and then uploads all the selected files directly into Windows Azure Storage.<br />
+        The images will start appearing below as they are uploaded.
+    </p>
+    <output id="list"></output>
+    <div id="uploadedImage" class="row"></div>
+
+    @*<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js" type="text/javascript"></script>*@
+
+    <script>
+        function renderImage(ajaxRequest, blobSasUri) {
+            if (ajaxRequest.readyState == 4) { // xmlhttp.status==200 == successful request
+                var $image = $('<img src="' + blobSasUri + '" alt="" />');
+                $("#uploadedImage").prepend($image);
+            }
+        }
+
+        
+        // Method uploads a blob to Azure Storage by using a Blob SAS URL.
+        // The Web Browser will add the necessary CORS headers and issue a preflight request if needed.
+        // blobSasUrl: Blob SAS URL already obtained through an Ajax call to own server side.
+        // fileDataAsArrayBuffer: an ArrayBuffer (Byte Array) containing the raw data of the file to be uploaded
+        function uploadImage(blobSasUrl, fileDataAsArrayBuffer) {
+            var ajaxRequest = new XMLHttpRequest();
+            // Once the image is successfully upload, we will call render Image that would show the uploade image
+            ajaxRequest.onreadystatechange = function() {return renderImage(ajaxRequest, blobSasUrl)};
+
+            try {
+                // Performing an PutBlob (BlockBlob) against storage
+                ajaxRequest.open('PUT', blobSasUrl, true);
+                ajaxRequest.setRequestHeader('Content-Type', 'image/jpeg');
+                ajaxRequest.setRequestHeader('x-ms-blob-type', 'BlockBlob');
+                ajaxRequest.send(fileDataAsArrayBuffer);
+            }
+            catch (e) {
+                alert("can't upload the image to server.\n" + e.toString());
+            }
+        }
+
+        // This Method is called after users selects the images for upload.
+        // It loops over all selected files and uploads them one by one into Azure Storage.
+        function handleFileSelect(evt) {
+            var files = evt.target.files; // FileList object
+
+            // Loop through the FileList, save them and render image files as thumbnails.
+            for (var i = 0, file; file = files[i]; i++) {
+
+                // Create a reader that would read the entire file data as ArrayBuffer
+                var reader = new FileReader();
+
+                // AJAX URL that would be used to request an Azure Blob SAS URL
+                file.azureUri = "@Url.Action("GetBlobSasUrl", "Home")" + "?blobName=" + file.name;
+
+                reader.onloadend = (function (theFile) {
+                    return function (e) {
+                        // Once the reader is done reading the file bytes
+                        // We will issue an AJAX call against our service to get the SAS URL
+                        $.ajax({
+                            type: 'GET',
+                            url: theFile.azureUri,
+                            success: function (res, status, xhr) {
+                                // Called into GetBlobSasUrl to generate the SAS for the required blob
+                                blobSasUrl = xhr.responseText;
+                                // Now we have the right SAS url that we will use to upload the image
+                                // Pass in the SAS URL and the ArrayBuffer to be uploaded
+                                uploadImage(blobSasUrl, e.target.result);
+                            },
+                            error: function (res, status, xhr) {
+                                alert("can't get sas from the server");
+                            }
+                        });
+                    };
+                })(file);
+
+                // Read in the image file as a data URL, once done the reader.onloadend event is raised
+                reader.readAsArrayBuffer(file);
+            }
+        }
+
+        document.getElementById('files').addEventListener('change', handleFileSelect, false);
+        
+    </script>
+
+</body>
+</html>

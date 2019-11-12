@@ -1,0 +1,34 @@
+<%@ Page language="c#" Inherits="System.Web.UI.DataVisualization.Charting.Samples.ImageURLChart" CodeFile="ImageURLChart.aspx.cs" %>
+<html>
+	<body>
+		<asp:chart id="Chart1" runat="server" Height="260px" Width="360px" ImageType="Png" Palette="Light" BackColor="DeepSkyBlue" BackGradientStyle="DiagonalLeft" BackSecondaryColor="WhiteSmoke" BorderColor="DarkKhaki" ImageLocation="../../TempImages/ChartPic_#SEQ(300,3)">
+			<legends>
+				<asp:Legend Enabled="False" BorderColor="Transparent" Name="Default" BackColor="Transparent"></asp:Legend>
+			</legends>
+			<series>
+				<asp:Series XValueType="Double" ChartTypeName="Area" Name="Series1" BorderColor="120, 64, 64, 64" Color="DodgerBlue" YValueType="Double">
+					<points>
+						<asp:DataPoint YValues="6" />
+						<asp:DataPoint YValues="9" />
+						<asp:DataPoint YValues="3" />
+						<asp:DataPoint YValues="5" />
+						<asp:DataPoint YValues="2" />
+						<asp:DataPoint YValues="7" />
+						<asp:DataPoint YValues="8" />
+						<asp:DataPoint YValues="1" />
+					</points>
+				</asp:Series>
+			</series>
+			<chartareas>
+				<asp:ChartArea Name="ChartArea1" BorderColor="Gainsboro" BorderDashStyle="Solid" BackColor="Gainsboro">
+					<area3dstyle Enable3D="True" LightStyle="Realistic" />
+					<axisx IsMarginVisible="False"></axisx>
+				</asp:ChartArea>
+			</chartareas>
+			<titles>
+				<asp:Title Font="Microsoft Sans Serif, 14.25pt" Text="Chart in an HTML IFrame"></asp:Title>
+			</titles>
+			<borderskin BackColor="Khaki" BackSecondaryColor="DarkGoldenrod" SkinStyle="Emboss"></borderskin>
+		</asp:chart>
+	</body>
+</html>

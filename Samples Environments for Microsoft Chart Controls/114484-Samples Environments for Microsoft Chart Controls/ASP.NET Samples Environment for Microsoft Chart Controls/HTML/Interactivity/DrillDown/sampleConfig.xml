@@ -1,0 +1,56 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "Drill Down">
+	<Title>Image Map Selection</Title> 
+	<Thumbnail>AreaChartDrillDown\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Image Map Selection</ShortBlurb> 
+
+	<Content>AreaChartDrillDown\ImageMapDrillDown.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">AreaChartDrillDown\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">AreaChartDrillDown\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Drill Down, Web URLs</Keyword>
+		<Keyword>Linking to Web URLs</Keyword>
+  	</Keywords> 
+
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "Drill Down">
+	<Title>Drill Down with Preview</Title> 
+	<Thumbnail>ToolTipDrillDown\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Drill Down with Preview</ShortBlurb> 
+
+	<Content>ToolTipDrillDown\ToolTipDrillDown.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">ToolTipDrillDown\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">ToolTipDrillDown\vbcode.txt</InfoPage>
+	</InfoPages>
+	
+		<Keywords>
+		<Keyword>Drill Down, With Preview</Keyword>
+		<Keyword>Previewing Charts</Keyword>
+  	</Keywords> 
+
+</SampleConfig>
+	
+<SampleConfig ParentNodeID = "DataSeries">
+	<Title>Using HREFs</Title> 
+	<Thumbnail>AreaChartDrillDown\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using HREFs</ShortBlurb> 
+
+	<Content>AreaChartDrillDown\ImageMapDrillDown.aspx</Content> 
+
+	<InfoPages>
+		<InfoPage Title="C# Source">AreaChartDrillDown\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">AreaChartDrillDown\vbcode.txt</InfoPage>
+	</InfoPages>
+	
+	</SampleConfig>			
+
+</SampleConfigs>

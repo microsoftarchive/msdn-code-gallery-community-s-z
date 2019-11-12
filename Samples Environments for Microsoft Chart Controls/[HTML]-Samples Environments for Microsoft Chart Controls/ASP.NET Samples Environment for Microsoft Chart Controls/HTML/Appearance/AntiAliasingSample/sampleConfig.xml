@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "ChartAppearance">
+  <Title>Anti Aliasing Sample</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Setting Anti Aliasing</ShortBlurb> 
+  <Content>AntiAliasingSample.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+	<Keyword>Antialiasing</Keyword>
+	<Keyword>Appearance, Antialiasing</Keyword>
+	<Keyword>Title, Antialiasing</Keyword>
+  </Keywords>
+</SampleConfig>
+
+
+</SampleConfigs>

@@ -1,0 +1,85 @@
+﻿@model Dictionary<string, object>
+
+<div class="bg-primary panel-body" style="max-height: 3em; padding-top: 0.25em">
+    <h4 class="text-justify">User Details</h4>
+</div>
+
+<table class="table table-condensed table-bordered">
+    @if (Model.Count > 0)
+    {
+        foreach (var detail in Model)
+        {
+            <tr>
+                <th>@detail.Key</th>
+                <td>@detail.Value</td>
+            </tr>
+        }
+    }
+</table>
+
+@if (User?.Identity?.IsAuthenticated ?? false)
+{
+    <a class="btn btn-primary btn-sm" asp-controller="Home" asp-action="SetUserCustomProps">
+        Edit User Custom Properties
+    </a>
+    <a class="btn btn-primary btn-sm" asp-controller="Claims" asp-action="Index">
+        Claims
+    </a>
+    <a class="btn btn-primary btn-sm pull-right" asp-controller="UserAccount" asp-action="Logout">
+        Logout
+    </a>
+}
+
+<br/><br/>
+
+<div class="bg-primary panel-body" style="max-height: 3em; padding-top: 0.25em">
+    <h4>Authorization</h4>
+</div>
+
+<table class="table table-condensed table-bordered table-striped">
+    <tr>
+        <th>Type</th>
+        <th>Requirements</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>Role</td>
+        <td>SuperAdmins</td>
+        <td>
+            <a class="btn btn-primary btn-xs" asp-controller="SuperAdmin" asp-action="Index">Users</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Role</td>
+        <td>SuperAdmins</td>
+        <td>
+            <a class="btn btn-primary btn-xs" asp-controller="Role" asp-action="Index">Roles</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Role, Claim</td>
+        <td>Customers in New Zealand</td>
+        <td>
+            <a class="btn btn-primary btn-xs" asp-controller="Home" asp-action="ForNzlCustomers">
+                NZL Customers
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Custom Policy</td>
+        <td>Not in New Zealand</td>
+        <td>
+            <a class="btn btn-primary btn-xs" asp-controller="Home" asp-action="Block">Not In NZL</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Role, Resource</td>
+        <td>Staff AND Manager/Assistant</td>
+        <td>
+            <a class="btn btn-primary btn-xs" asp-controller="Schedule" asp-action="Index">
+                Schedules
+            </a>
+        </td>
+    </tr>
+
+</table>

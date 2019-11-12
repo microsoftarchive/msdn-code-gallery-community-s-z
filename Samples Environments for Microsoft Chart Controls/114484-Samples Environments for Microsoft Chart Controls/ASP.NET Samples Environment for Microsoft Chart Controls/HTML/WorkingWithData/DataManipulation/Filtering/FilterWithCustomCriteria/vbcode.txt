@@ -1,0 +1,70 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    ' Populate chart with random data
+    Dim random As New Random()
+    Dim xValue As Double = 2
+    Dim pointIndex As Integer
+    For pointIndex = 0 To 49
+        Chart1.Series("Series Input").Points.AddXY(xValue, random.Next(2, 47))
+        xValue += 2
+    Next pointIndex
+
+    ' Create strip lines which cover the areas with filtered values
+    Dim stripLine As New StripLine()
+    stripLine.BackColor = Color.FromArgb(120, 225, 0, 0)
+    stripLine.IntervalOffset = Double.Parse(IntervalOffsetList.SelectedItem.Value)
+    stripLine.Interval = Double.Parse(StripWidthList.SelectedItem.Value) * 2.0
+    stripLine.StripWidth = Double.Parse(StripWidthList.SelectedItem.Value)
+    Chart1.ChartAreas("ChartArea1").AxisX.StripLines.Add(stripLine)
+
+    ' Filter series data using custom filtering criteria
+    Chart1.DataManipulator.Filter(New CustomFilter(stripLine.IntervalOffset, stripLine.StripWidth), _
+        "Series Input", "Series Output")
+
+    ' Show data points using point's index
+    If ShowAsIndexedList.SelectedItem.Text = "True" Then
+        Chart1.Series("Series Output").IsXValueIndexed = True
+        Chart1.ChartAreas("FilteredData").AxisX.Minimum = Double.NaN
+        Chart1.ChartAreas("FilteredData").AxisX.Maximum = Double.NaN
+        Chart1.ChartAreas("FilteredData").AxisX.LabelStyle.Interval = 2
+        Chart1.ChartAreas("FilteredData").AxisX.MajorTickMark.Interval = 2
+        Chart1.ChartAreas("FilteredData").AxisX.MajorGrid.Interval = 2
+    End If
+    
+End Sub 'Page_Load
+...
+
+'/ <summary>
+'/ Class that defines the custom filtering criteria
+'/ </summary>
+Public Class CustomFilter
+    Implements IDataPointFilter 
+    Private offset As Double = 0     ' interval offset
+    Private interval As Double = 0   ' interval size
+
+    ' Public constructor
+    Public Sub New(offset As Double, interval As Double)
+        Me.offset = offset
+        Me.interval = interval
+    End Sub 'New
+
+    ' Filtering method
+    Private Function FilterDataPoint(ByVal point As DataPoint, _
+                                        ByVal series As Series, _
+                                        ByVal pointIndex As Int32) _
+                                        As Boolean Implements IDataPointFilter.FilterDataPoint
+        ' Check if point's X value is in one of the filtered intervals
+        Dim val As Double
+        For val = offset To 100 -(2.0 * interval) Step 2.0 * interval
+            If dataPoint.XValue >= val And dataPoint.XValue <= val + interval Then
+				Return True ' Return true to remove the point
+            End If
+        Next val
+        Return False ' Return false to keep the point
+        
+    End Function 'FilterDataPoint
+    
+End Class 'CustomFilter
+...

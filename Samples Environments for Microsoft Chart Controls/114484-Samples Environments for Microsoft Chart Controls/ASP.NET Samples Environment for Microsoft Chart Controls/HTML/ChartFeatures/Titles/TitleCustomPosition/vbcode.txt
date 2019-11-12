@@ -1,0 +1,15 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set title position
+    Chart1.Titles(0).Position.Auto = False
+    Chart1.Titles(0).Position.X = 35
+    Chart1.Titles(0).Position.Y = 40
+    Chart1.Titles(0).Position.Width = 35
+    Chart1.Titles(0).Position.Height = 10
+    
+    
+End Sub 'Page_Load
+...

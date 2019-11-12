@@ -1,0 +1,47 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+// Bind Series1 to the array. Points with double.NaN values will be marked as empty
+double[]	yValues = {12, 67, 45, double.NaN, 67, 89, 35, 12, 78, 54};
+double[]	xValues = {1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999};
+chart1.Series["Series1"].Points.DataBindXY(xValues, yValues);
+
+
+// Loop through all series
+foreach(Series series in chart1.Series)
+{
+    // Set empty points visual appearance attributes
+    series.EmptyPointStyle.Color = Color.Gray;
+    series.EmptyPointStyle.BorderWidth = 2;
+    series.EmptyPointStyle.BorderDashStyle = ChartDashStyle.Dash;
+    series.EmptyPointStyle.MarkerSize = 7;
+    series.EmptyPointStyle.MarkerStyle = MarkerStyle.Cross;
+    series.EmptyPointStyle.MarkerBorderColor = Color.Black;
+    series.EmptyPointStyle.MarkerColor = Color.LightGray;
+
+    // Adjust visual appearance attributes depending on the user selection
+    if(EmptyPointAppearanceList.SelectedItem.Text == "Transparent")
+    {
+        series.EmptyPointStyle.BorderWidth = 0;
+        series.EmptyPointStyle.MarkerStyle = MarkerStyle.None;
+    }
+    else if(EmptyPointAppearanceList.SelectedItem.Text == "Line")
+    {
+        series.EmptyPointStyle.BorderDashStyle = ChartDashStyle.Dot;
+        series.EmptyPointStyle.BorderWidth = 1;
+        series.EmptyPointStyle.Color = series.Color;
+    }
+    else if(EmptyPointAppearanceList.SelectedItem.Text == "Marker")
+    {
+        series.EmptyPointStyle.BorderWidth = 0;
+        series.EmptyPointStyle.MarkerSize = 8;
+        series.EmptyPointStyle.MarkerStyle = MarkerStyle.Diamond;
+        series.EmptyPointStyle.MarkerColor = series.Color;
+    }
+}
+
+// Set empty points values of Series1 to average.
+chart1.Series[Series1]["EmptyPointValue"] = "Average";
+
+
+...

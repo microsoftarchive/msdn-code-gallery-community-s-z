@@ -1,0 +1,16 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="WPF Data Binding Samples" Height="298" Width="373">
+    <Grid>
+        <StackPanel Name="StackPanel1">
+            <Button Height="30" Name="Button1" Width="Auto" HorizontalContentAlignment="Center" Margin="3">Simple Listbox Binding</Button>
+            <Button Height="30" Name="Button2" Width="Auto" HorizontalContentAlignment="Center" Margin="3">Simple Data Entry</Button>
+            <Button Height="30" Name="Button3" Width="Auto" HorizontalContentAlignment="Center" Margin="3">Simple Data Grid</Button>
+            <Button Height="30" Name="Button4" Width="Auto" HorizontalContentAlignment="Center" Margin="3">Simple Validation</Button>
+            <Button Height="30" Name="Button5" Width="Auto" HorizontalContentAlignment="Center" Margin="3">Lookup Combobox Binding</Button>
+            <Button Height="30" Name="Button6" Width="Auto" HorizontalContentAlignment="Center" Margin="3">Master Detail Binding</Button>
+            <Button Height="30" Name="Button7" Width="Auto" HorizontalContentAlignment="Center" Margin="3">Formatting, Validation and Restricting User Input</Button>
+        </StackPanel>
+    </Grid>
+</Window>

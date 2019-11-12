@@ -1,0 +1,12 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+ 
+// Align data series by grouping points and then inserting empty points daily
+
+// Group series data by day
+chart1.DataManipulator.Group("AVE", 1, IntervalType.Days, "Series1, Series2", 
+    "Series3, Series4");
+
+// Insert Empty Points daily if data point is missing
+chart1.DataManipulator.InsertEmptyPoints(1, IntervalType.Days, "Series3, Series4");
+...

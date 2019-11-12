@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1d37e6c8-a8fa-45fc-a414-c258922a4717" name="UIControl" linkedPackageId="7946a924-d0ff-4853-80c2-b7ec3f6647e4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8864d7a1-2f45-4cb6-9443-e0dabc954758" name="BaseControl" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5cf2369c-a7b5-455f-b1d0-c06fa5481a22" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="75c542c5-a0e5-4d8b-b01d-898aea1f11dd" name="CompanyTouch" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dac5f997-2b52-419f-a11b-c63b76cab14f" />
+        <generalsInternal>
+          <generalization Id="ba09e042-b8ea-47d7-af52-f6d14069640e" isSubstitutable="false">
+            <classMoniker Id="8864d7a1-2f45-4cb6-9443-e0dabc954758" LastKnownName="BaseControl" />
+            <elementDefinition Id="d0f9a13a-9ad2-48ac-a8a0-b1684b64c8e8" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dcc79e1a-f657-4c3b-babe-c91ad0e0d650" name="CompanyEditor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="15636823-1330-421a-9857-b496bedf1766" />
+        <generalsInternal>
+          <generalization Id="d5f16348-cdac-41dd-81de-71dd3da7a6d1" isSubstitutable="false">
+            <classMoniker Id="8864d7a1-2f45-4cb6-9443-e0dabc954758" LastKnownName="BaseControl" />
+            <elementDefinition Id="a1551666-5420-4aed-86b2-242018189273" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fe96f2f2-6df1-4936-9ee4-f6b40c31c446" name="CompanyButton" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a26acc2b-323f-490c-8c77-4c45c0a6c556" />
+        <generalsInternal>
+          <generalization Id="9f00d086-2a2f-4364-9763-77dc9a71193a" isSubstitutable="false">
+            <classMoniker Id="8864d7a1-2f45-4cb6-9443-e0dabc954758" LastKnownName="BaseControl" />
+            <elementDefinition Id="a0db05b6-2270-4cc3-b106-5301552fc972" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="7946a924-d0ff-4853-80c2-b7ec3f6647e4" name="Sample.TraditionalLayerArchitecture">
+    <elementDefinition Id="1bccdf64-7dca-4b23-829c-fbf611f38322" />
+    <profileInstances>
+      <packageHasProfileInstances Id="756d3638-05cd-44da-9d82-d30decfe77e2">
+        <profileInstance Id="ec4f6faf-72ee-4d3a-811d-560ba3604fb5" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="168e6916-c037-4741-8cd8-dca63e38d508">
+        <profileInstance Id="56240c15-7dd5-403a-bbd0-55f7b0f621c7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

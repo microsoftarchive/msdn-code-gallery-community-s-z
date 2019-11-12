@@ -1,0 +1,26 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set chart type
+    Chart1.Series["Series1"].ChartType = SeriesChartType.Bubble;
+
+    // Set bubble shape
+    Chart1.Series["Default"].MarkerStyle = MarkerStyle.Square;
+
+    // Set max bubble size
+    Chart1.Series["Default"]["BubbleMaxSize"] = "20";
+    
+    // Show bubble size as point labels
+    Chart1.Series["Default"].IsValueShownAsLabel = true;
+    Chart1.Series["Default"]["BubbleUseSizeForLabel"] = "true";
+    
+    // Set bubble size scale
+    Chart1.Series["Default"]["BubbleScaleMin"] = "0";
+    Chart1.Series["Default"]["BubbleScaleMax"] = "100";
+    
+    // Enable 3D
+    Chart1.ChartAreas["ChartArea1"].Area3DStyle.Enable3D = true;
+}
+...

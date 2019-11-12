@@ -1,0 +1,6 @@
+﻿
+Generated material. Generating code in VB.
+
+
+	ExampleElement1
+	ExampleElement2

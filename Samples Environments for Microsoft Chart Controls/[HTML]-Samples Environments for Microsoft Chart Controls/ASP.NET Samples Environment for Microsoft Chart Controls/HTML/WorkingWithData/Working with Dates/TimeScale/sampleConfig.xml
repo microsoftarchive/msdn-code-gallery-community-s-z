@@ -1,0 +1,19 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "WorkingWithDates">
+  <Title>Time Scale</Title> 
+  <ShortBlurb>Setting Time Scale</ShortBlurb> 
+  <Content>TimeScale.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Time Scale</Keyword>
+    <Keyword>Time Scale</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

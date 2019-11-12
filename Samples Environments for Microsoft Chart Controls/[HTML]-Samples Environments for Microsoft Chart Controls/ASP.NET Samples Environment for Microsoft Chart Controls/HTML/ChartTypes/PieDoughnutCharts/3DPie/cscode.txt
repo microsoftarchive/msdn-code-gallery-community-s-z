@@ -1,0 +1,29 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series data
+    double[]	yValues = {65.62, 75.54, 60.45, 34.73, 85.42};
+    string[]	xValues = {"France", "Canada", "Germany", "USA", "Italy"};
+    Chart1.Series["Default"].Points.DataBindXY(xValues, yValues);
+
+    // Set Doughnut chart type
+    Chart1.Series["Default"].ChartType = SeriesChartType.Doughnut;
+
+    // Set labels style
+    Chart1.Series["Default"]["PieLabelStyle"] = "Outside";
+
+    // Set Doughnut radius percentage
+    Chart1.Series["Default"]["DoughnutRadius"] = "30";
+
+    // Explode data point with label "Italy"
+    Chart1.Series["Default"].Points[4]["Exploded"] = "true";
+    
+	// Enable 3D
+	Chart1.ChartAreas["ChartArea1"].Area3DStyle.Enabled = true; 
+
+	// Disable the Legend
+	Chart1.Legends[0].Enabled = false;
+}
+...

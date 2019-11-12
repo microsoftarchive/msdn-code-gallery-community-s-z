@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbortedInDebugStatus" xml:space="preserve">
+    <value>Workflow aborted</value>
+  </data>
+  <data name="AbortedStatus" xml:space="preserve">
+    <value>Workflow aborted</value>
+  </data>
+  <data name="AbortingInDebugStatus" xml:space="preserve">
+    <value>Workflow aborting ...</value>
+  </data>
+  <data name="AbortingServiceHostStatus" xml:space="preserve">
+    <value>Workflow aborting ...</value>
+  </data>
+  <data name="AbortingStatus" xml:space="preserve">
+    <value>Workflow aborting ...</value>
+  </data>
+  <data name="AboutDialogMessage" xml:space="preserve">
+    <value>Workflow Studio
+Copyright (c) Microsoft Corporation. All rights reserved.
+Version {0}</value>
+  </data>
+  <data name="AboutDialogTitle" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ClosedServiceHostStatus" xml:space="preserve">
+    <value>Workflow service host closed</value>
+  </data>
+  <data name="CollectionCategoryToToolbox" xml:space="preserve">
+    <value>Collection</value>
+  </data>
+  <data name="CompletedInDebugStatus" xml:space="preserve">
+    <value>Workflow completed with completion state {0}</value>
+  </data>
+  <data name="CompletedStatus" xml:space="preserve">
+    <value>Workflow completed with completion state {0}</value>
+  </data>
+  <data name="ConfirmCloseWhenRunningWorkflowDialogMessage" xml:space="preserve">
+    <value>This workflow is running. Do you wish to exit?</value>
+  </data>
+  <data name="ConfirmCloseWhenRunningWorkflowDialogTitle" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="ConfirmCloseWhenRunningWorkflowsDialogMessage" xml:space="preserve">
+    <value>There are one or more running workflows. Do you wish to close?</value>
+  </data>
+  <data name="ConfirmCloseWhenRunningWorkflowsDialogTitle" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="ConfirmSaveDialogMessage" xml:space="preserve">
+    <value>Save changes to {0}</value>
+  </data>
+  <data name="ConfirmSaveDialogTitle" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="ControlFlowCategoryToToolbox" xml:space="preserve">
+    <value>Control Flow</value>
+  </data>
+  <data name="DebuggingStatus" xml:space="preserve">
+    <value>Debugging workflow ...</value>
+  </data>
+  <data name="DebugMenuAbort" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="DebugMenuStartDebugging" xml:space="preserve">
+    <value>Start Debugging</value>
+  </data>
+  <data name="DebugMenuStartWithoutDebugging" xml:space="preserve">
+    <value>Start Without Debugging</value>
+  </data>
+  <data name="DialogCaptionError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorHandlingCategoryToToolbox" xml:space="preserve">
+    <value>Error Handling</value>
+  </data>
+  <data name="ErrorLoadingDialogMessage" xml:space="preserve">
+    <value>Error occurred loading document
+
+{0}</value>
+  </data>
+  <data name="ErrorLoadingDialogTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorLoadingInDebugDialogMessage" xml:space="preserve">
+    <value>Error occurred loading document
+
+{0}</value>
+  </data>
+  <data name="ErrorLoadingInDebugDialogTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorRunningDialogMessage" xml:space="preserve">
+    <value>Error occurred running workflow
+
+{0}</value>
+  </data>
+  <data name="ErrorRunningDialogTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorValidationItem" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ExceptionInDebugStatus" xml:space="preserve">
+    <value>Workflow exception, see output window for stack trace</value>
+  </data>
+  <data name="ExceptionServiceHostStatus" xml:space="preserve">
+    <value>Workflow exception, see output window for stack trace</value>
+  </data>
+  <data name="ExceptionStatus" xml:space="preserve">
+    <value>Workflow exception, see output window for stack trace</value>
+  </data>
+  <data name="ExceptionWhenRunningInDebugStatus" xml:space="preserve">
+    <value>Workflow exception, see output window for stack trace</value>
+  </data>
+  <data name="FaultedServiceHostStatus" xml:space="preserve">
+    <value>Workflow service host faulted</value>
+  </data>
+  <data name="FileMenuAddReference" xml:space="preserve">
+    <value>Add Reference ...</value>
+  </data>
+  <data name="FileMenuClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="FileMenuCloseAll" xml:space="preserve">
+    <value>Close All</value>
+  </data>
+  <data name="FileMenuExit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="FileMenuNewService" xml:space="preserve">
+    <value>New Service ...</value>
+  </data>
+  <data name="FileMenuNewWorkflow" xml:space="preserve">
+    <value>New Workflow ...</value>
+  </data>
+  <data name="FileMenuOpen" xml:space="preserve">
+    <value>Open ...</value>
+  </data>
+  <data name="FileMenuSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="FileMenuSaveAll" xml:space="preserve">
+    <value>Save All</value>
+  </data>
+  <data name="FileMenuSaveAs" xml:space="preserve">
+    <value>Save As ...</value>
+  </data>
+  <data name="FlowchartCategoryToToolbox" xml:space="preserve">
+    <value>Flowchart</value>
+  </data>
+  <data name="HelpMenuAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="MessagingCategoryToToolbox" xml:space="preserve">
+    <value>Messaging</value>
+  </data>
+  <data name="NewWorkflowTabTitle" xml:space="preserve">
+    <value>New workflow {0}</value>
+  </data>
+  <data name="NewWorkflowWithModifierTabTitle" xml:space="preserve">
+    <value>New workflow {0} {1}</value>
+  </data>
+  <data name="OpenServiceHostStatus" xml:space="preserve">
+    <value>Workflow service host opened</value>
+  </data>
+  <data name="PrimitivesCategoryToToolbox" xml:space="preserve">
+    <value>Primitives</value>
+  </data>
+  <data name="ReadyStatus" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="RunningStatus" xml:space="preserve">
+    <value>Workflow running ...</value>
+  </data>
+  <data name="RuntimeCategoryToToolbox" xml:space="preserve">
+    <value>Runtime</value>
+  </data>
+  <data name="SaveChangesDialogMessage" xml:space="preserve">
+    <value>Save changes to following workflows?
+{0}</value>
+  </data>
+  <data name="SaveChangesDialogTitle" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="SaveSuccessfulStatus" xml:space="preserve">
+    <value>Save successful</value>
+  </data>
+  <data name="SavingStatus" xml:space="preserve">
+    <value>Saving workflow ...</value>
+  </data>
+  <data name="TransactionCategoryToToolbox" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+  <data name="UnhandledExceptionMessage" xml:space="preserve">
+    <value>An unhandled exception occurred, see log for details : {0}</value>
+  </data>
+  <data name="UnhandledExceptionTrace" xml:space="preserve">
+    <value>Unhandled exception occurred on {0} : {1}</value>
+  </data>
+  <data name="ViewMenuDebug" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="ViewMenuErrors" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="ViewMenuOutput" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="ViewMenuProperties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="ViewMenuToolbox" xml:space="preserve">
+    <value>Toolbox</value>
+  </data>
+  <data name="WarningValidationItem" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>Workflow Studio</value>
+  </data>
+  <data name="ClosedServiceHostInDebugStatus" xml:space="preserve">
+    <value>Workflow service host closed</value>
+  </data>
+  <data name="FaultedServiceHostInDebugStatus" xml:space="preserve">
+    <value>Workflow service host faulted</value>
+  </data>
+  <data name="OpenServiceHostInDebugStatus" xml:space="preserve">
+    <value>Workflow service host opened</value>
+  </data>
+  <data name="DebugMenuStartDebuggingCommandKey" xml:space="preserve">
+    <value>'F5'</value>
+  </data>
+  <data name="DebugMenuStartDebuggingCommandModifier" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DebugMenuStartWithoutDebuggingCommandKey" xml:space="preserve">
+    <value>'F5'</value>
+  </data>
+  <data name="DebugMenuStartWithoutDebuggingCommandModifier" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="DebugMenu" xml:space="preserve">
+    <value>_Debug</value>
+  </data>
+  <data name="FileMenu" xml:space="preserve">
+    <value>_File</value>
+  </data>
+  <data name="HelpMenu" xml:space="preserve">
+    <value>_Help</value>
+  </data>
+  <data name="ViewMenu" xml:space="preserve">
+    <value>_View</value>
+  </data>
+  <data name="ViewMenuOutline" xml:space="preserve">
+    <value>Outline</value>
+  </data>
+</root>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
+    <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Mail.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Mecanical.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Cloud.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="People.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Calculator.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="1pixel.gif" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Columns32.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Columns16.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Pictures.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="EditOption.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Icon96.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="IcoOriginal.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="bingLogo_lg-transparent.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Logo_Office_Apps.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="IE.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="View.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="dot.png" Target="Images\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

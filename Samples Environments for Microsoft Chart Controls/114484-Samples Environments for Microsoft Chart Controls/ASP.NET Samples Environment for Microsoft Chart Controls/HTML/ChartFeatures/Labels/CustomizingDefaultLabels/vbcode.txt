@@ -1,0 +1,20 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Chart1_Customize(sender As System.Web.UI.DataVisualization.Charting.Chart) Handles Chart1.Customize
+
+    ' Get X and Y axis labels collections
+    Dim xAxisLabels As CustomLabelsCollection = Chart1.ChartAreas("ChartArea1").AxisX.CustomLabels
+    Dim yAxisLabels As CustomLabelsCollection = Chart1.ChartAreas("ChartArea1").AxisY.CustomLabels
+
+    ' Change text of the first Y axis label
+    yAxisLabels(0).Text = "Zero"
+
+    ' Change Y axis labels
+    Dim labelIndex As Integer
+    For labelIndex = 1 To yAxisLabels.Count - 1
+        yAxisLabels(labelIndex).Text = yAxisLabels(labelIndex).Text + "°. 00'"
+    Next labelIndex
+
+End Sub 'Chart1_Customize
+...

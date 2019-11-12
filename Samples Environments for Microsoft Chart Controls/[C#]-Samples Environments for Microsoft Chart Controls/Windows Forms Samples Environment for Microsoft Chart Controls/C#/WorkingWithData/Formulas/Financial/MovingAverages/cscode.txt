@@ -1,0 +1,32 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+private void CalculateAverages()
+{
+	// Start from first property is true by default.
+	chart1.DataManipulator.StartFromFirst = true;
+
+	// Calculates simple moving average			
+	chart1.DataManipulator.FinancialFormula(FinancialFormula.MovingAverage,"5","Input","Simple");
+
+	// Calculates exponential moving average	
+	chart1.DataManipulator.FinancialFormula(FinancialFormula.ExponentialMovingAverage,"5","Input","Exponential");
+
+	// Calculates triangular moving average	
+	chart1.DataManipulator.FinancialFormula(FinancialFormula.TriangularMovingAverage,"5","Input","Triangular");
+
+	// Calculates weighted moving average	
+	chart1.DataManipulator.FinancialFormula(FinancialFormula.WeightedMovingAverage,"5","Input","Weighted");
+	
+	// Remove historical data
+	if( checkBoxFilterHistoricalData.Checked && !checkBoxStartFromFirst.Checked )
+	{
+		chart1.DataManipulator.Filter( CompareMethod.LessOrEqual, Double.Parse(period)-1.0, "Input", "Input", "X" );
+		chart1.DataManipulator.Filter( CompareMethod.LessOrEqual, Double.Parse(period)-1.0, "Triangular", "Triangular", "X" );
+	}
+
+	// Repaint the chart
+	chart1.Invalidate();
+}
+
+...

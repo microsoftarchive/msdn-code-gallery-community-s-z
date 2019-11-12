@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.AzureCAT.Samples.InterRoleCommunication.Framework.ReliableServiceBusClient&lt;T&gt;">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <Members>
+      <Method Name="~ReliableServiceBusClient" Hidden="true" />
+      <Method Name="HandleClosedEvent" Hidden="true" />
+      <Method Name="HandleClosingEvent" Hidden="true" />
+      <Method Name="HandleFaultedEvent" Hidden="true" />
+      <Method Name="HandleOpenedEvent" Hidden="true" />
+      <Method Name="HandleOpeningEvent" Hidden="true" />
+      <Method Name="HandleRetryState" Hidden="true" />
+      <Method Name="IDisposable.Dispose" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgICAAAQACAEICAIMAAwhCgAFAIAgACAAAEBBgCAAQQ=</HashCode>
+      <FileName>Framework\ReliableServiceBusClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.AzureCAT.Samples.InterRoleCommunication.Framework.ReliableServiceBusHost&lt;T&gt;">
+    <Position X="3.5" Y="0.5" Width="2.75" />
+    <Members>
+      <Method Name="~ReliableServiceBusHost" Hidden="true" />
+      <Method Name="AttachEventHandlers" Hidden="true" />
+      <Method Name="CreateFailoverHost" Hidden="true" />
+      <Method Name="DettachEventHandlers" Hidden="true" />
+      <Method Name="HandleClosedEvent" Hidden="true" />
+      <Method Name="HandleClosingEvent" Hidden="true" />
+      <Method Name="HandleFaultedEvent" Hidden="true" />
+      <Method Name="HandleOpenedEvent" Hidden="true" />
+      <Method Name="HandleOpeningEvent" Hidden="true" />
+      <Method Name="HandleRetryState" Hidden="true" />
+      <Method Name="HandleServiceHostFaultedState" Hidden="true" />
+      <Method Name="IDisposable.Dispose" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IgICAAASACAEICAIIAAwhCAAFAICiACAAgUBBAiAAQA=</HashCode>
+      <FileName>Framework\ReliableServiceBusHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

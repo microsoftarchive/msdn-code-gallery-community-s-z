@@ -1,0 +1,61 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "Exporting">
+	<Title>Exporting Values in XML</Title> 
+	<Thumbnail>XML\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Exporting Values in XML</ShortBlurb> 
+	<Content>XML\ExportingInXML.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">XML\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">XML\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">XML\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Exporting data</Keyword>
+      <Keyword>Series, Exporting data</Keyword>
+    </Keywords>
+	</SampleConfig>
+	
+
+	<SampleConfig ParentNodeID = "Exporting">
+	<Title>Data Binding to Exported Values</Title> 
+	<Thumbnail>DataGridBinding\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Data Binding to Exported Values</ShortBlurb> 
+	<Content>DataGridBinding\ExportForBinding.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">DataGridBinding\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">DataGridBinding\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">DataGridBinding\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Exporting data, Data Binding</Keyword>
+    </Keywords>
+
+	</SampleConfig>
+
+	
+	<SampleConfig ParentNodeID = "Exporting">
+	<Title>Displaying Values in Table</Title> 
+	<Thumbnail>ShowingValuesInTable\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Displaying Values in Table</ShortBlurb> 
+	<Content>ShowingValuesInTable\ShowingValuesInTable.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">ShowingValuesInTable\overview.htm</InfoPage>
+		<InfoPage Title="C# Source">ShowingValuesInTable\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">ShowingValuesInTable\vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Exporting data, Show in Table</Keyword>
+    </Keywords>
+
+	</SampleConfig>
+
+
+</SampleConfigs>

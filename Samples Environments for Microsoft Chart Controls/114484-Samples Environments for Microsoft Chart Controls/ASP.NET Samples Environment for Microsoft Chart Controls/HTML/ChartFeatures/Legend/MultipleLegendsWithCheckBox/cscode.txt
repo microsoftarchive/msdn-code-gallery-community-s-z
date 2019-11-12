@@ -1,0 +1,18 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+// Add a second legend
+Legend secondLegend = new Legend("Second");
+this.Chart1.Legends.Add(secondLegend);
+
+// Associate Series 2 with the second legend 
+this.Chart1.Series["Series 2"].Legend = "Second";
+
+// Dock the default legend inside the first chart area
+this.Chart1.Legends["Default"].IsDockedInsideChartArea = true;
+this.Chart1.Legends["Default"].DockedToChartArea = "ChartArea1";
+
+// Dock the second legend inside the second chart area
+secondLegend.IsDockedInsideChartArea = true;
+secondLegend.DockedToChartArea = "Chart Area 2";
+...

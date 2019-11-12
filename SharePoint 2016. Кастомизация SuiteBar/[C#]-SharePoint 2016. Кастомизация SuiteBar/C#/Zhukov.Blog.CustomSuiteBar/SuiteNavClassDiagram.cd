@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Zhukov.Blog.CustomSuiteBar.SuiteNav">
+    <Position X="1.75" Y="0.5" Width="1.75" />
+    <AssociationLine Name="NavBarData" Type="Zhukov.Blog.CustomSuiteBar.SuiteNavBarData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.062" Y="1.796" />
+        <Point X="3.062" Y="2.171" />
+        <Point X="3.012" Y="2.171" />
+        <Point X="3.012" Y="2.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.002" Y="0.318" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAg=</HashCode>
+      <FileName>SuiteNav.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NavBarData" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Zhukov.Blog.CustomSuiteBar.SuiteNavBarData">
+    <Position X="1" Y="2.75" Width="3.5" />
+    <AssociationLine Name="AboutMeLink" Type="Zhukov.Blog.CustomSuiteBar.SuiteNavLink" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="3.023" />
+        <Point X="6.25" Y="3.023" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="HelpLink" Type="Zhukov.Blog.CustomSuiteBar.SuiteNavLink" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="3.391" />
+        <Point X="6.25" Y="3.391" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="SignOutLink" Type="Zhukov.Blog.CustomSuiteBar.SuiteNavLink" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="3.812" />
+        <Point X="6.25" Y="3.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAAAAAYAAEAABAAAAAAAABAgUABAAACAgAAAAAAAAAA=</HashCode>
+      <FileName>SuiteNavBarData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AboutMeLink" />
+      <Property Name="HelpLink" />
+      <Property Name="SignOutLink" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Zhukov.Blog.CustomSuiteBar.SuiteNavLink">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="SuiteNavLink" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAAAAAAAAAAAAAAAAACAAACAAAAAA=</HashCode>
+      <FileName>SuiteNavLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

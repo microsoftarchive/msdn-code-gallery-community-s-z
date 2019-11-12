@@ -1,0 +1,30 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Set legend position
+    Chart1.Legends["Default"].Position.Auto = false;
+    Chart1.Legends["Default"].Position.X = 35;
+    Chart1.Legends["Default"].Position.Y = 40;
+    Chart1.Legends["Default"].Position.Width = 35;
+    Chart1.Legends["Default"].Position.Height= 10;
+
+    // Set InputTag rendering type
+    Chart1.RenderType = RenderType.InputTag;
+}
+...
+
+//IMPORTANT: For this server-side event to work the event handler must be added to the InitializeComponent()
+//  method. We recommend that you add the event using the Properties window in the IDE 
+private void Chart1_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+{
+		// read coordinates from postback value
+        Point point = (Point)(new PointConverter()).ConvertFromInvariantString(e.PostBackValue);        
+        
+        // Convert pixels to percentage coordinates and set the legend position
+        Chart1.Legends["Default"].Position.X = e.X * 100F / ((float)(Chart1.Width.Value - 1));
+        Chart1.Legends["Default"].Position.Y = e.Y * 100F / ((float)(Chart1.Height.Value - 1)); 
+
+}
+...

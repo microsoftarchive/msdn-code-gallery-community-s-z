@@ -1,0 +1,29 @@
+﻿@using ContosoAdsCommon;
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Contoso Ads</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            Contoso Ads is a sample application that demonstrates how to create a
+            multi-tier ASP.NET application that runs in an Azure Cloud Service
+            or Web Site.
+        </p>
+        <p>The application uses SQL Database and Azure storage queues and blobs.</p>
+        <p>To get started choose a category to view or create a new ad.</p>
+        <h2>Choose a category</h2>
+        <ul>
+            <li>@Html.ActionLink("Cars", "Index", "Ad", new { category = (int)Category.Cars }, null)</li>
+            <li>@Html.ActionLink("Real estate", "Index", "Ad", new { category = (int)Category.RealEstate }, null)</li>
+            <li>@Html.ActionLink("Free stuff", "Index", "Ad", new { category = (int)Category.FreeStuff }, null)</li>
+            <li>@Html.ActionLink("All", "Index", "Ad", null, null)</li>
+        </ul>
+        <h2>Or create a new ad</h2>
+        <p><a class="btn btn-default" href="@Url.Action("Create","Ad")">Create an Ad</a></p>
+    </div>
+</div>

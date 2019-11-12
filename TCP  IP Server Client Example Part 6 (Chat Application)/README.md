@@ -1,0 +1,256 @@
+# TCP / IP Server Client Example Part 6 (Chat Application)
+## Requires
+- Visual Studio 2013
+## License
+- MS-LPL
+## Technologies
+- C#
+- Silverlight
+- SQL Server
+- ASP.NET
+- File System
+- Windows Security
+- Class Library
+- ADO.NET
+- User Interface
+- Windows Forms
+- Microsoft Azure
+- Data Access
+- Windows 7
+- SQL Azure
+- threading
+- custom controls
+- .NET Framework
+- Windows
+- Visual Basic .NET
+- Visual Basic.NET
+- Parallel Programming
+- Library
+- Windows General
+- Windows UI
+- Network
+- Windows Phone
+- C# Language
+- Async
+- WinForms
+- Networking
+- .NET Framework 4.5
+- Windows 8
+- HttpClient
+- Visual C Sharp .NET
+- System.Windows.Forms.UserControl
+- Windows Azure SQL Database
+- .NET 4.5
+- Windows Phone 8
+- .NET Development
+- Windows Desktop App Development
+## Topics
+- Controls
+- C#
+- Asynchronous Programming
+- Security
+- SQL Server
+- Authentication
+- Azure
+- File System
+- Class Library
+- User Interface
+- Windows Forms
+- Architecture and Design
+- Multithreading
+- Microsoft Azure
+- Data Access
+- threading
+- custom controls
+- Windows Form Controls
+- Visual Basic .NET
+- Performance
+- Parallel Programming
+- Code Sample
+- Getting Started
+- Async
+- .NET 4
+- How to
+- UI Design
+- Contacts
+- File Systems
+- Networking
+- general
+- Windows Forms Controls
+- Language Samples
+- User Control
+- User Experience
+- data and storage
+## Updated
+- 01/23/2014
+## Description
+
+<div>
+<h1>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduction</h1>
+</div>
+<p>Today we are going to connect our client and Server Chat programs to our Azure SQL Database so that we can store information like registered users information and their friends information.</p>
+<div>
+<h1>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Building the Sample</h1>
+</div>
+<p>The sample is built in Visual Studio 2013 Ultimate as an x86 targeted application using .Net Framework 4. We will be using NuGet packages, a number of 3rd party libraries, as well as Windows Azure. All of which will be fully explained to you ensuring that
+ the final compilation of your App will be hassle free. Oh! And the sample code is verbosely commented so you should have no problem in working out what the code does. To convert the application to a previous version of Visual Studio use the link in More Information
+ at the bottom of this page.</p>
+<div>
+<h1>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description</h1>
+</div>
+<p>Communication is fundamental to us all. Our Chat application is starting to take form. Previously you saw our Echo server, this time our server will remember who has registered and check that list so that returning users simply need to log in.</p>
+<p>We have done a refactor of the code and redesigned the Server, we have also split the Chat client out to a separate project.</p>
+<p>&nbsp;<img id="107707" src="107707-picture%202014-01-23%2021_47_49.png" alt="" width="672" height="329"></p>
+<p><img id="107708" src="107708-picture%202014-01-23%2021_48_02.png" alt="" width="212" height="367"></p>
+<p>Remember when you start the server you will need to open the correct ports on your firewall, Windows will warn you with this dialog:</p>
+<p><img id="107709" src="107709-picture%202014-01-23%2004_05_46.png" alt="" width="539" height="388">&nbsp;</p>
+<p>Click Allow access. If you do not have a firewall running, then start it immediately, and make sure your anti-virus is up to date. Microsoft supply a free Firewall and Anti-virus application with all modern Windows versions they release.</p>
+<div>
+<h1>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creating our Application</h1>
+</div>
+<p>We have changed the Azure Database a little, but updating it is simple. This script will Update the Azure Users database:</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>SQL</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">mysql</span>
+
+<div class="preview">
+<pre class="mysql"><span class="sql__keyword">USE</span>&nbsp;[<span class="sql__id">ChatApp</span>]&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__mlcom">/******&nbsp;Object:&nbsp;Table&nbsp;[dbo].[Users]&nbsp;Script&nbsp;Date:&nbsp;23/01/2014&nbsp;22:09:54&nbsp;******/</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">SET</span>&nbsp;<span class="sql__id">ANSI_NULLS</span>&nbsp;<span class="sql__keyword">ON</span>&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">SET</span>&nbsp;<span class="sql__id">QUOTED_IDENTIFIER</span>&nbsp;<span class="sql__keyword">ON</span>&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">DROP</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">Users</span>];&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">Users</span>]&nbsp;(&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">ScreenName</span>]&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__number">50</span>)&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">EmailAddress</span>]&nbsp;<span class="sql__keyword">NVARCHAR</span>&nbsp;(<span class="sql__number">250</span>)&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__keyword">Password</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__id">NTEXT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">Online</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">BIT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">ClientID</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">INT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__id">IDENTITY</span>&nbsp;(<span class="sql__number">1</span>,&nbsp;<span class="sql__number">1</span>)&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>&nbsp;
+);</pre>
+</div>
+</div>
+</div>
+<p>And this script updates the Friends Database.</p>
+<p></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>SQL</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">mysql</span>
+
+<div class="preview">
+<pre class="mysql"><span class="sql__keyword">USE</span>&nbsp;[<span class="sql__id">ChatApp</span>]&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__mlcom">/******&nbsp;Object:&nbsp;Table&nbsp;[dbo].[Friends]&nbsp;Script&nbsp;Date:&nbsp;23/01/2014&nbsp;22:10:53&nbsp;******/</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">SET</span>&nbsp;<span class="sql__id">ANSI_NULLS</span>&nbsp;<span class="sql__keyword">ON</span>&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">SET</span>&nbsp;<span class="sql__id">QUOTED_IDENTIFIER</span>&nbsp;<span class="sql__keyword">ON</span>&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">DROP</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">Friends</span>];&nbsp;
+<span class="sql__id">GO</span>&nbsp;
+&nbsp;
+<span class="sql__keyword">CREATE</span>&nbsp;<span class="sql__keyword">TABLE</span>&nbsp;[<span class="sql__id">dbo</span>].[<span class="sql__id">Friends</span>]&nbsp;(&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">UserID</span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sql__keyword">INT</span>&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;[<span class="sql__id">FriendsUserID</span>]&nbsp;<span class="sql__keyword">INT</span>&nbsp;<span class="sql__keyword">NOT</span>&nbsp;<span class="sql__value">NULL</span>&nbsp;
+);</pre>
+</div>
+</div>
+</div>
+<p></p>
+<p style="text-align:center"><strong>Please be aware if you have any data already saved in the databases then the data will be lost.</strong></p>
+<p style="text-align:left">To run these scripts from Visual Studio you need to:</p>
+<ol>
+<li>Open your SQL Server Object Explorer window &ndash; look in the View Menu </li><li>Add the connection to your Azure SQL server </li><li>Right click on your Friends table and select View Designer </li><li>Copy and paste your Friends script above into the T-SQL panel at the bottom and click the Update button at the top of the top panel
+</li><li>Do the same for the Users script, remembering to change to the Users table (Step 3)
+</li><li>Now that your Database is up to date we can continue. </li></ol>
+<p>Currently, our Chat Server allows people to register and login. Registration details are saved on the Azure Database so they only need to be entered once. We have defaulted the passwords to &ldquo;pass&rdquo;, for the time being as it makes it easier for
+ registering users without having to remember their passwords.</p>
+<p>We have also used Compile Time constants that create a different application for Debugging than it does for Release. For instance in the Azure Login we have the following code:</p>
+<p></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+
+<div class="preview">
+<pre class="csharp"><span class="cs__preproc">#if&nbsp;DEBUG&nbsp;&nbsp;&nbsp;//&nbsp;Only&nbsp;show&nbsp;the&nbsp;buttons&nbsp;we&nbsp;need&nbsp;depending&nbsp;upon&nbsp;the&nbsp;running&nbsp;mode</span>.&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnLoad.Enabled&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnLoad.Visible&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnCancel.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnCancel.Visible&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnConnect.Visible&nbsp;=&nbsp;<span class="cs__keyword">false</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnConnect.Enabled&nbsp;=&nbsp;<span class="cs__keyword">false</span>;<span class="cs__preproc">&nbsp;
+&nbsp;
+#else</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnLoad.Enabled&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnLoad.Visible&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnCancel.Enabled&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnCancel.Visible&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnConnect.Visible&nbsp;=&nbsp;<span class="cs__keyword">true</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btnConnect.Enabled&nbsp;=&nbsp;<span class="cs__keyword">true</span>;<span class="cs__preproc">&nbsp;
+&nbsp;
+#endif</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+The above code tells the compiler that if we are compiling as a Debug application then make the Load button active and visible and hide all the other buttons. The reverse is true if the application is compiled as Release. The load button loads your MyDocuments/ChatAzureDB.txt
+ &ndash; which you have to create. It contains three lines.
+<p></p>
+<ol>
+<li>The Server Details: xxxxxxxxxx.database.windows.net,1433 </li><li>The User Name: YourUserName@xxxxxxxxxx </li><li>The Password: &lt;plain text password&gt; </li></ol>
+<p>This information you should know but you can get all of it from your Azure website, excluding your password which you have to remember.</p>
+<p>Build the Solution and navigate to the Bin\Debug directory of the Server and run the .Exe file. The server will start. Next Run you application in Visual Studio and the Chat Client Will start. Click the little green button at the top and you will be asked
+ to Login or Register. You will not be able to login until you have registered.</p>
+<p>Once you do login in, the server gives you your unique Client ID, you start with a temporary unique-ish GUID based ID until you successfully log in. The NetComm.dll will be extended later but for just now to have the Client use the correct ID we disconnect
+ and reconnect; which is not very elegant.</p>
+<p>In episode 8 we will introduce friends to our application which will be nice because it is a poor chat application that doesn&rsquo;t allow you to chat to your friends!</p>
+<h2>4.1&nbsp;&nbsp;&nbsp; Current Problems</h2>
+<p>The only coding error currently noticed (at least by me so far) is that the Total Logged In Users and the Total Connected Users return the wrong results. If you see why, tell me in the Q&amp;A section for a credit in the next chapter of this series.</p>
+<h2>4.2&nbsp;&nbsp;&nbsp; Source Code</h2>
+<p>ChatClient</p>
+<ul>
+<li>FrmChat.cs &ndash; The Main Chat Client program </li><li>FrmLogin.cs &ndash; The Login form for the End User </li><li>FrmRegister.cs &ndash; The Registration form for the End User, so they do not have to go to a website to register.
+</li></ul>
+<p>ServerClientChat</p>
+<ul>
+<li>FrmServer.cs &ndash; The Main Server Application </li><li>FrmAzureDatabaseLogin.cs &ndash; Login Form for your Azure Database </li><li>Classes/AzureSQL.cs &ndash; This contains all our SQL connection and queries for our database
+</li><li>Classes/PublicIP.cs &ndash; This is used to obtain our public IP address </li></ul>
+<p>Configuration Files</p>
+<ul>
+<li>In MyDocuments/ChatAzureDB.txt &ndash; This contains the login details for the Azure Database.
+</li></ul>
+<div>
+<h1>5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; More Information</h1>
+<ul>
+<li>To convert the solution to a previous version of Visual Studio you can use this free application:
+<a href="http://vsprojectconverter.codeplex.com/"><em>http://vsprojectconverter.codeplex.com/</em></a> or download and use Visual Studio 2013 Express which is freely available from Microsoft from here:
+<a href="http://www.visualstudio.com/downloads/download-visual-studio-vs"><em>http://www.visualstudio.com/downloads/download-visual-studio-vs</em></a>.
+</li><li>NetComm.dll: <a href="http://www.codeproject.com/Articles/118485/C-VB-NET-Multi-user-Communication-Library-TCP">
+http://www.codeproject.com/Articles/118485/C-VB-NET-Multi-user-Communication-Library-TCP</a>
+</li><li>The Visual Basic version of this code was generated by the tool: Instant VB from
+<a href="http://www.tangiblesoftwaresolutions.com/">http://www.tangiblesoftwaresolutions.com/</a> - There is a free version available as well!
+</li><li>Microsoft Firewall: <a href="http://windows.microsoft.com/en-gb/windows/turn-windows-firewall-on-off#turn-windows-firewall-on-off=windows-vista">
+http://windows.microsoft.com/en-gb/windows/turn-windows-firewall-on-off#turn-windows-firewall-on-off=windows-vista</a>
+</li><li>Microsoft Anti-Virus: <a href="http://www.pcadvisor.co.uk/how-to/windows/3466684/how-turn-on-defender-in-windows-8/">
+http://www.pcadvisor.co.uk/how-to/windows/3466684/how-turn-on-defender-in-windows-8/</a>
+</li></ul>
+</div>

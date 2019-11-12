@@ -1,0 +1,7 @@
+﻿SQL Server Management Objects (SMO) Programming Guide
+https://docs.microsoft.com/en-us/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
+
+Installing SMO
+https://docs.microsoft.com/en-us/sql/relational-databases/server-management-objects-smo/installing-smo
+
+

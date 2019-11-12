@@ -1,0 +1,52 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Form_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+	
+	' Enabling the viewstate must be done very early in the loading of 
+	' a web page which is why it is done in the Page Init.  The preferred
+	' way to initialize the viewstate is done in the property browser
+	' so the property value is persisted in the ASPX page.
+
+	' Enable or disable the view state
+	Chart1.EnableViewState = True
+
+End Sub 'Page_Load 
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Enable the view state
+   Chart1.EnableViewState = True
+   
+   ' Determine what content should be serialized in the browser.
+   ' By default all appearance and data is serialized, so we 
+   ' don't have to re-access the source data for
+   ' all other series that exist.
+   Chart1.ViewStateContent = SerializationContents.Default
+   
+   Dim charts As String() =  {"Column", "Spline", "StepLine", "Spline"}
+   Dim rnd As New Random()
+   
+   If Me.IsPostBack Then
+      If Not (Me.Request.Form("AddButton") Is Nothing) Then
+         ' Add a series to the chart
+         Dim series As Series = Chart1.Series.Add(("Series " +(Chart1.Series.Count + 1).ToString()))
+         series.ChartArea = "Default"
+         series.ChartType = charts((Chart1.Series.Count - 1))
+         series.BorderWidth = 2
+         
+         Dim j As Integer = 0
+         Dim MaxPoints As Integer = 10
+         While j ++ < MaxPoints 'ToDo: ++ operator not supported within expressions
+            series.Points.Add(rnd.Next(5, 20))
+         End While 
+      
+      Else If Not (Me.Request.Form("RemoveButton") Is Nothing) Then 
+            ' Remove the last series in the list of the series
+            Chart1.Series.RemoveAt((Chart1.Series.Count - 1))
+      End If
+   End If	
+   ...
+   
+End Sub 'Page_Load 
+...

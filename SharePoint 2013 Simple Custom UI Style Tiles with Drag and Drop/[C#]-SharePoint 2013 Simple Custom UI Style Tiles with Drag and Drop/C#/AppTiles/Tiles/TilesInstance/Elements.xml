@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Tiles" OnQuickLaunch="TRUE" TemplateType="10000" Url="Lists/Tiles" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Blog</Field>
+          <Field Name="Description">Andre Lage Blog</Field>
+          <Field Name="Color">BLUE</Field>
+          <Field Name="SIZE">SMALL</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="BackgroundImageLocation">~site/Images/Cloud.png</Field>
+          <Field Name="LinkLocation">http://aaclage.blogspot.com</Field>
+          <Field Name="Order1">1;#Col0</Field>
+          <Field Name="Round">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">SP Site</Field>
+          <Field Name="Description">SharePoint Site</Field>
+          <Field Name="Color">RED</Field>
+          <Field Name="Size">SMALL</Field>
+          <Field Name="LaunchBehavior">New Tab</Field>
+          <Field Name="BackgroundImageLocation">~site/Images/Mail.png</Field>
+          <Field Name="LinkLocation">http://office.microsoft.com/</Field>
+          <Field Name="Order1">2;#Col1</Field>
+          <Field Name="Round">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Code Example</Field>
+          <Field Name="Description">SharePoint code examples</Field>
+          <Field Name="Color">ORANGE</Field>
+          <Field Name="Size">LARGE</Field>
+          <Field Name="LaunchBehavior">Dialog</Field>
+          <Field Name="BackgroundImageLocation">~site/Images/Logo_Office_Apps.png</Field>
+          <Field Name="LinkLocation">http://code.msdn.microsoft.com/officeapps/</Field>
+          <Field Name="Order1">1;#Col1</Field>
+          <Field Name="Round">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Bing</Field>
+          <Field Name="Description">Bing Search</Field>
+          <Field Name="Color">LIME</Field>
+          <Field Name="Size">SMALL</Field>
+          <Field Name="LaunchBehavior">Dialog</Field>
+          <Field Name="BackgroundImageLocation">~site/Images/bingLogo_lg-transparent.png</Field>
+          <Field Name="LinkLocation">http://www.bing.com</Field>
+          <Field Name="Order1">3;#Col1</Field>
+          <Field Name="Round">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Microsoft Download</Field>
+          <Field Name="Description">Microsoft Download Sites</Field>
+          <Field Name="Color">BROWN</Field>
+          <Field Name="Size">LARGE</Field>
+          <Field Name="LaunchBehavior">In page navigation</Field>
+          <Field Name="BackgroundImageLocation">~site/Images/IE.png</Field>
+          <Field Name="LinkLocation">http://www.microsoft.com/en-us/download/default.aspx</Field>
+          <Field Name="Order1">1;#Col2</Field>
+          <Field Name="Round">0</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

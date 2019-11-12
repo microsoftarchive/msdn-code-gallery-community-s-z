@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(sender As Object, e As System.EventArgs) Handles MyBase.Load
+
+   ' Show data points values as labels
+   Chart1.Series("Series1").IsValueShownAsLabel = True
+   
+   ' Set axis label 
+   Chart1.Series("Series1").Points(2).AxisLabel = "My Axis Label" + ControlChars.Lf + "Label Line #2"
+   
+   ' Set data point label
+   Chart1.Series("Series1").Points(2).Label = "My Point Label" + ControlChars.Lf + "Label Line #2"
+   
+End Sub 'Page_Load
+...

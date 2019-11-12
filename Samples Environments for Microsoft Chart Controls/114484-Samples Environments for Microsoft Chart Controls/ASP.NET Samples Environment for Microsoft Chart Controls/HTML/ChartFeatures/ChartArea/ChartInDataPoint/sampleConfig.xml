@@ -1,0 +1,32 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "ChartArea">
+  <Title>Charts as Data Points</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Mini-Chart as Data Point</ShortBlurb> 
+  <Content>ChartInDataPoint.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+<Keywords>
+    <Keyword>Chart in data point</Keyword>
+  </Keywords>
+</SampleConfig>
+
+<SampleConfig ParentNodeID = "PointCharts">
+  <Title>Charts as Data Points</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Mini-Chart as Data Point</ShortBlurb> 
+  <Content>ChartInDataPoint.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+<Keywords>
+    <Keyword>Chart in data point</Keyword>
+  </Keywords>
+</SampleConfig>
+
+</SampleConfigs>

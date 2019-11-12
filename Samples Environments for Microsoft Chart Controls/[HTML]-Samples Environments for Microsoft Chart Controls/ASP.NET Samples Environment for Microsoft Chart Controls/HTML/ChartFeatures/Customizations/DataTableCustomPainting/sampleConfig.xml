@@ -1,0 +1,17 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+	<SampleConfig ParentNodeID = "Customizations">
+	<Title>Custom Painting a DataTable</Title>
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Custom Painting a DataTable</ShortBlurb> 
+	<Content>DataTableCustomPainting.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="Overview">Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+        <Keywords>
+    		<Keyword>Custom Painting, Data Table</Keyword>
+	</Keywords>
+	</SampleConfig>
+</SampleConfigs>

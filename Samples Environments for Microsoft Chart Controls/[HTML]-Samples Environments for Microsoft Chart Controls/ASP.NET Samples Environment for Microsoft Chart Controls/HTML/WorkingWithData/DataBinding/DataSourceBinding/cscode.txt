@@ -1,0 +1,34 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Resolve the address to the Access database
+	string fileNameString = this.MapPath(".");
+	fileNameString += "..\\..\\..\\data\\chartdata.mdb";
+
+	// Initialize a connection string	
+	string myConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString;
+
+	// Define the database query	
+	string mySelectQuery="SELECT * FROM REPS;";
+
+	// Create a database connection object using the connection string	
+	OleDbConnection myConnection = new OleDbConnection(myConnectionString);
+
+	// Create a database command on the connection using query	
+	OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+
+	myConnection.Open();
+
+	// set chart data source - the data source must implement IEnumerable
+	chart1.DataSource = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+	// Set series members names for the X and Y values 
+	chart1.Series["Series 1"].XValueMember = "Name";
+	chart1.Series["Series 1"].YValueMembers = "Sales";
+
+	// Data bind to the selected data source
+	chart1.DataBind();
+}
+...

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "AJAXInteractivity" Priority="100">
+	<Title>Chart as Trigger</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Charts as Triggers</ShortBlurb> 
+	<Content>ChartAsTrigger.aspx</Content>
+
+  <InfoPages>
+    <InfoPage Title="HTML Source">chartastrigger._aspx</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+    
+	<Keywords>
+	  <Keyword>AJAX, Click Event</Keyword>
+	  <Keyword>Click Event</Keyword>
+    <Keyword>Event, Click</Keyword>
+  </Keywords>
+	</SampleConfig>
+	
+</SampleConfigs>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="ScaleOutCloudDemo" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*">
+  <Role name="InterRoleCommunication.ScaleOutDemo">
+    <Instances count="201" />
+    <ConfigurationSettings>
+    </ConfigurationSettings>
+  </Role>
+  <Role name="InterRoleCommunication.ScaleOutDemo.WebUI">
+    <Instances count="2" />
+    <ConfigurationSettings>
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

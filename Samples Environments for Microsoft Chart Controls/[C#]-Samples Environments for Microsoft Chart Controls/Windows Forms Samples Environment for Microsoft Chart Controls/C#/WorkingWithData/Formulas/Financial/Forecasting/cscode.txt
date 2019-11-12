@@ -1,0 +1,36 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+
+	
+    // typeRegression is a string represented by one of the following strings:
+    // "Linear", "Exponential", "Logarithmic", or "Power".
+    // Polynomial is represented by an integer value in the form of a string.
+    string typeRegression;
+    
+    // Defining the typeRegression.
+    // This Statement can also be represented by the statement typeRegression = "2";
+    typeRegression = "Linear";
+    
+    // The number of days for Forecasting.
+    int forecasting = "10";
+
+    // Show Error as a range chart.
+    string error = "true";
+
+    // Show Forecasting Error as a range chart.
+    string forecastingError = "true";
+
+    // Formula parameters
+    string parameters = typeRegression + ',' + forecasting + ',' + error + ',' + forecastingError;
+	
+	// Create Forecasting Series.
+    chart1.DataManipulator.FinancialFormula(FinancialFormula.Forecasting,parameters,"Input:Y","Forecasting:Y,Forecasting:Y2,Forecasting:Y3");
+   
+    chart1.Series["Range"].ChartArea = "";
+    
+    // Copy Forecasting Series Data Points to Range Chart.
+    if( error == "true"|| ForecastingError == "true" )
+    {
+        chart1.Series["Range"].ChartArea = "Default";
+        chart1.DataManipulator.CopySeriesValues("Forecasting:Y2,Forecasting:Y3","Range:Y,Range:Y");
+    }

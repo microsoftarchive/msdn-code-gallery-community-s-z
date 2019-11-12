@@ -1,0 +1,36 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set font attributes for the whole series
+    ' Set labels Position
+    Chart1.Series("Series1")("LabelStyle") = "Center"
+
+    ' Set labels font
+    Chart1.Series("Series1").Font = New Font(FontNameList.SelectedItem.Text, 8)
+
+    ' Set labels angle - smart lables must be disabled to set LabelAngel
+    Chart1.Series.SmartLabelStyle.Enabled = False
+    Chart1.Series("Series1").LabelAngle = 45
+
+    ' Set labels color
+    Chart1.Series("Series1").LabelForeColor = "Red"
+
+
+    ' Set font attributes for the single data point
+    ' Set labels Position
+    Chart1.Series("Series1").Points(2)("LabelStyle") = "Top"
+
+    ' Set labels font
+    Chart1.Series("Series1").Points(2).Font = New Font(FontNameList.SelectedItem.Text, 10, FontStyle.Bold)
+
+    ' Set labels angle - smart lables must be disabled to set LabelAngel
+    Chart1.Series.SmartLabelStyle.Enabled = False
+    Chart1.Series("Series1").Points(2).LabelAngle = 30
+
+    ' Set labels color
+    Chart1.Series("Series1").Points(2).LabelForeColor = "Black"
+
+End Sub 'Page_Load
+...

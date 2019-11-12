@@ -1,0 +1,16 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".txt" #>
+<#@ Circuits processor="CircuitsDirectiveProcessor" requires="fileName='Circuits1.circuit'" #>
+
+Demonstration generator file - reads your model.
+
+<#
+  // When you change the DSL Definition, some of the code below may not work.
+
+  foreach (Component element in this.ComponentModel.Components)
+  {
+#>
+	<#= element.GetType().Name #> <#= element.Name #>
+<#    
+  }
+#>

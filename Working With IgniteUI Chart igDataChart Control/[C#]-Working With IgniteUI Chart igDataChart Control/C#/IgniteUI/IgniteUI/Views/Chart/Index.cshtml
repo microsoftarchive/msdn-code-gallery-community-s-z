@@ -1,0 +1,57 @@
+﻿@using Infragistics.Web.Mvc;
+@using IgniteUI.Models;
+@model IQueryable<IgniteUI.Models.Product>
+
+<div style="width: 100%;">
+    <div id="chart"></div>
+</div>
+<script>
+    function GenerateChart(chartData) {
+        $("#chart").igDataChart({
+            width: "100%",
+            height: "500px",
+            title: "Product vs Reorder Point",
+            subtitle: "Final products and reorder Point",
+            dataSource: chartData,
+            axes: [
+                {
+                    name: "NameAxis",
+                    type: "categoryX",
+                    title: "Product Name",
+                    label: "Name"
+                },
+                {
+                    name: "YAxisReorderPoint",
+                    type: "numericY",
+                    minimumValue: 0,
+                    title: "Reorder Point",
+                }
+            ],
+            series: [
+                {
+                    name: "NameReorderPoint",
+                    type: "column",
+                    isHighlightingEnabled: true,
+                    isTransitionInEnabled: true,
+                    xAxis: "NameAxis",
+                    yAxis: "YAxisReorderPoint",
+                    valueMemberPath: "ReorderPoint"
+                }
+            ]
+        });
+    }
+    $(function () {
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost:39044/chart/Getproducts',
+            beforeSend: function () {
+            },
+            success: function (data) {
+                GenerateChart(data);
+            },
+            error: function (e) {
+                console.log('Error occured: ' + e.message);
+            }
+        });
+    });
+</script>

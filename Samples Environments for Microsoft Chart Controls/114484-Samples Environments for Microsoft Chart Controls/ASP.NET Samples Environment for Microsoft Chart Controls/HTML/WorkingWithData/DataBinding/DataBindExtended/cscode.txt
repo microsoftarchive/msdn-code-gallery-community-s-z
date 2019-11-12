@@ -1,0 +1,40 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Resolve the address to the Access database
+	string fileNameString = this.MapPath(".");
+	fileNameString += "..\\..\\..\\data\\chartdata.mdb";
+
+	// Initialize a connection string    
+	string myConnectionString = "PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileNameString;
+	
+	// Define the database query	
+	string mySelectQuery="SELECT * FROM REPSALES WHERE Year=2004;";
+
+	// Create a database connection object using the connection string	
+	OleDbConnection myConnection = new OleDbConnection(myConnectionString);
+	
+	// Create a database command on the connection using query	
+	OleDbCommand myCommand = new OleDbCommand(mySelectQuery, myConnection);
+	
+	// Open the connection	
+	myCommand.Connection.Open();
+	
+	// Create a database reader	
+	OleDbDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+	
+	// Since the reader implements and IEnumerable, pass the reader directly into
+	// the DataBind method with the name of the Columns assigned to the appropriate property	
+	Chart1.Series["Series1"].Points.DataBind(
+		myReader, 
+		"Name", 
+		"Sales", 
+		"Tooltip=Year, Label=Commissions{C2}");
+
+	// Close the reader and the connection
+	myReader.Close();
+	myConnection.Close();
+}
+...

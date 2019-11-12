@@ -1,0 +1,15 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Labels">
+  <Title>Equally Sized Axes Labels</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Equally Sized Axes Labels</ShortBlurb> 
+  <Content>EquallySizedAutoFont.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>Axis, Equal-Sized Labels</Keywords> 
+</SampleConfig>
+
+</SampleConfigs>

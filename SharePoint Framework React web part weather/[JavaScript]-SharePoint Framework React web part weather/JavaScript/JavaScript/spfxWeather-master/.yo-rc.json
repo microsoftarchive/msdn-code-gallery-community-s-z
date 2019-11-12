@@ -1,0 +1,7 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "weather-webpart",
+    "libraryId": "4a4498f8-f362-445a-8315-4dbb6e63c2c0",
+    "framework": "react"
+  }
+}

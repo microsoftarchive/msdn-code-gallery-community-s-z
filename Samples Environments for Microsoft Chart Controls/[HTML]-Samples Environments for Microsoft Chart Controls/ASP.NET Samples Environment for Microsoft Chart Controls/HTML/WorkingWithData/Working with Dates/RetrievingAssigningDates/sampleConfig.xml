@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+<SampleConfig ParentNodeID = "WorkingWithDates">
+  <Title>Retrieving and Assigning Dates</Title> 
+  <ShortBlurb>Retrieving and Assigning Dates</ShortBlurb> 
+  <Content>RetrievingAssigningDates.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Retrieving and Assigning Dates</Keyword>
+    <Keyword>Retrieving Dates</Keyword>
+    <Keyword>Assigning Dates</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+</SampleConfigs>

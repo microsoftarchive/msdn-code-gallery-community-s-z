@@ -1,0 +1,22 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "SeriesAlignment">
+	<Title>Aligning Series</Title> 
+	<Thumbnail>SeriesAlignment\thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Aligning Series</ShortBlurb> 
+	<Content>SeriesAlignment\SeriesAlignment.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="Overview">SeriesAlignment\Overview.htm</InfoPage>
+		<InfoPage Title="C# Source">SeriesAlignment\cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">SeriesAlignment\vbcode.txt</InfoPage>		
+	</InfoPages>
+
+	<Keywords>
+		<Keyword>Series, Alignment</Keyword>
+		<Keyword>Alignment, Series</Keyword>
+	</Keywords>  
+	</SampleConfig>
+
+</SampleConfigs>

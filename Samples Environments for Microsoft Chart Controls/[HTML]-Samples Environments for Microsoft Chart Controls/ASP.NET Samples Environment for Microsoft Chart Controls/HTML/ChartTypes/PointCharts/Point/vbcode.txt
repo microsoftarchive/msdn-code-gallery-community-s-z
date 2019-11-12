@@ -1,0 +1,30 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Populate series data with random data
+    Dim random As New Random()
+    Dim pointIndex As Integer
+    For pointIndex = 0 To 9
+        Chart1.Series("Series1").Points.AddY(random.Next(5, 60))
+    Next pointIndex
+
+    ' Set point chart type
+    Chart1.Series("Series1").ChartType = SeriesChartType.Point
+
+    ' Enable data points labels
+    Chart1.Series("Series1").IsValueShownAsLabel = True
+    Chart1.Series("Series1")("LabelStyle") = "Center"
+
+    ' Set marker size
+    Chart1.Series("Series1").MarkerSize = 15
+
+    ' Set marker shape
+    Chart1.Series("Series1").MarkerStyle = MarkerStyle.Diamond
+    
+    ' Enable 3D
+    Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True    
+
+End Sub 'Page_Load
+...

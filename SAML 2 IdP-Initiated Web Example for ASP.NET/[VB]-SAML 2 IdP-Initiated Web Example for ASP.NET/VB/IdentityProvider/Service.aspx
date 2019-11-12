@@ -1,0 +1,1 @@
+<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Service.aspx.vb" Inherits="SamlIdPInitiated.IdentityProvider.Service" %>

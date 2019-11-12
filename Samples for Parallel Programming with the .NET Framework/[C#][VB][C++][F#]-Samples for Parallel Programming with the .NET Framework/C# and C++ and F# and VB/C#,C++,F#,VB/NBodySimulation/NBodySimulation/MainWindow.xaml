@@ -1,0 +1,106 @@
+﻿<Window x:Class="NBodySimulation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="N-Body Simulation" Height="550" Width="700" Background="Black">
+
+    <Grid>
+        <DockPanel>
+            <Grid DockPanel.Dock="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="250"></RowDefinition>
+
+                        <RowDefinition Height="150"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical">
+                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                            <Label Foreground="White" HorizontalAlignment="Center" Width="150">Number of Cores</Label>
+                            <Label x:Name="numCoresLabel" Foreground="Orange" HorizontalAlignment="Center"></Label>
+                        </StackPanel>
+
+                        <Slider x:Name="numCoresSlider" Orientation="Horizontal" HorizontalAlignment="Center" Width="150"
+                                IsSnapToTickEnabled="True" Foreground="White" TickPlacement="BottomRight" SelectionStart="1" Minimum="1" TickFrequency="1" ValueChanged="NumCoresValueChanged"/>
+                    </StackPanel>
+                    <StackPanel x:Name="windowSideBar" Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+                        <GroupBox Header="N-Body Simulation" Foreground="Wheat" BorderBrush="White" Width="190">
+                            <StackPanel>
+                                <ListBox Background="Black" SelectionMode="Single" x:Name="expanderSelection" SelectionChanged="AlgorithmTypeSelection">
+                                    <ListBox.Resources>
+                                        <Style TargetType="{x:Type Expander}">
+                                            <Setter Property="IsExpanded" Value="{Binding Path=IsSelected, 
+                                                RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}"/>
+                                        </Style>
+                                    </ListBox.Resources>
+                                    <ListBox.Template>
+                                        <ControlTemplate TargetType="{x:Type ListBox}">
+                                            <ItemsPresenter/>
+                                        </ControlTemplate>
+                                    </ListBox.Template>
+                                    <ListBox.ItemContainerStyle>
+                                        <Style TargetType="{x:Type ListBoxItem}">
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </ListBox.ItemContainerStyle>
+                                    <Expander x:Name="expandUnoptimized" Margin="5" Header="Sequential vs. Parallel" Foreground="LightBlue">
+                                        <ListBox x:Name="algorithmList" Margin="10" Background="Black" BorderBrush="White" Foreground="LightPink" />
+                                    </Expander>
+
+                                </ListBox>
+                            </StackPanel>
+                        </GroupBox>
+
+                    </StackPanel>
+
+                    <Border Grid.Row="2" Margin="1" BorderThickness="1">
+                        <StackPanel Orientation="Vertical">
+                            <Label x:Name="algorithmName" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="LightBlue" FontSize="16">Unoptimized</Label>
+                            <StackPanel Margin="10" Grid.Column="0" Orientation="Horizontal">
+                                <Label  x:Name="timeElapsed" Background="Black" Foreground="White" Width="75" VerticalAlignment="Center" HorizontalAlignment="Center">FPS:</Label>
+                                <Label  HorizontalAlignment="Right" x:Name="displayTimeElapsed" Background="Black" Foreground="Cyan" FontSize="20" Width="110" VerticalAlignment="Bottom">0.0</Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Button x:Name="startButton" Margin="5" Background="Black" Foreground="White"
+                                        BorderBrush="Orange" FontSize="15" Width="75" Click="StartButtonClick">Start</Button>
+                                <Button x:Name="resetButton" Margin="5" Background="Black" Foreground="White" BorderBrush="Orange" FontSize="15" Width="75" Click="ResetButtonClick">Reset</Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+                <Canvas Grid.Column="1" Name="ellipseCanvas" Background="Black" Height="250" Width="250" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                </Canvas>
+            </Grid>
+            <Grid x:Name="windowTopBar" DockPanel.Dock="Top" Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="3" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="5" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White">Number of Particles</Label>
+                        <Label x:Name="numParticlesLabel"  HorizontalAlignment="Right" Foreground="HotPink" FontSize="18" VerticalAlignment="Bottom"></Label>
+                    </StackPanel>
+                    <Slider x:Name="numParticlesSlider" Orientation="Horizontal" HorizontalAlignment="Center" 
+                            Width="150" IsSnapToTickEnabled="True" TickPlacement="BottomRight" Minimum ="128" Maximum="16384" 
+                            Foreground="White"  SelectionStart="128" SelectionEnd="16384" Value="1024"
+                            Ticks="128,256,512,1024,2048,4096,8192,16384"/>
+                </StackPanel>
+            </Grid>
+        </DockPanel>
+
+    </Grid>
+</Window>

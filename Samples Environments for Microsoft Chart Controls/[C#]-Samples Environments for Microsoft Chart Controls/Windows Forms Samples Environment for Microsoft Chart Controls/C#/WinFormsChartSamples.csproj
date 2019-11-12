@@ -1,0 +1,2389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D8AB205-1B8D-4CE0-99DD-69E9ACADA853}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>WinFormsChartSamples</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinFormsChartSamples</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;ENTERPRISE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <Name>System.Windows.Forms.DataVisualization</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="ChartAppearance\AntiAliasingSample\cscode.txt" />
+    <Content Include="ChartAppearance\AntiAliasingSample\sampleConfig.xml" />
+    <Content Include="ChartAppearance\AntiAliasingSample\vbcode.txt" />
+    <Content Include="ChartAppearance\Appearance\cscode.txt" />
+    <Content Include="ChartAppearance\Appearance\Flag.gif" />
+    <Content Include="ChartAppearance\Appearance\sampleConfig.xml" />
+    <Content Include="ChartAppearance\Appearance\vbcode.txt" />
+    <Content Include="ChartAppearance\Borders\cscode.txt" />
+    <Content Include="ChartAppearance\Borders\sampleConfig.xml" />
+    <Content Include="ChartAppearance\Borders\TOCNodes.xml" />
+    <Content Include="ChartAppearance\Borders\vbcode.txt" />
+    <Content Include="ChartAppearance\TOCNodes.xml" />
+    <Content Include="ChartAppearance\UsingGaps3D\cscode.txt" />
+    <Content Include="ChartAppearance\UsingGaps3D\sampleConfig.xml" />
+    <Content Include="ChartAppearance\UsingGaps3D\vbcode.txt" />
+    <Content Include="ChartAppearance\UsingPerspectives\cscode.txt" />
+    <Content Include="ChartAppearance\UsingPerspectives\sampleConfig.xml" />
+    <Content Include="ChartAppearance\UsingPerspectives\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationAnchoring\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationAnchoring\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\AnnotationAnchoring\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationAppearance\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationAppearance\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\AnnotationAppearance\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationEditing\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationEditing\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\AnnotationEditing\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationPositionChanging\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationPositionChanging\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\AnnotationPositionChanging\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationSmartLabels\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationSmartLabels\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\AnnotationSmartLabels\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationStyles\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\AnnotationStyles\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\AnnotationStyles\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\FreeDrawAnnotation\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\FreeDrawAnnotation\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\FreeDrawAnnotation\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\GroupingAnnotations\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\GroupingAnnotations\Overview.htm" />
+    <Content Include="ChartFeatures\Annotations\GroupingAnnotations\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\GroupingAnnotations\vbcode.txt" />
+    <Content Include="ChartFeatures\Annotations\Overview\Anchoring.PNG" />
+    <Content Include="ChartFeatures\Annotations\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\Annotations\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\Overview\SmartLabel.PNG" />
+    <Content Include="ChartFeatures\Annotations\PositionChangedEvent\cscode.txt" />
+    <Content Include="ChartFeatures\Annotations\PositionChangedEvent\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Annotations\PositionChangedEvent\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\Appearance\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\Appearance\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\Appearance\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\Axis Title\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\Axis Title\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\Axis Title\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\AxisMargins\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\AxisMargins\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\AxisMargins\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\AxisScale\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\AxisScale\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\AxisScale\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\Crossing And Reverse\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\Crossing And Reverse\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\Crossing And Reverse\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\GridLinesAndTickMarks\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\GridLinesAndTickMarks\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\GridLinesAndTickMarks\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\HighlightDateRanges\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\HighlightDateRanges\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\HighlightDateRanges\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\InterlacedStrips\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\InterlacedStrips\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\InterlacedStrips\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\Logarithmic Scale\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\Logarithmic Scale\Overview.htm" />
+    <Content Include="ChartFeatures\Axis\Logarithmic Scale\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\Logarithmic Scale\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\MultipleYAxis\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\MultipleYAxis\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\MultipleYAxis\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\Overview\DataView.PNG" />
+    <Content Include="ChartFeatures\Axis\Overview\Interlaced.PNG" />
+    <Content Include="ChartFeatures\Axis\Overview\LabelRows.png" />
+    <Content Include="ChartFeatures\Axis\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\Axis\Overview\PrimarySecondaryAxes.PNG" />
+    <Content Include="ChartFeatures\Axis\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\PrimaryAndSecondaryAxes\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\PrimaryAndSecondaryAxes\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\PrimaryAndSecondaryAxes\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\ScaleBreaks\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\ScaleBreaks\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\ScaleBreaks\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\Strip Lines Offset\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\Strip Lines Offset\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\Strip Lines Offset\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\Strip Lines Title\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\Strip Lines Title\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\Strip Lines Title\vbcode.txt" />
+    <Content Include="ChartFeatures\Axis\StripLines\cscode.txt" />
+    <Content Include="ChartFeatures\Axis\StripLines\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Axis\StripLines\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\AligningChartAreas\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\AligningChartAreas\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\AligningChartAreas\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\AlignTypeInnerPlotPosition.PNG" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\AlignTypePosition.PNG" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\AreaAlignTypeAll.PNG" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\AreaAlignTypeAxesViews.PNG" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\AreaAlignTypeCursor.PNG" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\Overview.htm" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\AlignmentTypes\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\Appearance\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\Appearance\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\Appearance\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\ChartArea3D\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\ChartArea3D\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\ChartArea3D\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\ChartAreaPosition\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\ChartAreaPosition\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\ChartAreaPosition\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\ChartInDataPoint\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\ChartInDataPoint\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\ChartInDataPoint\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\InsideDoughnut\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\InsideDoughnut\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\InsideDoughnut\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\Overview\2DChart.PNG" />
+    <Content Include="ChartFeatures\ChartArea\Overview\3DChart.PNG" />
+    <Content Include="ChartFeatures\ChartArea\Overview\Alignment.PNG" />
+    <Content Include="ChartFeatures\ChartArea\Overview\GradientColor.PNG" />
+    <Content Include="ChartFeatures\ChartArea\Overview\NoAlignment.PNG" />
+    <Content Include="ChartFeatures\ChartArea\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\ChartArea\Overview\PieWithinPoint.png" />
+    <Content Include="ChartFeatures\ChartArea\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\Series and Chart Areas\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\Series and Chart Areas\Overview.htm" />
+    <Content Include="ChartFeatures\ChartArea\Series and Chart Areas\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\Series and Chart Areas\vbcode.txt" />
+    <Content Include="ChartFeatures\ChartArea\Z Order\cscode.txt" />
+    <Content Include="ChartFeatures\ChartArea\Z Order\sampleConfig.xml" />
+    <Content Include="ChartFeatures\ChartArea\Z Order\vbcode.txt" />
+    <Content Include="ChartFeatures\Customizations\CustomImage\cscode.txt" />
+    <Content Include="ChartFeatures\Customizations\CustomImage\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Customizations\CustomImage\vbcode.txt" />
+    <Content Include="ChartFeatures\Customizations\Overview\CustomImage.JPG" />
+    <Content Include="ChartFeatures\Customizations\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\Customizations\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Customizations\PaintingDataTable\cscode.txt" />
+    <Content Include="ChartFeatures\Customizations\PaintingDataTable\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Customizations\PaintingDataTable\vbcode.txt" />
+    <Content Include="ChartFeatures\Customizations\PreAndPostPaintEvent\cscode.txt" />
+    <Content Include="ChartFeatures\Customizations\PreAndPostPaintEvent\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Customizations\PreAndPostPaintEvent\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\AddingSeries\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\AddingSeries\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\AddingSeries\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\HidingSeries\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\HidingSeries\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\HidingSeries\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\IndexedX\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\IndexedX\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\IndexedX\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\Overview\BubbleChart.PNG" />
+    <Content Include="ChartFeatures\DataSeries\Overview\CustomAttributes.PNG" />
+    <Content Include="ChartFeatures\DataSeries\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\DataSeries\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\Overview\SeriesAndPointsColor.PNG" />
+    <Content Include="ChartFeatures\DataSeries\Overview\SeriesAppearance.PNG" />
+    <Content Include="ChartFeatures\DataSeries\PointWidthAndDepth\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\PointWidthAndDepth\Overview.htm" />
+    <Content Include="ChartFeatures\DataSeries\PointWidthAndDepth\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\PointWidthAndDepth\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\SecondaryAxis\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\SecondaryAxis\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\SecondaryAxis\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\Series Z Order\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\Series Z Order\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\Series Z Order\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\SeriesAppearance\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\SeriesAppearance\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\SeriesAppearance\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\UsingLabels\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\UsingLabels\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\UsingLabels\vbcode.txt" />
+    <Content Include="ChartFeatures\DataSeries\UsingMarkers\cscode.txt" />
+    <Content Include="ChartFeatures\DataSeries\UsingMarkers\sampleConfig.xml" />
+    <Content Include="ChartFeatures\DataSeries\UsingMarkers\vbcode.txt" />
+    <Content Include="ChartFeatures\Events\CursorPositionChanged\cscode.txt" />
+    <Content Include="ChartFeatures\Events\CursorPositionChanged\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Events\CursorPositionChanged\vbcode.txt" />
+    <Content Include="ChartFeatures\Events\ScrollBarEvents\cscode.txt" />
+    <Content Include="ChartFeatures\Events\ScrollBarEvents\overview.htm" />
+    <Content Include="ChartFeatures\Events\ScrollBarEvents\PageScrolling.PNG" />
+    <Content Include="ChartFeatures\Events\ScrollBarEvents\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Events\ScrollBarEvents\vbcode.txt" />
+    <Content Include="ChartFeatures\Events\ScrollBarEvents\Zoom2.PNG" />
+    <Content Include="ChartFeatures\Events\ScrollBarEvents\Zoom3.PNG" />
+    <Content Include="ChartFeatures\Events\ViewChangedEvent\cscode.txt" />
+    <Content Include="ChartFeatures\Events\ViewChangedEvent\Overview.htm" />
+    <Content Include="ChartFeatures\Events\ViewChangedEvent\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Events\ViewChangedEvent\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorAppearance\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorAppearance\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorAppearance\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorAxis\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorAxis\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorAxis\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorInterval\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorInterval\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\CursorInterval\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\KeyboardZoomScroll\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\KeyboardZoomScroll\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\KeyboardZoomScroll\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\MultiChartAreaCursor\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\MultiChartAreaCursor\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\MultiChartAreaCursor\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\ZoomScrollAuto\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\ZoomScrollAuto\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Cursors\ZoomScrollAuto\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Overview\Cursors.PNG" />
+    <Content Include="ChartFeatures\InteractiveCharting\Overview\DrilldownFinalChart.jpg" />
+    <Content Include="ChartFeatures\InteractiveCharting\Overview\DrilldownInitialChart.PNG" />
+    <Content Include="ChartFeatures\InteractiveCharting\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\InteractiveCharting\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Overview\ToolbarUI.PNG" />
+    <Content Include="ChartFeatures\InteractiveCharting\Overview\TooltipWithKeyword.png" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\DrillDown\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\DrillDown\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\DrillDown\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\InteractivePie\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\InteractivePie\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\InteractivePie\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\PointsDragging\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\PointsDragging\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\PointsDragging\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\Selection\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\Selection\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\Selection\Selection\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\TOCNodes.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\ToolTips\CustomToolTips\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ToolTips\CustomToolTips\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\ToolTips\CustomToolTips\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ToolTips\UsingToolTips\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ToolTips\UsingToolTips\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\ToolTips\UsingToolTips\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\BasicZooming\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\BasicZooming\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\BasicZooming\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\KeyboardScrolling\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\KeyboardScrolling\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\KeyboardScrolling\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ScrollBarAppearance\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ScrollBarAppearance\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ScrollBarAppearance\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\SmallScrollSize\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\SmallScrollSize\overview.htm" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\SmallScrollSize\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\SmallScrollSize\vbcode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\SmallScrollSize\Zoom3.PNG" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ZoomingExtents\cscode.txt" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ZoomingExtents\sampleConfig.xml" />
+    <Content Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ZoomingExtents\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\AutoFitAxesLabels\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\AutoFitAxesLabels\Overview.htm" />
+    <Content Include="ChartFeatures\Labels\AutoFitAxesLabels\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\AutoFitAxesLabels\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\AxisLabelsInterval\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\AxisLabelsInterval\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\AxisLabelsInterval\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\AxisVarLabelsInterval\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\AxisVarLabelsInterval\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\AxisVarLabelsInterval\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\CustomLabels\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\CustomLabels\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\CustomLabels\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\EquallySizedAutoFitFont\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\EquallySizedAutoFitFont\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\EquallySizedAutoFitFont\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\LabelsFormatting\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\LabelsFormatting\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\LabelsFormatting\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\LabelsKeywords\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\LabelsKeywords\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\LabelsKeywords\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\LabelsNextToAxis\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\LabelsNextToAxis\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\LabelsNextToAxis\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\LabelsTextStyle\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\LabelsTextStyle\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\LabelsTextStyle\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\MultilineLabels\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\MultilineLabels\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\MultilineLabels\vbcode.txt" />
+    <Content Include="ChartFeatures\Labels\Overview\AutoXAxisLabels.PNG" />
+    <Content Include="ChartFeatures\Labels\Overview\Keywords.PNG" />
+    <Content Include="ChartFeatures\Labels\Overview\LabelInterval.bmp" />
+    <Content Include="ChartFeatures\Labels\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\Labels\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\Overview\SmartLabels.PNG" />
+    <Content Include="ChartFeatures\Labels\Smart Labels\cscode.txt" />
+    <Content Include="ChartFeatures\Labels\Smart Labels\overview.htm" />
+    <Content Include="ChartFeatures\Labels\Smart Labels\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Labels\Smart Labels\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendAppearance\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendAppearance\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendAppearance\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCellColumns\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCellColumns\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendCellColumns\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCellSpan\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCellSpan\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendCellSpan\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCells\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCells\greensmallarrow.png" />
+    <Content Include="ChartFeatures\Legend\LegendCells\Overview.htm" />
+    <Content Include="ChartFeatures\Legend\LegendCells\redsmallarrow.png" />
+    <Content Include="ChartFeatures\Legend\LegendCells\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendCells\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCustomItems\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCustomItems\Flag.gif" />
+    <Content Include="ChartFeatures\Legend\LegendCustomItems\overview.htm" />
+    <Content Include="ChartFeatures\Legend\LegendCustomItems\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendCustomItems\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCustomPosition\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendCustomPosition\Overview.htm" />
+    <Content Include="ChartFeatures\Legend\LegendCustomPosition\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendCustomPosition\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendFont\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendFont\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendFont\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendInteractive\chk_checked.png" />
+    <Content Include="ChartFeatures\Legend\LegendInteractive\chk_unchecked.png" />
+    <Content Include="ChartFeatures\Legend\LegendInteractive\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendInteractive\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendInteractive\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendStyleAndPosition\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendStyleAndPosition\Overview.htm" />
+    <Content Include="ChartFeatures\Legend\LegendStyleAndPosition\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendStyleAndPosition\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendTitle\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\LegendTitle\Overview.htm" />
+    <Content Include="ChartFeatures\Legend\LegendTitle\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\LegendTitle\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\MultipleLegendsWithCheckBox\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\MultipleLegendsWithCheckBox\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\MultipleLegendsWithCheckBox\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\MultipleLegends\cscode.txt" />
+    <Content Include="ChartFeatures\Legend\MultipleLegends\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\MultipleLegends\vbcode.txt" />
+    <Content Include="ChartFeatures\Legend\Overview\Alignment.PNG" />
+    <Content Include="ChartFeatures\Legend\Overview\CustomItems.PNG" />
+    <Content Include="ChartFeatures\Legend\Overview\Keywords.PNG" />
+    <Content Include="ChartFeatures\Legend\Overview\LegendDiagram3.PNG" />
+    <Content Include="ChartFeatures\Legend\Overview\LegendDiagram4.PNG" />
+    <Content Include="ChartFeatures\Legend\Overview\LegendGradients.PNG" />
+    <Content Include="ChartFeatures\Legend\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\Legend\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Legend\Overview\SeriesSymbol3.PNG" />
+    <Content Include="ChartFeatures\Palettes\cscode.txt" />
+    <Content Include="ChartFeatures\Palettes\overview.htm" />
+    <Content Include="ChartFeatures\Palettes\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Palettes\vbcode.txt" />
+    <Content Include="ChartFeatures\Printing\CustomPrinting\cscode.txt" />
+    <Content Include="ChartFeatures\Printing\CustomPrinting\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Printing\CustomPrinting\vbcode.txt" />
+    <Content Include="ChartFeatures\Printing\MultipagePrinting\cscode.txt" />
+    <Content Include="ChartFeatures\Printing\MultipagePrinting\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Printing\MultipagePrinting\vbcode.txt" />
+    <Content Include="ChartFeatures\Printing\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\Printing\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Printing\PrinterFriendlyCharts\cscode.txt" />
+    <Content Include="ChartFeatures\Printing\PrinterFriendlyCharts\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Printing\PrinterFriendlyCharts\vbcode.txt" />
+    <Content Include="ChartFeatures\Printing\PrintingAndPreviewing\cscode.txt" />
+    <Content Include="ChartFeatures\Printing\PrintingAndPreviewing\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Printing\PrintingAndPreviewing\vbcode.txt" />
+    <Content Include="ChartFeatures\Printing\PrintingSettings\cscode.txt" />
+    <Content Include="ChartFeatures\Printing\PrintingSettings\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Printing\PrintingSettings\vbcode.txt" />
+    <Content Include="ChartFeatures\SavingAndCopyingImages\cscode.txt" />
+    <Content Include="ChartFeatures\SavingAndCopyingImages\sampleConfig.xml" />
+    <Content Include="ChartFeatures\SavingAndCopyingImages\vbcode.txt" />
+    <Content Include="ChartFeatures\Serialization\BasicSerialization\cscode.txt" />
+    <Content Include="ChartFeatures\Serialization\BasicSerialization\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Serialization\BasicSerialization\vbcode.txt" />
+    <Content Include="ChartFeatures\Serialization\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\Serialization\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Serialization\Templates\cscode.txt" />
+    <Content Include="ChartFeatures\Serialization\Templates\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Serialization\Templates\SkyBlue.xml" />
+    <Content Include="ChartFeatures\Serialization\Templates\vbcode.txt" />
+    <Content Include="ChartFeatures\Serialization\Templates\WarmTones.xml" />
+    <Content Include="ChartFeatures\Serialization\Templates\WhiteSmoke.xml" />
+    <Content Include="ChartFeatures\Titles\ChartTitle\cscode.txt" />
+    <Content Include="ChartFeatures\Titles\ChartTitle\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Titles\ChartTitle\vbcode.txt" />
+    <Content Include="ChartFeatures\Titles\MultipleTitles\cscode.txt" />
+    <Content Include="ChartFeatures\Titles\MultipleTitles\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Titles\MultipleTitles\vbcode.txt" />
+    <Content Include="ChartFeatures\Titles\Overview\MultiLine.PNG" />
+    <Content Include="ChartFeatures\Titles\Overview\Overview.htm" />
+    <Content Include="ChartFeatures\Titles\Overview\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Titles\Overview\TitleAppearance.PNG" />
+    <Content Include="ChartFeatures\Titles\Overview\TitleDocking.PNG" />
+    <Content Include="ChartFeatures\Titles\TitlePosition\cscode.txt" />
+    <Content Include="ChartFeatures\Titles\TitlePosition\Overview.htm" />
+    <Content Include="ChartFeatures\Titles\TitlePosition\sampleConfig.xml" />
+    <Content Include="ChartFeatures\Titles\TitlePosition\vbcode.txt" />
+    <Content Include="ChartFeatures\TOCNodes.xml" />
+    <Content Include="ChartTypes\AreaCharts\3DArea\cscode.txt" />
+    <Content Include="ChartTypes\AreaCharts\3DArea\vbcode.txt" />
+    <Content Include="ChartTypes\AreaCharts\Area\cscode.txt" />
+    <Content Include="ChartTypes\AreaCharts\Area\vbcode.txt" />
+    <Content Include="ChartTypes\AreaCharts\Gallery\2D100StackedArea.png" />
+    <Content Include="ChartTypes\AreaCharts\Gallery\2DArea.png" />
+    <Content Include="ChartTypes\AreaCharts\Gallery\2DSplineArea.png" />
+    <Content Include="ChartTypes\AreaCharts\Gallery\2DStackedArea.png" />
+    <Content Include="ChartTypes\AreaCharts\Gallery\3DArea.png" />
+    <Content Include="ChartTypes\AreaCharts\Gallery\3DSplineArea.png" />
+    <Content Include="ChartTypes\AreaCharts\Gallery\AreaGallery.htm" />
+    <Content Include="ChartTypes\AreaCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\AreaCharts\sampleConfig.xml" />
+    <Content Include="ChartTypes\BarColumnCharts\3DBarColumn\cscode.txt" />
+    <Content Include="ChartTypes\BarColumnCharts\3DBarColumn\vbcode.txt" />
+    <Content Include="ChartTypes\BarColumnCharts\3DCylinder\cscode.txt" />
+    <Content Include="ChartTypes\BarColumnCharts\3DCylinder\vbcode.txt" />
+    <Content Include="ChartTypes\BarColumnCharts\BarColumn\cscode.txt" />
+    <Content Include="ChartTypes\BarColumnCharts\BarColumn\vbcode.txt" />
+    <Content Include="ChartTypes\BarColumnCharts\Gallery\2DBar.png" />
+    <Content Include="ChartTypes\BarColumnCharts\Gallery\2DColumn.png" />
+    <Content Include="ChartTypes\BarColumnCharts\Gallery\3D100StackedBar.png" />
+    <Content Include="ChartTypes\BarColumnCharts\Gallery\3DBar.png" />
+    <Content Include="ChartTypes\BarColumnCharts\Gallery\3DColumn.png" />
+    <Content Include="ChartTypes\BarColumnCharts\Gallery\3DStackedBar.png" />
+    <Content Include="ChartTypes\BarColumnCharts\Gallery\BarColumnGallery.htm" />
+    <Content Include="ChartTypes\BarColumnCharts\sampleConfig.xml" />
+    <Content Include="ChartTypes\BarColumnCharts\Stacked\cscode.txt" />
+    <Content Include="ChartTypes\BarColumnCharts\Stacked\vbcode.txt" />
+    <Content Include="ChartTypes\CircularCharts\Gallery\2DPolar.png" />
+    <Content Include="ChartTypes\CircularCharts\Gallery\2DPolarMarker.png" />
+    <Content Include="ChartTypes\CircularCharts\Gallery\2DRadarArea.png" />
+    <Content Include="ChartTypes\CircularCharts\Gallery\2DRadarMarker.png" />
+    <Content Include="ChartTypes\CircularCharts\Gallery\3DPolar.png" />
+    <Content Include="ChartTypes\CircularCharts\Gallery\3DRadarArea.png" />
+    <Content Include="ChartTypes\CircularCharts\Gallery\CircularGallery.htm" />
+    <Content Include="ChartTypes\CircularCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\CircularCharts\Polar\cscode.txt" />
+    <Content Include="ChartTypes\CircularCharts\Polar\vbcode.txt" />
+    <Content Include="ChartTypes\CircularCharts\Radar\cscode.txt" />
+    <Content Include="ChartTypes\CircularCharts\Radar\vbcode.txt" />
+    <Content Include="ChartTypes\CircularCharts\sampleConfig.xml" />
+    <Content Include="ChartTypes\CombinationalCharts\Combinatorial\cscode.txt" />
+    <Content Include="ChartTypes\CombinationalCharts\Combinatorial\vbcode.txt" />
+    <Content Include="ChartTypes\CombinationalCharts\Gallery\ColumnArea.png" />
+    <Content Include="ChartTypes\CombinationalCharts\Gallery\CombinationGallery.htm" />
+    <Content Include="ChartTypes\CombinationalCharts\Gallery\LineArea.png" />
+    <Content Include="ChartTypes\CombinationalCharts\Gallery\Pareto.png" />
+    <Content Include="ChartTypes\CombinationalCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\CombinationalCharts\Gallery\StockArea.png" />
+    <Content Include="ChartTypes\CombinationalCharts\Pareto\cscode.txt" />
+    <Content Include="ChartTypes\CombinationalCharts\Pareto\vbcode.txt" />
+    <Content Include="ChartTypes\CombinationalCharts\sampleConfig.xml" />
+    <Content Include="ChartTypes\DataDistributionCharts\BoxPlot\cscode.txt" />
+    <Content Include="ChartTypes\DataDistributionCharts\BoxPlot\sampleConfig.xml" />
+    <Content Include="ChartTypes\DataDistributionCharts\BoxPlot\vbcode.txt" />
+    <Content Include="ChartTypes\DataDistributionCharts\Histogram\cscode.txt" />
+    <Content Include="ChartTypes\DataDistributionCharts\Histogram\sampleConfig.xml" />
+    <Content Include="ChartTypes\DataDistributionCharts\Histogram\vbcode.txt" />
+    <Content Include="ChartTypes\ErrorBar\cscode.txt" />
+    <Content Include="ChartTypes\ErrorBar\sampleConfig.xml" />
+    <Content Include="ChartTypes\ErrorBar\vbcode.txt" />
+    <Content Include="ChartTypes\FinancialCharts\Gallery\Bollinger1.png" />
+    <Content Include="ChartTypes\FinancialCharts\Gallery\Bollinger2.png" />
+    <Content Include="ChartTypes\FinancialCharts\Gallery\CandleStick.png" />
+    <Content Include="ChartTypes\FinancialCharts\Gallery\FinancialGallery.htm" />
+    <Content Include="ChartTypes\FinancialCharts\Gallery\Forecasting.png" />
+    <Content Include="ChartTypes\FinancialCharts\Gallery\PriceIndicators.png" />
+    <Content Include="ChartTypes\FinancialCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\FinancialCharts\Gallery\Stock.png" />
+    <Content Include="ChartTypes\FinancialCharts\Stock\cscode.txt" />
+    <Content Include="ChartTypes\FinancialCharts\Stock\DividentLegend.bmp" />
+    <Content Include="ChartTypes\FinancialCharts\Stock\DividentMarker.bmp" />
+    <Content Include="ChartTypes\FinancialCharts\Stock\sampleConfig.xml" />
+    <Content Include="ChartTypes\FinancialCharts\Stock\SplitLegend.bmp" />
+    <Content Include="ChartTypes\FinancialCharts\Stock\SplitMarker.bmp" />
+    <Content Include="ChartTypes\FinancialCharts\Stock\vbcode.txt" />
+    <Content Include="ChartTypes\LineCharts\3DLine\cscode.txt" />
+    <Content Include="ChartTypes\LineCharts\3DLine\sampleConfig.xml" />
+    <Content Include="ChartTypes\LineCharts\3DLine\vbcode.txt" />
+    <Content Include="ChartTypes\LineCharts\FastLine\cscode.txt" />
+    <Content Include="ChartTypes\LineCharts\FastLine\sampleConfig.xml" />
+    <Content Include="ChartTypes\LineCharts\FastLine\vbcode.txt" />
+    <Content Include="ChartTypes\LineCharts\Gallery\2DFastLine.png" />
+    <Content Include="ChartTypes\LineCharts\Gallery\2DLine.png" />
+    <Content Include="ChartTypes\LineCharts\Gallery\2DLineMarkers.png" />
+    <Content Include="ChartTypes\LineCharts\Gallery\2DSpline.png" />
+    <Content Include="ChartTypes\LineCharts\Gallery\2DStepLine.png" />
+    <Content Include="ChartTypes\LineCharts\Gallery\3DSpline.png" />
+    <Content Include="ChartTypes\LineCharts\Gallery\LineGallery.htm" />
+    <Content Include="ChartTypes\LineCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\LineCharts\LineCurves\cscode.txt" />
+    <Content Include="ChartTypes\LineCharts\LineCurves\sampleConfig.xml" />
+    <Content Include="ChartTypes\LineCharts\LineCurves\vbcode.txt" />
+    <Content Include="ChartTypes\PieDoughnutCharts\3DPie\cscode.txt" />
+    <Content Include="ChartTypes\PieDoughnutCharts\3DPie\sampleConfig.xml" />
+    <Content Include="ChartTypes\PieDoughnutCharts\3DPie\vbcode.txt" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\2DBeltPieChart.png" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\2DDoughnut.png" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\2DDoughnut2.png" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\2DSupplementalPie.png" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\3DPie2.png" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\3DPie3.png" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\3DPieInPie.png" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\3DStepPie.png" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\PieDoughnutGallery.htm" />
+    <Content Include="ChartTypes\PieDoughnutCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\PieDoughnutCharts\PieCollectedData\cscode.txt" />
+    <Content Include="ChartTypes\PieDoughnutCharts\PieCollectedData\sampleConfig.xml" />
+    <Content Include="ChartTypes\PieDoughnutCharts\PieCollectedData\vbcode.txt" />
+    <Content Include="ChartTypes\PieDoughnutCharts\PieCollected\cscode.txt" />
+    <Content Include="ChartTypes\PieDoughnutCharts\PieCollected\sampleConfig.xml" />
+    <Content Include="ChartTypes\PieDoughnutCharts\PieCollected\vbcode.txt" />
+    <Content Include="ChartTypes\PointCharts\Bubble\cscode.txt" />
+    <Content Include="ChartTypes\PointCharts\Bubble\Face.bmp" />
+    <Content Include="ChartTypes\PointCharts\Bubble\sampleConfig.xml" />
+    <Content Include="ChartTypes\PointCharts\Bubble\vbcode.txt" />
+    <Content Include="ChartTypes\PointCharts\Gallery\2DBubble.png" />
+    <Content Include="ChartTypes\PointCharts\Gallery\2DPoint.png" />
+    <Content Include="ChartTypes\PointCharts\Gallery\2DPointCustom.png" />
+    <Content Include="ChartTypes\PointCharts\Gallery\2DPointLabels.png" />
+    <Content Include="ChartTypes\PointCharts\Gallery\2DPointShapes.png" />
+    <Content Include="ChartTypes\PointCharts\Gallery\3DBubble.png" />
+    <Content Include="ChartTypes\PointCharts\Gallery\FastPoint.png" />
+    <Content Include="ChartTypes\PointCharts\Gallery\PointBubbleGallery.htm" />
+    <Content Include="ChartTypes\PointCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\PointCharts\Point\cscode.txt" />
+    <Content Include="ChartTypes\PointCharts\Point\sampleConfig.xml" />
+    <Content Include="ChartTypes\PointCharts\Point\vbcode.txt" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Funnel\cscode.txt" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Funnel\sampleConfig.xml" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Funnel\vbcode.txt" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Gallery\2DPyramid.png" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Gallery\3DFunnel.png" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Gallery\3DFunnelGap.png" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Gallery\3DFunnelWidth.png" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Gallery\3DPyramid.png" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Gallery\3DPyramidGap.png" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Gallery\AccumulationGallery.htm" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Pyramid\cscode.txt" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Pyramid\Overview.htm" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Pyramid\sampleConfig.xml" />
+    <Content Include="ChartTypes\PyramidFunnelCharts\Pyramid\vbcode.txt" />
+    <Content Include="ChartTypes\RangeCharts\3DRangeBar\cscode.txt" />
+    <Content Include="ChartTypes\RangeCharts\3DRangeBar\sampleConfig.xml" />
+    <Content Include="ChartTypes\RangeCharts\3DRangeBar\vbcode.txt" />
+    <Content Include="ChartTypes\RangeCharts\3DRange\cscode.txt" />
+    <Content Include="ChartTypes\RangeCharts\3DRange\sampleConfig.xml" />
+    <Content Include="ChartTypes\RangeCharts\3DRange\vbcode.txt" />
+    <Content Include="ChartTypes\RangeCharts\Gallery\2DRangeBar.png" />
+    <Content Include="ChartTypes\RangeCharts\Gallery\2DRange.png" />
+    <Content Include="ChartTypes\RangeCharts\Gallery\2DRangeColumn.png" />
+    <Content Include="ChartTypes\RangeCharts\Gallery\2DSplineRange.png" />
+    <Content Include="ChartTypes\RangeCharts\Gallery\3DRange.png" />
+    <Content Include="ChartTypes\RangeCharts\Gallery\3DSplineRange.png" />
+    <Content Include="ChartTypes\RangeCharts\Gallery\RangeGallery.htm" />
+    <Content Include="ChartTypes\RangeCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\RangeCharts\RangeBar\cscode.txt" />
+    <Content Include="ChartTypes\RangeCharts\RangeBar\sampleConfig.xml" />
+    <Content Include="ChartTypes\RangeCharts\RangeBar\vbcode.txt" />
+    <Content Include="ChartTypes\RangeCharts\RangeColumn\cscode.txt" />
+    <Content Include="ChartTypes\RangeCharts\RangeColumn\sampleConfig.xml" />
+    <Content Include="ChartTypes\RangeCharts\RangeColumn\vbcode.txt" />
+    <Content Include="ChartTypes\RangeCharts\Range\cscode.txt" />
+    <Content Include="ChartTypes\RangeCharts\Range\sampleConfig.xml" />
+    <Content Include="ChartTypes\RangeCharts\Range\vbcode.txt" />
+    <Content Include="ChartTypes\TOCNodes.xml" />
+    <Content Include="ChartOverview\Overview.htm" />
+    <Content Include="ChartOverview\sampleConfig.xml" />
+    <Content Include="ChartOverview\TOCNodes.xml" />
+    <Content Include="config.xml" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Gallery\2DKagi.png" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Gallery\2DPointFigure.png" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Gallery\2DRenko.png" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Gallery\2DThreeLine.png" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Gallery\3DThreeLine.png" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Gallery\AdvancedFinanceGallery.htm" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Gallery\sampleConfig.xml" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Kagi\cscode.txt" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Kagi\sampleConfig.xml" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Kagi\vbcode.txt" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\PointAndFigure\cscode.txt" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\PointAndFigure\sampleConfig.xml" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\PointAndFigure\vbcode.txt" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Renko\cscode.txt" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Renko\sampleConfig.xml" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\Renko\vbcode.txt" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\ThreeLineBreak\cscode.txt" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\ThreeLineBreak\sampleConfig.xml" />
+    <Content Include="ChartTypes\PriceRangeFinancialCharts\ThreeLineBreak\vbcode.txt" />
+    <Content Include="GettingStarted\BasicPopulatingData\cscode.txt" />
+    <Content Include="GettingStarted\BasicPopulatingData\sampleConfig.xml" />
+    <Content Include="GettingStarted\BasicPopulatingData\vbcode.txt" />
+    <Content Include="GettingStarted\ChartElements\ChartElementsFinished.png" />
+    <Content Include="GettingStarted\ChartElements\Overview.htm" />
+    <Content Include="GettingStarted\ChartElements\sampleConfig.xml" />
+    <Content Include="GettingStarted\CoordinateSystem\CoordinateSystem.bmp" />
+    <Content Include="GettingStarted\CoordinateSystem\Overview.htm" />
+    <Content Include="GettingStarted\CoordinateSystem\sampleConfig.xml" />
+    <Content Include="GettingStarted\CreatingFirstChart\CollectionEditor.jpg" />
+    <Content Include="GettingStarted\CreatingFirstChart\dragIcon3.jpg" />
+    <Content Include="GettingStarted\CreatingFirstChart\Overview.htm" />
+    <Content Include="GettingStarted\CreatingFirstChart\sampleConfig.xml" />
+    <Content Include="GettingStarted\DynamicChartCreation\cscode.txt" />
+    <Content Include="GettingStarted\DynamicChartCreation\sampleConfig.xml" />
+    <Content Include="GettingStarted\DynamicChartCreation\vbcode.txt" />
+    <Content Include="GettingStarted\sampleConfig.xml" />
+    <Content Include="GettingStarted\SeriesAndPoints\CandleStick.png" />
+    <Content Include="GettingStarted\SeriesAndPoints\Overview.htm" />
+    <Content Include="GettingStarted\SeriesAndPoints\sampleConfig.xml" />
+    <Content Include="GettingStarted\SeriesAndPoints\Series_Point_BasicHighlight.PNG" />
+    <Content Include="GettingStarted\SeriesAndPoints\Series_Point_BasicSplineChart.PNG" />
+    <Content Include="GettingStarted\Text\Overview.htm" />
+    <Content Include="GettingStarted\Text\sampleConfig.xml" />
+    <Content Include="GettingStarted\Text\text_elements.PNG" />
+    <Content Include="GettingStarted\TOCNodes.xml" />
+    <Content Include="Utilities\ChartDataTableHelper\ChartDataTableHelper.vb" />
+    <Content Include="Utilities\DigitalFilter\FFT.vb" />
+    <Content Include="Utilities\DigitalFilter\FIRFilters.vb" />
+    <Content Include="Utilities\HistogramChartHelper\HistogramChartHelper.vb" />
+    <Content Include="Utilities\PieCollectedDataHelper\PieCollectedDataHelper.vb" />
+    <Content Include="Utilities\SixSigma\SixSigma.vb" />
+    <Content Include="WorkingWithData\DataBinding\DatabaseBindingXY\cscode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DatabaseBindingXY\Overview.htm" />
+    <Content Include="WorkingWithData\DataBinding\DatabaseBindingXY\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataBinding\DatabaseBindingXY\vbcode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DatabaseBindingY\cscode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DatabaseBindingY\Overview.htm" />
+    <Content Include="WorkingWithData\DataBinding\DatabaseBindingY\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataBinding\DatabaseBindingY\vbcode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DataBindCrossTab\cscode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DataBindCrossTab\Overview.htm" />
+    <Content Include="WorkingWithData\DataBinding\DataBindCrossTab\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataBinding\DataBindCrossTab\vbcode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DataBindTable\cscode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DataBindTable\Overview.htm" />
+    <Content Include="WorkingWithData\DataBinding\DataBindTable\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataBinding\DataBindTable\vbcode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DataSourceBinding\cscode.txt" />
+    <Content Include="WorkingWithData\DataBinding\DataSourceBinding\Overview.htm" />
+    <Content Include="WorkingWithData\DataBinding\DataSourceBinding\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataBinding\DataSourceBinding\vbcode.txt" />
+    <Content Include="WorkingWithData\DataBinding\ExtendedDataBinding\cscode.txt" />
+    <Content Include="WorkingWithData\DataBinding\ExtendedDataBinding\Overview.htm" />
+    <Content Include="WorkingWithData\DataBinding\ExtendedDataBinding\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataBinding\ExtendedDataBinding\vbcode.txt" />
+    <Content Include="WorkingWithData\DataBinding\Overview\DataSource.jpg" />
+    <Content Include="WorkingWithData\DataBinding\Overview\DecisionTree.bmp" />
+    <Content Include="WorkingWithData\DataBinding\Overview\Overview.htm" />
+    <Content Include="WorkingWithData\DataBinding\Overview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataBinding\SeriesByRows\cscode.txt" />
+    <Content Include="WorkingWithData\DataBinding\SeriesByRows\Overview.htm" />
+    <Content Include="WorkingWithData\DataBinding\SeriesByRows\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataBinding\SeriesByRows\vbcode.txt" />
+    <Content Include="WorkingWithData\DatabindThenAlignAxisLabel\cscode.txt" />
+    <Content Include="WorkingWithData\DatabindThenAlignAxisLabel\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DatabindThenAlignAxisLabel\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\CopyingSeriesValues\MergingValues\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\CopyingSeriesValues\MergingValues\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\CopyingSeriesValues\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\CopyingSeriesValues\SplittingValues\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\CopyingSeriesValues\SplittingValues\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Exporting\DataGridBinding\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Exporting\DataGridBinding\Overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\Exporting\DataGridBinding\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Exporting\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Exporting\Xml\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Exporting\Xml\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterBandPass\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterBandPass\Overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterBandPass\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterBandPass\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterDateRange\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterDateRange\Overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterDateRange\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterDateRange\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterTopN\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterTopN\Overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterTopN\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterTopN\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterWithCustomCriteria\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterWithCustomCriteria\Overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterWithCustomCriteria\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterWithCustomCriteria\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterYValuesRange\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterYValuesRange\Overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterYValuesRange\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Filtering\FilterYValuesRange\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\FindingSeriesPoints\FindByMaxMinValues\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\FindingSeriesPoints\FindByMaxMinValues\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\FindingSeriesPoints\FindByValue\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\FindingSeriesPoints\FindByValue\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\FindingSeriesPoints\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Grouping\GroupingByAxisLabel\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Grouping\GroupingByAxisLabel\Overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\Grouping\GroupingByAxisLabel\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Grouping\GroupingFormulas\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Grouping\GroupingFormulas\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Grouping\GroupingStockData\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Grouping\GroupingStockData\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Grouping\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Overview\AfterSplitting.PNG" />
+    <Content Include="WorkingWithData\DataManipulation\Overview\BeforeSplitting.PNG" />
+    <Content Include="WorkingWithData\DataManipulation\Overview\FilteredSeries.PNG" />
+    <Content Include="WorkingWithData\DataManipulation\Overview\Overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\Overview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\AlignSeries2-a.png" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\AlignSeries4-b.png" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\Grouping2-a.png" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\Grouping2-b.png" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\NoEmptyPoints2-a.png" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\NoEmptyPoints2-b.png" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\overview.htm" />
+    <Content Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Sorting\CustomSortingOrder\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Sorting\CustomSortingOrder\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Sorting\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataManipulation\Sorting\Sorting\cscode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\Sorting\Sorting\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\SpikeRemoval\sampleConfig.xml" />
+    <Content Include="WorkingWithData\EmptyPoints\Overview\MissingPoints.PNG" />
+    <Content Include="WorkingWithData\Formulas\Statistical\ANOVA\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\ANOVA\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\CovarianceAndCorrelation\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\CovarianceAndCorrelation\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Descriptive Statistics\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Descriptive Statistics\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Distributions\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Distributions\Overview.htm" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Distributions\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\FTest\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\FTest\Overview.htm" />
+    <Content Include="WorkingWithData\Formulas\Statistical\FTest\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\sampleConfig.xml" />
+    <Content Include="WorkingWithData\Formulas\Statistical\TTest\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Statistical\TTest\vbcode.txt" />
+    <Content Include="WorkingWithData\DataManipulation\TOCNodes.xml" />
+    <Content Include="WorkingWithData\DataSourceTypes\ArrayBinding\cscode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\ArrayBinding\Overview.htm" />
+    <Content Include="WorkingWithData\DataSourceTypes\ArrayBinding\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataSourceTypes\ArrayBinding\vbcode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\CSVDataBindingBinding\cscode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\CSVDataBindingBinding\Overview.htm" />
+    <Content Include="WorkingWithData\DataSourceTypes\CSVDataBindingBinding\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataSourceTypes\CSVDataBindingBinding\vbcode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\DatabaseDataview\cscode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\DatabaseDataview\Overview.htm" />
+    <Content Include="WorkingWithData\DataSourceTypes\DatabaseDataview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataSourceTypes\DatabaseDataview\vbcode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\ExcelData\cscode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\ExcelData\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataSourceTypes\ExcelData\vbcode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\Overview\Overview.htm" />
+    <Content Include="WorkingWithData\DataSourceTypes\Overview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataSourceTypes\XMLData\cscode.txt" />
+    <Content Include="WorkingWithData\DataSourceTypes\XMLData\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DataSourceTypes\XMLData\vbcode.txt" />
+    <Content Include="WorkingWithData\DymamicPointAdd\cscode.txt" />
+    <Content Include="WorkingWithData\DymamicPointAdd\sampleConfig.xml" />
+    <Content Include="WorkingWithData\DymamicPointAdd\vbcode.txt" />
+    <Content Include="WorkingWithData\EmptyPoints\EmptyPointsAppearance\cscode.txt" />
+    <Content Include="WorkingWithData\EmptyPoints\EmptyPointsAppearance\sampleConfig.xml" />
+    <Content Include="WorkingWithData\EmptyPoints\EmptyPointsAppearance\vbcode.txt" />
+    <Content Include="WorkingWithData\EmptyPoints\InsertingEmptyPoints\cscode.txt" />
+    <Content Include="WorkingWithData\EmptyPoints\InsertingEmptyPoints\sampleConfig.xml" />
+    <Content Include="WorkingWithData\EmptyPoints\InsertingEmptyPoints\vbcode.txt" />
+    <Content Include="WorkingWithData\EmptyPoints\Overview\MissingPoints1.PNG" />
+    <Content Include="WorkingWithData\EmptyPoints\Overview\MissingPoints2.PNG" />
+    <Content Include="WorkingWithData\EmptyPoints\Overview\MissingPoints3.PNG" />
+    <Content Include="WorkingWithData\EmptyPoints\Overview\Overview.htm" />
+    <Content Include="WorkingWithData\EmptyPoints\Overview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\Formulas\Financial\chk_checked.png" />
+    <Content Include="WorkingWithData\Formulas\Financial\chk_unchecked.png" />
+    <Content Include="WorkingWithData\Formulas\Financial\MovingAverages\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\MovingAverages\Overview.htm" />
+    <Content Include="WorkingWithData\Formulas\Financial\MovingAverages\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\Overview\Overview.htm" />
+    <Content Include="WorkingWithData\Formulas\Financial\Overview\RangeIndicator.png" />
+    <Content Include="WorkingWithData\Formulas\Financial\Overview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Overview\Averages.PNG" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Overview\NormalDistribution.bmp" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Overview\Overview.htm" />
+    <Content Include="WorkingWithData\Formulas\Statistical\Overview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\Formulas\Financial\PriceIndicators\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\PriceIndicators\Overview.htm" />
+    <Content Include="WorkingWithData\Formulas\Financial\PriceIndicators\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\RangeIndicators\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\RangeIndicators\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\sampleConfig.xml" />
+    <Content Include="WorkingWithData\Formulas\Financial\TechnicalPriceIndicators\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\TechnicalPriceIndicators\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\Forecasting\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\Forecasting\vbcode.txt" />
+    <Content Include="WorkingWithData\Formulas\TOCNodes.xml" />
+    <Content Include="WorkingWithData\Formulas\Financial\VolumeIndicators\cscode.txt" />
+    <Content Include="WorkingWithData\Formulas\Financial\VolumeIndicators\Overview.htm" />
+    <Content Include="WorkingWithData\Formulas\Financial\VolumeIndicators\vbcode.txt" />
+    <Content Include="WorkingWithData\ManyYBubble\cscode.txt" />
+    <Content Include="WorkingWithData\ManyYBubble\sampleConfig.xml" />
+    <Content Include="WorkingWithData\ManyYBubble\vbcode.txt" />
+    <Content Include="WorkingWithData\Overview\DataSource.jpg" />
+    <Content Include="WorkingWithData\Overview\MissingPoints.PNG" />
+    <Content Include="WorkingWithData\Overview\Overview.htm" />
+    <Content Include="WorkingWithData\Overview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\RealTimeData\RealTimeThread\cscode.txt" />
+    <Content Include="WorkingWithData\RealTimeData\RealTimeThread\sampleConfig.xml" />
+    <Content Include="WorkingWithData\RealTimeData\RealTimeThread\vbcode.txt" />
+    <Content Include="WorkingWithData\RealTimeData\RealTimeTimer\cscode.txt" />
+    <Content Include="WorkingWithData\RealTimeData\RealTimeTimer\sampleConfig.xml" />
+    <Content Include="WorkingWithData\RealTimeData\RealTimeTimer\vbcode.txt" />
+    <Content Include="WorkingWithData\TOCNodes.xml" />
+    <Content Include="WorkingWithData\WorkingWithDates\Overview\DesignTimeDateTimeSupport.PNG" />
+    <Content Include="WorkingWithData\WorkingWithDates\Overview\HighlightWeekends.PNG" />
+    <Content Include="WorkingWithData\WorkingWithDates\Overview\Overview.htm" />
+    <Content Include="WorkingWithData\WorkingWithDates\Overview\sampleConfig.xml" />
+    <Content Include="WorkingWithData\WorkingWithDates\RetrievingAssigningDates\cscode.txt" />
+    <Content Include="WorkingWithData\WorkingWithDates\RetrievingAssigningDates\sampleConfig.xml" />
+    <Content Include="WorkingWithData\WorkingWithDates\RetrievingAssigningDates\vbcode.txt" />
+    <Content Include="WorkingWithData\WorkingWithDates\TimeScale\cscode.txt" />
+    <Content Include="WorkingWithData\WorkingWithDates\TimeScale\sampleConfig.xml" />
+    <Content Include="WorkingWithData\WorkingWithDates\TimeScale\vbcode.txt" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChartAppearance\AntiAliasingSample\AntiAliasingSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartAppearance\Appearance\ChartAppearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartAppearance\Borders\Borders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartAppearance\UsingGaps3D\UsingGaps3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartAppearance\UsingPerspectives\UsingPerspectives.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\AnnotationAnchoring\AnnotationAnchoring.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\AnnotationAppearance\AnnotationAppearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\AnnotationEditing\AnnotationEditing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\AnnotationPositionChanging\AnnotationPositionChanging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\AnnotationSmartLabels\AnnotationSmartLabels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\AnnotationStyles\AnnotationStyles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\FreeDrawAnnotation\FreeDrawAnnotation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\GroupingAnnotations\GroupingAnnotations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Annotations\PositionChangedEvent\PositionChangedEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\Appearance\AxisAppearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\Axis Title\AxisTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\AxisMargins\AxisMargins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\AxisScale\AxisScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\Crossing And Reverse\AxisCrossing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\GridLinesAndTickMarks\GridLinesTicks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\HighlightDateRanges\HighlightDateRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\InterlacedStrips\InterlacedStrips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\Logarithmic Scale\LogarithmicScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\MultipleYAxis\MultipleYAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\PrimaryAndSecondaryAxes\PrimarySecondaryAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\ScaleBreaks\ScaleBreaks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\Strip Lines Offset\StripIntervals.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\Strip Lines Title\StripLineTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Axis\StripLines\StripLines.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\AligningChartAreas\AligningChartingAreas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\AlignmentTypes\AlignmentTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\Appearance\Appearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\ChartArea3D\ChartArea3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\ChartAreaPosition\ChartAreaPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\ChartInDataPoint\ChartInDataPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\InsideDoughnut\ChartInDoughnut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\Series and Chart Areas\SeriesAndChartAreas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\ChartArea\Z Order\ZOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Customizations\CustomImage\CustomDrawnTitles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Customizations\PaintingDataTable\PaintingDataTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Customizations\PreAndPostPaintEvent\PrePostPaint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\AddingSeries\AddingSeries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\HidingSeries\HidingSeries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\IndexedX\IndexedX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\PointWidthAndDepth\PointWidthAndDepth.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\SecondaryAxis\SecondaryAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\Series Z Order\SeriesZOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\SeriesAppearance\Series Appearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\UsingLabels\UsingLabels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\DataSeries\UsingMarkers\UsingMarkers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Events\CursorPositionChanged\CursorPositionChanged.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Events\ScrollBarEvents\ScrollBarEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Events\ViewChangedEvent\ViewChangedEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Cursors\CursorAppearance\CursorAppearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Cursors\CursorAxis\CursorAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Cursors\CursorInterval\CursorInterval.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Cursors\KeyboardZoomScroll\KeyboardZoomScroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Cursors\MultiChartAreaCursor\MultiChartAreaCursor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Cursors\ZoomScrollAuto\CursorAutoZoomScroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Selection\DrillDown\DrillDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Selection\InteractivePie\InteractivePie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Selection\PointsDragging\PointsDragging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Selection\Selection\Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\Selection\Selection\Selection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\ToolTips\CustomToolTips\CustomToolTips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\ToolTips\UsingToolTips\UsingToolTips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\BasicZooming\BasicZooming.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\KeyboardScrolling\KeyboardScrolling.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ScrollBarAppearance\ScrollBarAppearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\SmallScrollSize\SmallScrollSize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ZoomingExtents\ZoomingExtents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\AutoFitAxesLabels\AutoFitAxesLabels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\AxisLabelsInterval\AxisLabelsInterval.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\AxisVarLabelsInterval\AxisVarLabelsInterval.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\CustomLabels\CustomLabels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\EquallySizedAutoFitFont\EquallySizedAutoFont.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\LabelsFormatting\LabelsFormatting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\LabelsKeywords\LabelsKeywords.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\LabelsNextToAxis\LabelsNextToAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\LabelsTextStyle\LabelsTextStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\MultilineLabels\MultilineLabels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Labels\Smart Labels\SmartLabels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendAppearance\LegendAppearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendCellColumns\LegendCellColumns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendCellSpan\LegendCellSpan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendCells\LegendCells.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendCustomItems\LegendCustomItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendCustomPosition\LegendCustomPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendFont\LegendFont.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendInteractive\LegendInteractive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendStyleAndPosition\LegendStylePosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\LegendTitle\LegendTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\MultipleLegendsWithCheckBox\MultipleLegendsWithCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Legend\MultipleLegends\MultipleLegends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Palettes\Palettes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Printing\CustomPrinting\CustomPrinting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Printing\MultipagePrinting\MultipagePrinting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Printing\PrinterFriendlyCharts\PrinterFriendlyCharts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Printing\PrintingAndPreviewing\PrintPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Printing\PrintingSettings\PrintingSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\SavingAndCopyingImages\SavingAndCopyingImages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Serialization\BasicSerialization\BasicSerialization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Serialization\Templates\Templates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Titles\ChartTitle\ChartTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Titles\MultipleTitles\MultilpleTitles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartFeatures\Titles\TitlePosition\TitleCustomPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\AreaCharts\3DArea\AreaChart3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\AreaCharts\Area\AreaChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\BarColumnCharts\3DBarColumn\BarColumn3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\BarColumnCharts\3DCylinder\Cylinder3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\BarColumnCharts\BarColumn\BarColumnChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\BarColumnCharts\Stacked\StackedChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\CircularCharts\Polar\PolarChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\CircularCharts\Radar\RadarChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\CombinationalCharts\Combinatorial\CombinatorialChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\CombinationalCharts\Pareto\ParetoChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\DataDistributionCharts\BoxPlot\BoxPlotChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\DataDistributionCharts\Histogram\Histogram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\ErrorBar\ErrorBarChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\FinancialCharts\Stock\FinancialChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\LineCharts\3DLine\LineCurves3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\LineCharts\FastLine\FastLineChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\LineCharts\LineCurves\LineCurvesChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PieDoughnutCharts\3DPie\PieChart3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PieDoughnutCharts\PieCollectedData\PieCollectedData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PieDoughnutCharts\PieCollected\PieCollected.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PointCharts\Bubble\BubbleChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PointCharts\Point\PointChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PyramidFunnelCharts\Funnel\FunnelChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PyramidFunnelCharts\Pyramid\PyramidChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\RangeCharts\3DRangeBar\RangeBar3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\RangeCharts\3DRange\Range3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\RangeCharts\RangeBar\RangeBarChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\RangeCharts\RangeColumn\RangeColumnChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\RangeCharts\Range\RangeChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PriceRangeFinancialCharts\Kagi\KagiChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PriceRangeFinancialCharts\PointAndFigure\PointAndFigureChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PriceRangeFinancialCharts\Renko\RenkoChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTypes\PriceRangeFinancialCharts\ThreeLineBreak\ThreeLineBreakChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GettingStarted\BasicPopulatingData\BasicPopulatingData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GettingStarted\DynamicChartCreation\DynamicChartCreation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ActivityLegend\ActivityLegend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\ChartDataTableHelper\ChartDataTableHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\DigitalFilter\FFT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\DigitalFilter\FIRFilters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\HistogramChartHelper\HistogramChartHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\PieCollectedDataHelper\PieCollectedDataHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\RangeSpliceChartHelper\LineUtils.cs" />
+    <Compile Include="Utilities\RangeSpliceChartHelper\RangePolygon.cs" />
+    <Compile Include="Utilities\RangeSpliceChartHelper\RangeSpliceChartHelper.cs" />
+    <Compile Include="Utilities\RangeSpliceChartHelper\RangeSpliceChartHelperException.cs" />
+    <Compile Include="Utilities\SampleMain\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\SampleMain\SourceCodeToRtf.cs" />
+    <Compile Include="Utilities\SampleMain\TabPageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\SampleMain\VerticalTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utilities\SixSigma\SixSigma.cs" />
+    <Compile Include="Utilities\SpikeRemoval\SpikeRemoval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataBinding\DatabaseBindingXY\DatabaseBindingXY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataBinding\DatabaseBindingY\DatabaseBindingY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataBinding\DataBindCrossTab\DataBindCrossTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataBinding\DataBindTable\DataBindTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataBinding\DataSourceBinding\DataSourceBinding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataBinding\ExtendedDataBinding\ExtendedDataBinding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataBinding\SeriesByRows\SeriesByRows.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DatabindThenAlignAxisLabel\AligningAxisLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\CopyingSeriesValues\MergingValues\MergingValues.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\CopyingSeriesValues\SplittingValues\SplittingValues.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Exporting\DataGridBinding\DataGridBinding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Exporting\Xml\ExportXml.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Filtering\FilterBandPass\BandPassFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Filtering\FilterDateRange\FilterDateRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Filtering\FilterTopN\FilterTopN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Filtering\FilterWithCustomCriteria\FilterWithCustomCriteria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Filtering\FilterYValuesRange\FilterYValuesRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\FindingSeriesPoints\FindByMaxMinValues\FindByMaxMinValues.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\FindingSeriesPoints\FindByValue\FindByValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Grouping\GroupingByAxisLabel\GroupingByAxisLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Grouping\GroupingFormulas\GroupingFormulas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Grouping\GroupingStockData\GroupingStockData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\SeriesAlignment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Sorting\CustomSortingOrder\CustomSortingOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\Sorting\Sorting\Sorting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataManipulation\SpikeRemoval\SpikeRemoval.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Statistical\ANOVA\ANOVA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Statistical\CovarianceAndCorrelation\CovarianceAndCorrelation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Statistical\Descriptive Statistics\DescriptiveStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Statistical\Distributions\Distributions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Statistical\FTest\FTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Statistical\TTest\TTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataSourceTypes\ArrayBinding\ArrayBinding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataSourceTypes\CSVDataBindingBinding\CSVDataBinding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataSourceTypes\DatabaseDataview\DatabaseDataview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataSourceTypes\ExcelData\ExcelData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DataSourceTypes\XMLData\XMLData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\DymamicPointAdd\DymamicPointAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\EmptyPoints\EmptyPointsAppearance\EmptyPointAppearance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\EmptyPoints\InsertingEmptyPoints\InsertingEmptyPoints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Financial\MovingAverages\MovingAverages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Financial\PriceIndicators\PriceIndicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Financial\RangeIndicators\RangeIndicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Financial\TechnicalPriceIndicators\TechnicalPriceIndicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Financial\Forecasting\Forecasting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\Formulas\Financial\VolumeIndicators\VolumeIndicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\ManyYBubble\ManyYBubble.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\RealTimeData\RealTimeThread\RealTimeSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\RealTimeData\RealTimeTimer\RealTimeData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\WorkingWithDates\RetrievingAssigningDates\RetrievingAssigningDates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingWithData\WorkingWithDates\TimeScale\TimeScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="ChartAppearance\AntiAliasingSample\AntiAliasingSample.resx">
+      <DependentUpon>AntiAliasingSample.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartAppearance\Appearance\ChartAppearance.resx">
+      <DependentUpon>ChartAppearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartAppearance\Borders\Borders.resx">
+      <DependentUpon>Borders.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartAppearance\UsingGaps3D\UsingGaps3D.resx">
+      <DependentUpon>UsingGaps3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartAppearance\UsingPerspectives\UsingPerspectives.resx">
+      <DependentUpon>UsingPerspectives.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\AnnotationAnchoring\AnnotationAnchoring.resx">
+      <DependentUpon>AnnotationAnchoring.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\AnnotationAppearance\AnnotationAppearance.resx">
+      <DependentUpon>AnnotationAppearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\AnnotationEditing\AnnotationEditing.resx">
+      <DependentUpon>AnnotationEditing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\AnnotationPositionChanging\AnnotationPositionChanging.resx">
+      <DependentUpon>AnnotationPositionChanging.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\AnnotationSmartLabels\AnnotationSmartLabels.resx">
+      <DependentUpon>AnnotationSmartLabels.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\AnnotationStyles\AnnotationStyles.resx">
+      <DependentUpon>AnnotationStyles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\FreeDrawAnnotation\FreeDrawAnnotation.resx">
+      <DependentUpon>FreeDrawAnnotation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\GroupingAnnotations\GroupingAnnotations.resx">
+      <DependentUpon>GroupingAnnotations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Annotations\PositionChangedEvent\PositionChangedEvent.resx">
+      <DependentUpon>PositionChangedEvent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\Appearance\AxisAppearance.resx">
+      <DependentUpon>AxisAppearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\Axis Title\AxisTitle.resx">
+      <DependentUpon>AxisTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\AxisMargins\AxisMargins.resx">
+      <DependentUpon>AxisMargins.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\AxisScale\AxisScale.resx">
+      <DependentUpon>AxisScale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\Crossing And Reverse\AxisCrossing.resx">
+      <DependentUpon>AxisCrossing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\GridLinesAndTickMarks\GridLinesTicks.resx">
+      <DependentUpon>GridLinesTicks.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\HighlightDateRanges\HighlightDateRange.resx">
+      <DependentUpon>HighlightDateRange.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\InterlacedStrips\InterlacedStrips.resx">
+      <DependentUpon>InterlacedStrips.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\Logarithmic Scale\LogarithmicScale.resx">
+      <DependentUpon>LogarithmicScale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\MultipleYAxis\MultipleYAxis.resx">
+      <DependentUpon>MultipleYAxis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\PrimaryAndSecondaryAxes\PrimarySecondaryAxis.resx">
+      <DependentUpon>PrimarySecondaryAxis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\ScaleBreaks\ScaleBreaks.resx">
+      <DependentUpon>ScaleBreaks.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\Strip Lines Offset\StripIntervals.resx">
+      <DependentUpon>StripIntervals.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\Strip Lines Title\StripLineTitle.resx">
+      <DependentUpon>StripLineTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Axis\StripLines\StripLines.resx">
+      <DependentUpon>StripLines.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\AligningChartAreas\AligningChartingAreas.resx">
+      <DependentUpon>AligningChartingAreas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\AlignmentTypes\AlignmentTypes.resx">
+      <DependentUpon>AlignmentTypes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\Appearance\Appearance.resx">
+      <DependentUpon>Appearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\ChartArea3D\ChartArea3D.resx">
+      <DependentUpon>ChartArea3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\ChartAreaPosition\ChartAreaPosition.resx">
+      <DependentUpon>ChartAreaPosition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\ChartInDataPoint\ChartInDataPoint.resx">
+      <DependentUpon>ChartInDataPoint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\InsideDoughnut\ChartInDoughnut.resx">
+      <DependentUpon>ChartInDoughnut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\Series and Chart Areas\SeriesAndChartAreas.resx">
+      <DependentUpon>SeriesAndChartAreas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\ChartArea\Z Order\ZOrder.resx">
+      <DependentUpon>ZOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Customizations\CustomImage\CustomDrawnTitles.resx">
+      <DependentUpon>CustomDrawnTitles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Customizations\PaintingDataTable\PaintingDataTable.resx">
+      <DependentUpon>PaintingDataTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Customizations\PreAndPostPaintEvent\PrePostPaint.resx">
+      <DependentUpon>PrePostPaint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\AddingSeries\AddingSeries.resx">
+      <DependentUpon>AddingSeries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\HidingSeries\HidingSeries.resx">
+      <DependentUpon>HidingSeries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\IndexedX\IndexedX.resx">
+      <DependentUpon>IndexedX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\PointWidthAndDepth\PointWidthAndDepth.resx">
+      <DependentUpon>PointWidthAndDepth.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\SecondaryAxis\SecondaryAxis.resx">
+      <DependentUpon>SecondaryAxis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\Series Z Order\SeriesZOrder.resx">
+      <DependentUpon>SeriesZOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\SeriesAppearance\Series Appearance.resx">
+      <DependentUpon>Series Appearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\UsingLabels\UsingLabels.resx">
+      <DependentUpon>UsingLabels.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\DataSeries\UsingMarkers\UsingMarkers.resx">
+      <DependentUpon>UsingMarkers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Events\CursorPositionChanged\CursorPositionChanged.resx">
+      <DependentUpon>CursorPositionChanged.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Events\ScrollBarEvents\ScrollBarEvents.resx">
+      <DependentUpon>ScrollBarEvents.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Events\ViewChangedEvent\ViewChangedEvent.resx">
+      <DependentUpon>ViewChangedEvent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Cursors\CursorAppearance\CursorAppearance.resx">
+      <DependentUpon>CursorAppearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Cursors\CursorAxis\CursorAxis.resx">
+      <DependentUpon>CursorAxis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Cursors\CursorInterval\CursorInterval.resx">
+      <DependentUpon>CursorInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Cursors\KeyboardZoomScroll\KeyboardZoomScroll.resx">
+      <DependentUpon>KeyboardZoomScroll.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Cursors\MultiChartAreaCursor\MultiChartAreaCursor.resx">
+      <DependentUpon>MultiChartAreaCursor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Cursors\ZoomScrollAuto\CursorAutoZoomScroll.resx">
+      <DependentUpon>CursorAutoZoomScroll.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Selection\DrillDown\DrillDown.resx">
+      <DependentUpon>DrillDown.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Selection\InteractivePie\InteractivePie.resx">
+      <DependentUpon>InteractivePie.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Selection\PointsDragging\PointsDragging.resx">
+      <DependentUpon>PointsDragging.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Selection\Selection\Dialog.resx">
+      <DependentUpon>Dialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\Selection\Selection\Selection.resx">
+      <DependentUpon>Selection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\ToolTips\CustomToolTips\CustomToolTips.resx">
+      <DependentUpon>CustomToolTips.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\ToolTips\UsingToolTips\UsingToolTips.resx">
+      <DependentUpon>UsingToolTips.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\BasicZooming\BasicZooming.resx">
+      <DependentUpon>BasicZooming.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\KeyboardScrolling\KeyboardScrolling.resx">
+      <DependentUpon>KeyboardScrolling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ScrollBarAppearance\ScrollBarAppearance.resx">
+      <DependentUpon>ScrollBarAppearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\SmallScrollSize\SmallScrollSize.resx">
+      <DependentUpon>SmallScrollSize.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\InteractiveCharting\ZoomingScrolling\ZoomingExtents\ZoomingExtents.resx">
+      <DependentUpon>ZoomingExtents.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\AutoFitAxesLabels\AutoFitAxesLabels.resx">
+      <DependentUpon>AutoFitAxesLabels.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\AxisLabelsInterval\AxisLabelsInterval.resx">
+      <DependentUpon>AxisLabelsInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\AxisVarLabelsInterval\AxisVarLabelsInterval.resx">
+      <DependentUpon>AxisVarLabelsInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\CustomLabels\CustomLabels.resx">
+      <DependentUpon>CustomLabels.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\EquallySizedAutoFitFont\EquallySizedAutoFont.resx">
+      <DependentUpon>EquallySizedAutoFont.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\LabelsFormatting\LabelsFormatting.resx">
+      <DependentUpon>LabelsFormatting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\LabelsKeywords\LabelsKeywords.resx">
+      <DependentUpon>LabelsKeywords.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\LabelsNextToAxis\LabelsNextToAxis.resx">
+      <DependentUpon>LabelsNextToAxis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\LabelsTextStyle\LabelsTextStyle.resx">
+      <DependentUpon>LabelsTextStyle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\MultilineLabels\MultilineLabels.resx">
+      <DependentUpon>MultilineLabels.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Labels\Smart Labels\SmartLabels.resx">
+      <DependentUpon>SmartLabels.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendAppearance\LegendAppearance.resx">
+      <DependentUpon>LegendAppearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendCellColumns\LegendCellColumns.resx">
+      <DependentUpon>LegendCellColumns.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendCellSpan\LegendCellSpan.resx">
+      <DependentUpon>LegendCellSpan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendCells\LegendCells.resx">
+      <DependentUpon>LegendCells.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendCustomItems\LegendCustomItems.resx">
+      <DependentUpon>LegendCustomItems.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendCustomPosition\LegendCustomPosition.resx">
+      <DependentUpon>LegendCustomPosition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendFont\LegendFont.resx">
+      <DependentUpon>LegendFont.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendInteractive\LegendInteractive.af.resx">
+      <DependentUpon>LegendInteractive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendInteractive\LegendInteractive.resx">
+      <DependentUpon>LegendInteractive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendStyleAndPosition\LegendStylePosition.resx">
+      <DependentUpon>LegendStylePosition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\LegendTitle\LegendTitle.resx">
+      <DependentUpon>LegendTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\MultipleLegendsWithCheckBox\MultipleLegendsWithCheckBox.resx">
+      <DependentUpon>MultipleLegendsWithCheckBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Legend\MultipleLegends\MultipleLegends.resx">
+      <DependentUpon>MultipleLegends.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Palettes\Palettes.resx">
+      <DependentUpon>Palettes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Printing\CustomPrinting\CustomPrinting.resx">
+      <DependentUpon>CustomPrinting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Printing\MultipagePrinting\MultipagePrinting.resx">
+      <DependentUpon>MultipagePrinting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Printing\PrinterFriendlyCharts\PrinterFriendlyCharts.resx">
+      <DependentUpon>PrinterFriendlyCharts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Printing\PrintingAndPreviewing\PrintPreview.resx">
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Printing\PrintingSettings\PrintingSettings.resx">
+      <DependentUpon>PrintingSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\SavingAndCopyingImages\SavingAndCopyingImages.resx">
+      <DependentUpon>SavingAndCopyingImages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Serialization\BasicSerialization\BasicSerialization.resx">
+      <DependentUpon>BasicSerialization.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Serialization\Templates\Templates.resx">
+      <DependentUpon>Templates.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Titles\ChartTitle\ChartTitle.resx">
+      <DependentUpon>ChartTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Titles\MultipleTitles\MultilpleTitles.resx">
+      <DependentUpon>MultilpleTitles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFeatures\Titles\TitlePosition\TitleCustomPosition.resx">
+      <DependentUpon>TitleCustomPosition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\AreaCharts\3DArea\AreaChart3D.resx">
+      <DependentUpon>AreaChart3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\AreaCharts\Area\AreaChartType.resx">
+      <DependentUpon>AreaChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\BarColumnCharts\3DBarColumn\BarColumn3D.resx">
+      <DependentUpon>BarColumn3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\BarColumnCharts\3DCylinder\Cylinder3D.resx">
+      <DependentUpon>Cylinder3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\BarColumnCharts\BarColumn\BarColumnChartType.resx">
+      <DependentUpon>BarColumnChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\BarColumnCharts\Stacked\StackedChartType.resx">
+      <DependentUpon>StackedChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\CircularCharts\Polar\PolarChartType.resx">
+      <DependentUpon>PolarChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\CircularCharts\Radar\RadarChartType.resx">
+      <DependentUpon>RadarChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\CombinationalCharts\Combinatorial\CombinatorialChartType.resx">
+      <DependentUpon>CombinatorialChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\CombinationalCharts\Pareto\ParetoChartType.resx">
+      <DependentUpon>ParetoChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\DataDistributionCharts\BoxPlot\BoxPlotChartType.resx">
+      <DependentUpon>BoxPlotChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\DataDistributionCharts\Histogram\Histogram.resx">
+      <DependentUpon>Histogram.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\ErrorBar\ErrorBarChartType.resx">
+      <DependentUpon>ErrorBarChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\FinancialCharts\Stock\FinancialChartType.resx">
+      <DependentUpon>FinancialChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\LineCharts\3DLine\LineCurves3D.resx">
+      <DependentUpon>LineCurves3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\LineCharts\FastLine\FastLineChartType.resx">
+      <DependentUpon>FastLineChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\LineCharts\LineCurves\LineCurvesChartType.resx">
+      <DependentUpon>LineCurvesChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PieDoughnutCharts\3DPie\PieChart3D.resx">
+      <DependentUpon>PieChart3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PieDoughnutCharts\PieCollectedData\PieCollectedData.resx">
+      <DependentUpon>PieCollectedData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PieDoughnutCharts\PieCollected\PieCollected.resx">
+      <DependentUpon>PieCollected.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PointCharts\Bubble\BubbleChartType.resx">
+      <DependentUpon>BubbleChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PointCharts\Point\PointChartType.resx">
+      <DependentUpon>PointChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PyramidFunnelCharts\Funnel\FunnelChartType.resx">
+      <DependentUpon>FunnelChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PyramidFunnelCharts\Pyramid\PyramidChartType.resx">
+      <DependentUpon>PyramidChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\RangeCharts\3DRangeBar\RangeBar3D.resx">
+      <DependentUpon>RangeBar3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\RangeCharts\3DRange\Range3D.resx">
+      <DependentUpon>Range3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\RangeCharts\RangeBar\RangeBarChartType.resx">
+      <DependentUpon>RangeBarChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\RangeCharts\RangeColumn\RangeColumnChartType.resx">
+      <DependentUpon>RangeColumnChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\RangeCharts\Range\RangeChartType.resx">
+      <DependentUpon>RangeChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PriceRangeFinancialCharts\Kagi\KagiChartType.resx">
+      <DependentUpon>KagiChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PriceRangeFinancialCharts\PointAndFigure\PointAndFigureChartType.resx">
+      <DependentUpon>PointAndFigureChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PriceRangeFinancialCharts\Renko\RenkoChartType.resx">
+      <DependentUpon>RenkoChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTypes\PriceRangeFinancialCharts\ThreeLineBreak\ThreeLineBreakChartType.resx">
+      <DependentUpon>ThreeLineBreakChartType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GettingStarted\BasicPopulatingData\BasicPopulatingData.resx">
+      <DependentUpon>BasicPopulatingData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GettingStarted\DynamicChartCreation\DynamicChartCreation.resx">
+      <DependentUpon>DynamicChartCreation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\SampleMain\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\SampleMain\TabPageButton.resx">
+      <DependentUpon>TabPageButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\SampleMain\VerticalTabControl.resx">
+      <DependentUpon>VerticalTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataBinding\DatabaseBindingXY\DatabaseBindingXY.resx">
+      <DependentUpon>DatabaseBindingXY.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataBinding\DatabaseBindingY\DatabaseBindingY.resx">
+      <DependentUpon>DatabaseBindingY.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataBinding\DataBindCrossTab\DataBindCrossTab.resx">
+      <DependentUpon>DataBindCrossTab.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataBinding\DataBindTable\DataBindTable.resx">
+      <DependentUpon>DataBindTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataBinding\DataSourceBinding\DataSourceBinding.resx">
+      <DependentUpon>DataSourceBinding.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataBinding\ExtendedDataBinding\ExtendedDataBinding.resx">
+      <DependentUpon>ExtendedDataBinding.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataBinding\SeriesByRows\SeriesByRows.resx">
+      <DependentUpon>SeriesByRows.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DatabindThenAlignAxisLabel\AligningAxisLabel.resx">
+      <DependentUpon>AligningAxisLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\CopyingSeriesValues\MergingValues\MergingValues.resx">
+      <DependentUpon>MergingValues.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\CopyingSeriesValues\SplittingValues\SplittingValues.resx">
+      <DependentUpon>SplittingValues.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Exporting\DataGridBinding\DataGridBinding.resx">
+      <DependentUpon>DataGridBinding.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Exporting\Xml\ExportXml.resx">
+      <DependentUpon>ExportXml.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Filtering\FilterBandPass\BandPassFilter.resx">
+      <DependentUpon>BandPassFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Filtering\FilterDateRange\FilterDateRange.resx">
+      <DependentUpon>FilterDateRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Filtering\FilterTopN\FilterTopN.resx">
+      <DependentUpon>FilterTopN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Filtering\FilterWithCustomCriteria\FilterWithCustomCriteria.resx">
+      <DependentUpon>FilterWithCustomCriteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Filtering\FilterYValuesRange\FilterYValuesRange.resx">
+      <DependentUpon>FilterYValuesRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\FindingSeriesPoints\FindByMaxMinValues\FindByMaxMinValues.resx">
+      <DependentUpon>FindByMaxMinValues.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\FindingSeriesPoints\FindByValue\FindByValue.resx">
+      <DependentUpon>FindByValue.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Grouping\GroupingByAxisLabel\GroupingByAxisLabel.resx">
+      <DependentUpon>GroupingByAxisLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Grouping\GroupingFormulas\GroupingFormulas.resx">
+      <DependentUpon>GroupingFormulas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Grouping\GroupingStockData\GroupingStockData.resx">
+      <DependentUpon>GroupingStockData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\SeriesAlignment\SeriesAlignment\SeriesAlignment.resx">
+      <DependentUpon>SeriesAlignment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Sorting\CustomSortingOrder\CustomSortingOrder.resx">
+      <DependentUpon>CustomSortingOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\Sorting\Sorting\Sorting.resx">
+      <DependentUpon>Sorting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataManipulation\SpikeRemoval\SpikeRemoval.resx">
+      <DependentUpon>SpikeRemoval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Statistical\ANOVA\ANOVA.resx">
+      <DependentUpon>ANOVA.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Statistical\CovarianceAndCorrelation\CovarianceAndCorrelation.resx">
+      <DependentUpon>CovarianceAndCorrelation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Statistical\Descriptive Statistics\DescriptiveStatistics.resx">
+      <DependentUpon>DescriptiveStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Statistical\Distributions\Distributions.resx">
+      <DependentUpon>Distributions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Statistical\FTest\FTest.resx">
+      <DependentUpon>FTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Statistical\TTest\TTest.resx">
+      <DependentUpon>TTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataSourceTypes\ArrayBinding\ArrayBinding.resx">
+      <DependentUpon>ArrayBinding.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataSourceTypes\CSVDataBindingBinding\CSVDataBinding.resx">
+      <DependentUpon>CSVDataBinding.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataSourceTypes\DatabaseDataview\DatabaseDataview.resx">
+      <DependentUpon>DatabaseDataview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataSourceTypes\ExcelData\ExcelData.resx">
+      <DependentUpon>ExcelData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DataSourceTypes\XMLData\XMLData.resx">
+      <DependentUpon>XMLData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\DymamicPointAdd\DymamicPointAdd.resx">
+      <DependentUpon>DymamicPointAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\EmptyPoints\EmptyPointsAppearance\EmptyPointAppearance.resx">
+      <DependentUpon>EmptyPointAppearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\EmptyPoints\InsertingEmptyPoints\InsertingEmptyPoints.resx">
+      <DependentUpon>InsertingEmptyPoints.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Financial\MovingAverages\MovingAverages.resx">
+      <DependentUpon>MovingAverages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Financial\PriceIndicators\PriceIndicators.resx">
+      <DependentUpon>PriceIndicators.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Financial\RangeIndicators\RangeIndicators.resx">
+      <DependentUpon>RangeIndicators.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Financial\TechnicalPriceIndicators\TechnicalPriceIndicators.resx">
+      <DependentUpon>TechnicalPriceIndicators.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Financial\Forecasting\Forecasting.resx">
+      <DependentUpon>Forecasting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\Formulas\Financial\VolumeIndicators\VolumeIndicators.resx">
+      <DependentUpon>VolumeIndicators.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\ManyYBubble\ManyYBubble.resx">
+      <DependentUpon>ManyYBubble.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\RealTimeData\RealTimeThread\RealTimeSample.resx">
+      <DependentUpon>RealTimeSample.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\RealTimeData\RealTimeTimer\RealTimeData.resx">
+      <DependentUpon>RealTimeData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\WorkingWithDates\RetrievingAssigningDates\RetrievingAssigningDates.resx">
+      <DependentUpon>RetrievingAssigningDates.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingWithData\WorkingWithDates\TimeScale\TimeScale.resx">
+      <DependentUpon>TimeScale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

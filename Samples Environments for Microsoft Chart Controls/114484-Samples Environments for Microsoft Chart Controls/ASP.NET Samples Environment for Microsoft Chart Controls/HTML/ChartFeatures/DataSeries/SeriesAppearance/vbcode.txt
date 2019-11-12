@@ -1,0 +1,18 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set Legend visual attributes
+    Chart1.Series("Default").Color = Color.MediumSeaGreen
+    Chart1.Series("Default").BackSecondaryColor = Color.Green
+    Chart1.Series("Default").BackGradientStyle = GradientStyle.DiagonalLeft
+
+    Chart1.Series("Default").BorderColor = Color.Black
+    Chart1.Series("Default").BorderWidth = 2
+    Chart1.Series("Default").BorderDashStyle = ChartDashStyle.Solid
+
+    Chart1.Series("Default").ShadowOffset = 2
+   
+End Sub 'Page_Load
+...

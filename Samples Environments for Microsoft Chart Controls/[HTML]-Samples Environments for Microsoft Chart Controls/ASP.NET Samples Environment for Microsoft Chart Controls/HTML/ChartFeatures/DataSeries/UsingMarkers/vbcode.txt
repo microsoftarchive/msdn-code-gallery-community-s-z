@@ -1,0 +1,16 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Set marker attributes for the whole series            
+    Chart1.Series("Default").MarkerStyle = MarkerStyle.Circle
+    Chart1.Series("Default").MarkerSize = 3
+    Chart1.Series("Default").MarkerColor = Color.Magenta
+
+    ' Set an image marker for the third data point in series
+    Chart1.Series("Default").Points(2).MarkerImage = "Face.bmp"
+    Chart1.Series("Default").Points(2).MarkerImageTransparentColor = Color.White
+
+End Sub 'Page_Load 
+...

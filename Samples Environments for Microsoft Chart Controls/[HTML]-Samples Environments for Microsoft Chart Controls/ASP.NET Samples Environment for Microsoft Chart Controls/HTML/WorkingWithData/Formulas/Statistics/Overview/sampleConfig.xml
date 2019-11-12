@@ -1,0 +1,11 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Statistical" Priority = "25">
+  <Title>Overview</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Statistical Formulas</ShortBlurb> 
+  <Content>Overview.htm</Content> 
+
+</SampleConfig>
+
+</SampleConfigs>

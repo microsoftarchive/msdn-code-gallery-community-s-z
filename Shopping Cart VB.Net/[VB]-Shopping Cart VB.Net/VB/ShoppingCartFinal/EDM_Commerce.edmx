@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CommerceModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CommerceModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="CommerceModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrderDetails" EntityType="CommerceModel.Store.OrderDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Orders" EntityType="CommerceModel.Store.Orders" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Products" EntityType="CommerceModel.Store.Products" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Reviews" EntityType="CommerceModel.Store.Reviews" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ShoppingCart" EntityType="CommerceModel.Store.ShoppingCart" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="CommerceModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VewOrderDetails" EntityType="CommerceModel.Store.VewOrderDetails" store:Type="Views" store:Schema="dbo" store:Name="VewOrderDetails">
+            <DefiningQuery>SELECT 
+      [VewOrderDetails].[ProductID] AS [ProductID], 
+      [VewOrderDetails].[ModelNumber] AS [ModelNumber], 
+      [VewOrderDetails].[ModelName] AS [ModelName], 
+      [VewOrderDetails].[Quantity] AS [Quantity], 
+      [VewOrderDetails].[UnitCost] AS [UnitCost], 
+      [VewOrderDetails].[OrderID] AS [OrderID]
+      FROM [dbo].[VewOrderDetails] AS [VewOrderDetails]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewAlsoPurchased" EntityType="CommerceModel.Store.ViewAlsoPurchased" store:Type="Views" store:Schema="dbo" store:Name="ViewAlsoPurchased">
+            <DefiningQuery>SELECT 
+      [ViewAlsoPurchased].[ProductID] AS [ProductID], 
+      [ViewAlsoPurchased].[ModelName] AS [ModelName], 
+      [ViewAlsoPurchased].[TotalNumPurchased] AS [TotalNumPurchased], 
+      [ViewAlsoPurchased].[OrderID] AS [OrderID], 
+      [ViewAlsoPurchased].[Products_ProductID] AS [Products_ProductID]
+      FROM [dbo].[ViewAlsoPurchased] AS [ViewAlsoPurchased]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewCart" EntityType="CommerceModel.Store.ViewCart" store:Type="Views" store:Schema="dbo" store:Name="ViewCart">
+            <DefiningQuery>SELECT 
+      [ViewCart].[ProductID] AS [ProductID], 
+      [ViewCart].[ModelNumber] AS [ModelNumber], 
+      [ViewCart].[ModelName] AS [ModelName], 
+      [ViewCart].[UnitCost] AS [UnitCost], 
+      [ViewCart].[Quantity] AS [Quantity], 
+      [ViewCart].[CartID] AS [CartID]
+      FROM [dbo].[ViewCart] AS [ViewCart]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Order_OrderDetails" Association="CommerceModel.Store.FK_Order_OrderDetails">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Categories" Association="CommerceModel.Store.FK_Products_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reviews_Products" Association="CommerceModel.Store.FK_Reviews_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Reviews" EntitySet="Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShoppingCart_Products" Association="CommerceModel.Store.FK_ShoppingCart_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ShoppingCart" EntitySet="ShoppingCart" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OrderDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="UnitCost" Type="money" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="OrderDate" Type="datetime" Nullable="false" />
+          <Property Name="ShipDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="ModelNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductImage" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnitCost" Type="money" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="3800" />
+        </EntityType>
+        <EntityType Name="Reviews">
+          <Key>
+            <PropertyRef Name="ReviewID" />
+          </Key>
+          <Property Name="ReviewID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rating" Type="int" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="3850" />
+        </EntityType>
+        <EntityType Name="ShoppingCart">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CartID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\MYVISUALBASICPROJECTS\TAILSPINSPYWORKS-V0.9\TAILSPINSPYWORKS\APP_DATA\COMMERCE.MDF.dbo.VewOrderDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VewOrderDetails">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ModelNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="UnitCost" Type="money" />
+          <Property Name="OrderID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\MYVISUALBASICPROJECTS\TAILSPINSPYWORKS-V0.9\TAILSPINSPYWORKS\APP_DATA\COMMERCE.MDF.dbo.ViewAlsoPurchased' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ViewAlsoPurchased">
+          <Key>
+            <PropertyRef Name="Products_ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" />
+          <Property Name="ModelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalNumPurchased" Type="int" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="Products_ProductID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\MYVISUALBASICPROJECTS\TAILSPINSPYWORKS-V0.9\TAILSPINSPYWORKS\APP_DATA\COMMERCE.MDF.dbo.ViewCart' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ViewCart">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="UnitCost" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ModelNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnitCost" Type="money" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="CartID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Order_OrderDetails">
+          <End Role="Orders" Type="CommerceModel.Store.Orders" Multiplicity="0..1" />
+          <End Role="OrderDetails" Type="CommerceModel.Store.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Categories">
+          <End Role="Categories" Type="CommerceModel.Store.Categories" Multiplicity="1" />
+          <End Role="Products" Type="CommerceModel.Store.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reviews_Products">
+          <End Role="Products" Type="CommerceModel.Store.Products" Multiplicity="1" />
+          <End Role="Reviews" Type="CommerceModel.Store.Reviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Reviews">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShoppingCart_Products">
+          <End Role="Products" Type="CommerceModel.Store.Products" Multiplicity="1" />
+          <End Role="ShoppingCart" Type="CommerceModel.Store.ShoppingCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ShoppingCart">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="SelectPurchasedWithProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CommerceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CommerceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="CommerceModel.Category" />
+          <EntitySet Name="OrderDetails" EntityType="CommerceModel.OrderDetail" />
+          <EntitySet Name="Orders" EntityType="CommerceModel.Order" />
+          <EntitySet Name="Products" EntityType="CommerceModel.Product" />
+          <EntitySet Name="Reviews" EntityType="CommerceModel.Review" />
+          <EntitySet Name="ShoppingCarts" EntityType="CommerceModel.ShoppingCart" />
+          <EntitySet Name="sysdiagrams" EntityType="CommerceModel.sysdiagram" />
+          <EntitySet Name="VewOrderDetails" EntityType="CommerceModel.VewOrderDetail" />
+          <EntitySet Name="ViewAlsoPurchaseds" EntityType="CommerceModel.ViewAlsoPurchased" />
+          <EntitySet Name="ViewCarts" EntityType="CommerceModel.ViewCart" />
+          <AssociationSet Name="FK_Products_Categories" Association="CommerceModel.FK_Products_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_OrderDetails" Association="CommerceModel.FK_Order_OrderDetails">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reviews_Products" Association="CommerceModel.FK_Reviews_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Reviews" EntitySet="Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShoppingCart_Products" Association="CommerceModel.FK_ShoppingCart_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ShoppingCart" EntitySet="ShoppingCarts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Products" Relationship="CommerceModel.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="UnitCost" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Order" Relationship="CommerceModel.FK_Order_OrderDetails" FromRole="OrderDetails" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" />
+          <Property Name="ShipDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="OrderDetails" Relationship="CommerceModel.FK_Order_OrderDetails" FromRole="Orders" ToRole="OrderDetails" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="ModelNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProductImage" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UnitCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Description" Type="String" MaxLength="3800" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Category" Relationship="CommerceModel.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
+          <NavigationProperty Name="Reviews" Relationship="CommerceModel.FK_Reviews_Products" FromRole="Products" ToRole="Reviews" />
+          <NavigationProperty Name="ShoppingCarts" Relationship="CommerceModel.FK_ShoppingCart_Products" FromRole="Products" ToRole="ShoppingCart" />
+        </EntityType>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="ReviewID" />
+          </Key>
+          <Property Name="ReviewID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomerEmail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Rating" Type="Int32" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="3850" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Product" Relationship="CommerceModel.FK_Reviews_Products" FromRole="Reviews" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="ShoppingCart">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CartID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="CommerceModel.FK_ShoppingCart_Products" FromRole="ShoppingCart" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="VewOrderDetail">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ModelNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="UnitCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OrderID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ViewAlsoPurchased">
+          <Key>
+            <PropertyRef Name="Products_ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="ModelName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TotalNumPurchased" Type="Int32" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="Products_ProductID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ViewCart">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="UnitCost" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ModelNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UnitCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="CartID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Products_Categories">
+          <End Role="Categories" Type="CommerceModel.Category" Multiplicity="1" />
+          <End Role="Products" Type="CommerceModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_OrderDetails">
+          <End Role="Orders" Type="CommerceModel.Order" Multiplicity="0..1" />
+          <End Role="OrderDetails" Type="CommerceModel.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reviews_Products">
+          <End Role="Products" Type="CommerceModel.Product" Multiplicity="1" />
+          <End Role="Reviews" Type="CommerceModel.Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Reviews">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShoppingCart_Products">
+          <End Role="Products" Type="CommerceModel.Product" Multiplicity="1" />
+          <End Role="ShoppingCart" Type="CommerceModel.ShoppingCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ShoppingCart">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CommerceModelStoreContainer" CdmEntityContainer="CommerceEntities">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="CommerceModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="CommerceModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="CommerceModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="ShipDate" ColumnName="ShipDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="CommerceModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="ModelNumber" ColumnName="ModelNumber" />
+                <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+                <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+                <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reviews">
+            <EntityTypeMapping TypeName="CommerceModel.Review">
+              <MappingFragment StoreEntitySet="Reviews">
+                <ScalarProperty Name="ReviewID" ColumnName="ReviewID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShoppingCarts">
+            <EntityTypeMapping TypeName="CommerceModel.ShoppingCart">
+              <MappingFragment StoreEntitySet="ShoppingCart">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="CartID" ColumnName="CartID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="CommerceModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VewOrderDetails">
+            <EntityTypeMapping TypeName="CommerceModel.VewOrderDetail">
+              <MappingFragment StoreEntitySet="VewOrderDetails">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ModelNumber" ColumnName="ModelNumber" />
+                <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewAlsoPurchaseds">
+            <EntityTypeMapping TypeName="CommerceModel.ViewAlsoPurchased">
+              <MappingFragment StoreEntitySet="ViewAlsoPurchased">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+                <ScalarProperty Name="TotalNumPurchased" ColumnName="TotalNumPurchased" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="Products_ProductID" ColumnName="Products_ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewCarts">
+            <EntityTypeMapping TypeName="CommerceModel.ViewCart">
+              <MappingFragment StoreEntitySet="ViewCart">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ModelNumber" ColumnName="ModelNumber" />
+                <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+                <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="CartID" ColumnName="CartID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="EDM_Commerce">
+        <EntityTypeShape EntityType="CommerceModel.Category" Width="1.5" PointX="0.625" PointY="1.5" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.OrderDetail" Width="1.5" PointX="10" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.Order" Width="1.5" PointX="7.75" PointY="1" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.Product" Width="1.5" PointX="3" PointY="1.5" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.Review" Width="1.5" PointX="5.25" PointY="1.125" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.ShoppingCart" Width="1.5" PointX="5.25" PointY="3.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.sysdiagram" Width="1.5" PointX="0.625" PointY="3.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.VewOrderDetail" Width="1.5" PointX="2.875" PointY="6.25" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.ViewAlsoPurchased" Width="1.5" PointX="7.75" PointY="3.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommerceModel.ViewCart" Width="1.5" PointX="4.875" PointY="6.5" Height="2.1725878906249996" IsExpanded="true" />
+        <AssociationConnector Association="CommerceModel.FK_Products_Categories" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.125" PointY="2.297841796875" />
+          <ConnectorPoint PointX="3" PointY="2.297841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="CommerceModel.FK_Order_OrderDetails" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="1.9901432291666668" />
+          <ConnectorPoint PointX="10" PointY="1.9901432291666668" />
+        </AssociationConnector>
+        <AssociationConnector Association="CommerceModel.FK_Reviews_Products" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="2.4949446614583328" />
+          <ConnectorPoint PointX="5.25" PointY="2.4949446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="CommerceModel.FK_ShoppingCart_Products" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.0958968098958328" />
+          <ConnectorPoint PointX="5.25" PointY="4.0958968098958328" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

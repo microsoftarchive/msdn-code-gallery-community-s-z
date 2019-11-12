@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Splashscreenapp.ExtendedSplash"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Splashscreenapp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid >
+        <Canvas>
+            <Image x:Name="extendedSplashImage" Source="Assets/SplashScreen.png"/>
+            <ProgressRing Name="splashProgressRing" IsActive="True" Width="40" HorizontalAlignment="Center" />
+        </Canvas>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button x:Name="DismissSplash" Content="Dismiss extended splash screen" HorizontalAlignment="Center" Click="DismissSplashButton_Click" />
+        </StackPanel>
+    </Grid>
+</Page>

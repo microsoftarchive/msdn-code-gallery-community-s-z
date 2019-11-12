@@ -1,0 +1,50 @@
+﻿@model VirtueBuild.Domain.Lookups.RoomType
+
+<form id="RoomType" enctype="multipart/form-data" method="POST">
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(m => m.Id)
+    <fieldset>
+        <legend>RoomType</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsActive)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsActive)
+            @Html.ValidationMessageFor(model => model.IsActive)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SortOrder)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SortOrder)
+            @Html.ValidationMessageFor(model => model.SortOrder)
+        </div>
+
+        <div>
+            <i class="icon-upload"></i>
+            <input type="file" name="file" id="file" class="btn input-xxlarge" />
+
+            @if (Model.Id == 0) {
+                <input type="submit" class="btn btn-primary" value="Create" />
+            }
+            else {
+                <input type="submit" class="btn btn-primary" value="Update" />
+            }
+            <div>
+                @Html.ValidationMessageFor(model => model.ImageGuid)
+            </div>
+        </div>
+    </fieldset>
+</form>

@@ -1,0 +1,15 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+   ' Set series chart types
+   Chart1.Series("Series1").ChartType = SeriesChartType.Column
+   Chart1.Series("Series2").ChartType = SeriesChartType.Spline
+   Chart1.Series("Series3").ChartType = SeriesChartType.Point
+   
+   ' Enable 3D
+    Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
+
+End Sub
+...

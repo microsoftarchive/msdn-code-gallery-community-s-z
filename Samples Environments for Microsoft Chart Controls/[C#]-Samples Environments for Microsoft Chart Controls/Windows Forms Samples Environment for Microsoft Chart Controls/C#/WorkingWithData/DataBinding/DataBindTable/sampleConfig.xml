@@ -1,0 +1,39 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Data binding" Priority= "200">
+  <Title>Data Binding a Table</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Binding a Table</ShortBlurb> 
+  <SampleControl>DataBindTable</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Data, Simple table binding</Keyword>
+    <Keyword>Binding, Table</Keyword>
+  </Keywords>    
+
+</SampleConfig>
+
+
+<SampleConfig ParentNodeID = "NewDataBinding">
+  <Title>Data Binding a Table</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Binding a Table</ShortBlurb>
+  <SampleControl>DataBindTable</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Data, Simple table binding</Keyword>
+    <Keyword>Binding, Table</Keyword>
+  </Keywords>    
+
+</SampleConfig>
+
+
+</SampleConfigs>

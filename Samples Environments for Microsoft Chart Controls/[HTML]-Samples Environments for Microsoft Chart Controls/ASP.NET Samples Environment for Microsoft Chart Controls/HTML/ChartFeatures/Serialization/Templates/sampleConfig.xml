@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<SampleConfigs>
+	<SampleConfig ParentNodeID = "Serialization">
+	<Title>Using Templates</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Chart Templates</ShortBlurb> 
+	<Content>Templates.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+	<Keyword>Serialization, Templates</Keyword>
+	<Keyword>Templates</Keyword>
+  </Keywords> 
+	</SampleConfig>
+
+	<SampleConfig ParentNodeID = "ChartAppearance">
+	<Title>Using Templates</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Using Chart Templates</ShortBlurb> 
+	<Content>Templates.aspx</Content> 
+	
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	</SampleConfig>	
+</SampleConfigs> 

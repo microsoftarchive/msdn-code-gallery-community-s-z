@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languageSmDiagram dslVersion="1.0.0.0" Id="375087c5-01dc-4972-a089-8d712bfc2c07" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="d1ab995e-2d74-42ac-ba22-fac1036419db" />
+  <nestedChildShapes>
+    <exampleShape Id="dcf3b28d-fbd1-4405-87c6-0900db0b288f" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/d1ab995e-2d74-42ac-ba22-fac1036419db/ExampleElement1" />
+    </exampleShape>
+    <exampleShape Id="83dd27c8-cfa1-437a-ad52-f81852534684" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/d1ab995e-2d74-42ac-ba22-fac1036419db/ExampleElement2" />
+    </exampleShape>
+    <exampleConnector Id="454deb84-4162-4b70-8460-579ebc77abe3" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="bd183e7d-ed93-4fcc-8651-397d93df64cc">
+      <nodes>
+        <exampleShapeMoniker Id="dcf3b28d-fbd1-4405-87c6-0900db0b288f" />
+        <exampleShapeMoniker Id="83dd27c8-cfa1-437a-ad52-f81852534684" />
+      </nodes>
+    </exampleConnector>
+  </nestedChildShapes>
+</languageSmDiagram>

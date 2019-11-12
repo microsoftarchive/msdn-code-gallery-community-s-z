@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IllusionPurchasingDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="IllusionPurchasingDBModelStoreContainer">
+          <EntitySet Name="ProductVendors" EntityType="IllusionPurchasingDBModel.Store.ProductVendors" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PurchaseOrders" EntityType="IllusionPurchasingDBModel.Store.PurchaseOrders" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vendor" EntityType="IllusionPurchasingDBModel.Store.Vendor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VendorContact" EntityType="IllusionPurchasingDBModel.Store.VendorContact" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ProductVendors">
+          <Key>
+            <PropertyRef Name="ProductVendorID" />
+          </Key>
+          <Property Name="ProductVendorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductNumber" Type="nvarchar" MaxLength="25" />
+          <Property Name="Product" Type="nvarchar" MaxLength="50" />
+          <Property Name="Vendor" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastReceiptCost" Type="money" />
+        </EntityType>
+        <EntityType Name="PurchaseOrders">
+          <Key>
+            <PropertyRef Name="PurchaseOrderID" />
+          </Key>
+          <Property Name="PurchaseOrderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Total Purchase" Type="money" />
+          <Property Name="Average Purchase" Type="money" />
+          <Property Name="Minimum Purchase" Type="money" />
+          <Property Name="Maximum Purchase" Type="money" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressLine1" Type="nvarchar" MaxLength="60" />
+          <Property Name="AddressLine2" Type="nvarchar" MaxLength="60" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="VendorContact">
+          <Key>
+            <PropertyRef Name="VendorContactID" />
+          </Key>
+          <Property Name="VendorContactID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IllusionPurchasingDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="IllusionPurchasingDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ProductVendors" EntityType="IllusionPurchasingDBModel.ProductVendor" />
+          <EntitySet Name="PurchaseOrders" EntityType="IllusionPurchasingDBModel.PurchaseOrder" />
+          <EntitySet Name="Vendors" EntityType="IllusionPurchasingDBModel.Vendor" />
+          <EntitySet Name="VendorContacts" EntityType="IllusionPurchasingDBModel.VendorContact" />
+        </EntityContainer>
+        <EntityType Name="ProductVendor">
+          <Key>
+            <PropertyRef Name="ProductVendorID" />
+          </Key>
+          <Property Name="ProductVendorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductNumber" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="Product" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Vendor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastReceiptCost" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="PurchaseOrder">
+          <Key>
+            <PropertyRef Name="PurchaseOrderID" />
+          </Key>
+          <Property Name="PurchaseOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Total_Purchase" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Average_Purchase" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Minimum_Purchase" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Maximum_Purchase" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AddressLine1" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="VendorContact">
+          <Key>
+            <PropertyRef Name="VendorContactID" />
+          </Key>
+          <Property Name="VendorContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IllusionPurchasingDBModelStoreContainer" CdmEntityContainer="IllusionPurchasingDBEntities">
+          <EntitySetMapping Name="ProductVendors">
+            <EntityTypeMapping TypeName="IllusionPurchasingDBModel.ProductVendor">
+              <MappingFragment StoreEntitySet="ProductVendors">
+                <ScalarProperty Name="ProductVendorID" ColumnName="ProductVendorID" />
+                <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+                <ScalarProperty Name="LastReceiptCost" ColumnName="LastReceiptCost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrders">
+            <EntityTypeMapping TypeName="IllusionPurchasingDBModel.PurchaseOrder">
+              <MappingFragment StoreEntitySet="PurchaseOrders">
+                <ScalarProperty Name="PurchaseOrderID" ColumnName="PurchaseOrderID" />
+                <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+                <ScalarProperty Name="Total_Purchase" ColumnName="Total Purchase" />
+                <ScalarProperty Name="Average_Purchase" ColumnName="Average Purchase" />
+                <ScalarProperty Name="Minimum_Purchase" ColumnName="Minimum Purchase" />
+                <ScalarProperty Name="Maximum_Purchase" ColumnName="Maximum Purchase" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="IllusionPurchasingDBModel.Vendor">
+              <MappingFragment StoreEntitySet="Vendor">
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="Vendor1" ColumnName="Vendor" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+                <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VendorContacts">
+            <EntityTypeMapping TypeName="IllusionPurchasingDBModel.VendorContact">
+              <MappingFragment StoreEntitySet="VendorContact">
+                <ScalarProperty Name="VendorContactID" ColumnName="VendorContactID" />
+                <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Illusion.PurchasingsEDM">
+        <EntityTypeShape EntityType="IllusionPurchasingDBModel.ProductVendor" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333331" IsExpanded="true" />
+        <EntityTypeShape EntityType="IllusionPurchasingDBModel.PurchaseOrder" Width="1.5" PointX="2.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="IllusionPurchasingDBModel.Vendor" Width="1.5" PointX="0.75" PointY="3.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="IllusionPurchasingDBModel.VendorContact" Width="1.5" PointX="2.75" PointY="3.75" Height="1.9802864583333335" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

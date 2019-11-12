@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="2f1211c5-812e-4291-b588-9ff36439ac5c" 
+        solutionId="2f1211c5-812e-4291-b588-9ff36439ac5c" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SP2.SearchAppREST"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="64ecbb56-52be-47b1-97ef-f0efca35768d" />
+  </features>
+</package>

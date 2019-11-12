@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "Filtering" Priority="5000">
+  <Title>Band-Pass Filter</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Band-Pass Filter</ShortBlurb> 
+  <SampleControl>BandPassFilter</SampleControl> 
+  <InfoPages>
+    <InfoPage Title="Overview">Overview.htm</InfoPage>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+  <Keywords>
+    <Keyword>Band-Pass Filter</Keyword>
+  </Keywords>    
+</SampleConfig>
+
+</SampleConfigs>

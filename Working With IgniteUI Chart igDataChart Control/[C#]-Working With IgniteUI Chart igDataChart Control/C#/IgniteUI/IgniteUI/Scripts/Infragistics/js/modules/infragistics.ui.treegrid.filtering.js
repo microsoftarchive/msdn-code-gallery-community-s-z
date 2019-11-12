@@ -1,0 +1,19 @@
+﻿/*!@license
+ * Infragistics.Web.ClientUI Tree Grid 16.1.20161.2052
+ *
+ * Copyright (c) 2011-2016 Infragistics Inc.
+ *
+ * http://www.infragistics.com/
+ *
+ * Depends on:
+ *	jquery-1.9.1.js
+ *	jquery.ui.core.js
+ *	jquery.ui.widget.js
+ *	infragistics.dataSource.js
+ *	infragistics.ui.shared.js
+ *	infragistics.ui.treegrid.js
+ *	infragistics.util.js
+ *	infragistics.ui.grid.framework.js
+ *	infragistics.ui.grid.filtering.js
+ */
+if(typeof jQuery!=="function"){throw new Error("jQuery is undefined")}(function($){var _aNull=function(val){return val===null||val===undefined};$.widget("ui.igTreeGridFiltering",$.ui.igGridFiltering,{css:{recordMatchFiltering:"ig-igtreegrid-filter-matching-row",cellMatchFiltering:"ig-igtreegrid-filter-matching-cell",recordNotMatchFiltering:"ui-igtreegrid-record-not-matchfiltering"},options:{recordCountKey:null,fromLevel:0,toLevel:-1,displayMode:"showWithAncestors",matchFiltering:"__matchFiltering",filterSummaryInPagerTemplate:$.ig.TreeGridFiltering.locale.filterSummaryInPagerTemplate},_create:function(){this.element.data($.ui.igGridFiltering.prototype.widgetName,this.element.data($.ui.igTreeGridFiltering.prototype.widgetName));$.ui.igGridFiltering.prototype._create.apply(this,arguments)},_getFilterSummaryPagerTemplate:function(){var template=this.options.filterSummaryInPagerTemplate,matchesCount,countMatchesPerPage=0;if(!template){return null}if(template.indexOf("${currentPageMatches}")>-1){countMatchesPerPage=this.grid.dataSource.getFilteredRecordsCountFromDataView();template=template.replace("${currentPageMatches}",countMatchesPerPage)}if(template.indexOf("${totalMatches}")>-1){matchesCount=this.getFilteringMatchesCount();template=template.replace("${totalMatches}",matchesCount)}return template},_transformCss:function(cssClass,dataRow){var matchFiltering,grid=this.grid,ds=grid.dataSource;if(this._gridTransformCssCallback){cssClass=this._gridTransformCssCallback.apply(grid,arguments)}if(this._filteringApplied()){matchFiltering=ds.settings.treeDS.filtering.matchFiltering;if(cssClass!==""){cssClass+=" "}if(!_aNull(matchFiltering)){if(dataRow[matchFiltering]){cssClass+=this.css.recordMatchFiltering}else{cssClass+=this.css.recordNotMatchFiltering}}}return cssClass},_filteringApplied:function(){var ds=this.grid.dataSource,expr=ds.settings.filtering.expressions;if(this.options.type==="local"){return ds._filter}return expr&&expr.length},getFilteringMatchesCount:function(){var o=this.options,ds=this.grid.dataSource,matches;if(o.type==="local"||o.type==="remote"&&ds.hasTotalRecordsCount()===false){if(ds._filter){matches=ds.getFilteredRecordsCount()}else{matches=ds.flatDataView().length}}else{matches=ds.getFilteringMatchRecordsCount()}return matches},destroy:function(){$.ui.igGridFiltering.prototype.destroy.apply(this,arguments);this.element.removeData($.ui.igGridFiltering.prototype.widgetName)},_injectGrid:function(gridInstance,isRebind){var ds,o=this.options;$.ui.igGridFiltering.prototype._injectGrid.apply(this,arguments);if(!isRebind){if(this.grid._transformCssCallback){this._gridTransformCssCallback=this.grid._transformCssCallback}this.grid._transformCssCallback=$.proxy(this._transformCss,this)}ds=this.grid.dataSource;if(ds&&ds.settings&&ds.settings.treeDS){ds.settings.filtering.enabled=true;ds.settings.treeDS.filtering.fromLevel=o.fromLevel;ds.settings.treeDS.filtering.toLevel=o.toLevel;ds.settings.treeDS.filtering.displayMode=o.displayMode;ds.settings.treeDS.filtering.matchFiltering=o.matchFiltering}if(o.recordCountKey!==null){ds.settings.responseTotalRecCountKey=o.recordCountKey}}});$.extend($.ui.igTreeGridFiltering,{version:"16.1.20161.2052"})})(jQuery);

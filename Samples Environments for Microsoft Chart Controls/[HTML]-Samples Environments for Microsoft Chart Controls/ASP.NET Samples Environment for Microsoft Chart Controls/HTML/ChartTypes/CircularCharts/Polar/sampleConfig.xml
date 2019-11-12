@@ -1,0 +1,23 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+
+	<SampleConfig ParentNodeID = "CircularCharts">
+	<Title>Polar Chart</Title> 
+	<Thumbnail>thumbnail.jpg</Thumbnail>
+	<ShortBlurb>Polar Chart</ShortBlurb> 
+	<Content>PolarChart.aspx</Content> 
+	<InfoPages>
+		<InfoPage Title="C# Source">cscode.txt</InfoPage>
+		<InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+	</InfoPages>
+
+	<Keywords>
+      <Keyword>Chart type, Polar</Keyword>
+      <Keyword>Polar chart</Keyword>
+      <Keyword>Data Label, Polar labels style</Keyword>
+    </Keywords>
+	</SampleConfig>
+
+	
+
+</SampleConfigs>

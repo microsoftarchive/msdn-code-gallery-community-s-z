@@ -1,0 +1,62 @@
+﻿body {
+    font-family: sans-serif;
+    background-color: #D6E1EB;;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #18568B;
+}
+h1 {
+    font-size: 35px;
+    font-weight: normal;
+    letter-spacing: -0.05em;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+    letter-spacing: -0.01em;
+}
+h4 {
+    color: #666666;
+    font-size: 16px;
+}
+h5 {
+    color: #666666;
+    font-size: 14px;
+}
+h6 {
+    color: #666666;
+    font-size: 12px;
+}
+.small {
+    font-size: 11px;
+}
+a {
+    color: #18568B;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+.indent {
+    padding-left: 20px;
+}
+.indentRight {
+    margin-right: 20px;
+}
+.page-min-size {
+    min-height: 600px;
+    min-width: 80%;
+}
+.btn-type {
+    min-width: 120px;
+}
+.tiny-padding {
+    padding: 4px;
+    border-radius: 3px;
+}
+tr .tr-middle {
+    vertical-align: middle;
+    text-align: center;
+}

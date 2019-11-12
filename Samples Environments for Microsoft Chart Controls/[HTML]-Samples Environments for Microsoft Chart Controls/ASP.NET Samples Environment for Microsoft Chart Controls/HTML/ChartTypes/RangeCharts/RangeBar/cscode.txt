@@ -1,0 +1,42 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series data
+    DateTime	currentData = DateTime.Now.Date;
+    Chart1.Series["Tasks"].Points.AddXY(1, currentData, currentData.AddDays(5));
+    Chart1.Series["Tasks"].Points.AddXY(2, currentData.AddDays(5), currentData.AddDays(7));
+    Chart1.Series["Tasks"].Points.AddXY(3, currentData.AddDays(7), currentData.AddDays(10));
+    Chart1.Series["Tasks"].Points.AddXY(1, currentData.AddDays(10), currentData.AddDays(15));
+    Chart1.Series["Tasks"].Points.AddXY(4, currentData.AddDays(15), currentData.AddDays(20));
+    Chart1.Series["Tasks"].Points.AddXY(2, currentData.AddDays(20), currentData.AddDays(27));
+
+    Chart1.Series["Progress"].Points.AddXY(1, currentData, currentData.AddDays(5));
+    Chart1.Series["Progress"].Points.AddXY(2, currentData.AddDays(5), currentData.AddDays(7));
+    Chart1.Series["Progress"].Points.AddXY(3, currentData.AddDays(7), currentData.AddDays(10));
+    Chart1.Series["Progress"].Points.AddXY(1, currentData.AddDays(10), currentData.AddDays(13));
+
+    // Set axis labels
+    Chart1.Series["Tasks"].Points[0].AxisLabel = "Task 1";
+    Chart1.Series["Tasks"].Points[1].AxisLabel = "Task 2";
+    Chart1.Series["Tasks"].Points[2].AxisLabel = "Task 3";
+    Chart1.Series["Tasks"].Points[4].AxisLabel = "Task 4";
+
+    // Set Range Bar chart type
+    Chart1.Series["Tasks"].ChartType = SeriesChartType.RangeBar;
+    Chart1.Series["Progress"].ChartType = SeriesChartType.RangeBar;
+
+    // Set point width
+    Chart1.Series["Tasks"]["PointWidth"] = "0.7";
+    Chart1.Series["Progress"]["PointWidth"] = "0.2";
+
+    // Set Y axis Minimum and Maximum
+    Chart1.ChartAreas["ChartArea1"].AxisY.Minimum = currentData.AddDays(-1).ToOADate();
+    Chart1.ChartAreas["ChartArea1"].AxisY.Maximum = currentData.AddDays(28).ToOADate();
+    }
+...
+
+// Enable 3D
+Chart1.ChartAreas["ChartArea1"].Area3DStyle.Enable3D = true;
+
+...

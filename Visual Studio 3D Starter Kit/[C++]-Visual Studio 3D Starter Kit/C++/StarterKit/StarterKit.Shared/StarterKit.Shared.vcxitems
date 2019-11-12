@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{97bdcb13-7176-4ef7-aa4c-4c818c8d36e8}</ItemsProjectGuid>
+    <ItemsRootNamespace>StarterKit</ItemsRootNamespace>
+    <ItemsProjectName>StarterKit.Shared</ItemsProjectName>
+    <SharedGUID>4f346060-4d8b-4704-87e9-f38d86d10768</SharedGUID>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)DirectXTex\DDSTextureLoader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Game.cpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Animation\Animation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)DirectXTex\DDSTextureLoader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Game.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)HitTestingHelpers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ppltasks_extra.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)StarterKitMain.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)StarterKitMain.cpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DeviceResources.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\DeviceResources.cpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DirectXHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\StepTimer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.cpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)VSD3DStarter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Animation\SkinningVertexShader.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>4.0_level_9_1</ShaderModel>
+      <DisableOptimizations>false</DisableOptimizations>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Assets\GlowEffect.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>4.0_level_9_1</ShaderModel>
+      <DisableOptimizations>false</DisableOptimizations>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="$(MSBuildThisFileDirectory)Assets\gamelevel.fbx">
+	      <FileType>Document</FileType>
+    </MeshContentTask>
+	<None Include="$(MSBuildThisFileDirectory)Assets\gamelevel.fbx"/>
+    <None Include="$(MSBuildThisFileDirectory)Assets\GlowEffect.dgsl" />
+    <MeshContentTask Include="$(MSBuildThisFileDirectory)Assets\teapot.fbx">
+	      <FileType>Document</FileType>
+    </MeshContentTask>
+	<None Include="$(MSBuildThisFileDirectory)Assets\teapot.fbx"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\CubeUVImage.png">
+      <DeploymentContent>false</DeploymentContent>
+    </Image>
+  </ItemGroup>
+</Project>

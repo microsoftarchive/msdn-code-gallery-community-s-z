@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Carga asíncrona de celdas</title>
+    <link href="https://code.jquery.com/ui/1.11.4/themes/blitzer/jquery-ui.css" rel="stylesheet" />
+    <link href="css/slick.grid.css" rel="stylesheet" />
+    <link href="css/theme/slick-default-theme.css" rel="stylesheet" />
+    <link href="css/pildorasgrid.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="Scripts/jquery.event.drag-2.2.js"></script>
+    <script src="Scripts/slick.core.js"></script>
+    <script src="Scripts/slick.grid.js"></script>
+    <script src="Scripts/gridformatters.js"></script>
+    <script src="data/productdatasource.js"></script>
+    <script src="Scripts/grideditors.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var columns = [
+                { name: "ID", field: "ProductID", id: "ProductID", width: 60, resizable: false
+                    , headerCssClass: "prKeyHeadColumn", cssClass: "numericCell", editor: Slick.Editors.Text },
+                { name: "Nº Producto", field: "ProductNumber", id: "ProductNumber", width: 120, resizable: false
+                    , headerCssClass: "headColumn", editor: Slick.Editors.Text },
+                { name: "Denominación", field: "Name", id: "Name", width: 250, minWidth: 150, maxWidth: 400
+                    , headerCssClass: "headColumn", editor: Slick.Editors.Text },
+                { name: "Color", field: "Color", id: "Color", width: 80, minWidth: 60, maxWidth: 120
+                    , headerCssClass: "headColumn", formatter: Slick.Formatters.ColorFormatter
+                    , editor: Slick.Editors.Color },
+                { name: "Precio", field: "StandardCost", id: "StandardCost", width: 110, minWidth: 80, maxWidth: 170
+                    , headerCssClass: "headColumn", cssClass: "numericCell", formatter: Slick.Formatters.CurrencyFormatter
+                    , editor: Slick.Editors.Text },
+                { name: "Sub", field: "ProductSubcategoryID", id: "ProductSubcategoryID", width: 60, resizable: false
+                    , headerCssClass: "headColumn", cssClass: "numericCell", editor: subcategoryEditor },
+                { name: "Subcategoría", field: "ProductSubcategoryID", id: "SubcategoryName", width:200, minWidth: 150, maxWidth: 400
+                    , headerCssClass: "headColumn", formatter: asyncSubcategoryNameFormatter
+                    , asyncPostRender: getSubcategoryName, cache: {}
+                }
+            ];
+
+            var options = {
+                editable: true,
+                autoEdit: false,
+                enableAsyncPostRender: true,
+                asyncPostRenderDelay: 10
+            };
+
+            var grid = new Slick.Grid("#AsyncGrid", products, columns, options);
+        });
+    </script>
+</head>
+<body>
+    <div id="AsyncGrid" style="width:1024px; height:500px;"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+//IMPORTANT: For this event to work the event handler must be added to the InitializeComponent()
+//  method. We recommend that you add the event using the Properties window in the IDE   
+private void Chart1_Customize(System.Web.UI.DataVisualization.Charting.Chart sender)
+{
+    // Get X and Y axis labels collections
+    CustomLabelsCollection xAxisLabels = Chart1.ChartAreas["ChartArea1"].AxisX.CustomLabels;
+    CustomLabelsCollection yAxisLabels = Chart1.ChartAreas["ChartArea1"].AxisY.CustomLabels;
+
+    // Change text of the first Y axis label
+    yAxisLabels[0].Text = "Zero";
+
+    // Change Y axis labels
+    for(int labelIndex = 1; labelIndex < yAxisLabels.Count; labelIndex++)
+    {
+        yAxisLabels[labelIndex].Text = yAxisLabels[labelIndex].Text + "°. 00'";
+    }
+
+    // Remove each second X axis label
+    for(int labelIndex = 0; labelIndex < xAxisLabels.Count; labelIndex++)
+    {
+        // Adjust position of the previous label
+        if(labelIndex > 0)
+        {
+            xAxisLabels[labelIndex - 1].ToPosition += 
+                (xAxisLabels[labelIndex].ToPosition - xAxisLabels[labelIndex].FromPosition) / 2.0;
+            xAxisLabels[labelIndex - 1].FromPosition -= 
+                (xAxisLabels[labelIndex].ToPosition - xAxisLabels[labelIndex].FromPosition) / 2.0;
+        }
+
+        // Remove label
+        xAxisLabels.RemoveAt(labelIndex);
+    }
+}
+...

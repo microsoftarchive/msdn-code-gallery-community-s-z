@@ -1,0 +1,47 @@
+﻿<controls:CustomWindow x:Class="Mm.Wpf.PInvoke.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Mm.CustomControls;assembly=Mm.CustomControls"
+        Title="blog.magnusmontin.net" Height="350" Width="525">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Disable Minimize Button" Click="Button_Click"
+                Grid.Row="0" Grid.Column="0"/>
+        <Button Content="Enable Minimize Button" Click="Button_Click2"
+                Grid.Row="0" Grid.Column="1"/>
+
+        <Button Content="Disable Maximize Button" Click="Button_Click3"
+                Grid.Row="1" Grid.Column="0"/>
+        <Button Content="Enable Maximize Button" Click="Button_Click4"
+                Grid.Row="1" Grid.Column="1"/>
+
+        <Button Content="Disable Close Button" Click="Button_Click5"
+                Grid.Row="2" Grid.Column="0"/>
+        <Button Content="Enable Close Button" Click="Button_Click6"
+                Grid.Row="2" Grid.Column="1"/>
+
+        <Button Content="Hide Minimize And Maximize Buttons" Click="Button_Click7"
+                Grid.Row="3" Grid.Column="0"/>
+        <Button Content="Show Minimize And Maximize Buttons" Click="Button_Click8"
+                Grid.Row="3" Grid.Column="1"/>
+
+        <Button Content="Hide All Buttons" Click="Button_Click9"
+                Grid.Row="4" Grid.Column="0"/>
+        <Button Content="Show All Buttons" Click="Button_Click10"
+                Grid.Row="4" Grid.Column="1"/>
+
+
+
+    </Grid>
+</controls:CustomWindow>

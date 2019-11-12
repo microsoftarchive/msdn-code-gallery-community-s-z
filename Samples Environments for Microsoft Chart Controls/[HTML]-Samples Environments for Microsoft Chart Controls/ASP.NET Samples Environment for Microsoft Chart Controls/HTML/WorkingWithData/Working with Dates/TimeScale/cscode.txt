@@ -1,0 +1,29 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{
+    // Populate series data
+    Random	random = new Random();
+    DateTime date = DateTime.Now.Date;
+    for(int pointIndex = 0; pointIndex < 8; pointIndex++)
+    {
+        Chart1.Series["Series1"].Points.AddXY(date, random.Next(5, 95));
+        date = date.AddDays(random.Next(1, 5));
+    }
+
+    if(UseIndex.Checked)
+    {
+		// Use point index instead of the X value
+        Chart1.Series["Series1"].IsXValueIndexed = true;
+
+        // Show labels every day
+        Chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Interval = 1;
+        Chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Interval = 1;
+        Chart1.ChartAreas["ChartArea1"].AxisX.MajorTickMark.Interval = 1;
+    }
+
+    // Set series tooltips
+    Chart1.Series["Series1"].ToolTip = "#VALX";
+}
+...

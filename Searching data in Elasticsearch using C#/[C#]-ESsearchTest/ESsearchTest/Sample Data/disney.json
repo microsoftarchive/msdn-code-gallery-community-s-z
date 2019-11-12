@@ -1,0 +1,69 @@
+curl -XPUT "http://localhost:9200/disney/character/1" -d'
+{
+	"name": "Abby Mallard",
+	"original_voice_actor": "Joan Cusack",
+	"animated_debut": "Chicken Little"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/2" -d'
+{
+	"name": "Abigail Gabble",
+	"original_voice_actor": "Monica Evans",
+	"animated_debut": "The Aristocats"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/3" -d'
+{
+	"name": "Babyface Beagle",
+	"original_voice_actor": "Terry McGovern",
+	"animated_debut": "DuckTales"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/4" -d'
+{
+	"name": "Cadpig",
+	"original_voice_actor": "Kath Soucie",
+	"animated_debut": "101 Dalmatians: The Series"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/5" -d'
+{
+	"name": "Derek Blunt",
+	"original_voice_actor": "Peter Renaday",
+	"animated_debut": "Darkwing Duck"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/6" -d'
+{
+	"name": "Duckworth",
+	"original_voice_actor": "Chuck McCann",
+	"animated_debut": "DuckTales"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/7" -d'
+{
+	"name": "Dumbo",
+	"original_voice_actor": "None",
+	"animated_debut": "Dumbo"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/8" -d'
+{
+	"name": "Nana",
+	"original_voice_actor": "None",
+	"animated_debut": "Peter Pan"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/9" -d'
+{
+	"name": "Zazu",
+	"original_voice_actor": "Rowan Atkinson",
+	"animated_debut": "The Lion King"
+}'
+
+curl -XPUT "http://localhost:9200/disney/character/10" -d'
+{
+	"name": "Wreck-It Ralph",
+	"original_voice_actor": "John C. Reilly",
+	"animated_debut": "Wreck-It Ralph"
+}'

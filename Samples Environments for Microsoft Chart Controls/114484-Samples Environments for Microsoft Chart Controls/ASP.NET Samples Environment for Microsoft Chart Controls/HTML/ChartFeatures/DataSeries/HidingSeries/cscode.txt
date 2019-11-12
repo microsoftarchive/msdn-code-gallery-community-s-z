@@ -1,0 +1,9 @@
+using System.Web.UI.DataVisualization.Charting;
+...
+
+private void Page_Load(object sender, System.EventArgs e)
+{ 
+    // Hide series "Series 1" 
+    Chart1.Series["Series 1"].Enabled = false;
+}
+...

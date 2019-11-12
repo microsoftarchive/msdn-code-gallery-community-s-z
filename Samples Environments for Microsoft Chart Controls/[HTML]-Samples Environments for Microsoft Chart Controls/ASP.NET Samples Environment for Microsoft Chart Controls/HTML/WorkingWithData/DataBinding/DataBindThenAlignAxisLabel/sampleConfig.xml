@@ -1,0 +1,21 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataBinding">
+  <Title>Aligning Axis Labels</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Binding and Aligning Axis Labels</ShortBlurb> 
+  <Content>DataBindThenAlignAxisLabel.aspx</Content> 
+  <InfoPages>
+    <InfoPage Title="C# Source">cscode.txt</InfoPage>
+    <InfoPage Title="Visual Basic Source">vbcode.txt</InfoPage>
+  </InfoPages>
+
+  <Keywords>
+    <Keyword>Data, Align Axis Labels</Keyword>
+    <Keyword>Binding, Align Axis Labels</Keyword>
+    <Keyword>Align Axis Labels after Data Binding</Keyword>
+  </Keywords>  
+</SampleConfig>
+
+
+</SampleConfigs>

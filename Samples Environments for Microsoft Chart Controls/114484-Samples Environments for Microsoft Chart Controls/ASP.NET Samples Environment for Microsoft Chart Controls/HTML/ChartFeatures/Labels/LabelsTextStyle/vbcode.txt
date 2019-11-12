@@ -1,0 +1,25 @@
+Imports System.Web.UI.DataVisualization.Charting
+...
+
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    ' Disable axis labels auto fitting of text
+    Chart1.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = False
+
+    ' Set axis labels font
+    Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Font = New Font("Arial", 10)
+
+    ' Set axis labels angle
+    Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Angle = 30
+
+    ' Disable offset labels style
+    Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.IsStaggered = False
+
+    ' Enable X axis labels
+    Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Enabled = True
+
+	' Enable AntiAliasing for either Text and Graphics or just Graphics
+	Chart1.AntiAliasing = AntiAliasingStyles.All  ' AntiAliasingStyles.Graphics and AntiAliasingStyles.Text
+
+End Sub 'Page_Load
+...

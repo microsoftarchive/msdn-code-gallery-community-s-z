@@ -1,0 +1,17 @@
+<?xml version="1.0" ?> 
+<SampleConfigs>
+<SampleConfig ParentNodeID = "DataBinding" Priority = "100">
+  <Title>Overview</Title> 
+  <Thumbnail>thumbnail.jpg</Thumbnail>
+  <ShortBlurb>Data Binding</ShortBlurb> 
+  <Content>Overview.htm</Content>
+  
+    <Keywords>
+    <Keyword>Data, Binding Overview</Keyword>
+    <Keyword>Overview, Data Binding</Keyword>
+    <Keyword>Data Binding</Keyword>
+  </Keywords>  
+  
+</SampleConfig>
+
+</SampleConfigs>

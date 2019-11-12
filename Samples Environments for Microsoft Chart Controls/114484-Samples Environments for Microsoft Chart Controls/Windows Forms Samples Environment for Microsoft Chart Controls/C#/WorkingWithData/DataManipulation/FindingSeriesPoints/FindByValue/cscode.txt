@@ -1,0 +1,20 @@
+using System.Windows.Forms.DataVisualization.Charting;
+...
+ 
+// Find all point with specified value and change their color
+Double valueToFind = 0;
+
+if(comboBoxValueToFind.Text == "Min")
+{
+	// Find minimum
+    DataPoint minPoint = chart1.Series["Series1"].Points.FindMinValue(pointValueName);
+    valueToFind = minPoint.GetValueByName(pointValueName);
+}
+
+...
+
+//Color all the points with the specified value
+foreach (DataPoint dataPoint in chart1.Series["Series1"].Points.FindValues(valueToFind, pointValueName))
+{
+    dataPoint.Color = Color.FromArgb(194, 224, 64, 10);
+}
