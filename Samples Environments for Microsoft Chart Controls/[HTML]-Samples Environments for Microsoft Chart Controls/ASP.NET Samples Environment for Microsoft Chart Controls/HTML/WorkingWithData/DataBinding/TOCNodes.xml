@@ -1,8 +1,0 @@
-<?xml version="1.0" ?> 
-<TOCNodes>
-
-  <TOCNode ID="DataBinding" ParentNodeID="PopulatingData" Priority="50">
-    <Title>Data Binding</Title>
-  </TOCNode>
-  
-</TOCNodes>

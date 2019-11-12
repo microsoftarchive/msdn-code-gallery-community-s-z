@@ -1,8 +1,0 @@
-﻿<Window x:Class="WPFReportTest.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button Content="Show All Employee" Height="37" HorizontalAlignment="Left" Margin="203,128,0,0" Name="showAllEmployeeButton" VerticalAlignment="Top" Width="116" Click="showAllEmployeeButton_Click" />
-    </Grid>
-</Window>

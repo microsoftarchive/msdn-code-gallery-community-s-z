@@ -1,1 +1,0 @@
-<%@ Application Inherits="SamlShibboleth.ServiceProvider.Global" Language="C#" %>

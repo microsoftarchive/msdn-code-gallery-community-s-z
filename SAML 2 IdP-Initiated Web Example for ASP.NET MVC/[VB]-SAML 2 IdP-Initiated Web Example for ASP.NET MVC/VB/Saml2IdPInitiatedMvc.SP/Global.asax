@@ -1,1 +1,0 @@
-﻿<%@ Application Codebehind="Global.asax.vb" Inherits="Saml2IdPInitiatedMvc.SP.MvcApplication" Language="vb" %>

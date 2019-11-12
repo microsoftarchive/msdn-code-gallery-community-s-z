@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <Module Name="Content">
-    <File Path="Content\App.css" Url="Content/App.css" ReplaceContent="TRUE" />
-    <File Path="Content\jquery.dataTables.css" Url="Content/jquery.dataTables.css" ReplaceContent="TRUE" />
-  </Module>
-</Elements>

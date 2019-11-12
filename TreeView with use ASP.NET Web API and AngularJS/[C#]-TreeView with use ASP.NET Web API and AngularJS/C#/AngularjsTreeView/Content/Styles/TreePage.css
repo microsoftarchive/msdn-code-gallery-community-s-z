@@ -1,5 +1,0 @@
-﻿body{height:100%;width:100%;margin:0;padding: 0; padding-left: 15px}
-.treeDiv{ min-height: 100px;width: 300px;margin: 15px;}
-.button{width: 120px}
-.updprocess{position:absolute;z-index:1000;height:100%;width:100%;background-image:url(/Content/dataloader.gif);
-background-repeat:no-repeat;background-attachment:fixed;background-position:center;background-size:100px;top:0}

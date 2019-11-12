@@ -1,1 +1,0 @@
-<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="ConsumerService.aspx.vb" Inherits="SamlIdPInitiated.ServiceProvider.ConsumerService" %>

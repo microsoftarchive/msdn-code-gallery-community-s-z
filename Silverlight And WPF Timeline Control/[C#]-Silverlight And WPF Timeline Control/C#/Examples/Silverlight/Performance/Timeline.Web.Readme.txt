@@ -1,5 +1,0 @@
------------------------------
-Timeline.Web example
------------------------------
-
-Example demonstrate loading and scrolling of about 10000 events

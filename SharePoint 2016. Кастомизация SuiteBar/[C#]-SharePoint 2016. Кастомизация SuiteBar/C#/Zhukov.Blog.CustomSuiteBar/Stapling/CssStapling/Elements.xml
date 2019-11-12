@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <Control Id="AdditionalPageHead"
-           Sequence="50"
-           ControlClass="Microsoft.SharePoint.WebControls.CssRegistration"
-           ControlAssembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" xmlns="http://schemas.microsoft.com/sharepoint/">
-    <Property Name="Name">/_layouts/15/Zhukov.Blog.CustomSuiteBar/AppIcons.css</Property>
-  </Control>
-</Elements>

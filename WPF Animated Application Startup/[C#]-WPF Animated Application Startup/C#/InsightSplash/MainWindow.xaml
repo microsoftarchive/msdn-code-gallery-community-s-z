@@ -1,8 +1,0 @@
-﻿<Window x:Class="InsightSplash.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <Label Content="Main Window" Height="47" HorizontalAlignment="Left" Margin="194,133,0,0" Name="label1" VerticalAlignment="Top" FontSize="15" Width="168" />
-    </Grid>
-</Window>

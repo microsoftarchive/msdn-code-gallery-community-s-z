@@ -1,5 +1,0 @@
-Uri for HttpSend activity in the GetProducts activity:
-"http://services.odata.org/Northwind/Northwind.svc/Products?$format=application/json;odata=verbose&$filter=substringof('" + SearchKeyword + "', ProductName) eq true"
-
-Expression for PropertyName for the GetDynamicValueProperty<T> activity:
-"(" + Items + ")/ProductName"

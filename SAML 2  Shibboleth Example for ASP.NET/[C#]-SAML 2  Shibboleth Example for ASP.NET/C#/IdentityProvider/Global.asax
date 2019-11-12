@@ -1,1 +1,0 @@
-<%@ Application Inherits="SamlShibboleth.IdentityProvider.Global" Language="C#" %>

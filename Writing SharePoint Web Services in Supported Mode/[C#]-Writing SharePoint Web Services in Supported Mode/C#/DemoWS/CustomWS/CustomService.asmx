@@ -1,1 +1,0 @@
-﻿<%@ WebService Language="C#"  Class="CustomWS.CustomService, CustomWS,Version=1.0.0.0, Culture=neutral, PublicKeyToken= 293c0f6de57e7690" %>
