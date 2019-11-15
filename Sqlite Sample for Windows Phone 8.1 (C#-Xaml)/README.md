@@ -17,7 +17,7 @@
 <div>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">If you want to implement sqlite database application for windowsphone 8.0,you may helped from my&nbsp;<a href="http://bsubramanyamraju.blogspot.com/2014/08/windowsphone-8-sqlite-storing-data-in.html" target="_blank">previous</a>&nbsp;article.Now
  from this article we will learn about 'Sqlite support in WindowsPhone Store 8.1'.This article is compared with my previous article,so that we can easily understand the changes in WP8.0 &amp; WP8.1 to setup Sqlite environment.</span></p>
-<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://4.bp.blogspot.com/-G9emSVcUtU0/VL4t6xwZ8BI/AAAAAAAABh8/OV69jGF0fxY/s1600/SQLte.png"><img src=":-proxy?url=http%3a%2f%2f4.bp.blogspot.com%2f-g9emsvcutu0%2fvl4t6xwz8bi%2faaaaaaaabh8%2fov69jgf0fxy%2fs1600%2fsqlte.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="409"></a></span></p>
+<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://4.bp.blogspot.com/-G9emSVcUtU0/VL4t6xwZ8BI/AAAAAAAABh8/OV69jGF0fxY/s1600/SQLte.png"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-G9emSVcUtU0%2FVL4t6xwZ8BI%2FAAAAAAAABh8%2FOV69jGF0fxY%2Fs1600%2FSQLte.png&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="409"></a></span></p>
 <p><span style="font-size:small">You may read this post at my Original <a title="Sqlite Sample for WP8.1" href="http://bsubramanyamraju.blogspot.com/2015/01/windowsphone-81-sqlite-how-to-store.html" target="_blank">
 blog</a>.</span></p>
 <p><strong><span style="font-family:Verdana,sans-serif; font-size:small">Requirements:</span></strong></p>
@@ -66,30 +66,30 @@ blog</a>.</span></p>
 <div>
 <p><span style="font-size:small">It&rsquo;s worth noting that the current version (3.8.8.0) has a flaw in the package metadata that prevent it to show up in the Visual Studio 2013 &quot;<strong>Tools | Extensions and Updates</strong>&quot; page. You need to go to the&nbsp;<a href="https://visualstudiogallery.msdn.microsoft.com/5d97faf6-39e3-4048-a0bc-adde2af75d1b" target="_blank">web
  page</a>, download and install the VSIX package by yourself:</span></p>
-<p class="separator"><span style="font-size:small"><a href="http://3.bp.blogspot.com/-kpaBXnwBUuM/VL4xM3qK-SI/AAAAAAAABiI/V0pLEm_op28/s1600/SDK.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-kpabxnwbuum%2fvl4xm3qk-si%2faaaaaaaabii%2fv0plem_op28%2fs1600%2fsdk.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="243"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://3.bp.blogspot.com/-kpaBXnwBUuM/VL4xM3qK-SI/AAAAAAAABiI/V0pLEm_op28/s1600/SDK.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-kpaBXnwBUuM%2FVL4xM3qK-SI%2FAAAAAAAABiI%2FV0pLEm_op28%2Fs1600%2FSDK.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="243"></a></span></p>
 <p>&nbsp;</p>
 </div>
 <p class="separator"><span style="font-family:Verdana,sans-serif">Click on Download and&nbsp;</span><span style="font-family:Verdana,sans-serif">You can directly open it while downloading, authorize installation and click install when ready.</span></p>
-<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-JfzIzyROXEM/U98pXihxaUI/AAAAAAAABDs/-p-AgSJBvnw/s1600/SqliteWPSetupInstaller.PNG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-jfzizyroxem%2fu98pxihxaui%2faaaaaaaabds%2f-p-agsjbvnw%2fs1600%2fsqlitewpsetupinstaller.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt=""></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-JfzIzyROXEM/U98pXihxaUI/AAAAAAAABDs/-p-AgSJBvnw/s1600/SqliteWPSetupInstaller.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-JfzIzyROXEM%2FU98pXihxaUI%2FAAAAAAAABDs%2F-p-AgSJBvnw%2Fs1600%2FSqliteWPSetupInstaller.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt=""></a></span></p>
 <p class="separator">&nbsp;</p>
 <p class="separator"><span style="font-size:small"><span style="font-family:Verdana,sans-serif">Open Microsoft&nbsp;<strong>Visual Studio Express 2013 for Windows</strong>&nbsp;and then create new project&nbsp;type Blank App</span><span style="font-family:Verdana,sans-serif">(Ex:SQLiteWp8.1)</span></span></p>
-<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-DdeTiwyhGzQ/VL41-hv_IxI/AAAAAAAABio/15JARU-J_zA/s1600/NewProject.PNG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-ddetiwyhgzq%2fvl41-hv_ixi%2faaaaaaaabio%2f15jaru-j_za%2fs1600%2fnewproject.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="390"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-DdeTiwyhGzQ/VL41-hv_IxI/AAAAAAAABio/15JARU-J_zA/s1600/NewProject.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-DdeTiwyhGzQ%2FVL41-hv_IxI%2FAAAAAAAABio%2F15JARU-J_zA%2Fs1600%2FNewProject.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="390"></a></span></p>
 <p class="separator"><span style="font-size:small">Open Solution explorer,Right click on 'References' folder of your current project.</span></p>
 <p class="separator">&nbsp;</p>
-<p><span style="font-size:small"><a href="http://3.bp.blogspot.com/-YOQY03PjJ54/VL4zlAKrUxI/AAAAAAAABiU/-KUplJIfxRU/s1600/AddReference.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-yoqy03pjj54%2fvl4zlakruxi%2faaaaaaaabiu%2f-kupljifxru%2fs1600%2faddreference.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="400" height="352"></a></span></p>
+<p><span style="font-size:small"><a href="http://3.bp.blogspot.com/-YOQY03PjJ54/VL4zlAKrUxI/AAAAAAAABiU/-KUplJIfxRU/s1600/AddReference.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-YOQY03PjJ54%2FVL4zlAKrUxI%2FAAAAAAAABiU%2F-KUplJIfxRU%2Fs1600%2FAddReference.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="400" height="352"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">Then add the reference to the &quot;SQLite for WindowsPhone 8.1&quot; library:</span></p>
-<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-NTyzXAA4IIg/VL40a4I0IfI/AAAAAAAABic/6pmWEvQTd8A/s1600/SQLite.PNG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-ntyzxaa4iig%2fvl40a4i0ifi%2faaaaaaaabic%2f6pmwevqtd8a%2fs1600%2fsqlite.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="440"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-NTyzXAA4IIg/VL40a4I0IfI/AAAAAAAABic/6pmWEvQTd8A/s1600/SQLite.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-NTyzXAA4IIg%2FVL40a4I0IfI%2FAAAAAAAABic%2F6pmWEvQTd8A%2Fs1600%2FSQLite.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="440"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">When done, you can see that the proper references to SQLite and Visual C&#43;&#43; 2013 Runtime have been added to respective project:</span></p>
-<p class="separator"><span style="font-size:small"><a href="http://3.bp.blogspot.com/--INcmGB_2n8/VL43KwzfWWI/AAAAAAAABi0/9VqDYafbNtM/s1600/Warning.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f--incmgb_2n8%2fvl43kwzfwwi%2faaaaaaaabi0%2f9vqdyafbntm%2fs1600%2fwarning.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="397" height="400"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://3.bp.blogspot.com/--INcmGB_2n8/VL43KwzfWWI/AAAAAAAABi0/9VqDYafbNtM/s1600/Warning.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F--INcmGB_2n8%2FVL43KwzfWWI%2FAAAAAAAABi0%2F9VqDYafbNtM%2Fs1600%2FWarning.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="397" height="400"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">You may have already noticed, that the references show a warning symbols,to resolve that the next thing to do, before compiling the solution is changing the architecture of the target platform.
  This is the fact that the engine of Sqlite is written in C &#43;&#43;, and the default target platform set in the project is Any CPU. This mode is not supported. To do this in the main menu of VisualStudio have the command &quot;Compile&quot;, then &quot;Configuration Manager&quot;,
  as shown in the figure.</span></p>
 <p class="separator">&nbsp;</p>
-<p class="separator"><span style="font-size:small"><a href="http://4.bp.blogspot.com/-hAEceo_nvfs/VL4418rEXiI/AAAAAAAABjQ/egrKDWwff6Q/s1600/Config.PNG"><img src=":-proxy?url=http%3a%2f%2f4.bp.blogspot.com%2f-haeceo_nvfs%2fvl4418rexii%2faaaaaaaabjq%2fegrkdwwff6q%2fs1600%2fconfig.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="196"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://4.bp.blogspot.com/-hAEceo_nvfs/VL4418rEXiI/AAAAAAAABjQ/egrKDWwff6Q/s1600/Config.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-hAEceo_nvfs%2FVL4418rEXiI%2FAAAAAAAABjQ%2FegrKDWwff6Q%2Fs1600%2FConfig.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="196"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small"><br>
 </span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">In the next dialog, we note that we have several choices of platforms, Any CPU (the default), ARM, x64 and x86.</span></p>
-<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://4.bp.blogspot.com/-5IYbaL1PBHk/VL44GCHIXqI/AAAAAAAABjE/5MwuYclgJ04/s1600/Error.PNG"><img src=":-proxy?url=http%3a%2f%2f4.bp.blogspot.com%2f-5iybal1pbhk%2fvl44gchixqi%2faaaaaaaabje%2f5mwuyclgj04%2fs1600%2ferror.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="401"></a></span></p>
+<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://4.bp.blogspot.com/-5IYbaL1PBHk/VL44GCHIXqI/AAAAAAAABjE/5MwuYclgJ04/s1600/Error.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-5IYbaL1PBHk%2FVL44GCHIXqI%2FAAAAAAAABjE%2F5MwuYclgJ04%2Fs1600%2FError.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="401"></a></span></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">We have to select the target platform second, where we are trying the application. If we use a tablet, or a phone with ARM processor, we have to select the ARM platform. If
  we are using the emulator or in the case of Windows Phone, a PC in the case of Windows, we have to select x86 or x64, everything depends on your processor if 32 or 64 bits. In my case, I tried the sample application on a emulator &nbsp;with Windows Phone OS
  8.1, so I chose the way of configuration x86.</span></p>
@@ -102,7 +102,7 @@ blog</a>.</span></p>
  on &quot;Install&quot; button.After that we should found below dialog:</span></span></p>
 </div>
 <div>
-<p class="separator"><span style="font-size:small"><a href="http://3.bp.blogspot.com/-grFx4A5KaDY/VL492883gsI/AAAAAAAABjg/xpVyppUlp-I/s1600/Sqlite_Net.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-grfx4a5kady%2fvl492883gsi%2faaaaaaaabjg%2fxpvyppulp-i%2fs1600%2fsqlite_net.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="426"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://3.bp.blogspot.com/-grFx4A5KaDY/VL492883gsI/AAAAAAAABjg/xpVyppUlp-I/s1600/Sqlite_Net.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-grFx4A5KaDY%2FVL492883gsI%2FAAAAAAAABjg%2FxpVyppUlp-I%2Fs1600%2FSqlite_Net.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="426"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">&nbsp;</span></p>
 <p class="separator">&nbsp;</p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">&nbsp;</span></p>
@@ -128,7 +128,7 @@ blog</a>.</span></p>
 </div>
 <p class="separator">&nbsp;</p>
 <p>&nbsp;</p>
-<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-PTFbenwUezA/U984O9fwyoI/AAAAAAAABFA/d0uXjIVQmo4/s1600/TableStructure.PNG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-ptfbenwueza%2fu984o9fwyoi%2faaaaaaaabfa%2fd0uxjivqmo4%2fs1600%2ftablestructure.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="372"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-PTFbenwUezA/U984O9fwyoI/AAAAAAAABFA/d0uXjIVQmo4/s1600/TableStructure.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-PTFbenwUezA%2FU984O9fwyoI%2FAAAAAAAABFA%2Fd0uXjIVQmo4%2Fs1600%2FTableStructure.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="372"></a></span></p>
 <p class="separator">&nbsp;</p>
 <div>
 <p><span style="font-size:small"><span style="font-family:Verdana,sans-serif">Here i am&nbsp;trying&nbsp;to create Table name is &quot;<strong>Contacts</strong>&quot; in &quot;<strong>ContactsManager.sqlite</strong>&quot;&nbsp;database.So my class &quot;Contacts&quot; with all getter and
@@ -311,7 +311,7 @@ blog</a>.</span></p>
 </div>
 <p class="separator">&nbsp;</p>
 <p class="separator">&nbsp;</p>
-<p class="separator"><span style="font-size:small"><a href="http://2.bp.blogspot.com/-Llj1lDw4p7A/VL5C7bDnOhI/AAAAAAAABjw/-4oJGKI37ao/s1600/References.PNG"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f-llj1ldw4p7a%2fvl5c7bdnohi%2faaaaaaaabjw%2f-4ojgki37ao%2fs1600%2freferences.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="332" height="400"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://2.bp.blogspot.com/-Llj1lDw4p7A/VL5C7bDnOhI/AAAAAAAABjw/-4oJGKI37ao/s1600/References.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F-Llj1lDw4p7A%2FVL5C7bDnOhI%2FAAAAAAAABjw%2F-4oJGKI37ao%2Fs1600%2FReferences.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="332" height="400"></a></span></p>
 <p class="separator">&nbsp;</p>
 <div>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">In the app.xaml class lets create a database. &nbsp;In the constructor we check if the database exists and if it does not we create it. &nbsp;Since if there is no file exists ,it will get an exception.&nbsp;</span></p>
@@ -364,7 +364,7 @@ blog</a>.</span></p>
 <div>
 <ul>
 <li><span style="font-family:Verdana,sans-serif; font-size:small"><strong>AddConatct.xaml:</strong>This page for adding contact to database,when click on &quot;Add Contact&quot; button it will be add contact in database like this
-<p class="separator"><a href="http://3.bp.blogspot.com/-tmG0Pq5FGtw/VL5DIYvzFSI/AAAAAAAABj4/dB_HIZf8oQ8/s1600/Intial.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-tmg0pq5fgtw%2fvl5diyvzfsi%2faaaaaaaabj4%2fdb_hizf8oq8%2fs1600%2fintial.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="223" height="400"></a></p>
+<p class="separator"><a href="http://3.bp.blogspot.com/-tmG0Pq5FGtw/VL5DIYvzFSI/AAAAAAAABj4/dB_HIZf8oQ8/s1600/Intial.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-tmG0Pq5FGtw%2FVL5DIYvzFSI%2FAAAAAAAABj4%2FdB_HIZf8oQ8%2Fs1600%2FIntial.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="223" height="400"></a></p>
 <p class="separator">&nbsp;</p>
 </span></li></ul>
 </div>
@@ -433,7 +433,7 @@ blog</a>.</span></p>
 <div class="preview"></div>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">&nbsp;</span></p>
 <p class="separator">&nbsp;</p>
-<p class="separator"><span style="font-size:small"><a href="http://4.bp.blogspot.com/-h5EdDGdA2Zs/VL5FH_jnlpI/AAAAAAAABkE/D4h2zPUmOAg/s1600/Simple.PNG"><img src=":-proxy?url=http%3a%2f%2f4.bp.blogspot.com%2f-h5eddgda2zs%2fvl5fh_jnlpi%2faaaaaaaabke%2fd4h2zpumoag%2fs1600%2fsimple.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="223" height="400"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://4.bp.blogspot.com/-h5EdDGdA2Zs/VL5FH_jnlpI/AAAAAAAABkE/D4h2zPUmOAg/s1600/Simple.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-h5EdDGdA2Zs%2FVL5FH_jnlpI%2FAAAAAAAABkE%2FD4h2zPUmOAg%2Fs1600%2FSimple.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="223" height="400"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small"><br>
 </span></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">&nbsp;</span></p>
@@ -524,7 +524,7 @@ blog</a>.</span></p>
 <li><span style="font-size:small"><strong>Delete_UpdateContacts.xaml:</strong><span style="font-family:Verdana,sans-serif">This page is for updating/delete selected contact details
 <p class="separator">&nbsp;</p>
 </span></span></li></ul>
-<span style="font-size:small"><a href="http://3.bp.blogspot.com/-FWCQ2xr0dQo/VL5GyJZFI1I/AAAAAAAABkQ/hs8fqCuBLw4/s1600/C%23.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-fwcq2xr0dqo%2fvl5gyjzfi1i%2faaaaaaaabkq%2fhs8fqcublw4%2fs1600%2fc%2523.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="223" height="400"></a><span style="font-family:Verdana,sans-serif"><br>
+<span style="font-size:small"><a href="http://3.bp.blogspot.com/-FWCQ2xr0dQo/VL5GyJZFI1I/AAAAAAAABkQ/hs8fqCuBLw4/s1600/C%23.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-FWCQ2xr0dQo%2FVL5GyJZFI1I%2FAAAAAAAABkQ%2Fhs8fqCuBLw4%2Fs1600%2FC%2523.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="223" height="400"></a><span style="font-family:Verdana,sans-serif"><br>
 </span></span>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">See in above when listbox item is selected ,i passed selected&nbsp;contact&nbsp;Id as query&nbsp;string,so in this i get that id in &quot;<strong>OnNavigatedTo</strong>&quot; method like this<br>
 </span></p>
@@ -616,14 +616,14 @@ blog</a>.</span></p>
 <div>
 <div>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">1)First change command prompt&nbsp;directory&nbsp;path to&nbsp;<strong>Program Files (x86)\Microsoft&nbsp;SDKs\Windows Phone\v8.1\Tools\IsolatedStorageExplorerTool</strong></span></p>
-<p class="separator"><span style="font-size:small"><a href="http://2.bp.blogspot.com/-3iSRb-b1Zo0/VL5L130Q5eI/AAAAAAAABkg/TdOr8LFOf-c/s1600/Cmd1.PNG"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f-3isrb-b1zo0%2fvl5l130q5ei%2faaaaaaaabkg%2ftdor8lfof-c%2fs1600%2fcmd1.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="96"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://2.bp.blogspot.com/-3iSRb-b1Zo0/VL5L130Q5eI/AAAAAAAABkg/TdOr8LFOf-c/s1600/Cmd1.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F-3iSRb-b1Zo0%2FVL5L130Q5eI%2FAAAAAAAABkg%2FTdOr8LFOf-c%2Fs1600%2FCmd1.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="96"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small"><strong>&nbsp;</strong></span><span style="font-family:Verdana,sans-serif">2)Get Product Id from project&nbsp;Package.appxmanifest&nbsp;file Packaging Tab under Package name attribute&nbsp;(i.e&nbsp;</span><span style="font-family:Verdana,sans-serif">9f68177c-0add-437b-8b43-95ec429ee5b5)</span></p>
 </div>
 <div>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">3)if your app is run on emulator excute this command:&nbsp;<strong>ISETool.exe ts xd&nbsp;9f68177c-0add-437b-8b43-95ec429ee5b5&nbsp;c:\data\myfiles</strong></span></p>
 </div>
 <div>
-<p class="separator"><span style="font-size:small"><a href="http://2.bp.blogspot.com/-vuiI4CFff4s/VL5M9tT3itI/AAAAAAAABk0/UQt0vlZ5rTU/s1600/Cmd2.PNG"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f-vuii4cfff4s%2fvl5m9tt3iti%2faaaaaaaabk0%2fuqt0vlz5rtu%2fs1600%2fcmd2.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="130"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://2.bp.blogspot.com/-vuiI4CFff4s/VL5M9tT3itI/AAAAAAAABk0/UQt0vlZ5rTU/s1600/Cmd2.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F-vuiI4CFff4s%2FVL5M9tT3itI%2FAAAAAAAABk0%2FUQt0vlZ5rTU%2Fs1600%2FCmd2.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="130"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small"><strong><br>
 </strong></span></p>
 </div>
@@ -634,7 +634,7 @@ blog</a>.</span></p>
 <div>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">Now we will be found&nbsp;DB content in your computer at c:\data\myfiles like this.</span></p>
 </div>
-<p class="separator"><span style="font-size:small"><a href="http://4.bp.blogspot.com/-w6rcwZwDndU/U99sN_WZGyI/AAAAAAAABGw/mhuy4iLCoZs/s1600/DBExplore.PNG"><img src=":-proxy?url=http%3a%2f%2f4.bp.blogspot.com%2f-w6rcwzwdndu%2fu99sn_wzgyi%2faaaaaaaabgw%2fmhuy4ilcozs%2fs1600%2fdbexplore.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt=""></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://4.bp.blogspot.com/-w6rcwZwDndU/U99sN_WZGyI/AAAAAAAABGw/mhuy4iLCoZs/s1600/DBExplore.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-w6rcwZwDndU%2FU99sN_WZGyI%2FAAAAAAAABGw%2Fmhuy4iLCoZs%2Fs1600%2FDBExplore.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt=""></a></span></p>
 <div>
 <p><span style="font-family:Verdana,sans-serif; font-size:small"><br>
 </span></p>
@@ -646,7 +646,7 @@ blog</a>.</span></p>
 <p><span style="font-size:small"><strong>Summary:</strong></span></p>
 <p class="separator"><span style="font-size:small">In this first part, we have seen the basics of Sqlite, how to install the engine, the library Sqlite-net, and saw the most common operations (also known as code first), such as inserting, updating, and deleting
  data from a table of a database.</span></p>
-<pre class="csharp"><p><span style="font-size:small"><strong>Help me with feedback:</strong></span></p><p><span style="font-size:small">Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="67168-ratings.png" alt="" width="74" height="15">&nbsp;star rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice). &nbsp;</span></p></pre>
+<pre class="csharp"><p><span style="font-size:small"><strong>Help me with feedback:</strong></span></p><p><span style="font-size:small">Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="http://i1.code.msdn.s-msft.com/oops-principles-solid-7a4e69bf/image/file/67168/1/ratings.png" alt="" width="74" height="15">&nbsp;star rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice). &nbsp;</span></p></pre>
 <p class="separator"><span style="color:#666666; font-family:Verdana,sans-serif"><span style="color:#000000">Follow me always at &nbsp;</span></span><a class="account-group x_x_x_x_js-account-group x_x_x_x_js-action-profile x_x_x_x_js-user-profile-link x_x_x_x_js-nav" href="https://twitter.com/Subramanyam_B" style="font-size:small"><span class="username js-action-profile-name"><span style="color:#b1bbc3">@</span>Subramanyam_B</span>&nbsp;</a></p>
 <p class="separator"><a class="account-group x_x_x_x_js-account-group x_x_x_x_js-action-profile x_x_x_x_js-user-profile-link x_x_x_x_js-nav" href="https://twitter.com/Subramanyam_B" style="font-size:small"></a><span style="font-size:small">Have a nice day
  by</span><span style="color:#000000">&nbsp;</span><a href="http://bsubramanyamraju.blogspot.in/p/about-me.html" style="font-size:small">Subramanyam Raju</a><span style="color:#000000">&nbsp;:)</span></p>

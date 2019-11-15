@@ -27,7 +27,7 @@
 </div>
 <div>
 <div class="LW_CollapsibleArea_TitleDiv">
-<h1><img class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img" src="-030c41d9079671d09a62d8e2c1db6973.gif" alt=""><span class="LW_CollapsibleArea_Title">What You Will Learn</span></h1>
+<h1><img class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img" src="http://i.msdn.microsoft.com/Hash/030c41d9079671d09a62d8e2c1db6973.gif" alt=""><span class="LW_CollapsibleArea_Title">What You Will Learn</span></h1>
 </div>
 <div class="sectionblock" id="2bdc72c8-e9bf-4841-95bb-027776bc0a19_c"><a id="sectionToggle0"></a>
 <p><a href="http://msdn.microsoft.com/en-us/library/cc668796(v=VS.100).aspx">This quickstart</a>&nbsp;shows how to create and access a data service to expose data from the Northwind sample database. In later topics, you will create a Windows Presentation Foundation

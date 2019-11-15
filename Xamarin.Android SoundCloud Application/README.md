@@ -87,4 +87,4 @@
 <ul class="staticContent x_x_x_sc-list-bullet">
 </ul>
 <p><img id="153310" src="153310-13178035_896141887162215_5868426167626602145_n.jpg" alt="" width="540" height="960"></p>
-<p><img id="153527" src="153527-testing.png" alt=""></p>
+<p><img id="153527" src="https://i1.code.msdn.s-msft.com/xamarinandroid-soundcloud-74a79f0c/image/file/153527/1/testing.png" alt=""></p>

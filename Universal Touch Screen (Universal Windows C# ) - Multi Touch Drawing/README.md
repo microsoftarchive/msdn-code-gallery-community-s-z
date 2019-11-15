@@ -22,7 +22,7 @@
 
 <h1>Introduction</h1>
 <p>Just in case,&nbsp;project works with SDK 10.0.10240</p>
-<p><img id="148915" src="148915-build.png" alt="" width="320" height="170">&nbsp;&nbsp;</p>
+<p><img id="148915" src="https://i1.code.msdn.s-msft.com/windowsapps/universal-touch-screen-942e781b/image/file/148915/1/build.png" alt="" width="320" height="170">&nbsp;&nbsp;</p>
 <p>&nbsp;</p>
 <p>If you have a problem with upload to WP (ask PIN) ... see&nbsp;link <a href="http://stackoverflow.com/questions/34114265/visual-studio-pin-is-required-to-establish-a-connection">
 http://stackoverflow.com/questions/34114265/visual-studio-pin-is-required-to-establish-a-connection</a></p>
@@ -41,11 +41,11 @@ http://stackoverflow.com/questions/34114265/visual-studio-pin-is-required-to-est
 <p>&nbsp;</p>
 <p><em><br>
 </em></p>
-<p><img id="148622" src="148622-lumia950xl.png" alt="" width="350" height="650"><em>&nbsp;</em></p>
+<p><img id="148622" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/148622/1/Lumia950XL.png" alt="" width="350" height="650"><em>&nbsp;</em></p>
 <p>Screenshot's device emulator &nbsp;(using the mouse) ...</p>
-<p><img id="148624" src="148624-deviceemulator.png" alt="" width="320" height="500"></p>
+<p><img id="148624" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/148624/1/DeviceEmulator.PNG" alt="" width="320" height="500"></p>
 <p>This windows store application (Local PC)</p>
-<p><img id="148625" src="148625-localpc.png" alt="" width="350" height="250"></p>
+<p><img id="148625" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/148625/1/LocalPC.PNG" alt="" width="350" height="250"></p>
 <p>&nbsp;</p>
 <p><span style="font-size:small">In this example you find an answer how to use&nbsp;PointerPointProperties class,&nbsp;GetIntermediatePoints,&nbsp;It demonstrates how to using touch, mouse, and pen features. The application is written in C# and it designed
  for Windows 10 devices.&nbsp;</span></p>

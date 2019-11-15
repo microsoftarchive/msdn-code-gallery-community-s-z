@@ -41,7 +41,7 @@
 <p>The various sides and angles of the triangle are then labelled using the DrawString method.</p>
 <p>To round off the calculations, area of the triangle is calculated and drawn on screen.</p>
 <p>All controls used in the program are created at run time so to use the program simply download it, load it into VB then run it!</p>
-<p>&nbsp;<img id="101211" src="101211-triangle%20solver.jpg" alt="" width="671" height="451"></p>
+<p>&nbsp;<img id="101211" src="http://i1.code.msdn.s-msft.com/vstudio/triangle-solver-an-f87d4d21/image/file/101211/1/triangle%20solver.jpg" alt="" width="671" height="451"></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
 <div class="title"><span>Visual Basic</span></div>

@@ -24,16 +24,16 @@
 <li>Visual Studio 2017 </li><li>Xamarin for Visual Studio </li><li>Google Android Emulator is highly recommended.&nbsp; </li><li>Mac with Xcode and&nbsp;OS X Sierra(10.12) and above on it </li></ul>
 <p>&nbsp;</p>
 <h1>Running the Sample</h1>
-<h2><img id="176421" src="176421-insta_1.gif" alt=""></h2>
-<p><img id="176422" src="176422-insta_2.gif" alt=""></p>
+<h2><img id="176421" src="https://i1.code.msdn.s-msft.com/xamarinforms-calculator-42fafa39/image/file/176421/1/insta_1.gif" alt=""></h2>
+<p><img id="176422" src="https://i1.code.msdn.s-msft.com/xamarinforms-calculator-42fafa39/image/file/176422/1/insta_2.gif" alt=""></p>
 <h2><span>Android:</span></h2>
 <p>Make sure Build and Deploy Configurations for Android Project are checked in Solution -&gt; Properties -&gt; Configuration Properties</p>
 <p>It's better to check if Android Virtual Device(AVD) works well in Android Virtual Device Manager ( Tools -&gt; Android ) before building the project.</p>
 <p>Picture 1: Android Phone</p>
-<p><img id="176419" src="176419-android_3.jpg" alt="" width="222" height="408"></p>
+<p><img id="176419" src="https://i1.code.msdn.s-msft.com/xamarinforms-calculator-42fafa39/image/file/176419/1/android_3.jpg" alt="" width="222" height="408"></p>
 <p>&nbsp;</p>
 <p>picture 2: Android Tablet</p>
-<p><img id="176420" src="176420-android_tablet_2.jpg" alt="" width="612" height="430"></p>
+<p><img id="176420" src="https://i1.code.msdn.s-msft.com/xamarinforms-calculator-42fafa39/image/file/176420/1/android_tablet_2.jpg" alt="" width="612" height="430"></p>
 <p>&nbsp;</p>
 <h2>Windows:</h2>
 <p>Make sure Build and Deploy Configurations for UWP Project are checked in Solution -&gt; Properties -&gt; Configuration Properties</p>

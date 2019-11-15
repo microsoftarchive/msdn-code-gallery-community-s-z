@@ -215,8 +215,8 @@ namespace&nbsp;UploadDownloadInMVC.Controllers&nbsp;
 </div>
 </div>
 <p><span style="font-size:small">Once the data is added to the form data collection, we will pass the data to the controller via ajax call. Sounds cool, right? If the procedure goes well, we will see the output as follows.</span></p>
-<p><span style="font-size:small"><img src="-upload1.png" alt=""></span></p>
-<p><span style="font-size:small"><img src="-upload2.png" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/uploading-and-downloading-in-mvc/Images/upload1.PNG" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/uploading-and-downloading-in-mvc/Images/upload2.PNG" alt=""></span></p>
 <p><span style="font-size:small">When you choose the file and click upload, your selected file will be uploaded to the folder &ldquo;uploads&rdquo; as we have set it in the controller.</span></p>
 <p><span style="font-size:small">We have finished the process of uploading files. We will now move to the downloading section. This is the right time to add the remaining actions to our controller. The following is the code.</span></p>
 <div>
@@ -344,7 +344,7 @@ namespace&nbsp;UploadDownloadInMVC.Controllers&nbsp;
 </div>
 <p><span style="font-size:small">Here, we are taking the information (that we are sending from the controller) about the uploaded files and creating the Html.ActionLinks dynamically.</span></p>
 <p><span style="font-size:small">Please note that we are adding the Image name to the action. Here is the output after performing the operations.</span></p>
-<p><span style="font-size:small"><img src="-downloadwithframe.png" alt=""></span></p>
+<p><span style="font-size:small"><img src="http://www.c-sharpcorner.com/UploadFile/65794e/uploading-and-downloading-in-mvc/Images/downloadWithframe.png" alt=""></span></p>
 <p><span style="font-size:small">As in the preceding image, when you mouse over the link, it will show the image name along with the controller URL. Click on the link to download the file. So simple, right?</span></p>
 <h1></h1>
 </li>

@@ -21,7 +21,7 @@
 <p><span style="font-size:small">You can also read this article at my original blog from
 <a href="http://bsubramanyamraju.blogspot.com/2016/03/windows-10-uwp-apps-now-calendar.html" target="_blank">
 here</a></span></p>
-<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://3.bp.blogspot.com/-U8hrFXODqog/Vtu9bEw1Z1I/AAAAAAAACbw/LBgqULodtgc/s1600/2.Output3.png"><img src=":-2.output3.png" border="0" alt=""></a></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://3.bp.blogspot.com/-U8hrFXODqog/Vtu9bEw1Z1I/AAAAAAAACbw/LBgqULodtgc/s1600/2.Output3.png"><img src="https://3.bp.blogspot.com/-U8hrFXODqog/Vtu9bEw1Z1I/AAAAAAAACbw/LBgqULodtgc/s1600/2.Output3.png" border="0" alt=""></a></span></p>
 <p class="separator"><span style="font-size:small">&nbsp;<strong style="font-size:small">Requirements:</strong></span></p>
 <ul>
 <li><span style="font-family:verdana,sans-serif; font-size:small">This article is targeted for windows 10 Universal Windows Platform(Version 1511) , so make sure you&rsquo;ve downloaded and installed the latest Windows 10 SDK from&nbsp;<a href="https://dev.windows.com/en-us/downloads">h
@@ -50,10 +50,10 @@ here</a></span></p>
  You add controls to the app over the course of this tutorial.In the Name text box, type &quot;<strong>UWPCalenderControl</strong>&quot;.Click OK to create the project.</span>
 </li></ul>
 <p><span style="font-family:verdana,sans-serif; font-size:small">&nbsp;</span></p>
-<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://3.bp.blogspot.com/-NsUsbrH3jo8/Vtr77pMZvAI/AAAAAAAACbA/nTpTclwgnzA/s1600/1.NewProject.PNG"><img src=":-1.newproject.png" border="0" alt="" width="640" height="390"></a></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://3.bp.blogspot.com/-NsUsbrH3jo8/Vtr77pMZvAI/AAAAAAAACbA/nTpTclwgnzA/s1600/1.NewProject.PNG"><img src="https://3.bp.blogspot.com/-NsUsbrH3jo8/Vtr77pMZvAI/AAAAAAAACbA/nTpTclwgnzA/s640/1.NewProject.PNG" border="0" alt="" width="640" height="390"></a></span></p>
 <span style="font-size:small"><span style="font-family:verdana,sans-serif">
 <p class="separator">Visual Studio creates your project and displays it in the Solution Explorer.</p>
-<p class="separator"><a href="https://4.bp.blogspot.com/-ppLBaXT3E1c/Vtr8rP1nRsI/AAAAAAAACbE/iJUKk14uhGo/s1600/1.NewProject1.PNG"><img src=":-1.newproject1.png" border="0" alt=""></a></p>
+<p class="separator"><a href="https://4.bp.blogspot.com/-ppLBaXT3E1c/Vtr8rP1nRsI/AAAAAAAACbE/iJUKk14uhGo/s1600/1.NewProject1.PNG"><img src="https://4.bp.blogspot.com/-ppLBaXT3E1c/Vtr8rP1nRsI/AAAAAAAACbE/iJUKk14uhGo/s1600/1.NewProject1.PNG" border="0" alt=""></a></p>
 </span><strong><span style="font-family:verdana,sans-serif">2.&nbsp;</span><span style="font-family:verdana,sans-serif">How to use&nbsp;CalendarView&nbsp;control in Windows 10?</span></strong>
 </span>
 <p><span style="font-family:verdana,sans-serif; font-size:small">&nbsp;Now its time to use calendar controls and from windows 10 OS we have an in-built class called&nbsp;CalendarView, which can provide a standardized way to let users view and interact with
@@ -65,7 +65,7 @@ here</a></span></p>
 <p><span style="font-family:verdana,sans-serif; font-size:small">In above code&nbsp;</span></p>
 <p><span style="font-size:small"><span style="font-family:verdana,sans-serif">SelectionMode property is set to Multiple to let a user select multiple dates.&nbsp;</span><span style="font-family:verdana,sans-serif">DisplayMode property is useful to set calendar
  startup view and it is having three values(Month,Year,Decade). By default, it starts with the month view open.</span>&nbsp;</span></p>
-<p class="separator"><span style="font-size:small"><a href="https://1.bp.blogspot.com/-UtqVgBPos8Q/VtsM9QwJD6I/AAAAAAAACbY/5heSimEobv0/s1600/CalendarView.png"><img src=":-calendarview.png" border="0" alt="" width="640" height="290"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="https://1.bp.blogspot.com/-UtqVgBPos8Q/VtsM9QwJD6I/AAAAAAAACbY/5heSimEobv0/s1600/CalendarView.png"><img src="https://1.bp.blogspot.com/-UtqVgBPos8Q/VtsM9QwJD6I/AAAAAAAACbY/5heSimEobv0/s640/CalendarView.png" border="0" alt="" width="640" height="290"></a></span></p>
 <p>&nbsp;</p>
 <p><span style="font-family:verdana,sans-serif; font-size:small">So when users click the header in the month view to open the year view, and click the header in the year view to open the decade view. Users pick a year in the decade view to return to the year
  view, and pick a month in the year view to return to the month view. The two arrows to the side of the header navigate forward or backward by month, by year, or by decade.</span></p>
@@ -141,7 +141,7 @@ here</a></span></p>
 <p><span style="font-size:small">Now its time to test our sample, so follow below steps to run the app.</span></p>
 <p><span style="font-size:small"><strong>Step 1:&nbsp;</strong><span style="font-family:verdana,sans-serif">In addition to the options to&nbsp;<strong>Debug&nbsp;</strong>on a desktop device, Visual Studio provides options for deploying and debugging your app
  on a physical mobile device connected to the computer, or on a mobile device emulator. You can choose among emulators for devices with different memory and display configurations like below</span></span></p>
-<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://1.bp.blogspot.com/-UKOk1pFvA4Q/VtvMfguNRfI/AAAAAAAACcA/qP5qCZIuIh0/s1600/Emulator.PNG"><img src=":-emulator.png" border="0" alt=""></a></span></p>
+<p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><a href="https://1.bp.blogspot.com/-UKOk1pFvA4Q/VtvMfguNRfI/AAAAAAAACcA/qP5qCZIuIh0/s1600/Emulator.PNG"><img src="https://1.bp.blogspot.com/-UKOk1pFvA4Q/VtvMfguNRfI/AAAAAAAACcA/qP5qCZIuIh0/s1600/Emulator.PNG" border="0" alt=""></a></span></p>
 <p class="separator"><span style="font-family:verdana,sans-serif; font-size:small"><strong>Note:&nbsp;</strong></span></p>
 <p class="separator"><span style="font-family:verdana,sans-serif; font-size:small">1. It's a good idea to test your app on a deivce with a small screen and limited memory, so use the Emulator 10.0.10240.0 WVGA 4 inch 512MB option.</span></p>
 <p class="separator"><span style="font-family:verdana,sans-serif; font-size:small">2. If you want to test our app in physical device, you must&nbsp;<a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/dn614128.aspx">Register your Windows
@@ -150,8 +150,8 @@ here</a></span></p>
 <span style="font-family:verdana,sans-serif; font-size:small">
 <p class="separator">&nbsp;</p>
 <p class="separator">After selecting emulator/device, From the&nbsp;<strong>Debug</strong>&nbsp;menu, click&nbsp;<strong>Start Debugging&nbsp;</strong>or Press F5. Then we can found below screen on emulator/device:</p>
-<p class="separator"><a href="https://1.bp.blogspot.com/-g3yIyipOegA/VtvOv5Wkx7I/AAAAAAAACcI/TOnWnpm0ZOY/s1600/2.Output1.PNG"><img src=":-2.output1.png" border="0" alt="" width="212" height="400"></a></p>
-<p class="separator"><a href="https://3.bp.blogspot.com/-ycKuK06BIVE/VtvOv5_iJ8I/AAAAAAAACcM/7Mo5fQwo6nY/s1600/2.Output2.PNG"><img src=":-2.output2.png" border="0" alt="" width="212" height="400"></a></p>
+<p class="separator"><a href="https://1.bp.blogspot.com/-g3yIyipOegA/VtvOv5Wkx7I/AAAAAAAACcI/TOnWnpm0ZOY/s1600/2.Output1.PNG"><img src="https://1.bp.blogspot.com/-g3yIyipOegA/VtvOv5Wkx7I/AAAAAAAACcI/TOnWnpm0ZOY/s400/2.Output1.PNG" border="0" alt="" width="212" height="400"></a></p>
+<p class="separator"><a href="https://3.bp.blogspot.com/-ycKuK06BIVE/VtvOv5_iJ8I/AAAAAAAACcM/7Mo5fQwo6nY/s1600/2.Output2.PNG"><img src="https://3.bp.blogspot.com/-ycKuK06BIVE/VtvOv5_iJ8I/AAAAAAAACcM/7Mo5fQwo6nY/s400/2.Output2.PNG" border="0" alt="" width="212" height="400"></a></p>
 <p>&nbsp;</p>
 <p class="separator"><strong><span style="font-family:verdana,sans-serif">Important Notes:</span></strong></p>
 </span>
@@ -176,7 +176,7 @@ here</a></span></p>
 <div>
 <p><span style="font-size:small"><span style="font-family:verdana,sans-serif">6.&nbsp;</span><span style="font-family:verdana,sans-serif">This article is developed on windows 8.1 OS Machine with 64 bit.</span><span style="font-family:verdana,sans-serif">&nbsp;</span></span></p>
 <p class="separator"><span style="font-size:small"><strong>Help me with feedback:</strong></span></p>
-<p class="separator"><span style="font-size:small"><strong>&nbsp;</strong>Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="67168-ratings.png" alt="" width="74" height="15">&nbsp;star
+<p class="separator"><span style="font-size:small"><strong>&nbsp;</strong>Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="http://i1.code.msdn.s-msft.com/oops-principles-solid-7a4e69bf/image/file/67168/1/ratings.png" alt="" width="74" height="15">&nbsp;star
  rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice).&nbsp;</span></p>
 <p><span style="font-size:small"><span style="font-family:verdana,sans-serif"><br>
 </span></span></p>

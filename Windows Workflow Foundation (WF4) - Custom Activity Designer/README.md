@@ -24,7 +24,7 @@
 <h4><br>
 <object width="350" height="300" data="data:application/x-silverlight-2," type="application/x-silverlight-2"> <param name="source" value="/Content/Common/videoplayer.xap" /> <param name="initParams" value="deferredLoad=false,duration=0,m=http://i1.code.msdn.s-msft.com/windows-workflow-9e867448/image/file/45191/1/appfabriccustomactivitydsgn_2mb_ch9.wmv,autostart=false,autohide=true,showembed=true"
  /> <param name="background" value="#00FFFFFF" /> <param name="minRuntimeVersion" value="3.0.40624.0" /> <param name="enableHtmlAccess" value="true" /> <param name="src" value="http://i1.code.msdn.s-msft.com/windows-workflow-9e867448/image/file/45191/1/appfabriccustomactivitydsgn_2mb_ch9.wmv"
- /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span> </object>
+ /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span> </object>
 <br>
 <a id="http://i1.code.msdn.s-msft.com/windows-workflow-9e867448/image/file/45191/1/appfabriccustomactivitydsgn_2mb_ch9.wmv" href="http://i1.code.msdn.s-msft.com/windows-workflow-9e867448/image/file/45191/1/appfabriccustomactivitydsgn_2mb_ch9.wmv">Download
  video</a></h4>
@@ -65,10 +65,10 @@
 <p>&nbsp;</p>
 <ol>
 <li>Select File / Add / New Project </li><li>Choose the Activity Designer Library project template </li><li>Name the project <strong>MyActivityLibrary.Design</strong> </li></ol>
-<p><img src="44543-solution.png" alt="" width="241" height="129"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/windows-workflow-9e867448/image/file/44543/1/solution.png" alt="" width="241" height="129"></p>
 <p>Step 3: Set the Output Directory</p>
 <p>The Workflow Designer looks for the *.Design dll in the same directory as the activity assembly.&nbsp; Modify the build output so that it builds in that folder.&nbsp; Be sure to modify both Debug and Release settings.</p>
-<p><img src="44544-buildoutput.png" alt="" width="519" height="97"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/windows-workflow-9e867448/image/file/44544/1/buildoutput.png" alt="" width="519" height="97"></p>
 <h1>Step 3: Add RegisterMetadata method</h1>
 <p>The activity designer class should include a method to register the metadata for that designer.</p>
 <h1>
@@ -173,7 +173,7 @@ Build Action</strong> for this file should be set to <strong>Resource</strong></
 <div class="endscriptcode"></div>
 <h1 class="endscriptcode">Step 8: Configure the Designer project for debugging</h1>
 <p>There are two options for debugging your designer project.&nbsp; The recommended approach is to debug with a re-hosted designer application such as the one included with this application.&nbsp; Set the project properties as shown for debugging support.</p>
-<p><img src="44555-startaction.png" alt="" width="492" height="121"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/windows-workflow-9e867448/image/file/44555/1/startaction.png" alt="" width="492" height="121"></p>
 <p>&nbsp;</p>
 <p>To test with Visual Studio it is best to use the Experimental Instance option.&nbsp; Debugging with Visual Studio can take a long time so it is best to test by starting without debugging.</p>
 <p><img src="41360-vsdebug.png" alt="" width="504" height="247"></p>

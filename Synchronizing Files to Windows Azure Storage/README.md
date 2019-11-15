@@ -249,7 +249,7 @@ http://www.microsoft.com/downloads/details.aspx?FamilyID=5664019e-6860-4c33-9843
 <p><strong>Note:</strong> If you use Visual Studio 2010 to compile these samples, you will first need to remove references to the Sync Framework assemblies and then re-add the assembly references to the projects. Otherwise, you will see &quot;type or namespace name
  could not be found&quot; compilation errors.</p>
 <hr>
-<p><img src="19002-msf_logo.jpg" alt="" width="639" height="56"></p>
+<p><img src="http://code.msdn.microsoft.com/site/view/file/19002/1/MSF_Logo.jpg" alt="" width="639" height="56"></p>
 </div>
 </div>
 <div></div>

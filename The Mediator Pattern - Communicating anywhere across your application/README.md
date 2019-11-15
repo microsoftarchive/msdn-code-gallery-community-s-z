@@ -117,4 +117,4 @@ Mediator Pattern</a>, a coding method for communicating anywhere across an appli
 <li><em>MainWindow.xaml.cs - some examples od usage</em> </li><li><em>Mediator.cs - The magic class</em> </li></ul>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

@@ -54,7 +54,7 @@
 <p><span style="font-family:Arial,Tahoma,Helvetica,FreeSans,sans-serif"><br>
 </span></p>
 </div>
-<p class="separator"><a href="http://2.bp.blogspot.com/-kdddISdU3RY/UeIcqY6zAdI/AAAAAAAAAoI/D8JPYJJSKiE/s1600/1.JPG"><img src="-1.jpg" border="0" alt="" width="256" height="400"></a></p>
+<p class="separator"><a href="http://2.bp.blogspot.com/-kdddISdU3RY/UeIcqY6zAdI/AAAAAAAAAoI/D8JPYJJSKiE/s1600/1.JPG"><img src="http://2.bp.blogspot.com/-kdddISdU3RY/UeIcqY6zAdI/AAAAAAAAAoI/D8JPYJJSKiE/s400/1.JPG" border="0" alt="" width="256" height="400"></a></p>
 <p class="separator">3. Now we will implement the singleton class which going to be a data context for our WPF BusyIndictor controller. To do that right click on project &nbsp;and create new class called BusyIndicatorManager. Implement the class as bellow.</p>
 <p class="separator">&nbsp;</p>
 <p class="separator"><span style="color:#0000ff">using <a class="libraryLink" href="http://msdn.microsoft.com/en-US/library/Microsoft.Practices.Prism.ViewModel.aspx" target="_blank" title="Auto generated link to Microsoft.Practices.Prism.ViewModel">Microsoft.Practices.Prism.ViewModel</a>;</span></p>
@@ -183,7 +183,7 @@
 <p class="separator">&nbsp;</p>
 <p class="separator">4. Now we will implement the our view for busy indicator. First add &quot;Xceed.Wpf.Toolkit.dll&quot; file as a reference from extracted&nbsp;<span>Extended WPF Toolkit&nbsp;</span>folder.</p>
 <p class="separator">&nbsp;</p>
-<p class="separator"><a href="http://2.bp.blogspot.com/-PCKrvrZzEaM/UeInaQIPieI/AAAAAAAAAoY/SD2ZW_8B88w/s1600/2.JPG"><img src="-2.jpg" border="0" alt="" width="232" height="400"></a></p>
+<p class="separator"><a href="http://2.bp.blogspot.com/-PCKrvrZzEaM/UeInaQIPieI/AAAAAAAAAoY/SD2ZW_8B88w/s1600/2.JPG"><img src="http://2.bp.blogspot.com/-PCKrvrZzEaM/UeInaQIPieI/AAAAAAAAAoY/SD2ZW_8B88w/s400/2.JPG" border="0" alt="" width="232" height="400"></a></p>
 <p class="separator">&nbsp;</p>
 <p class="separator">5. Now we will implement our MainPage.xaml view as bellow.</p>
 <p class="separator">&nbsp;</p>
@@ -220,13 +220,13 @@
 <p>&nbsp;</p>
 </div>
 <div>
-<p class="separator"><a href="http://1.bp.blogspot.com/-uNs7PU2qZeM/UeIuVuncXFI/AAAAAAAAAoo/WBd8HpCN0QQ/s1600/3.JPG"><img src="-3.jpg" border="0" alt="" width="640" height="480"></a></p>
+<p class="separator"><a href="http://1.bp.blogspot.com/-uNs7PU2qZeM/UeIuVuncXFI/AAAAAAAAAoo/WBd8HpCN0QQ/s1600/3.JPG"><img src="http://1.bp.blogspot.com/-uNs7PU2qZeM/UeIuVuncXFI/AAAAAAAAAoo/WBd8HpCN0QQ/s640/3.JPG" border="0" alt="" width="640" height="480"></a></p>
 <p><span style="font-family:Arial,Tahoma,Helvetica,FreeSans,sans-serif; font-size:x-small"><span>In class constructor we assign busy indicator DataContext as singleton instance of BusyIndicatorManager.&nbsp;</span></span></p>
 <p><span style="font-family:Arial,Tahoma,Helvetica,FreeSans,sans-serif; font-size:x-small"><span><br>
 </span></span><span style="font-family:Arial,Tahoma,Helvetica,FreeSans,sans-serif; font-size:x-small"><span>7. Now Run the application and click on Run BusyIndicator button and then busy indicator will visible in our application.</span></span></p>
 <p><span style="font-family:Arial,Tahoma,Helvetica,FreeSans,sans-serif; font-size:x-small"><span><br>
 </span></span></p>
-<p class="separator"><a href="http://1.bp.blogspot.com/-GwWppQARhXI/UeIvR9nqCKI/AAAAAAAAAo0/4IRCmPgEadU/s1600/4.JPG"><img src="-4.jpg" border="0" alt="" width="400" height="266"></a></p>
+<p class="separator"><a href="http://1.bp.blogspot.com/-GwWppQARhXI/UeIvR9nqCKI/AAAAAAAAAo0/4IRCmPgEadU/s1600/4.JPG"><img src="http://1.bp.blogspot.com/-GwWppQARhXI/UeIvR9nqCKI/AAAAAAAAAo0/4IRCmPgEadU/s400/4.JPG" border="0" alt="" width="400" height="266"></a></p>
 <p class="separator">&nbsp;</p>
 <p class="separator">Here we call the ShowBusy method which is implemented in BusyIndicatorManager class, using it's singleton instance. Inside the method we will set IsBusy property into true and Message property with message which are &nbsp;bind to the
  BusyIndicator controller in our MainPage.xaml.</p>

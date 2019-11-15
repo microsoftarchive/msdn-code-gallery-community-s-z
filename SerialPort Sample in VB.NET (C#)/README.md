@@ -26,7 +26,7 @@
 <p style="padding-left:30px">The only neccessary requirement is a COM port on Your System. It may me also a USB serial device. To run this sample You need two computers connected with a null modem cable. Install this sample on both or use hyperterminal on one
  side.</p>
 <p style="padding-left:30px"><span style="font-size:xx-small">&nbsp;</span><strong><span style="font-size:large">The user interface</span></strong></p>
-<p><span style="font-family:Lucida Console; font-size:large"><span style="font-family:Lucida Console; font-size:large">&nbsp;<img src="57810-sc.bmp" alt="" width="530" height="122"></span></span>&nbsp;</p>
+<p><span style="font-family:Lucida Console; font-size:large"><span style="font-family:Lucida Console; font-size:large">&nbsp;<img src="http://i1.code.msdn.s-msft.com/serialport-sample-in-vbnet-fb040fb2/image/file/57810/1/sc.bmp" alt="" width="530" height="122"></span></span>&nbsp;</p>
 <ul>
 <li>choose a Com on combobox &quot;Port&quot; </li><li>choose baudrate on combobox &quot;Baud&quot; </li><li>press button &quot;Open Port&quot; </li><li>enter a message in the TX box </li><li>press button &quot;send ...&quot; </li><li>use button array on left side to send one character </li><li>send a messsage from remote </li><li>press button &quot;Close Port&quot; when Your session is finished </li></ul>
 <p>&nbsp;</p>
@@ -188,7 +188,7 @@
 <p><strong>&nbsp;</strong></p>
 <p>&nbsp;</p>
 <div class="endscriptcode">
-<div class="endscriptcode">&nbsp;<img src="56933-serialportresponse.jpg" alt="" width="600" height="247"></div>
+<div class="endscriptcode">&nbsp;<img src="http://i1.code.msdn.s-msft.com/serialport-sample-in-vbnet-fb040fb2/image/file/56933/1/serialportresponse.jpg" alt="" width="600" height="247"></div>
 <p>&nbsp;</p>
 <p>External device (mcu) sends STX (02). The dataReceived handle responses direct with a frame of bytes.</p>
 <p>In free running mode the timespan is jittering between 4 - 6 ms. (Interval A-B on logic analyser) What is the conclusion of this fact? Try to fetch more bytes at once. You can use the inputbuffer with a default value 4096.</p>

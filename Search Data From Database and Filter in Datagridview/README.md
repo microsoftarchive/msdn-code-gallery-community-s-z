@@ -27,7 +27,7 @@
 <ul>
 </ul>
 <p><strong>Diagram:</strong></p>
-<p><strong><img id="133651" src="133651-database.jpg" alt="" width="650" height="382"><br>
+<p><strong><img id="133651" src="https://i1.code.msdn.s-msft.com/search-data-from-database-f2cb5d53/image/file/133651/1/database.jpg" alt="" width="650" height="382"><br>
 </strong></p>
 <p><strong>Variables:</strong></p>
 <p>In this program we will use these variables.</p>

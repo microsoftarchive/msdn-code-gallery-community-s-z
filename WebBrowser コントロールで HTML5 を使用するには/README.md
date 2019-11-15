@@ -92,7 +92,7 @@ Video 要素を使用する</h2>
 </div>
 <div class="endscriptcode"></div>
 </li><li>プロジェクトを実行します。 </li><li>ローカルの html が読み込まれます。<br>
-<img src="49507-604_01.jpg" alt="" width="200" height="333" style="margin:10px 0">
+<img src="http://i1.code.msdn.s-msft.com/windowsphone-howtolearning-9e17d3c0/image/file/49507/1/604_01.jpg" alt="" width="200" height="333" style="margin:10px 0">
 </li><li>video 要素をタップするとビデオが全画面で再生されます。
 <p>※Windows Phone Emulator では再生できませんので、Windows Phone デバイスでお試しください</p>
 </li></ol>
@@ -226,7 +226,7 @@ MessageBox.Show(e.Value);&nbsp;
 </div>
 <div class="endscriptcode"></div>
 </li><li>プロジェクトを実行します。 </li><li>html 本文の背景色が、選択されている Windows Phone のアクセント カラーに変更されています。<br>
-<img src="49508-604_02.gif" alt="" width="200" height="333" style="margin:10px 0">
+<img src="http://i1.code.msdn.s-msft.com/windowsphone-howtolearning-9e17d3c0/image/file/49508/1/604_02.gif" alt="" width="200" height="333" style="margin:10px 0">
 </li></ol>
 <h2 style="font-size:120%; margin:20px 0px; border-left:7px solid #666666; padding-left:12px">
 Canvas 要素を使用する</h2>
@@ -299,7 +299,7 @@ browser.InvokeScript(<span class="cs__string">&quot;drawSquare&quot;</span>,&nbs
 </div>
 <div class="endscriptcode"></div>
 </li><li>プロジェクトを実行します。 </li><li>Canvas 領域に、Windows Phone のアクセント カラーを使って四角形が描画されます。<br>
-<img src="49509-604_03.gif" alt="" width="200" height="333" style="margin:10px 0">
+<img src="http://i1.code.msdn.s-msft.com/windowsphone-howtolearning-9e17d3c0/image/file/49509/1/604_03.gif" alt="" width="200" height="333" style="margin:10px 0">
 </li></ol>
 <p>Windows Phone 上の IE9 が提供する強力なモバイル Web エクスペリエンスを紹介しました。WebBrowser コントロールを使用することで、Web エクスペリエンスを効果的に使用するアプリケーションの開発が可能になります。</p>
 <h2 style="font-size:120%; margin:20px 0px; border-left:7px solid #666666; padding-left:12px">
@@ -317,8 +317,8 @@ browser.InvokeScript(<span class="cs__string">&quot;drawSquare&quot;</span>,&nbs
 <table>
 <tbody>
 <tr>
-<td><a href="http://code.msdn.microsoft.com/ja-jp"><img src="-ff950935.coderecipe_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
-<td><a href="http://msdn.microsoft.com/ja-jp/windowsphone" target="_blank"><img src="-ff950935.winphone_180x70(ja-jp,msdn.10).gif" border="0" alt="Windows Phone デベロッパー センター" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://code.msdn.microsoft.com/ja-jp"><img src="http://msdn.microsoft.com/ff950935.coderecipe_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/windowsphone" target="_blank"><img src="http://i.msdn.microsoft.com/ff950935.WinPhone_180x70(ja-jp,MSDN.10).gif" border="0" alt="Windows Phone デベロッパー センター" width="180" height="70" style="margin-top:3px"></a></td>
 <td>
 <ul>
 <li>もっと他のコンテンツを見る &gt;&gt; <a href="http://msdn.microsoft.com/ja-jp/windowsphone/hh744643" target="_blank">
@@ -328,4 +328,4 @@ Windows Phone デベロッパー センターへ</a> </li></ul>
 </tr>
 </tbody>
 </table>
-<p style="margin-top:20px"><a href="#top"><img src="-top.gif" border="0" alt="">ページのトップへ</a></p>
+<p style="margin-top:20px"><a href="#top"><img src="http://www.microsoft.com/japan/msdn/nodehomes/graphics/top.gif" border="0" alt="">ページのトップへ</a></p>

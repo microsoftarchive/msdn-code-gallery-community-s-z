@@ -202,4 +202,4 @@ In this example, there are two printing buttons. the first prints the parent gri
 <p><span style="font-size:small"><strong><a href="http://social.technet.microsoft.com/wiki/contents/articles/13025.wpf-printing-overview.aspx">http://social.technet.microsoft.com/wiki/contents/articles/13025.wpf-printing-overview.aspx</a></strong></span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

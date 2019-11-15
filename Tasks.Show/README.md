@@ -11,7 +11,7 @@
 - 02/22/2011
 ## Description
 
-<p><span style="font-size:small"><img src="18648-capture.png" alt="" width="185" height="150" style="margin-right:auto; margin-left:auto; display:block"></span></p>
+<p><span style="font-size:small"><img src="http://i2.code.msdn.microsoft.com/tasksshow-1bf01c8d/image/file/18648/1/capture.png" alt="" width="185" height="150" style="margin-right:auto; margin-left:auto; display:block"></span></p>
 <p><span style="font-size:small">Are you still using yellow sticky notes to remember tasks on your to-do list. Did you ever need an easy, light and quick way to manage your to-do list? Well we got a solution for you. Tasks.Show is a simple Windows application
  that lets you manage your to-do list in an easy and intuitive meaner. Simply create new task, assign it to a project and give it a deadline, and you are set.
 <br>

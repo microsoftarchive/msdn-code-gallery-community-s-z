@@ -12,7 +12,7 @@
 - 11/14/2017
 ## Description
 
-<p><img id="182016" src="182016-12-11-2017%2015.03.57.png" alt="" width="270" height="323"></p>
+<p><img id="182016" src="https://i1.code.msdn.s-msft.com/sudoku-8db507f7/image/file/182016/1/12-11-2017%2015.03.57.png" alt="" width="270" height="323"></p>
 <p>&nbsp;</p>
 <p><a href="http://www.scproject.biz/sudoku.php" target="_blank"><span style="font-size:small">Online JavaScript version</span></a></p>
 <p>&nbsp;</p>

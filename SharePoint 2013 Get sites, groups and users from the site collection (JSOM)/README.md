@@ -35,7 +35,7 @@ jQWidgets</a>. The control used in this sample is a trial version. The grid disp
 <br>
 <p dir="ltr"><span style="font-size:small">Figure 1. Browser window display the grid grouped by Web and Group.</span></p>
 <br>
-<p dir="ltr"><span style="font-size:small"><img src=":-a_l6_z1pnqebkbehhcwwc6pc4ofannkokot0hzaaaiogk2bdfsbpnzlfevkkzbf-tlq2yfwpgdetw79g-6d0ptc3uxvy8wgfmlsyozld-sj14uu5m09cxgi5ht3sadcrnqr0grfd" alt="" width="602" height="299"></span></p>
+<p dir="ltr"><span style="font-size:small"><img src="https://lh4.googleusercontent.com/a_l6_z1PnQEBKBeHhcWWc6Pc4OfANNkokot0hzaAaiOgk2bDFsBPnzLfeVKkzBF-tlQ2YFwpGdETw79G-6d0pTc3UXVy8WgFmlSYOzLd-SJ14uu5m09CXGI5Ht3SaDCRNQr0GRFD" alt="" width="602" height="299"></span></p>
 <p dir="ltr"><span style="font-size:small"></span></p>
 <h2 dir="ltr"><span style="font-size:small">Prerequisites</span></h2>
 <p dir="ltr"><span style="font-size:small">This sample requires the following:</span></p>

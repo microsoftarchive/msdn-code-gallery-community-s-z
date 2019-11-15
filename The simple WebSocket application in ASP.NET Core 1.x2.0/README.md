@@ -35,7 +35,7 @@
 </em><span class="hps"><em>the <span class="hps"><em>Web</em></span><em>S</em><span class="hps"><em>ockets</em></span><strong>&nbsp;</strong><em>&nbsp;</em>&nbsp;protocol</em></span><span class="hps"><em>. Or you should use &quot;Kestrel<strong>&nbsp;</strong><em>&nbsp;</em>&quot;&nbsp;on
  Windows 7 or Windows 2008 R2.</em></span></span></em></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
-<p><em>&nbsp;<img id="180994" src="180994-2017-10-17_20-06-07.png" alt="" width="1574" height="1039"></em></p>
+<p><em>&nbsp;<img id="180994" src="https://i1.code.msdn.s-msft.com/the-simple-websocket-0dd65479/image/file/180994/1/2017-10-17_20-06-07.png" alt="" width="1574" height="1039"></em></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">

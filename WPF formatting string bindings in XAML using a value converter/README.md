@@ -22,7 +22,7 @@
 StringFormat</a> or <a href="http://msdn.microsoft.com/en-us/library/system.windows.controls.contentcontrol.contentstringformat.aspx" target="_blank">
 ContentStringFormat</a>. However there are still scenarios where some extra coding is required to get the desired results.</p>
 <p>For instance an application may have an alphanumeric order reference &quot;<strong>ON1029HH00CD</strong>&quot;. A requirement might be for the reference to be displayed in a TextBlock or Label in a more friendly format: &quot;<strong>ON:1029-HH00 CD</strong>&quot;.</p>
-<p><img id="131394" src="131394-customstringformatexample.png" alt="" width="460" height="250"></p>
+<p><img id="131394" src="https://i1.code.msdn.s-msft.com/formatting-string-binding-061e8e36/image/file/131394/1/customstringformatexample.png" alt="" width="460" height="250"></p>
 <p>This&nbsp;sample shows how&nbsp;to create a custom value converter that accepts a text mask parameter. This is then applied within the Convert method&nbsp;by a MaskTextProvider&nbsp;to format the bound string value.</p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p>For a full description of how to implement the value converter and use it&nbsp;there is a&nbsp;Technet WIKI article to accompany this sample&nbsp;<a href="http://social.technet.microsoft.com/wiki/contents/articles/18623.formatting-string-binding-in-xaml-using-a-value-converter.aspx ">here</a>.

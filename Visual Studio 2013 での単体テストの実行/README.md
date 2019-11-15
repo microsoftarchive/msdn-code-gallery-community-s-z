@@ -21,11 +21,11 @@
 <p><span style="font-size:small">テスト実行自体の理解を深めるため、シンプルなコンソール アプリケーションに対してテストを行う手順を記載いたします。</span></p>
 <ol>
 <li><span style="font-size:small">Visual Studio 2013 を起動します。</span> </li><li><span style="font-size:small">[新しいプロジェクト...] をクリックします。<br>
-<img id="130344" src="130344-%e5%9b%b31.png" alt="" width="500"><br>
+<img id="130344" src="https://i1.code.msdn.s-msft.com/unitetestvs2013-fa41a0af/image/file/130344/1/%e5%9b%b31.png" alt="" width="500"><br>
 <br>
 </span></li><li><span style="font-size:small">[新しいプロジェクト] ウィンドウが表示されるので、左ペインで [インストール済み]-[テンプレート]-[Visual C#]-[Windows デスクトップ] を選択後、右ペインで [コンソール アプリケーション] を選択します。</span>
 </li><li><span style="font-size:small">[名前] を &quot;TestApp&quot; と変更したうえで、[OK] ボタンをクリックします。<br>
-<img id="130345" src="130345-%e5%9b%b32.png" alt="" width="500"><br>
+<img id="130345" src="https://i1.code.msdn.s-msft.com/unitetestvs2013-fa41a0af/image/file/130345/1/%e5%9b%b32.png" alt="" width="500"><br>
 <br>
 </span></li><li><span style="font-size:small">&nbsp;コードを以下のように編集します。なお、このコードはテスト対象となります。<br>
 <div class="scriptcode">
@@ -55,16 +55,16 @@
 </div>
 </div>
 </span></li><li><span style="font-size:small">次に、テスト用のプログラムを作成していきます。</span> </li><li><span style="font-size:small">[ソリューションエクスプローラー] 上で [ソリューション 'TestApp'] を右クリックし、[追加]-[新しいプロジェクト...] を選択します。<br>
-<img id="130346" src="130346-%e5%9b%b33.png" alt="" width="500"><br>
+<img id="130346" src="https://i1.code.msdn.s-msft.com/unitetestvs2013-fa41a0af/image/file/130346/1/%e5%9b%b33.png" alt="" width="500"><br>
 <br>
 </span></li><li><span style="font-size:small">[新しいプロジェクト] ウィンドウが表示されるので、左ペインで [インストール済み]-[Visual C#]-[テスト] を選択します。右ペインで [単体テスト プロジェクト] を選択し、&quot;UnitTestProject1&quot; という名前を設定後、[OK] ボタンをクリックします。<br>
-<img id="130347" src="130347-%e5%9b%b34.png" alt="" width="500"><br>
+<img id="130347" src="https://i1.code.msdn.s-msft.com/unitetestvs2013-fa41a0af/image/file/130347/1/%e5%9b%b34.png" alt="" width="500"><br>
 <br>
 </span></li><li><span style="font-size:small">UnitTestProject1 から、TestApp を呼び出して利用できるようにするため、参照の追加を行います。[UnitTestProject1]-[参照設定] を右クリックし、[参照の追加] をクリックします。<br>
-<img id="130348" src="130348-%e5%9b%b35.png" alt="" width="500"><br>
+<img id="130348" src="https://i1.code.msdn.s-msft.com/unitetestvs2013-fa41a0af/image/file/130348/1/%e5%9b%b35.png" alt="" width="500"><br>
 <br>
 </span></li><li><span style="font-size:small">[参照マネージャー] ウィンドウが表示されるので、左ペインで [ソリューション]-[プロジェクト] を選択後、右ペインで &quot;TestApp&quot; にチェックを入れてし、[OK] ボタンをクリックします。<br>
-<img id="130349" src="130349-%e5%9b%b36.png" alt="" width="500"><br>
+<img id="130349" src="https://i1.code.msdn.s-msft.com/unitetestvs2013-fa41a0af/image/file/130349/1/%e5%9b%b36.png" alt="" width="500"><br>
 </span></li><li><span style="font-size:small">[ソリューションエクスプローラー] から UniteTest1.cs ファイルをダブル クリックしてファイルを開きます。</span>
 </li><li><span style="font-size:small">コードを以下のように編集します。<br>
 &nbsp;
@@ -107,9 +107,9 @@
 </div>
 </div>
 </span></li><li><span style="font-size:small">&quot;TestMethod1()&quot; を右クリックし、[テストの実行] をクリックします。<br>
-<img id="130350" src="130350-%e5%9b%b37.png" alt="" width="500">&nbsp;<br>
+<img id="130350" src="https://i1.code.msdn.s-msft.com/unitetestvs2013-fa41a0af/image/file/130350/1/%e5%9b%b37.png" alt="" width="500">&nbsp;<br>
 &nbsp;</span> </li><li><span style="font-size:xx-small"><span style="font-size:small">[テスト エクスプローラー] ウィンドウが表示され、テストが成功した場合には緑色のチェックマークが表示されます。</span><br>
-<img id="130351" src="130351-%e5%9b%b38.png" alt="" width="500"><br>
+<img id="130351" src="https://i1.code.msdn.s-msft.com/unitetestvs2013-fa41a0af/image/file/130351/1/%e5%9b%b38.png" alt="" width="500"><br>
 </span></li></ol>
 <ul>
 </ul>

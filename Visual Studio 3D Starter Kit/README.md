@@ -33,7 +33,7 @@
 - 04/02/2014
 ## Description
 
-<h1><img id="70098" src="70098-starterkit_screenshot.png" alt="" width="500" height="313"></h1>
+<h1><img id="70098" src="http://i1.code.msdn.s-msft.com/visual-studio-3d-starter-455a15f1/image/file/70098/1/starterkit_screenshot.png" alt="" width="500" height="313"></h1>
 <h1>Introduction</h1>
 <p>This sample&nbsp;demonstrates several&nbsp;features of Visual Studio&nbsp;useful in game development. It&nbsp;contains the starting point for a basic Direct3D game that shares code between Windows 8.1 and&nbsp;Windows Phone 8.1 using the new Universal app
  model.</p>

@@ -26,12 +26,12 @@
 <h3>Windows Image Acquisition Architecture</h3>
 <p>WIA architecture is both an Application Programming Interface (API) and a Device Driver Interface (DDI). The WIA architecture includes components provided by the software and hardware vendor, as well as by Microsoft. Figure 1 below illustrates the WIA architecture.</p>
 <p>&nbsp;</p>
-<p><img src="-hwspxp01.gif" border="0" alt="Figure 1: The components of WIA architecture." width="335" height="418"></p>
+<p><img src="http://img.microsoft.com/library/media/1033/technet/images/prodtechnol/winxppro/evaluate/hwspxp01.gif" border="0" alt="Figure 1: The components of WIA architecture." width="335" height="418"></p>
 <h2>The DLL Fix</h2>
 <p>I have included all the required references in the source code. You don't need to do this, but if you wish to know how you may read this section.</p>
-<p><img src="-reference.jpg" border="0" alt="Reference" hspace="0" width="640" height="346"></p>
+<p><img src="http://www.codeproject.com/KB/cs/WebCamService/reference.JPG" border="0" alt="Reference" hspace="0" width="640" height="346"></p>
 <p>You want to add a reference to Microsoft Windows Image Acquisition type library.</p>
-<p><img src="-reference2.jpg" border="0" alt="Reference2" hspace="0" width="640" height="342"></p>
+<p><img src="http://www.codeproject.com/KB/cs/WebCamService/reference2.JPG" border="0" alt="Reference2" hspace="0" width="640" height="342"></p>
 <p>You also want to add a reference to WiaVideo Type Library. However, after some trouble I read about a bug and its fix that occurs while importing the type library.</p>
 <p>Use ILDASM to dump the type library&nbsp;<em>Interop.WIAVIDEOLib.dll</em>, then use Notepad to replace occurrences of<code>valuetype _RemotableHandle&amp;</code>&nbsp;to&nbsp;<code>native int</code>. Then compile the iL dump file you fixed using&nbsp;<code>ILASM&nbsp;</code>in
  the CMD&nbsp;<code>ilasm /DLL WIAVIDEOLib.il</code>. Add a reference to the new DLL and you are set to go.</p>

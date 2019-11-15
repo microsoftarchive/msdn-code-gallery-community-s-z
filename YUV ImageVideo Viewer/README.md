@@ -164,9 +164,9 @@ Very less number of applications supports YUV Video/Still playing Options.</p>
 </tr>
 </tbody>
 </table>
-<p><img src="-yplane.gif" alt="" width="200" height="127">
-<img src="-u2plane.gif" alt="" width="200" height="127">
-<img src="-v2plane.gif" alt="" width="200" height="127"></p>
+<p><img src="http://www.fourcc.org/images/yplane.gif" alt="" width="200" height="127">
+<img src="http://www.fourcc.org/images/u2plane.gif" alt="" width="200" height="127">
+<img src="http://www.fourcc.org/images/v2plane.gif" alt="" width="200" height="127"></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
 <div class="title"><span>C&#43;&#43;</span></div>

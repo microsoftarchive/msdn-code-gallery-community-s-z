@@ -24,7 +24,7 @@
 <h1>Download Description</h1>
 <p>The samples environment for Microsoft Chart Controls for .NET Framework contains over 200 samples for Windows Forms. The samples cover every major feature in Chart Controls for .NET Framework. They enable you to see the Chart controls in action as well as
  use the code as templates for your own web and windows applications.</p>
-<p><img id="114477" src="114477-chartsamples_thumb_1.jpg" alt="" width="644" height="128"></p>
+<p><img id="114477" src="http://code.msdn.microsoft.com/site/view/file/114477/1/ChartSamples_thumb_1.jpg" alt="" width="644" height="128"></p>
 <p>The samples environment contains a Getting Started section to help you start using the Chart controls quickly. The samples demonstrates how to use the following features in Microsoft Chart Controls for .NET Framework:</p>
 <ul>
 <li>All supported chart types </li><li>Data series, chart areas, axes, legends, labels, titles, and more </li><li>Data Binding </li><li>Data manipulation, such as copying, splitting, merging, alignment, grouping, sorting, searching, filtering, and more

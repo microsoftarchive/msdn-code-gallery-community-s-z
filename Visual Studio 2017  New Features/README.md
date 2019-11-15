@@ -37,7 +37,7 @@ This feature is only available in Visual Studio 2017 Enterprise edition. Without
 <em>&quot;Live Unit Testing&quot;</em>. We can enable Live Unit Testing for which you need to go to the
 <em>&quot;Test&quot;</em> command of the top-level menu bar in VS, choose &quot;Live Unit Testing&quot;, then &quot;Start&quot;.<br>
 <br>
-<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/6765.image006.png"><img src=":-6765.image006.png" alt="" style="border-width:0px; border-style:solid"></a><br>
+<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/6765.image006.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/6765.image006.png" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 We noticed that 3 symbols appeared in our code due to running on background Live Testing.</p>
 <ul>
@@ -65,14 +65,14 @@ The new Filtering IntelliSense Search option is available in Visual Studio 2017.
 This is a very exciting feature in VS2017. It gives us the good code practice in our Application. The code given below notices that we have written an
 <em>&quot;If&quot;</em> condition without curl braces. Thus, it gives us the suggestion tip add the curl braces to understand the code.<br>
 <br>
-<a href="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/installation-new-features-in-visual-studio-2017/Images/11.gif"><img src="-11.gif" alt="" style="max-width:550px; border-width:0px; border-style:solid"></a><br>
+<a href="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/installation-new-features-in-visual-studio-2017/Images/11.gif"><img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/installation-new-features-in-visual-studio-2017/Images/11.gif" alt="" style="max-width:550px; border-width:0px; border-style:solid"></a><br>
 <br>
 </p>
 <h2>Code Style Changing</h2>
 <p><br>
 We can change the code style option in our VS2017. Go to <em>&quot;Tools -&gt; Options -&gt; Text Editor -&gt; Basic -&gt; Code Style -&gt; Naming&quot;</em>.<br>
 <br>
-<a href="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/installation-new-features-in-visual-studio-2017/Images/12.gif"><img src="-12.gif" alt="" style="max-width:550px; border-width:0px; border-style:solid"></a><br>
+<a href="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/installation-new-features-in-visual-studio-2017/Images/12.gif"><img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/installation-new-features-in-visual-studio-2017/Images/12.gif" alt="" style="max-width:550px; border-width:0px; border-style:solid"></a><br>
 <br>
 </p>
 <h1>Conclusion</h1>

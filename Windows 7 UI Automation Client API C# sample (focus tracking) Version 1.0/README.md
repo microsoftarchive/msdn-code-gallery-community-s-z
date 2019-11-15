@@ -30,4 +30,4 @@
  calls have to be made at that time to get any more data.</p>
 <p>If you&rsquo;d like the sample updated to demo more actions, or to fix some of the cases where the magnification window isn&rsquo;t visible as expected, let me know.</p>
 <p>Guy</p>
-<p><img src="21457-sampleapp_focustracking.png" alt="" width="984" height="686"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/windows-7-ui-automation-6390614a/image/file/21457/1/sampleapp_focustracking.png" alt="" width="984" height="686"></p>

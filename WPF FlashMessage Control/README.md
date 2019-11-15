@@ -33,7 +33,7 @@ flash message system</a>, so I thought of creating a control that acts slightly&
 <p><em>&nbsp; &nbsp; &nbsp;FadesOutAutomatically: besides clicking on the close button, you can configure whether it fades out automatically; the default is true.</em></p>
 <p><em>&nbsp; &nbsp; &nbsp;FadeOutTime: it specifies how much time the FlashMessage waits to fades out after it fades in; this property only takes effect if FadesOutAutomatically is set to true; the default is 10 seconds.</em></p>
 <h1>A Glimpse</h1>
-<p><em>&nbsp; &nbsp; &nbsp;<img src="56088-sem%20t%c3%adtulo.png" alt="" width="520" height="181"></em></p>
+<p><em>&nbsp; &nbsp; &nbsp;<img src="http://i1.code.msdn.s-msft.com/new-control-to-get-rid-of-377ffb5a/image/file/56088/2/sem%20t%c3%adtulo.png" alt="" width="520" height="181"></em></p>
 <h1>The Sample</h1>
 <p><em>&nbsp; &nbsp; &nbsp;The sample has two projects. One is a Control Library which contains the FlashMessage control, and the another one is a WPF Application that shows how to use it.</em></p>
 <h1><span style="font-size:20px">The Code</span></h1>

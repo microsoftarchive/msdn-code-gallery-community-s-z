@@ -298,7 +298,7 @@ The dependencies given below are required to create QR Code Application.<br>
 <h1>Output<br>
 <br>
 </h1>
-<p><a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/2117.QRCode-Generator.JPG"><img src=":-2117.qrcode-generator.jpg" alt="" style="border-width:0px; border-style:solid"></a></p>
+<p><a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/2117.QRCode-Generator.JPG"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/2117.QRCode-Generator.JPG" alt="" style="border-width:0px; border-style:solid"></a></p>
 <h1>Reference</h1>
 <ul>
 <li><a title="Micjahn/Zxing.Net" href="https://github.com/micjahn/ZXing.Net" target="_blank">Micjahn/Zxing.Net</a>
@@ -310,19 +310,19 @@ The dependencies given below are required to create QR Code Application.<br>
 You can download ASP.NET Core 1.0 source code from the MSDN Code, using the links, mentioned below.</p>
 <ul>
 <li><a title="Middleware And Staticfiles In ASP.NET Core 1.0 - Part One" href="https://code.msdn.microsoft.com/Middleware-And-Staticfiles-36a78e4a" target="_blank">Middleware And Staticfiles In ASP.NET Core 1.0 - Part One
-<img title="This link is external to TechNet Wiki. It will open in a new window." src=":-10_5f00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
+<img title="This link is external to TechNet Wiki. It will open in a new window." src="https://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-components-sitefiles/10_5F00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
 </a></li><li><a title="Middleware And Staticfiles In ASP.NET Core 1.0 - Part Two" href="https://code.msdn.microsoft.com/Middleware-And-Staticfiles-4be1c8d0" target="_blank">Middleware And Staticfiles In ASP.NET Core 1.0 - Part Two
-<img title="This link is external to TechNet Wiki. It will open in a new window." src=":-10_5f00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
+<img title="This link is external to TechNet Wiki. It will open in a new window." src="https://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-components-sitefiles/10_5F00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
 </a></li><li><a title="Create An Aurelia Single Page Application In ASP.NET Core 1.0" href="https://code.msdn.microsoft.com/Create-An-Aurelia-Single-dbffe00f" target="_blank">Create An Aurelia Single Page Application In ASP.NET Core 1.0
-<img title="This link is external to TechNet Wiki. It will open in a new window." src=":-10_5f00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
+<img title="This link is external to TechNet Wiki. It will open in a new window." src="https://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-components-sitefiles/10_5F00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
 </a></li><li><a title="Create Rest API Or Web API With ASP.NET Core 1.0" href="https://code.msdn.microsoft.com/Create-Rest-API-Or-Web-API-16cc5392" target="_blank">Create Rest API Or Web API With ASP.NET Core 1.0
-<img title="This link is external to TechNet Wiki. It will open in a new window." src=":-10_5f00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
+<img title="This link is external to TechNet Wiki. It will open in a new window." src="https://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-components-sitefiles/10_5F00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
 </a></li><li><a title="Adding A Configuration Source File In ASP.NET Core 1.0" href="https://code.msdn.microsoft.com/Adding-A-Configuration-efea86aa" target="_blank">Adding A Configuration Source File In ASP.NET Core 1.0
-<img title="This link is external to TechNet Wiki. It will open in a new window." src=":-10_5f00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
+<img title="This link is external to TechNet Wiki. It will open in a new window." src="https://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-components-sitefiles/10_5F00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
 </a></li><li><a title="Code First Migration - ASP.NET Core MVC With EntityFrameWork Core" href="https://gallery.technet.microsoft.com/Code-First-Migration-bfcbc518" target="_blank">Code First Migration - ASP.NET Core MVC With EntityFrameWork Core
-<img title="This link is external to TechNet Wiki. It will open in a new window." src=":-10_5f00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
+<img title="This link is external to TechNet Wiki. It will open in a new window." src="https://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-components-sitefiles/10_5F00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
 </a></li><li><a title="Building ASP.NET Core MVC Application Using EF Core and ASP.NET Core 1.0" href="https://gallery.technet.microsoft.com/Building-ASPNET-Core-MVC-ff103064" target="_blank">Building ASP.NET Core MVC Application Using EF Core and ASP.NET Core 1.0
-<img title="This link is external to TechNet Wiki. It will open in a new window." src=":-10_5f00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
+<img title="This link is external to TechNet Wiki. It will open in a new window." src="https://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-components-sitefiles/10_5F00_external.png" alt="Jump" style="border-width:0px; border-style:solid">
 </a></li><li><a title="Send Email Using ASP.NET CORE 1.1 With MailKit In VisualStudio 2017" href="https://code.msdn.microsoft.com/Send-Email-Using-ASPNET-1c62bdfd" target="_blank">Send Email Using ASP.NET CORE 1.1 With MailKit In VisualStudio 2017</a>
 </li></ul>
 <h1>See Also</h1>

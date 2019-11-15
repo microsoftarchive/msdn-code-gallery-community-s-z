@@ -31,7 +31,7 @@
 Visual Studio 2017 Update 4 makes it easy to modernize your desktop application and make it store ready</a>.</p>
 <p>The samples environments for Microsoft Chart Controls for .NET Framework 4 contain over 200 samples for both ASP.NET and Windows Forms, covering every major feature in Chart Controls for .NET Framework 4. They enable you to see the Chart controls in action
  as well as use the code as templates for your own web and windows applications.</p>
-<p><img id="114477" src="114477-chartsamples_thumb_1.jpg" alt="" width="644" height="128"></p>
+<p><img id="114477" src="http://code.msdn.microsoft.com/site/view/file/114477/1/ChartSamples_thumb_1.jpg" alt="" width="644" height="128"></p>
 <p>The samples environments contain a Getting Started section to help you start using the Chart controls quickly. They also contain both actual application code in C#, as well as
 <strong>demonstrative code in both C# and Visual Basic .NET</strong>.</p>
 <p>Every major feature in Microsoft Chart Controls for .NET Framework 4 is demonstrated, including:</p>

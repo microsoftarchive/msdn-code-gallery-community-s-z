@@ -25,7 +25,7 @@ The solution attached to this sample represents what you'll create if you follow
 <p>&nbsp;</p>
 <p><object width="350" height="300" data="data:application/x-silverlight-2," type="application/x-silverlight-2"> <param name="source" value="/Content/Common/videoplayer.xap" /> <param name="initParams" value="deferredLoad=false,duration=0,m=http://code.msdn.microsoft.com/site/view/file/60432/1/Data%20Flow%20Basics.wmv,autostart=false,autohide=true,showembed=true"
  /> <param name="background" value="#00FFFFFF" /> <param name="minRuntimeVersion" value="3.0.40624.0" /> <param name="enableHtmlAccess" value="true" /> <param name="src" value="/site/view/file/60432/1/Data%20Flow%20Basics.wmv" /> <param name="id" value="60432"
- /> <param name="name" value="Data Flow Basics.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
+ /> <param name="name" value="Data Flow Basics.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
  </object> <br>
 <a id="x_/site/view/file/60432/1/Data%20Flow%20Basics.wmv" href="http://code.msdn.microsoft.com/site/view/file/60432/1/Data%20Flow%20Basics.wmv">Download video</a></p>
 <p>&nbsp;</p>

@@ -23,7 +23,7 @@ XAudio2 audio file playback sample</a> and <a href="http://code.msdn.microsoft.c
 XAudio2 audio stream effect sample</a></em></p>
 <h1>Description</h1>
 <h2>XAudio2BasicSound</h2>
-<p><img id="101076" src="101076-xaudio2basicsound.png" alt="" width="90" height="45"></p>
+<p><img id="101076" src="http://i1.code.msdn.s-msft.com/xaudio2-win32-samples-024b3933/image/file/101076/1/xaudio2basicsound.png" alt="" width="90" height="45"></p>
 <p>This sample demonstrates the XAudio2 API by showing you how to initialize the XAudio2 engine, create a mastering voice, and play sample files.</p>
 <p>The basic steps taken by the sample are as follows:</p>
 <ol>
@@ -38,7 +38,7 @@ XAudio2 audio stream effect sample</a></em></p>
 </li><li>Clean up the source voice and associated sample data. </li></ol>
 </li><li>Clean up by releasing the XAudio2 engine. </li></ol>
 <h2>XAudio2AsyncStream</h2>
-<p><img id="101077" src="101077-xaudio2basicsound.png" alt="" width="90" height="45"></p>
+<p><img id="101077" src="http://i1.code.msdn.s-msft.com/xaudio2-win32-samples-024b3933/image/file/101077/1/xaudio2basicsound.png" alt="" width="90" height="45"></p>
 <p>This sample shows you how to play streaming audio using asynchronous file I/O&nbsp; and the XAudio2 API.</p>
 <p><em>Note: Originally called &quot;XAudio2BasicStream&quot; in the legacy DirectX SDK.</em></p>
 <p>Playing streaming audio with XAudio2 is very easy. You do not need to create extra threads or maintain tight control of timing. Most of the hard work is already done for you by the file system and XAudio2. The file system handles loading data in the background,
@@ -61,7 +61,7 @@ XAudio2 audio stream effect sample</a></em></p>
  the audio data. It then reopens the file for an asynchronous unbuffered read that uses this extracted information. The XACT runtime is not used by this sample. Any custom audio tool can provide audio data to meet the alignment requirement, such as the XWBTOOL
  included in this package.</p>
 <h2>XAudio2Sound3D</h2>
-<p><img id="101079" src="101079-xaudio2sound3d.png" alt="" width="90" height="70"></p>
+<p><img id="101079" src="http://i1.code.msdn.s-msft.com/xaudio2-win32-samples-024b3933/image/file/101079/1/xaudio2sound3d.png" alt="" width="90" height="70"></p>
 <p>This sample shows you how to use the X3DAudio API with XAudio2 for playing spatialized audio.</p>
 <p>The following is a quick overview of the basic steps taken by the sample:</p>
 <ol>
@@ -81,7 +81,7 @@ XAudio2 audio stream effect sample</a></em></p>
 </li></ol>
 </li></ol>
 <h2>XAudio2CustomAPO</h2>
-<p><img id="101080" src="101080-xaudio2customapo.png" alt="" width="90" height="70"></p>
+<p><img id="101080" src="http://i1.code.msdn.s-msft.com/xaudio2-win32-samples-024b3933/image/file/101080/1/xaudio2customapo.png" alt="" width="90" height="70"></p>
 <p>This sample shows you how to create and use custom APOs with XAudio2.</p>
 <p>The sample creates a simple XAudio2 playback graph, adding a series of custom APOs to the playing source voice:</p>
 <ul>
@@ -90,17 +90,17 @@ XAudio2 audio stream effect sample</a></em></p>
 </li></ul>
 <p>The APOs are implemented by using a helper template class, SampleAPOBase, that handles shared registration, class factory, and parameter handling operations. Use of this template class is not required, but it is used to simplfy the sample.</p>
 <h2>XAudio2Enumerate (<em>NEW</em>)</h2>
-<p><img id="101090" src="101090-xaudio2basicsound.png" alt="" width="90" height="45"></p>
+<p><img id="101090" src="http://i1.code.msdn.s-msft.com/xaudio2-win32-samples-024b3933/image/file/101090/1/xaudio2basicsound.png" alt="" width="90" height="45"></p>
 <p>This sample shows how to enumerate audio devices and initialize an XAudio2 mastering voice for a specific device.</p>
 <h2>XAudio2MFStream (<em>NEW</em>)</h2>
-<p><img id="101141" src="101141-xaudio2basicsound.png" alt="" width="90" height="45"></p>
+<p><img id="101141" src="http://i1.code.msdn.s-msft.com/xaudio2-win32-samples-024b3933/image/file/101141/1/xaudio2basicsound.png" alt="" width="90" height="45"></p>
 <p>This samples uses <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms694197.aspx">
 Media Foundation</a> to decode a media audio file (which could be compressed with any number of codecs) and streams it through an XAudio2 voice. This technique is most useful for XAudio 2.8 on Windows 8.x which only supports PCM and ADPCM, and not more agressive
  lossy compressed schemes which are supported by Media Foundation.</p>
 <p>Note that this assumes you&nbsp;need to perform some kind of further processing, 3D positioning, or APO to the streamed audio. If it is just being played back in the background, it would be more efficient to make use of IMFMediaSession to play the audio
  directly potentially with hardware offload.</p>
 <h2>XAudio2WaveBank&nbsp;(<em>NEW)</em></h2>
-<p><img id="101078" src="101078-xaudio2basicsound.png" alt="" width="90" height="45"></p>
+<p><img id="101078" src="http://i1.code.msdn.s-msft.com/xaudio2-win32-samples-024b3933/image/file/101078/1/xaudio2basicsound.png" alt="" width="90" height="45"></p>
 <p>This sample shows how to play in-memory audio using an XACT-style wave bank.</p>
 <p>XACT wave banks are a binary file containing 1 or more .WAV files packaged together along with metadata information. The XAudio2AsyncStream sample makes use of XACT streaming wave banks, while this sample uses XACT in-memory wave banks.</p>
 <p>The XACT runtime is not used by this sample. The audio data can be authored using the XACT tool in the legacy DirectX SDK, or with the XWBTOOL in this package.</p>

@@ -25,7 +25,7 @@
 &lt;add mimeType=&quot;application/soap&#43;xml; charset=utf-8&quot; enabled=&quot;true&quot; /&gt;
 &lt;add mimeType=&quot;application/soap&#43;xml; charset=ISO-8895-1&quot; enabled=&quot;true&quot; /&gt;</pre>
 <p>After adding the block, the config file will look like this:</p>
-<p><a href="http://omaralzabir.com/wp-content/uploads/2011/02/image1.png" target="_blank"><img title="image" src="-image_thumb1.png" border="0" alt="image" width="440" height="106"></a></p>
+<p><a href="http://omaralzabir.com/wp-content/uploads/2011/02/image1.png" target="_blank"><img title="image" src="http://omaralzabir.com/wp-content/uploads/2011/02/image_thumb1.png" border="0" alt="image" width="440" height="106"></a></p>
 <p>For IIS 6, first you need to first&nbsp;<a href="http://omaralzabir.com/iis_6_compression___quickest_and_effective_way_to_do_it_for_asp_net_compression/">enable dynamic compression</a>&nbsp;and then allow the .svc extension so that IIS compresses responses
  from WCF services.</p>
 <p>Next you need to make WCF send the&nbsp;<span style="text-decoration:underline">Accept-Encoding: gzip, deflate</span>&nbsp;header as part of request and then support decompressing a compressed response.</p>

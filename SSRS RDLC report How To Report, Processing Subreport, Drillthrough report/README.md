@@ -33,13 +33,13 @@
 <p>Completely working web application - please see&nbsp;<strong>More Information</strong><strong>&nbsp;</strong>on the bottom<strong>&nbsp;(In order to use the SQLiteFactory and have the SQLite data provider enumerated in the DbProviderFactories methods)</strong></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p>RDLC - design view&nbsp;</p>
-<p><img id="166769" src="166769-mainrdlcreport.png" alt="" width="700" height="270"></p>
+<p><img id="166769" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/166769/1/MainRdlcReport.PNG" alt="" width="700" height="270"></p>
 <p><strong>Report on web page</strong></p>
-<p><img id="166770" src="166770-reportitself.png" alt="" width="700" height="370"></p>
+<p><img id="166770" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/166770/1/ReportItself.PNG" alt="" width="700" height="370"></p>
 <p>&nbsp;</p>
 <p><strong>Drillthrough repor</strong></p>
 <p>&nbsp;</p>
-<p><img id="166771" src="166771-drill.png" alt="" width="350" height="270"></p>
+<p><img id="166771" src="https://code.msdn.microsoft.com/windowsapps/site/view/file/166771/1/Drill.PNG" alt="" width="350" height="270"></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder">

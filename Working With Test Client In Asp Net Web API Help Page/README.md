@@ -229,13 +229,13 @@ INSERT&nbsp;[dbo].[Product]&nbsp;([ProductID],&nbsp;[Name],&nbsp;[ProductNumber]
 </div>
 </div>
 <p><span style="font-size:small">Our database is ready, now create a Web API application in visual studio and then entity with the above mentioned database.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11556"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Creating-Entity-e1463031313825.png"><img class="size-large x_wp-image-11556" src="-creating-entity-1024x542.png" alt="Creating Entity" width="634" height="336"></a>
+<div class="wp-caption x_alignnone" id="attachment_11556"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Creating-Entity-e1463031313825.png"><img class="size-large x_wp-image-11556" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Creating-Entity-1024x542.png" alt="Creating Entity" width="634" height="336"></a>
 </span>
 <p class="wp-caption-text"><strong><span style="font-size:small">Creating Entity</span></strong></p>
 </div>
 <p><span style="font-size:small">If you don&rsquo;t know how to create an entity in your solution, please read that&nbsp;<a href="http://sibeeshpassion.com/web-api-with-angular-js/" target="_blank">here</a>. I have mentioned the steps to be followed in that
  article. Once you have created the entity, you are good to go and create a API controller with the entity created. If you do so, The CRUD actions will be created automatically for you. You may need to edit those actions according to your needs.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11557"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Web-API-2-Controller-with-actions-using-Entity-Framework-e1463031653319.png"><img class="size-full x_wp-image-11557" src="-web-api-2-controller-with-actions-using-entity-framework-e1463031653319.png" alt="Web API 2 Controller with actions, using Entity Framework" width="650" height="457"></a>
+<div class="wp-caption x_alignnone" id="attachment_11557"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Web-API-2-Controller-with-actions-using-Entity-Framework-e1463031653319.png"><img class="size-full x_wp-image-11557" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Web-API-2-Controller-with-actions-using-Entity-Framework-e1463031653319.png" alt="Web API 2 Controller with actions, using Entity Framework" width="650" height="457"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web API 2 Controller with actions, using Entity Framework</span></p>
 </div>
@@ -418,13 +418,13 @@ namespace&nbsp;ControllerActionDescriptions.Controllers&nbsp;
 </div>
 <p><span style="font-size:small">You can always get the details about the package&nbsp;<a href="https://www.nuget.org/packages/WebApiTestClient" target="_blank">here</a>.</span></p>
 <p><span style="font-size:small">Once you install the package, you can see some files are added to your Script and Area folder as preceding.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11655"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Script-and-Area-Folder.png"><img class="size-full x_wp-image-11655" src="-script-and-area-folder.png" alt="Script and Area Folder" width="281" height="780"></a>
+<div class="wp-caption x_alignnone" id="attachment_11655"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Script-and-Area-Folder.png"><img class="size-full x_wp-image-11655" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Script-and-Area-Folder.png" alt="Script and Area Folder" width="281" height="780"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Script and Area Folder</span></p>
 </div>
 <p><strong><span style="font-size:small">Configuring WebApiTestClient</span></strong></p>
 <p><span style="font-size:small">To configure the WebApiTestClient, please go to the folder Areas-&gt;Views-&gt;Help and then click on Api.cshtml</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11656"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Api-Cshtml.png"><img class="size-full x_wp-image-11656" src="-api-cshtml.png" alt="Api Cshtml" width="262" height="232"></a>
+<div class="wp-caption x_alignnone" id="attachment_11656"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Api-Cshtml.png"><img class="size-full x_wp-image-11656" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Api-Cshtml.png" alt="Api Cshtml" width="262" height="232"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Api Cshtml</span></p>
 </div>
@@ -458,32 +458,32 @@ namespace&nbsp;ControllerActionDescriptions.Controllers&nbsp;
 </table>
 </div>
 </div>
-<div class="wp-caption x_alignnone" id="attachment_11657"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Code-Block-e1464327127249.png"><img class="size-full x_wp-image-11657" src="-code-block-e1464327127249.png" alt="Code Block" width="650" height="503"></a>
+<div class="wp-caption x_alignnone" id="attachment_11657"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Code-Block-e1464327127249.png"><img class="size-full x_wp-image-11657" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Code-Block-e1464327127249.png" alt="Code Block" width="650" height="503"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Code Block</span></p>
 </div>
 <p><strong><span style="font-size:small">Testing WebApiTestClient</span></strong></p>
 <p><span style="font-size:small">Now run your API application and go to the help page for any controller action, you can see a button called Test API on the bottom. If you click on that you will get a pop where you can test your API action.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11658"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-API-Client-Output-e1464327451839.png"><img class="size-large x_wp-image-11658" src="-test-api-client-output-1024x451.png" alt="Test API Client Output" width="634" height="279"></a>
+<div class="wp-caption x_alignnone" id="attachment_11658"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-API-Client-Output-e1464327451839.png"><img class="size-large x_wp-image-11658" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-API-Client-Output-1024x451.png" alt="Test API Client Output" width="634" height="279"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Test API Client Output</span></p>
 </div>
 <p><span style="font-size:small">Now if you send your request by clicking the send button, you will get an output as follows.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11659"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-API-Client-Output-With-Response-e1464327640682.png"><img class="size-full x_wp-image-11659" src="-test-api-client-output-with-response-e1464327640682.png" alt="Test API Client Output With Response" width="650" height="484"></a>
+<div class="wp-caption x_alignnone" id="attachment_11659"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-API-Client-Output-With-Response-e1464327640682.png"><img class="size-full x_wp-image-11659" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-API-Client-Output-With-Response-e1464327640682.png" alt="Test API Client Output With Response" width="650" height="484"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Test API Client Output With Response</span></p>
 </div>
 <p><span style="font-size:small">You can always give id parameter as follows.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11660"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-Parameters-e1464327873548.png"><img class="size-full x_wp-image-11660" src="-test-client-with-parameters-e1464327873548.png" alt="Test Client With Parameters" width="650" height="302"></a>
+<div class="wp-caption x_alignnone" id="attachment_11660"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-Parameters-e1464327873548.png"><img class="size-full x_wp-image-11660" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-Parameters-e1464327873548.png" alt="Test Client With Parameters" width="650" height="302"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Test Client With Parameters</span></p>
 </div>
 <p><span style="font-size:small">You can also give content-length and content-type in your post request as follows.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11661"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-Post-e1464328070355.png"><img class="size-full x_wp-image-11661" src="-test-client-with-post-e1464328070355.png" alt="Test Client With Post" width="650" height="468"></a>
+<div class="wp-caption x_alignnone" id="attachment_11661"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-Post-e1464328070355.png"><img class="size-full x_wp-image-11661" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-Post-e1464328070355.png" alt="Test Client With Post" width="650" height="468"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Test Client With Post</span></p>
 </div>
-<div class="wp-caption x_alignnone" id="attachment_11662"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-PUT-Request-e1464328191663.png"><img class="size-full x_wp-image-11662" src="-test-client-with-put-request-e1464328191663.png" alt="Test Client With PUT Request" width="650" height="542"></a>
+<div class="wp-caption x_alignnone" id="attachment_11662"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-PUT-Request-e1464328191663.png"><img class="size-full x_wp-image-11662" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Test-Client-With-PUT-Request-e1464328191663.png" alt="Test Client With PUT Request" width="650" height="542"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Test Client With PUT Request</span></p>
 </div>

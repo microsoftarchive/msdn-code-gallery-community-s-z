@@ -27,7 +27,7 @@
 <h1>Introduction</h1>
 <p>This sample shows how to exclusively execute a command dependent on whether an element was clicked once or double-clicked.&nbsp;It uses an attached behavior to specify a single-click and double-click command for a UIElement. If the element is clicked twice
  within the system double-click timeout then the double-click command will be executed if the element is only clicked once the single-click command will be executed.</p>
-<p><img id="131523" src="131523-wpfmulticlick.png" alt="" width="525" height="350"></p>
+<p><img id="131523" src="https://i1.code.msdn.s-msft.com/wpf-multiclick-behavior-bb9ee00b/image/file/131523/1/wpfmulticlick.png" alt="" width="525" height="350"></p>
 <p>&nbsp;</p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p>The&nbsp;<strong>MultiClickBehavior</strong>&nbsp;has public dependency properties for both the commands (<strong>SingleClickCommand</strong> and&nbsp;<strong>DoubleClickCommand</strong>) and also optional parameters (<strong>SingleClickCommandParameter</strong>&nbsp;and&nbsp;<strong>DoubleClickCommandParameter</strong>).</p>

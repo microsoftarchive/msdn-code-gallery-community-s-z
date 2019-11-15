@@ -20,7 +20,7 @@
 <p><strong>STEP-1: CREATE TABLE FOR SAVE DATA.</strong></p>
 <p>Open Database &gt; Right Click on Table &gt; Add New Table &gt; Add Columns &gt; Save &gt; Enter table name &gt; Ok.&nbsp;<br>
 In this example, I have used one tables as below</p>
-<p><img id="136118" src="136118-dara.png" alt="" width="446" height="322"></p>
+<p><img id="136118" src="https://i1.code.msdn.s-msft.com/user-registration-page-6c5861e9/image/file/136118/1/dara.png" alt="" width="446" height="322"></p>
 <p><strong>STEP-2: ADD ENTITY DATA MODEL.</strong></p>
 <p>Go to Solution Explorer &gt; Right Click on Project name form Solution Explorer &gt; Add &gt; New item &gt; Select ADO.net Entity Data Model under data &gt; Enter model name &gt; Add.<br>
 A popup window will come (Entity Data Model Wizard) &gt; Select Generate from database &gt; Next &gt;<br>

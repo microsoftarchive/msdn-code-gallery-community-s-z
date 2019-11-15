@@ -36,7 +36,7 @@ Actions</a> for more information. JavaScript is one of the ways that actions can
 </li><li>In Visual Studio 2013, right-click the Sdk.Soap Action Message Generator project and choose
 <strong>Manage NuGet Packages</strong>. </li><li>
 <p>In the search window, search for &ldquo;Microsoft Dynamics CRM 2013 core assemblies&rdquo;. Locate the NuGet package described in Microsoft Dynamics CRM 2013 SDK core assemblies.</p>
-<p><img id="113704" src="113704-managenugetpackages.png" alt="" width="675" height="450"></p>
+<p><img id="113704" src="http://i1.code.msdn.s-msft.com/sdksoapjs-action-message-971be943/image/file/113704/1/managenugetpackages.png" alt="" width="675" height="450"></p>
 </li><li>Click <strong>Install</strong>. You&rsquo;ll need to accept the license terms to complete installing this package.
 </li><li>In the search window, search for &ldquo;AjaxMin&rdquo; and locate the package described in
 <a href="https://www.nuget.org/packages/AjaxMin/" target="_blank">Microsoft Ajax Minifier</a>.
@@ -106,7 +106,7 @@ One version will be in the <strong>vsdoc</strong> folder and a second will be in
  the class in their projects. </li></ol>
 <h1 id="example">Example: Sdk.new_CustomAction.vsdoc.js</h1>
 <p>The following example is a simple custom action named &ldquo;Custom Action&rdquo; where the default organization solution publisher is &ldquo;new&rdquo;.</p>
-<p><img id="113705" src="113705-new_customaction.png" alt="" width="631" height="517"></p>
+<p><img id="113705" src="http://i1.code.msdn.s-msft.com/sdksoapjs-action-message-971be943/image/file/113705/1/new_customaction.png" alt="" width="631" height="517"></p>
 <p>The following sample shows the Sdk.new_CustomAction.vsdoc.js file generated for the custom action named &ldquo;Custom Action&rdquo;.</p>
 <pre><div class="scriptcode"><div class="pluginEditHolder" pluginCommand="mceScriptCode"><div class="title"><span>JavaScript</span></div><div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div><span class="hidden">js</span>
 <div class="preview">

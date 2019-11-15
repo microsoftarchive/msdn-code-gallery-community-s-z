@@ -85,7 +85,7 @@
 <p>by definition, this value should equal 1. We have divided 1 by 3, 6 times and then multiply it by 3, six times. The problem with division by three stems from the fact that it is a repeating fraction that can never be represented with absolute accuracy. Multiple
  operations begin to accumulate errors.</p>
 <p>&nbsp;</p>
-<p><img id="124250" src="124250-untitled.png" alt="" width="493" height="231"><br>
+<p><img id="124250" src="http://i1.code.msdn.s-msft.com/scientific-calculator-48f03779/image/file/124250/1/untitled.png" alt="" width="493" height="231"><br>
 <em>&nbsp;&nbsp;&nbsp;</em></p>
 <p>&nbsp;</p>
 <div class="scriptcode">

@@ -43,7 +43,7 @@
 <p>Right click and select &ldquo;Open Folder in File Explorer&rdquo; option</p>
 <p>Now paste your files into the folderAgain in the solution explorer window at the top, click &ldquo;Show All Files&rdquo; icon</p>
 <p>Now you can find the file without active icon, right click and select &ldquo;Include in Project&rdquo; Option</p>
-<p><img id="148925" src="148925-2016-02-08_22-35-22.png" alt="" width="289" height="488"></p>
+<p><img id="148925" src="https://i1.code.msdn.s-msft.com/sharepoint-list-to-jquery-97dcee17/image/file/148925/1/2016-02-08_22-35-22.png" alt="" width="289" height="488"></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
 <div class="title"><span>HTML</span><span>JavaScript</span></div>

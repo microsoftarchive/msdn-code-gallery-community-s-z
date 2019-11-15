@@ -511,13 +511,13 @@ public&nbsp;List&lt;ForeignKeysDetails&gt;&nbsp;TableKeys(string&nbsp;pDatabaseN
 <div class="endscriptcode"><span style="font-size:small">Also added a code sample that builds on the above which is to create an SQL INSERT statement suitable for using in your code.</span></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"><span style="font-size:small">Here is the form.</span></div>
-<div class="endscriptcode"><span style="font-size:small"><img id="184244" src="184244-buildinsertstatement.jpg" alt="" width="558" height="444"></span></div>
+<div class="endscriptcode"><span style="font-size:small"><img id="184244" src="https://i1.code.msdn.s-msft.com/working-with-sql-server-2443a157/image/file/184244/1/buildinsertstatement.jpg" alt="" width="558" height="444"></span></div>
 <div class="endscriptcode"><span style="font-size:small">As in the first example, select a database, in this case from the Combobox followed by selecting a table. Once the table is selected a CheckedListBox is populated with columns. Select columns and press
  &quot;Create INSERT statement&quot; button. The insert statement excludes any identity columns as the primary-key is generally a auto-incrementing field so in the selection if you selected a identity column (like I did in the above example I check for this in each item
  as the CheckedListBox is populated with ColumnDetails hence we can check if any field is an identity fields.</span></div>
 <div class="endscriptcode"><span style="font-size:small; color:#ffffff">.</span></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><span style="font-size:small"><img id="184245" src="184245-04.jpg" alt="" width="468" height="138"></span></div>
+<div class="endscriptcode"><span style="font-size:small"><img id="184245" src="https://i1.code.msdn.s-msft.com/working-with-sql-server-2443a157/image/file/184245/1/04.jpg" alt="" width="468" height="138"></span></div>
 <div class="endscriptcode"><span style="font-size:small">Note the check box for wrap columns with [] around field names, this is good for fields with spaces or reserved words. The code could be altered to catch reserved words but that gets a little outside
  where I wanted to go with this.</span></div>
 <div class="endscriptcode"><span style="font-size:small; color:#ffffff">.</span></div>

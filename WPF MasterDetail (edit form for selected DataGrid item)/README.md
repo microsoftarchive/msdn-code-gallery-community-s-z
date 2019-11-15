@@ -111,4 +111,4 @@ The details form uses TextBoxes, which by default are two-way. We have also adde
 forum question</a>.</span></em></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

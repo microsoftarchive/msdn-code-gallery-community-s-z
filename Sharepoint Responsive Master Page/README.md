@@ -71,7 +71,7 @@
 <p><span style="font-size:medium">The center banner is placed in master page and We have a content place holder to update the text inside the banner. You can change it in your all the aspx pages.&nbsp;</span></p>
 <h2><strong><em>Desktop View:&nbsp;</em></strong></h2>
 <p><span style="font-size:small"><em>In desktop view you will get &quot;logo.png&quot; as a lengthy size logo (Change the logo file in images folder)</em></span></p>
-<p><strong><em><img id="147691" src="147691-sample1.png" alt="" width="700" height="323"><br>
+<p><strong><em><img id="147691" src="https://i1.code.msdn.s-msft.com/sharepoint/sharepoint-responsive-page-fca1264d/image/file/147691/1/sample1.png" alt="" width="700" height="323"><br>
 </em></strong></p>
 <h3><strong><em>Mobile/Tablet View:</em></strong></h3>
 <p><span style="font-size:small"><em><em>In Mobile/Tablet view you will get &quot;logo-small.png&quot; as a small size logo/ icon (Change the logo-small file in images folder)</em></em></span><strong><em><br>

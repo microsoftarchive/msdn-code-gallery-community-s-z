@@ -36,11 +36,11 @@ Background</p>
 <p>Now it is time to set up our project and start our coding.</p>
 <p><span>Setting up the project</span></p>
 <p>To get started, please create an empty project in your Visual Studio.</p>
-<div class="wp-caption x_alignnone" id="attachment_11904"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Empty_Project-e1475921231766.png"><img class="size-full x_wp-image-11904" src="-empty_project-e1475921231766.png" alt="empty_project" width="650" height="507"></a>
+<div class="wp-caption x_alignnone" id="attachment_11904"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Empty_Project-e1475921231766.png"><img class="size-full x_wp-image-11904" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Empty_Project-e1475921231766.png" alt="empty_project" width="650" height="507"></a>
 <p class="wp-caption-text">empty_project</p>
 </div>
 <p>Now, we will add a&nbsp;<a href="http://sibeeshpassion.com/category/WCF-Service/" target="_blank">WCF Service</a>&nbsp;as follows.</p>
-<div class="wp-caption x_alignnone" id="attachment_11930"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Create_a_wcf_service.png"><img class="size-large x_wp-image-11930" src="-create_a_wcf_service-1024x709.png" alt="create_a_wcf_service" width="634" height="439"></a>
+<div class="wp-caption x_alignnone" id="attachment_11930"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Create_a_wcf_service.png"><img class="size-large x_wp-image-11930" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Create_a_wcf_service-1024x709.png" alt="create_a_wcf_service" width="634" height="439"></a>
 <p class="wp-caption-text">create_a_wcf_service</p>
 </div>
 <p>Once you are done, you can see two files, an Interface(IMyService) and a class (MyService) with .svc extension. If you are completely new to WCF service, I strongly recommend you to read some basics&nbsp;<a href="https://msdn.microsoft.com/en-us/library/bb386386.aspx" target="_blank">here</a>.</p>
@@ -308,7 +308,7 @@ GO</pre>
 </div>
 </div>
 <p>So our data is ready, that means we are all set to write our service and tests. Now go to your solution and create an entity data model.</p>
-<div class="wp-caption x_alignnone" id="attachment_11931"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Entity_Framework-e1479637932362.png"><img class="size-full x_wp-image-11931" src="-entity_framework-e1479637932362.png" alt="entity_framework" width="634" height="686"></a>
+<div class="wp-caption x_alignnone" id="attachment_11931"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Entity_Framework-e1479637932362.png"><img class="size-full x_wp-image-11931" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Entity_Framework-e1479637932362.png" alt="entity_framework" width="634" height="686"></a>
 <p class="wp-caption-text">entity_framework</p>
 </div>
 <p>So entity is also been created. Now please open your interface and that is where we start our coding. We can change the interface as follows.</p>
@@ -416,12 +416,12 @@ namespace&nbsp;WCF_NUnit_Tests_Rheno_Mocks&nbsp;
 </blockquote>
 <p>If you need to know more on dependency injection, please read&nbsp;<a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection" target="_blank">here</a>. Now we will build and check whether our service is working fine or not.
  Please press CTRL&#43;F5.</p>
-<div class="wp-caption x_alignnone" id="attachment_11932"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Invoking_WCF_Service.png"><img class="size-full x_wp-image-11932" src="-invoking_wcf_service-e1479645357913.png" alt="invoking_wcf_service" width="634" height="403"></a>
+<div class="wp-caption x_alignnone" id="attachment_11932"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Invoking_WCF_Service.png"><img class="size-full x_wp-image-11932" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Invoking_WCF_Service-e1479645357913.png" alt="invoking_wcf_service" width="634" height="403"></a>
 <p class="wp-caption-text">invoking_wcf_service</p>
 </div>
 <p>As our services are ready, we can now create the tests for those operations. For that we can create a new class library in our project and name it&nbsp;<em>UnitTest.Service</em>. Please add a class&nbsp;<em>MyServiceTests</em>&nbsp;in the class library where
  we can add our tests. And please do not forget to add our application reference too.</p>
-<div class="wp-caption x_alignnone" id="attachment_11939"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Add_project_reference-e1479647898141.png"><img class="size-full x_wp-image-11939" src="-add_project_reference-e1479647898141.png" alt="add_project_reference" width="634" height="438"></a>
+<div class="wp-caption x_alignnone" id="attachment_11939"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Add_project_reference-e1479647898141.png"><img class="size-full x_wp-image-11939" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Add_project_reference-e1479647898141.png" alt="add_project_reference" width="634" height="438"></a>
 <p class="wp-caption-text">add_project_reference</p>
 </div>
 <p><span>Installing and configuring NUnit</span></p>
@@ -445,15 +445,15 @@ namespace&nbsp;WCF_NUnit_Tests_Rheno_Mocks&nbsp;
 </div>
 <p>In NUnit we have so many attributes that can be used for different purposes, but now we are going to use only four among them.</p>
 <li>TestFixture
-<div class="wp-caption x_alignnone" id="attachment_11934"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/TestFixture_In_NUnit-e1479646568966.png"><img class="size-full x_wp-image-11934" src="-testfixture_in_nunit-e1479646568966.png" alt="testfixture_in_nunit" width="634" height="191"></a>
+<div class="wp-caption x_alignnone" id="attachment_11934"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/TestFixture_In_NUnit-e1479646568966.png"><img class="size-full x_wp-image-11934" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/TestFixture_In_NUnit-e1479646568966.png" alt="testfixture_in_nunit" width="634" height="191"></a>
 <p class="wp-caption-text">testfixture_in_nunit</p>
 </div>
 </li><li>OneTimeSetUp
-<div class="wp-caption x_alignnone" id="attachment_11935"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/One_Time_SetUp_Attribute_In_NUnit.png"><img class="size-large x_wp-image-11935" src="-one_time_setup_attribute_in_nunit-1024x283.png" alt="one_time_setup_attribute_in_nunit" width="634" height="175"></a>
+<div class="wp-caption x_alignnone" id="attachment_11935"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/One_Time_SetUp_Attribute_In_NUnit.png"><img class="size-large x_wp-image-11935" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/One_Time_SetUp_Attribute_In_NUnit-1024x283.png" alt="one_time_setup_attribute_in_nunit" width="634" height="175"></a>
 <p class="wp-caption-text">one_time_setup_attribute_in_nunit</p>
 </div>
 <p>In previous versions, we were using&nbsp;<em>TestFixtureSetUp</em>, as the TestFixtureSetUp is obsolete, now we are using&nbsp;<em>OneTimeSetUp</em></p>
-<div class="wp-caption x_alignnone" id="attachment_11937"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/TestFixtureSetUp_attribute_is_obsolete-e1479646895142.png"><img class="size-full x_wp-image-11937" src="-testfixturesetup_attribute_is_obsolete-e1479646895142.png" alt="testfixturesetup_attribute_is_obsolete" width="634" height="213"></a>
+<div class="wp-caption x_alignnone" id="attachment_11937"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/TestFixtureSetUp_attribute_is_obsolete-e1479646895142.png"><img class="size-full x_wp-image-11937" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/TestFixtureSetUp_attribute_is_obsolete-e1479646895142.png" alt="testfixturesetup_attribute_is_obsolete" width="634" height="213"></a>
 <p class="wp-caption-text">testfixturesetup_attribute_is_obsolete</p>
 </div>
 </li><li>TearDown
@@ -462,7 +462,7 @@ namespace&nbsp;WCF_NUnit_Tests_Rheno_Mocks&nbsp;
 <p>This attribute is used to make a method callable from NUnit test runner. This can not be inherited.</p>
 <p>Now we can see all these attributes in action. So let us write some tests, but the real problem is we need to mock the IMyService right as the parameterized constructor of the class&nbsp;<em>MyService&nbsp;</em>expecting it. Remember, we have discussed about
  setting up our services in the way which can be injected the dependencies? No worries, we can install Rhino Mock for that now.</p>
-<div class="wp-caption x_alignnone" id="attachment_11938"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Rhino_Mocks_In_Nuget_Package-1.png"><img class="size-large x_wp-image-11938" src="-rhino_mocks_in_nuget_package-1-1024x573.png" alt="rhino_mocks_in_nuget_package" width="634" height="355"></a>
+<div class="wp-caption x_alignnone" id="attachment_11938"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Rhino_Mocks_In_Nuget_Package-1.png"><img class="size-large x_wp-image-11938" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Rhino_Mocks_In_Nuget_Package-1-1024x573.png" alt="rhino_mocks_in_nuget_package" width="634" height="355"></a>
 <p class="wp-caption-text">rhino_mocks_in_nuget_package</p>
 </div>
 <p>So we can add the tests are dependencies as follows in our test class.</p>
@@ -563,12 +563,12 @@ namespace&nbsp;UnitTest.Service&nbsp;
 <div class="endscriptcode">&nbsp;</div>
 </div>
 </div>
-<div class="wp-caption x_alignnone" id="attachment_11940"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Generate_Mock_With_Rhino.png"><img class="size-large x_wp-image-11940" src="-generate_mock_with_rhino-1024x247.png" alt="generate_mock_with_rhino" width="634" height="153"></a>
+<div class="wp-caption x_alignnone" id="attachment_11940"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Generate_Mock_With_Rhino.png"><img class="size-large x_wp-image-11940" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Generate_Mock_With_Rhino-1024x247.png" alt="generate_mock_with_rhino" width="634" height="153"></a>
 <p class="wp-caption-text">generate_mock_with_rhino</p>
 </div>
 <p>And, in the test&nbsp;<em>GetCourseById_Return_NotNull_Pass</em>&nbsp;we have also used a method called&nbsp;<em>Stub</em>. Stub actually tell the mock object to perform a certain action when a matching method is called, and it doesn&rsquo;t create an expectation
  for the same. So you might be thinking, how can we create an expectation? For that we have a method called&nbsp;<em>Expect</em>.</p>
-<div class="wp-caption x_alignnone" id="attachment_11941"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Expect_In_Rhino_Mock.png"><img class="size-full x_wp-image-11941" src="-expect_in_rhino_mock-e1479648794975.png" alt="expect_in_rhino_mock" width="634" height="149"></a>
+<div class="wp-caption x_alignnone" id="attachment_11941"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Expect_In_Rhino_Mock.png"><img class="size-full x_wp-image-11941" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Expect_In_Rhino_Mock-e1479648794975.png" alt="expect_in_rhino_mock" width="634" height="149"></a>
 <p class="wp-caption-text">expect_in_rhino_mock</p>
 </div>
 <p>It is always recommended to verify your expectation when you use&nbsp;<em>Expect</em>&nbsp;as we used it in our test&nbsp;<em>GetAllCourses_Return_List_Count_Pass</em>.</p>
@@ -590,7 +590,7 @@ namespace&nbsp;UnitTest.Service&nbsp;
 </div>
 </div>
 <p>As I already said, I am using Resharper, we have so many shortcuts to run our tests, now if you right click on your&nbsp;<em>TestFixture</em>. You can see a run all option as preceding.</p>
-<div class="wp-caption x_alignnone" id="attachment_11942"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Run_all_test_option_in_Resharper-e1479649326532.png"><img class="size-full x_wp-image-11942" src="-run_all_test_option_in_resharper-e1479649326532.png" alt="run_all_test_option_in_resharper" width="634" height="574"></a>
+<div class="wp-caption x_alignnone" id="attachment_11942"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Run_all_test_option_in_Resharper-e1479649326532.png"><img class="size-full x_wp-image-11942" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Run_all_test_option_in_Resharper-e1479649326532.png" alt="run_all_test_option_in_resharper" width="634" height="574"></a>
 <p class="wp-caption-text">run_all_test_option_in_resharper</p>
 </div>
 <blockquote>
@@ -598,7 +598,7 @@ namespace&nbsp;UnitTest.Service&nbsp;
  with the connection string like we have in our web config file.</p>
 </blockquote>
 <p>If everything goes fine and you don&rsquo;t have any errors, I am sure you will get a screen as preceding.</p>
-<div class="wp-caption x_alignnone" id="attachment_11943"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/NUnit_Output.png"><img class="size-large x_wp-image-11943" src="-nunit_output-1024x288.png" alt="nunit_output" width="634" height="178"></a>
+<div class="wp-caption x_alignnone" id="attachment_11943"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/NUnit_Output.png"><img class="size-large x_wp-image-11943" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/NUnit_Output-1024x288.png" alt="nunit_output" width="634" height="178"></a>
 <p class="wp-caption-text">nunit_output</p>
 </div>
 <p>Happy coding!.</p>

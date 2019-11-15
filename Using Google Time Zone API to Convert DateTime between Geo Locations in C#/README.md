@@ -211,7 +211,7 @@ First method is a method to return the Timestamp of a given DateTime.</p>
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="margin-left:auto; margin-right:auto; text-align:center">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh3.ggpht.com/-z96K_KxADAk/VLjjSB_mZ6I/AAAAAAAAC5g/3LcRmmreh5k/s1600-h/image10.png" style="margin-left:auto; margin-right:auto"><img title="image" src="-image_thumb4.png?imgmax=800" border="0" alt="image" width="502" height="104" style="border-width:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
+<td style="text-align:center"><a href="http://lh3.ggpht.com/-z96K_KxADAk/VLjjSB_mZ6I/AAAAAAAAC5g/3LcRmmreh5k/s1600-h/image10.png" style="margin-left:auto; margin-right:auto"><img title="image" src="http://lh3.ggpht.com/-qGZ6uiLxEUc/VLjjTnh8N8I/AAAAAAAAC5o/C-ndBWkjNSk/image_thumb4.png?imgmax=800" border="0" alt="image" width="502" height="104" style="border-width:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Colombo, Sri Lanka</td>
@@ -224,7 +224,7 @@ First method is a method to return the Timestamp of a given DateTime.</p>
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="margin-left:auto; margin-right:auto; text-align:center">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh3.ggpht.com/-G4imld2BSlk/VLjjUd4tfSI/AAAAAAAAC5w/PMJT-0BIFUU/s1600-h/image12.png" style="margin-left:auto; margin-right:auto"><img title="image" src="-image_thumb6.png?imgmax=800" border="0" alt="image" width="505" height="104" style="border-width:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
+<td style="text-align:center"><a href="http://lh3.ggpht.com/-G4imld2BSlk/VLjjUd4tfSI/AAAAAAAAC5w/PMJT-0BIFUU/s1600-h/image12.png" style="margin-left:auto; margin-right:auto"><img title="image" src="http://lh5.ggpht.com/-uccUmdklRqs/VLjjVbLnW8I/AAAAAAAAC54/RuZw55vN_sE/image_thumb6.png?imgmax=800" border="0" alt="image" width="505" height="104" style="border-width:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Sydney, Australia</td>
@@ -237,7 +237,7 @@ First method is a method to return the Timestamp of a given DateTime.</p>
 <table class="tr-caption-container" cellspacing="0" cellpadding="0" align="center" style="margin-left:auto; margin-right:auto; text-align:center">
 <tbody>
 <tr>
-<td style="text-align:center"><a href="http://lh4.ggpht.com/-caqXqvBmNvc/VLjjWM1ffnI/AAAAAAAAC6A/TjTnvkJHoD0/s1600-h/image%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="image" src="-image_thumb%25255b2%25255d.png?imgmax=800" border="0" alt="image" width="535" height="103" style="border:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
+<td style="text-align:center"><a href="http://lh4.ggpht.com/-caqXqvBmNvc/VLjjWM1ffnI/AAAAAAAAC6A/TjTnvkJHoD0/s1600-h/image%25255B4%25255D.png" style="margin-left:auto; margin-right:auto"><img title="image" src="http://lh4.ggpht.com/-J7TKJ-MbNR0/VLjjW080yHI/AAAAAAAAC6I/7oyuvPcWKSU/image_thumb%25255B2%25255D.png?imgmax=800" border="0" alt="image" width="535" height="103" style="border:0px; display:block; float:none; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:0px"></a></td>
 </tr>
 <tr>
 <td class="tr-caption" style="text-align:center">Seattle, United States</td>

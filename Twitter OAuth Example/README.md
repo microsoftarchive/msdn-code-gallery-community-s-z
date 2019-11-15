@@ -32,10 +32,10 @@
 https://dev.twitter.com/docs/auth/creating-signature</a>.</span></p>
 <p><span style="font-size:small">Here are screenshots of the app.</span></p>
 <p>&nbsp;</p>
-<p><img id="77429" src="77429-oauthtwitter-001.jpg" alt="" width="767" height="408"></p>
-<p><img id="77430" src="77430-oauthtwitter-002.jpg" alt="" width="767" height="424"></p>
-<p><img id="77432" src="77432-oauthtwitter-003.jpg" alt="" width="769" height="405"></p>
-<p><img id="77433" src="77433-oauthtwitter-004.jpg" alt="" width="771" height="413"></p>
+<p><img id="77429" src="http://i1.code.msdn.s-msft.com/windowsapps/twitter-oauth-example-3a99967f/image/file/77429/1/oauthtwitter-001.jpg" alt="" width="767" height="408"></p>
+<p><img id="77430" src="http://i1.code.msdn.s-msft.com/windowsapps/twitter-oauth-example-3a99967f/image/file/77430/1/oauthtwitter-002.jpg" alt="" width="767" height="424"></p>
+<p><img id="77432" src="http://i1.code.msdn.s-msft.com/windowsapps/twitter-oauth-example-3a99967f/image/file/77432/1/oauthtwitter-003.jpg" alt="" width="769" height="405"></p>
+<p><img id="77433" src="http://i1.code.msdn.s-msft.com/windowsapps/twitter-oauth-example-3a99967f/image/file/77433/1/oauthtwitter-004.jpg" alt="" width="771" height="413"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>How parameter base strings have been created:</p>

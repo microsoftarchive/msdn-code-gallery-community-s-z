@@ -29,7 +29,7 @@ Background</p>
  I hope you will like this.</p>
 <p><span>Create a Blank Node JS Web Application</span></p>
 <p>Create a blank Node JS web application.</p>
-<div class="wp-caption x_alignnone" id="attachment_11968"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/New_Node_JS_Web_Application.png"><img class="size-large x_wp-image-11968" src="-new_node_js_web_application-1024x709.png" alt="new_node_js_web_application" width="634" height="439"></a>
+<div class="wp-caption x_alignnone" id="attachment_11968"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/New_Node_JS_Web_Application.png"><img class="size-large x_wp-image-11968" src="http://sibeeshpassion.com/wp-content/uploads/2016/12/New_Node_JS_Web_Application-1024x709.png" alt="new_node_js_web_application" width="634" height="439"></a>
 <p class="wp-caption-text">new_node_js_web_application</p>
 </div>
 <p><span>Set Up Dependencies in package.json</span></p>
@@ -87,7 +87,7 @@ Background</p>
 </div>
 </div>
 <p>Once you run the command, you can see that the dependencies are installed in the solution.</p>
-<div class="wp-caption x_alignnone" id="attachment_11969"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/NPM-Packages-e1481366627834.png"><img class="size-full x_wp-image-11969" src="-npm-packages-e1481366627834.png" alt="npm-packages" width="634" height="624"></a>
+<div class="wp-caption x_alignnone" id="attachment_11969"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/NPM-Packages-e1481366627834.png"><img class="size-full x_wp-image-11969" src="http://sibeeshpassion.com/wp-content/uploads/2016/12/NPM-Packages-e1481366627834.png" alt="npm-packages" width="634" height="624"></a>
 <p class="wp-caption-text">npm-packages</p>
 </div>
 <p>Now we can understand what are these dependencies used for.</p>
@@ -342,26 +342,26 @@ app.post(<span class="js__string">&quot;/api/Upload&quot;</span>,&nbsp;<span cla
 </blockquote>
 <p><span>Run your application</span></p>
 <p>Now please run your application. Before running your application, you can always set your script file as your start up file, to set it, please right click on your project and click on properties.</p>
-<div class="wp-caption x_alignnone" id="attachment_11970"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Set-start-up-file.png"><img class="size-large x_wp-image-11970" src="-set-start-up-file-1024x383.png" alt="set-start-up-file" width="634" height="237"></a>
+<div class="wp-caption x_alignnone" id="attachment_11970"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Set-start-up-file.png"><img class="size-large x_wp-image-11970" src="http://sibeeshpassion.com/wp-content/uploads/2016/12/Set-start-up-file-1024x383.png" alt="set-start-up-file" width="634" height="237"></a>
 <p class="wp-caption-text">set-start-up-file</p>
 </div>
 <p>Now you can open your command prompt, you can manually locate your project in command prompt or you can use the &lsquo;Open command prompt here&rsquo; option. To select, please right click on your project and select the option as follows.</p>
-<div class="wp-caption x_alignnone" id="attachment_11971"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Open_command_prompt_here_option.png"><img class="size-full x_wp-image-11971" src="-open_command_prompt_here_option-e1481369183917.png" alt="open_command_prompt_here_option" width="773" height="1008"></a>
+<div class="wp-caption x_alignnone" id="attachment_11971"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Open_command_prompt_here_option.png"><img class="size-full x_wp-image-11971" src="http://sibeeshpassion.com/wp-content/uploads/2016/12/Open_command_prompt_here_option-e1481369183917.png" alt="open_command_prompt_here_option" width="773" height="1008"></a>
 <p class="wp-caption-text">open_command_prompt_here_option</p>
 </div>
 <p>Now type&nbsp;<em>node server.js</em>&nbsp;in your command prompt which will make sure that your server is running. And if everything is fine, you can see a window as follows.</p>
-<div class="wp-caption x_alignnone" id="attachment_11972"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Node_server_js_output.png"><img class="size-full x_wp-image-11972" src="-node_server_js_output.png" alt="node_server_js_output" width="583" height="414"></a>
+<div class="wp-caption x_alignnone" id="attachment_11972"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Node_server_js_output.png"><img class="size-full x_wp-image-11972" src="http://sibeeshpassion.com/wp-content/uploads/2016/12/Node_server_js_output.png" alt="node_server_js_output" width="583" height="414"></a>
 <p class="wp-caption-text">node_server_js_output</p>
 </div>
 <p>We can run our webpage now as our server is ready, please go to your browser and type the URL as&nbsp;<a href="http://localhost:2000/" target="_blank">http://localhost:2000</a>. Select few files using the file uploader we have created.</p>
-<div class="wp-caption x_alignnone" id="attachment_11973"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Select_fiels_in_file_upload-e1481369767333.png"><img class="size-full x_wp-image-11973" src="-select_fiels_in_file_upload-e1481369767333.png" alt="select_fiels_in_file_upload" width="634" height="117"></a>
+<div class="wp-caption x_alignnone" id="attachment_11973"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Select_fiels_in_file_upload-e1481369767333.png"><img class="size-full x_wp-image-11973" src="http://sibeeshpassion.com/wp-content/uploads/2016/12/Select_fiels_in_file_upload-e1481369767333.png" alt="select_fiels_in_file_upload" width="634" height="117"></a>
 <p class="wp-caption-text">select_fiels_in_file_upload</p>
 </div>
 <p>If you click submit, you can see we are calling our method action and the files are uploaded.</p>
-<div class="wp-caption x_alignnone" id="attachment_11974"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/File_uploaded_successfully_-e1481369870966.png"><img class="size-full x_wp-image-11974" src="-file_uploaded_successfully_-e1481369870966.png" alt="file_uploaded_successfully_" width="634" height="122"></a>
+<div class="wp-caption x_alignnone" id="attachment_11974"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/File_uploaded_successfully_-e1481369870966.png"><img class="size-full x_wp-image-11974" src="http://sibeeshpassion.com/wp-content/uploads/2016/12/File_uploaded_successfully_-e1481369870966.png" alt="file_uploaded_successfully_" width="634" height="122"></a>
 <p class="wp-caption-text">file_uploaded_successfully_</p>
 </div>
-<div class="wp-caption x_alignnone" id="attachment_11975"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Solution_explorer_window_after_saving_files-e1481369985988.png"><img class="size-full x_wp-image-11975" src="-solution_explorer_window_after_saving_files-e1481369985988.png" alt="solution_explorer_window_after_saving_files" width="634" height="603"></a>
+<div class="wp-caption x_alignnone" id="attachment_11975"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/12/Solution_explorer_window_after_saving_files-e1481369985988.png"><img class="size-full x_wp-image-11975" src="http://sibeeshpassion.com/wp-content/uploads/2016/12/Solution_explorer_window_after_saving_files-e1481369985988.png" alt="solution_explorer_window_after_saving_files" width="634" height="603"></a>
 <p class="wp-caption-text">solution_explorer_window_after_saving_files</p>
 </div>
 <p>You can always download the source code attached to see the complete code and application. Happy coding!.</p>

@@ -42,21 +42,21 @@ Click My Bots </span></p>
 Select your bot that you want to generate code</span></p>
 <p dir="ltr"><strong><span style="font-size:small">Step 4:</span></strong></p>
 <p dir="ltr"><span style="font-size:small">Click on Get bot embed Codes &gt; Click on Web Chat icon &gt; Click on (Click here to open Web Chat configuration page)</span></p>
-<p dir="ltr"><span><img src=":-q5ia-2gtphhqntqguhfqv8wuq5jkmm3krlv__etbr2kluycqnl5-34jnwc8r9i_ytr8cnirg_pb99mfuczivg4z09qv_enauurpoealqji-d-fyay7ovthdkcxuh2kgzpot1_tdr7ffyo3vdeg" alt="" width="623" height="147"></span></p>
+<p dir="ltr"><span><img src="https://lh4.googleusercontent.com/Q5IA-2gTPHhQNTqGuHFQV8wUQ5jkmM3KRLv__ETBr2KlUyCqnl5-34jNWC8R9I_ytr8cnirg_PB99mfUCzIVG4z09Qv_ENAUURPOeaLqJI-d-FyAY7OvtHdKcxuh2KgzPOt1_tdR7FFyO3vdEg" alt="" width="623" height="147"></span></p>
 <p dir="ltr"><strong><span style="font-size:small">Step 5:</span></strong></p>
 <p dir="ltr"><span style="font-size:small">It will navigate to new web page for configuration and click on &#43; Add New Site &gt; Provide site or application name &gt; Click on Done</span></p>
-<p dir="ltr"><span><img src=":-lem8-iqupi_jut9uvoig976kwe-_4-5gbydbyhaqfssrb-nv54vkfkxjkhacjnnrc8z4vudp1aqamvgdpx4shcpcxrcy16pmzidto5bed_x67c6gunoeadpwa7w3b_h4xoxdwxqyydml8zllng" alt="" width="624" height="378"></span></p>
+<p dir="ltr"><span><img src="https://lh3.googleusercontent.com/LEm8-IQuPI_jUT9uVOIg976kWE-_4-5GbYdByHaQFSSrb-nv54VKFKXjKhacjNNrC8Z4VuDP1AQaMvGDpx4shCpcXRCY16PMZIdTO5Bed_x67C6GuNoeAdpwa7w3b_H4XOxdwxQYYDmL8zllNg" alt="" width="624" height="378"></span></p>
 <p dir="ltr"><strong><span style="font-size:small">Step 6:</span></strong></p>
 <p dir="ltr"><span style="font-size:small">You can copy your secret keys and embed code for integrate to xamarin forms application
 </span></p>
-<p dir="ltr"><span><img src=":-en6knv0mvb34typz1gaqtt6fomulbtx2nnyhtcmtgxskiu3kv9n5miykytgoe1qbk_t7pbmrdslfzhem-p1q6csehmymgutc1asdiyymizxbm87fc6xbcg93svcxzr5tgudsx78aeg8saymwvw" alt="" width="624" height="395"></span></p>
+<p dir="ltr"><span><img src="https://lh6.googleusercontent.com/eN6kNv0MvB34TYPz1gAqtT6fOmUlbtx2NNYhtCmtgXskiU3kV9n5MIYKYTgoe1QbK_t7PBmRdsLFzhEm-P1q6CsEHMyMGUTC1aSDiyymiZxBm87fC6XbcG93SvcXzr5TGuDSx78AeG8SAymwVw" alt="" width="624" height="395"></span></p>
 <h1 dir="ltr"><strong>Create new Xamarin .Forms Application :</strong></h1>
 <p dir="ltr"><span style="font-size:small">Go to Run (Windows key &#43;R) &gt; type Devenv.exe or select from Windows Application list and select New project from File menu &gt; New Project (ctrl &#43;Shift&#43;N) or click More project template from VS Start screen.</span></p>
-<p dir="ltr"><span><img src=":-vtwvgrpd0ln4vwxbykmlytcbc9xbwy5kbbcuxnaenxliyrf1ipzvloae_wqa89a3atom5dltyxwtnd6upidt0tytypice7we4q1pjngw4p5dubdkishyx6wnsora6bwj4b9oi8sfkqfhszv2rq" alt="" width="409" height="285"></span></p>
+<p dir="ltr"><span><img src="https://lh6.googleusercontent.com/vtWVGrpd0Ln4VWxByKmLYtCbC9XbWY5KbbcuXnAenXlIyRf1ipzVlOAE_wqa89A3AToM5dLTyXWtnD6UpIDt0TytyPice7We4Q1pJnGw4P5dUBdKIsHyx6WNsora6bWJ4B9Oi8sfKqfHsZV2rQ" alt="" width="409" height="285"></span></p>
 <p dir="ltr"><span style="font-size:small">New Project &gt;select Cross -Platform from Template &gt; Cross platform App(Xamarin.Forms or native). It will show the screen, as shown below.</span></p>
-<p dir="ltr"><span><img src=":-d6w8bxin3uhbyab58qzfc0mnbq1ikpn4db_ff5t9tewzt_prhosimpyydelem3mnv_ptyincn_kxyrsyxu_gx1fh2gtlhbhvzoakdpdtuamj5kir7q5lvanb7xznlbzpnhu-k-vty7pcbygneg" alt="" width="596" height="326"></span></p>
+<p dir="ltr"><span><img src="https://lh6.googleusercontent.com/D6w8BXIn3UHbYab58QZfC0Mnbq1iKpN4DB_Ff5T9tEwzt_prhosiMpyYDeLEM3mNV_PTYInCN_kxyrSYxu_Gx1fh2GtLHBHVzoAkdpDTuAMj5KIr7q5LvANb7XZNLbzpNHU-K-vtY7pCbyGnEg" alt="" width="596" height="326"></span></p>
 <p dir="ltr"><span style="font-size:small">You can find above screen only on VS 2017. Select Blank apps &gt; select Xamarin.Forms &nbsp;&gt; Select PCL and click on Ok .it will generate all the mobile platform project with PC</span></p>
-<p dir="ltr"><span><img src=":-xbtplygitopjvbwppa7yqakrbdcx2hiy0jfgxlostrmzcvfouzkjj7xm1cspo9783ebz0-61pzgqo26dvftlyk0ubojgdbwqgwqsnjfi9lq8t4c33ctetnw0vvztwrsxnobbiywpu5wpqh3axq" alt="" width="356" height="286"></span></p>
+<p dir="ltr"><span><img src="https://lh3.googleusercontent.com/XbTPLygITopjvBwppA7YQakRbDCX2HIY0jfgxlOStrMzcVfOUzkjj7Xm1cSPo9783ebZ0-61PZGqO26DvFtLyK0uBojGdbWQgwqSNjFi9Lq8t4C33CtEtnw0VVzTWrSxnobBiywpU5wpqh3aXQ" alt="" width="356" height="286"></span></p>
 <p dir="ltr"><span style="font-size:small">Open your MainPage.xaml file add webview control with following code for web chat enable</span></p>
 <p dir="ltr"><span style="font-size:small">&nbsp;</span></p>
 <div class="scriptcode">
@@ -82,7 +82,7 @@ Select your bot that you want to generate code</span></p>
 </div>
 <p>&nbsp;</p>
 <p dir="ltr"><span style="font-size:small">Now you can run the application in windows ,Android and iOS</span></p>
-<p dir="ltr"><span><img src=":-9zpxc9eyecja6fp8frv7iv-scfyeoendadeg7nfaoy4lzde5dc5ikzzjoanwpodv83g7qh4lbntl6anu9dd2bkp4c8irdeudups2jbw4ofjgc_-hxtvtpmacl2akwflx9gb2uizlfm_jc5ozrw" alt="" width="198" height="404"></span><span><img src=":-dkg8staxuippplae5exjrpnsin6ruqppl_qcxk-zp5ktk_ssfgtpavnpghvhbi7jivzhjspfh7phqciul_rc5tikurt6vrbyemyi2mm67noot0mbxp98iygq4k8uslwo-cpyaiwp8j11zpldgw" alt="" width="212" height="396"></span><span><img src=":-doginm_e54m8zkcbnfixgvqz1riz7g0dexckzpu_yjbwbqufbjsl4elqmhovnxxt9ph5enype-96t6itam0x5sfp7dbr0yojz01u2v2ttx2cgdivjqcfersdftsagmnshrgjpm_pctml3stipg" alt="" width="195" height="398"></span></p>
+<p dir="ltr"><span><img src="https://lh4.googleusercontent.com/9ZpxC9EyECja6fp8fRv7iv-ScfyeOeNDaDeG7nFAoY4LzDe5Dc5iKzZjOAnwPODv83G7qH4LbnTL6anU9dd2bKP4C8IRDeudups2JBw4OFJGc_-hxTvtPMaCL2aKwFlX9gb2uiZLFM_JC5OZRw" alt="" width="198" height="404"></span><span><img src="https://lh4.googleusercontent.com/dkG8sTaXUiPPPLaE5EXjRPnsIn6rUQpPl_qCXk-ZP5kTk_SSFGTpavNPGhVHbI7jIVzhJspFh7pHQCiuL_rc5TikuRT6VRbYEMyI2mm67Noot0mbXP98iygQ4K8uslwO-cpYAiwp8j11ZPLdgw" alt="" width="212" height="396"></span><span><img src="https://lh4.googleusercontent.com/doGiNM_E54M8zKCBNFIxGvqZ1rIZ7g0dExCkZPu_yjbwbQUFbJSL4ElqmHOvNxXT9Ph5ENype-96T6itam0X5SfP7dBr0YOJz01u2v2TTX2CgdIVjQCfersDFtsAgmnShRgJpM_PCTML3STipg" alt="" width="195" height="398"></span></p>
 <p dir="ltr">&nbsp;</p>
 <h1 dir="ltr"><span>Summary</span></h1>
 <p dir="ltr"><span style="font-size:small">In this article, your learned how to create a Bot application, publish Bot to Azure and bot implementation to Xamarin Forms using Visual Studio 2017. If you have any questions/ feedback/ issues, please write in the

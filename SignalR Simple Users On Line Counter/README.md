@@ -24,7 +24,7 @@ In the past i used node.js for real time events raised to clients, now with sign
 <h1><span>Building the Sample</span></h1>
 <p><em>To integrate signalR on your web application/web site you can use nuget command:</em></p>
 <p><img alt=""></p>
-<p><img id="77046" src="77046-screenshot007.png" alt="" width="318" height="13"></p>
+<p><img id="77046" src="http://i1.code.msdn.s-msft.com/signalr-simple-users-on-88936819/image/file/77046/1/screenshot007.png" alt="" width="318" height="13"></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p><em>In this sample you can find a simple class UsersOnLine in wich you can define/raise events of your signlR
 </em><em><em>server side </em>implementation.</em></p>
@@ -136,7 +136,7 @@ In the past i used node.js for real time events raised to clients, now with sign
 <div class="endscriptcode">&nbsp;</div>
 <p>&nbsp;</p>
 <p>The showOnLineUsers result is:</p>
-<p><img id="77047" src="77047-screenshot012.png" alt="" width="272" height="247"></p>
+<p><img id="77047" src="http://i1.code.msdn.s-msft.com/signalr-simple-users-on-88936819/image/file/77047/1/screenshot012.png" alt="" width="272" height="247"></p>
 <h1>More Information</h1>
 <p><em>For more information you can see the official signalR's website:</em></p>
 <p><a title="signlR Official Web Site" href="http://www.asp.net/signalr" target="_blank"><em>http://www.asp.net/signalr</em></a></p>

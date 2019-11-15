@@ -78,28 +78,28 @@
 Team Services</span> <strong></strong><em></em>で実行するには、TFSプロジェクトを作成して、サンプルをソース管理に追加してください。</p>
 <p>チェックイン後、<span class="x x-first x_x_x_x_x_x-last">TFS・VSTSの Build &amp; Release</span>
 <strong></strong><em></em>を開きます。</p>
-<p><img id="170151" src="170151-6.png" alt="" width="1052" height="332" style="max-width:100%; height:auto; border:solid 1px gray"></p>
+<p><img id="170151" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170151/1/6.png" alt="" width="1052" height="332" style="max-width:100%; height:auto; border:solid 1px gray"></p>
 <p><span class="x x-first x_x_x_x_x_x-last">Builds の [New definition]</span><strong></strong><em></em> を押すとビルド定義を作成出来ます。</p>
-<p><img id="170152" src="170152-7.png" alt="" width="1034" height="746" style="max-width:100%; height:auto; border:solid 1px gray"></p>
-<p><img id="170153" src="170153-8.png" alt="" width="1033" height="721" style="max-width:100%; height:auto; border:solid 1px gray"></p>
+<p><img id="170152" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170152/1/7.png" alt="" width="1034" height="746" style="max-width:100%; height:auto; border:solid 1px gray"></p>
+<p><img id="170153" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170153/1/8.png" alt="" width="1033" height="721" style="max-width:100%; height:auto; border:solid 1px gray"></p>
 <p><span class="blob-code-inner"><span class="x x-first">「Visual Studioビルド」を選択して作成すると、既定で全てのソースがビルドされ、
 </span><span class="pl-mi x_x_x_x_x_x">*test*</span><span class="x x-last">.dll という名称でビルドされるプロジェクトのテストが実行されます</span>。</span></p>
-<p><img id="170154" src="170154-9.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"></p>
+<p><img id="170154" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170154/1/9.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"></p>
 <p>ひとつだけ注意しなければならないのは「Visual Studio Version」をプロジェクトに合わせて変更することです。[Save] を押して保存します。名前を適切に指定して保存してください。
 <strong></strong><em></em></p>
-<p><img id="170155" src="170155-10.png" alt="" width="1033" height="643" style="max-width:100%; height:auto; border:solid 1px gray"></p>
+<p><img id="170155" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170155/1/10.png" alt="" width="1033" height="643" style="max-width:100%; height:auto; border:solid 1px gray"></p>
 <p><span class="x x-first x_x_x_x_x_x-last">保存したビルド定義の [Queue new build...] をクリックするか、Builds画面の一覧で [...]をクリックして表示されるメニューから [Queue new build...] を右クリックして、キューに追加することで新しいビルドを TFS/VSTS で実行できます</span>。</p>
-<p><img id="170157" src="170157-11.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"></p>
+<p><img id="170157" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170157/1/11.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"></p>
 <p>ローカルでは数秒で終わるこのサンプルのテストですが、Visual Studio Online での実行にはおおよそ10分程度かかります。キューに積まれてから実際に実行されるまで時間がかかる場合があります。</p>
-<p><img id="170158" src="170158-12.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"></p>
+<p><img id="170158" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170158/1/12.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"></p>
 <p><span>テストが成功するとこのように確認することが出来ます。</span></p>
-<p><span><img id="170159" src="170159-13.png" alt="" width="1035" height="268" style="max-width:100%; height:auto; border:solid 1px gray"><br>
+<p><span><img id="170159" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170159/1/13.png" alt="" width="1035" height="268" style="max-width:100%; height:auto; border:solid 1px gray"><br>
 </span></p>
 <p><span>ビルドの成功率が VSTS の最初の画面の Activity （右中央）に表示されます。</span></p>
-<p><span><img id="170160" src="170160-14.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"><br>
+<p><span><img id="170160" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170160/1/14.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"><br>
 </span></p>
 <p><span>また HOME Overview（ホーム・概要）にタイルとして「Chart for Build History」や「Test results tend」を追加して表示しておくことが出来ます。</span></p>
-<p><span><img id="170161" src="170161-15.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"><br>
+<p><span><img id="170161" src="https://i1.code.msdn.s-msft.com/vstudio/tfsvso-dc7b8c9d/image/file/170161/1/15.png" alt="" width="1035" height="738" style="max-width:100%; height:auto; border:solid 1px gray"><br>
 </span></p>
 <p><span>ビルド定義の Triggers を変更すると、毎日自動ビルド・自動テストを行うように出来ます。（BUILD には無料時間枠がありますが、それを超えると有料になるか、ビルドが出来なくなるので注意が必要してください）</span><strong></strong><em></em></p>
 <h1>ステップアップのための練習課題</h1>

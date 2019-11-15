@@ -149,4 +149,4 @@ link&nbsp;</a></p>
 <h2 class="endscriptcode">&nbsp;Updates</h2>
 <ul>
 <li>Performance to SP.Objects was improved </li><li>Removed extra files </li><li>New Color options </li><li>New Ribbon Tile&nbsp;option in Page </li><li>Rounded Tiles (Round Option) </li></ul>
-<p><img id="110404" src="110404-tileribbon1.png" alt="" width="223" height="336"></p>
+<p><img id="110404" src="http://i1.code.msdn.s-msft.com/officeapps/sharepoint-2013-simple-f7f99aee/image/file/110404/1/tileribbon1.png" alt="" width="223" height="336"></p>

@@ -27,13 +27,13 @@ Background</p>
 <p>You can always run your Node JS code by using a command prompt, so setting up this tool is optional. If you install it, you can easily debug and develop Node JS. So I recommend you to install it.</p>
 </blockquote>
 <p>To download the tool, please click on this&nbsp;<a href="https://www.visualstudio.com/vs/node-js/" target="_blank">link</a>. Once you have downloaded the set up file, you can start installing it.</p>
-<div class="wp-caption x_alignnone" id="attachment_11948"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Node_JS_tool_for_Visual_Studio.png"><img class="size-full x_wp-image-11948" src="-node_js_tool_for_visual_studio.png" alt="node_js_tool_for_visual_studio" width="618" height="483"></a>
+<div class="wp-caption x_alignnone" id="attachment_11948"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Node_JS_tool_for_Visual_Studio.png"><img class="size-full x_wp-image-11948" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Node_JS_tool_for_Visual_Studio.png" alt="node_js_tool_for_visual_studio" width="618" height="483"></a>
 <p class="wp-caption-text">node_js_tool_for_visual_studio</p>
 </div>
 <p>So I hope you have installed the application, Now you can create a Node JS application in our Visual Studio.</p>
 <p><span>Creating Node JS Application In Visual Studio</span></p>
 <p>You can find an option as Node JS in your Add New Project window as follows. Please click on that and create a new project.</p>
-<div class="wp-caption x_alignnone" id="attachment_11949"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/New_Node_JS_Project.png"><img class="size-large x_wp-image-11949" src="-new_node_js_project-1024x709.png" alt="new_node_js_project" width="634" height="439"></a>
+<div class="wp-caption x_alignnone" id="attachment_11949"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/New_Node_JS_Project.png"><img class="size-large x_wp-image-11949" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/New_Node_JS_Project-1024x709.png" alt="new_node_js_project" width="634" height="439"></a>
 <p class="wp-caption-text">new_node_js_project</p>
 </div>
 <p>Now our Visual Studio is ready for coding, but as I mentioned earlier, we are going to use&nbsp;<a href="http://sibeeshpassion.com/category/sql-server/" target="_blank">SQL Server</a>&nbsp;as our database. So we need to do some configuration related to that
@@ -43,19 +43,19 @@ Background</p>
 <li>SQL Server </li><li>SQL Server Agent (Skip it if you are using SQLEXPRESS </li><li>SQL Server Browser
 <p>To check the status of these service, you can always services by running&nbsp;<em>services.msc</em>&nbsp;in Run command window. Once you are done, you need to enables some protocols and assign a port to it. Now go to your SQL Server Configuration Manager.
  Most probably you can find the file in this&nbsp;<em>C:\Windows\SysWOW64</em>location, if you cant find it start window.</p>
-<div class="wp-caption x_alignnone" id="attachment_11950"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/SQL_Server_Manager_Location-e1480260854402.png"><img class="size-full x_wp-image-11950" src="-sql_server_manager_location-e1480260854402.png" alt="sql_server_manager_location" width="634" height="206"></a>
+<div class="wp-caption x_alignnone" id="attachment_11950"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/SQL_Server_Manager_Location-e1480260854402.png"><img class="size-full x_wp-image-11950" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/SQL_Server_Manager_Location-e1480260854402.png" alt="sql_server_manager_location" width="634" height="206"></a>
 <p class="wp-caption-text">sql_server_manager_location</p>
 </div>
 <p>Now go to SQL Server Network Configuration and click on Protocols for SQLEXPRESS(Your SQL Server) and Enable TCP/IP.</p>
-<div class="wp-caption x_alignnone" id="attachment_11951"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Protocols_For_SQL_EXPRESS-e1480261046507.png"><img class="size-full x_wp-image-11951" src="-protocols_for_sql_express-e1480261046507.png" alt="protocols_for_sql_express" width="634" height="266"></a>
+<div class="wp-caption x_alignnone" id="attachment_11951"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Protocols_For_SQL_EXPRESS-e1480261046507.png"><img class="size-full x_wp-image-11951" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Protocols_For_SQL_EXPRESS-e1480261046507.png" alt="protocols_for_sql_express" width="634" height="266"></a>
 <p class="wp-caption-text">protocols_for_sql_express</p>
 </div>
 <p>Now right click and click on Properties on TCP/IP. Go to to IP Addresses and assign port for all the IP.</p>
-<div class="wp-caption x_alignnone" id="attachment_11952"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Assigning_TCP_IP_Port_In_SQL_Server.png"><img class="size-large x_wp-image-11952" src="-assigning_tcp_ip_port_in_sql_server-1024x707.png" alt="assigning_tcp_ip_port_in_sql_server" width="634" height="438"></a>
+<div class="wp-caption x_alignnone" id="attachment_11952"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Assigning_TCP_IP_Port_In_SQL_Server.png"><img class="size-large x_wp-image-11952" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Assigning_TCP_IP_Port_In_SQL_Server-1024x707.png" alt="assigning_tcp_ip_port_in_sql_server" width="634" height="438"></a>
 <p class="wp-caption-text">assigning_tcp_ip_port_in_sql_server</p>
 </div>
 <p>If have done it, it is time to set up our database and insert some data. Please do not forget to restart your service, as it is mandatory to get updated the changes we have done in the configurations.</p>
-<div class="wp-caption x_alignnone" id="attachment_11954"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Restart_SQL_EXPRESS.png"><img class="size-large x_wp-image-11954" src="-restart_sql_express-1024x595.png" alt="restart_sql_express" width="634" height="368"></a>
+<div class="wp-caption x_alignnone" id="attachment_11954"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Restart_SQL_EXPRESS.png"><img class="size-large x_wp-image-11954" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Restart_SQL_EXPRESS-1024x595.png" alt="restart_sql_express" width="634" height="368"></a>
 <p class="wp-caption-text">restart_sql_express</p>
 </div>
 <p><span>Creating database</span></p>
@@ -345,7 +345,7 @@ GO</pre>
 </table>
 </div>
 </div>
-<div class="wp-caption x_alignnone" id="attachment_11953"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/MSSQL_Node_JS_Install.png"><img class="size-large x_wp-image-11953" src="-mssql_node_js_install-1024x236.png" alt="mssql_node_js_install" width="634" height="146"></a>
+<div class="wp-caption x_alignnone" id="attachment_11953"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/MSSQL_Node_JS_Install.png"><img class="size-large x_wp-image-11953" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/MSSQL_Node_JS_Install-1024x236.png" alt="mssql_node_js_install" width="634" height="146"></a>
 <p class="wp-caption-text">mssql_node_js_install</p>
 </div>
 <p>Now we can load this package by using a function called require.</p>
@@ -452,7 +452,7 @@ GO</pre>
 </div>
 </div>
 <p>Now run your application and see the output as preceding.</p>
-<div class="wp-caption x_alignnone" id="attachment_11955"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Node_JS_Select_All_Data_From_Database.png"><img class="size-full x_wp-image-11955" src="-node_js_select_all_data_from_database.png" alt="node_js_select_all_data_from_database" width="583" height="414"></a>
+<div class="wp-caption x_alignnone" id="attachment_11955"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/11/Node_JS_Select_All_Data_From_Database.png"><img class="size-full x_wp-image-11955" src="http://sibeeshpassion.com/wp-content/uploads/2016/11/Node_JS_Select_All_Data_From_Database.png" alt="node_js_select_all_data_from_database" width="583" height="414"></a>
 <p class="wp-caption-text">node_js_select_all_data_from_database</p>
 </div>
 <p>You can always download the source code attached to see the complete code and application. Happy coding!.</p>

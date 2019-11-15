@@ -31,12 +31,12 @@
 <p>The easiest way to test this is to install this sample on 2 computer in a common subnetwork.</p>
 <p>sreenshot: two computer in a common network</p>
 <p>&nbsp;</p>
-<p><em><img id="59313" src="59313-tcp1.jpg" alt="" width="461" height="287"></em></p>
+<p><em><img id="59313" src="http://i1.code.msdn.s-msft.com/tcp-communication-in-vbnet-f6c48ca0/image/file/59313/1/tcp1.jpg" alt="" width="461" height="287"></em></p>
 <p><em>&nbsp;</em>&nbsp;</p>
 <p>remarks: this sample also accepts DNS names instead IP Adresses in the boxes. Therefore You can communicate also via internet.&nbsp;</p>
 <p>Here You can see a live demo:&nbsp;<span style="color:#0000ff; font-size:large"><span style="color:#0000ff; font-size:large">&nbsp;</span></span><a href="http://social.msdn.microsoft.com/Forums/en-US/vbgeneral/thread/be0bc7c6-4fe7-490d-860b-e84eed05b7c6">http://social.msdn.microsoft.com/Forums/en-US/vbgeneral/thread/be0bc7c6-4fe7-490d-860b-e84eed05b7c6</a></p>
 <p>sreenshot: testing connection with yourself over internet. All You need is a dynDns.org name of Your router and configure a portforwarding to the host IP address:</p>
-<p><img id="59314" src="59314-tcp3.jpg" alt="" width="464" height="303"></p>
+<p><img id="59314" src="http://i1.code.msdn.s-msft.com/tcp-communication-in-vbnet-f6c48ca0/image/file/59314/1/tcp3.jpg" alt="" width="464" height="303"></p>
 <p>&nbsp;</p>
 <p>the most important code snippsets are:</p>
 <h1>&nbsp;Async reading a frame</h1>

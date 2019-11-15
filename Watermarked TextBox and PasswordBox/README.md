@@ -132,4 +132,4 @@ public&nbsp;static&nbsp;readonly&nbsp;DependencyProperty&nbsp;ShowWatermarkPrope
 <li><em>MainWindow.xaml - Startup window &amp; example controls</em> </li><li><em>App.xaml - Control templates for both control types</em> </li></ul>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

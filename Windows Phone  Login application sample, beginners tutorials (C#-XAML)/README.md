@@ -24,7 +24,7 @@
 <p><span style="font-family:Verdana,sans-serif; font-size:small">2. Login with registered username &amp; password</span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">3. After login&nbsp;successfully&nbsp;,app need to show the related login user details until SignOut</span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">4. SignOut from the application,so that it will redirect to login page for another login.</span></p>
-<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://3.bp.blogspot.com/-kyS9H0LXbdU/VPVSeiq6BlI/AAAAAAAABvI/r2gzG-L9Tyg/s1600/WindowsSeries.png"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-kys9h0lxbdu%2fvpvseiq6bli%2faaaaaaaabvi%2fr2gzg-l9tyg%2fs1600%2fwindowsseries.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt=""></a></span></p>
+<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://3.bp.blogspot.com/-kyS9H0LXbdU/VPVSeiq6BlI/AAAAAAAABvI/r2gzG-L9Tyg/s1600/WindowsSeries.png"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-kyS9H0LXbdU%2FVPVSeiq6BlI%2FAAAAAAAABvI%2Fr2gzG-L9Tyg%2Fs1600%2FWindowsSeries.png&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt=""></a></span></p>
 <p class="separator">&nbsp;</p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">Requirements:</span></p>
 <ul>
@@ -42,7 +42,7 @@
 <li><span style="font-family:Verdana,sans-serif">Open Visual Studio</span><span style="font-family:Verdana,sans-serif">&nbsp;and create new project name (Ex: &quot;LoginApp&quot;)</span>
 </li></ul>
 <p><span style="font-family:Verdana,sans-serif">&nbsp;</span></p>
-<p class="separator"><a href="http://2.bp.blogspot.com/-qYpzkSWtxNo/VPVbKLQojYI/AAAAAAAABvY/RJzYoTWFEQ0/s1600/NewProject.PNG"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f-qypzkswtxno%2fvpvbklqojyi%2faaaaaaaabvy%2frjzyotwfeq0%2fs1600%2fnewproject.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="390"></a></p>
+<p class="separator"><a href="http://2.bp.blogspot.com/-qYpzkSWtxNo/VPVbKLQojYI/AAAAAAAABvY/RJzYoTWFEQ0/s1600/NewProject.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F-qYpzkSWtxNo%2FVPVbKLQojYI%2FAAAAAAAABvY%2FRJzYoTWFEQ0%2Fs1600%2FNewProject.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="390"></a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -50,7 +50,7 @@
 <p><span style="font-family:Verdana,sans-serif; font-size:small"><strong>Step 2 : Creating Login Form</strong></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">For simplicity, I divided this sample into MVVM design pattern. So in&nbsp;<strong>Model&nbsp;</strong>folder i placed related classes, In&nbsp;<strong>Views&nbsp;</strong>folder i placed xaml
  pages. And this sample&nbsp;hierarchy&nbsp;is&nbsp;like this:</span></p>
-<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://2.bp.blogspot.com/-p0uz5wW2wcM/VPVkCsW7B2I/AAAAAAAABvo/UFWc6hJf-oc/s1600/Structure.PNG"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f-p0uz5ww2wcm%2fvpvkcsw7b2i%2faaaaaaaabvo%2fufwc6hjf-oc%2fs1600%2fstructure.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="288" height="400"></a></span></p>
+<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://2.bp.blogspot.com/-p0uz5wW2wcM/VPVkCsW7B2I/AAAAAAAABvo/UFWc6hJf-oc/s1600/Structure.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F-p0uz5wW2wcM%2FVPVkCsW7B2I%2FAAAAAAAABvo%2FUFWc6hJf-oc%2Fs1600%2FStructure.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="288" height="400"></a></span></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">Now create LoginPage on Views folder,and in designing part create login form with following xaml code.</span></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -91,7 +91,7 @@
 </div>
 <div class="endscriptcode">&nbsp;so your phone looks like:</div>
 <p>&nbsp;</p>
-<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://4.bp.blogspot.com/-MzmJKWwLaaE/VPVk3S4GlnI/AAAAAAAABvw/H2alwdF8pcI/s1600/Login.PNG"><img src=":-proxy?url=http%3a%2f%2f4.bp.blogspot.com%2f-mzmjkwwlaae%2fvpvk3s4glni%2faaaaaaaabvw%2fh2alwdf8pci%2fs1600%2flogin.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="221" height="400"></a></span></p>
+<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://4.bp.blogspot.com/-MzmJKWwLaaE/VPVk3S4GlnI/AAAAAAAABvw/H2alwdF8pcI/s1600/Login.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-MzmJKWwLaaE%2FVPVk3S4GlnI%2FAAAAAAAABvw%2FH2alwdF8pcI%2Fs1600%2FLogin.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="221" height="400"></a></span></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">In LoginPage.xaml.cs, write following code</span></p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -227,7 +227,7 @@
 </div>
 <div class="endscriptcode">&nbsp;So your phone looks like:</div>
 <p>&nbsp;</p>
-<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-AfTwJKVttT8/VPV_P2z2UYI/AAAAAAAABwA/V2yXp0r88I0/s1600/Registration.PNG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-aftwjkvttt8%2fvpv_p2z2uyi%2faaaaaaaabwa%2fv2yxp0r88i0%2fs1600%2fregistration.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="221" height="400"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-AfTwJKVttT8/VPV_P2z2UYI/AAAAAAAABwA/V2yXp0r88I0/s1600/Registration.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-AfTwJKVttT8%2FVPV_P2z2UYI%2FAAAAAAAABwA%2FV2yXp0r88I0%2Fs1600%2FRegistration.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="221" height="400"></a></span></p>
 &nbsp;
 <p><span style="font-size:small">In&nbsp;SignUpPage<span style="font-family:Verdana,sans-serif">.xaml.cs, write following code and it is for validating user details to&nbsp;successful&nbsp;registration.
 </span></span></p>
@@ -414,9 +414,9 @@
 </div>
 <div class="endscriptcode">&nbsp;</div>
 <p>&nbsp;</p>
-<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-o8NolmnPG34/VPlWbTtm-MI/AAAAAAAABwU/QLinsINe9lA/s1600/Validation.PNG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-o8nolmnpg34%2fvplwbttm-mi%2faaaaaaaabwu%2fqlinsine9la%2fs1600%2fvalidation.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="221" height="400"></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://1.bp.blogspot.com/-o8NolmnPG34/VPlWbTtm-MI/AAAAAAAABwU/QLinsINe9lA/s1600/Validation.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-o8NolmnPG34%2FVPlWbTtm-MI%2FAAAAAAAABwU%2FQLinsINe9lA%2Fs1600%2FValidation.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="221" height="400"></a></span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">After&nbsp;successfully user registration, i saved user details in IsolatedStorageFile name is '<strong>RegistrationDetails</strong>'. So that every user details list can be stored in this file.</span></p>
-<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://3.bp.blogspot.com/-F-KzUkCWb8w/VPlY_MCC-VI/AAAAAAAABwo/ER8b9tNsFjo/s1600/SucessRegistration.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-f-kzukcwb8w%2fvply_mcc-vi%2faaaaaaaabwo%2fer8b9tnsfjo%2fs1600%2fsucessregistration.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="221" height="400"></a></span></p>
+<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://3.bp.blogspot.com/-F-KzUkCWb8w/VPlY_MCC-VI/AAAAAAAABwo/ER8b9tNsFjo/s1600/SucessRegistration.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-F-KzUkCWb8w%2FVPlY_MCC-VI%2FAAAAAAAABwo%2FER8b9tNsFjo%2Fs1600%2FSucessRegistration.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="221" height="400"></a></span></p>
 &nbsp;
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><br>
 </span></p>
@@ -536,7 +536,7 @@
 </div>
 </div>
 </div>
-<div class="endscriptcode">&nbsp;<a href="http://2.bp.blogspot.com/--2-ZhyqC-Gg/VPlwzThrhRI/AAAAAAAABw4/0lJMwT4L7PE/s1600/Userdetails.PNG" style="font-family:Verdana,Arial,Helvetica,sans-serif"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f--2-zhyqc-gg%2fvplwzthrhri%2faaaaaaaabw4%2f0ljmwt4l7pe%2fs1600%2fuserdetails.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="221" height="400"></a></div>
+<div class="endscriptcode">&nbsp;<a href="http://2.bp.blogspot.com/--2-ZhyqC-Gg/VPlwzThrhRI/AAAAAAAABw4/0lJMwT4L7PE/s1600/Userdetails.PNG" style="font-family:Verdana,Arial,Helvetica,sans-serif"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F--2-ZhyqC-Gg%2FVPlwzThrhRI%2FAAAAAAAABw4%2F0lJMwT4L7PE%2Fs1600%2FUserdetails.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="221" height="400"></a></div>
 </div>
 </strong></div>
 <p>&nbsp;</p>
@@ -645,4 +645,4 @@ blog.</a></div>
 <p></p>
 <p>&nbsp;</p>
 <div></div>
-<pre class="csharp"><p><span style="font-size:small"><strong>Help me with feedback:</strong></span></p><p><span style="font-size:small">Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="67168-ratings.png" alt="" width="74" height="15">&nbsp;star rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice). &nbsp;</span></p></pre>
+<pre class="csharp"><p><span style="font-size:small"><strong>Help me with feedback:</strong></span></p><p><span style="font-size:small">Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="http://i1.code.msdn.s-msft.com/oops-principles-solid-7a4e69bf/image/file/67168/1/ratings.png" alt="" width="74" height="15">&nbsp;star rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice). &nbsp;</span></p></pre>

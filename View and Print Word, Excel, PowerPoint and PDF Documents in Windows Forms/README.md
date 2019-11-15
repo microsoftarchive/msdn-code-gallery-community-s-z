@@ -28,7 +28,7 @@
 <ul>
 <li>Right-click on Toolbox panel, click 'Add Tab' to add a new tab </li><li>Right-click the new tab and select 'Choose Items...' </li><li>Choose '.NET Framework Components' tab </li><li>Click 'Browse...' button </li><li>Choose 'Spire.OfficeViewer.Forms.dll' in open file dialog </li><li>Click 'OK', then the controls will be successfully added to Toolbox </li><li>Drag OfficeViewer control into Form. </li></ul>
 <p>Just like following:</p>
-<p><em><img id="159919" src="159919-add%20toolbox.gif" alt="">&nbsp; &nbsp;</em></p>
+<p><em><img id="159919" src="https://i1.code.msdn.s-msft.com/view-and-print-word-excel-e6317466/image/file/159919/1/add%20toolbox.gif" alt="">&nbsp; &nbsp;</em></p>
 <p>It also allows developers to design custom buttons by just dragging <strong>DocumentViewer</strong>&nbsp;control&nbsp;instead of OfficeViewer into Form.</p>
 <p>&nbsp;</p>
 <h1>Using the Code</h1>
@@ -59,7 +59,7 @@
 </div>
 </div>
 <p><strong>Screenshot After running the code</strong></p>
-<h1><img id="159925" src="159925-result.gif" alt=""></h1>
+<h1><img id="159925" src="https://i1.code.msdn.s-msft.com/view-and-print-word-excel-e6317466/image/file/159925/1/result.gif" alt=""></h1>
 <p>&nbsp;</p>
 <h1><strong>Download</strong></h1>
 <p>Download <a href="http://www.e-iceblue.com/Download/download-spire-office-viewer-net.html ">

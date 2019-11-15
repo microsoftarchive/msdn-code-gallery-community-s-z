@@ -39,26 +39,26 @@
 How To Create a Storage Account</a>.</p>
 <p>Get the <strong>Storage Account Keys</strong>. Browse to your storage account dashboard and click
 <strong>Manage Access Keys</strong> on the bottom bar.</p>
-<p><img id="106556" title="Manage Keys Button" src="106556-manage-keys-button.png" alt="Manage Keys Button" width="200" height="60"></p>
+<p><img id="106556" title="Manage Keys Button" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106556/1/manage-keys-button.png" alt="Manage Keys Button" width="200" height="60"></p>
 <p>Copy the <strong>Storage Account Name</strong> and <strong>Primary Access Key</strong> values.</p>
-<p><img id="106557" title="Storage Access Keys" src="106557-storage-access-keys.png" alt="Storage Access Keys" width="551" height="457"></p>
+<p><img id="106557" title="Storage Access Keys" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106557/1/storage-access-keys.png" alt="Storage Access Keys" width="551" height="457"></p>
 </li><li>
 <p>Create a new <strong>Mobile Service</strong> from the Windows Azure Management Portal.</p>
 <p>To do this, log in to the <a href="https://manage.windowsazure.com">Windows Azure Management Portal</a>, navigate to Mobile Services and click
 <strong>New</strong>.</p>
-<p><img id="106558" src="106558-new-button.png" alt="New Button" width="133" height="57"></p>
+<p><img id="106558" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106558/1/new-button.png" alt="New Button" width="133" height="57"></p>
 <p>Expand <strong>Compute | Mobile Service</strong>, then click <strong>Create</strong>.</p>
 <p>In the <strong>Create a Mobile Service</strong> page, type a subdomain name for the new mobile service in the
 <strong>URL</strong> textbox (e.g: <em>mypicturesservice</em>) and wait for name verification. Once name verification completes, select
 <em>Create a new SQL Database</em> in the <strong>Database</strong> dropdown list and click the right arrow button to go to the next page.</p>
-<p><img id="106559" src="106559-create-new-mobile-service.png" alt="Create new Mobile Service" width="680" height="450"></p>
+<p><img id="106559" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106559/1/create-new-mobile-service.png" alt="Create new Mobile Service" width="680" height="450"></p>
 <p>This displays the <strong>Specify database settings</strong> page.</p>
 <blockquote>
 <p><strong>Note:</strong> As part of this sample, you create a new SQL database instance and server. You can reuse this new database and administer it as you would with any other SQL database instance. If you already have a database in the same region as the
  new mobile service, you can instead choose <em>Use existing Database</em> and then select that database. The use of a database in a different region is not recommended because of additional bandwidth costs and higher latencies.</p>
 </blockquote>
 <p>In <strong>Name</strong>, type the name of the new database. In <strong>Server Login Name</strong>, specify the administrator login name for the new SQL database server, type and confirm the password, and click the check button to complete the process.</p>
-<p><img id="106560" src="106560-new-mobile-service-step-2.png" alt="New Mobile Service step 2" width="680" height="450"></p>
+<p><img id="106560" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106560/1/new-mobile-service-step-2.png" alt="New Mobile Service step 2" width="680" height="450"></p>
 <p>You have now created a new mobile service that can be used by your mobile apps.</p>
 </li><li>
 <p>Import your Windows Azure subscription to Visual Studio.</p>
@@ -67,15 +67,15 @@ How To Create a Storage Account</a>.</p>
 </blockquote>
 <p>In <strong>Server Explorer</strong>, right click on the <strong>Windows Azure</strong> node and select
 <strong>Import Subscriptions...</strong>.</p>
-<p><img id="106561" title="Import Subscription Menu" src="106561-import-subscription-menu.png" alt="Import Subscription Menu" width="383" height="262"></p>
+<p><img id="106561" title="Import Subscription Menu" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106561/1/import-subscription-menu.png" alt="Import Subscription Menu" width="383" height="262"></p>
 <p>Click on <strong>Download subscription file</strong>, log in to your windows Azure account (if required) and click Save when your browser requests to save the file.</p>
-<p><img id="106562" title="Download Subscription File" src="106562-import-subscription-download.png" alt="Download Subscription File" width="550" height="206"></p>
+<p><img id="106562" title="Download Subscription File" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106562/1/import-subscription-download.png" alt="Download Subscription File" width="550" height="206"></p>
 <blockquote>
 <p><strong>Note:</strong> The login window is displayed in the browser, which may be behind your Visual Studio window. Remember to make a note of where you saved the downloaded .publishsettings file.</p>
 </blockquote>
 <p>Click <strong>Browse</strong>, navigate to the location where you saved the .publishsettings file, select the file, then click
 <strong>Open</strong> and then <strong>Import</strong>. Visual Studio imports the data needed to connect to your Windows Azure subscription.</p>
-<p><img id="106563" title="Import Subscription" src="106563-import-subscription-import.png" alt="Import Subscription" width="550" height="206"></p>
+<p><img id="106563" title="Import Subscription" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106563/1/import-subscription-import.png" alt="Import Subscription" width="550" height="206"></p>
 <blockquote>
 <p><strong>Security Note:</strong> After importing the publish settings, consider deleting the downloaded .publishsettings file as it contains information that can be used by others to access your account. Secure the file if you plan to keep it for use in other
  connected app projects.</p>
@@ -85,18 +85,18 @@ How To Create a Storage Account</a>.</p>
 <p>Go to Visual Studio. Open Server Explorer, expand <strong>Mobile Services</strong> under
 <strong>Windows Azure</strong>, right-click your mobile service and select <strong>
 Create Table...</strong>.</p>
-<p><img id="106564" title="Create a new Table" src="106564-creating-a-new-table.png" alt="Create a new Table" width="447" height="218"></p>
+<p><img id="106564" title="Create a new Table" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106564/1/creating-a-new-table.png" alt="Create a new Table" width="447" height="218"></p>
 <p>Create a new table named <strong>Album</strong> and set the permissions for Insert, Update, Delete, and Read to
 <strong>&quot;Anybody with the application key&quot;</strong>.</p>
-<p><img id="106567" src="106567-create-album-table.png" alt="" width="500" height="484"></p>
+<p><img id="106567" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106567/1/create-album-table.png" alt="" width="500" height="484"></p>
 </li><li>
 <p>Repeat the previous operation and create a table named <strong>Picture</strong>. Set permissions for Insert, Update, Delete, and Read to
 <strong>&quot;Anybody with the application key&quot;</strong>.</p>
-<p><img id="106566" title="Create Picture Table" src="106566-create-picture-table.png" alt="Create Picture Table" width="500" height="484"></p>
+<p><img id="106566" title="Create Picture Table" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106566/1/create-picture-table.png" alt="Create Picture Table" width="500" height="484"></p>
 </li><li>
 <p>Expand the <strong>Picture</strong> table you just created. Then right-click the
 <strong>insert.js</strong> script file and select <strong>Edit script</strong>.</p>
-<p><img id="106568" src="106568-edit-insert-menu-option.png" alt="edit-insert-menu-option" width="406" height="286"></p>
+<p><img id="106568" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106568/1/edit-insert-menu-option.png" alt="edit-insert-menu-option" width="406" height="286"></p>
 <p>The script opens in an editor window. Here you can insert a JavaScript function that is going to be invoked whenever someone performs an insert (the item to be inserted is passed as a parameter).</p>
 <p>Update the content of the file with the code below in order to obtain the Shared Access Signature (SAS) for the pictures you will upload later. Replace the
 <strong>storage account name</strong> and <strong>key</strong> placeholders with your
@@ -183,9 +183,9 @@ Create Table...</strong>.</p>
 <p>Connect the Windows 8 app to Mobile Services.</p>
 <p>Get the <strong>Mobile Service URL</strong> and <strong>Mobile Service Key</strong> values. Browse to your Mobile Service dashboard, copy the service URL and click
 <strong>Manage Keys</strong> on the bottom bar.</p>
-<p><img id="106569" title="Mobile Service URL" src="106569-mobile-service-settings-dashboard.png" alt="Mobile Service URL" width="945" height="616"></p>
+<p><img id="106569" title="Mobile Service URL" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106569/1/mobile-service-settings-dashboard.png" alt="Mobile Service URL" width="945" height="616"></p>
 <p>Now copy the <strong>Application Key</strong> value.</p>
-<p><img id="106570" title="Mobile Service Access Key" src="106570-mobile-service-settings-keys.png" alt="Mobile Service Access Key" width="500" height="349"></p>
+<p><img id="106570" title="Mobile Service Access Key" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106570/1/mobile-service-settings-keys.png" alt="Mobile Service Access Key" width="500" height="349"></p>
 <p>In Visual Studio, open the <strong>Windows Store</strong> app provided in this sample, open the
 <strong>App.xaml.cs</strong> file in the solution and replace the placeholders <strong>
 {mobile-service-url}</strong> and <strong>{mobile-service-key}</strong> with the values obtained in the previous steps.</p>
@@ -315,19 +315,19 @@ WindowsAzure.Storage-Preview</a> NuGet package in the project using the Package 
 </li><li>
 <p>In the main page, swipe the bottom edge of the screen (or right-click with the mouse) to make app bars appear and click or tap
 <strong>Upload</strong>.</p>
-<p><img id="106571" title="Upload Button" src="106571-mypictures-upload-button.png" alt="Upload Button" width="122" height="92"></p>
+<p><img id="106571" title="Upload Button" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106571/1/mypictures-upload-button.png" alt="Upload Button" width="122" height="92"></p>
 </li><li>
 <p>In the upload page, select an image and provide the required information. Then, click or tap the
 <strong>Upload picture</strong> button.</p>
-<p><img id="106573" title="Upload Page" src="106573-mypictures-upload-page.png" alt="Upload Page" width="1077" height="374"></p>
+<p><img id="106573" title="Upload Page" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106573/1/mypictures-upload-page.png" alt="Upload Page" width="1077" height="374"></p>
 </li><li>
 <p>The new uploaded picture is shown in the main page.</p>
-<p><img id="106574" title="Main Page" src="106574-mypictures-main-page.png" alt="Main Page" width="391" height="411"></p>
+<p><img id="106574" title="Main Page" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106574/1/mypictures-main-page.png" alt="Main Page" width="391" height="411"></p>
 </li><li>
 <p>Switch to the Windows Azure Management Portal, and select the storage account created for this sample.</p>
 </li><li>
 <p>In the <strong>Containers</strong> tab, select the container and browse to the URL of the uploaded blob.</p>
-<p><img id="106575" title="Uploaded Blob" src="106575-mypictures-blob.png" alt="Uploaded Blob" width="1024" height="784"></p>
+<p><img id="106575" title="Uploaded Blob" src="http://i1.code.msdn.s-msft.com/windowsapps/upload-file-to-windows-c9169190/image/file/106575/1/mypictures-blob.png" alt="Uploaded Blob" width="1024" height="784"></p>
 </li></ol>
 </div>
 <p>Want to see More Windows Store app samples using Windows Azure Mobile Services - check out the

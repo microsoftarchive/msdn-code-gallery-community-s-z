@@ -20,7 +20,7 @@
 <h3>Step 1: Create a Service Bus Namespace<a name="step1"></a></h3>
 <p>You will first need to <a href="https://windows.azure.com" target="_blank">provision a Service Bus namespace</a>. If you already have an existing namespace, it can be reused for inter-role communication. In either case, you will need to note down the three
  key elements: namespace name, issuer name and issuer secret.</p>
-<p><img title="7-12-2011 3-53-17 PM111" src="-7-12-2011-3-53-17-pm1116.png" border="0" alt="7-12-2011 3-53-17 PM111" width="624" height="527" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; margin-right:auto; margin-left:auto; float:none; display:block"></p>
+<p><img title="7-12-2011 3-53-17 PM111" src="http://windowsazurecat.com/wp-content/uploads/2011/07/7-12-2011-3-53-17-PM1116.png" border="0" alt="7-12-2011 3-53-17 PM111" width="624" height="527" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; margin-right:auto; margin-left:auto; float:none; display:block"></p>
 <p>The three highlighted parameters will be required for configuring the inter-role communication component in
 <a href="#step3">step 3</a>.</p>
 <h3>Step 2: Add an Inter-Role Communication Component to a Window Azure Solution<a name="step2"></a></h3>
@@ -31,7 +31,7 @@ Windows Azure AppFabric SDK v1.5</a>&nbsp;resides in <em>%ProgramFiles%\Windows 
 <table class="note">
 <tbody>
 <tr valign="top">
-<td class="notetitle"><span><img title="ImpNoteNoBg" src="-impnotenobg1.png" border="0" alt="ImpNoteNoBg" width="25" height="17" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">Important</span></td>
+<td class="notetitle"><span><img title="ImpNoteNoBg" src="http://windowsazurecat.com/wp-content/uploads/2011/07/ImpNoteNoBg1.png" border="0" alt="ImpNoteNoBg" width="25" height="17" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">Important</span></td>
 </tr>
 <tr>
 <td valign="top">It is very important to set the <strong><span style="font-family:Segoe UI">Copy Local</span></strong> property of the respective assembly references to
@@ -67,7 +67,7 @@ Windows Azure AppFabric SDK v1.5</a>&nbsp;resides in <em>%ProgramFiles%\Windows 
 <table class="note">
 <tbody>
 <tr valign="top">
-<td class="notetitle"><span><img title="Double Quote" src="-double-quote1.png" border="0" alt="Double Quote" width="24" height="16" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">&nbsp;
+<td class="notetitle"><span><img title="Double Quote" src="http://windowsazurecat.com/wp-content/uploads/2011/07/Double-Quote1.png" border="0" alt="Double Quote" width="24" height="16" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">&nbsp;
  Note</span></td>
 </tr>
 <tr>
@@ -211,7 +211,7 @@ Global.asax.cs</em> file, most specifically into its <em>Application_Start</em> 
 <table class="note">
 <tbody>
 <tr valign="top">
-<td class="notetitle"><span><img title="ImpNoteNoBg" src="-impnotenobg1.png" border="0" alt="ImpNoteNoBg" width="25" height="17" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">Important</span></td>
+<td class="notetitle"><span><img title="ImpNoteNoBg" src="http://windowsazurecat.com/wp-content/uploads/2011/07/ImpNoteNoBg1.png" border="0" alt="ImpNoteNoBg" width="25" height="17" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">Important</span></td>
 </tr>
 <tr>
 <td valign="top">It is recommended that the IRC component is not to be instantiated by a role instance more than once per single topic. Under the hood, the component maintains a messaging client with an active subscription affinitized to a particular role instance
@@ -325,7 +325,7 @@ instances</a> for each role to find the recipient&rsquo;s role instance ID.</p>
 <table class="note">
 <tbody>
 <tr valign="top">
-<td class="notetitle"><span><img title="ImpNoteNoBg" src="-impnotenobg1.png" border="0" alt="ImpNoteNoBg" width="25" height="17" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">Important</span></td>
+<td class="notetitle"><span><img title="ImpNoteNoBg" src="http://windowsazurecat.com/wp-content/uploads/2011/07/ImpNoteNoBg1.png" border="0" alt="ImpNoteNoBg" width="25" height="17" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">Important</span></td>
 </tr>
 <tr>
 <td valign="top">The Windows Azure Managed Library defines a <em><a href="http://msdn.microsoft.com/en-us/library/microsoft.windowsazure.serviceruntime.role.aspx" target="_blank">Role</a></em> class that represents a role. The
@@ -377,7 +377,7 @@ instances</a> for each role to find the recipient&rsquo;s role instance ID.</p>
 <table class="note">
 <tbody>
 <tr valign="top">
-<td class="notetitle"><span><img title="ImpNoteNoBg" src="-impnotenobg1.png" border="0" alt="ImpNoteNoBg" width="25" height="17" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">Important</span></td>
+<td class="notetitle"><span><img title="ImpNoteNoBg" src="http://windowsazurecat.com/wp-content/uploads/2011/07/ImpNoteNoBg1.png" border="0" alt="ImpNoteNoBg" width="25" height="17" style="border-width:0px; padding-top:0px; padding-right:0px; padding-left:0px; display:inline">Important</span></td>
 </tr>
 <tr>
 <td valign="top">The maximum size of a serialized IRC event must not exceed the maximum message size allowed by the Service Bus messaging infrastructure. As of writing, this message size limit is 256KB. To stay up-to-date with the latest limits and other important

@@ -21,7 +21,7 @@
 <li>Windows フォーム アプリケーション コントロール ライブラリ プロジェクトを作成し名前を &quot;CodeRecipe_ControlLibrary_VB&quot;、ソリューション名を &quot;CodeRecipe_UserControl_VB&quot; と設定します。
 <p><img src="18617-image001.jpg" alt="図 1" width="570" height="363"></p>
 </li><li>プロジェクトには既定で UserControl1 が追加されており、デザイン画面にはコントロール領域にツール ボックスからコントロールを追加することが可能です。
-<p><img src="18618-image002.jpg" alt="図 2" width="570" height="338"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/windowsform-howto-770496ef/image/file/18618/1/image002.jpg" alt="図 2" width="570" height="338"></p>
 </li><li>このユーザー コントロールには DateTimePicker コントロール、Button コントロールを追加します。
 <p><img src="18613-image003.jpg" alt="図 3" width="300" height="171"></p>
 </li><li>
@@ -71,7 +71,7 @@ End&nbsp;Class&nbsp;
 </li><li>
 <p>次にこのコントロールをホストする Windows フォーム アプリケーションプロジェクトを &quot;CodeRecipe_UserControl_VB&quot; と名前を付けて作成します。なお、Windows フォーム アプリケーションの作成方法については
 <a href="http://code.msdn.microsoft.com/VB-Windows-1a3cf40b">[VB] Windows フォームによるクライアント アプリケーション開発</a>を参照してください。</p>
-<p><img src="18619-image004.jpg" alt="図 4" width="570" height="363"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/windowsform-howto-770496ef/image/file/18619/1/image004.jpg" alt="図 4" width="570" height="363"></p>
 </li><li>Form1 のデザイナー画面を開き、Label, DateTimePicker, そして先ほど作成した UserControl1 コントロールを追加します。
 <p><img src="18620-image005.jpg" alt="図 5" width="570" height="338"></p>
 </li><li>
@@ -105,8 +105,8 @@ End&nbsp;Class&nbsp;
 <table>
 <tbody>
 <tr>
-<td><a href="http://msdn.microsoft.com/ja-jp/samplecode.recipe"><img src="-ff950935.coderecipe_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
-<td><a href="http://msdn.microsoft.com/ja-jp/windows/" target="_blank"><img src="-ff950935.windows_180x70%28ja-jp,msdn.10%29.jpg" border="0" alt="Windows デベロッパー センター" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/samplecode.recipe"><img src="http://i.msdn.microsoft.com/ff950935.coderecipe_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Code Recipe" width="180" height="70" style="margin-top:3px"></a></td>
+<td><a href="http://msdn.microsoft.com/ja-jp/windows/" target="_blank"><img src="http://i.msdn.microsoft.com/ff950935.windows_180x70%28ja-jp,MSDN.10%29.jpg" border="0" alt="Windows デベロッパー センター" width="180" height="70" style="margin-top:3px"></a></td>
 <td>
 <ul>
 <li>もっと他のコンテンツを見る &gt;&gt; <a href="http://msdn.microsoft.com/ja-jp/ff363212" target="_blank">
@@ -117,4 +117,4 @@ Windows デベロッパー センターへ</a> </li></ul>
 </tr>
 </tbody>
 </table>
-<p style="margin-top:20px"><a href="#top"><img src="-top.gif" border="0" alt="">ページのトップへ</a></p>
+<p style="margin-top:20px"><a href="#top"><img src="http://www.microsoft.com/japan/msdn/nodehomes/graphics/top.gif" border="0" alt="">ページのトップへ</a></p>

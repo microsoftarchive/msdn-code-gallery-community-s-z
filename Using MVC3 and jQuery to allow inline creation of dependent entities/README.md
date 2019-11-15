@@ -218,7 +218,7 @@ $(document).ready(<span class="js__operator">function</span>&nbsp;()&nbsp;<span 
 </div>
 Run the site to check everything is working and you should see an alert box confirming the function is running.</div>
 </div>
-<p><img src="57018-snag-0012.png" alt="" width="664" height="394"></p>
+<p><img src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/57018/1/snag-0012.png" alt="" width="664" height="394"></p>
 <p>&nbsp;</p>
 <p>Replace the line &quot;alert(&quot;woohoo!&quot;);&quot; with the highlighted code below which will use jQuery to create and append a button to the matched elements.</p>
 <p>&nbsp;</p>
@@ -256,7 +256,7 @@ $(document).ready(<span class="js__operator">function</span>&nbsp;()&nbsp;<span 
 </div>
 <div class="endscriptcode">and the web page should now look like this</div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="67982" src="67982-snag-0013.png" alt="" width="642" height="442"></div>
+<div class="endscriptcode"><img id="67982" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67982/1/snag-0013.png" alt="" width="642" height="442"></div>
 <p>&nbsp;</p>
 <p><strong>Displaying a form</strong></p>
 <p>Ok, so now we have a button beside each of our manadatory select elements.&nbsp; Now we need to have it respond to a click.&nbsp; jQuery comes to our aid once again, providing both a simple method of attaching an event handler using the click method and
@@ -316,21 +316,21 @@ $(<span class="js__string">&quot;select[data-val-required]&quot;</span>).each(<s
 </div>
 <div class="endscriptcode">Now the click button will open a dialog window.</div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="67983" src="67983-snag-0014.png" alt="" width="644" height="372"></div>
+<div class="endscriptcode"><img id="67983" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67983/1/snag-0014.png" alt="" width="644" height="372"></div>
 <div class="endscriptcode"></div>
 We want to populate the dialog with a form for a new Genre &ndash; MvcMusicStore doesn&rsquo;t have any capability for managing Genres so we have to create this from scratch.<span>&nbsp;
 </span>Visual Studio will, helpfully, create all the views for us.<span> </span>
 <p>&nbsp;</p>
 </div>
 <div class="endscriptcode">Add a Controller for the Genre entity.</div>
-<div class="endscriptcode"><img id="67984" src="67984-snag-0015.png" alt="" width="829" height="610"></div>
+<div class="endscriptcode"><img id="67984" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67984/1/snag-0015.png" alt="" width="829" height="610"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode">The Add Controller dialog will be displayed.<span>&nbsp;
 </span>Complete the dialog as shown below</div>
-<div class="endscriptcode"><img id="67985" src="67985-snag-0016.png" alt="" width="604" height="394"></div>
+<div class="endscriptcode"><img id="67985" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67985/1/snag-0016.png" alt="" width="604" height="394"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode">Click Add.&nbsp;Visual Studio will generate and add a GenreController.cs file under Controllers and several .cshtml files in a Genre folder under Views.</div>
-<p><img id="67986" src="67986-snag-0018.png" alt="" width="315" height="539" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="67986" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67986/1/snag-0018.png" alt="" width="315" height="539" style="display:block; margin-left:auto; margin-right:auto"></p>
 <p>Now that we have a Controller and some Views for the Genre entity, we can request the View via Ajax and populate the dialog.<br>
 <br>
 Update the MvcMusicStore.js as show below.</p>
@@ -390,12 +390,12 @@ $(<span class="js__string">&quot;select[data-val-required]&quot;</span>).each(<s
 <div class="endscriptcode">If you run the application now, you will notice that the entire page is loaded, including the title and navigation, when all we really want is the form itself.</div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="67987" src="67987-snag-0019.png" alt="" width="664" height="577"></div>
+<div class="endscriptcode"><img id="67987" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67987/1/snag-0019.png" alt="" width="664" height="577"></div>
 <p>To fix this, we need to create a partial class for the View and modify the Genre Controller.</p>
 <p>Create a PartialView for the Genre Controller.</p>
-<p><img id="67988" src="67988-snag-0020.png" alt="" width="664" height="552"></p>
+<p><img id="67988" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67988/1/snag-0020.png" alt="" width="664" height="552"></p>
 <p>The Add View Dialog will be displayed.&nbsp; Complete the dialog as shown below</p>
-<p><img id="67989" src="67989-snag-0021.png" alt="" width="511" height="502" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="67989" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67989/1/snag-0021.png" alt="" width="511" height="502" style="display:block; margin-left:auto; margin-right:auto"></p>
 <p>Click Add.&nbsp; Visual Studio will generate and add a _Create.cshtml file under Views.&nbsp; This file will be opened and will look like this:</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -532,10 +532,10 @@ public&nbsp;ActionResult&nbsp;Create()&nbsp;&nbsp;
 <div class="endscriptcode"></div>
 <div class="endscriptcode">Save, Build and Run the application.&nbsp; Now when you click the Add button, you should see the following</div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img src="57033-snag-0024.png" alt="" style="display:block; margin-left:auto; margin-right:auto"></div>
+<div class="endscriptcode"><img src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/57033/1/snag-0024.png" alt="" style="display:block; margin-left:auto; margin-right:auto"></div>
 </div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="67990" src="67990-snag-0024.png" alt="" width="664" height="423"></div>
+<div class="endscriptcode"><img id="67990" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67990/1/snag-0024.png" alt="" width="664" height="423"></div>
 <p class="endscriptcode">&nbsp;</p>
 <h2>Saving the form</h2>
 <p>The form is displayed correctly in the dialog but, having altered the PartialView, we have no method of submitting the form.&nbsp; This isn&rsquo;t so bad as we want to manage the saving of this form and whether it succeeded or not.<br>
@@ -595,7 +595,7 @@ The jQuery dialog allows buttons to be added along with functions to manage the 
 <div class="endscriptcode">This will add two buttons, save and cancel, to the dialog.</div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="67991" src="67991-snag-0025.png" alt="" width="664" height="356"></div>
+<div class="endscriptcode"><img id="67991" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67991/1/snag-0025.png" alt="" width="664" height="356"></div>
 <div class="endscriptcode">Using jQuery, we can retrieve and serialize the form data and then, using the same $.ajax method as before, POST it back to the webserver to be saved.&nbsp;
 <br>
 <br>
@@ -645,14 +645,14 @@ Update the dialogButtons object definition as show below:</div>
 </div>
 </div>
 </div>
-<div class="endscriptcode"><img id="67993" src="67993-snag-0028.png" alt="" width="664" height="354"></div>
+<div class="endscriptcode"><img id="67993" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67993/1/snag-0028.png" alt="" width="664" height="354"></div>
 <div class="endscriptcode">Opening a new browser window / tab confirms the new Genre has been saved</div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="67994" src="67994-snag-0029.png" alt="" width="664" height="36"></div>
+<div class="endscriptcode"><img id="67994" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67994/1/snag-0029.png" alt="" width="664" height="36"></div>
 <div class="endscriptcode"></div>
 </div>
-<p><img id="67995" src="67995-snag-0030.png" alt="" width="566" height="392"></p>
+<p><img id="67995" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67995/1/snag-0030.png" alt="" width="566" height="392"></p>
 <h2>Processing the response</h2>
 <p>Having created our new genre, we want to be able to select it from the Genre dropdown list but it's not there.&nbsp; We need to add an option to the dropdown list and it needs to represent the genre we've just created.<br>
 <br>
@@ -735,7 +735,7 @@ We can use the IsAjaxRequest() method again to tailor the response from the Crea
 </div>
 <div class="endscriptcode">&nbsp;&nbsp; <object width="350" height="300" data="data:application/x-silverlight-2," type="application/x-silverlight-2"> <param name="source" value="/Content/Common/videoplayer.xap" /> <param name="initParams" value="deferredLoad=false,duration=0,m=https://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/129907/1/adding%20entity%20-%20updating%20select%20list.wmv,autostart=false,autohide=true,showembed=true"
  /> <param name="background" value="#00FFFFFF" /> <param name="minRuntimeVersion" value="3.0.40624.0" /> <param name="enableHtmlAccess" value="true" /> <param name="src" value="https://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/129907/1/adding%20entity%20-%20updating%20select%20list.wmv"
- /> <param name="id" value="129907" /> <param name="name" value="Adding Entity - Updating Select List.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
+ /> <param name="id" value="129907" /> <param name="name" value="Adding Entity - Updating Select List.wmv" /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span>
  </object> </div>
 <p>Pretty cool, no?</p>
 <h2>Validation</h2>
@@ -948,7 +948,7 @@ public&nbsp;ActionResult&nbsp;Create(Genre&nbsp;genre)&nbsp;
 </div>
 <div class="endscriptcode">This will highlight the fields with validation errors.</div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="67998" src="67998-snag-0031.png" alt="" width="664" height="338"></div>
+<div class="endscriptcode"><img id="67998" src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/67998/1/snag-0031.png" alt="" width="664" height="338"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode">If we attempt to create an entity but we fail validation the user is presented with some meaningful feedback, even if we're using Ajax.</div>
 </div>
@@ -1130,7 +1130,7 @@ public&nbsp;ActionResult&nbsp;Create(Genre&nbsp;genre)&nbsp;
 </div>
 <div class="endscriptcode">Now when we click Save before meeting all validation criteria, the non-valid fields are highlighted and a message displayed before any request sent.</div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img src="57044-snag-0031a.png" alt="" width="664" height="348"></div>
+<div class="endscriptcode"><img src="http://i1.code.msdn.s-msft.com/adding-entities-on-the-fly-61fe68ad/image/file/57044/1/snag-0031a.png" alt="" width="664" height="348"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode">Finally. We need to address the hard coded url &ndash; the code as it stands will create buttons for each and every required dropdown list but they&rsquo;ll all load the Genre form.&nbsp; So, we need a way to identify the correct
  entity, and therefore Controller from the dropdown list itself.<br>

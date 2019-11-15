@@ -18,7 +18,7 @@
  you have security in mind. An alternative proposed by the World Wide Web Consortium (W3C) is called Web Storage. In this section I want to discuss some of the basics of one approach coming from the Web Storage proposal: local storage. Local storage, which
  is sometimes referred to as DOM Storage, is a simple persistent key-value storage directly in the browser. An important advantage of local storage is that it is natively implemented in browsers, which means that it is available even when external plug-ins
  are not.</p>
-<p><img class="mce-wp-more" title="Weiterlesen..." src="-trans.gif" alt=""></p>
+<p><img class="mce-wp-more" title="Weiterlesen..." src="http://janatdevelopment.wordpress.com/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif" alt=""></p>
 <h3>Check the browser support</h3>
 <p>Let us start with a simple check if local storage is available in your browser:</p>
 <p>&nbsp;</p>
@@ -128,7 +128,7 @@
  it into local storage with the provided <em>setItem</em> function.</div>
 <p>&nbsp;</p>
 <p>To check if our key-value pair is saved to local storage you can use the appropriate developer tools of your preferred browser. The following picture will show you how it will look like in Google Chrome.</p>
-<p><a href="http://janatdevelopment.files.wordpress.com/2013/07/developerconsole.png"><img title="Developer Console" src="-developerconsole_thumb.png" border="0" alt="Developer Console" width="500" height="374" style="border:0px currentColor; display:inline"></a></p>
+<p><a href="http://janatdevelopment.files.wordpress.com/2013/07/developerconsole.png"><img title="Developer Console" src="http://janatdevelopment.files.wordpress.com/2013/07/developerconsole_thumb.png" border="0" alt="Developer Console" width="500" height="374" style="border:0px currentColor; display:inline"></a></p>
 <p>There you see that I have typed <strong>Name</strong> as the key and<strong> Jan Hentschel</strong> as the value into the form.</p>
 <p>After writing data to local storage we like to read it from local storage.</p>
 <p>&nbsp;</p>
@@ -246,7 +246,7 @@ The JavaScript to retrieve the value is pretty simple. First we retrieve the key
 JSON.stringify</em> function to pass the object as JSON to local storage.</div>
 <p>&nbsp;</p>
 <p>If all works well we will see the following in the Google Chrome developer console.</p>
-<p><a href="http://janatdevelopment.files.wordpress.com/2013/07/writecustomobject.png"><img title="Write custom object" src="-writecustomobject_thumb.png" border="0" alt="Write custom object" width="674" height="280" style="border:0px currentColor; display:inline"></a></p>
+<p><a href="http://janatdevelopment.files.wordpress.com/2013/07/writecustomobject.png"><img title="Write custom object" src="http://janatdevelopment.files.wordpress.com/2013/07/writecustomobject_thumb.png" border="0" alt="Write custom object" width="674" height="280" style="border:0px currentColor; display:inline"></a></p>
 <p>Now it is time to get that data back from local storage. The code looks like the following.</p>
 <p>&nbsp;</p>
 <div class="scriptcode">

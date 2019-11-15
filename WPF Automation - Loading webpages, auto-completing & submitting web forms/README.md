@@ -18,7 +18,7 @@
 <h1>Introduction</h1>
 <p>A complete example of using WPF to automatically load a webpage, fill in a web form and submit the form. This sample uses the methods and properties provided by the IHTMLDocument2 interface to analyse the web page contents. With this, you can search for
  elements within, edit, remove and fiddle as much as you like.</p>
-<p><img id="63052" src="63052-binsearch.png" alt="" width="644" height="632">&nbsp;</p>
+<p><img id="63052" src="http://i1.code.msdn.s-msft.com/wpf-automation-loading-6ae6c88a/image/file/63052/1/binsearch.png" alt="" width="644" height="632">&nbsp;</p>
 <h1><span>Building the Sample</span></h1>
 <p>Just download, unblock, unzip, open and run.</p>
 <p>&nbsp;</p>
@@ -112,4 +112,4 @@ var&nbsp;ix&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;
 <li>MainWindow.xaml - Starup window </li><li>MainWindow.xaml.cs - All the code for the sample </li></ul>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

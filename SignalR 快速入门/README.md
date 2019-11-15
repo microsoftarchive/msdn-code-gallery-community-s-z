@@ -27,9 +27,9 @@
 <p>通过第二部分的介绍，相信大家对Asp.net SignalR有了一个初步的了解，接下来通过两个例子来让大家加深对SignalR运行机制的理解。第一个例子就是在Web端如何使用SignalR来实现广播消息。</p>
 <ol>
 <li>使用Visual Studio 2013，创建一个MVC工程 </li><li>通过Nuget安装SignalR包。右键引用-》选择管理Nuget程序包-》在出现的窗口中输入SignalR来找到SignalR包进行安装。 </li><li>安装SignalR成功后，SignalR库的脚本将被添加进Scripts文件夹下。具体如下图所示： </li></ol>
-<p><img src="-383187-20160330231731988-1853447818.png" alt=""></p>
+<p><img src="http://images2015.cnblogs.com/blog/383187/201603/383187-20160330231731988-1853447818.png" alt=""></p>
 <p>4. 向项目中添加一个SignalR集线器(v2)并命名为ServerHub。</p>
-<p><img src="-383187-20160330232023582-590617526.png" alt=""></p>
+<p><img src="http://images2015.cnblogs.com/blog/383187/201603/383187-20160330232023582-590617526.png" alt=""></p>
 <p>5. 将下面代码填充到刚刚创建的ServerHub类中。</p>
 <div class="scriptcode">
 <div class="scriptcode">

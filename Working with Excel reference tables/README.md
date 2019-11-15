@@ -31,7 +31,7 @@ Excel Reference tables</a> to get data to display or simply work with in your so
  I never had issues so the two possible failures have not been tested yet conceptually is simply an expansion of the original version of GetInformation which was a simple Boolean</span>
 </li><li><span style="font-size:small">Original code did not clear the private variable mReferenceTables which it does now.</span>
 </li></ul>
-<p><span style="font-size:small"><img id="81132" src="81132-fig1.jpg" alt="" width="659" height="407"></span></p>
+<p><span style="font-size:small"><img id="81132" src="http://i1.code.msdn.s-msft.com/working-with-excel-cdd73a85/image/file/81132/1/fig1.jpg" alt="" width="659" height="407"></span></p>
 <h1><span>Building the Sample</span></h1>
 <ul>
 <li><span style="font-size:small">Requires VS2010 or higher</span> </li><li><span style="font-size:small">Only tested under 32bit OS.</span> </li></ul>

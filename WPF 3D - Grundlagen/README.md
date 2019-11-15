@@ -18,7 +18,7 @@
  zu diesen ist. (Aber nicht das gleiche!)</p>
 <p>Hinweis: Im Beispielprojekt kann man die Objekte Teilweise bewegen. Dies ist nur ein vorl&auml;ufig funktionjierender Mechanismus. Wie er genau Funktioniert werde ich evbentuell in einem weiteren Tutorial erl&auml;utern.</p>
 <h1>3D-Raum</h1>
-<p><img src="-3d_ks.png" alt="3D Koordinatensystem" style="float:left"></p>
+<p><img src="http://code-13.net/Tutorials/WPF/Images/3d_ks.png" alt="3D Koordinatensystem" style="float:left"></p>
 <p>Der Raum in dem die verschiedenen Objekte eingezeichnet werden ist in 8 Oktanten eingeteilt. In der Mitte ist das Zentrum. Die Oktanten werden durch die X-, Y- und die Z-Achse getrennt.</p>
 <p>Der Raum hat eine H&ouml;he, Breite und L&auml;nge von 1. Entsprechend ist jeder Oktant 0,5 in jede Richtung gro&szlig;.</p>
 <p>In die Richtung, in die die Pfeile zeigen, sind die jeweiligen Koordinaten positiv.</p>
@@ -61,7 +61,7 @@ Bestimmt die Position der Kamera im Raum. 1 Entspricht auch hier der Normalgr&ou
 <tr>
 <td style="border:0px none black; vertical-align:top">Hierbei handelt es sich um eine Gradangabe, wie Stark
 <a href="http://de.wikipedia.org/wiki/Fotografische_Blende">die Blende</a> ge&ouml;ffnet ist.</td>
-<td style="border:0px none black; vertical-align:top"><img src="-3d_camera_fieldofview.png" alt="Visualisierung"></td>
+<td style="border:0px none black; vertical-align:top"><img src="http://code-13.net/Tutorials/WPF/Images/3d_camera_fieldofview.png" alt="Visualisierung"></td>
 </tr>
 </tbody>
 </table>
@@ -120,12 +120,12 @@ DirectionalLight</a> handelt es sich um ein einfaches Scheinwerferlicht. Der 1. 
  sehen k&ouml;nnen.</p>
 <p>Die Erstellte Auflistung wei&szlig;en wir jetzt als Inhalt dem <a href="http://msdn.microsoft.com/de-de/library/vstudio/system.windows.media.media3d.modelvisual3d.aspx" target="_blank">
 ModelVisual3D</a> aus dem ViewPort3D zu. Beim Ausf&uuml;hren erhalten wir nun folgendes Resultat:</p>
-<p><img src="-3d_app_1.png" alt="Screenshot"></p>
+<p><img src="http://code-13.net/Tutorials/WPF/Images/3d_app_1.PNG" alt="Screenshot"></p>
 <h1>Vielecke</h1>
 <p>Nat&uuml;rlich ist es nicht immer sehr komfortable alles mit 3-Ecken zu Konstruieren. Besonders Vierecke werden auch h&auml;ufig gebraucht (werden wir sp&auml;ter f&uuml;r einen W&uuml;rfel nutzen). Ein Viereck l&auml;sst sich einfach in 2 Dreiecke unterteilen.
  Dabei spielt es keine Rollen, welche Art von Viereck wir vor uns haben (vorausgesetzt, wir haben ein
 <a href="http://de.wikipedia.org/wiki/Konvexe_Menge" target="_blank">konvexes</a> Viereck).</p>
-<p><img src="-3d_mesh.png" alt="Vierecke"></p>
+<p><img src="http://code-13.net/Tutorials/WPF/Images/3d_mesh.png" alt="Vierecke"></p>
 <p>Wir erstellen nun also eine Methode, welches ein Viereck in einem <a href="http://msdn.microsoft.com/de-de/library/vstudio/system.windows.media.media3d.GeometryModel3D.aspx" target="_blank">
 GeometryModel3D</a> erstellt und zur&uuml;ck gibt. Der Methode k&ouml;nnen wir die 4 Eckpunkte sowie ein Material &uuml;bergeben. In der Methode selbst werden die Punkte zur Positions-Auflistung hinzugef&uuml;gt und anschlie&szlig;end f&uuml;r 2 Dreiecke verwendet:</p>
 <div class="scriptcode">
@@ -180,7 +180,7 @@ GeometryModel3D</a> erstellt und zur&uuml;ck gibt. Der Methode k&ouml;nnen wir d
 </div>
 </div>
 <div class="endscriptcode">&nbsp;
-<p><img src="-3d_app_2.png" alt="Screenshot"></p>
+<p><img src="http://code-13.net/Tutorials/WPF/Images/3d_app_2.PNG" alt="Screenshot"></p>
 <p>Wie Sie sehen k&ouml;nnen, ist das 2. Rechteck etwas dunkler und sieht nicht rechteckig aus. Das liegt am 3D-Effekt. Wenn Sie die Kamera entsprechend drehen, wird das 2. Rechtek richtig, aber daf&uuml;r das 1. &quot;Falsch&quot; dargestellt.</p>
 <h1 id="light">Lichtquellen</h1>
 <p>Ohne Licht sieht man nichts. Darum braucht man auch in WPF mindestens eine entsprechende Lichtquelle, die die Objekte beleuchtet. Es gibt 4 verschiedene Arten von Lichtquellen:</p>
@@ -197,7 +197,7 @@ Das Licht wird in einem Kegel in eine bestimmte Richtung gestrahlt. Die Position
 <a href="http://msdn.microsoft.com/de-de/library/system.windows.media.media3d.pointlightbase.position.aspx">
 Position-Eigenschaft</a> bestimmt werden. Die <a href="http://msdn.microsoft.com/de-de/library/system.windows.media.media3d.spotlight.direction.aspx">
 Direction-Eigenschaft</a> bestimmt die Strahlrichtung. </li></ul>
-<p><img src="-3d_app_3.png" alt="Screenshot"></p>
+<p><img src="http://code-13.net/Tutorials/WPF/Images/3d_app_3.PNG" alt="Screenshot"></p>
 <p>Allen Lichtquellen kann man die <a href="http://msdn.microsoft.com/de-de/library/system.windows.media.media3d.light.color.aspx">
 Color-Eigenschaft</a> f&uuml;r die Lichtfarbe zuweisen. So kann man bestimmte, farbliche Effekte hervorrufen.</p>
 </div>
@@ -215,7 +215,7 @@ SpecularPower-Eigenschaft</a> kann die St&auml;rke der Reflektioon angegeben wer
 Das Objekt scheint selbst Licht abzugeben, ohne zu leuchten. Dadurch wird sich da Objekt bei Schatten anders verhalten.
 </li></ul>
 <p>Nachfolgend wieder eine Anwendung mit verschiedenen Materialien:</p>
-<p><img src="-3d_app_4.png" alt="Screenshot" width="560" height="329"></p>
+<p><img src="http://code-13.net/Tutorials/WPF/Images/3d_app_4.PNG" alt="Screenshot" width="560" height="329"></p>
 <p>Links sind 2 Diffuse Materialien zu sehen. Das untere Objekt nutzt einen <a href="http://msdn.microsoft.com/de-de/library/vstudio/system.windows.media.lineargradientbrush.aspx">
 linearen Farbverlauf</a>. In der Mitte sind 2 Objekte mit einem <a href="http://msdn.microsoft.com/de-de/library/vstudio/system.windows.media.media3d.specularmaterial.aspx">
 SpecularMaterial</a> auf einem <a href="http://msdn.microsoft.com/de-de/library/vstudio/system.windows.media.media3d.diffusematerial.aspx">
@@ -320,7 +320,7 @@ TextureCoordinates-Auslistung</a> eintragen. </p>
 orthografische</a> und die <a href="http://msdn.microsoft.com/de-de/library/vstudio/system.windows.media.media3d.perspectivecamera.aspx">
 perspektivische</a>. Bei der perspektischen Kamera werden weiter hinten liegende Objekte kleiner aufgenommen. Das wirkt im Vergleich zu realen aufnahmen sehr realistisch. Bei der orthografischen Kamera dagegen werden alle Objekte in der angegebenen Gr&ouml;&szlig;e
  dargestellt. In nachfolgendem Screenshot sind auf jeder Seite je 2 Dreiecke der gleichen Gr&ouml;&szlig;e abgebildet. Links wird eine persperktivische und rechts eine ortografische Kamera angewendet.</p>
-<p><img src="-3d_app_5.png" alt="Screenshot"></p>
+<p><img src="http://code-13.net/Tutorials/WPF/Images/3d_app_5.PNG" alt="Screenshot"></p>
 <p>Bei beiden Kameras kann man mithilfe der <a href="http://msdn.microsoft.com/de-de/library/vstudio/system.windows.media.media3d.projectioncamera.lookdirection.aspx">
 LookDirection-Eigenschaft</a> die Richtung angeben, in die die Aufnahme gemacht wird. Die Position der Kamera wird von der
 <a href="http://msdn.microsoft.com/de-de/library/vstudio/system.windows.media.media3d.projectioncamera.position.aspx">

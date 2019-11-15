@@ -88,12 +88,12 @@ AllowsTransparency</a>&nbsp;to <strong>None</strong> and <strong>True</strong> r
 </div>
 <div class="endscriptcode"></div>
 <p>will produce the following window.</p>
-<p><img id="138898" src="138898-customwindow.png" alt="" width="392" height="284"></p>
+<p><img id="138898" src="https://i1.code.msdn.s-msft.com/wpf-styling-a-window-in-fcf4e4ce/image/file/138898/1/customwindow.png" alt="" width="392" height="284"></p>
 <p>Please note this is deliberately horribly styled with the corner thumbs left visible, to show the different elements of the template.</p>
 <p>Also note that where possible the template respects the Window properties (Background, BorderThickness, Foreground etc.), and will apply these if they are set explicitly on the Window.</p>
 <p>For a slightly more realistic style try applying the RedWindow style to the MainWindow in the sample project and swapping out the existing brushes for the red window brushes in
 <strong>App.xaml</strong>.</p>
-<p><img id="138899" src="138899-redwindow.png" alt="" width="284" height="243"></p>
+<p><img id="138899" src="https://i1.code.msdn.s-msft.com/wpf-styling-a-window-in-fcf4e4ce/image/file/138899/1/redwindow.png" alt="" width="284" height="243"></p>
 <h2>Summary</h2>
 <p>The easiest way to understand the code is to step through it. There isn't really enough room here to go over&nbsp;the&nbsp;code behind the behaviors and commands in detail but if you have any questions or suggestions please feel free to leave them in the
  Q and A section.</p>

@@ -14,7 +14,7 @@
 <h2>Simple Calculator</h2>
 <p>Visual Studio all version</p>
 <p>Visual Basic 2008 and later versions</p>
-<h2><img id="179342" src="179342-screenshot_12.png" alt="" width="399" height="496"></h2>
+<h2><img id="179342" src="https://i1.code.msdn.s-msft.com/calculator-simple-visual-75d5c33c/image/file/179342/1/screenshot_12.png" alt="" width="399" height="496"></h2>
 <h3>Basit bir hesap makinesi</h3>
 <p>Toplama işlemi,</p>
 <p>&Ccedil;ıkarma işlemi,</p>
@@ -128,14 +128,14 @@
 <p>In&nbsp;<a title="Windows 2000" href="https://en.wikipedia.org/wiki/Windows_2000">Windows 2000</a>,&nbsp;<a class="mw-redirect" title="Digit grouping" href="https://en.wikipedia.org/wiki/Digit_grouping">digit grouping</a>&nbsp;is added. Degree and base
  settings are added to menu bar.</p>
 <div class="thumb tright">
-<div class="thumbinner"><a class="image" href="https://en.wikipedia.org/wiki/File:Calculator_Vista_Scientific.png"><img class="thumbimage" src=":-220px-calculator_vista_scientific.png" alt="" width="220" height="148"></a>
+<div class="thumbinner"><a class="image" href="https://en.wikipedia.org/wiki/File:Calculator_Vista_Scientific.png"><img class="thumbimage" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Calculator_Vista_Scientific.png/220px-Calculator_Vista_Scientific.png" alt="" width="220" height="148"></a>
 <div class="thumbcaption">
 <div class="magnify"><a class="internal" title="Enlarge" href="https://en.wikipedia.org/wiki/File:Calculator_Vista_Scientific.png"></a></div>
 Scientific mode in&nbsp;<a title="Windows Vista" href="https://en.wikipedia.org/wiki/Windows_Vista">Windows Vista</a></div>
 </div>
 </div>
 <div class="thumb tright">
-<div class="thumbinner"><a class="image" href="https://en.wikipedia.org/wiki/File:Windows_7_Calculator.png"><img class="thumbimage" src=":-150px-windows_7_calculator.png" alt="" width="150" height="204"></a>
+<div class="thumbinner"><a class="image" href="https://en.wikipedia.org/wiki/File:Windows_7_Calculator.png"><img class="thumbimage" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Windows_7_Calculator.png/150px-Windows_7_Calculator.png" alt="" width="150" height="204"></a>
 <div class="thumbcaption">
 <div class="magnify"><a class="internal" title="Enlarge" href="https://en.wikipedia.org/wiki/File:Windows_7_Calculator.png"></a></div>
 <a title="Windows 7" href="https://en.wikipedia.org/wiki/Windows_7">Windows 7</a>&nbsp;Calculator</div>
@@ -184,7 +184,7 @@ Scientific mode in&nbsp;<a title="Windows Vista" href="https://en.wikipedia.org/
 </tbody>
 </table>
 <div class="thumb tright">
-<div class="thumbinner"><a class="image" href="https://en.wikipedia.org/wiki/File:Windows_8.1_Calculator.png"><img class="thumbimage" src=":-220px-windows_8.1_calculator.png" alt="" width="220" height="172"></a>
+<div class="thumbinner"><a class="image" href="https://en.wikipedia.org/wiki/File:Windows_8.1_Calculator.png"><img class="thumbimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Windows_8.1_Calculator.png/220px-Windows_8.1_Calculator.png" alt="" width="220" height="172"></a>
 <div class="thumbcaption">
 <div class="magnify"><a class="internal" title="Enlarge" href="https://en.wikipedia.org/wiki/File:Windows_8.1_Calculator.png"></a></div>
 <a title="Windows 8.1" href="https://en.wikipedia.org/wiki/Windows_8.1">Windows 8.1</a>'s additional Metro-style calculator in standard mode</div>

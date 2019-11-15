@@ -31,12 +31,12 @@
 <p><span style="font-size:small">First we will create our Web API application.</span></p>
 <p><strong><span style="font-size:small">Creating Web API application</span></strong></p>
 <p><span style="font-size:small">Click File-&gt; New-&gt; Project then select MVC application. From the following pop up we will select the template as empty and select the core references and folders for MVC.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11405"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png"><img class="size-full x_x_wp-image-11405" src="-empty-template-with-mvc-and-web-api-folders-e1458711950206.png" alt="Empty Template With MVC And Web API Folders" width="650" height="484"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11405"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png"><img class="size-full x_x_wp-image-11405" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Empty-Template-With-MVC-And-Web-API-Folders-e1458711950206.png" alt="Empty Template With MVC And Web API Folders" width="650" height="484"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Empty Template With MVC And Web API Folders</span></p>
 </div>
 <p><span style="font-size:small">Once you click OK, a project with MVC like folder structure with core references will be created for you.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_x_wp-image-11362" src="-folder-structure-and-references-for-empty-mvc-project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11362"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png"><img class="size-full x_x_wp-image-11362" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Folder-Structure-And-References-For-Empty-MVC-Project.png" alt="Folder Structure And References For Empty MVC Project" width="267" height="367"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Folder Structure And References For Empty MVC Project</span></p>
 </div>
@@ -254,13 +254,13 @@ GO&nbsp;
 <span style="font-size:small">Now will create our Web API controller.</span></p>
 <p><strong><span style="font-size:small">Create Web API Controller</span></strong></p>
 <p><span style="font-size:small">To create a Web API controller, just right click on your controller folder and click Add -&gt; Controller -&gt; Select Web API 2 controller with actions, using Entity Framework.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11401"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png"><img class="size-full x_x_wp-image-11401" src="-web-api-2-controller-with-actions-using-entity-framework-e1458709497551.png" alt="Web API 2 Controller With Actions Using Entity Framework" width="650" height="448"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11401"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png"><img class="size-full x_x_wp-image-11401" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-2-Controller-With-Actions-Using-Entity-Framework-e1458709497551.png" alt="Web API 2 Controller With Actions Using Entity Framework" width="650" height="448"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web API 2 Controller With Actions Using Entity Framework</span></p>
 </div>
 <p><span style="font-size:small">Now select&nbsp;<em>tblTag (WebAPIWithHttpClient.Models)</em>&nbsp;as our Model class and&nbsp;<em>TrialsDBEntities (WebAPIWithHttpClient.Models)</em>&nbsp;as data context class. This time we will select controller with async
  actions.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11425"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Controller-With-Async-Actions.png"><img class="size-full x_x_wp-image-11425" src="-web-api-controller-with-async-actions.png" alt="Web API Controller With Async Actions" width="593" height="233"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11425"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Controller-With-Async-Actions.png"><img class="size-full x_x_wp-image-11425" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web-API-Controller-With-Async-Actions.png" alt="Web API Controller With Async Actions" width="593" height="233"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web API Controller With Async Actions</span></p>
 </div>
@@ -409,7 +409,7 @@ namespace&nbsp;WebAPIWithHttpClient.Controllers&nbsp;
 </li><li><span style="font-size:small">Get</span> </li><li><span style="font-size:small">Post</span> </li><li><span style="font-size:small">Put</span> </li><li><span style="font-size:small">Delete</span>
 <p><span style="font-size:small">So the coding part to fetch the data from database is ready, now we need to check whether our Web API is ready for action!. To check that, you just need to run the URL&nbsp;<em>http://localhost:7967/api/tbltags</em>. Here<em>tblTags</em>&nbsp;is
  our Web API controller name. I hope you get the data as a result.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11413"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Result-e1458733092316.png"><img class="size-full x_x_wp-image-11413" src="-web_api_result-e1458733092316.png" alt="Web_API_Result" width="650" height="342"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11413"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Result-e1458733092316.png"><img class="size-full x_x_wp-image-11413" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Result-e1458733092316.png" alt="Web_API_Result" width="650" height="342"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web_API_Result</span></p>
 </div>
@@ -417,7 +417,7 @@ namespace&nbsp;WebAPIWithHttpClient.Controllers&nbsp;
  do that?</span></p>
 <p><strong><span style="font-size:small">Create Console Application To Consume Web API</span></strong></p>
 <p><span style="font-size:small">To create a console application, Click File -&gt; New -&gt; Click Windows -&gt; Select Console application -&gt; Name your application -&gt; OK</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11426"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Console-Application-e1458836504170.png"><img class="size-full x_x_wp-image-11426" src="-console-application-e1458836504170.png" alt="Console Application" width="650" height="396"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11426"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Console-Application-e1458836504170.png"><img class="size-full x_x_wp-image-11426" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Console-Application-e1458836504170.png" alt="Console Application" width="650" height="396"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Console Application</span></p>
 </div>
@@ -587,12 +587,12 @@ namespace&nbsp;WebAPIWithHttpClientConsumer&nbsp;
  (are you missing a using directive or an assembly reference?)</em></span></p>
 <p><span style="font-size:small">This is just because of the&nbsp;<em>ReadAsAsync</em>&nbsp;is a part of&nbsp;<em>System.Net.Http.Formatting.dll</em>&nbsp;which we have not added to our application as a reference yet. Now we will do that? Sounds OK?</span></p>
 <p><span style="font-size:small">Just right click on the references and click add reference -&gt; Click browse -&gt; search for<em>System.Net.Http.Formatting.dll</em>&nbsp;&ndash; Click OK</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11427"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Add-References-e1458838521697.png"><img class="size-full x_x_wp-image-11427" src="-add-references-e1458838521697.png" alt="Add References" width="650" height="447"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11427"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Add-References-e1458838521697.png"><img class="size-full x_x_wp-image-11427" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Add-References-e1458838521697.png" alt="Add References" width="650" height="447"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Add References</span></p>
 </div>
 <p><span style="font-size:small">Please add&nbsp;<em>Newtonsoft.Json</em>&nbsp;also. Now let us run our project and see our output.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11429"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Get_Output1-e1458882223957.png"><img class="size-full x_x_wp-image-11429" src="-web_api_consumer_get_output1-e1458882223957.png" alt="Web_API_Consumer_Get_Output" width="650" height="328"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11429"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Get_Output1-e1458882223957.png"><img class="size-full x_x_wp-image-11429" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Get_Output1-e1458882223957.png" alt="Web_API_Consumer_Get_Output" width="650" height="328"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web_API_Consumer_Get_Output</span></p>
 </div>
@@ -663,7 +663,7 @@ res&nbsp;=&nbsp;await&nbsp;cons.PutAsJsonAsync(<span class="js__string">&quot;ap
 </div>
 </div>
 <p><span style="font-size:small">Now again run your application, and check whether the tag name has been changed to &lsquo;New Tag&rsquo;.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11430"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Put_Output-e1458882875423.png"><img class="size-full x_x_wp-image-11430" src="-web_api_consumer_put_output-e1458882875423.png" alt="Web_API_Consumer_Put_Output" width="650" height="328"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11430"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Put_Output-e1458882875423.png"><img class="size-full x_x_wp-image-11430" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Put_Output-e1458882875423.png" alt="Web_API_Consumer_Put_Output" width="650" height="328"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web_API_Consumer_Put_Output</span></p>
 </div>
@@ -705,7 +705,7 @@ res&nbsp;=&nbsp;await&nbsp;cons.PutAsJsonAsync(<span class="js__string">&quot;ap
 </div>
 </div>
 <p><span style="font-size:small">To delete a record we uses&nbsp;<em>res = await cons.DeleteAsync(&ldquo;api/tblTags/2&rdquo;);</em>&nbsp;method. Now run your application and see the result.</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11431"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Delete_Output-e1458883191973.png"><img class="size-full x_x_wp-image-11431" src="-web_api_consumer_delete_output-e1458883191973.png" alt="Web_API_Consumer_Delete_Output" width="650" height="328"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11431"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Delete_Output-e1458883191973.png"><img class="size-full x_x_wp-image-11431" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Delete_Output-e1458883191973.png" alt="Web_API_Consumer_Delete_Output" width="650" height="328"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web_API_Consumer_Delete_Output</span></p>
 </div>
@@ -767,7 +767,7 @@ res&nbsp;=&nbsp;await&nbsp;cons.PutAsJsonAsync(<span class="js__string">&quot;ap
 <p><span style="font-size:small">As you have noticed, I have not provided the&nbsp;<em>tagId</em>&nbsp;in the object, do yo know why? I have already set<em>Identity Specification</em>&nbsp;with&nbsp;<em>Identity Increment</em>&nbsp;1 in my table&nbsp;<em>tblTags</em>&nbsp;in
  SQL database.</span></p>
 <p><span style="font-size:small">Now we will see the output. Shall we?</span></p>
-<div class="wp-caption x_x_alignnone" id="attachment_11432"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Post_Output-e1458883741126.png"><img class="size-full x_x_wp-image-11432" src="-web_api_consumer_post_output-e1458883741126.png" alt="Web_API_Consumer_Post_Output" width="650" height="328"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11432"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Post_Output-e1458883741126.png"><img class="size-full x_x_wp-image-11432" src="http://sibeeshpassion.com/wp-content/uploads/2016/03/Web_API_Consumer_Post_Output-e1458883741126.png" alt="Web_API_Consumer_Post_Output" width="650" height="328"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web_API_Consumer_Post_Output</span></p>
 </div>

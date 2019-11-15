@@ -91,7 +91,7 @@
 <div class="endscriptcode"></div>
 <h2 class="endscriptcode"><strong>Solution Map</strong></h2>
 <div class="endscriptcode">&nbsp;</div>
-<div class="endscriptcode"><img id="66306" src="66306-mvvmextralite.png" alt="" width="232" height="388"></div>
+<div class="endscriptcode"><img id="66306" src="http://i1.code.msdn.s-msft.com/very-easy-mvvm-mvvmextralit-9a24e749/image/file/66306/1/mvvmextralite.png" alt="" width="232" height="388"></div>
 <div class="endscriptcode">&nbsp;</div>
 </div>
 </div>
@@ -102,4 +102,4 @@
 <div></div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

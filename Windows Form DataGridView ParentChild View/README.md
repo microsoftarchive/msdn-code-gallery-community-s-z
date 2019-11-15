@@ -114,9 +114,9 @@
 </div>
 </div>
 </div>
-<h1><img src="21209-parentchild1.png" alt="" width="681" height="270"></h1>
-<p><img src="21210-parentchild2.png" alt="" width="682" height="270"></p>
-<p><img src="21211-parentchild3.png" alt="" width="684" height="270"></p>
+<h1><img src="http://i1.code.msdn.microsoft.com/windows-form-parentchild-9cce4e67/image/file/21209/1/parentchild1.png" alt="" width="681" height="270"></h1>
+<p><img src="http://i2.code.msdn.microsoft.com/windows-form-parentchild-9cce4e67/image/file/21210/1/parentchild2.png" alt="" width="682" height="270"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/windows-form-parentchild-9cce4e67/image/file/21211/1/parentchild3.png" alt="" width="684" height="270"></p>
 <h1>More Information</h1>
 <p><a href="http://msdn.microsoft.com/en-us/library/system.data.dataset.aspx">DataSet Class</a><a></a></p>
 <p><a href="http://msdn.microsoft.com/en-us/library/system.data.datatable.aspx">DataTable Class</a></p>

@@ -17,7 +17,7 @@
 <p><span style="font-size:small"><strong><span style="font-family:Verdana,sans-serif">Introduction:</span></strong></span></p>
 <p><span style="font-size:small"><strong><span style="font-family:Verdana,sans-serif">&nbsp;</span></strong><span style="font-family:Verdana,sans-serif">Some times we may need to load local html file in webview, and fortunately we can easily load html file
  in window phone (in both silverlight &amp; winrt). However this article will explain how to a load local html file in web view control using different ways.</span><span style="color:#222426; font-family:Verdana,sans-serif">&nbsp;:)</span></span></p>
-<p class="separator"><span style="font-size:small"><a href="http://4.bp.blogspot.com/-kPvlQMXCxWI/Vop7oxfrSHI/AAAAAAAACOU/KrJY3FFbKNQ/s1600/WindowsSeries.png"><span style="font-family:Verdana,sans-serif"><img src=":-windowsseries.png" border="0" alt="" width="640" height="240"></span></a></span></p>
+<p class="separator"><span style="font-size:small"><a href="http://4.bp.blogspot.com/-kPvlQMXCxWI/Vop7oxfrSHI/AAAAAAAACOU/KrJY3FFbKNQ/s1600/WindowsSeries.png"><span style="font-family:Verdana,sans-serif"><img src="https://4.bp.blogspot.com/-kPvlQMXCxWI/Vop7oxfrSHI/AAAAAAAACOU/KrJY3FFbKNQ/s640/WindowsSeries.png" border="0" alt="" width="640" height="240"></span></a></span></p>
 <p><span style="font-size:small"><strong><span style="font-family:verdana,sans-serif">Requirements:</span></strong></span></p>
 <ul>
 <li><span style="font-family:verdana,sans-serif; font-size:small">This sample is targeted for windows phone winrt 8.1 OS,So make sure you&rsquo;ve downloaded and installed the Windows Phone 8.1 SDK. For more information, see&nbsp;<a href="https://dev.windowsphone.com/en-us/downloadsdk">Get
@@ -49,7 +49,7 @@ WebBrowserName.Navigate(<span class="cs__keyword">new</span>&nbsp;Uri(<span clas
 <p><span style="font-size:small"><strong><strong></strong></strong><span style="font-family:Verdana,sans-serif">Now lets start to write code for&nbsp;</span>load html content in&nbsp;WebView control with different ways.</span></p>
 <p class="separator"><span style="font-size:small">1. Open Microsoft Visual Studio Express 2013 for Windows (or) later.</span></p>
 <p><span style="font-family:Verdana,sans-serif; font-size:small">2. Create new windows phone winrt project using the &quot;Blank App&quot; template available under Visual C# -&gt; Store Apps -&gt; Windows Phone Apps. (for example project name :WindwsCsharpvsJavascript)</span></p>
-<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://4.bp.blogspot.com/-v5KwpWTYUDA/VozFISglMcI/AAAAAAAACOk/oyEcTzFMx5E/s1600/NewProject.PNG"><img src=":-newproject.png" border="0" alt="" width="640" height="390"></a></span></p>
+<p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><a href="http://4.bp.blogspot.com/-v5KwpWTYUDA/VozFISglMcI/AAAAAAAACOk/oyEcTzFMx5E/s1600/NewProject.PNG"><img src="https://4.bp.blogspot.com/-v5KwpWTYUDA/VozFISglMcI/AAAAAAAACOk/oyEcTzFMx5E/s640/NewProject.PNG" border="0" alt="" width="640" height="390"></a></span></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">3. And lets add below code in&nbsp;<strong>MainPage.xaml</strong>, which is having one WebView control is for&nbsp;displaying html conent , and one Button is for loading html
  on Click event. </span></p>
 <div class="scriptcode">
@@ -172,7 +172,7 @@ WebBrowserName.Navigate(<span class="cs__keyword">new</span>&nbsp;Uri(<span clas
 </div>
 <div class="endscriptcode"><span style="font-size:small">&nbsp;<strong>6. Output:</strong></span><strong style="font-family:Verdana,sans-serif; font-size:small">&nbsp;</strong></div>
 </div>
-<p class="separator"><span style="font-size:small"><strong><a href="http://1.bp.blogspot.com/-Z6MvC5h1Td4/VozvoCoVNGI/AAAAAAAACO0/dCZHeYNv1NA/s1600/Output.png"><img src=":-output.png" border="0" alt="" width="360" height="640"></a></strong></span></p>
+<p class="separator"><span style="font-size:small"><strong><a href="http://1.bp.blogspot.com/-Z6MvC5h1Td4/VozvoCoVNGI/AAAAAAAACO0/dCZHeYNv1NA/s1600/Output.png"><img src="https://1.bp.blogspot.com/-Z6MvC5h1Td4/VozvoCoVNGI/AAAAAAAACO0/dCZHeYNv1NA/s640/Output.png" border="0" alt="" width="360" height="640"></a></strong></span></p>
 <p><span style="font-size:small"><strong>&nbsp;</strong></span><strong style="font-size:small"><span style="font-family:Verdana,sans-serif">Important Notes:</span></strong></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">1.&nbsp;In this article, we learn about new method called 'NavigateToLocalStreamUri' and your helper class should implement a interface called 'IUriToStreamResolver'.</span></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">2. WebView control in windows phone WinRT is used for displaying html content, and in silverlight windows phone we called it as 'WebBrowser' control.</span></p>
@@ -180,7 +180,7 @@ WebBrowserName.Navigate(<span class="cs__keyword">new</span>&nbsp;Uri(<span clas
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small">You can also read this article at my original blog from&nbsp;<a href="http://bsubramanyamraju.blogspot.com/2016/01/windows-store-apps-how-to-load-local.html" target="_blank">here.</a>&nbsp;<br>
 </span></p>
 <p class="separator"><span style="font-size:small"><strong>Help me with feedback:</strong></span></p>
-<p class="separator"><span style="font-size:small"><strong>&nbsp;</strong>Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="67168-ratings.png" alt="" width="74" height="15">&nbsp;star
+<p class="separator"><span style="font-size:small"><strong>&nbsp;</strong>Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="http://i1.code.msdn.s-msft.com/oops-principles-solid-7a4e69bf/image/file/67168/1/ratings.png" alt="" width="74" height="15">&nbsp;star
  rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice). &nbsp;</span></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif; font-size:small"><span style="color:#000000">Follow me always at&nbsp;&nbsp;</span><a class="account-group x_x_x_js-account-group x_x_x_js-action-profile x_x_x_js-user-profile-link x_x_x_js-nav" href="https://twitter.com/Subramanyam_B"><span class="username js-action-profile-name" style="color:#8899a6"><span style="color:#b1bbc3">@</span>Subramanyam_B</span>&nbsp;</a></span></p>
 <p class="separator"><span style="font-size:small"><span style="font-family:Verdana,sans-serif"><a class="account-group x_x_x_js-account-group x_x_x_js-action-profile x_x_x_js-user-profile-link x_x_x_js-nav" href="https://twitter.com/Subramanyam_B"></a></span><span style="font-family:Verdana,sans-serif">Have

@@ -25,7 +25,7 @@
 <table border="0" width="1001">
 <tbody>
 <tr>
-<td width="995" bgcolor="#FFFFC6"><span style="font-family:'Trebuchet MS'; font-size:x-small"><img src="-1_lampada.gif" border="0" alt="" width="15" height="15">O Orkut &eacute; uma rede social filiada ao Google, criada em 24 de Janeiro
+<td width="995" bgcolor="#FFFFC6"><span style="font-family:'Trebuchet MS'; font-size:x-small"><img src="http://www.macoratti.net/1_lampada.gif" border="0" alt="" width="15" height="15">O Orkut &eacute; uma rede social filiada ao Google, criada em 24 de Janeiro
  de 2004 com o objetivo de ajudar seus membros a conhecer pessoas e manter relacionamentos. Seu nome &eacute; originado no projetista chefe,<span style="color:#0000ff">&nbsp;Orkut B&uuml;y&uuml;kkokten</span>, engenheiro turco do&nbsp;<span style="color:#0000ff">Google</span>.<br>
 O alvo inicial do orkut era os Estados Unidos, mas a maioria dos usu&aacute;rios s&atilde;o do Brasil e da &Iacute;ndia. No Brasil &eacute; a rede social com maior participa&ccedil;&atilde;o de brasileiros, com mais de 23 milh&otilde;es de usu&aacute;rios em
  janeiro de 2008. Na &Iacute;ndia &eacute; o segundo mais visitado.<br>
@@ -37,7 +37,7 @@ A Sede do orkut era na Calif&oacute;rnia at&eacute; agosto de 2008, quando o Goo
 <table border="0" width="996">
 <tbody>
 <tr>
-<td width="990" bgcolor="#FFFFC6"><span style="font-family:'Trebuchet MS'; font-size:x-small"><img src="-1_lampada.gif" border="0" alt="" width="15" height="15">&nbsp;Rede Social &eacute; uma das formas de representa&ccedil;&atilde;o
+<td width="990" bgcolor="#FFFFC6"><span style="font-family:'Trebuchet MS'; font-size:x-small"><img src="http://www.macoratti.net/1_lampada.gif" border="0" alt="" width="15" height="15">&nbsp;Rede Social &eacute; uma das formas de representa&ccedil;&atilde;o
  dos relacionamentos afetivos ou profissionais dos seres entre si ou entre seus agrupamentos de interesses m&uacute;tuos. A rede &eacute; respons&aacute;vel pelo compartilhamento de id&eacute;ias entre pessoas que possuem interesses e objetivo em comum e tamb&eacute;m
  valores a serem compartilhados. Assim, um grupo de discuss&atilde;o &eacute; composto por indiv&iacute;duos que possuem identidades semelhantes.&nbsp;<br>
 Essas redes sociais est&atilde;o hoje instaladas principalmente na Internet devido ao fato desta possibilitar uma acelera&ccedil;&atilde;o e ampla maneira das id&eacute;ias serem divulgadas e da absor&ccedil;&atilde;o de novos elementos em busca de algo em

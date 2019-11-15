@@ -46,7 +46,7 @@ NetMessagingBinding</a>. Likewise, any Microsoft or non-Microsoft applications c
  reason, In June 2011 I decided to build a tool called <a href="http://windowsazurecat.com/2011/07/exploring-topics-and-queues-by-building-a-service-bus-explorer-toolpart-1/">
 Service Bus Explorer</a> that would allow developers and system administrators to connect to a Service Bus namespace and administer its messaging entities.</div>
 <div style="text-align:center">&nbsp;</div>
-<div style="text-align:center"><img id="143379" src="143379-servicebusexplorer.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143379" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143379/1/servicebusexplorer.png" alt="" width="660"></div>
 <div>During the last few months I continued to develop this tool and add new features with the intended goal to facilitate the development and administration of new Service Bus-enabled applications. In the meantime, the
 <a href="https://windows.azure.com/default.aspx">Windows Azure Management Portal</a> introduced the ability for a user to create, disable, update&nbsp;queues, topics, and subscriptions and define their properties, but not to define or display rules for an existing
  subscription. Besides, the Service Bus Explorer enables to accomplish functionalities, such as importing, exporting and testing entities, that are not currently provided by the
@@ -142,7 +142,7 @@ here</a>, so I built a new version of the Service Bus Explorer tool that introdu
 </a><a title="Windows Azure SDK for .NET" href="http://www.microsoft.com/download/en/details.aspx?id=28045">Windows Azure SDK for .NET</a>. The tool can be copied and used on any workstation that satisfies the prerequisites mentioned above to manage and test
  the Brokered and Relay messaging services defined in a given Service Bus namespace.</div>
 <div style="text-align:center">&nbsp;</div>
-<div style="text-align:center"><img id="143452" src="143452-servicebusexplorer.jpg" alt="" width="660"></div>
+<div style="text-align:center"><img id="143452" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143452/1/servicebusexplorer.jpg" alt="" width="660"></div>
 <div></div>
 <div>Read the full article on <a title="MSDN" href="http://msdn.microsoft.com/en-us/library/hh532261(v=VS.103).aspx" target="_blank">
 MSDN</a>.</div>
@@ -159,19 +159,19 @@ MSDN</a>.</div>
 <div>This version introduces the following updates:</div>
 <ul>
 <li>Implemented Disable/Enable operations for queues and topics. </li></ul>
-<div style="text-align:center"><img id="143380" src="143380-disableentity.png" alt="" width="385" height="599"></div>
+<div style="text-align:center"><img id="143380" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143380/1/disableentity.png" alt="" width="385" height="599"></div>
 <div>&nbsp;</div>
 <ul>
 <li>Implemented Update operation for queues, topics and subscriptions. </li><li>Added OData filter support for queues, topics and subscriptions in the ConnectForm.
 </li><li>Added OData filter support on context menu of queues, topics and subscriptions.
 </li><li>Added FilterForm that allows to compose a valid OData filter both as free-text or using the UI. The 2 mechanisms are synchronized.
 </li></ul>
-<div style="text-align:center"><img id="143381" src="143381-filterform.png" alt="" width="459" height="562"></div>
+<div style="text-align:center"><img id="143381" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143381/1/filterform.png" alt="" width="459" height="562"></div>
 <div>&nbsp;</div>
 <ul>
 <li>Added support for Windows Azure Service Bus connection strings in the Connect Form.
 </li></ul>
-<div style="text-align:center"><img id="143382" src="143382-connectionstring.png" alt="" width="469" height="668"></div>
+<div style="text-align:center"><img id="143382" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143382/1/connectionstring.png" alt="" width="469" height="668"></div>
 <div>&nbsp;</div>
 <ul>
 <li>Added support for Service Bus for Windows Server and Windows Azure Service Bus connection strings in the configuration file.
@@ -183,13 +183,13 @@ MSDN</a>.</div>
 </li><li>Added visualization of IsReadOnly property to queue, topic and subscription management control.
 </li><li>Added ForwardToForm to select a target queue or topic from a treeview as value for the ForwardTo property.
 </li></ul>
-<div style="text-align:center"><img id="143383" src="143383-forwardform.png" alt="" width="562" height="563"></div>
+<div style="text-align:center"><img id="143383" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143383/1/forwardform.png" alt="" width="562" height="563"></div>
 <div>&nbsp;</div>
 <ul>
 <li>Added support for SendBatch to the Sender tab of queue/topic test controls. </li><li>Added support for ReceiveBatch to the Receiver tab of queue/topic/subscription test controls.
 </li><li>Added support for Get Message Sessions to queue and subscription context menus for session-aware queues and subscriptions.
 </li></ul>
-<div style="text-align:center"><img id="143384" src="143384-getmessagesessions.png" alt="" width="376" height="705"></div>
+<div style="text-align:center"><img id="143384" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143384/1/getmessagesessions.png" alt="" width="376" height="705"></div>
 <div>&nbsp;</div>
 <ul>
 <li>Replaced the absolute Uri of a target queue or topic with the value of the Path property (queues) and name property (subscriptions) when loading the value of the ForwardTo property.
@@ -221,7 +221,7 @@ Adjusted the width of the last column of DataGridViews and ListViews based on co
  hand shacking with ACS. In addition, the Windows Azure management portal will soon provide the ability to create multiple signatures with different rights. These signatures will be available to be used in a Service Bus connection string. The most restrictive
  scope always win when you have two SAS, one at the namespace level and one at the entity level, with the same key and different access rights.&nbsp;The Service Bus Explorer 2.0 introduces the possibility to define authorization rules at the queue/topic level
  as shown in the picture below: </li></ul>
-<div style="text-align:center"><img id="143385" src="143385-authorizationrulestab.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143385" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143385/1/authorizationrulestab.png" alt="" width="660"></div>
 <ul>
 <li><strong>Metrics</strong>: Windows Azure Service Bus 2.0 introduces the possibility to invoke metrics RESTful services to retrieve useful key performance indicators at the entity level.
 </li><li><strong>Supported Metrics:&nbsp; </strong>Telemetry and usage data include the following metrics:
@@ -233,24 +233,24 @@ Adjusted the width of the last column of DataGridViews and ListViews based on co
 </li><li>The Service Bus Explorer 2.0 introduces the ability to query telemetry and metrics data. Right-click the namespace root node and choose
 <strong>Open Metrics in SDI </strong>or <strong>MDI mode </strong>as shown in the following picture:
 </li></ul>
-<div style="text-align:center"><img id="143388" src="143388-metricrootnode.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143388" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143388/1/metricrootnode.png" alt="" width="660"></div>
 <ul>
 <li>The tool gives the user the ability to define one or more Metrics rules to retrieve metrics data by invokingthe RESTful services exposed by the Service Bus. Note: these are the same services invoked by the Windows Azure Management Portal to show Service
  Bus counter in the Dashboard tab. The user can define multiple rules to compare metrics from different entities (e.g. the incoming messages of request queue with the outgoing messages of a response queue in a given timeframe). Metrics from different entities
  can be visualized together in the Main Graph, while data and charts for individual metrics can be analyzed on separate tabs. See the following screenshots:
 </li></ul>
-<div style="text-align:center"><img id="143389" src="143389-metricsquerytab.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143389" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143389/1/metricsquerytab.png" alt="" width="660"></div>
 <div style="text-align:center"><br>
-<img id="143390" src="143390-metricsmaingraph.png" alt="" width="660"><br>
-<img id="143391" src="143391-singlemetricstab.png" alt="" width="660"></div>
+<img id="143390" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143390/1/metricsmaingraph.png" alt="" width="660"><br>
+<img id="143391" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143391/1/singlemetricstab.png" alt="" width="660"></div>
 <ul>
 <li>The rules can be exported/imported to/from an XML file. </li><li><strong>Important Note</strong>: to&nbsp;access Metrics data is mandatory to indicate in the configuration file or in the Options form the following values:
 <ul>
 <li>Windows Azure Subscription Id </li><li>Thumbprint of a Windows Azure Management Certificate </li></ul>
 </li><li>Metrics can also be access at the entity level from the Metrics tab as shown in the following screenshots:
 </li></ul>
-<div style="text-align:center"><img id="143392" src="143392-metricsonentitytab.png" alt="" width="660"></div>
-<div style="text-align:center"><img id="143393" src="143393-metricsonentitytab2.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143392" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143392/1/metricsonentitytab.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143393" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143393/1/metricsonentitytab2.png" alt="" width="660"></div>
 <ul>
 <li><strong>Monitor</strong>: the Service Bus Explorer 2.0 introduces the possibility to monitor in real time and define warning and critical thrshold values for the following properties of for queues, topics and subscriptions:
 <ul>
@@ -260,13 +260,13 @@ Adjusted the width of the last column of DataGridViews and ListViews based on co
 <ul>
 <li>Green: Normal </li><li>Yellow: Warning </li><li>Red: Critical </li></ul>
 </li><li>State transition events are logged in the Monitor Events listbox. </li><li>The rules can be exported/imported to/from an XML file. </li></ul>
-<div style="text-align:center"><img id="143394" src="143394-monitortab.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143394" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143394/1/monitortab.png" alt="" width="660"></div>
 <div>&nbsp;</div>
 <ul>
 <li><strong>Sessions</strong>: the Service Bus Explorer 2.0 introduces the possibility to retrieve the current sessions for a sessionful queue or subscriptions. You can access this functionality from the new
 <strong>Sessions</strong> button or from the <strong>Get Message Sessions</strong>&nbsp;context menu of a sessionful entity:
 </li></ul>
-<p style="text-align:center"><img id="143406" src="143406-sessions.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143406" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143406/1/sessions.png" alt="" width="660"></p>
 <div style="text-align:center"></div>
 <ul>
 <li><strong>Peek and Receive Active Messages</strong>: the Service Bus Explorer 2.0 introduces the possibility to peek or receive a configurable amount&nbsp;of messages from a queue or subscription. You can access this functionality from the new
@@ -274,12 +274,12 @@ Adjusted the width of the last column of DataGridViews and ListViews based on co
 <ul>
 <li>Receive All Messages </li><li>Receive Top k Messages </li><li>Peek Top k Messages </li></ul>
 </li></ul>
-<div style="text-align:center"><img id="143404" src="143404-readmessages2.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143404" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143404/1/readmessages2.png" alt="" width="660"></div>
 <ul>
 <li>When you click the <strong>Ok</strong> button in the <strong>Retrieve messages from queue
 </strong>(or subscription) dialog, messages are retrieved and showned in the following tab.
 </li></ul>
-<div style="text-align:center"><img id="143403" src="143403-messages2.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143403" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143403/1/messages2.png" alt="" width="660"></div>
 <ul>
 <li>You can browse messages by selecting the corresponding row in the grid. The <strong>
 Messages</strong> tab shows the following information for the selected message:
@@ -293,11 +293,11 @@ Messages</strong> tab shows the following information for the selected message:
 <ul>
 <li>Receive All Deadletter Queue Messages </li><li>Receive Top k Deadletter Queue Messages </li><li>Peek Top k Deadletter Queue Messages </li></ul>
 </li></ul>
-<div style="text-align:center"><img id="143402" src="143402-deadletter2.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143402" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143402/1/deadletter2.png" alt="" width="660"></div>
 <ul>
 <li>When you click the <strong>Ok</strong> button in the <strong>Retrieve messages from deadletter&nbsp;queue&nbsp;</strong>dialog, messages are retrieved and showned in the following tab.
 </li></ul>
-<div style="text-align:center"><img id="143401" src="143401-deadletter3.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143401" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143401/1/deadletter3.png" alt="" width="660"></div>
 <div>&nbsp;</div>
 <ul>
 <li>You can browse messages by selecting the corresponding row in the grid. The <strong>
@@ -310,23 +310,23 @@ Deadletter</strong> tab shows the following information for the selected message
 </li><li><strong>Repair and Resubmit Message</strong>: the Service Bus Explorer 2.0 introduces the possibility to repair and resubmit a message read or peeked from a queue, subscription or deadletter queue. To perform this operation, just double click a message
  in the <strong>Messages </strong>or <strong>Deadletter </strong>tab. This action opens a modal dialog from which you can edit the text, system properties and custom properties of the current message and select a queue or topic in the current namespace to which
  send the modified message. </li></ul>
-<div style="text-align:center"><img id="143400" src="143400-repairandresubmit.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143400" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143400/1/repairandresubmit.png" alt="" width="660"></div>
 <ul>
 <li><strong>Sender Think Time</strong>: the test queue and test topic controls introduce the ability to define a think time in the
 <strong>Sender</strong> tab. </li></ul>
-<div style="text-align:center"><img id="143407" src="143407-senderthinktime.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143407" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143407/1/senderthinktime.png" alt="" width="660"></div>
 <div>&nbsp;</div>
 <ul>
 <li><strong>Receive Think Time</strong>: the test queue and test topic controls introduce the ability to define a think time in the
 <strong>Receiver </strong>tab. </li></ul>
-<div style="text-align:center"><img id="143408" src="143408-receiverthinktime.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143408" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143408/1/receiverthinktime.png" alt="" width="660"></div>
 <ul>
 <li><strong>Use multiple&nbsp;files as message template</strong>: the Service Bus Explorer 2.0 introduces the possibility to select multiple files from different directories to be used as message templates when testing queues, topics and subscriptions.&nbsp;As
  shown in the picture below, in the&nbsp;<strong>Message</strong> tab select the Files sub-tab and use the
 <strong>Select Files</strong> button to add files to the list of message templates. Select the files that you want to use as message templates during a test. Sender tasks will use the content of these&nbsp;files in a round-robin fashion when sending messages
  to queues and topics. All messages will share the custom and system properties defined on the
 <strong>Message</strong> and <strong>Sender</strong> tabs. </li></ul>
-<div style="text-align:center"><img id="143409" src="143409-messagefiles.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143409" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143409/1/messagefiles.png" alt="" width="660"></div>
 <ul>
 <li><strong>New configuration settings and Options form</strong>: the following settings have been introduced in the Options form and in the configuration file. In addition, the
 <strong>Options</strong> form now provides the ability to persist settings to the configuration file by clicking the
@@ -334,16 +334,16 @@ Deadletter</strong> tab shows the following information for the selected message
 <ul>
 <li>Monitor Refresh Interval </li><li>Subscription Id </li><li>Management Certificate Thumbprint </li><li>Message Path </li><li>Message Text </li><li>Sender Think Time </li><li>Receive Think Time </li></ul>
 </li></ul>
-<div style="text-align:center"><img id="143410" src="143410-optionsform.png" alt="" width="588" height="540"></div>
+<div style="text-align:center"><img id="143410" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143410/1/optionsform.png" alt="" width="588" height="540"></div>
 <ul>
 <li><strong>New About form</strong>: you can access my email address and twitter account in the new about form.
 </li></ul>
-<div style="text-align:center"><img id="143411" src="143411-aboutform.png" alt="" width="652" height="532"></div>
+<div style="text-align:center"><img id="143411" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143411/1/aboutform.png" alt="" width="652" height="532"></div>
 <ul>
 <li><strong>Auto Delete On Idle</strong>: the Service Bus 2.0 introduced for queues, topics and subscriptions the new TimeSpan property
 <strong>AutoDeleteOnIdle</strong>&nbsp;that defines the TimeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes. The Service Bus Explorer 2.0 has been extended to support this property.
 </li></ul>
-<div style="text-align:center"><img id="143412" src="143412-autodelete2.png" alt="" width="660"></div>
+<div style="text-align:center"><img id="143412" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143412/1/autodelete2.png" alt="" width="660"></div>
 <ul>
 <li><strong>Minor changes</strong>
 <ul>
@@ -381,7 +381,7 @@ Deadletter</strong> tab shows the following information for the selected message
 <a href="http://msdn.microsoft.com/en-us/library/microsoft.servicebus.connectivitysettings.mode.aspx">
 ConnectivityMode</a> and <a href="http://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.messagingfactorysettings.transporttype.aspx">
 TransportType</a>: </li></ul>
-<p style="text-align:center"><img id="143413" src="143413-connectivitymodetransporttype.png" alt="" width="452" height="746"></p>
+<p style="text-align:center"><img id="143413" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143413/1/connectivitymodetransporttype.png" alt="" width="452" height="746"></p>
 <ul>
 <li>See the following resources for more information on these properties:
 <ul>
@@ -403,14 +403,14 @@ TransportType</a> = Amqp, some features are not supported. So expect to see erro
 <li>The <strong>Options Form </strong>allows to select the default <a href="http://msdn.microsoft.com/en-us/library/microsoft.servicebus.connectivitysettings.mode.aspx">
 ConnectivityMode</a>. This information is saved in the <strong>appSettings </strong>
 section of the configuration file. </li></ul>
-<p style="text-align:center"><img id="143414" src="143414-connectivitymodeoptionsform.png" alt="" width="610" height="522"></p>
+<p style="text-align:center"><img id="143414" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143414/1/connectivitymodeoptionsform.png" alt="" width="610" height="522"></p>
 <ul>
 <li>Added <a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.listbox.selectionmode.aspx">
 SelectionMode </a>= <a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.selectionmode.aspx">
 MultiExtended</a> to the Log listbox. This feature allows the user to&nbsp;select multiple lines and use the SHIFT, CTRL, and arrow keys to make selections.
 </li><li>Implemented copy &amp; paste of messages from the <strong>Log </strong>listbox (Ctrl &#43; C).
 </li><li>Added a context menu to the <strong>Log </strong>listbox. </li></ul>
-<p style="text-align:center"><img id="143415" src="143415-log.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143415" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143415/1/log.png" alt="" width="660"></p>
 <ul>
 <li>The context menu allows the user to select the perform actions: &nbsp;
 <ul>
@@ -425,13 +425,13 @@ MessageCountDetails </a>property of a <a href="http://msdn.microsoft.com/en-us/l
 QueueDescription</a>, <a href="http://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.topicdescription.aspx">
 TopicDescription</a>, <a href="http://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.subscriptiondescription.aspx">
 SubscriptionDescription</a> object. </li></ul>
-<p style="text-align:center"><img id="143417" src="143417-messagecountdetails.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143417" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143417/1/messagecountdetails.png" alt="" width="660"></p>
 <ul>
 <li>This functionality allows to clone and send the selected messages to a the same or alternative queue or topic in the
 <strong>Service Bus </strong>namespace. If you want to edit the payload, system properties or user-defined properties, you have to select, edit and send messages one at a time. In order to do so, double click a message in the DataGridView or right click the
  message and click <strong>Repair and Resubmit Selected Message</strong> from the context menu. This opens up the following dialog that allows to modify and resubmit the message or to save the payload to a text file.
 </li></ul>
-<p style="padding-left:30px; text-align:center"><img id="143418" src="143418-repairsinglemessage.png" alt="" width="660"></p>
+<p style="padding-left:30px; text-align:center"><img id="143418" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143418/1/repairsinglemessage.png" alt="" width="660"></p>
 <p style="padding-left:30px"><strong>Important Note</strong>: the Service Bus does not allow to receive and delete a peeked
 <a href="http://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.brokeredmessage.aspx">
 BrokeredMessage</a> by <a href="http://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.brokeredmessage.sequencenumber.aspx">
@@ -447,7 +447,7 @@ Notification Hubs</a>. See the following resources for more information on this 
 </li></ul>
 </li><li>The <strong>Notification Hubs</strong> node under the namespace root node allows to manage notification hubs in defined in
 <strong>Windows Azue Service Bus </strong>namespace. </li></ul>
-<p style="padding-left:30px; text-align:center"><img id="143419" src="143419-notificationhubs.png" alt="" width="448" height="243"></p>
+<p style="padding-left:30px; text-align:center"><img id="143419" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143419/1/notificationhubs.png" alt="" width="448" height="243"></p>
 <ul>
 <li>The context menu allows to perform the following actions:
 <ul>
@@ -461,19 +461,19 @@ Notification Hubs</a>. See the following resources for more information on this 
 </li></ul>
 </li><li>The&nbsp;<strong>Create Notification Hub </strong>allows to define the path, credentials, and metadata for a new notification hub:
 </li></ul>
-<p style="text-align:center"><img id="143420" src="143420-newhub.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143420" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143420/1/newhub.png" alt="" width="660"></p>
 <ul>
 <li>If you click an existing notification hub, you can view and edit credentials and metadata:
 </li></ul>
-<p style="text-align:center"><img id="143421" src="143421-notificationhub01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143421" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143421/1/notificationhub01.png" alt="" width="660"></p>
 <ul>
 <li>The <strong>Authorization Rules</strong> tab allows to review or edit the<strong> Shared Access Policies</strong> for the selected notification hub.
 </li></ul>
-<p style="text-align:center"><img id="143422" src="143422-authorizationrules.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143422" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143422/1/authorizationrules.png" alt="" width="660"></p>
 <ul>
 <li>The <strong>Registrations </strong>buttons opens a a dialof that allows the registrations to query:
 </li></ul>
-<p style="text-align:center"><img id="143423" src="143423-getregistrations.png" alt="" width="450" height="226"></p>
+<p style="text-align:center"><img id="143423" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143423/1/getregistrations.png" alt="" width="450" height="226"></p>
 <ul>
 <li>You can select one of the following options:
 <ul>
@@ -486,7 +486,7 @@ DevieToken </strong>(Apple registrations), <strong>GcmRegistrationId </strong>(G
 </li></ul>
 </li><li>The <strong>Registrations </strong>tab allows to select one or multiple registrations from the
 <strong>DataGridView</strong>. </li></ul>
-<p style="text-align:center"><img id="143424" src="143424-registrations.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143424" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143424/1/registrations.png" alt="" width="660"></p>
 <ul>
 <li>The navigation control in the bottom of the registrations control allows to navigate through pages.
 </li><li>The <strong>DataGridView&nbsp;</strong>context menu provides access to the following actions:
@@ -499,7 +499,7 @@ DevieToken </strong>(Apple registrations), <strong>GcmRegistrationId </strong>(G
 </li><li>The <strong>Create </strong>button allows to create a new registration. Select the registration type from the dropdownlist and enter mandatory and optional (e.g.
 <strong>Tags</strong>, <strong>Headers</strong>) information and click the <strong>
 Ok</strong> button to confirm. </li></ul>
-<p style="text-align:center"><img id="143425" src="143425-createnewregistration.png" alt="" width="482" height="354"></p>
+<p style="text-align:center"><img id="143425" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143425/1/createnewregistration.png" alt="" width="482" height="354"></p>
 <ul>
 <li>The <strong>Template </strong>tab allows to send template notifications:
 <ul>
@@ -509,7 +509,7 @@ Ok</strong> button to confirm. </li></ul>
 </li><li>The <strong>Additional Headers </strong>datagridview allows to define additional custom headers for the notification.
 </li></ul>
 </li></ul>
-<p style="text-align:center"><img id="143426" src="143426-template.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143426" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143426/1/template.png" alt="" width="660"></p>
 <ul>
 <li>The&nbsp;<strong>Windows Phone&nbsp;</strong>tab allows to send native notifications to
 <strong>Windows Phone 8</strong> devices.
@@ -526,8 +526,8 @@ Ok</strong> button to confirm. </li></ul>
 </li><li>The&nbsp;<strong>Additional Headers&nbsp;</strong>datagridview allows to define additional custom headers for the notification.
 </li></ul>
 </li></ul>
-<p style="text-align:center"><img id="143427" src="143427-windowsphone.png" alt="" width="660"></p>
-<p style="text-align:center"><img id="143428" src="143428-windowsphonetile.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143427" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143427/1/windowsphone.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143428" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143428/1/windowsphonetile.png" alt="" width="660"></p>
 <ul>
 <li>The&nbsp;<strong>Windows </strong>tab allows to send native notifications to&nbsp;<strong>Windows Store Apps</strong>&nbsp;running on<strong> Windows 8</strong> and
 <strong>Windows 8.1</strong>.
@@ -544,8 +544,8 @@ The tile template catalog (Windows store apps)</a>.&nbsp; </li></ul>
 </li><li>The&nbsp;<strong>Additional Headers&nbsp;</strong>datagridview allows to define additional custom headers for the notification.
 </li></ul>
 </li></ul>
-<p style="text-align:center"><img id="143429" src="143429-windows2.png" alt="" width="660"></p>
-<p style="text-align:center"><img id="143430" src="143430-windows.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143429" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143429/1/windows2.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143430" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143430/1/windows.png" alt="" width="660"></p>
 <ul>
 <li>The&nbsp;<strong>Apple&nbsp;</strong>and&nbsp;<strong>Google&nbsp;</strong>tabs provides the ability to send, respectively,&nbsp;<strong>Apple&nbsp;</strong>and&nbsp;<strong>Gcm&nbsp;</strong>native notifications. For brevity, I omit the description of
  the <strong>Apple </strong>tab as it works the same way as the <strong>Google</strong> one.
@@ -555,13 +555,13 @@ The tile template catalog (Windows store apps)</a>.&nbsp; </li></ul>
 </li><li>The&nbsp;<strong>Additional Headers&nbsp;</strong>datagridview allows to define additional custom headers for the notification.
 </li></ul>
 </li></ul>
-<p style="text-align:center"><img id="143431" src="143431-gcm.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143431" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143431/1/gcm.png" alt="" width="660"></p>
 <ul>
 <li>Added the possibility to select and resubmit multiple messages in a batch mode from the
 <strong>Messages</strong> and <strong>Deadletter</strong> tabs of queues and subscriptions. It's sufficient to select messages in the
 <strong>DataGridView</strong> as shown in the following picture, right click to show the context menu and choose
 <strong>Resubmit Selected Messages in Batch Mode</strong>. </li></ul>
-<p style="text-align:center"><img id="143433" src="143433-resubmitmultiplemessages.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143433" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143433/1/resubmitmultiplemessages.png" alt="" width="660"></p>
 <ul>
 <li><strong>Minor changes</strong>
 <ul>
@@ -606,56 +606,56 @@ Deadletter </strong>tabs of queues and subscriptions. </li><li>Introduced indent
 <li>Improved check when settings properties for Topics and Subscriptions. </li><li>Fixed an error that added columns to message and deadletter datagridview every time the Update button was pressed.Fixed a error on CellDoubleClick for messages and deadletter datagridview that happened when double clicking a header cell.Improved the visualization
  of sessions and added the possibility to sort sessions by column. </li><li>Added sorting capability to messages and deadletter messages datagridview for queues and subscriptions.&nbsp;Click the column header to sort rows by the corresponfing property value in ASC or DESC order.
 </li></ul>
-<p style="text-align:center"><img id="143434" src="143434-messages.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143434" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143434/1/messages.png" alt="" width="660"></p>
 <ul>
 <li>Added sorting capability to sessions datagridview for queues and subscriptions.&nbsp;Click the column header to sort rows by the corresponfing property value in ASC or DESC order.
 </li></ul>
-<p style="text-align:center"><img id="143435" src="143435-sessions.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143435" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143435/1/sessions.png" alt="" width="660"></p>
 <ul>
 <li>Added sorting capability to registrations datagridview for notification hubs.&nbsp;Click the column header to sort rows by the corresponfing property value in ASC or DESC order.
 </li></ul>
-<p style="text-align:center"><img id="143436" src="143436-registrations3.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143436" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143436/1/registrations3.png" alt="" width="660"></p>
 <ul>
 <li>Introduced the possibility to define filter expression for peeked/received messages/deadletter messages. Click the button highlighted in the picture below to open a dialog and define a filtter expression using a SQL Expression (e.g. sys.Size &gt; 300 and
  sys.Label='Service Bus Explorer' and City='Pisa'). For more information, see&nbsp;<a href="http://msdn.microsoft.com/en-us/library/windowsazure/microsoft.servicebus.messaging.sqlfilter.sqlexpression.aspx">SqlFilter.SqlExpression Property</a>.
 </li></ul>
-<p style="text-align:center"><img id="143437" src="143437-messages2.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143437" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143437/1/messages2.png" alt="" width="660"></p>
 <ul>
 <li>Introduced the possibility to define filter expression for peeked/received messages/deadletter messages. Click the button highlighted in the picture below to open a dialog and define a filtter expression using a SQL Expression on public and n on public
  properties of RegistrationDescription class (e.g.&nbsp;PlatformType contains 'windows' and ExpirationTime &gt; '2014-2-5' and TagsString contains 'productservice'). The filter engine supports the following predicates:
 <ul>
 <li>= </li><li>!= </li><li>&gt; </li><li>&gt;= </li><li>&lt; </li><li>&lt;= </li><li>StartsWith </li><li>EndsWith </li><li>Contains </li></ul>
 </li></ul>
-<p style="text-align:center"><img id="143438" src="143438-registrations4.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143438" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143438/1/registrations4.png" alt="" width="660"></p>
 <ul>
 </ul>
 <ul>
 <li>Introduced support for TagExpressions introduced by Service Bus 2.2. When sending a notification, you can select the Tag Expression or Notification Tags to define, respectively, a tag expression (e.g. productservice &amp;&amp; (Italy || UK)) or a list of
  tags. This feature is available only in the Service Bus Explorer 2.2. </li></ul>
-<p style="text-align:center"><img id="143439" src="143439-tagexpression.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143439" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143439/1/tagexpression.png" alt="" width="660"></p>
 <ul>
 <li>Introduced support for partitioned queues. For more information on partitioned entities, read<a href="http://blogs.msdn.com/b/windowsazure/archive/2013/10/29/partitioned-service-bus-queues-and-topics.aspx">Partitioned Service Bus Queues and Topics</a>.&nbsp;This
  feature is available only in the Service Bus Explorer 2.2. </li></ul>
-<p style="text-align:center"><img id="143440" src="143440-partitionedqueue.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143440" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143440/1/partitionedqueue.png" alt="" width="660"></p>
 <ul>
 <li>Introduced support for partitioned topics. For more information on partitioned entities, read
 <a href="http://blogs.msdn.com/b/windowsazure/archive/2013/10/29/partitioned-service-bus-queues-and-topics.aspx">
 Partitioned Service Bus Queues and Topics</a>.&nbsp;This feature is available only in the Service Bus Explorer 2.2.
 </li></ul>
-<p style="text-align:center"><img id="143441" src="143441-partitionedtopic.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143441" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143441/1/partitionedtopic.png" alt="" width="660"></p>
 <p><strong>Update</strong>: 2 December 2013</p>
 <p>This version introduces the following updates:</p>
 <ul>
 <li>Support for the&nbsp;<strong>Microsoft.ServiceBus.ConnectionString</strong> appSetting. The connection string defined in this setting will be added to the list of connection strings in the corresponding drop-down-list in the
 <strong>Connect </strong>form.&nbsp; </li></ul>
-<p style="text-align:center"><img id="143442" src="143442-microsoft.servicebus.connectionstring.png" alt="" width="452" height="746"></p>
+<p style="text-align:center"><img id="143442" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143442/1/microsoft.servicebus.connectionstring.png" alt="" width="452" height="746"></p>
 <p><strong>Update</strong>: 18 December 2013</p>
 <p>This version introduces the following updates:</p>
 <ul>
 <li>Introduced a new command to start one or more listeners for a given queue or subscription. Right click the queue or subscription and select, respectively,
 <strong>Create Queue Listerner</strong> or <strong>Create Subscription Listener</strong> from the context menu as shown in the following picture.
 </li></ul>
-<p style="text-align:center"><img id="143443" src="143443-listener04.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143443" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143443/1/listener04.png" alt="" width="660"></p>
 <ul>
 <li>In the listener dialog you can set the following properties:
 <ol>
@@ -665,26 +665,26 @@ Partitioned Service Bus Queues and Topics</a>.&nbsp;This feature is available on
  messages after the callback has completed processing </li><li>Tracking: enable or disable message tracking. When enabled, you can use the Messages tab to access messages.
 </li><li>Logging: enable or disable logging. </li><li>Verbose: enable or disable verbose mode when logging is enabled. </li></ol>
 </li></ul>
-<p style="text-align:center"><img id="143444" src="143444-listener05.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143444" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143444/1/listener05.png" alt="" width="660"></p>
 <ul>
 <li>Press the <strong>Start </strong>button to start the listener.&nbsp; </li></ul>
-<p style="text-align:center"><img id="143445" src="143445-listener01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143445" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143445/1/listener01.png" alt="" width="660"></p>
 <ul>
 <li>The <strong>Start </strong>button turns into the <strong>Stop </strong>button.&nbsp;
 </li><li>Press the <strong>Stop </strong>button to stop the listener.&nbsp; </li><li>Press the <strong>Close </strong>the listener dialog. If the listener is open, this operation closes the listener.
 </li><li>Press the <strong>Clear</strong> button to clear tracked messages and log content.
 </li><li>Press the <strong>Messages</strong> tab to access messages.&nbsp; </li><li>You can click s message row to access its payload, custom and system properties.
 </li></ul>
-<p style="text-align:center"><img id="143446" src="143446-listener02.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143446" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143446/1/listener02.png" alt="" width="660"></p>
 <ul>
 <li>Click the the magnifying glass button&nbsp;to define a filter expression for received messages using a SQL Expression (e.g. sys.Size &gt; 300 and sys.Label='Service Bus Explorer' and City='Pisa'). For more information, see&nbsp;<a href="http://msdn.microsoft.com/en-us/library/windowsazure/microsoft.servicebus.messaging.sqlfilter.sqlexpression.aspx">SqlFilter.SqlExpression
  Property</a>. </li></ul>
-<p style="text-align:center"><img id="143447" src="143447-listener06.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143447" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143447/1/listener06.png" alt="" width="660"></p>
 <ul>
 <li style="text-align:justify">Double click a row or click <strong>Repair and Resubmit Message</strong> from the context menu to open a message in the a separate dialog. This functionality allows to clone and send the selected messages to a the same or alternative
  queue or topic in the&nbsp;<strong>Service Bus&nbsp;</strong>namespace. If you want to edit the payload, system properties or user-defined properties, you have to select, edit and send messages one at a time.
 </li></ul>
-<p style="text-align:center"><img id="143448" src="143448-listener03.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143448" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143448/1/listener03.png" alt="" width="660"></p>
 <ul>
 <li>Minor changes:
 <ul>
@@ -1883,61 +1883,61 @@ EventData</a> objects. Properties are in camel case.&nbsp;<br>
 <li>The tool now uses the <strong>Microsoft.ServiceBus.dll v.2.6.1.0</strong>. </li><li>Completely refreshed support for dynamic relay services and added full support for persistent relay services. For more information on persistent relay services, see&nbsp;<a href="https://code.msdn.microsoft.com/windowsazure/How-to-handle-Service-Bus-6d65eca1">How
  to handle Service Bus Relay Services in a multi-tenant environment</a>. </li><li>You can select dynamic and persistent relay services in the main treeview and view their properties in the main panel.
 </li></ul>
-<p style="text-align:center"><img id="134454" src="134454-relayservices01.png" alt="" width="372" height="570"></p>
+<p style="text-align:center"><img id="134454" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134454/1/relayservices01.png" alt="" width="372" height="570"></p>
 <ul>
 <li><span style="text-align:center">You can create, delete, update persistent relay services. In particular, you can define the relay type or binding, the transport security and client authorization characteristics of the persistent relay service in the
 </span><strong style="text-align:center">Description </strong><span style="text-align:center">tab of the
 </span><strong style="text-align:center">HandleRelayControl</strong><span style="text-align:center">.&nbsp;</span>
 </li></ul>
-<p style="text-align:center"><img id="134456" src="134456-relayservices02.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134456" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134456/1/relayservices02.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Relay service definition</strong></p>
 <ul>
 <li><span style="text-align:center">You can create, review, update, delete the authorization rules alias shared access policies at the entity level for persistent relay services&nbsp;</span><span style="text-align:center">n the&nbsp;</span><strong style="text-align:center">Authorization
  Rules&nbsp;</strong><span style="text-align:center">tab of the&nbsp;</span><strong style="text-align:center">HandleRelayControl</strong><span style="text-align:center">.&nbsp;</span>
 </li></ul>
-<p style="text-align:center"><img id="134457" src="134457-relayservices03.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134457" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134457/1/relayservices03.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Relay service authorization rules&nbsp;</strong></p>
 <ul>
 <li>You can query the metrics of both persistent and dynamic relay services in the&nbsp;<strong>Metrics&nbsp;</strong>tab of the&nbsp;<strong>HandleRelayControl</strong>. See point
 <strong>3</strong> in the picture below.&nbsp;For more information on this subject, see
 <a href="https://msdn.microsoft.com/en-us/library/azure/dn163589.aspx">Service Bus Entity Metrics REST APIs</a>.
 </li></ul>
-<p style="text-align:center"><img id="134458" src="134458-relayservices04.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134458" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134458/1/relayservices04.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Metric rule definition</strong></p>
-<p style="text-align:center"><strong><img id="134459" src="134459-relayservices05.png" alt="" width="660"><br>
+<p style="text-align:center"><strong><img id="134459" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134459/1/relayservices05.png" alt="" width="660"><br>
 </strong></p>
 <p style="text-align:center"><strong>Metrics data and charts</strong></p>
 <ul>
 <li>You can test both dynamic and persistent relay services in SDI and MDI mode. </li></ul>
-<p style="text-align:center"><img id="134460" src="134460-relayservices06.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134460" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134460/1/relayservices06.png" alt="" width="660"></p>
 <ul>
 <li>Added support to import/export persistent relay services from/to an XML file.
 </li><li>When the&nbsp;<strong>saveMessageToFile&nbsp;</strong>setting in the configuration file is set to&nbsp;<strong>true</strong>, the message content of the Test Relay form is saved to file on exit.
 </li></ul>
-<p><img id="134452" src="134452-relaymessage.png" alt="" width="660"></p>
+<p><img id="134452" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134452/1/relaymessage.png" alt="" width="660"></p>
 <ul>
 <li>Added support for the <a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.partitiondescription.aspx">
 PartitionDescription</a>.<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.partitiondescription.lastenqueuedoffset.aspx">LastEnqueuedOffset</a>,&nbsp;<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.partitiondescription.aspx">PartitionDescription</a>.<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.partitiondescription.lastenqueuedtimeutc.aspx">LastEnqueuedTimeUtc</a>,&nbsp;<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.partitiondescription.aspx">PartitionDescription</a>.<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.partitiondescription.incomingbytespersecond.aspx">IncomingBytesPerSecond</a>,&nbsp;<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.partitiondescription.aspx">PartitionDescription</a>.<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.partitiondescription.outgoingbytespersecond.aspx">OutgoingBytesPerSecond</a>
  in both the <strong>HandlePartitionControl</strong> and <strong>PartitionListenerControl</strong> as shown in the figures below.
 </li></ul>
-<p style="text-align:center"><img id="134463" src="134463-bytespersecond01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134463" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134463/1/bytespersecond01.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>HandlePartitionControl</strong></p>
-<p style="text-align:center"><img id="134464" src="134464-bytespersecond02.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134464" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134464/1/bytespersecond02.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Consumer Group / Partition Listener&nbsp;</strong></p>
 <ul>
 <li>The <strong>Consumer Group / Partition Listener </strong>control added the possibility to start receiving events from a specific point in time by defining a value for the&nbsp;<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.eventhubreceiver.aspx">EventHubReceiver</a>.<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.eventhubreceiver.startingdatetimeutc.aspx">StartingDateTimeUtc</a>
  property.&nbsp;<strong>Note</strong>: you have to specify date and time in UTC format, not in the local date and time format.
 </li></ul>
-<p style="text-align:center"><img id="134480" src="134480-startingdatetimeutc01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134480" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134480/1/startingdatetimeutc01.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Consumer Group / Partition Listener: Listener Tab</strong></p>
-<p style="text-align:center"><img id="134481" src="134481-startingdatetimeutc02.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134481" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134481/1/startingdatetimeutc02.png" alt="" width="660"></p>
 <p style="text-align:center"><strong><strong>Consumer Group / Partition Listener: EventsTab</strong><br>
 </strong></p>
 <ul>
 <li>The value of the&nbsp;<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.eventdata.aspx">EventData</a>.<a href="https://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.eventdata.serializedsizeinbytes.aspx">SerializedSizeInBytes</a>&nbsp;property
  is now used to calculate KB/sec in the <strong>PartitionListenerControl</strong>.
 </li></ul>
-<p style="text-align:center"><img id="134461" src="134461-partitionlistenercontrol01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134461" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134461/1/partitionlistenercontrol01.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Consumer Group / Partition Listener</strong></p>
 <ul>
 <li>Fixed visualization of event data properties in the <strong>Consumer Group / Partition Listener
@@ -1947,35 +1947,35 @@ PartitionDescription</a>.<a href="https://msdn.microsoft.com/en-us/library/micro
 All </strong>is selected, the tool will retrieve all the metrics for the selected entity. See point
 <strong>1</strong> in the picture below. </li><li>Added the possibility to delete a single metric query by pressing the delete button at the end of the row. See point
 <strong>2 </strong>in the picture below. </li></ul>
-<p style="text-align:center"><img id="134467" src="134467-allmetric.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134467" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134467/1/allmetric.png" alt="" width="660"></p>
 <ul>
 <li>No chart is&nbsp;shown if a metric doesn't return any data. </li><li>When no time range is explicitly specified in a metric rule, the tool retrieves metric data of the last 7 days.
 </li><li>Added Metrics support for the&nbsp;<strong>Event Hubs</strong>,&nbsp;<strong>Consumer Groups</strong>,&nbsp;<strong>Notification Hubs</strong>&nbsp;and&nbsp;<strong>Relays</strong>.
 </li></ul>
-<p style="text-align:center"><img id="134468" src="134468-eventhubmetrics01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134468" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134468/1/eventhubmetrics01.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Event Hub: metric rule definition</strong></p>
-<p style="text-align:center"><img id="134469" src="134469-eventhubmetrics02.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134469" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134469/1/eventhubmetrics02.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Event Hub: metric data and charts</strong></p>
-<p style="text-align:center"><strong><img id="134470" src="134470-consumergroupmetrics01.png" alt="" width="660"><br>
+<p style="text-align:center"><strong><img id="134470" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134470/1/consumergroupmetrics01.png" alt="" width="660"><br>
 </strong></p>
 <p style="text-align:center"><strong>Consumer Group: metric rule definition</strong></p>
-<p style="text-align:center"><img id="134471" src="134471-consumergroupmetrics02.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134471" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134471/1/consumergroupmetrics02.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Consumer Group:&nbsp;&nbsp;metric data and charts</strong></p>
-<p style="text-align:center"><img id="134472" src="134472-notificationhubmetrics01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134472" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134472/1/notificationhubmetrics01.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Notification Hub:&nbsp;<strong>metric rule definition</strong></strong></p>
-<p style="text-align:center"><img id="134473" src="134473-notificationhubmetrics02.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134473" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134473/1/notificationhubmetrics02.png" alt="" width="660"></p>
 <p style="text-align:center"><strong><strong><strong><strong>Notification Hub:&nbsp;</strong>metric data and charts</strong><br>
 </strong></strong></p>
-<p style="text-align:center"><img id="134474" src="134474-relaymetrics01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134474" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134474/1/relaymetrics01.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Relay:&nbsp;<strong>metric rule definition</strong></strong></p>
-<p style="text-align:center">&nbsp;<img id="134475" src="134475-relaymetrics02.png" alt="" width="660"></p>
+<p style="text-align:center">&nbsp;<img id="134475" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134475/1/relaymetrics02.png" alt="" width="660"></p>
 <p style="text-align:center"><strong><strong>Relay:&nbsp;</strong>metric data and charts</strong></p>
 <ul>
 <li>If you right click the namespace node in treeview and select <strong>Open Metrics in SDI or MDI mode</strong>, you can access a dialog where you can select metrics of different entities. For example, this option allows to compare the throughput of an event
  hub with the throughput of one of its consumer groups. </li></ul>
-<p style="text-align:center"><img id="134476" src="134476-namespacemetrics01.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134476" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134476/1/namespacemetrics01.png" alt="" width="660"></p>
 <p style="text-align:center"><strong>Namespace:&nbsp;<strong>metric rule definition</strong></strong></p>
-<p style="text-align:center"><img id="134477" src="134477-namespacemetrics02.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="134477" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134477/1/namespacemetrics02.png" alt="" width="660"></p>
 <p style="text-align:center"><strong><strong><strong>Namespace: metric data and charts</strong><br>
 </strong></strong></p>
 <ul>
@@ -1989,7 +1989,7 @@ GitHub</a> (thanks guys!): </li></ul>
 Top </strong>parameter even if when the batch size is greater than the max message size. In this case, the code just invokes the
 <strong>PeekBatch </strong>method in a loop until the number of retrieved message is equal to the value of
 <strong>Top</strong> parameter. </li></ul>
-<p style="text-align:center"><img id="134518" src="134518-peekmessages.png" alt="" width="480" height="256"></p>
+<p style="text-align:center"><img id="134518" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/134518/1/peekmessages.png" alt="" width="480" height="256"></p>
 <p><strong>Update</strong>: 10 March 2015</p>
 <p>This version introduces the following updates:</p>
 <ul>
@@ -2006,9 +2006,9 @@ Top </strong>parameter even if when the batch size is greater than the max messa
 <li>Bugs fixed buy the community (thanks guys!). </li><li>Updated Microsoft.ServiceBus.dll to version 3.0.1 </li><li>Introduced a reference to the new Microsoft.Azure.NotificationHubs.dll </li><li>Introduced the possibility to retrieve the data of all the partitions associated to the consumer group of an event hub using the Get Partition Data menu item or the Partitions button as highlighted in the pictures below
 </li></ul>
 <p>&nbsp;</p>
-<p style="text-align:center"><img id="143449" src="143449-menuitem.png" alt="" width="369" height="257"></p>
+<p style="text-align:center"><img id="143449" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143449/1/menuitem.png" alt="" width="369" height="257"></p>
 <p style="text-align:center">&nbsp;</p>
-<p style="text-align:center"><img id="143450" src="143450-button.png" alt="" width="660"></p>
+<p style="text-align:center"><img id="143450" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143450/1/button.png" alt="" width="660"></p>
 <p style="text-align:justify">&nbsp;</p>
 <p><strong>Update</strong>: 10 September 2015</p>
 <p>This version introduces the following updates:</p>
@@ -2027,14 +2027,14 @@ Top </strong>parameter even if when the batch size is greater than the max messa
 <ul>
 <li>Bug fixes </li><li>Microsoft.ServiceBus.dll 3.0.4 </li><li>Ability to read messages from an IoT Hub. For more information, read&nbsp;<a href="https://code.msdn.microsoft.com/How-to-read-events-from-an-1641eb1b">How to read events from an IoT Hub with the Service Bus Explorer</a>.
 </li></ul>
-<p><img id="143299" src="143299-iothublistener.png" alt="" width="512" height="205"></p>
-<p><img id="143300" src="143300-parameters.png" alt="" width="616" height="225"></p>
-<p><img id="143301" src="143301-sbe02.png" alt="" width="660"></p>
+<p><img id="143299" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143299/1/iothublistener.png" alt="" width="512" height="205"></p>
+<p><img id="143300" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143300/1/parameters.png" alt="" width="616" height="225"></p>
+<p><img id="143301" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143301/1/sbe02.png" alt="" width="660"></p>
 <p><strong>Update</strong>: 8 October 2015</p>
 <p>This version introduces the following updates:</p>
 <ul>
 <li>The Service Bus product group (thanks Binzy!) extended the TestQueueControl and TestTopicControl with the possibility to create a separate MessagingFactory for each sender or receiver task as shown in the picture below. This should improve performance as
  senders and receivers can use a different connection to Azure Service Bus message broker.
 </li></ul>
-<p><img id="143375" src="143375-sendernewmessagingfactory.png" alt="" width="660" style="display:block; margin-left:auto; margin-right:auto"></p>
-<p><img id="143376" src="143376-receivernewmessagingfactory.png" alt="" width="660" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="143375" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143375/1/sendernewmessagingfactory.png" alt="" width="660" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="143376" src="https://i1.code.msdn.s-msft.com/windowsapps/service-bus-explorer-f2abca5a/image/file/143376/1/receivernewmessagingfactory.png" alt="" width="660" style="display:block; margin-left:auto; margin-right:auto"></p>

@@ -73,7 +73,7 @@
 <table width="100%">
 <tbody>
 <tr>
-<th align="left"><img class="note cl_IC103139" src=":-clear.gif?v=635677640377841095" alt="Note">Note</th>
+<th align="left"><img class="note cl_IC103139" src="https://i-msdn.sec.s-msft.com/areas/global/content/clear.gif?v=635677640377841095" alt="Note">Note</th>
 </tr>
 <tr>
 <td>

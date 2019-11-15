@@ -28,7 +28,7 @@ https://azure.microsoft.com/en-us/marketplace/partners/bingmaps/mapapis/</a><str
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p>When you run this application you will see a search box/button where you can enter in addresses or places to search for. Beside this information displaying the center latitude and longitude value and the zoom level of the map will be constantly updated as
  you move the map.</p>
-<p><em><img id="165768" src="165768-v8winform.png" alt="" width="800" height="598" style="width:573px; height:438px"></em></p>
+<p><em><img id="165768" src="https://i1.code.msdn.s-msft.com/using-the-bing-maps-v8-web-07e21f3a/image/file/165768/1/v8winform.png" alt="" width="800" height="598" style="width:573px; height:438px"></em></p>
 <h1>More Information</h1>
 <p>Here are some additional resources about the Bing Maps V8 web control:</p>
 <ul type="disc">

@@ -17,7 +17,7 @@
 <h1>Introduction</h1>
 <p><em>Have you ever had to put in the same list Persons &amp; Companies? If so, depends on the selected one, a different bunch of information has to be displayed. It's a kind of annoying to be done in the old Win Forms application, by controlling visible properties
  and so one. With WPF things has changed and it is easier then ever. Lets see it in practice.</em></p>
-<p><em><img id="69321" src="69321-template_company.jpg" alt="" width="485" height="300"></em></p>
+<p><em><img id="69321" src="http://i1.code.msdn.s-msft.com/using-data-template-f6dc23c8/image/file/69321/1/template_company.jpg" alt="" width="485" height="300"></em></p>
 <h1><span>Building the Sample</span></h1>
 <p><em>Just download the example, build it and run.</em></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>

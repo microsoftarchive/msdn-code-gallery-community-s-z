@@ -14,8 +14,8 @@
 <h1>Introduction</h1>
 <p>The purpose of the sample is to provide a quick introduction to the Azure WebJobs SDK. The application is an advertising bulletin board. Users create an ad by entering text and uploading an image. They can see a list of ads with thumbnail images, and they
  can see the full size image when they select an ad to see the details. A background process running in a worker role creates thumbnails of the uploaded images. Here's a screenshot and an architecture diagram.</p>
-<p><img id="114261" src="114261-list.png" alt="" width="717" height="583"></p>
-<p><img id="122144" src="122144-apparchitecture.png" alt="" width="536" height="392"></p>
+<p><img id="114261" src="http://i1.code.msdn.s-msft.com/simple-azure-cloud-service-e01df2e4/image/file/114261/1/list.png" alt="" width="717" height="583"></p>
+<p><img id="122144" src="http://i1.code.msdn.s-msft.com/simple-azure-website-with-b4391eeb/image/file/122144/1/apparchitecture.png" alt="" width="536" height="392"></p>
 <h1><span>Building the Sample</span></h1>
 <ol>
 <li>Download and unzip the completed solution. </li><li>Make sure that you have installed the Azure .NET SDK version 2.4 or later. </li><li>Start Visual Studio. </li><li>From the File menu choose Open Project, navigate to where you downloaded the solution, and then open the solution file.

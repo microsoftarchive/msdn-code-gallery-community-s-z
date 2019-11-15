@@ -117,7 +117,7 @@
  2010.<sup id="cite_ref-41" class="reference"><a href="https://en.wikipedia.org/wiki/YouTube#cite_note-41">[41]</a></sup><sup id="cite_ref-42" class="reference"><a href="https://en.wikipedia.org/wiki/YouTube#cite_note-42">[42]</a></sup>&nbsp;The service
  offers over 6,000 films.<sup id="cite_ref-43" class="reference"><a href="https://en.wikipedia.org/wiki/YouTube#cite_note-43">[43]</a></sup></p>
 <div class="thumb tright">
-<div class="thumbinner"><a class="image" href="https://en.wikipedia.org/wiki/File:901cherryave.jpg"><img class="thumbimage" src=":-250px-901cherryave.jpg" alt="" width="250" height="173"></a>
+<div class="thumbinner"><a class="image" href="https://en.wikipedia.org/wiki/File:901cherryave.jpg"><img class="thumbimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/901cherryave.jpg/250px-901cherryave.jpg" alt="" width="250" height="173"></a>
 <div class="thumbcaption">
 <div class="magnify"><a class="internal" title="Enlarge" href="https://en.wikipedia.org/wiki/File:901cherryave.jpg"></a></div>
 YouTube's headquarters as of 2010 in<a title="San Bruno, California" href="https://en.wikipedia.org/wiki/San_Bruno,_California">San Bruno</a>, California.</div>

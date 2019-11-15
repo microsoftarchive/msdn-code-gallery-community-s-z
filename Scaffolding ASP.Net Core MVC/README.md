@@ -21,13 +21,13 @@
 <ol>
 <li>Manage Packages </li><li>EF Core Model(DB-First) </li><li>MVC Core Scaffolding </li></ol>
 <p>Let&rsquo;s Create New Project: File &gt; New &gt; Project</p>
-<p><img src=":-coremvc_1.png" alt="" width="630px" height="169px"></p>
+<p><img src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_1.png" alt="" width="630px" height="169px"></p>
 <p>From left menu choose .Net Core &gt; ASP.Net Core Web Application</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_2.png"><img class="alignnone size-full x_x_wp-image-3653" src=":-coremvc_2.png" alt="coremvc_2"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_2.png"><img class="alignnone size-full x_x_wp-image-3653" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_2.png" alt="coremvc_2"></a></p>
 <p>Choose ASP.Net Core sample template, Click OK.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_3.png"><img class="alignnone size-full x_x_wp-image-3654" src=":-coremvc_3.png" alt="coremvc_3"></a>Here&rsquo;s the initial view of sample
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_3.png"><img class="alignnone size-full x_x_wp-image-3654" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_3.png" alt="coremvc_3"></a>Here&rsquo;s the initial view of sample
  template in solution explorer.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_4.png"><img class="alignnone size-full x_x_wp-image-3655" src=":-coremvc_4.png" alt="coremvc_4"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_4.png"><img class="alignnone size-full x_x_wp-image-3655" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_4.png" alt="coremvc_4"></a></p>
 <p>Create a new database using SSMS, name it &ldquo;PhoneBook&rdquo;. Copy the below query &amp; run it using query editor of SSMS.</p>
 <p></p>
 <div class="scriptcode">
@@ -116,15 +116,15 @@ GO</pre>
 <ul>
 <li>dotnet ef dbcontext scaffold </li></ul>
 <p><strong>Using CommandLine</strong>&nbsp;In our sample application we are going to apply Commands using the command line.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_5.png"><img class="alignnone size-full x_x_wp-image-3656" src=":-coremvc_5.png" alt="coremvc_5"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_5.png"><img class="alignnone size-full x_x_wp-image-3656" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_5.png" alt="coremvc_5"></a></p>
 <p>Go to Project directory &gt; Shift &#43; Right Click to open Command window.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_6.png"><img class="alignnone size-full x_x_wp-image-3657" src=":-coremvc_6.png" alt="coremvc_6"></a><em><strong><span style="text-decoration:underline">Command:</span></strong>&nbsp;dotnet
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_6.png"><img class="alignnone size-full x_x_wp-image-3657" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_6.png" alt="coremvc_6"></a><em><strong><span style="text-decoration:underline">Command:</span></strong>&nbsp;dotnet
  ef &ndash;help</em></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_7.png"><img class="alignnone size-full x_x_wp-image-3658" src=":-coremvc_7.png" alt="coremvc_7"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_7.png"><img class="alignnone size-full x_x_wp-image-3658" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_7.png" alt="coremvc_7"></a></p>
 <p><strong><em><span style="text-decoration:underline">Command:</span></em></strong>&nbsp;<em>dotnet ef dbcontext scaffold &quot;Server=DESKTOP-5B67SHH;Database=PhoneBook;Trusted_Connection=True;&quot; Microsoft.EntityFrameworkCore.SqlServer --output-dir Models</em></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_8.png"><img class="alignnone size-full x_x_wp-image-3659" src=":-coremvc_8.png" alt="coremvc_8"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_8.png"><img class="alignnone size-full x_x_wp-image-3659" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_8.png" alt="coremvc_8"></a></p>
 <p>As we&nbsp;can see&nbsp;from solution explorer models folder is created with Context &amp; Entities.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_9.png"><img class="alignnone size-full x_x_wp-image-3660" src=":-coremvc_9.png" alt="coremvc_9"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_9.png"><img class="alignnone size-full x_x_wp-image-3660" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_9.png" alt="coremvc_9"></a></p>
 <p><strong>Generated DbContext:&nbsp;</strong>Finally full view of generated Context class.</p>
 <p></p>
 <div class="scriptcode">
@@ -204,13 +204,13 @@ GO</pre>
 <p></p>
 <p>Click Save, packages will restore automatically. Well packages are installed to our application, we are good to perform next step of Scaffolding Controller &amp; Views.</p>
 <p><strong>Scaffold using Interface:</strong>&nbsp;Right Click on Controller folder &gt; Add &gt; New Scaffolding Item</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_10.png"><img class="alignnone size-full x_x_wp-image-3661" src=":-coremvc_10.png" alt="coremvc_10"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_10.png"><img class="alignnone size-full x_x_wp-image-3661" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_10.png" alt="coremvc_10"></a></p>
 <p>Choose the scaffold option how the code will generated.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_11.png"><img class="alignnone size-full x_x_wp-image-3662" src=":-coremvc_11.png" alt="coremvc_11"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_11.png"><img class="alignnone size-full x_x_wp-image-3662" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_11.png" alt="coremvc_11"></a></p>
 <p>Now provide model, context classes that is going to use to interact with database, choose view options then click Add button to perform the action.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_12.png"><img class="alignnone size-full x_x_wp-image-3663" src=":-coremvc_12.png" alt="coremvc_12"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_12.png"><img class="alignnone size-full x_x_wp-image-3663" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_12.png" alt="coremvc_12"></a></p>
 <p>Wait for a while as we can see from solution explorer the views are generated.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_13.png"><img class="alignnone size-full x_x_wp-image-3664" src=":-coremvc_13.png" alt="coremvc_13"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_13.png"><img class="alignnone size-full x_x_wp-image-3664" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_13.png" alt="coremvc_13"></a></p>
 <p>The output messages are shown below.</p>
 <p></p>
 <div class="scriptcode">
@@ -238,13 +238,13 @@ RunTime&nbsp;<span class="js__num">00</span>:<span class="js__num">00</span>:<sp
 <p></p>
 <p><strong>Scaffold using CommandLine:</strong>&nbsp;We can generate that by using CommandLine, pointing the project folder with Shift &#43; Right Click then command window will appear. Get help information by the following command.</p>
 <p><strong><em><span style="text-decoration:underline">Command:</span></em></strong>&nbsp;<em>dotnet aspnet-codegenerator --help</em></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_14.png"><img class="alignnone size-full x_x_wp-image-3665" src=":-coremvc_14.png" alt="coremvc_14"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_14.png"><img class="alignnone size-full x_x_wp-image-3665" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_14.png" alt="coremvc_14"></a></p>
 <p>Let&rsquo;s generate Controller &amp; View using below command with project path, controller, model info.</p>
 <p><strong><em><span style="text-decoration:underline">Command:</span></em></strong>&nbsp;<em>dotnet aspnet-codegenerator --project &quot;E:\Documents\Article\ScaffoldingCoreMVC\CoreMVCScaffolding\src\CoreMVCScaffolding&quot; controller --force --controllerName ContactsController
  --model CoreMVCScaffolding.Models.Contacts --dataContext CoreMVCScaffolding.Models.PhoneBookContext --relativeFolderPath Controllers --controllerNamespace CoreMVCScaffolding.Controllers &ndash;useDefaultLayout</em></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_15.png"><img class="alignnone size-full x_x_wp-image-3666" src=":-coremvc_15.png" alt="coremvc_15"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_15.png"><img class="alignnone size-full x_x_wp-image-3666" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_15.png" alt="coremvc_15"></a></p>
 <p>As we can see the controller &amp; view is successfully generated using MVC model. In our sample application if we notice in the Error List tab there&rsquo;s a warning about to move sensitive information from DbContext.</p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_16.png"><img class="alignnone size-full x_x_wp-image-3667" src=":-coremvc_16.png" alt="coremvc_16"></a>This is the area in DbContext class which
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_16.png"><img class="alignnone size-full x_x_wp-image-3667" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_16.png" alt="coremvc_16"></a>This is the area in DbContext class which
  cause the warning.</p>
 <p></p>
 <div class="scriptcode">
@@ -304,7 +304,7 @@ and&nbsp;passes&nbsp;it&nbsp;to&nbsp;the&nbsp;base&nbsp;constructor&nbsp;<span c
 </div>
 </div>
 <p></p>
-<p><img class="alignnone size-large x_x_wp-image-3668" src=":-coremvc_17.png" alt="coremvc_17"></p>
+<p><img class="alignnone size-large x_x_wp-image-3668" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_17.png" alt="coremvc_17"></p>
 <p>It says, No database provider has been configured for this DbContext. Notice that we have used AddDbContext in ConfigureServices(IServiceCollection services) method.</p>
 <p></p>
 <div class="scriptcode">
@@ -338,18 +338,18 @@ and&nbsp;passes&nbsp;it&nbsp;to&nbsp;the&nbsp;base&nbsp;constructor&nbsp;<span c
 <p></p>
 <p>Now we may run our sample application by Ctrl&#43;f5 or we can run using below command.</p>
 <p><strong><em><span style="text-decoration:underline">Command:</span></em></strong>&nbsp;<em>dotnet run</em></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_18.png"><img class="alignnone size-full x_x_wp-image-3669" src=":-coremvc_18.png" alt="coremvc_18"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_18.png"><img class="alignnone size-full x_x_wp-image-3669" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_18.png" alt="coremvc_18"></a></p>
 <p>Open browser Go to&nbsp;http://localhost:5000,&nbsp;finally the application is running.</p>
 <p><strong>Contact List</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_19.png"><img class="alignnone wp-image-3670 x_x_size-full" src=":-coremvc_19.png" alt="coremvc_19"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_19.png"><img class="alignnone wp-image-3670 x_x_size-full" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_19.png" alt="coremvc_19"></a></p>
 <p><strong>Create New Contact</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_20.png"><img class="alignnone wp-image-3671 x_x_size-full" src=":-coremvc_20.png" alt="coremvc_20"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_20.png"><img class="alignnone wp-image-3671 x_x_size-full" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_20.png" alt="coremvc_20"></a></p>
 <p><strong>Edit Existing Contact</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_21.png"><img class="alignnone wp-image-3672 x_x_size-full" src=":-coremvc_21.png" alt="coremvc_21"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_21.png"><img class="alignnone wp-image-3672 x_x_size-full" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_21.png" alt="coremvc_21"></a></p>
 <p><strong>View Details Existing Contact</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_22.png"><img class="alignnone wp-image-3673 x_x_size-full" src=":-coremvc_22.png" alt="coremvc_22"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_22.png"><img class="alignnone wp-image-3673 x_x_size-full" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_22.png" alt="coremvc_22"></a></p>
 <p><strong>Delete Existing Contact</strong></p>
-<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_23.png"><img class="alignnone wp-image-3674 x_x_size-full" src=":-coremvc_23.png" alt="coremvc_23"></a></p>
+<p><a href="http://shashangka.com/wp-content/uploads/2016/12/coremvc_23.png"><img class="alignnone wp-image-3674 x_x_size-full" src="https://www.codeproject.com/KB/aspnet/1160127/coremvc_23.png" alt="coremvc_23"></a></p>
 <p>Hope this will help 🙂</p>
 <p><strong>References:</strong></p>
 <ol>

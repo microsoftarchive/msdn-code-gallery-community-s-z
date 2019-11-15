@@ -44,9 +44,9 @@
 <p><strong>1. Download source code. </strong></p>
 <p><strong>2. Install the <a href="https://www.microsoft.com/net/core#windowsvs2017" target="_blank">
 latest version of .NET Core 2.0 SDK</a> (Visual Studio 2017 RTW Version 15.3.5 or newer).</strong></p>
-<p><strong>&nbsp;<img id="180401" src="180401-2017-10-05_19-01-05.png" alt="" width="1552" height="1040"></strong></p>
+<p><strong>&nbsp;<img id="180401" src="https://i1.code.msdn.s-msft.com/the-aspnet-vnext-real-time-b1d27fe4/image/file/180401/1/2017-10-05_19-01-05.png" alt="" width="1552" height="1040"></strong></p>
 <p><strong>3. Open project by Visual Studio 2017 and run it.</strong></p>
-<p><img id="180247" src="180247-2017-10-03_13-23-54.png" alt=""></p>
+<p><img id="180247" src="https://i1.code.msdn.s-msft.com/the-aspnet-vnext-real-time-b1d27fe4/image/file/180247/1/2017-10-03_13-23-54.png" alt=""></p>
 <p>&nbsp;</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">

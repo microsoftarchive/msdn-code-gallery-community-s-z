@@ -16,7 +16,7 @@
 <h1>Introduction</h1>
 <p><em>This article explain how to get tweets using TweetSharp API for twitter API v1.1. You'll find out how to use ListTweetsOnUserTimeline to get all tweets from specific user or use Search options to get specific hashtag that you want to follow (ie. to follow
  specific event). Final results with two different way of&nbsp;getting data from Twitter&nbsp;are</em><em> shown below:</em></p>
-<p><em>&nbsp;<img id="108841" src="108841-twittersample.png" alt="" width="600" height="499"></em></p>
+<p><em>&nbsp;<img id="108841" src="http://i1.code.msdn.s-msft.com/twitter-sample-using-0dfcce61/image/file/108841/1/twittersample.png" alt="" width="600" height="499"></em></p>
 <p><em>&nbsp;</em><em>&nbsp;</em></p>
 <h1><span>Building the Sample</span></h1>
 <p><em>To get to work this sample you need to install TweetSharp API. You can do it using NuGet Package Manager in Visual Studio&nbsp;using command:</em></p>

@@ -21,7 +21,7 @@ https://github.com/mrdoob/three.js/blob/master/examples/webgl_shadowmap_pointlig
 <p>This project includes the full three.js library, OrbitControls.js library, and type definition &nbsp;<strong>three.d.ts</strong> (see folder).&nbsp; Inside file
 <strong>three-core.d.ts</strong> was added manually interface type and class for <strong>
 customDistanceMaterial.</strong></p>
-<h1><img id="217955" src="217955-ezgif.com-resize.gif" alt="" width="612" height="382"></h1>
+<h1><img id="217955" src="https://i1.code.msdn.s-msft.com/windowsapps/webglthreejs-with-83fed8a5/image/file/217955/1/ezgif.com-resize.gif" alt="" width="612" height="382"></h1>
 <h1><span>Building the Sample</span></h1>
 <p><em>Run VS2017 in Admin mode, VS automatically&nbsp;downloads one NuGet package.</em></p>
 <p><em>Go to properties and set web.application</em></p>

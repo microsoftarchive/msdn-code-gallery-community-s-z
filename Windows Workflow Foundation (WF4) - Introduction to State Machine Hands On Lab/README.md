@@ -20,7 +20,7 @@
 </li></ol>
 <h3><strong><object width="350" height="300" data="data:application/x-silverlight-2," type="application/x-silverlight-2"> <param name="source" value="/Content/Common/videoplayer.xap" /> <param name="initParams" value="deferredLoad=false,duration=0,m=http://i3.code.msdn.microsoft.com/windows-workflow-b4b808a8/image/file/21299/1/sm0.wmv,autostart=false,autohide=true,showembed=true"
  /> <param name="background" value="#00FFFFFF" /> <param name="minRuntimeVersion" value="3.0.40624.0" /> <param name="enableHtmlAccess" value="true" /> <param name="src" value="http://i3.code.msdn.microsoft.com/windows-workflow-b4b808a8/image/file/21299/1/sm0.wmv"
- /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="-?linkid=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span> </object>
+ /><span><a href="http://go.microsoft.com/fwlink/?LinkID=149156" style="text-decoration:none"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"></a></span> </object>
 <br>
 <a id="http://i3.code.msdn.microsoft.com/windows-workflow-b4b808a8/image/file/21299/1/sm0.wmv" href="http://i3.code.msdn.microsoft.com/windows-workflow-b4b808a8/image/file/21299/1/sm0.wmv">Download video</a></strong></h3>
 <h3><strong>Exercises</strong></h3>

@@ -32,4 +32,4 @@
 http://silesiaresearch.com/Finance</a></p>
 <h1>Sample screenshot</h1>
 <p>&nbsp;</p>
-<p><em><em><img id="67496" src="67496-stocks.jpg" alt="" width="657" height="500">.</em></em></p>
+<p><em><em><img id="67496" src="http://i1.code.msdn.s-msft.com/silverlight/technical-analysis-of-8714a87f/image/file/67496/1/stocks.jpg" alt="" width="657" height="500">.</em></em></p>

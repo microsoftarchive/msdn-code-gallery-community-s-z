@@ -19,7 +19,7 @@
 
 <h1>Introduction</h1>
 <p>This project shows how to easily make a NumericUpDown control out of a ScrollBar control.</p>
-<p><img id="65288" src="65288-numericupdown.png" alt="" width="256" height="198" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img id="65288" src="http://i1.code.msdn.s-msft.com/wpf-numericupdown-from-15a7f578/image/file/65288/1/numericupdown.png" alt="" width="256" height="198" style="margin-right:auto; margin-left:auto; display:block"></p>
 <h1><span>Building the Sample</span></h1>
 <p>Just download, unzip, open and run!</p>
 <p>&nbsp;</p>
@@ -73,4 +73,4 @@ RangeBase</a>, so it has all the properties we need, like Min, Max, and SmallCha
 <li><em>MainWindow.xaml - Startup window, including the Scrollbar style</em> </li></ul>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

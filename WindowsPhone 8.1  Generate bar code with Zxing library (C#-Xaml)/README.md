@@ -37,14 +37,14 @@
 <p><span style="font-family:Verdana,sans-serif">&nbsp;</span></p>
 <p class="separator"><span style="font-family:Verdana,sans-serif">Tools-&gt;Library Package Manager-&gt;Package Manager console</span></p>
 <span style="font-family:Verdana,sans-serif">
-<p class="separator"><a href="http://3.bp.blogspot.com/-JfXGl3hawUA/VKPGSsoJgCI/AAAAAAAABcI/O9QfvAG6okU/s1600/Nuget1.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-jfxgl3hawua%2fvkpgssojgci%2faaaaaaaabci%2fo9qfvag6oku%2fs1600%2fnuget1.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="308"></a></p>
+<p class="separator"><a href="http://3.bp.blogspot.com/-JfXGl3hawUA/VKPGSsoJgCI/AAAAAAAABcI/O9QfvAG6okU/s1600/Nuget1.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-JfXGl3hawUA%2FVKPGSsoJgCI%2FAAAAAAAABcI%2FO9QfvAG6okU%2Fs1600%2FNuget1.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="308"></a></p>
 <p class="separator">Once the powershell command prompt is running, type the following command</p>
 <p class="separator">&nbsp;</p>
 <p class="separator">Install-Package ZXing.Net&nbsp;</p>
-<p class="separator"><a href="http://1.bp.blogspot.com/-xGSsQu08hQM/VNCR8lddVTI/AAAAAAAABnc/rXuEGOR5JTU/s1600/Nuget.PNG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-xgssqu08hqm%2fvncr8lddvti%2faaaaaaaabnc%2frxuegor5jtu%2fs1600%2fnuget.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="123"></a></p>
+<p class="separator"><a href="http://1.bp.blogspot.com/-xGSsQu08hQM/VNCR8lddVTI/AAAAAAAABnc/rXuEGOR5JTU/s1600/Nuget.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-xGSsQu08hQM%2FVNCR8lddVTI%2FAAAAAAAABnc%2FrXuEGOR5JTU%2Fs1600%2FNuget.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="123"></a></p>
 <p>&nbsp;This will add ZXing library in the current project like below:</p>
 </span></div>
-<p class="separator"><a href="http://4.bp.blogspot.com/-F7vnZN0asb0/VNCSwi4ZOuI/AAAAAAAABnk/dm9sgOG3358/s1600/References.PNG"><img src=":-proxy?url=http%3a%2f%2f4.bp.blogspot.com%2f-f7vnzn0asb0%2fvncswi4zoui%2faaaaaaaabnk%2fdm9sgog3358%2fs1600%2freferences.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="320" height="291"></a></p>
+<p class="separator"><a href="http://4.bp.blogspot.com/-F7vnZN0asb0/VNCSwi4ZOuI/AAAAAAAABnk/dm9sgOG3358/s1600/References.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-F7vnZN0asb0%2FVNCSwi4ZOuI%2FAAAAAAAABnk%2Fdm9sgOG3358%2Fs1600%2FReferences.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="320" height="291"></a></p>
 <p class="separator"><strong>2)Generate QR code with ZXing:</strong></p>
 <p class="separator">Lets add image control in MainPage.xaml,to display generated QR code image</p>
 <p class="separator"></p>
@@ -118,16 +118,16 @@
 </div>
 </div>
 </div>
-<div class="endscriptcode">&nbsp;<a href="http://3.bp.blogspot.com/-Min7OUeVHGA/VNCXeloUe-I/AAAAAAAABoE/_8hlnG99zgM/s1600/ColorChange.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-min7ouevhga%2fvncxeloue-i%2faaaaaaaaboe%2f_8hlng99zgm%2fs1600%2fcolorchange.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="223" height="400"></a></div>
+<div class="endscriptcode">&nbsp;<a href="http://3.bp.blogspot.com/-Min7OUeVHGA/VNCXeloUe-I/AAAAAAAABoE/_8hlnG99zgM/s1600/ColorChange.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-Min7OUeVHGA%2FVNCXeloUe-I%2FAAAAAAAABoE%2F_8hlnG99zgM%2Fs1600%2FColorChange.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="223" height="400"></a></div>
 </div>
 </span><span style="font-family:Verdana,sans-serif; font-size:small">
 <div><strong>3)Output:</strong></div>
 <div>Press 'F5' to launch the Application and you should see the QR code generated and displayed in the image control.
-<p class="separator"><a href="http://3.bp.blogspot.com/-9Ml7z4TPTmI/VNCVDFaOjEI/AAAAAAAABnw/VLQ4OdYOz-s/s1600/Default.PNG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-9ml7z4tptmi%2fvncvdfaojei%2faaaaaaaabnw%2fvlq4odyoz-s%2fs1600%2fdefault.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="223" height="400"></a></p>
+<p class="separator"><a href="http://3.bp.blogspot.com/-9Ml7z4TPTmI/VNCVDFaOjEI/AAAAAAAABnw/VLQ4OdYOz-s/s1600/Default.PNG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-9Ml7z4TPTmI%2FVNCVDFaOjEI%2FAAAAAAAABnw%2FVLQ4OdYOz-s%2Fs1600%2FDefault.PNG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="223" height="400"></a></p>
 <p class="separator"><strong>4)Scanning generated QR code:</strong></p>
 <p class="separator">In your Windows Phone 8/8.1 physical device, tap the search hardware button to open the Bing search and then tap the Vision Icon in the Application Bar and then bring the focus to the generated barcode which should identify the string
  within the barcode as shown below.</p>
-<p class="separator"><a href="http://1.bp.blogspot.com/-I_L3l8otxRg/VNCVxPXcgbI/AAAAAAAABn4/MzGS7D51huU/s1600/wp_ss_20150203_0002.png"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-i_l3l8otxrg%2fvncvxpxcgbi%2faaaaaaaabn4%2fmzgs7d51huu%2fs1600%2fwp_ss_20150203_0002.png&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="240" height="400"></a></p>
+<p class="separator"><a href="http://1.bp.blogspot.com/-I_L3l8otxRg/VNCVxPXcgbI/AAAAAAAABn4/MzGS7D51huU/s1600/wp_ss_20150203_0002.png"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-I_L3l8otxRg%2FVNCVxPXcgbI%2FAAAAAAAABn4%2FMzGS7D51huU%2Fs1600%2Fwp_ss_20150203_0002.png&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="240" height="400"></a></p>
 <p class="separator">If you tap on&nbsp;<a href="http://www.bsubramanyamraju.blogspot.com/" target="_blank">link</a>&nbsp;founded from the scanner,it will redirect to specified website.</p>
 <p class="separator">This article is also available at my original <a title="MyBlogReference" href="http://bsubramanyamraju.blogspot.com/2015/02/windowsphone-81-generate-qr-code-with.html">
 blog</a></p>
@@ -138,7 +138,7 @@ blog</a></p>
 </div>
 </span><span style="font-family:Verdana,sans-serif">
 <div>
-<pre class="csharp"><span style="font-size:small">Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="67168-ratings.png" alt="" width="74" height="15">&nbsp;star rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice). &nbsp;</span></pre>
+<pre class="csharp"><span style="font-size:small">Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="http://i1.code.msdn.s-msft.com/oops-principles-solid-7a4e69bf/image/file/67168/1/ratings.png" alt="" width="74" height="15">&nbsp;star rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice). &nbsp;</span></pre>
 </div>
 </span><span style="font-family:Verdana,sans-serif; font-size:small">
 <div>

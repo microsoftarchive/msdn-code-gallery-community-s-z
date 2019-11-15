@@ -28,11 +28,11 @@
  your codes to other environments. Here I will show you how we can write client side test cases with the help of a framework called Jasmine.</p>
 <p><span>Setting up the project</span></p>
 <p>To get started, please create an empty project in your Visual Studio.</p>
-<div class="wp-caption x_alignnone" id="attachment_11904"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Empty_Project-e1475921231766.png"><img class="size-full x_wp-image-11904" src="-empty_project-e1475921231766.png" alt="empty_project" width="650" height="507"></a>
+<div class="wp-caption x_alignnone" id="attachment_11904"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Empty_Project-e1475921231766.png"><img class="size-full x_wp-image-11904" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Empty_Project-e1475921231766.png" alt="empty_project" width="650" height="507"></a>
 <p class="wp-caption-text">empty_project</p>
 </div>
 <p>Now, we will install&nbsp;<a href="http://sibeeshpassion.com/category/jquery/" target="_blank">jQuery</a>,&nbsp;<a href="http://sibeeshpassion.com/category/jquery-ui/" target="_blank">jQueryUI&nbsp;</a>from Nuget package manager.</p>
-<div class="wp-caption x_alignnone" id="attachment_11905"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Nuget_Package_Manager.png"><img class="size-large x_wp-image-11905" src="-nuget_package_manager-1024x478.png" alt="nuget_package_manager" width="634" height="296"></a>
+<div class="wp-caption x_alignnone" id="attachment_11905"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Nuget_Package_Manager.png"><img class="size-large x_wp-image-11905" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Nuget_Package_Manager-1024x478.png" alt="nuget_package_manager" width="634" height="296"></a>
 <p class="wp-caption-text">nuget_package_manager</p>
 </div>
 <p>We are all set to start our coding now.</p>
@@ -160,20 +160,20 @@ indexPage.validationFunctions&nbsp;=&nbsp;(<span class="js__operator">function</
 </div>
 <p>Hope you are able t understand the codes written. We are wrote some validations like Null value check, end date greater than start date etc&hellip;</p>
 <p>Now please run your application and check whether the validations are working fine.</p>
-<div class="wp-caption x_alignnone" id="attachment_11906"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Null_validation_check.png"><img class="size-large x_wp-image-11906" src="-null_validation_check-1024x319.png" alt="null_validation_check" width="634" height="198"></a>
+<div class="wp-caption x_alignnone" id="attachment_11906"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Null_validation_check.png"><img class="size-large x_wp-image-11906" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Null_validation_check-1024x319.png" alt="null_validation_check" width="634" height="198"></a>
 <p class="wp-caption-text">null_validation_check</p>
 </div>
-<div class="wp-caption x_alignnone" id="attachment_11907"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Date_validation_check.png"><img class="size-large x_wp-image-11907" src="-date_validation_check-1024x319.png" alt="date_validation_check" width="634" height="198"></a>
+<div class="wp-caption x_alignnone" id="attachment_11907"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Date_validation_check.png"><img class="size-large x_wp-image-11907" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Date_validation_check-1024x319.png" alt="date_validation_check" width="634" height="198"></a>
 <p class="wp-caption-text">date_validation_check</p>
 </div>
 <p>Now, here comes the real part.</p>
 <p><span>Setting up Jasmine Framework</span></p>
 <p>To set Jasmine, we will add a new project to our solution.</p>
-<div class="wp-caption x_alignnone" id="attachment_11908"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Add_new_project.png"><img class="size-large x_wp-image-11908" src="-add_new_project-1024x709.png" alt="add_new_project" width="634" height="439"></a>
+<div class="wp-caption x_alignnone" id="attachment_11908"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Add_new_project.png"><img class="size-large x_wp-image-11908" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Add_new_project-1024x709.png" alt="add_new_project" width="634" height="439"></a>
 <p class="wp-caption-text">add_new_project</p>
 </div>
 <p>Now install Jasmine from Nuget Package manager.</p>
-<div class="wp-caption x_alignnone" id="attachment_11909"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Jasmine_Nuget_Package.png"><img class="size-large x_wp-image-11909" src="-jasmine_nuget_package-1024x570.png" alt="jasmine_nuget_package" width="634" height="353"></a>
+<div class="wp-caption x_alignnone" id="attachment_11909"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Jasmine_Nuget_Package.png"><img class="size-large x_wp-image-11909" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Jasmine_Nuget_Package-1024x570.png" alt="jasmine_nuget_package" width="634" height="353"></a>
 <p class="wp-caption-text">jasmine_nuget_package</p>
 </div>
 <p>Once you are done, the required files would be added to your project. We will be discussing about Jasmine once everything is set. So no worries.</p>
@@ -229,7 +229,7 @@ indexPage.validationFunctions&nbsp;=&nbsp;(<span class="js__operator">function</
 </li><li>Expectation
 <p>Value of an expectation is either true or false, an expectation starts with the function&nbsp;<em>expect</em>. It takes a value and call the actual one.</p>
 <p>You can always read more&nbsp;<a href="http://jasmine.github.io/2.0/introduction.html" target="_blank">here</a>. Now please run your SpecRunner.html page. If everything is fine you can see a page as below.</p>
-<div class="wp-caption x_alignnone" id="attachment_11910"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Jasmine_Spec_Runner_Page.png"><img class="size-large x_wp-image-11910" src="-jasmine_spec_runner_page-1024x223.png" alt="jasmine_spec_runner_page" width="634" height="138"></a>
+<div class="wp-caption x_alignnone" id="attachment_11910"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Jasmine_Spec_Runner_Page.png"><img class="size-large x_wp-image-11910" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Jasmine_Spec_Runner_Page-1024x223.png" alt="jasmine_spec_runner_page" width="634" height="138"></a>
 <p class="wp-caption-text">jasmine_spec_runner_page</p>
 </div>
 <p>So are you all set? Shall we go and write our test cases? Please go to your&nbsp;<em>IndexTest.js</em>&nbsp;file and create a suit and spec as preceding.</p>
@@ -263,7 +263,7 @@ indexPage.validationFunctions&nbsp;=&nbsp;(<span class="js__operator">function</
 </div>
 </div>
 <p>Here the expectation is true and we give toBeTruthy(), now lets go and find whether the test is passed or not. Please run the SpecRunner.html page again.</p>
-<div class="wp-caption x_alignnone" id="attachment_11911"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Test_Jasmine_Specs.png"><img class="size-large x_wp-image-11911" src="-test_jasmine_specs-1024x199.png" alt="test_jasmine_specs" width="634" height="123"></a>
+<div class="wp-caption x_alignnone" id="attachment_11911"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Test_Jasmine_Specs.png"><img class="size-large x_wp-image-11911" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Test_Jasmine_Specs-1024x199.png" alt="test_jasmine_specs" width="634" height="123"></a>
 <p class="wp-caption-text">test_jasmine_specs</p>
 </div>
 <p>Now we will write test case for our function&nbsp;<em>isEndDateGreaterStart</em>, if you have noticed the function<em>isEndDateGreaterStart</em>, you can see that there are dependencies (UI elements). Inside of the function, we are getting the values from
@@ -311,7 +311,7 @@ indexPage.validationFunctions&nbsp;=&nbsp;(<span class="js__operator">function</
 <div class="endscriptcode">&nbsp;</div>
 </div>
 </div>
-<p>Here we are giving start date as 2015-03-25 and end date as 2015-03-24 and we know 2015-03-25 &lt; 2015-03-24 is false, so here we are giving expectation as false (toBeFalsy()). Now you are getting an alert as follows right?<a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Alert_in_SpyOn_Jasmine-e1475924905278.png"><img class="size-full x_wp-image-11912" src="-alert_in_spyon_jasmine-e1475924905278.png" alt="alert_in_spyon_jasmine" width="766" height="571"></a>alert_in_spyon_jasmine[/caption]</p>
+<p>Here we are giving start date as 2015-03-25 and end date as 2015-03-24 and we know 2015-03-25 &lt; 2015-03-24 is false, so here we are giving expectation as false (toBeFalsy()). Now you are getting an alert as follows right?<a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Alert_in_SpyOn_Jasmine-e1475924905278.png"><img class="size-full x_wp-image-11912" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Alert_in_SpyOn_Jasmine-e1475924905278.png" alt="alert_in_spyon_jasmine" width="766" height="571"></a>alert_in_spyon_jasmine[/caption]</p>
 <p>But in testing framework we don&rsquo;t need any alerts right? To get rid of this, you must create a spy for window.alert function and add it to the&nbsp;<em>beforeEach</em>&nbsp;so that it can be used for each specs. You can do that as follows.</p>
 <div>
 <div class="syntaxhighlighter jscript" id="highlighter_746611">
@@ -356,7 +356,7 @@ indexPage.validationFunctions&nbsp;=&nbsp;(<span class="js__operator">function</
 </div>
 </div>
 <p>Now you can see all of your specs are passed.</p>
-<div class="wp-caption x_alignnone" id="attachment_11913"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Run_all_specs_in_Jasmine.png"><img class="size-large x_wp-image-11913" src="-run_all_specs_in_jasmine-1024x217.png" alt="run_all_specs_in_jasmine" width="634" height="134"></a>
+<div class="wp-caption x_alignnone" id="attachment_11913"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/10/Run_all_specs_in_Jasmine.png"><img class="size-large x_wp-image-11913" src="http://sibeeshpassion.com/wp-content/uploads/2016/10/Run_all_specs_in_Jasmine-1024x217.png" alt="run_all_specs_in_jasmine" width="634" height="134"></a>
 <p class="wp-caption-text">run_all_specs_in_jasmine</p>
 </div>
 <p>Happy coding!.</p>

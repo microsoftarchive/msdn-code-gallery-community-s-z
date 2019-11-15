@@ -146,4 +146,4 @@ http://social.technet.microsoft.com/wiki/contents/articles/36500.uwp-linux-socke
 <p>&nbsp;</p>
 <p>UWP Client App</p>
 <p>&nbsp;</p>
-<p><img id="165914" width="1362" height="664" src="165914-output.png" alt=""></p>
+<p><img id="165914" width="1362" height="664" src="https://i1.code.msdn.s-msft.com/uwp-linux-socket-a336e743/image/file/165914/1/output.png" alt=""></p>

@@ -126,7 +126,7 @@
 <p><span style="color:#808080; font-family:SimSun">This is the shaking of the ghosts of the gray scale bar graph calculation method.</span></p>
 <p><span style="color:#808080"><span style="font-family:SimSun">Step 3, calculate the bar graph similarity measure</span><span style="font-family:新細明體,serif">：</span></span></p>
 <p><span style="color:#808080; font-family:SimSun">The formula for this step:</span></p>
-<p><span style="color:#808080"><span style="font-family:SimSun">Sim(G,S)=<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/4760._1657CF50D46B0D5C6C510F5F_.jpg"><img src=":-4760._1657cf50d46b0d5c6c510f5f_.jpg" alt=""></a></span></span></p>
+<p><span style="color:#808080"><span style="font-family:SimSun">Sim(G,S)=<a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/4760._1657CF50D46B0D5C6C510F5F_.jpg"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/157x63/__key/communityserver-wikis-components-files/00-00-00-00-05/4760._1657CF50D46B0D5C6C510F5F_.jpg" alt=""></a></span></span></p>
 <p><span style="color:#808080"><span style="font-family:SimSun"><a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/4760._1657CF50D46B0D5C6C510F5F_.jpg"></a></span><span style="font-family:SimSun">Where
  G, S is the long bar graph, and N is the number of color space samples.</span></span></p>
 <p><span style="color:#808080"><span style="font-family:SimSun">The implementation code is as follows:</span>&nbsp;</span></p>
@@ -187,5 +187,5 @@ Public&nbsp;floatGetResult(<span class="cs__keyword">int</span>[]&nbsp;firstNum,
 </div>
 </div>
 <p><span style="color:#808080">It should be noted that this example is placed in the components and image access, you can according to their own preferences to store：</span></p>
-<p><span style="color:#808080"><img id="176964" src="176964-example1.jpg" alt="" width="638" height="321"><br>
+<p><span style="color:#808080"><img id="176964" src="https://i1.code.msdn.s-msft.com/c-realization-of-image-a253ad06/image/file/176964/1/example1.jpg" alt="" width="638" height="321"><br>
 </span></p>

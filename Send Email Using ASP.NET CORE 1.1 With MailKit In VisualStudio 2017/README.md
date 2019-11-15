@@ -100,7 +100,7 @@ The following is a list of SMTP Server and Port Numbers.<br>
 </table>
 <p>&nbsp;</p>
 <h1>Output</h1>
-<p><a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/6560.gmail.png"><img src=":-6560.gmail.png" alt="" style="border-width:0px; border-style:solid"></a><br>
+<p><a href="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/6560.gmail.png"><img src="https://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/6560.gmail.png" alt="" style="border-width:0px; border-style:solid"></a><br>
 <br>
 </p>
 <div id="radePasteHelper" style="left:-10000px; border:0px solid red; top:200px; width:1px; height:1px; overflow:hidden">

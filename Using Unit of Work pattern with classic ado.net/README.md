@@ -22,7 +22,7 @@
 <p><span>Este &eacute; exemplo de como utilizar o padr&atilde;o &quot;Unit of Work&quot;, ou Unidade de Trabalho em portugu&ecirc;s, em sua aplica&ccedil;&atilde;o. O exemplo foi divido em 3 camadas, sendo: DAL (camada de acesso a dados), Model (camada com as entidades
  da aplica&ccedil;&atilde;o) e UI (camada de interface gr&aacute;fica, onde foi utilizado Asp Net Mvc). N&atilde;o foi utilizado frameworks ORM.&nbsp;</span></p>
 <h1>Description</h1>
-<p><img class="aligncenter size-full x_wp-image-141" src="-sdjxl.png?w=620" alt="sdjXl"></p>
+<p><img class="aligncenter size-full x_wp-image-141" src="http://viniciusrtavares.files.wordpress.com/2014/04/sdjxl.png?w=620" alt="sdjXl"></p>
 <p><strong>Unit of Work para gerenciar sua persist&ecirc;ncia no banco de dados</strong></p>
 <p>De acordo com Martin Fowler, o padr&atilde;o &ldquo;Unit Of Work&rdquo;&nbsp;mant&eacute;m uma lista de objetos afetados por uma transa&ccedil;&atilde;o, coordena a escrita de mudan&ccedil;as e trata poss&iacute;veis problemas de concorr&ecirc;ncia.&nbsp;</p>
 <p>Com uma sintaxe simples de uso, o padr&atilde;o Unit of Work pode ser a solu&ccedil;&atilde;o para o terr&iacute;vel problema de concorr&ecirc;ncia nas transa&ccedil;&otilde;es.</p>

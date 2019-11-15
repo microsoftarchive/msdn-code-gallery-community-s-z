@@ -21,7 +21,7 @@
 <div><em>I warmly suggest to you, to start just in case It's a first approach with this new framework or also to remember all aspects, with the official guideline on the developer office website:</em></div>
 <div><em>&nbsp;</em><em>&nbsp;</em></div>
 <div><em><a href="https://dev.office.com/sharepoint/docs/spfx/sharepoint-framework-overview" target="_blank">https://dev.office.com/sharepoint/docs/spfx/sharepoint-framework-overview</a>​</em></div>
-<p><img src=":-687474703a2f2f7777772e64656c7563616769756c69616e6f2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031372f30312f526561637457656174686572576562506172742e676966" alt="" width="700px"></p>
+<p><img src="https://camo.githubusercontent.com/28b374a5060204c5af5737cda2d50045bfbdcdf2/687474703a2f2f7777772e64656c7563616769756c69616e6f2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031372f30312f526561637457656174686572576562506172742e676966" alt="" width="700px"></p>
 <p>&nbsp;</p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p><em>Personally I think that it's a really amazing framework, for several reasons like more security for SharePoint because the JavaScript, images and CSS files are stored on the CDN (Azure in primis or other webserver), obviously this is a good advantage

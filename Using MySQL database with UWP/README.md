@@ -24,30 +24,30 @@ previous blog post</a> I talked about the DB creation process, how to obtain the
 <strong>MySQL Workbench</strong></a> MySQL Workbench can be downloaded from <a href="http://dev.mysql.com/downloads/workbench/" target="_blank">
 here</a> along with the Connectors, What's a Connector? A Connector is the DB driver that you include in your project to be able to interact and connect to your DB through your application. After Installing the Workbench with the default settings. We open it:
 <a href="https://kinani95.files.wordpress.com/2016/01/workbenchmain1.png" rel="attachment wp-att-179">
-<img class="alignnone wp-image-179" src=":-workbenchmain1.png" alt="workbenchMain" width="703" height="395"></a> &nbsp; Then we click the Add button to add a new DB:
+<img class="alignnone wp-image-179" src="https://kinani95.files.wordpress.com/2016/01/workbenchmain1.png" alt="workbenchMain" width="703" height="395"></a> &nbsp; Then we click the Add button to add a new DB:
 <a href="https://kinani95.files.wordpress.com/2016/01/addbutton.png" rel="attachment wp-att-180">
-<img class="alignnone wp-image-180" src=":-addbutton.png" alt="AddButton" width="707" height="397"></a> We insert the DB info then click Ok. Now we click the New DB to establish a connection.
+<img class="alignnone wp-image-180" src="https://kinani95.files.wordpress.com/2016/01/addbutton.png" alt="AddButton" width="707" height="397"></a> We insert the DB info then click Ok. Now we click the New DB to establish a connection.
 <a href="https://kinani95.files.wordpress.com/2016/01/clickdb.png" rel="attachment wp-att-181">
-<img class="alignnone wp-image-181" src=":-clickdb.png" alt="ClickDB" width="711" height="400"></a> Here you can do whatever you want to your DB. let's go and add a Table ( That's what you will usually do :D )
+<img class="alignnone wp-image-181" src="https://kinani95.files.wordpress.com/2016/01/clickdb.png" alt="ClickDB" width="711" height="400"></a> Here you can do whatever you want to your DB. let's go and add a Table ( That's what you will usually do :D )
 <a href="https://kinani95.files.wordpress.com/2016/01/createtable1.png" rel="attachment wp-att-182">
-<img class="alignnone wp-image-182" src=":-createtable1.png" alt="createTable1" width="715" height="402"></a> Now we start adding the columns we need at our DB, in This case we'll need only two columns:</p>
+<img class="alignnone wp-image-182" src="https://kinani95.files.wordpress.com/2016/01/createtable1.png" alt="createTable1" width="715" height="402"></a> Now we start adding the columns we need at our DB, in This case we'll need only two columns:</p>
 <ul>
 <li>idtodo : INT, Primary Key, Not Null, Unique, Auto Incremental </li><li>whatToDO: varchar(200) </li></ul>
-<p><a href="https://kinani95.files.wordpress.com/2016/01/createtable2.png" rel="attachment wp-att-183"><img class="alignnone wp-image-183" src=":-createtable2.png" alt="createTable2" width="716" height="402"></a></p>
+<p><a href="https://kinani95.files.wordpress.com/2016/01/createtable2.png" rel="attachment wp-att-183"><img class="alignnone wp-image-183" src="https://kinani95.files.wordpress.com/2016/01/createtable2.png" alt="createTable2" width="716" height="402"></a></p>
 <p>And <a href="https://kinani95.files.wordpress.com/2016/01/createtable3.png" rel="attachment wp-att-184">
-<img class="alignnone size-full x_x_x_x_x_wp-image-184" src=":-createtable3.png" alt="createTable3" width="509" height="428"></a> &nbsp; Then we click apply, wait for a little bit then we review or add any SQL
+<img class="alignnone size-full x_x_x_x_x_wp-image-184" src="https://kinani95.files.wordpress.com/2016/01/createtable3.png" alt="createTable3" width="509" height="428"></a> &nbsp; Then we click apply, wait for a little bit then we review or add any SQL
  Script wee need, Then click <strong>Apply </strong>in the wizard. Note: You can see the script for creating the table, you can absolutely go and execute your script directly without having to walkthrough what I did here.
 <a href="https://kinani95.files.wordpress.com/2016/01/createtable4.png" rel="attachment wp-att-185">
-<img class="alignnone wp-image-185" src=":-createtable4.png" alt="createTable4" width="712" height="400"></a> The table created successfully and ready to use!
+<img class="alignnone wp-image-185" src="https://kinani95.files.wordpress.com/2016/01/createtable4.png" alt="createTable4" width="712" height="400"></a> The table created successfully and ready to use!
 <a href="https://kinani95.files.wordpress.com/2016/01/createtable5.png" rel="attachment wp-att-186">
-<img class="alignnone wp-image-186" src=":-createtable5.png" alt="createTable5" width="691" height="388"></a></p>
+<img class="alignnone wp-image-186" src="https://kinani95.files.wordpress.com/2016/01/createtable5.png" alt="createTable5" width="691" height="388"></a></p>
 <h2>UWP Demo (Basic Todo app)</h2>
 <p>Before we begin please note that the Dreamspark free MySQL is limited to 4 concurrently connections. So it will be optimal for your private use or for testing purposes. What we'll do?</p>
 <ul>
 <li>Create the UWP Project </li><li>Reference the connector </li><li>Implementing our MVVM (Model-View-ViewModel) </li></ul>
 <p><strong>Creating the project</strong> We click File -&gt; New Project -&gt; from the Installed List we click -&gt; Visual C# -&gt;Windows -&gt; Universal -&gt; then Pick the UWP Project: Blank App (Universal Windows)</p>
 <p><strong>Reference the connector</strong></p>
-<p><a href="https://kinani95.files.wordpress.com/2016/01/addref.png" rel="attachment wp-att-188"><img class="alignnone wp-image-188" src=":-addref.png" alt="addref" width="723" height="406"></a></p>
+<p><a href="https://kinani95.files.wordpress.com/2016/01/addref.png" rel="attachment wp-att-188"><img class="alignnone wp-image-188" src="https://kinani95.files.wordpress.com/2016/01/addref.png" alt="addref" width="723" height="406"></a></p>
 <p><strong><br>
 </strong></p>
 <p>Then we click browse and go to the following path, Please note that the &quot;Connector.NET 6.9&quot; version might differ by the time you're reading this so you should go and look it up yourself. C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\RT We select
@@ -259,5 +259,5 @@ here</a> along with the Connectors, What's a Connector? A Connector is the DB dr
 <p>&nbsp;</p>
 <p>We're done!</p>
 <p>&nbsp;</p>
-<p><a href="https://kinani95.files.wordpress.com/2016/01/finalmysql.png" rel="attachment wp-att-187"><img class="alignnone size-full x_x_x_x_x_wp-image-187" src=":-finalmysql.png" alt="finalMySQL" width="776" height="415"></a></p>
+<p><a href="https://kinani95.files.wordpress.com/2016/01/finalmysql.png" rel="attachment wp-att-187"><img class="alignnone size-full x_x_x_x_x_wp-image-187" src="https://kinani95.files.wordpress.com/2016/01/finalmysql.png" alt="finalMySQL" width="776" height="415"></a></p>
 &nbsp; &nbsp;

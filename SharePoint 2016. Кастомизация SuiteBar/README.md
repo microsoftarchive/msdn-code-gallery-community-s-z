@@ -14,7 +14,7 @@
 
 <h1>Введение</h1>
 <p><span style="font-size:small"><em>Де&#1084;онстрационный проект, из&#1084;еняющий SuiteBar и AppLauncher в SharePoint 2016 OnPrem.</em></span></p>
-<p><em><img id="155755" src="155755-suitebarmenu-note.png" alt="" width="815" height="475"><br>
+<p><em><img id="155755" src="https://i1.code.msdn.s-msft.com/sharepoint-2016-suitebar-9f9d8304/image/file/155755/1/suitebarmenu-note.png" alt="" width="815" height="475"><br>
 </em></p>
 <h1><span>Построение</span></h1>
 <p><em>Р<span style="font-size:small">ешение создано в Visual Studio 2015 и предназначено для развертывания в фер&#1084;е SharePoint 2016 On-Premise. Для его открытия потребуется наличие установленного пакета Office Developer Tools.</span></em></p>

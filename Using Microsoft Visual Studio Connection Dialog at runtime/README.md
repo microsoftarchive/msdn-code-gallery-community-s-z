@@ -100,7 +100,7 @@ namespace&nbsp;WindowsFormsApplication1_cs&nbsp;
 <div class="endscriptcode"></div>
 <div class="endscriptcode"><span style="font-size:small">The project WindowsFormsApplication1_cs shows how to use the dialog and also how to do exporting.</span></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><img id="170925" src="170925-06.jpg" alt="" width="392" height="302"></div>
+<div class="endscriptcode"><img id="170925" src="https://i1.code.msdn.s-msft.com/using-visual-studio-a7e740f8/image/file/170925/1/06.jpg" alt="" width="392" height="302"></div>
 <div class="endscriptcode"></div>
 <div class="endscriptcode"><img id="170919" src="170919-sampleproject.jpg" alt="" width="258" height="279"></div>
 <h1 class="endscriptcode">IMPORTANT</h1>

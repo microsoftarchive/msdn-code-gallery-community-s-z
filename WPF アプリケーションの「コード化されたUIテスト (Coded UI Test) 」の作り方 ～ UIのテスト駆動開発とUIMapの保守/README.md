@@ -33,7 +33,7 @@
 <p><img id="135257" src="135257-1.png" alt="" width="257" height="62" style="border:1px solid gray; height:auto; max-width:100%"></p>
 <p>Visual Studio 2013 Premium/Ultimate でソリューションを開き、[ テスト(S) &gt; 実行(R) &gt; 全てのテスト(A) ] を実行してください。</p>
 <p>（静かに実行される 単体テスト と違って）ここでサンプルアプリが起動してテストが実施されます。マウスやキーボードを操作せずに、デモアニメーションを見るかのように、テストが完了するのを待ちましょう。</p>
-<p><a href="https://youtu.be/JDW1ytlJRzU" target="_blank"><img id="135336" src="135336-2.png" alt="" width="1919" height="1199" style="border:1px solid gray; height:auto; max-width:100%"></a></p>
+<p><a href="https://youtu.be/JDW1ytlJRzU" target="_blank"><img id="135336" src="https://i1.code.msdn.s-msft.com/wpf-ui-coded-ui-test-9ab5581d/image/file/135336/1/2.png" alt="" width="1919" height="1199" style="border:1px solid gray; height:auto; max-width:100%"></a></p>
 <ul>
 <li><a href="https://youtu.be/JDW1ytlJRzU" target="_blank">動画で確認</a> </li></ul>
 <p><span lang="en-US">[ </span><span lang="ja">テスト</span><span lang="en-US">(S) &gt;

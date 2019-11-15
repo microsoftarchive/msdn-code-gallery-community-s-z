@@ -45,7 +45,7 @@
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>
 <p>First of all we will install&nbsp;<a href="https://www.nuget.org/packages/datatables.mvc5/">datatables.mvc5</a>&nbsp;, Go to&nbsp;<strong>Tools &gt;&gt; NuGet Package Manager &gt;&gt; Manage Nuget Packages for Solution</strong>&nbsp;and click it, and search
  for <strong>datatables.mvc5</strong>&nbsp;package and install it :</p>
-<p><img src=":-datatables.mvc5.png" alt=""></p>
+<p><img src="https://2.bp.blogspot.com/-YY5HPOhZkZM/V6pEWQWJPBI/AAAAAAAADU4/60GJhWO3uHgRnssdad818BzVd2kR9o2gwCLcB/s1600/datatables.mvc5.png" alt=""></p>
 <p>&nbsp;</p>
 <p>Create a html table that would be used for populating the records in the view :</p>
 <p>&nbsp;</p>
@@ -129,7 +129,7 @@
 <p><span>We also need reference the&nbsp;</span><strong>System.Linq.Dynamic</strong><span>&nbsp;namespace as we will be using the methods provided for dynamic linq in our action, for that go to Nuget Package Manager once again and search for&nbsp;</span><strong>System.Linq.Dynamic</strong><span>&nbsp;package
  and install it in your project.</span></p>
 <p>&nbsp;</p>
-<p><img src=":-linq.dynamic%2bnuget.png" alt=""></p>
+<p><img src="https://3.bp.blogspot.com/--R7svGG0SIY/V6pEw5uofvI/AAAAAAAADVA/eBFRcH2gc-s91aQKSe6vdfvzJ_pwpmBKwCLcB/s1600/linq.dynamic%2Bnuget.png" alt=""></p>
 <p>&nbsp;</p>
 <p><span>Finally we will write the controller action part where the datatable parameters will be posted and using those we will be performing search, ordering and paging :</span></p>
 <p><em>You can include <em><strong>code snippets,&nbsp;</strong></em><strong>images</strong>,

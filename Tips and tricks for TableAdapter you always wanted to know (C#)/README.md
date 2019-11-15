@@ -284,10 +284,10 @@ foreach&nbsp;(DataGridViewColumn&nbsp;col&nbsp;<span class="js__operator">in</sp
 <p><span style="font-size:small"><em>First off the following was added after the initial publishing, seemed this would be a benefit to include</em></span>.</p>
 <p><span style="font-size:small">Suppose there is limited space to display information where a image can convey a meaning that takes up less space than text e.g. in the following screenshot the image signifies customer standing where gold (well perhaps yellow)
  signifies a very good customer, silver is a platinum customer and blue is a regular customer.</span></p>
-<p><span style="font-size:small"><img id="183499" src="183499-11.jpg" alt="" width="249" height="428"></span></p>
+<p><span style="font-size:small"><img id="183499" src="https://i1.code.msdn.s-msft.com/details-tableadapter-with-81132f57/image/file/183499/1/11.jpg" alt="" width="249" height="428"></span></p>
 <p>&nbsp;</p>
 <p><span style="font-size:small">How I managed the above, added a reference table.</span></p>
-<p><span style="font-size:small"><img id="183500" src="183500-12.jpg" alt="" width="257" height="554"></span></p>
+<p><span style="font-size:small"><img id="183500" src="https://i1.code.msdn.s-msft.com/details-tableadapter-with-81132f57/image/file/183500/1/12.jpg" alt="" width="257" height="554"></span></p>
 <p><span style="font-size:small">Created three records to CustomerType, set text (thinking the data could be used in other places besides a DataGridView) then added the images via SQL.</span></p>
 <p><span style="font-size:x-small">&nbsp;</span></p>
 <div class="scriptcode">
@@ -344,12 +344,12 @@ foreach&nbsp;(DataGridViewColumn&nbsp;col&nbsp;<span class="js__operator">in</sp
 </div>
 <div class="endscriptcode"><span style="font-size:small">Validated the above query then in the .xsd designer file in our project added a new TableAdapter&nbsp;</span></div>
 &nbsp;</div>
-<img id="183501" src="183501-13.jpg" alt="" width="474" height="491">
+<img id="183501" src="https://i1.code.msdn.s-msft.com/details-tableadapter-with-81132f57/image/file/183501/1/13.jpg" alt="" width="474" height="491">
 <p>&nbsp;</p>
 <p><span style="font-size:x-small"><br>
 </span></p>
 <p><span style="font-size:small">Added another form to our project, dragged CustomerWithStanding onto the form. From here I setup the HeaderText for the DataGridView in the designer unlike how the first form's DataGridView was done via code.</span></p>
-<p><span style="font-size:small"><img id="183502" src="183502-14.jpg" alt="" width="229" height="168"></span></p>
+<p><span style="font-size:small"><img id="183502" src="https://i1.code.msdn.s-msft.com/details-tableadapter-with-81132f57/image/file/183502/1/14.jpg" alt="" width="229" height="168"></span></p>
 <p><span style="font-size:small">Now as it stands, the image is selectable so the following code is used to disallow the standings column from being selected.</span></p>
 <p><span style="font-size:small">&nbsp;</span></p>
 <div class="scriptcode">
@@ -467,7 +467,7 @@ MSDN documentation</a>. In the MSDN documentation there is mention of working wi
 <div class="endscriptcode"><span style="font-size:small"><a href="https://code.msdn.microsoft.com/Entity-Framework-in-764fa5ba?redir=0">Entity Framework in Windows forms</a>.</span></div>
 <div class="endscriptcode"><span style="font-size:small">.</span></div>
 <div class="endscriptcode"></div>
-<div class="endscriptcode"><span style="font-size:small"><img id="183481" src="183481-10.jpg" alt="" width="600" height="377"><br>
+<div class="endscriptcode"><span style="font-size:small"><img id="183481" src="https://i1.code.msdn.s-msft.com/details-tableadapter-with-81132f57/image/file/183481/1/10.jpg" alt="" width="600" height="377"><br>
 </span></div>
 <div class="endscriptcode"><span style="font-size:small"><br>
 </span></div>

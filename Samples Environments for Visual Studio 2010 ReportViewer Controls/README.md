@@ -17,8 +17,8 @@
 - 05/13/2014
 ## Description
 
-<p><span id="ctl00_ctl00_Content_TabContentPanel_Content_wikiSourceLabel"><span id="ctl00_ctl00_Content_TabContentPanel_Content_wikiSourceLabel"><img id="114526" src="114526-ajax30pct.png" alt="" width="192" height="175">
-<img id="114527" src="114527-popup30pct.png" alt="" width="244" height="184"></span><br>
+<p><span id="ctl00_ctl00_Content_TabContentPanel_Content_wikiSourceLabel"><span id="ctl00_ctl00_Content_TabContentPanel_Content_wikiSourceLabel"><img id="114526" src="http://i1.code.msdn.s-msft.com/samples-environment-for-f6cf8f53/image/file/114526/1/ajax30pct.png" alt="" width="192" height="175">
+<img id="114527" src="http://i1.code.msdn.s-msft.com/samples-environment-for-f6cf8f53/image/file/114527/1/popup30pct.png" alt="" width="244" height="184"></span><br>
 <br>
 The samples environments include working code samples that highlight the features of the ReportViewer controls in Visual Studio and demonstrate how to implement the common scenarios using the ReportViewer controls, such as:</span></p>
 <ul>

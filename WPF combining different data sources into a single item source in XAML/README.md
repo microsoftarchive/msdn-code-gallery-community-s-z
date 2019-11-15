@@ -22,7 +22,7 @@
 <h3><span style="font-size:2em">Introduction</span></h3>
 <p>This sample shows how to combine separate collections of unrelated&nbsp;types into a single CompositeCollection of CollectionViewSources&nbsp;that can then be bound to an items control (ListBox, ListView etc.). It also shows how to use data templates to
  allow a control to display items of different types.</p>
-<p><img id="130797" src="130797-screenshot.png" alt="" width="446" height="421"></p>
+<p><img id="130797" src="https://i1.code.msdn.s-msft.com/combining-item-sources-in-65408473/image/file/130797/1/screenshot.png" alt="" width="446" height="421"></p>
 <p>This approach is XAML based, making it a good option if you are worried about sticking to MVVM and keeping all presentation logic in the view.<em><br>
 </em></p>
 <h3><span style="font-size:20px; font-weight:bold">Description</span></h3>

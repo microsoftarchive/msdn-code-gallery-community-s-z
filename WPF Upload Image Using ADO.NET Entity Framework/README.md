@@ -19,7 +19,7 @@
 <h1>Introduction</h1>
 <div><span style="font-size:small"><em>This is a WPF&nbsp;sample to show how to choose an image and upload it to database using ADO.NET Entity Framework.</em></span><span>
 <div>&nbsp;</div>
-<img id="96408" src="96408-2013-09-18_135534.jpg" alt="" width="525" height="350"></span></div>
+<img id="96408" src="http://i1.code.msdn.s-msft.com/windowsdesktop/wpf-upload-image-using-b8d1daed/image/file/96408/1/2013-09-18_135534.jpg" alt="" width="525" height="350"></span></div>
 <h1><span>Building the Sample</span></h1>
 <div>&nbsp;</div>
 <div><span style="font-size:small">

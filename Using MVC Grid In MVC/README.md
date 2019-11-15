@@ -26,12 +26,12 @@
 <p><span style="font-size:small">First, we will start with creating an MVC application. Open your visual studio, then click File-&gt;New-&gt;Project. Name your project.</span></p>
 <p><strong><span style="font-size:small">Install MVC Grid</span></strong></p>
 <p><span style="font-size:small">The next step we are going to do is, installing the MVC grid to our project. To install, please right click your solution and click on Manage NuGet packages.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_10982"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Select_NuGet_Package.png"><img class="size-full x_wp-image-10982" src="-select_nuget_package.png" alt="Select NuGet Package" width="459" height="673"></a>
+<div class="wp-caption x_alignnone" id="attachment_10982"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Select_NuGet_Package.png"><img class="size-full x_wp-image-10982" src="http://sibeeshpassion.com/wp-content/uploads/2015/11/Select_NuGet_Package.png" alt="Select NuGet Package" width="459" height="673"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Select NuGet Package</span></p>
 </div>
 <p><span style="font-size:small">Now you can see a new window, please search for MVC grid in the search box. And then click Install.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_10983"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Install_MVC_Grid_To_Project-e1448285055873.png"><img class="size-full x_wp-image-10983" src="-install_mvc_grid_to_project-e1448285055873.png" alt="Install_MVC_Grid_To_Project" width="650" height="433"></a>
+<div class="wp-caption x_alignnone" id="attachment_10983"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Install_MVC_Grid_To_Project-e1448285055873.png"><img class="size-full x_wp-image-10983" src="http://sibeeshpassion.com/wp-content/uploads/2015/11/Install_MVC_Grid_To_Project-e1448285055873.png" alt="Install_MVC_Grid_To_Project" width="650" height="433"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Install_MVC_Grid_To_Project</span></p>
 </div>
@@ -39,7 +39,7 @@
  next step.</span></p>
 <p><strong><span style="font-size:small">Dependencies</span></strong></p>
 <p><span style="font-size:small">As I said before, MVC grid uses bootstrap for design. So the next thing we need to is to install bootstrap in our project. For that, go to NuGet packages again and search for bootstrap.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_10984"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Install_Bootstrap_To_Project-e1448285364634.png"><img class="size-full x_wp-image-10984" src="-install_bootstrap_to_project-e1448285364634.png" alt="Install_Bootstrap_To_Project" width="650" height="433"></a>
+<div class="wp-caption x_alignnone" id="attachment_10984"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Install_Bootstrap_To_Project-e1448285364634.png"><img class="size-full x_wp-image-10984" src="http://sibeeshpassion.com/wp-content/uploads/2015/11/Install_Bootstrap_To_Project-e1448285364634.png" alt="Install_Bootstrap_To_Project" width="650" height="433"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Install_Bootstrap_To_Project</span></p>
 </div>
@@ -136,7 +136,7 @@
 <p><span style="font-size:small">As you can see I am creating a list of type Customer. Is that fine? Now what is pending? Yes, a view.</span></p>
 <p><span style="font-size:small">Create a strongly typed view</span></p>
 <p><span style="font-size:small">Now we are going to create a strongly typed view.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_10985"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Create_Strongly_Typed_View.png"><img class="size-full x_wp-image-10985" src="-create_strongly_typed_view.png" alt="Create_Strongly_Typed_View" width="509" height="502"></a>
+<div class="wp-caption x_alignnone" id="attachment_10985"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/Create_Strongly_Typed_View.png"><img class="size-full x_wp-image-10985" src="http://sibeeshpassion.com/wp-content/uploads/2015/11/Create_Strongly_Typed_View.png" alt="Create_Strongly_Typed_View" width="509" height="502"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Create_Strongly_Typed_View</span></p>
 </div>
@@ -232,7 +232,7 @@
 </div>
 <p><span style="font-size:small">As you can see we are using the columns Customer.CustomerID and Customer.CustomerCode.</span></p>
 <p><span style="font-size:small">Output</span></p>
-<div class="wp-caption x_alignnone" id="attachment_10986"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/MVC_Grid_With_Dynamic_Data.png"><img class="size-large x_wp-image-10986" src="-mvc_grid_with_dynamic_data-1024x518.png" alt="MVC_Grid_With_Dynamic_Data" width="634" height="321"></a>
+<div class="wp-caption x_alignnone" id="attachment_10986"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2015/11/MVC_Grid_With_Dynamic_Data.png"><img class="size-large x_wp-image-10986" src="http://sibeeshpassion.com/wp-content/uploads/2015/11/MVC_Grid_With_Dynamic_Data-1024x518.png" alt="MVC_Grid_With_Dynamic_Data" width="634" height="321"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">MVC_Grid_With_Dynamic_Data</span></p>
 </div>

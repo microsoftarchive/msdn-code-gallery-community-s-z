@@ -48,7 +48,7 @@
 <p>The wrapper provider gets a chance do interesting things, such as:</p>
 <ul>
 <li>Examining query trees and commands before they are executed </li><li>Controlling connections, commands, transactions, data readers, etc. </li></ul>
-<p><img title="image" src="-image_3.png" border="0" alt="image" width="528" height="408"></p>
+<p><img title="image" src="http://blogs.msdn.com/blogfiles/jkowalski/WindowsLiveWriter/TracingandCachinginEntityFrameworkavaila_860F/image_3.png" border="0" alt="image" width="528" height="408"></p>
 <p><strong>EFTracingProvider</strong>&nbsp;intercepts DbCommand.ExecuteReader(), ExecuteScalar() and ExecuteNonQuery() and sends details about the command (including command text and parameters) to configured outputs.</p>
 <p><strong>EFCachingProvider</strong>&nbsp;is a bit more complex. It uses external caching implementation and caches results of all queries queries that are executed in DbCommand.ExecuteReader(). Whenever update is detected (either UPDATE, INSERT or DELETE)
  the provider invalidates affected cache entries by evicting all cached queries which were dependent on any of the updated tables.</p>

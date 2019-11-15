@@ -23,7 +23,7 @@ The accompanying project contains all the code for recreating various controls, 
 <div><br>
 I also list some of the common errors encountered and how to get round the limitations.<br>
 <br>
-<img id="62165" src="62165-controltemplating.png" alt="" width="601" height="415"></div>
+<img id="62165" src="http://i1.code.msdn.s-msft.com/wpf-styles-and-control-b6732c24/image/file/62165/1/controltemplating.png" alt="" width="601" height="415"></div>
 <h1>Building the Sample</h1>
 <div><br>
 Just download, unblock, unzip, open and run!<br>
@@ -269,7 +269,7 @@ TemplateBindingExtension</strong>, which creates the markup for binding to prope
 <div>Whenever you get an error in WPF, if the exception message does not help, look for the
 <a href="http://msdn.microsoft.com/en-us/library/system.exception.innerexception.aspx">
 inner exception</a> by clicking &quot;<strong>View Detail...</strong>&quot;</div>
-<div>&nbsp;<img id="62166" src="62166-xamlparseexception.png" alt="" width="599" height="583"></div>
+<div>&nbsp;<img id="62166" src="http://i1.code.msdn.s-msft.com/wpf-styles-and-control-b6732c24/image/file/62166/1/xamlparseexception.png" alt="" width="599" height="583"></div>
 <div class="auto-style1"><span style="color:#ff0000"><strong>'42' is not a valid value for property 'Stroke'.</strong></span></div>
 <div><span style="font-size:medium"><strong><em>&nbsp;</em></strong></span>&nbsp;</div>
 <div><span style="font-size:medium"><strong><em>&nbsp;</em></strong></span>&nbsp;</div>
@@ -638,4 +638,4 @@ public&nbsp;static&nbsp;readonly&nbsp;DependencyProperty&nbsp;ActualBulletProper
 </div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="-anithanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>
+<p><img src="http://213.163.64.28/aniThanks1.gif" alt="" style="margin-right:auto; margin-left:auto; display:block"></p>

@@ -34,4 +34,4 @@ OData</a>. Technologies such as JavaScript over the past decade have become ever
 <p>The <a href="https://login.microsoftonline.com/extSTS.srf">https://login.microsoftonline.com/extSTS.srf</a> is the url of the STS server to which we pass through the SOAP envelope containing the username and password as captured in the form. The STS returns
  back a binary token. Once we successfully receive the token we POST the binary token to the SharePoint url /_forms/default.aspx, this page returns back the FedAuth cookie. We can now use this cookie to make further calls to the SharePoint web services.</p>
 <p>As an example, I have retrieved some values from the SP Web property bag but you can utlise this approach to perform CRUD operations exposed by the RESTful interfaces&nbsp;</p>
-<p><img id="100093" src="100093-spauth.jpg" alt=""></p>
+<p><img id="100093" src="http://i1.code.msdn.s-msft.com/sharepoint-online-d9fdb136/image/file/100093/1/spauth.jpg" alt=""></p>

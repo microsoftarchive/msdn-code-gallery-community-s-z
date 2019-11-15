@@ -218,13 +218,13 @@ GO</pre>
 </div>
 </div>
 <p><span style="font-size:small">Our database is ready, now create a Web API application in visual studio and then entity with the above mentioned database.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11556"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Creating-Entity-e1463031313825.png"><img class="size-large x_wp-image-11556" src="-creating-entity-1024x542.png" alt="Creating Entity" width="634" height="336"></a>
+<div class="wp-caption x_alignnone" id="attachment_11556"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Creating-Entity-e1463031313825.png"><img class="size-large x_wp-image-11556" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Creating-Entity-1024x542.png" alt="Creating Entity" width="634" height="336"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Creating Entity</span></p>
 </div>
 <p><span style="font-size:small">If you don&rsquo;t know how to create an entity in your solution, please read that&nbsp;<a href="http://sibeeshpassion.com/web-api-with-angular-js/" target="_blank">here</a>. I have mentioned the steps to be followed in that
  article. Once you have created the entity, you are good to go and create a API controller with the entity created. If you do so, The CRUD actions will be created automatically for you. You may need to edit those actions according to your needs.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11557"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Web-API-2-Controller-with-actions-using-Entity-Framework-e1463031653319.png"><img class="size-full x_wp-image-11557" src="-web-api-2-controller-with-actions-using-entity-framework-e1463031653319.png" alt="Web API 2 Controller with actions, using Entity Framework" width="650" height="457"></a>
+<div class="wp-caption x_alignnone" id="attachment_11557"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/Web-API-2-Controller-with-actions-using-Entity-Framework-e1463031653319.png"><img class="size-full x_wp-image-11557" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/Web-API-2-Controller-with-actions-using-Entity-Framework-e1463031653319.png" alt="Web API 2 Controller with actions, using Entity Framework" width="650" height="457"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Web API 2 Controller with actions, using Entity Framework</span></p>
 </div>
@@ -368,7 +368,7 @@ GO</pre>
 </div>
 </div>
 <p><span style="font-size:small">Now please run your application and go to the help page. You can see the API help page as follows.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11558"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/API-Help-Page-e1463032044742.png"><img class="size-full x_wp-image-11558" src="-api-help-page-e1463032044742.png" alt="API Help Page" width="650" height="524"></a>
+<div class="wp-caption x_alignnone" id="attachment_11558"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/API-Help-Page-e1463032044742.png"><img class="size-full x_wp-image-11558" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/API-Help-Page-e1463032044742.png" alt="API Help Page" width="650" height="524"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">API Help Page</span></p>
 </div>
@@ -454,7 +454,7 @@ GO</pre>
 </li><li><span style="font-size:small">Click on show all files.</span> </li><li><span style="font-size:small">Click on Refresh.</span> </li><li><span style="font-size:small">Go to App_Data folder and find XmlDocument.xml.</span>
 </li><li><span style="font-size:small">Right click the file and click Include In Project.</span>
 <p><span style="font-size:small">That&rsquo;s all. Run your application and see the Help page again. Hope you get the page as follows.</span></p>
-<div class="wp-caption x_alignnone" id="attachment_11559"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/API-Help-Page-With-Descriptions-e1463033550891.png"><img class="size-full x_wp-image-11559" src="-api-help-page-with-descriptions-e1463033550891.png" alt="API Help Page With Descriptions" width="650" height="361"></a>
+<div class="wp-caption x_alignnone" id="attachment_11559"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/05/API-Help-Page-With-Descriptions-e1463033550891.png"><img class="size-full x_wp-image-11559" src="http://sibeeshpassion.com/wp-content/uploads/2016/05/API-Help-Page-With-Descriptions-e1463033550891.png" alt="API Help Page With Descriptions" width="650" height="361"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">API Help Page With Descriptions</span></p>
 </div>

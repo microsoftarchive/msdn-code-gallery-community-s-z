@@ -27,7 +27,7 @@
 </li><li>A custom entity (Scheduled Process) to hold the FetchXML query and scheduling details.
 </li><li>A workflow (Scheduled Workflow Runner) to run the StartScheduledWorkflows activity on a recurring schedule.
 </li></ol>
-<p><img id="82332" src="82332-scheduled_workflow_process.png" alt=""></p>
+<p><img id="82332" src="http://i1.code.msdn.s-msft.com/executing-dynamics-crm-93f3b52a/image/file/82332/1/scheduled_workflow_process.png" alt=""></p>
 <h1><span>Building the Sample</span></h1>
 <p><span>Visual Studio 2012/.Net 4.5 is required as is the Microsoft Dynamics CRM SDK. No other non-System assemblies are required. Additionally, you must sign the assembly to register it in the CRM sandbox, but I have not included my .snk file in this sample,
  so you will have to supply your own.</span></p>

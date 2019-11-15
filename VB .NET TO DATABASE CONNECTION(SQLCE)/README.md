@@ -108,12 +108,12 @@
 <th class="descriptionColumn">Description</th>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/xbbx6s9c(v=vs.100).aspx">SqlCeConnection<span>&nbsp;</span></a></td>
 <td>Initializes a new instance of the&nbsp;<span class="selflink">SqlCeConnection</span>&nbsp;class.</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/s1ydzx6b(v=vs.100).aspx">SqlCeConnection(String)</a></td>
 <td>Initializes a new instance of the&nbsp;<span class="selflink">SqlCeConnection</span>&nbsp;class with the specified connection string.</td>
 </tr>
@@ -140,67 +140,67 @@
 <th class="descriptionColumn">Description</th>
 </tr>
 <tr>
-<td><img id="protproperty" class="cl_IC100399" title="Protected property" src="-clear.gif" alt="Protected property"></td>
+<td><img id="protproperty" class="cl_IC100399" title="Protected property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component.canraiseevents(v=vs.100).aspx">CanRaiseEvents</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.connectionstring(v=vs.100).aspx">ConnectionString</a></td>
 <td>Gets or sets the string used to open a database.&nbsp;(Overrides<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.connectionstring(v=vs.100).aspx">DbConnection<span>.</span>ConnectionString</a>.)</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.connectiontimeout(v=vs.100).aspx">ConnectionTimeout</a></td>
 <td>Gets the time to wait while trying to establish a connection before terminating the attempt and generating an error.&nbsp;(Overrides<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.connectiontimeout(v=vs.100).aspx">DbConnection<span>.</span>ConnectionTimeout</a>.)</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component.container(v=vs.100).aspx">Container</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.database(v=vs.100).aspx">Database</a></td>
 <td>Gets the name of the current database or the database to be used when a connection is open.&nbsp;(Overrides&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.database(v=vs.100).aspx">DbConnection<span>.</span>Database</a>.)</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.databaseidentifier(v=vs.100).aspx">DatabaseIdentifier</a></td>
 <td>Gets the unique identifier of the current database while synchronizing.</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.datasource(v=vs.100).aspx">DataSource</a></td>
 <td>Gets the file name of the data source.&nbsp;(Overrides&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.datasource(v=vs.100).aspx">DbConnection<span>.</span>DataSource</a>.)</td>
 </tr>
 <tr>
-<td><img id="protproperty" class="cl_IC100399" title="Protected property" src="-clear.gif" alt="Protected property"></td>
+<td><img id="protproperty" class="cl_IC100399" title="Protected property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.dbproviderfactory(v=vs.100).aspx">DbProviderFactory</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection(v=vs.100).aspx">DbConnection</a>)</td>
 </tr>
 <tr>
-<td><img id="protproperty" class="cl_IC100399" title="Protected property" src="-clear.gif" alt="Protected property"></td>
+<td><img id="protproperty" class="cl_IC100399" title="Protected property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component.designmode(v=vs.100).aspx">DesignMode</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="protproperty" class="cl_IC100399" title="Protected property" src="-clear.gif" alt="Protected property"></td>
+<td><img id="protproperty" class="cl_IC100399" title="Protected property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component.events(v=vs.100).aspx">Events</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.serverversion(v=vs.100).aspx">ServerVersion</a></td>
 <td>Returns the database version number as a string.&nbsp;(Overrides<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.serverversion(v=vs.100).aspx">DbConnection<span>.</span>ServerVersion</a>.)</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component.site(v=vs.100).aspx">Site</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="-clear.gif" alt="Public property"></td>
+<td><img id="pubproperty" class="cl_IC74937" title="Public property" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public property"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.state(v=vs.100).aspx">State</a></td>
 <td>Gets the current state of the connection.&nbsp;(Overrides&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.state(v=vs.100).aspx">DbConnection<span>.</span>State</a>.)</td>
 </tr>
@@ -227,142 +227,142 @@
 <th class="descriptionColumn">Description</th>
 </tr>
 <tr>
-<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="-clear.gif" alt="Protected method"></td>
+<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.begindbtransaction(v=vs.100).aspx">BeginDbTransaction</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection(v=vs.100).aspx">DbConnection</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/csz1c3h7(v=vs.100).aspx">BeginTransaction<span>&nbsp;</span></a></td>
 <td>Begins a database transaction.</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/3xywy9w8(v=vs.100).aspx">BeginTransaction(IsolationLevel)</a></td>
 <td>Begins a database transaction with the current&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.isolationlevel(v=vs.100).aspx">IsolationLevel</a>&nbsp;value.</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.changedatabase(v=vs.100).aspx">ChangeDatabase</a></td>
 <td>Changes the current database for an open&nbsp;<span class="selflink">SqlCeConnection</span>.(Overrides&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.changedatabase(v=vs.100).aspx">DbConnection<span>.</span>ChangeDatabase(String)</a>.)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.close(v=vs.100).aspx">Close</a></td>
 <td>Closes the connection to the data source. This is the preferred method of closing any open connection.&nbsp;(Overrides<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.close(v=vs.100).aspx">DbConnection<span>.</span>Close<span>&nbsp;</span></a>.)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.createcommand(v=vs.100).aspx">CreateCommand</a></td>
 <td>Creates and returns a&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlcecommand(v=vs.100).aspx">SqlCeCommand</a>&nbsp;object associated with the<span class="selflink">SqlCeConnection</span>.</td>
 </tr>
 <tr>
-<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="-clear.gif" alt="Protected method"></td>
+<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.createdbcommand(v=vs.100).aspx">CreateDbCommand</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection(v=vs.100).aspx">DbConnection</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.marshalbyrefobject.createobjref(v=vs.100).aspx">CreateObjRef</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.marshalbyrefobject(v=vs.100).aspx">MarshalByRefObject</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/bb300654(v=vs.100).aspx">Dispose</a></td>
 <td>Releases all resources used by the current instance of the<span class="selflink">SqlCeConnection</span>&nbsp;class.</td>
 </tr>
 <tr>
-<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="-clear.gif" alt="Protected method"></td>
+<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/d9yzd5cx(v=vs.100).aspx">Dispose(Boolean)</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.enlisttransaction(v=vs.100).aspx">EnlistTransaction(Transaction)</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection(v=vs.100).aspx">DbConnection</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/bb896161(v=vs.100).aspx">EnlistTransaction(Transaction)</a></td>
 <td>Enlists in the specified&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.transactions.transaction(v=vs.100).aspx">Transaction</a>.</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.100).aspx">Equals</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.object(v=vs.100).aspx">Object</a>)</td>
 </tr>
 <tr>
-<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="-clear.gif" alt="Protected method"></td>
+<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/az5741fh(v=vs.100).aspx">Finalize</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.getdatabaseinfo(v=vs.100).aspx">GetDatabaseInfo</a></td>
 <td>Returns a set of Key Value pairs with information about locale, encryption mode, and case-sensitivity setting of the connected database.</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.object.gethashcode(v=vs.100).aspx">GetHashCode</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.object(v=vs.100).aspx">Object</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.marshalbyrefobject.getlifetimeservice(v=vs.100).aspx">GetLifetimeService</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.marshalbyrefobject(v=vs.100).aspx">MarshalByRefObject</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/ff802050(v=vs.100).aspx">GetSchema</a></td>
 <td>Returns schema information for the data source of this<span class="selflink">SqlCeConnection</span>.&nbsp;(Overrides&nbsp;<a href="http://msdn.microsoft.com/en-us/library/s98te64s(v=vs.100).aspx">DbConnection<span>.</span>GetSchema</a>.)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/ff801934(v=vs.100).aspx">GetSchema(String)</a></td>
 <td>Returns schema information for the data source of this<span class="selflink">SqlCeConnection</span>&nbsp;using the specified string for the schema name.(Overrides&nbsp;<a href="http://msdn.microsoft.com/en-us/library/22936zd1(v=vs.100).aspx">DbConnection<span>.</span>GetSchema(String)</a>.)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/ff802169(v=vs.100).aspx">GetSchema(String,&nbsp;String<span>()</span>)</a></td>
 <td>Returns schema information for the data source of this<span class="selflink">SqlCeConnection</span>&nbsp;using the specified string for the schema name and the specified string array for the restriction values.&nbsp;(Overrides<a href="http://msdn.microsoft.com/en-us/library/y53he2tz(v=vs.100).aspx">DbConnection<span>.</span>GetSchema(String,&nbsp;String<span>()</span>)</a>.)</td>
 </tr>
 <tr>
-<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="-clear.gif" alt="Protected method"></td>
+<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component.getservice(v=vs.100).aspx">GetService</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.object.gettype(v=vs.100).aspx">GetType</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.object(v=vs.100).aspx">Object</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.marshalbyrefobject.initializelifetimeservice(v=vs.100).aspx">InitializeLifetimeService</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.marshalbyrefobject(v=vs.100).aspx">MarshalByRefObject</a>)</td>
 </tr>
 <tr>
-<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="-clear.gif" alt="Protected method"></td>
+<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.object.memberwiseclone(v=vs.100).aspx">MemberwiseClone</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.object(v=vs.100).aspx">Object</a>)</td>
 </tr>
 <tr>
-<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="-clear.gif" alt="Protected method"></td>
+<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/ms131262(v=vs.100).aspx">MemberwiseClone(Boolean)</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.marshalbyrefobject(v=vs.100).aspx">MarshalByRefObject</a>)</td>
 </tr>
 <tr>
-<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="-clear.gif" alt="Protected method"></td>
+<td><img id="protmethod" class="cl_IC155188" title="Protected method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Protected method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.onstatechange(v=vs.100).aspx">OnStateChange</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection(v=vs.100).aspx">DbConnection</a>)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.open(v=vs.100).aspx">Open</a></td>
 <td>Opens a database connection with the property settings specified by the&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.connectionstring(v=vs.100).aspx">ConnectionString</a>.&nbsp;(Overrides&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.open(v=vs.100).aspx">DbConnection<span>.</span>Open</a>.)</td>
 </tr>
 <tr>
-<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="-clear.gif" alt="Public method"></td>
+<td><img id="pubmethod" class="cl_IC91302" title="Public method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public method"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/z819d1t5(v=vs.100).aspx">ToString</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
@@ -389,22 +389,22 @@
 <th class="descriptionColumn">Description</th>
 </tr>
 <tr>
-<td><img id="pubevent" class="cl_IC90369" title="Public event" src="-clear.gif" alt="Public event"></td>
+<td><img id="pubevent" class="cl_IC90369" title="Public event" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public event"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component.disposed(v=vs.100).aspx">Disposed</a></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.100).aspx">Component</a>)</td>
 </tr>
 <tr>
-<td><img id="pubevent" class="cl_IC90369" title="Public event" src="-clear.gif" alt="Public event"></td>
+<td><img id="pubevent" class="cl_IC90369" title="Public event" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public event"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.flushfailure(v=vs.100).aspx">FlushFailure</a></td>
 <td>Occurs when the background flush fails.</td>
 </tr>
 <tr>
-<td><img id="pubevent" class="cl_IC90369" title="Public event" src="-clear.gif" alt="Public event"></td>
+<td><img id="pubevent" class="cl_IC90369" title="Public event" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public event"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.infomessage(v=vs.100).aspx">InfoMessage</a></td>
 <td>Occurs when the .NET Compact Framework Data Provider for SQL Server sends a warning or an informational message.</td>
 </tr>
 <tr>
-<td><img id="pubevent" class="cl_IC90369" title="Public event" src="-clear.gif" alt="Public event"></td>
+<td><img id="pubevent" class="cl_IC90369" title="Public event" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Public event"></td>
 <td><a href="http://msdn.microsoft.com/en-us/library/system.data.sqlserverce.sqlceconnection.statechange(v=vs.100).aspx">StateChange</a></td>
 <td>Occurs when the state of the connection changes.&nbsp;(Overrides<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection.statechange(v=vs.100).aspx">DbConnection<span>.</span>StateChange</a>.)</td>
 </tr>
@@ -431,17 +431,17 @@
 <th class="descriptionColumn">Description</th>
 </tr>
 <tr>
-<td><img id="pubinterface" class="cl_IC141795" title="Explicit interface implemetation" src="-clear.gif" alt="Explicit interface implemetation"><img id="privmethod" class="cl_IC6709" title="Private method" src="-clear.gif" alt="Private method"></td>
+<td><img id="pubinterface" class="cl_IC141795" title="Explicit interface implemetation" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Explicit interface implemetation"><img id="privmethod" class="cl_IC6709" title="Private method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Private method"></td>
 <td><span class="unresolvedLink">IDbConnection<span>.</span>BeginTransaction</span></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection(v=vs.100).aspx">DbConnection</a>)</td>
 </tr>
 <tr>
-<td><img id="pubinterface" class="cl_IC141795" title="Explicit interface implemetation" src="-clear.gif" alt="Explicit interface implemetation"><img id="privmethod" class="cl_IC6709" title="Private method" src="-clear.gif" alt="Private method"></td>
+<td><img id="pubinterface" class="cl_IC141795" title="Explicit interface implemetation" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Explicit interface implemetation"><img id="privmethod" class="cl_IC6709" title="Private method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Private method"></td>
 <td><span class="unresolvedLink">IDbConnection<span>.</span>BeginTransaction(IsolationLevel)</span></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection(v=vs.100).aspx">DbConnection</a>)</td>
 </tr>
 <tr>
-<td><img id="pubinterface" class="cl_IC141795" title="Explicit interface implemetation" src="-clear.gif" alt="Explicit interface implemetation"><img id="privmethod" class="cl_IC6709" title="Private method" src="-clear.gif" alt="Private method"></td>
+<td><img id="pubinterface" class="cl_IC141795" title="Explicit interface implemetation" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Explicit interface implemetation"><img id="privmethod" class="cl_IC6709" title="Private method" src="http://i.msdn.microsoft.com/areas/global/content/clear.gif" alt="Private method"></td>
 <td><span class="unresolvedLink">IDbConnection<span>.</span>CreateCommand</span></td>
 <td>(inherited from&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.data.common.dbconnection(v=vs.100).aspx">DbConnection</a>)</td>
 </tr>

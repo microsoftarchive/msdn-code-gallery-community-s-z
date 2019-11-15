@@ -29,17 +29,17 @@ Azure SDK for .NET</a>.</p>
 <h1>Running the sample</h1>
 <p>First you need to start the Azure Storage Emulator. You can do it by going to the &ldquo;Server Explorer&rdquo;. Under the &ldquo;Windows Azure Storage&rdquo;, just right click and Refresh the &ldquo;(Development)&rdquo; node. It will start the Azure Storage
  Emulator.</p>
-<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/0121.image_5F00_00FEF111.png"><img title="image" src="-5315.image_5f00_thumb_5f00_0ed1370c.png" border="0" alt="image" width="244" height="181" style="display:inline"></a></p>
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/0121.image_5F00_00FEF111.png"><img title="image" src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/5315.image_5F00_thumb_5F00_0ED1370C.png" border="0" alt="image" width="244" height="181" style="display:inline"></a></p>
 <p>Once the <strong>Azure</strong> <strong>storage</strong> <strong>emulator</strong> and the
 <strong>Web API service</strong> are up and running, you can start uploading files. Here I used
 <a href="http://www.fiddler2.com/fiddler2/">fiddler</a> to do that.</p>
-<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/6076.image_5F00_07B1FA94.png"><img title="image" src="-2275.image_5f00_thumb_5f00_6796edd6.png" border="0" alt="image" width="391" height="300" style="display:inline"></a></p>
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/6076.image_5F00_07B1FA94.png"><img title="image" src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/2275.image_5F00_thumb_5F00_6796EDD6.png" border="0" alt="image" width="391" height="300" style="display:inline"></a></p>
 <p>After the upload is complete, we can issue a GET request to the FilesController to get a list of files that have been uploaded. From the result below we can see there&rsquo;s one file uploaded so far. And the file can be downloaded at Location:
 <a href="http://127.0.0.1:10000/devstoreaccount1/webapicontainer/samplePresentation.pptx">
 http://127.0.0.1:10000/devstoreaccount1/webapicontainer/samplePresentation.pptx</a>.</p>
-<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/1780.image_5F00_328A5EA6.png"><img title="image" src="-1602.image_5f00_thumb_5f00_405ca4a1.png" border="0" alt="image" width="391" height="98" style="display:inline"></a></p>
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/1780.image_5F00_328A5EA6.png"><img title="image" src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/1602.image_5F00_thumb_5F00_405CA4A1.png" border="0" alt="image" width="391" height="98" style="display:inline"></a></p>
 <p>Alternatively we can look through the Server Explorer to see that the file has in fact been upload to the blob storage.</p>
-<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/1373.image_5F00_4E2EEA9C.png"><img title="image" src="-2843.image_5f00_thumb_5f00_19225b6c.png" border="0" alt="image" width="309" height="160" style="display:inline"></a></p>
+<p><a href="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/1373.image_5F00_4E2EEA9C.png"><img title="image" src="http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-52-84-metablogapi/2843.image_5F00_thumb_5F00_19225B6C.png" border="0" alt="image" width="309" height="160" style="display:inline"></a></p>
 <h1>Switching to a real Azure Blob Storage</h1>
 <p>When everything is ready to be deployed, you can simply update the connection string in Web.config to use the real Azure Storage account. Here is an example of what the connection string would look like:</p>
 <div class="endscriptcode">

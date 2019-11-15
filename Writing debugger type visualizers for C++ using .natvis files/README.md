@@ -118,7 +118,7 @@
 </div>
 </div>
 <div class="endscriptcode">&nbsp;will result in variables of type CPoint to look like:</div>
-<p><img id="60731" src="60731-displaystring.png" alt="" width="354" height="59" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="60731" src="http://i1.code.msdn.s-msft.com/writing-type-visualizers-2eae77a2/image/file/60731/1/displaystring.png" alt="" width="354" height="59" style="display:block; margin-left:auto; margin-right:auto"></p>
 <p style="text-align:justify">Here, x and y, which are members of CPoint, are inside curly braces and their values are evaluated. Note that the example also shows you can escape a curly brace by using double curly braces (i.e. {{ or }}).</p>
 <p style="text-align:justify">One important point to remember is DisplayString element is the only element that accepts arbitrary strings and the curly brace syntax. All other visualization elements accept only expressions that are evaluated by the debugger.</p>
 <h3>StringView</h3>
@@ -138,7 +138,7 @@
 </div>
 </div>
 <div class="endscriptcode" style="text-align:justify">Notice the glass icon shown next to the value below. Clicking the icon will launch the text visualizer which will display the string that m_pszData points to.</div>
-<p><img id="60833" src="60833-stringview.png" alt="" width="650" height="81" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="60833" src="http://i1.code.msdn.s-msft.com/writing-type-visualizers-2eae77a2/image/file/60833/1/stringview.png" alt="" width="650" height="81" style="display:block; margin-left:auto; margin-right:auto"></p>
 <h3>Expand</h3>
 <p style="text-align:justify">Expand node is used to customize the children of the visualized type when the user expands it in the variable windows. It accepts a list of child nodes, which in turn define the child elements. It is important to know that Expand
  node is optional and if no Expand is specified in a visualizer entry, Visual Studio&rsquo;s default expansion rules will be used. If an expand node is specified with no child nodes under it, then the type won&rsquo;t be expandable in the debugger windows (i.e.
@@ -164,7 +164,7 @@
 </div>
 </div>
 <div class="endscriptcode">then CRect type is going to look like below</div>
-<p><img id="60732" src="60732-expand-item.png" alt="" width="564" height="87" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="60732" src="http://i1.code.msdn.s-msft.com/writing-type-visualizers-2eae77a2/image/file/60732/1/expand-item.png" alt="" width="564" height="87" style="display:block; margin-left:auto; margin-right:auto"></p>
 <p style="text-align:justify">The expressions specified in Width and Height elements are evaluated and shown in the value column.&nbsp;An additional point to remember is if the expression of the item element points to a complex type then the Item node itself
  will be expandable.</p>
 <h4>ArrayItems Expansion</h4>
@@ -191,7 +191,7 @@
 </div>
 </div>
 <div class="endscriptcode">A std::vector shows its individual elements when expanded in the variable window:</div>
-<p><img id="60834" src="60834-arrayitems.png" alt="" width="583" height="146" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="60834" src="http://i1.code.msdn.s-msft.com/writing-type-visualizers-2eae77a2/image/file/60834/1/arrayitems.png" alt="" width="583" height="146" style="display:block; margin-left:auto; margin-right:auto"></p>
 <p style="text-align:justify">At a minimum, the ArrayItems node must have the <strong>
 '</strong>Size<strong>'</strong> expression (which must evaluate to an integer) for the debugger to understand the length of the array and the 'ValuePointer' expression that should point to the first element (which must be a pointer of the element type that
  is not void*). The array lower bound is assumed to be 0 which can be overridden by using 'LowerBound'&nbsp;node (examples of this can be found in the default natvis files shipped with Visual Studio).</p>
@@ -308,7 +308,7 @@
 <h4>ExpandedItem Expansion</h4>
 <p style="text-align:justify">ExpandedItem can be used to generate an aggregated children view by having properties coming from base classes or data members displayed as if they were children of the visualized type. The specified expression is evaluated and
  the child nodes of the result are appended to the children list of the visualized type. For instance, suppose we have a smart pointer type auto_ptr&lt;vector&lt;int&gt;&gt; which will normally be displayed as:</p>
-<p><img id="60835" src="60835-expanded-item1.png" alt="" width="624" height="127" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="60835" src="http://i1.code.msdn.s-msft.com/writing-type-visualizers-2eae77a2/image/file/60835/1/expanded-item1.png" alt="" width="624" height="127" style="display:block; margin-left:auto; margin-right:auto"></p>
 <p style="text-align:justify">To see the values of the vector, we need to drill down two levels in the variable window passing through _Myptr member. Adding a visualizer entry using ExpandedItem element:</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
@@ -327,7 +327,7 @@
 </div>
 </div>
 <div class="endscriptcode">we can eliminate _Myptr variable from the hierarchy and directly view vector elements:</div>
-<p><img id="60836" src="60836-expanded-item2.png" alt="" width="624" height="95" style="display:block; margin-left:auto; margin-right:auto"></p>
+<p><img id="60836" src="http://i1.code.msdn.s-msft.com/writing-type-visualizers-2eae77a2/image/file/60836/1/expanded-item2.png" alt="" width="624" height="95" style="display:block; margin-left:auto; margin-right:auto"></p>
 <h4>Synthetic Item Expansion</h4>
 <p style="text-align:justify">'Synthetic' node allows one to create an artificial child element (i.e. one that is not a result of an expression) which might contain children elements on its own. The example below shows two such nodes which is, it is used to
  create an artificial node:</p>

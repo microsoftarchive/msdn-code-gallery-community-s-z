@@ -18,9 +18,9 @@
 <h1>Introduction</h1>
 <p>The purpose of the sample is to provide a quick introduction to Azure Cloud Services using&nbsp;.NET. The application is an advertising bulletin board. Users create an ad by entering text and uploading an image. They can see a list of ads with thumbnail
  images, and they can see the full size image when they select an ad to see the details. A background process running in a worker role creates thumbnails of the uploaded images. Here's a screenshot and an architecture diagram.</p>
-<p><img id="114261" src="114261-list.png" alt="" width="717" height="583"></p>
+<p><img id="114261" src="http://i1.code.msdn.s-msft.com/simple-azure-cloud-service-e01df2e4/image/file/114261/1/list.png" alt="" width="717" height="583"></p>
 <p>&nbsp;</p>
-<p><img id="122143" src="122143-apparchitecturecloudservice.png" alt="" width="536" height="392"></p>
+<p><img id="122143" src="http://i1.code.msdn.s-msft.com/simple-azure-cloud-service-e01df2e4/image/file/122143/1/apparchitecturecloudservice.png" alt="" width="536" height="392"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h1><span>Building the Sample</span></h1>

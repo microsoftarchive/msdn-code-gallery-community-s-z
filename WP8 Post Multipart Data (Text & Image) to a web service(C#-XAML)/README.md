@@ -374,7 +374,7 @@
 <a href="http://bsubramanyamraju.blogspot.com/2015/05/windows-phone-80-how-to-post-multipart.html" target="_blank">
 blog</a></span><a title="MyBlogReference" href="http://bsubramanyamraju.blogspot.in/2014/05/windowsphone-store-81-vs-windowsphone-8.html" style="font-size:small"></a></div>
 <p class="endscriptcode"><strong style="font-size:small">Help me with feedback:</strong></p>
-<p><span style="font-size:small">Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="67168-ratings.png" alt="" width="74" height="15">&nbsp;star
+<p><span style="font-size:small">Thank you for reading my article. Drop all your questions/comments in QA tab give me your feedback with&nbsp;<img id="67168" src="http://i1.code.msdn.s-msft.com/oops-principles-solid-7a4e69bf/image/file/67168/1/ratings.png" alt="" width="74" height="15">&nbsp;star
  rating (1 Star - Very Poor, 5&nbsp;Star -&nbsp;Very Nice).&nbsp; <br>
 </span></p>
 </div>

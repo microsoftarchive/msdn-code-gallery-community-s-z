@@ -43,24 +43,24 @@
 <p>&nbsp;</p>
 <p>2. Delete &quot;MainWindow.xaml&quot; page your solution. Add new Window (WPF) called &quot;MainView.xaml&quot; to your solution.</p>
 <p>&nbsp;</p>
-<p class="separator"><a href="http://4.bp.blogspot.com/-nkXrUJbNxGM/U25OI9BLbfI/AAAAAAAAA3o/UWs5njophas/s1600/1.JPG"><img src=":-proxy?url=http%3a%2f%2f4.bp.blogspot.com%2f-nkxrujbnxgm%2fu25oi9blbfi%2faaaaaaaaa3o%2fuws5njophas%2fs1600%2f1.jpg&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="384"></a></p>
+<p class="separator"><a href="http://4.bp.blogspot.com/-nkXrUJbNxGM/U25OI9BLbfI/AAAAAAAAA3o/UWs5njophas/s1600/1.JPG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-nkXrUJbNxGM%2FU25OI9BLbfI%2FAAAAAAAAA3o%2FUWs5njophas%2Fs1600%2F1.JPG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="384"></a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>3. Open app.xaml file and update StartupUri as &quot;MainView.xaml&quot;.</p>
-<p class="separator"><a href="http://3.bp.blogspot.com/-oCpi_NBvBmA/U25OiQ0ChTI/AAAAAAAAA38/eD7aCyfT9UQ/s1600/2.JPG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-ocpi_nbvbma%2fu25oiq0chti%2faaaaaaaaa38%2fed7acyft9uq%2fs1600%2f2.jpg&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="146"></a></p>
+<p class="separator"><a href="http://3.bp.blogspot.com/-oCpi_NBvBmA/U25OiQ0ChTI/AAAAAAAAA38/eD7aCyfT9UQ/s1600/2.JPG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-oCpi_NBvBmA%2FU25OiQ0ChTI%2FAAAAAAAAA38%2FeD7aCyfT9UQ%2Fs1600%2F2.JPG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="146"></a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>4. Add new class called &quot;Person&quot; to your project and implement the &nbsp;class as bellow.</p>
-<p class="separator"><a href="http://2.bp.blogspot.com/-3usZjsophb4/U25OxRlZ8mI/AAAAAAAAA4E/h_2Q-kzfnH0/s1600/3.JPG"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f-3uszjsophb4%2fu25oxrlz8mi%2faaaaaaaaa4e%2fh_2q-kzfnh0%2fs1600%2f3.jpg&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="400" height="295"></a></p>
+<p class="separator"><a href="http://2.bp.blogspot.com/-3usZjsophb4/U25OxRlZ8mI/AAAAAAAAA4E/h_2Q-kzfnH0/s1600/3.JPG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F-3usZjsophb4%2FU25OxRlZ8mI%2FAAAAAAAAA4E%2Fh_2Q-kzfnH0%2Fs1600%2F3.JPG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="400" height="295"></a></p>
 <p>&nbsp;</p>
 <p>Also add another class called &quot;BaseViewModel&quot; and implement that class as bellow.</p>
 <p>&nbsp;</p>
-<p class="separator"><a href="http://2.bp.blogspot.com/-pOR9PDsUf4o/U25Wo0hHIzI/AAAAAAAAA4o/JzcvnGHJMQk/s1600/5.JPG"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f-por9pdsuf4o%2fu25wo0hhizi%2faaaaaaaaa4o%2fjzcvnghjmqk%2fs1600%2f5.jpg&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="400" height="161"></a></p>
+<p class="separator"><a href="http://2.bp.blogspot.com/-pOR9PDsUf4o/U25Wo0hHIzI/AAAAAAAAA4o/JzcvnGHJMQk/s1600/5.JPG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F-pOR9PDsUf4o%2FU25Wo0hHIzI%2FAAAAAAAAA4o%2FJzcvnGHJMQk%2Fs1600%2F5.JPG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="400" height="161"></a></p>
 <p>&nbsp;</p>
 <p>5. Add new folder called &quot;ChildWindow&quot; to your solution. After that add another two folder called &quot;View&quot; and &quot;ViewModel&quot; to &quot;ChildWindow&quot; folder. Now your folder hierarchy should be like this.</p>
 <p class="separator">&nbsp;</p>
 <p class="separator">&nbsp;</p>
-<p class="separator"><a href="http://1.bp.blogspot.com/-WFqgg2dg4Hg/U25Rvb5XC7I/AAAAAAAAA4Y/IWqC2spCvp4/s1600/4.JPG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-wfqgg2dg4hg%2fu25rvb5xc7i%2faaaaaaaaa4y%2fiwqc2spcvp4%2fs1600%2f4.jpg&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="320" height="174"></a></p>
+<p class="separator"><a href="http://1.bp.blogspot.com/-WFqgg2dg4Hg/U25Rvb5XC7I/AAAAAAAAA4Y/IWqC2spCvp4/s1600/4.JPG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-WFqgg2dg4Hg%2FU25Rvb5XC7I%2FAAAAAAAAA4Y%2FIWqC2spCvp4%2Fs1600%2F4.JPG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="320" height="174"></a></p>
 <p>&nbsp;</p>
 <p>(Anyway you don't need to follow same hierarchy and naming convention. But as a best practice I encourage you to &nbsp;follow the similar hierarchy and naming convention.)</p>
 <p>&nbsp;</p>
@@ -658,14 +658,14 @@
 <div>
 <p>13. Now build your project and run the application.If everything is going fine , you will see the following interface.</p>
 </div>
-<p class="separator"><a href="http://2.bp.blogspot.com/-LrqF7M06TYE/U27vHeeVkVI/AAAAAAAAA5I/WYiCW1URbCA/s1600/8.JPG"><img src=":-proxy?url=http%3a%2f%2f2.bp.blogspot.com%2f-lrqf7m06tye%2fu27vheevkvi%2faaaaaaaaa5i%2fwyicw1urbca%2fs1600%2f8.jpg&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="324"></a></p>
+<p class="separator"><a href="http://2.bp.blogspot.com/-LrqF7M06TYE/U27vHeeVkVI/AAAAAAAAA5I/WYiCW1URbCA/s1600/8.JPG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F2.bp.blogspot.com%2F-LrqF7M06TYE%2FU27vHeeVkVI%2FAAAAAAAAA5I%2FWYiCW1URbCA%2Fs1600%2F8.JPG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="324"></a></p>
 <div>
 <p>&nbsp;</p>
 </div>
 <div>
 <p>14. Click on Search Person button. Then child window will be opened.</p>
 </div>
-<p class="separator"><a href="http://3.bp.blogspot.com/-HpW715Wy2ZI/U27vlCyt9EI/AAAAAAAAA5Q/gxDGUPsvAsk/s1600/9.JPG"><img src=":-proxy?url=http%3a%2f%2f3.bp.blogspot.com%2f-hpw715wy2zi%2fu27vlcyt9ei%2faaaaaaaaa5q%2fgxdgupsvask%2fs1600%2f9.jpg&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="326"></a></p>
+<p class="separator"><a href="http://3.bp.blogspot.com/-HpW715Wy2ZI/U27vlCyt9EI/AAAAAAAAA5Q/gxDGUPsvAsk/s1600/9.JPG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-HpW715Wy2ZI%2FU27vlCyt9EI%2FAAAAAAAAA5Q%2FgxDGUPsvAsk%2Fs1600%2F9.JPG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="326"></a></p>
 <div>
 <p>&nbsp;</p>
 </div>
@@ -675,7 +675,7 @@
 <div>
 <p>&nbsp;</p>
 </div>
-<p class="separator"><a href="http://1.bp.blogspot.com/-QBuwtePRNoI/U27wneeTZiI/AAAAAAAAA5c/hXyCyoxPd2k/s1600/10.JPG"><img src=":-proxy?url=http%3a%2f%2f1.bp.blogspot.com%2f-qbuwteprnoi%2fu27wneetzii%2faaaaaaaaa5c%2fhxycyoxpd2k%2fs1600%2f10.jpg&container=blogger&gadget=a&rewritemime=image%2f*" border="0" alt="" width="640" height="326"></a></p>
+<p class="separator"><a href="http://1.bp.blogspot.com/-QBuwtePRNoI/U27wneeTZiI/AAAAAAAAA5c/hXyCyoxPd2k/s1600/10.JPG"><img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-QBuwtePRNoI%2FU27wneeTZiI%2FAAAAAAAAA5c%2FhXyCyoxPd2k%2Fs1600%2F10.JPG&container=blogger&gadget=a&rewriteMime=image%2F*" border="0" alt="" width="640" height="326"></a></p>
 <div>
 <p>&nbsp;</p>
 </div>

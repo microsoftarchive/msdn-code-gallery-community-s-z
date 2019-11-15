@@ -20,7 +20,7 @@
 <p><em>This sample of application explain how to Convert Document File such as .doc,.docx to PDF Documents. It is very easy to use and understand.<br>
 </em></p>
 <h1><span>Screen</span></h1>
-<p><span><img id="106861" src="106861-doc2pdf.gif" alt="" width="794" height="513"><br>
+<p><span><img id="106861" src="http://i1.code.msdn.s-msft.com/windowsdesktop/word-file-to-pdf-conversion-261fd865/image/file/106861/1/doc2pdf.gif" alt="" width="794" height="513"><br>
 </span></p>
 <h1><span>Building the Sample</span></h1>
 <p><em>Add the following reference Assembly.</em></p>

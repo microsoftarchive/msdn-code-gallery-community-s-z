@@ -504,7 +504,7 @@ namespace&nbsp;IgniteUI.Controllers&nbsp;
 <div class="syntaxhighlighter xml" id="highlighter_593403"><span style="font-size:small">Now please run your application and go to the&nbsp;</span><em style="font-size:small">http://localhost:39044/Chart</em><span style="font-size:small">, there you can
  see a chart with the data you have given.</span></div>
 </div>
-<div class="wp-caption x_x_alignnone" id="attachment_11825"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/07/Ignite_UI_Chart_Control.png"><img class="size-large x_x_wp-image-11825" src="-ignite_ui_chart_control-1024x446.png" alt="Ignite_UI_Chart_Control" width="634" height="276"></a>
+<div class="wp-caption x_x_alignnone" id="attachment_11825"><span style="font-size:small"><a href="http://sibeeshpassion.com/wp-content/uploads/2016/07/Ignite_UI_Chart_Control.png"><img class="size-large x_x_wp-image-11825" src="http://sibeeshpassion.com/wp-content/uploads/2016/07/Ignite_UI_Chart_Control-1024x446.png" alt="Ignite_UI_Chart_Control" width="634" height="276"></a>
 </span>
 <p class="wp-caption-text"><span style="font-size:small">Ignite_UI_Chart_Control</span></p>
 </div>

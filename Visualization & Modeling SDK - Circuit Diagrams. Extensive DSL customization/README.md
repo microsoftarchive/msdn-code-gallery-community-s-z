@@ -114,7 +114,7 @@ DocView.LoadView().</a> In this case, it is slightly more convenient to use the 
 <h2>Composite Elements</h2>
 <p>The electronic components are each composed of several elements &ndash; a main element and two or three elements that represent named terminals. These terminals appear as fixed ports on the shapes. The prototype components are stored in the toolbox as groups
  of elements.</p>
-<p>&nbsp;<img src="18881-composites.png" alt="" width="103" height="93"></p>
+<p>&nbsp;<img src="http://i3.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18881/1/composites.png" alt="" width="103" height="93"></p>
 <p>(Compare this with the example in the component diagram solution template. In that DSL, a component is created with just the main element. Then you add a variable number of ports, which can be moved around on the component&rsquo;s surface.)</p>
 <h4>Groups of elements in the toolbox</h4>
 <p>Every element tool works by storing a serialized copy of the element that the tool should create. The prototype element is stored in an
@@ -139,7 +139,7 @@ drag and drop</a> an element.)</p>
 <p>When you double-click a component, it rotates.</p>
 <h4>Rotate, flip and polarity.</h4>
 <p>Rotate a component by double-clicking. Notice that the terminals move with the rotation, and the wires remain connected to the correct terminal:</p>
-<p><img src="18882-rotations.png" alt="" width="530" height="208"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18882/1/rotations.png" alt="" width="530" height="208"></p>
 <p>An integer domain property ComponentShape.rotate keeps the current state of rotation.</p>
 <p>Rotation is done in ComponentShape.Rotate90 (in DynamicNodeImages.cs):</p>
 <ul>
@@ -151,11 +151,11 @@ drag and drop</a> an element.)</p>
  an ImageField, which just displays the image.</p>
 <p>For our own rotatable images, we would like to replace the ImageFields with instances of our own ImageField subclass. To do this, we must override InitializeShapeFields(), which can be done if we set
 <strong>Generates Double Derived</strong> on the properties of each component shape class in the DSL Definition.</p>
-<p><img src="18883-doublederived.png" alt="" width="430" height="205"></p>
+<p><img src="http://i1.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18883/1/doublederived.png" alt="" width="430" height="205"></p>
 <p>In fact rotatable images are only required on TransisitorShape and CapacitorShape.</p>
 <h2>Image visibility dependent on a domain property</h2>
 <p>You can flip a component or reverse the polarity of a transistor by right-clicking:</p>
-<p><img src="18884-pnpn.png" alt="" width="93" height="62"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18884/1/pnpn.png" alt="" width="93" height="62"></p>
 <p>This is achieved by providing the TransistorShape with two decorators, both in the center of the shape. The visibility of each image is made dependent on the Boolean domain property Polarity, which is inherited from Component.</p>
 <p>This is done in the DSL Definition, without additional code.</p>
 <p>Click the shape mapping between Transistor and TransistorShape, open the <strong>
@@ -167,14 +167,14 @@ DSL Details</strong> window and click the <strong>Decorator Maps</strong> tab. C
 <p>To align nodes:</p>
 <p>1. Select two or more nodes that are already roughly aligned either vertically or horizontally.</p>
 <p>2. Right-click and choose <strong>Align</strong>.</p>
-<p><img src="18885-alignment.png" alt="" width="566" height="307"></p>
+<p><img src="http://i4.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18885/1/alignment.png" alt="" width="566" height="307"></p>
 <p>The code is in Dsl\Custom Code\ShapeAlignment.cs. It assigns values to the AbsoluteBounds of each shape.</p>
 <p>The code that sets up the menu command is in DslPackage\Custom\Commands.cs, and the position of menu items on the menus is determined by DslPackage\Commands.vsct. For more information, see
 <a href="http://msdn.microsoft.com/library/dd820681.aspx">How to Define Menu Commands</a>.</p>
 <h2>Copy or cut and paste preserving layout</h2>
 <p>You can copy a selection of nodes, and paste them at a chosen mouse position, without losing their relative positions and connections:</p>
-<p><img src="18886-copygroup.png" alt="" width="141" height="296">&nbsp;Then paste:
-<img src="18887-pastegroup.png" alt="" width="101" height="215"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18886/1/copygroup.png" alt="" width="141" height="296">&nbsp;Then paste:
+<img src="http://i3.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18887/1/pastegroup.png" alt="" width="101" height="215"></p>
 <p>To place the group in a specific position, right-click where you want the top left to be, then click
 <strong>Paste</strong>. (If you use ctrl-V, the group will appear adjacent to the current selection.)</p>
 <p>The code is in DslPackage\Custom\Commands.cs, in OnMenuCut, OnMenuCopy, OnMenuPaste.</p>
@@ -191,14 +191,14 @@ DesignSurfaceElementOperations</a>.Merge(). This method takes the diagram (rathe
 <p>You can also copy by drag and CTRL&#43;drop.</p>
 <h2>Wrapped Text Decorator</h2>
 <p>If you type a long line into a Comment, the text wraps inside the comment shape, once you have finished typing:</p>
-<p><img src="18888-comment.png" alt="" width="182" height="97"></p>
+<p><img src="http://i3.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18888/1/comment.png" alt="" width="182" height="97"></p>
 <p>To do this, we set various properties of the text field. The code generated from your DSL Definition sets this in CommentBoxShape.InitializeDecorators(). By setting the Generates Double Derived property of CommentBoxShape, we can override this method. The
  code is in Dsl\CustomCode\WrappedCommentText.cs</p>
 <p>The code lets the base method set up the fields, and then finds the text field and adjusts its settings. These demonstrate anchoring.</p>
 <h2>Customizing how a new element is merged</h2>
 <p>You can drag from the Comment tool onto any component on the diagram. This creates both a comment and a link from the new comment to the target component. This is done in the DSL Definition, without additional code.</p>
 <p>In the DSL Explorer, look under Domain Classes\Component\Element Merge Directives. There is a directive that allows a Component to accept a Comment. Select that EMD and look in the DSL Details window:</p>
-<p><img src="18889-dsldetails.png" alt="" width="628" height="175"></p>
+<p><img src="http://i2.code.msdn.microsoft.com/visualization-modeling-sdk-763778e8/image/file/18889/1/dsldetails.png" alt="" width="628" height="175"></p>
 <p>This specifies that when a Comment is merged onto a Component, a link is created from the ComponentModel to the Comment; and that a link is also created from the Component to the Comment. For more information, see
 <a href="http://msdn.microsoft.com/library/bb126479.aspx">Domain Path syntax</a>.</p>
 <h1>Related Sample</h1>

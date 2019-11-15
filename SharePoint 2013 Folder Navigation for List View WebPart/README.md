@@ -224,7 +224,7 @@ As shown above, in case of last item (which means current folder user browsing),
 </li><li>Function &lsquo;RenderItems&rsquo; renders the items in the page. I think this is the place of customisation you might be interested. Having all navigation items passed to this function, you can render your navigation items in your own way. renderContext.wpq
  is unique webpart id in the page. As shown below with the wpq value of &lsquo;<span style="text-decoration:underline"><em>WPQ2</em></span>&rsquo; the webpart is rendered in a div with id &lsquo;WebPart<span style="text-decoration:underline"><em>WPQ2</em></span>&rsquo;.
 <br>
-<img id="92876" src="92876-webpart%20dissect.png" alt="" width="608" height="716"><strong><br>
+<img id="92876" src="http://i1.code.msdn.s-msft.com/sharepoint-2013-folder-661709eb/image/file/92876/1/webpart%20dissect.png" alt="" width="608" height="716"><strong><br>
 <br>
 Image 4: List View WebPart in Firebug</strong><br>
 <br>

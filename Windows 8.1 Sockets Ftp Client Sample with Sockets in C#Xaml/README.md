@@ -26,7 +26,7 @@
 <p><strong>IMPORTANT : </strong>To&nbsp;run the tests project on <span style="text-decoration:underline">
 local server</span> (i.e. If you are running a local ftp server), you have to&nbsp;disable the loopback check for&nbsp;the test&nbsp;project application. (<a title="How to enable loopback and troubleshoot network isolation (Windows Store Apps)" href="http://msdn.microsoft.com/en-us/library/windows/apps/hh780593.aspx" target="_blank">How
  to enable Loopback and troubleshoot network isolation</a>)</p>
-<p style="text-align:justify"><img id="110630" src="110630-01-connectionerror%20(loopbackcheck).png" alt="" width="616" height="365" style="vertical-align:middle"></p>
+<p style="text-align:justify"><img id="110630" src="http://i1.code.msdn.s-msft.com/windows-8-socketsftp-4fc23b33/image/file/110630/1/01-connectionerror%20(loopbackcheck).png" alt="" width="616" height="365" style="vertical-align:middle"></p>
 <p>Easiest way to achieve this is to start debugging one of the unit tests, and use the Enable Loopback Utility to locate the test project and disable the loopback check.<em><br>
 </em></p>
 <p><span style="font-size:20px; font-weight:bold">Description</span></p>

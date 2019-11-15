@@ -31,7 +31,7 @@
 <p>How to use Win32 API calls to control communication with the COM port.</p>
 </li></ul>
 <h1>Screenshot</h1>
-<p><img src="23083-screenshot.png" alt=""></p>
+<p><img src="http://i1.code.msdn.s-msft.com/working-with-communication-7341881c/image/file/23083/1/screenshot.png" alt=""></p>
 <h1>Sample Code<em><br>
 </em></h1>
 <div class="scriptcode">

@@ -31,9 +31,9 @@ Ultimate SAML Download Page</a>.<em><em><br>
 <p>This sample is configured to run at port 1421 (you can easily change the port number in the project property page). The identity provider web application, in conjunction with Service Provider web application,&nbsp;demonstrates IdP initiated single sign-on.&nbsp;Firstly,
  you need to login to the system with&nbsp;the user name&nbsp;<strong>iuser</strong> and a password of
 <strong>password</strong>.</p>
-<p><img src="-idpinitiated.png" border="0" alt=""></p>
+<p><img src="http://www.componentpro.com/doc/saml/img/IdpInitiated.png" border="0" alt=""></p>
 <p>and then click on a link to access the Service Provider site which runs at port 1422.</p>
-<p><img src="-idpinitiatedredirected.png" border="0" alt="SP"></p>
+<p><img src="http://www.componentpro.com/doc/saml/img/IdpInitiatedRedirected.png" border="0" alt="SP"></p>
 <h4>How to&nbsp;configure?</h4>
 <p>You can easily configure the ID Provider web application by modifying the settings within its web.config file's &lt;appSettings&gt; section:</p>
 <ul>

@@ -15,19 +15,19 @@
 <div>
 <ol>
 <li><span style="font-size:small">Visual Studio 2013 を起動します。</span> </li><li><span style="font-size:small">[新しいプロジェクト] をクリックします。</span><br>
-<span style="font-size:small"><img id="127419" src="127419-1.png" alt="" width="500">&nbsp;<br>
+<span style="font-size:small"><img id="127419" src="https://i1.code.msdn.s-msft.com/vs2013tips-03-f1e5a2c0/image/file/127419/1/1.png" alt="" width="500">&nbsp;<br>
 &nbsp;</span> </li><li><span style="font-size:small">[テンプレート]-[Visual C#]-[ストアアプリ]-[ユニバーサル アプリ] を選択後、&ldquo;空のアプリケーション (ユニバーサル アプリ)&rdquo; を選択後、[OK] ボタンをクリックします。</span><br>
-<span style="font-size:small"><img id="127420" src="127420-2.png" alt="" width="500">&nbsp;<br>
+<span style="font-size:small"><img id="127420" src="https://i1.code.msdn.s-msft.com/vs2013tips-03-f1e5a2c0/image/file/127420/1/2.png" alt="" width="500">&nbsp;<br>
 &nbsp;</span> </li><li><span style="font-size:small">任意の .cs ファイルを開きます。今回のソリューションは &ldquo;App3&rdquo; という名称で作成したので、例として [ソリューション &lsquo;App3&rsquo;]-[App3]-[App3.Shared] の &ldquo;App.xaml.cs&ldquo; をダブルクリックして開きます。</span><br>
-<span style="font-size:small"><img id="127421" src="127421-3.png" alt="" width="500">&nbsp;<br>
+<span style="font-size:small"><img id="127421" src="https://i1.code.msdn.s-msft.com/vs2013tips-03-f1e5a2c0/image/file/127421/1/3.png" alt="" width="500">&nbsp;<br>
 &nbsp;</span> </li><li><span style="font-size:small">ソースコードの任意の場所にブレークポイントを複数設置します。</span><br>
-<span style="font-size:small"><img id="127422" src="127422-4.png" alt="" width="500">&nbsp;<br>
+<span style="font-size:small"><img id="127422" src="https://i1.code.msdn.s-msft.com/vs2013tips-03-f1e5a2c0/image/file/127422/1/4.png" alt="" width="500">&nbsp;<br>
 &nbsp;</span> </li><li><span style="font-size:small">Visual Studio 右上の [クイック起動] テキストボックスに &ldquo;ブレークポイント&rdquo; と入力後、[デバッグ &rarr; ウィンドウ &rarr; ブレークポイント] をクリックします。</span><br>
-<span style="font-size:small"><img id="127426" src="127426-5.png" alt="" width="500">&nbsp;<br>
+<span style="font-size:small"><img id="127426" src="https://i1.code.msdn.s-msft.com/vs2013tips-03-f1e5a2c0/image/file/127426/1/5.png" alt="" width="500">&nbsp;<br>
 &nbsp;</span> </li><li><span style="font-size:small">[ブレークポイント] ウィンドウが表示されます。&nbsp;</span><br>
-<span style="font-size:small"><img id="127424" src="127424-6.png" alt="" width="500">&nbsp;<br>
+<span style="font-size:small"><img id="127424" src="https://i1.code.msdn.s-msft.com/vs2013tips-03-f1e5a2c0/image/file/127424/1/6.png" alt="" width="500">&nbsp;<br>
 &nbsp;</span> </li><li><span style="font-size:small">このウィンドウでは以下の図のような操作を行うことができ、複数のブレークポイントに対して一括して操作を行うことが可能です。<br>
-&nbsp;<img id="127425" src="127425-7.png" alt="" width="500"></span>
+&nbsp;<img id="127425" src="https://i1.code.msdn.s-msft.com/vs2013tips-03-f1e5a2c0/image/file/127425/1/7.png" alt="" width="500"></span>
 </li></ol>
 </div>
 <p>&nbsp;</p>
