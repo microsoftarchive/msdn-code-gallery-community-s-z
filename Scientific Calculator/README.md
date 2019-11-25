@@ -1,244 +1,220 @@
 # Scientific Calculator
+## Requires
+- Visual Studio 2015
 ## License
-- Apache License, Version 2.0
+- MIT
 ## Technologies
-- Graphics
-- Class Library
-- Java
-- Graphs
-- Javascript
-- Library
-- Classes
-- WinForms
-- functions
-- My.Computer
-- NoSql
-- apps for SharePoint
-- Javascript with Windows RT
-- C++/CX
-- Geolocator
+- C#
+- Visual Basic .NET
+- Visual basic
+- VB.Net
+- Visual C#
 ## Topics
-- Graphics
+- C#
+- Calculator
 - Calculator Application
-- radio button customization
-- Programming Tips
-- Object Oriented Programming
-- Timer
-- Classes
-- Borderless Form
-- Button
-- TextBox
-- Installing Java
-- Radio Buttons
-- math rounding
+- VB.Net
+- C# calculator
+- Advanced Calculator
+- Scientific Calculator
+- Visual Basic Calculator
 ## Updated
-- 08/24/2014
+- 04/03/2019
 ## Description
 
-<h1>Introduction</h1>
-<p><em><span style="font-size:small">It is solve many problems and consume less time and provide result.</span><br>
-</em></p>
-<h1><span>Building the Sample</span></h1>
-<p><em>No Special requirment but you have Jdk install on your operating system its all work.<br>
-</em></p>
-<p><span style="font-size:20px; font-weight:bold">Description</span></p>
-<ul>
-<li>Basic Functions ( &#43;, -, X, / ) </li><li>Simple functions (sine, cosine, tangent, log, exponentials etc., transendental numbers) Sexagisimal Number functions (Degree, Minute, Sec, Hour, Minute Second)Complex number functions(imaginary number operations)
-</li><li>Fractions </li><li>Algebraic expression evaluation </li><li>Input/Output </li><li>Programmability </li><li>Alphanumeric functions (manipulate strings of characters) </li></ul>
-<table>
-<tbody>
-<tr>
-<td>Addition</td>
-<td>x&#43;y</td>
-<td>Sum of two operands</td>
-</tr>
-<tr>
-<td>Subtraction</td>
-<td>x-y</td>
-<td>Difference of two operands</td>
-</tr>
-<tr>
-<td>Multiplication</td>
-<td>x*y</td>
-<td>Multiplication of two operands</td>
-</tr>
-<tr>
-<td>Division</td>
-<td>x/y</td>
-<td>Dividing value of first operand by value of second operand</td>
-</tr>
-<tr>
-<td>Power</td>
-<td>x^y</td>
-<td>Raise value of the first operand to a power determined by value of second operand</td>
-</tr>
-<tr>
-<td>Integer part</td>
-<td>[x]</td>
-<td>Integer part of number</td>
-</tr>
-</tbody>
-</table>
-<p>Scientific electronic calculators are accurate. The precision of a calculator should be measured, rather than taking it for granted. Problems in accuracy can arise when repeated calculations are made on a single result. The nature of computational environment
- will determine the ultimate accuracy of long calculation. Precision is very important when doing division. Let's take a look at a quick example.</p>
-<p>x = 1/3/3/3/3/3/3*3*3*3*3*3*3*3</p>
-<p>by definition, this value should equal 1. We have divided 1 by 3, 6 times and then multiply it by 3, six times. The problem with division by three stems from the fact that it is a repeating fraction that can never be represented with absolute accuracy. Multiple
- operations begin to accumulate errors.</p>
-<p>&nbsp;</p>
-<p><img id="124250" src="http://i1.code.msdn.s-msft.com/scientific-calculator-48f03779/image/file/124250/1/untitled.png" alt="" width="493" height="231"><br>
-<em>&nbsp;&nbsp;&nbsp;</em></p>
-<p>&nbsp;</p>
+<h1><strong>Preface</strong></h1>
+<p>In this chapter we want to write Scientific Calculator program .</p>
+<p>_______________________________________________________________________________________________</p>
+<h1><strong>Process</strong></h1>
+<p><strong>&nbsp;</strong><span style="font-size:small">The following steps show how to write a advanced Calculator:</span></p>
+<p>1. First, Click <strong><span style="font-size:x-small">New Project</span></strong> in
+<span style="font-size:x-small"><strong>Start Page</strong></span> Or On <strong>
+<span style="font-size:x-small">File </span></strong>Menu .</p>
+<p>2. In <strong>New Project</strong> Dialog , Click <strong>Windows</strong> On Left Pane And
+<strong>Windows Forms Application</strong> On Middle Pane .</p>
+<p>3. Change forms layout to this Mode :</p>
+<p>&nbsp;<img id="163864" src="163864-calc.jpg" alt="" width="369" height="325"></p>
+<p>_______________________________________________________________________________________________</p>
+<p>4. Now Declare This Public Variables :</p>
 <div class="scriptcode">
 <div class="pluginEditHolder" pluginCommand="mceScriptCode">
-<div class="title"><span>Java</span></div>
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
 <div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
-<span class="hidden">java</span>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
 
 <div class="preview">
-<pre class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;actionPerformed(ActionEvent&nbsp;e)&nbsp;
+<pre class="csharp"><span class="cs__keyword">decimal</span>&nbsp;num1;&nbsp;
+<span class="cs__keyword">decimal</span>&nbsp;num2;&nbsp;
+<span class="cs__keyword">string</span>&nbsp;operation;&nbsp;<br></pre>
+</div>
+</div>
+</div>
+<p>5. Then Add This Method for Number Buttons :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;input(<span class="cs__keyword">string</span>&nbsp;a)&nbsp;
 {&nbsp;
-String&nbsp;s=e.getActionCommand();&nbsp;
-&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;Exit&quot;</span>))&nbsp;
-{&nbsp;
-System.exit(<span class="cs__number">0</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;1&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;1&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;1&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;2&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;2&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;2&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;3&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;3&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;3&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;4&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;4&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;4&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;5&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;5&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;5&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;6&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;6&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;6&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;7&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;7&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;7&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;8&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;8&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;8&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;9&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;9&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;9&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
-}&nbsp;
-}&nbsp;
-<span class="cs__keyword">if</span>(s.equals(<span class="cs__string">&quot;0&quot;</span>))&nbsp;
-{&nbsp;
-<span class="cs__keyword">if</span>(z==<span class="cs__number">0</span>)&nbsp;
-{&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;0&quot;</span>);&nbsp;
-}&nbsp;
-<span class="cs__keyword">else</span>&nbsp;
-{&nbsp;
-jtx.setText(<span class="cs__string">&quot;&quot;</span>);&nbsp;
-jtx.setText(jtx.getText()&#43;<span class="cs__string">&quot;0&quot;</span>);&nbsp;
-z=<span class="cs__number">0</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(textBox1.Text&nbsp;==&nbsp;<span class="cs__string">&quot;0&quot;</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;a;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">else</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;&#43;=&nbsp;a;&nbsp;
 }</pre>
 </div>
 </div>
 </div>
-<h1><span>Source Code Files</span></h1>
+<p>6. Add This Code In Number Buttons(Click Event) :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp">input(<span class="cs__string">&quot;(Number&nbsp;Of&nbsp;Button)&quot;</span>);<br></pre>
+</div>
+</div>
+</div>
+<p>7. Now Add This Code For Operation Buttons(&#43;, -, /, *, ^ And Mod(%)) :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp">num1&nbsp;=&nbsp;<span class="cs__keyword">decimal</span>.Parse(textBox1.Text);&nbsp;
+operation&nbsp;=&nbsp;<span class="cs__string">&quot;(Operation&nbsp;For&nbsp;Example&nbsp;&quot;</span>&#43;<span class="cs__string">&quot;)&quot;</span>;&nbsp;
+textBox1.Text&nbsp;=&nbsp;<span class="cs__string">&quot;0&quot;</span>;<br></pre>
+</div>
+</div>
+</div>
+<p>8.Then Add&nbsp; This Code For Calculation Button(=) :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>Visual Basic</span><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">vb</span><span class="hidden">csharp</span>
+
+
+<div class="preview">
+<pre class="vb">num2&nbsp;=&nbsp;<span class="visualBasic__keyword">Decimal</span>.Parse(textBox1.Text)&nbsp;
+<span class="visualBasic__com">'''''''''''''''''''''''''''''''''''</span>&nbsp;
+<span class="visualBasic__keyword">Select</span>&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;operation&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;&#43;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;&#43;&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;-&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;-&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;*&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;*&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;/&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;/&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;^&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(<span class="visualBasic__keyword">Integer</span>.Parse(num1.ToString())&nbsp;<span class="visualBasic__keyword">Xor</span>&nbsp;<span class="visualBasic__keyword">Integer</span>.Parse(num2.ToString())).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Case</span>&nbsp;<span class="visualBasic__string">&quot;%&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBox1.Text&nbsp;=&nbsp;(num1&nbsp;<span class="visualBasic__keyword">Mod</span>&nbsp;num2).ToString()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="visualBasic__keyword">Exit</span>&nbsp;<span class="visualBasic__keyword">Select</span>&nbsp;
+<span class="visualBasic__keyword">End</span>&nbsp;<span class="visualBasic__keyword">Select</span></pre>
+</div>
+</div>
+</div>
+<p>9. Now Add This Code For Cosine Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Cos(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p>10. Then Add This Code For Sinus Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Sin(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p>11. Now Add This Code For Tangent Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Tan(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p>12. Then Add This Code For Logarithm Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Log(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p>13. Now Add This Code For Factorial Button :</p>
+<p><strong>&nbsp;</strong></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp"><span class="cs__keyword">long</span>&nbsp;f&nbsp;=&nbsp;<span class="cs__number">1</span>;&nbsp;
+<span class="cs__keyword">for</span>&nbsp;(<span class="cs__keyword">long</span>&nbsp;i&nbsp;=&nbsp;<span class="cs__number">1</span>;&nbsp;i&nbsp;&lt;=&nbsp;<span class="cs__keyword">long</span>.Parse(textBox1.Text);&nbsp;i&#43;&#43;)&nbsp;{&nbsp;f&nbsp;=&nbsp;f&nbsp;*&nbsp;i;&nbsp;}&nbsp;
+textBox1.Text&nbsp;=&nbsp;f.ToString();</pre>
+</div>
+</div>
+</div>
+<p>14. Then Add This Code For Radical Button :</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span><span>Visual Basic</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span><span class="hidden">vb</span>
+
+
+<div class="preview">
+<pre class="csharp">textBox1.Text&nbsp;=&nbsp;(Math.Sqrt(<span class="cs__keyword">double</span>.Parse(textBox1.Text))).ToString();<br></pre>
+</div>
+</div>
+</div>
+<p><strong><span style="font-size:large">good luck &nbsp;!</span></strong></p>
+<p>_______________________________________________________________________________________________</p>
 <ul>
-<li><em>source code file name #1 - </em><a id="124249" href="/site/view/file/124249/1/calculator.java">calculator.java</a>
-</li></ul>
-<h1>More Informatio<em>n</em></h1>
-<ul>
-<li>inverse (1/x) </li><li>sine / arc sine </li><li>cos/ arc cos </li><li>tan/ arc tan </li><li>exponential / logs (base ten and natural) </li><li>hyperbolic trig functions (sinh, cosh, etc. </li></ul>
+</ul>
+<h1>More Information</h1>
+<p><em>My Email-Address is aryanmesgari@outlook.com</em></p>
